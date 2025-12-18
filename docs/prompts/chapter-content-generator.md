@@ -76,3 +76,25 @@ Begin with a compelling statement that Specification-Driven Design (SDD) is a po
 on teaching instructional designers to write crystal-clear high-quality specifications for each MicroSim.
 The key is to focus on WHAT the microsim should do, but leave it up to the LLMs to decide HOW to implement
 the MicroSim.  Create several full examples of MicroSim specification files and describe how they avoided ambiguity of the design and also used specific language to make clear how the MicroSim should behave.
+
+## Chapter 6
+
+Run the chapter-content-generator skill on @docs/chapters/06-adapting-audience-levels/index.md
+The writing level is college students or business professionals.
+Make the tone fun, and optimistic with a holistic view that knowing how to automate instructional design will make the world a better place.  Feel free to add puns and jokes to lighten the tone.
+Do not put leading spaces in the <details> text.
+
+Mention that MicroSim can be used in books from Kindergarten to graduate school.  Mention that
+the book "Reading for Kindergarten" https://dmccreary.github.io/reading-for-kindergarten/ already has
+a detail framework of MicroSims that focus on young readers.  Get some sample here: https://github.com/dmccreary/reading-for-kindergarten/blob/main/docs/sims/index.md. Note the focus on colorful celebration animations so kids have fun!
+
+On the other extreme, we have MicroSims that have been used at the college and graduate school level.  Here are some samples of the Signal Processing course: https://github.com/dmccreary/signal-processing/blob/main/docs/sims/index.md
+
+This shows that the same concepts apply to all levels of instructional design.
+
+## Chapter 7
+
+Run the chapter-content-generator skill on @docs/chapters/07-cognitive-load-visual-design/index.md
+The writing level is college students or business professionals.
+Make the tone fun, and optimistic with a holistic view that knowing how to automate instructional design will make the world a better place.  Feel free to add puns and jokes to lighten the tone.
+Do not put leading spaces in the <details> text.
