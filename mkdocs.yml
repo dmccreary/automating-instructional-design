@@ -1,0 +1,90 @@
+# template for a general MicroSite built with mkdocs and the material theme
+site_name: Automating Instructional Design
+site_description: A hands-on guide to automating instructional design tasks using AI and other tools.
+site_author: 'Dan McCreary'
+repo_name: 'GitHub Repo'
+site_url: 'https://dmccreary.github.io/automating-instructional-design/'
+repo_url: 'https://github.com/dmccreary/automating-instructional-design'
+edit_uri: 'blob/master/docs'
+
+nav:
+  - Home: index.md
+  - Course Description: course-description.md
+  - Chapters:
+    - Overview: chapters/index.md
+    - Foundations of Learning Objective Analysis: chapters/01-foundations-learning-objective-analysis/index.md
+    - Prerequisite Analysis and MicroSim Fundamentals: chapters/02-prerequisite-analysis-microsim-fundamentals/index.md
+    - The MicroSim Pattern Library: chapters/03-microsim-pattern-library/index.md
+    - Visualization Libraries and Tools: chapters/04-visualization-libraries-tools/index.md
+    - Writing Effective MicroSim Specifications: chapters/05-writing-microsim-specifications/index.md
+    - Adapting for Audience Levels: chapters/06-adapting-audience-levels/index.md
+    - Cognitive Load and Visual Design: chapters/07-cognitive-load-visual-design/index.md
+    - Anticipating Misconceptions: chapters/08-anticipating-misconceptions/index.md
+    - Generating MicroSims with AI Tools: chapters/09-generating-microsims-ai-tools/index.md
+    - Quality Evaluation Frameworks: chapters/10-quality-evaluation-frameworks/index.md
+    - User Testing and Iteration: chapters/11-user-testing-iteration/index.md
+    - Accessibility, Deployment, and Course Completion: chapters/12-accessibility-deployment-completion/index.md
+  - Learning Graph:
+    - Introduction: learning-graph/index.md
+    - Course Description Assessment: learning-graph/course-description-assessment.md
+    - Concept Enumeration: learning-graph/concept-list.md
+    - Graph Quality Analysis: learning-graph/quality-metrics.md
+    - Concept Taxonomy: learning-graph/concept-taxonomy.md
+    - Taxonomy Distribution Report: learning-graph/taxonomy-distribution.md
+  - MicroSims:
+    - Graph Viewer: sims/graph-viewer/index.md
+  - Checklist: checklist.md
+  - Glossary: glossary.md
+  - How We Built This Site: how-we-built-this-site.md
+  - References: references.md
+  - Feedback: feedback.md
+  - License: license.md
+  - Contact: contact.md
+ 
+# Dan's MicroSite Standards from here down
+
+theme:
+  name: material
+  extra_css:
+    - styles/custom.css
+  logo: img/logo.png
+  favicon: img/favicon.ico
+  palette:
+    primary: 'blue'
+    accent: 'orange'
+  include_sidebar: true
+  features:
+    - content.code.copy
+    - navigation.expand
+    - navigation.path
+    - navigation.prune
+    - navigation.indexes
+    - toc.follow
+    - navigation.top
+    # this adds the prev and next icons in the footer
+    - navigation.footer
+    - content.action.edit
+plugins:
+  - search
+  - social
+markdown_extensions:
+  # Order is important!
+  - md_in_html
+  - attr_list
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.highlight:
+      linenums: true
+extra_css:
+   - css/extra.css
+extra_javascript:
+   - js/extra.js
+copyright: Copyright &copy; 2025 Dan McCreary. Licensed under <a href="license/">CC BY-NC-SA 4.0</a> for non-commercial use.
+extra:
+  generator: false
+#extra:
+#  analytics:
+#    provider: google
+    # https://analytics.google.com/analytics/web/#/a1420179p349994530/admin/streams/table/4433129821
+#    property: G-XXXX
