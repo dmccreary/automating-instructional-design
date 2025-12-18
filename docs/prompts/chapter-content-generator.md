@@ -64,3 +64,15 @@ Also note that extending MircoSims to track user events using the xAPI protocols
 
 
 
+
+## Chapter 5
+
+Run the chapter-content-generator skill on @docs/chapters/05-writing-microsim-specifications/index.md
+The writing level is college students or business professionals.
+Make the tone fun, and optimistic with a holistic view that knowing how to automate instructional design will make the world a better place.  Feel free to add puns and jokes to lighten the tone.
+Do not put leading spaces in the <details> text.
+
+Begin with a compelling statement that Specification-Driven Design (SDD) is a powerful design process that focuses
+on teaching instructional designers to write crystal-clear high-quality specifications for each MicroSim.
+The key is to focus on WHAT the microsim should do, but leave it up to the LLMs to decide HOW to implement
+the MicroSim.  Create several full examples of MicroSim specification files and describe how they avoided ambiguity of the design and also used specific language to make clear how the MicroSim should behave.

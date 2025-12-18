@@ -48,6 +48,10 @@ nav:
   - License: license.md
   - Contact: contact.md
  
+  - Prompts:
+    - List of Prompts: prompts/index.md
+    - prompts/bloom-taxonomy-microsim.md
+    - prompts/chapter-content-generator.md
 # Dan's MicroSite Standards from here down
 
 theme:
