@@ -1,0 +1,3468 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="A comprehensive guide to visualization paradigms for MicroSim development, from motion simulations to state machines">
+      
+      
+        <meta name="author" content="Dan McCreary">
+      
+      
+        <link rel="canonical" href="https://dmccreary.github.io/automating-instructional-design/chapters/03-microsim-pattern-library/">
+      
+      
+        <link rel="prev" href="../02-prerequisite-analysis-microsim-fundamentals/">
+      
+      
+        <link rel="next" href="../04-visualization-libraries-tools/">
+      
+      
+      <link rel="icon" href="../../img/favicon.ico">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.43">
+    
+    
+      
+        <title>The MicroSim Pattern Library - Automating Instructional Design</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.0253249f.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../css/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+      
+        <meta  property="og:type"  content="website" >
+      
+        <meta  property="og:title"  content="The MicroSim Pattern Library - Automating Instructional Design" >
+      
+        <meta  property="og:description"  content="A comprehensive guide to visualization paradigms for MicroSim development, from motion simulations to state machines" >
+      
+        <meta  property="og:image"  content="https://dmccreary.github.io/automating-instructional-design/assets/images/social/chapters/03-microsim-pattern-library/index.png" >
+      
+        <meta  property="og:image:type"  content="image/png" >
+      
+        <meta  property="og:image:width"  content="1200" >
+      
+        <meta  property="og:image:height"  content="630" >
+      
+        <meta  property="og:url"  content="https://dmccreary.github.io/automating-instructional-design/chapters/03-microsim-pattern-library/" >
+      
+        <meta  name="twitter:card"  content="summary_large_image" >
+      
+        <meta  name="twitter:title"  content="The MicroSim Pattern Library - Automating Instructional Design" >
+      
+        <meta  name="twitter:description"  content="A comprehensive guide to visualization paradigms for MicroSim development, from motion simulations to state machines" >
+      
+        <meta  name="twitter:image"  content="https://dmccreary.github.io/automating-instructional-design/assets/images/social/chapters/03-microsim-pattern-library/index.png" >
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="orange">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#the-microsim-pattern-library" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Automating Instructional Design" class="md-header__button md-logo" aria-label="Automating Instructional Design" data-md-component="logo">
+      
+  <img src="../../img/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Automating Instructional Design
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              The MicroSim Pattern Library
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/dmccreary/automating-instructional-design" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub Repo
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Automating Instructional Design" class="md-nav__button md-logo" aria-label="Automating Instructional Design" data-md-component="logo">
+      
+  <img src="../../img/logo.png" alt="logo">
+
+    </a>
+    Automating Instructional Design
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/dmccreary/automating-instructional-design" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub Repo
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../course-description/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Course Description
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+    
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Chapters
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Chapters
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../01-foundations-learning-objective-analysis/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Foundations of Learning Objective Analysis
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../02-prerequisite-analysis-microsim-fundamentals/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Prerequisite Analysis and MicroSim Fundamentals
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    The MicroSim Pattern Library
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    The MicroSim Pattern Library
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      Summary
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#concepts-covered" class="md-nav__link">
+    <span class="md-ellipsis">
+      Concepts Covered
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    <span class="md-ellipsis">
+      Prerequisites
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#welcome-to-the-visualization-buffet" class="md-nav__link">
+    <span class="md-ellipsis">
+      Welcome to the Visualization Buffet
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#understanding-visualization-paradigms" class="md-nav__link">
+    <span class="md-ellipsis">
+      Understanding Visualization Paradigms
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Understanding Visualization Paradigms">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-visualization-paradigm-selection-guide" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Visualization Paradigm Selection Guide
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#motion-and-physics-simulations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Motion and Physics Simulations
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Motion and Physics Simulations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#when-motion-simulations-shine" class="md-nav__link">
+    <span class="md-ellipsis">
+      When Motion Simulations Shine
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#physics-simulation-adding-realism" class="md-nav__link">
+    <span class="md-ellipsis">
+      Physics Simulation: Adding Realism
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Physics Simulation: Adding Realism">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-physics-simulation-architecture" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Physics Simulation Architecture
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dynamic-systems-when-everything-affects-everything" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dynamic Systems: When Everything Affects Everything
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cause-effect-displays-making-connections-visible" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cause-Effect Displays: Making Connections Visible
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Cause-Effect Displays: Making Connections Visible">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-cause-effect-display-template" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Cause-Effect Display Template
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#network-and-graph-visualizations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Network and Graph Visualizations
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Network and Graph Visualizations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#network-graphs-nodes-and-edges" class="md-nav__link">
+    <span class="md-ellipsis">
+      Network Graphs: Nodes and Edges
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#relationship-graphs-adding-meaning-to-connections" class="md-nav__link">
+    <span class="md-ellipsis">
+      Relationship Graphs: Adding Meaning to Connections
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Relationship Graphs: Adding Meaning to Connections">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-relationship-graph-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Relationship Graph Types
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hierarchy-displays-top-down-organization" class="md-nav__link">
+    <span class="md-ellipsis">
+      Hierarchy Displays: Top-Down Organization
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dependency-mapping-following-the-thread" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dependency Mapping: Following the Thread
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#influence-diagrams-causal-networks" class="md-nav__link">
+    <span class="md-ellipsis">
+      Influence Diagrams: Causal Networks
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#set-visualizations-and-classification" class="md-nav__link">
+    <span class="md-ellipsis">
+      Set Visualizations and Classification
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Set Visualizations and Classification">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#venn-diagrams-the-classic-overlap" class="md-nav__link">
+    <span class="md-ellipsis">
+      Venn Diagrams: The Classic Overlap
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Venn Diagrams: The Classic Overlap">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-venn-diagram-builder" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Venn Diagram Builder
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#set-visualizations-beyond-the-circle" class="md-nav__link">
+    <span class="md-ellipsis">
+      Set Visualizations: Beyond the Circle
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#classification-displays-sorting-and-categorizing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Classification Displays: Sorting and Categorizing
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Classification Displays: Sorting and Categorizing">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-classification-matrix-display" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Classification Matrix Display
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#timelines-and-sequence-displays" class="md-nav__link">
+    <span class="md-ellipsis">
+      Timelines and Sequence Displays
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Timelines and Sequence Displays">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sequence-displays-first-this-then-that" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sequence Displays: First This, Then That
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#process-timelines-adding-time-to-sequence" class="md-nav__link">
+    <span class="md-ellipsis">
+      Process Timelines: Adding Time to Sequence
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Process Timelines: Adding Time to Sequence">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-interactive-process-timeline" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Interactive Process Timeline
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#charts-for-quantitative-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      Charts for Quantitative Data
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Charts for Quantitative Data">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#trend-charts-change-over-time" class="md-nav__link">
+    <span class="md-ellipsis">
+      Trend Charts: Change Over Time
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#distribution-charts-showing-spread" class="md-nav__link">
+    <span class="md-ellipsis">
+      Distribution Charts: Showing Spread
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#correlation-displays-relationships-between-variables" class="md-nav__link">
+    <span class="md-ellipsis">
+      Correlation Displays: Relationships Between Variables
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Correlation Displays: Relationships Between Variables">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-chart-type-selection-guide" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Chart Type Selection Guide
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#spatial-visualizations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Spatial Visualizations
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Spatial Visualizations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#maps-geographic-context" class="md-nav__link">
+    <span class="md-ellipsis">
+      Maps: Geographic Context
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Maps: Geographic Context">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-spatial-visualization-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Spatial Visualization Types
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#flow-and-state-diagrams" class="md-nav__link">
+    <span class="md-ellipsis">
+      Flow and State Diagrams
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Flow and State Diagrams">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#flowcharts-decisions-and-processes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Flowcharts: Decisions and Processes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#state-machine-diagrams-being-vs-doing" class="md-nav__link">
+    <span class="md-ellipsis">
+      State Machine Diagrams: Being vs. Doing
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="State Machine Diagrams: Being vs. Doing">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-state-machine-template" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: State Machine Template
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#paradigm-selection-the-art-of-matching" class="md-nav__link">
+    <span class="md-ellipsis">
+      Paradigm Selection: The Art of Matching
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Paradigm Selection: The Art of Matching">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#concept-characteristics-the-diagnostic-framework" class="md-nav__link">
+    <span class="md-ellipsis">
+      Concept Characteristics: The Diagnostic Framework
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#visual-affordances-what-visualizations-suggest" class="md-nav__link">
+    <span class="md-ellipsis">
+      Visual Affordances: What Visualizations "Suggest"
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Visual Affordances: What Visualizations "Suggest"">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-paradigm-affordance-mapping" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Paradigm-Affordance Mapping
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#putting-it-all-together-your-pattern-recognition-toolkit" class="md-nav__link">
+    <span class="md-ellipsis">
+      Putting It All Together: Your Pattern Recognition Toolkit
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Putting It All Together: Your Pattern Recognition Toolkit">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-five-minute-paradigm-selection-process" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Five-Minute Paradigm Selection Process
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#common-paradigm-pairings" class="md-nav__link">
+    <span class="md-ellipsis">
+      Common Paradigm Pairings
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#your-pattern-library-is-your-superpower" class="md-nav__link">
+    <span class="md-ellipsis">
+      Your Pattern Library Is Your Superpower
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#summary-and-key-takeaways" class="md-nav__link">
+    <span class="md-ellipsis">
+      Summary and Key Takeaways
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../04-visualization-libraries-tools/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Visualization Libraries and Tools
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../05-writing-microsim-specifications/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Writing Effective MicroSim Specifications
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../06-adapting-audience-levels/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Adapting for Audience Levels
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../07-cognitive-load-visual-design/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Cognitive Load and Visual Design
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../08-anticipating-misconceptions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Anticipating Misconceptions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../09-generating-microsims-ai-tools/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Generating MicroSims with AI Tools
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../10-quality-evaluation-frameworks/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Quality Evaluation Frameworks
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../11-user-testing-iteration/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    User Testing and Iteration
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../12-accessibility-deployment-completion/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Accessibility, Deployment, and Course Completion
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+          
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../stories/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Stories
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../learning-graph/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Learning Graph
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+          
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../sims/graph-viewer/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    MicroSims
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../checklist/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Checklist
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../glossary/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Glossary
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../how-we-built-this-site/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    How We Built This Site
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../references/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    References
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../feedback/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Feedback
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../license/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    License
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../contact/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Contact
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      Summary
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#concepts-covered" class="md-nav__link">
+    <span class="md-ellipsis">
+      Concepts Covered
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    <span class="md-ellipsis">
+      Prerequisites
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#welcome-to-the-visualization-buffet" class="md-nav__link">
+    <span class="md-ellipsis">
+      Welcome to the Visualization Buffet
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#understanding-visualization-paradigms" class="md-nav__link">
+    <span class="md-ellipsis">
+      Understanding Visualization Paradigms
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Understanding Visualization Paradigms">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-visualization-paradigm-selection-guide" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Visualization Paradigm Selection Guide
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#motion-and-physics-simulations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Motion and Physics Simulations
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Motion and Physics Simulations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#when-motion-simulations-shine" class="md-nav__link">
+    <span class="md-ellipsis">
+      When Motion Simulations Shine
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#physics-simulation-adding-realism" class="md-nav__link">
+    <span class="md-ellipsis">
+      Physics Simulation: Adding Realism
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Physics Simulation: Adding Realism">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-physics-simulation-architecture" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Physics Simulation Architecture
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dynamic-systems-when-everything-affects-everything" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dynamic Systems: When Everything Affects Everything
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cause-effect-displays-making-connections-visible" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cause-Effect Displays: Making Connections Visible
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Cause-Effect Displays: Making Connections Visible">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-cause-effect-display-template" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Cause-Effect Display Template
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#network-and-graph-visualizations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Network and Graph Visualizations
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Network and Graph Visualizations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#network-graphs-nodes-and-edges" class="md-nav__link">
+    <span class="md-ellipsis">
+      Network Graphs: Nodes and Edges
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#relationship-graphs-adding-meaning-to-connections" class="md-nav__link">
+    <span class="md-ellipsis">
+      Relationship Graphs: Adding Meaning to Connections
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Relationship Graphs: Adding Meaning to Connections">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-relationship-graph-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Relationship Graph Types
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hierarchy-displays-top-down-organization" class="md-nav__link">
+    <span class="md-ellipsis">
+      Hierarchy Displays: Top-Down Organization
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dependency-mapping-following-the-thread" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dependency Mapping: Following the Thread
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#influence-diagrams-causal-networks" class="md-nav__link">
+    <span class="md-ellipsis">
+      Influence Diagrams: Causal Networks
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#set-visualizations-and-classification" class="md-nav__link">
+    <span class="md-ellipsis">
+      Set Visualizations and Classification
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Set Visualizations and Classification">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#venn-diagrams-the-classic-overlap" class="md-nav__link">
+    <span class="md-ellipsis">
+      Venn Diagrams: The Classic Overlap
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Venn Diagrams: The Classic Overlap">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-venn-diagram-builder" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Venn Diagram Builder
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#set-visualizations-beyond-the-circle" class="md-nav__link">
+    <span class="md-ellipsis">
+      Set Visualizations: Beyond the Circle
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#classification-displays-sorting-and-categorizing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Classification Displays: Sorting and Categorizing
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Classification Displays: Sorting and Categorizing">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-classification-matrix-display" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Classification Matrix Display
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#timelines-and-sequence-displays" class="md-nav__link">
+    <span class="md-ellipsis">
+      Timelines and Sequence Displays
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Timelines and Sequence Displays">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sequence-displays-first-this-then-that" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sequence Displays: First This, Then That
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#process-timelines-adding-time-to-sequence" class="md-nav__link">
+    <span class="md-ellipsis">
+      Process Timelines: Adding Time to Sequence
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Process Timelines: Adding Time to Sequence">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-interactive-process-timeline" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Interactive Process Timeline
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#charts-for-quantitative-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      Charts for Quantitative Data
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Charts for Quantitative Data">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#trend-charts-change-over-time" class="md-nav__link">
+    <span class="md-ellipsis">
+      Trend Charts: Change Over Time
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#distribution-charts-showing-spread" class="md-nav__link">
+    <span class="md-ellipsis">
+      Distribution Charts: Showing Spread
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#correlation-displays-relationships-between-variables" class="md-nav__link">
+    <span class="md-ellipsis">
+      Correlation Displays: Relationships Between Variables
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Correlation Displays: Relationships Between Variables">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-chart-type-selection-guide" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Chart Type Selection Guide
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#spatial-visualizations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Spatial Visualizations
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Spatial Visualizations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#maps-geographic-context" class="md-nav__link">
+    <span class="md-ellipsis">
+      Maps: Geographic Context
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Maps: Geographic Context">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-spatial-visualization-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Spatial Visualization Types
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#flow-and-state-diagrams" class="md-nav__link">
+    <span class="md-ellipsis">
+      Flow and State Diagrams
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Flow and State Diagrams">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#flowcharts-decisions-and-processes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Flowcharts: Decisions and Processes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#state-machine-diagrams-being-vs-doing" class="md-nav__link">
+    <span class="md-ellipsis">
+      State Machine Diagrams: Being vs. Doing
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="State Machine Diagrams: Being vs. Doing">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-state-machine-template" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: State Machine Template
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#paradigm-selection-the-art-of-matching" class="md-nav__link">
+    <span class="md-ellipsis">
+      Paradigm Selection: The Art of Matching
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Paradigm Selection: The Art of Matching">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#concept-characteristics-the-diagnostic-framework" class="md-nav__link">
+    <span class="md-ellipsis">
+      Concept Characteristics: The Diagnostic Framework
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#visual-affordances-what-visualizations-suggest" class="md-nav__link">
+    <span class="md-ellipsis">
+      Visual Affordances: What Visualizations "Suggest"
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Visual Affordances: What Visualizations "Suggest"">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-paradigm-affordance-mapping" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Paradigm-Affordance Mapping
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#putting-it-all-together-your-pattern-recognition-toolkit" class="md-nav__link">
+    <span class="md-ellipsis">
+      Putting It All Together: Your Pattern Recognition Toolkit
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Putting It All Together: Your Pattern Recognition Toolkit">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-five-minute-paradigm-selection-process" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Five-Minute Paradigm Selection Process
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#common-paradigm-pairings" class="md-nav__link">
+    <span class="md-ellipsis">
+      Common Paradigm Pairings
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#your-pattern-library-is-your-superpower" class="md-nav__link">
+    <span class="md-ellipsis">
+      Your Pattern Library Is Your Superpower
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#summary-and-key-takeaways" class="md-nav__link">
+    <span class="md-ellipsis">
+      Summary and Key Takeaways
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+    <a href="https://github.com/dmccreary/automating-instructional-design/blob/master/docs/chapters/03-microsim-pattern-library/index.md" title="Edit this page" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
+    </a>
+  
+  
+
+
+<h1 id="the-microsim-pattern-library">The MicroSim Pattern Library</h1>
+<h2 id="summary">Summary</h2>
+<p>This chapter provides a comprehensive overview of visualization paradigms used in MicroSim development. You will explore motion simulations, physics engines, dynamic systems, and cause-effect displays. The chapter covers relationship graphs, hierarchies, dependency mapping, and influence diagrams for network-style visualizations. You will also learn about sequence displays, timelines, charts for trends and distributions, spatial visualizations, flowcharts, state machines, and classification displays. By mastering these patterns, you will be able to select the most appropriate visualization approach for any learning objective.</p>
+<h2 id="concepts-covered">Concepts Covered</h2>
+<p>This chapter covers the following 24 concepts from the learning graph:</p>
+<ol>
+<li>Visualization Paradigm</li>
+<li>Network Graph</li>
+<li>Venn Diagram</li>
+<li>Set Visualization</li>
+<li>Motion Simulation</li>
+<li>Physics Simulation</li>
+<li>Dynamic Systems</li>
+<li>Cause-Effect Display</li>
+<li>Relationship Graph</li>
+<li>Hierarchy Display</li>
+<li>Dependency Mapping</li>
+<li>Influence Diagram</li>
+<li>Sequence Display</li>
+<li>Process Timeline</li>
+<li>Trend Chart</li>
+<li>Distribution Chart</li>
+<li>Correlation Display</li>
+<li>Spatial Visualization</li>
+<li>Flowchart</li>
+<li>State Machine Diagram</li>
+<li>Classification Display</li>
+<li>Paradigm Selection</li>
+<li>Concept Characteristics</li>
+<li>Visual Affordances</li>
+</ol>
+<h2 id="prerequisites">Prerequisites</h2>
+<p>This chapter builds on concepts from:</p>
+<ul>
+<li><a href="../01-foundations-learning-objective-analysis/">Chapter 1: Foundations of Learning Objective Analysis</a></li>
+<li><a href="../02-prerequisite-analysis-microsim-fundamentals/">Chapter 2: Prerequisite Analysis and MicroSim Fundamentals</a></li>
+</ul>
+<hr />
+<h2 id="welcome-to-the-visualization-buffet">Welcome to the Visualization Buffet</h2>
+<p>If instructional design were a restaurant, this chapter would be the menu. And what a menu it is! We're about to explore over two dozen ways to visualize learning—from bouncing balls to branching flowcharts, from nested circles to networked nodes. By the end, you'll have a mental cookbook of visualization patterns ready to deploy whenever a learning objective crosses your desk.</p>
+<p>Here's the beautiful truth about MicroSim development: <strong>you don't need to reinvent the wheel every time you build something</strong>. Most educational concepts fit into a handful of visualization patterns, and once you recognize which pattern matches your content, the design process becomes dramatically simpler. It's like having a key that unlocks the right template.</p>
+<p>Think of this chapter as your pattern recognition training. We're going to look at each major visualization paradigm, understand when it shines, and see real examples in action. Ready to become a visualization virtuoso? Let's dive in!</p>
+<h2 id="understanding-visualization-paradigms">Understanding Visualization Paradigms</h2>
+<p>A <strong>visualization paradigm</strong> is a fundamental approach to representing information visually. It's the "shape" of your visualization—not the specific colors or labels, but the underlying structure that organizes information.</p>
+<p>Choosing the right paradigm is like choosing the right vehicle for a journey. A sedan is great for highway driving, but terrible for crossing a river. A boat handles water beautifully but won't get you far on land. Similarly, a timeline is perfect for showing historical progression but hopeless for displaying hierarchical relationships.</p>
+<table>
+<thead>
+<tr>
+<th>Paradigm Type</th>
+<th>Best For</th>
+<th>Examples</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Motion/Physics</td>
+<td>Continuous processes, cause-effect, dynamic systems</td>
+<td>Pendulums, projectiles, wave propagation</td>
+</tr>
+<tr>
+<td>Network/Graph</td>
+<td>Relationships, connections, dependencies</td>
+<td>Social networks, concept maps, organizational charts</td>
+</tr>
+<tr>
+<td>Timeline/Sequence</td>
+<td>Chronological progression, processes, workflows</td>
+<td>Historical events, project phases, algorithms</td>
+</tr>
+<tr>
+<td>Chart/Statistical</td>
+<td>Quantitative comparisons, trends, distributions</td>
+<td>Bar charts, line graphs, scatter plots</td>
+</tr>
+<tr>
+<td>Spatial/Map</td>
+<td>Geographic or spatial relationships</td>
+<td>Location data, floor plans, anatomy</td>
+</tr>
+<tr>
+<td>Flow/State</td>
+<td>Decisions, processes, state transitions</td>
+<td>Flowcharts, state machines, decision trees</td>
+</tr>
+<tr>
+<td>Set/Classification</td>
+<td>Categorization, overlapping groups, membership</td>
+<td>Venn diagrams, classification matrices</td>
+</tr>
+</tbody>
+</table>
+<p>The magic happens when you match the paradigm to your content's inherent structure. Force a concept into the wrong paradigm, and learners struggle. Find the right fit, and understanding clicks into place like a puzzle piece finding its home.</p>
+<h4 id="diagram-visualization-paradigm-selection-guide">Diagram: Visualization Paradigm Selection Guide</h4>
+<details>
+<summary>Visualization Paradigm Selection Guide</summary>
+<p>Type: infographic</p>
+<p>Purpose: Help learners quickly identify which visualization paradigm best fits their content type</p>
+<p>Bloom Taxonomy Level: Apply</p>
+<p>Learning Objective: Students will be able to select an appropriate visualization paradigm based on the characteristics of their learning content.</p>
+<p>Layout: Decision-tree style flowchart with branching paths</p>
+<p>Starting Question: "What type of information are you visualizing?"</p>
+<p>Branch 1: "Changes over time?"
+- Yes → "Continuous or discrete?"
+  - Continuous → Motion/Physics Simulation
+  - Discrete → Timeline/Sequence Display</p>
+<p>Branch 2: "Relationships between entities?"
+- Yes → "Hierarchical or networked?"
+  - Hierarchical → Hierarchy Display
+  - Networked → Network Graph</p>
+<p>Branch 3: "Quantities or measurements?"
+- Yes → "Comparing categories or showing trends?"
+  - Categories → Bar/Distribution Chart
+  - Trends → Line/Trend Chart
+  - Relationships → Correlation/Scatter Display</p>
+<p>Branch 4: "Categories or classifications?"
+- Yes → "Overlapping or mutually exclusive?"
+  - Overlapping → Venn Diagram
+  - Exclusive → Classification Display</p>
+<p>Branch 5: "Processes or decisions?"
+- Yes → "Sequential or state-based?"
+  - Sequential → Flowchart
+  - State-based → State Machine Diagram</p>
+<p>Branch 6: "Physical locations?"
+- Yes → Spatial/Map Visualization</p>
+<p>Visual Style: Clean flowchart with rounded rectangles and arrows
+Color Scheme: Each paradigm family gets a distinct color
+- Motion/Physics: Orange
+- Network/Graph: Blue
+- Timeline/Sequence: Green
+- Charts: Purple
+- Spatial: Teal
+- Flow/State: Red
+- Set/Classification: Yellow</p>
+<p>Interactive Features:
+- Click any endpoint to see example MicroSims
+- Hover over branches for additional decision criteria
+- Responsive design that adapts to window size</p>
+<p>Implementation: HTML/CSS/JavaScript with SVG graphics</p>
+</details>
+<h2 id="motion-and-physics-simulations">Motion and Physics Simulations</h2>
+<p>Let's start with the paradigm that brings learning to life—literally. <strong>Motion simulations</strong> show objects moving through space, while <strong>physics simulations</strong> add realistic forces like gravity, friction, and acceleration. These are the rock stars of STEM education because they let learners see abstract equations become tangible reality.</p>
+<p>When Isaac Newton formulated $F = ma$, he probably didn't envision students dragging sliders on glowing screens to watch virtual apples fall. But here we are, living in the future, and it's glorious.</p>
+<h3 id="when-motion-simulations-shine">When Motion Simulations Shine</h3>
+<p>Motion simulations are your go-to choice when teaching:</p>
+<ul>
+<li><strong>Kinematics</strong>: Position, velocity, acceleration relationships</li>
+<li><strong>Dynamics</strong>: Forces and their effects on motion</li>
+<li><strong>Oscillations</strong>: Pendulums, springs, waves</li>
+<li><strong>Collisions</strong>: Momentum and energy transfer</li>
+<li><strong>Projectile motion</strong>: Trajectories under gravity</li>
+</ul>
+<p>The key characteristic of motion simulations is that <strong>time is a primary variable</strong>. Things change, move, evolve. If your concept involves something going from point A to point B (or oscillating between them), motion simulation is probably your paradigm.</p>
+<div class="admonition example">
+<p class="admonition-title">Real-World MicroSim Examples</p>
+<p>The MicroSim library includes numerous motion simulations such as the <strong>Integer Operations Number Line</strong> simulation, which animates addition and subtraction as movement along a number line—turning abstract arithmetic into visual journeys.</p>
+</div>
+<h3 id="physics-simulation-adding-realism">Physics Simulation: Adding Realism</h3>
+<p><strong>Physics simulations</strong> take motion simulations up a notch by incorporating realistic physical laws. Instead of just moving objects around, they calculate forces, apply constraints, and produce behavior that matches real-world expectations.</p>
+<p>The learning power of physics simulations comes from their predictive capability. Learners can hypothesize what will happen, run the simulation, and immediately see if their mental model was correct. This predict-observe-explain cycle is educational gold.</p>
+<table>
+<thead>
+<tr>
+<th>Physics Concept</th>
+<th>Simulation Approach</th>
+<th>Key Parameters</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Gravity</td>
+<td>Constant downward acceleration</td>
+<td>g (9.8 m/s²)</td>
+</tr>
+<tr>
+<td>Friction</td>
+<td>Velocity-dependent opposing force</td>
+<td>μ (coefficient)</td>
+</tr>
+<tr>
+<td>Springs</td>
+<td>Restoring force proportional to displacement</td>
+<td>k (spring constant)</td>
+</tr>
+<tr>
+<td>Collisions</td>
+<td>Momentum and energy conservation</td>
+<td>Elasticity coefficient</td>
+</tr>
+<tr>
+<td>Air resistance</td>
+<td>Velocity-squared drag</td>
+<td>Drag coefficient</td>
+</tr>
+</tbody>
+</table>
+<h4 id="diagram-physics-simulation-architecture">Diagram: Physics Simulation Architecture</h4>
+<details>
+<summary>Physics Simulation Architecture</summary>
+<p>Type: diagram</p>
+<p>Purpose: Show the computational structure of a physics simulation engine</p>
+<p>Bloom Taxonomy Level: Understand</p>
+<p>Learning Objective: Students will be able to explain how physics simulations calculate motion over time using the simulation loop pattern.</p>
+<p>Components to show:
+- Input Layer:
+  - User Controls (sliders, buttons)
+  - Initial Conditions (position, velocity)
+  - Physical Constants (gravity, friction)</p>
+<ul>
+<li>Simulation Loop (central, emphasized):</li>
+<li>Calculate Forces</li>
+<li>Update Acceleration (F = ma)</li>
+<li>Update Velocity (v += a * dt)</li>
+<li>Update Position (x += v * dt)</li>
+<li>
+<p>Check Boundaries/Collisions</p>
+</li>
+<li>
+<p>Output Layer:</p>
+</li>
+<li>Render Objects</li>
+<li>Update Displays</li>
+<li>Record Data</li>
+</ul>
+<p>Connections:
+- Arrow from Input Layer to Simulation Loop
+- Circular arrow showing loop iteration
+- Arrow from Loop to Output Layer
+- Feedback arrow from Output back to Input (for interactive controls)</p>
+<p>Visual Style: Block diagram with clear data flow
+Color Scheme:
+- Input: Green (user interaction)
+- Simulation Loop: Blue (computation)
+- Output: Orange (visualization)</p>
+<p>Labels:
+- "Time Step (dt)" on the loop
+- "60 FPS = 16.67ms per frame"
+- "Forces determine everything"</p>
+<p>Implementation: SVG diagram with optional animation showing the loop cycling</p>
+</details>
+<h3 id="dynamic-systems-when-everything-affects-everything">Dynamic Systems: When Everything Affects Everything</h3>
+<p><strong>Dynamic systems</strong> represent an important subset of physics simulations where multiple variables interact and influence each other over time. Unlike simple motion where one object follows a trajectory, dynamic systems involve feedback loops, equilibrium states, and emergent behavior.</p>
+<p>Think of a predator-prey ecosystem. Rabbits eat grass and multiply. Foxes eat rabbits and multiply. More foxes mean fewer rabbits. Fewer rabbits mean fewer foxes. Fewer foxes mean more rabbits. And round and round we go—a beautiful, chaotic dance that simple equations somehow capture.</p>
+<p>Dynamic system simulations are particularly powerful for teaching:</p>
+<ul>
+<li><strong>Systems thinking</strong>: Understanding how parts interact</li>
+<li><strong>Equilibrium concepts</strong>: Stable vs. unstable states</li>
+<li><strong>Feedback loops</strong>: Positive and negative feedback</li>
+<li><strong>Emergent behavior</strong>: Complex patterns from simple rules</li>
+<li><strong>Sensitivity to initial conditions</strong>: Chaos theory basics</li>
+</ul>
+<h3 id="cause-effect-displays-making-connections-visible">Cause-Effect Displays: Making Connections Visible</h3>
+<p><strong>Cause-effect displays</strong> are a specialized type of motion/dynamic simulation focused specifically on showing causal relationships. When you change X, what happens to Y? These simulations make abstract causation concrete and manipulable.</p>
+<p>The pedagogical power here is enormous. Instead of telling learners "increasing temperature increases reaction rate," you let them drag a temperature slider and watch molecules bounce faster and collisions increase. The cause-effect relationship becomes visceral, not just verbal.</p>
+<h4 id="diagram-cause-effect-display-template">Diagram: Cause-Effect Display Template</h4>
+<details>
+<summary>Cause-Effect Display Template</summary>
+<p>Type: microsim</p>
+<p>Purpose: Demonstrate the standard structure of a cause-effect display MicroSim</p>
+<p>Bloom Taxonomy Level: Apply</p>
+<p>Learning Objective: Students will be able to design cause-effect MicroSims that clearly show relationships between input variables and output behaviors.</p>
+<p>Canvas Layout:
+- Top section: Title and brief instructions
+- Left side (40%): Control panel with input variables
+- Center (50%): Main visualization area
+- Bottom: Output metrics and explanation</p>
+<p>Control Panel Elements:
+- 2-4 sliders for independent variables
+- Each slider has:
+  - Label with current value
+  - Min/max range indicators
+  - Units displayed
+- Reset button
+- "Show relationship" toggle</p>
+<p>Visualization Area:
+- Animated elements that respond to slider changes
+- Color coding that intensifies/diminishes with effect
+- Clear visual metaphor for the concept
+- Real-time updates (no lag between input and display)</p>
+<p>Output Metrics:
+- Numerical display of dependent variable(s)
+- Simple graph showing relationship (optional)
+- Text explanation of current state</p>
+<p>Behavior:
+- Changes to any slider immediately update visualization
+- Smooth transitions between states
+- Clear visual feedback for cause-effect connection</p>
+<p>Design Principles:
+- Maximum 4 input variables (cognitive load management)
+- Direct manipulation (sliders, not text input)
+- Immediate feedback (under 100ms response)
+- Multiple representations (visual + numerical)</p>
+<p>Implementation: p5.js with responsive canvas</p>
+</details>
+<h2 id="network-and-graph-visualizations">Network and Graph Visualizations</h2>
+<p>If motion simulations show how things <em>move</em>, network visualizations show how things <em>connect</em>. This paradigm family is all about relationships—who knows whom, what depends on what, how ideas link together.</p>
+<p>In our increasingly connected world, network thinking is becoming essential. Social networks, supply chains, neural networks, concept maps—they all share the same underlying structure of nodes and edges. Master this paradigm, and you've got a tool for visualizing an enormous range of concepts.</p>
+<h3 id="network-graphs-nodes-and-edges">Network Graphs: Nodes and Edges</h3>
+<p>A <strong>network graph</strong> (also called a graph visualization) consists of:</p>
+<ul>
+<li><strong>Nodes</strong> (vertices): The entities being related</li>
+<li><strong>Edges</strong> (links): The relationships between entities</li>
+</ul>
+<p>That's it. Two components. Yet from this simple foundation, we can represent astonishing complexity.</p>
+<div class="admonition example">
+<p class="admonition-title">Real-World MicroSim Examples</p>
+<p>The MicroSim library includes the <strong>Learning Graph Viewer</strong> (vis-network), which displays concept dependencies as an interactive network where learners can explore how ideas connect and build upon each other.</p>
+</div>
+<p>Network graphs excel at teaching:</p>
+<ul>
+<li><strong>Social relationships</strong>: Who knows whom, influence patterns</li>
+<li><strong>Dependencies</strong>: What requires what, prerequisite structures</li>
+<li><strong>Semantic relationships</strong>: How concepts relate</li>
+<li><strong>Organizational structures</strong>: Reporting relationships, team compositions</li>
+<li><strong>System architectures</strong>: Components and their connections</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Network Property</th>
+<th>What It Reveals</th>
+<th>Teaching Application</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Degree (connections per node)</td>
+<td>Importance/influence</td>
+<td>Identify key concepts</td>
+</tr>
+<tr>
+<td>Clustering</td>
+<td>Community structure</td>
+<td>Find related topics</td>
+</tr>
+<tr>
+<td>Path length</td>
+<td>Separation between nodes</td>
+<td>Trace concept dependencies</td>
+</tr>
+<tr>
+<td>Centrality</td>
+<td>Most connected nodes</td>
+<td>Find prerequisite concepts</td>
+</tr>
+<tr>
+<td>Components</td>
+<td>Disconnected subgraphs</td>
+<td>Identify independent topics</td>
+</tr>
+</tbody>
+</table>
+<h3 id="relationship-graphs-adding-meaning-to-connections">Relationship Graphs: Adding Meaning to Connections</h3>
+<p>While basic network graphs just show that connections exist, <strong>relationship graphs</strong> add semantic meaning to those connections. The edge isn't just "connected to"—it's "depends on," "influences," "conflicts with," or "supports."</p>
+<p>In educational contexts, relationship graphs help learners understand not just <em>that</em> concepts are related, but <em>how</em> they're related. This is crucial for building accurate mental models.</p>
+<h4 id="diagram-relationship-graph-types">Diagram: Relationship Graph Types</h4>
+<details>
+<summary>Relationship Graph Types</summary>
+<p>Type: graph-model</p>
+<p>Purpose: Demonstrate different types of relationships that can be represented in graph visualizations</p>
+<p>Bloom Taxonomy Level: Analyze</p>
+<p>Learning Objective: Students will be able to distinguish between different relationship types and select appropriate edge representations for their content.</p>
+<p>Node Types:
+1. Concept Node (circles)
+   - Color: Light blue
+   - Properties: name, description</p>
+<ol>
+<li>Example Node (rounded rectangles)</li>
+<li>Color: Light green</li>
+<li>Properties: name, detail</li>
+</ol>
+<p>Edge Types (with visual encoding):
+1. "PREREQUISITE" (solid arrow)
+   - Direction: From required to dependent
+   - Color: Dark blue
+   - Meaning: Must understand A before B</p>
+<ol>
+<li>"RELATED TO" (dashed line, no arrow)</li>
+<li>Direction: Bidirectional</li>
+<li>Color: Gray</li>
+<li>
+<p>Meaning: Conceptually connected</p>
+</li>
+<li>
+<p>"CONTRASTS WITH" (dotted line, double arrow)</p>
+</li>
+<li>Direction: Bidirectional</li>
+<li>Color: Red</li>
+<li>
+<p>Meaning: Important differences</p>
+</li>
+<li>
+<p>"EXEMPLIFIES" (solid arrow)</p>
+</li>
+<li>Direction: From example to concept</li>
+<li>Color: Green</li>
+<li>
+<p>Meaning: Instance of category</p>
+</li>
+<li>
+<p>"INFLUENCES" (wavy arrow)</p>
+</li>
+<li>Direction: Unidirectional</li>
+<li>Color: Orange</li>
+<li>Meaning: Causal relationship</li>
+</ol>
+<p>Sample Data:
+- "Learning Objective" --PREREQUISITE→ "MicroSim Design"
+- "Learning Objective" ←EXEMPLIFIES-- "Explain photosynthesis"
+- "Motion Simulation" --CONTRASTS WITH-- "Static Diagram"
+- "Visualization" --RELATED TO-- "Cognitive Load"
+- "Complexity" --INFLUENCES→ "Learning Time"</p>
+<p>Layout: Force-directed with relationship type affecting edge length
+- PREREQUISITE: Short (tightly coupled)
+- RELATED TO: Medium
+- CONTRASTS WITH: Long (conceptual distance)</p>
+<p>Interactive Features:
+- Hover edge to see relationship description
+- Click node to highlight all its relationships
+- Filter by relationship type
+- Zoom and pan</p>
+<p>Visual Styling:
+- Edge thickness based on strength (if applicable)
+- Animated arrows for directional relationships
+- Legend explaining all edge types</p>
+<p>Implementation: vis-network JavaScript library</p>
+</details>
+<h3 id="hierarchy-displays-top-down-organization">Hierarchy Displays: Top-Down Organization</h3>
+<p><strong>Hierarchy displays</strong> are specialized network graphs where relationships are strictly top-down (or parent-child). Every node has at most one parent, creating a tree structure.</p>
+<p>Hierarchies are everywhere in education:</p>
+<ul>
+<li><strong>Taxonomy structures</strong>: Kingdom → Phylum → Class → Order...</li>
+<li><strong>Organizational charts</strong>: CEO → VPs → Directors → Managers...</li>
+<li><strong>Outline structures</strong>: Chapter → Section → Subsection...</li>
+<li><strong>Classification trees</strong>: Decisions branching to subcategories</li>
+</ul>
+<p>The visual convention for hierarchies places parent nodes above children, with connections flowing downward. This spatial arrangement reinforces the conceptual relationship.</p>
+<div class="admonition example">
+<p class="admonition-title">Real-World MicroSim Examples</p>
+<p>The <strong>Number Systems Hierarchy Diagram</strong> shows how natural numbers nest within whole numbers, which nest within integers, which nest within rationals—a perfect example of hierarchical classification.</p>
+</div>
+<h3 id="dependency-mapping-following-the-thread">Dependency Mapping: Following the Thread</h3>
+<p><strong>Dependency mapping</strong> visualizes what depends on what. Unlike general networks where edges might mean anything, dependency maps specifically show prerequisite relationships: "Before you can understand X, you must understand Y."</p>
+<p>This paradigm is crucial for instructional design because learning itself is a dependency problem. You can't teach calculus to someone who doesn't understand algebra. You can't explain recursion to someone who doesn't grasp function calls. Dependency maps make these invisible constraints visible.</p>
+<p>The <strong>Learning Graph Viewer</strong> MicroSim is a prime example of dependency mapping in action—showing exactly which concepts must come before others in a course structure.</p>
+<h3 id="influence-diagrams-causal-networks">Influence Diagrams: Causal Networks</h3>
+<p><strong>Influence diagrams</strong> show how factors affect outcomes in complex systems. Unlike simple cause-effect displays (which typically show one cause affecting one effect), influence diagrams map entire networks of causal relationships.</p>
+<p>These are particularly powerful for:</p>
+<ul>
+<li><strong>Decision analysis</strong>: How choices lead to outcomes</li>
+<li><strong>Systems dynamics</strong>: Feedback loops and delays</li>
+<li><strong>Risk assessment</strong>: Factors affecting probability</li>
+<li><strong>Policy analysis</strong>: Intervention points in complex systems</li>
+</ul>
+<p>The visual encoding typically uses:
+- Nodes for variables
+- Arrows for causal influence
+- Arrow thickness or color for strength of influence
+- Plus/minus signs for direction of effect</p>
+<h2 id="set-visualizations-and-classification">Set Visualizations and Classification</h2>
+<p>Sometimes the key insight isn't how things connect (networks) or how they move (simulations)—it's how they're categorized. <strong>Set visualizations</strong> show membership, overlap, and classification relationships.</p>
+<h3 id="venn-diagrams-the-classic-overlap">Venn Diagrams: The Classic Overlap</h3>
+<p>Ah, the <strong>Venn diagram</strong>—that beloved trio (or duo, or quartet) of overlapping circles that has graced whiteboards and textbooks for over a century. John Venn introduced them in 1880, and educators have been drawing them ever since.</p>
+<p>Venn diagrams are perfect for showing:</p>
+<ul>
+<li><strong>Set membership</strong>: What belongs where</li>
+<li><strong>Overlapping categories</strong>: Items that fit multiple groups</li>
+<li><strong>Logical relationships</strong>: Union, intersection, difference</li>
+<li><strong>Comparisons</strong>: Similarities and differences between concepts</li>
+</ul>
+<p>The power of the Venn diagram is its spatial mapping of logical relationships. Items in the overlap region share properties of both sets. Items outside all circles belong to neither category. The visual layout <em>is</em> the logic.</p>
+<div class="admonition example">
+<p class="admonition-title">Real-World MicroSim Examples</p>
+<p>The <strong>Number Systems Venn Diagram</strong> and <strong>Number Types Venn Diagram</strong> MicroSims beautifully illustrate how different number types (Natural, Whole, Integer, Rational, Real) nest within each other, with interactive hover states explaining each region.</p>
+</div>
+<h4 id="diagram-venn-diagram-builder">Diagram: Venn Diagram Builder</h4>
+<details>
+<summary>Interactive Venn Diagram Builder</summary>
+<p>Type: microsim</p>
+<p>Purpose: Allow learners to create and manipulate Venn diagrams to understand set relationships</p>
+<p>Bloom Taxonomy Level: Apply, Analyze</p>
+<p>Learning Objective: Students will be able to construct Venn diagrams representing relationships between categories and correctly place items in appropriate regions.</p>
+<p>Canvas Layout (responsive):
+- Left side (30%): Item palette and controls
+- Center (60%): Main Venn diagram area
+- Right side (10%): Region labels/counts</p>
+<p>Control Panel:
+- Number of sets selector: 2, 3, or 4
+- Set name text inputs (editable labels)
+- Item list with drag handles
+- "Add Item" button
+- "Reset" button</p>
+<p>Venn Diagram Area:
+- 2 sets: Two overlapping circles
+- 3 sets: Three overlapping circles (classic Venn)
+- 4 sets: Four overlapping ellipses (more complex)
+- Each region highlighted on hover
+- Item icons/labels positioned within regions</p>
+<p>Interaction:
+- Drag items from palette to diagram regions
+- Items snap to nearest valid region
+- Highlight region when dragging over
+- Double-click item to remove
+- Click region to see all items</p>
+<p>Visual Styling:
+- Each set: distinct semi-transparent color
+- Overlap regions: blended colors
+- Selected items: highlighted border
+- Hover states: subtle glow effect</p>
+<p>Validation:
+- Optional "check" button to verify placement
+- Green checkmark for correct placement
+- Red X with explanation for incorrect</p>
+<p>Implementation: p5.js or SVG with drag-and-drop</p>
+</details>
+<h3 id="set-visualizations-beyond-the-circle">Set Visualizations: Beyond the Circle</h3>
+<p>While Venn diagrams are the poster child for set visualization, they're not the only option. <strong>Set visualizations</strong> encompass any approach to showing membership and categorization:</p>
+<ul>
+<li><strong>Euler diagrams</strong>: Like Venns, but without requiring all overlap regions</li>
+<li><strong>Nested sets</strong>: Concentric shapes showing subset relationships</li>
+<li><strong>UpSet plots</strong>: Matrix-based approach for many overlapping sets</li>
+<li><strong>Containment maps</strong>: Rectangular nesting (like treemaps)</li>
+</ul>
+<p>The choice depends on your data. Three sets with significant overlap? Classic Venn. Seven sets with sparse overlap? UpSet plot. Strict hierarchy of containment? Nested rectangles.</p>
+<h3 id="classification-displays-sorting-and-categorizing">Classification Displays: Sorting and Categorizing</h3>
+<p><strong>Classification displays</strong> focus on the act of categorization itself—taking items and sorting them into groups. Unlike Venn diagrams (which show the result of classification), classification displays often involve interactive sorting.</p>
+<p>These are fantastic for assessment because they require active demonstration of understanding. Instead of passively viewing categories, learners must actively decide where items belong.</p>
+<p>Types of classification displays:</p>
+<ul>
+<li><strong>Card sorting</strong>: Drag items to category columns</li>
+<li><strong>Matrix classification</strong>: Place items in row/column intersections</li>
+<li><strong>Hierarchical sorting</strong>: Multi-level categorization</li>
+<li><strong>Binary trees</strong>: Yes/no decision paths</li>
+</ul>
+<h4 id="diagram-classification-matrix-display">Diagram: Classification Matrix Display</h4>
+<details>
+<summary>Classification Matrix Display</summary>
+<p>Type: microsim</p>
+<p>Purpose: Allow learners to classify items along two dimensions simultaneously</p>
+<p>Bloom Taxonomy Level: Analyze, Evaluate</p>
+<p>Learning Objective: Students will be able to classify items using two independent criteria and justify their placement in the resulting quadrants.</p>
+<p>Canvas Layout:
+- Title and instructions at top
+- Main 2x2 (or larger) matrix grid in center
+- Item bank on left or bottom
+- Score/feedback area</p>
+<p>Matrix Structure:
+- Row headers: Dimension 1 categories (e.g., "High Cost / Low Cost")
+- Column headers: Dimension 2 categories (e.g., "High Impact / Low Impact")
+- Grid cells: Drop zones for items
+- Each cell represents combination of both dimensions</p>
+<p>Items:
+- Displayed as cards in item bank
+- Each card shows item name and optional description
+- Draggable to matrix cells
+- Visual feedback during drag</p>
+<p>Interaction:
+- Drag items from bank to matrix cells
+- Items can be moved between cells
+- Optional: click item for more details
+- "Check" button for assessment mode</p>
+<p>Feedback Modes:
+1. Practice mode: Show correct answer after each placement
+2. Assessment mode: Show results at end
+3. Exploration mode: No right/wrong, just organization</p>
+<p>Visual Styling:
+- Distinct colors for each quadrant
+- Items inherit quadrant color when placed
+- Highlight valid drop zones during drag
+- Animation for placement</p>
+<p>Example Application:
+- Learning activities classified by:
+  - Rows: Bloom's level (Lower-order / Higher-order)
+  - Columns: Engagement type (Passive / Active)</p>
+<p>Implementation: HTML5 drag-and-drop or p5.js</p>
+</details>
+<h2 id="timelines-and-sequence-displays">Timelines and Sequence Displays</h2>
+<p>Time marches on, and sometimes that march is exactly what we need to visualize. <strong>Timeline</strong> and <strong>sequence displays</strong> show temporal relationships—what came before, what comes after, and how long things lasted.</p>
+<p>History teachers have been drawing timelines since chalk met blackboard. But interactive digital timelines can do so much more: zoom in on specific eras, filter by category, link to detailed information, and even animate the passage of time.</p>
+<h3 id="sequence-displays-first-this-then-that">Sequence Displays: First This, Then That</h3>
+<p><strong>Sequence displays</strong> show ordered events without necessarily emphasizing duration or specific dates. The focus is on order: Step 1, Step 2, Step 3.</p>
+<p>These are essential for teaching:</p>
+<ul>
+<li><strong>Procedures</strong>: How to do something</li>
+<li><strong>Algorithms</strong>: Computational sequences</li>
+<li><strong>Processes</strong>: How things unfold</li>
+<li><strong>Causal chains</strong>: This leads to that leads to this</li>
+</ul>
+<p>The visual convention is typically linear (horizontal or vertical), with clear numbering or arrows indicating direction.</p>
+<h3 id="process-timelines-adding-time-to-sequence">Process Timelines: Adding Time to Sequence</h3>
+<p><strong>Process timelines</strong> combine sequence with duration. Not only do we see the order of events, but we see how long each phase lasts and when they overlap.</p>
+<div class="admonition example">
+<p class="admonition-title">Real-World MicroSim Examples</p>
+<p>The <strong>Chapter Content Generation Workflow Timeline</strong> MicroSim shows the phases of creating textbook content, with each phase's duration and dependencies clearly visualized.</p>
+</div>
+<p>Process timelines are perfect for:</p>
+<ul>
+<li><strong>Project management</strong>: Phases and milestones</li>
+<li><strong>Development cycles</strong>: Design → Build → Test → Deploy</li>
+<li><strong>Biological processes</strong>: Cell division stages</li>
+<li><strong>Historical analysis</strong>: Overlapping periods and eras</li>
+</ul>
+<h4 id="diagram-interactive-process-timeline">Diagram: Interactive Process Timeline</h4>
+<details>
+<summary>Interactive Process Timeline</summary>
+<p>Type: timeline</p>
+<p>Purpose: Demonstrate a template for process-focused timeline MicroSims</p>
+<p>Bloom Taxonomy Level: Understand, Analyze</p>
+<p>Learning Objective: Students will be able to interpret process timelines to understand phase duration, overlap, and dependencies.</p>
+<p>Time Period: Flexible (adapts to content)</p>
+<p>Orientation: Horizontal (primary) with vertical swimlanes (optional)</p>
+<p>Main Timeline Elements:
+- Central time axis with tick marks
+- Duration bars for each phase/activity
+- Milestone markers (diamonds) for key events
+- Dependency arrows between related items</p>
+<p>Interactive Features:
+- Zoom: Mouse wheel or pinch to zoom in/out on timeline
+- Pan: Drag to scroll through time
+- Filter: Toggle categories on/off
+- Hover: Show detailed information popup
+- Click: Expand to full phase description</p>
+<p>Visual Encoding:
+- Bar length = duration
+- Bar color = category or status
+- Bar position (vertical) = swimlane/track
+- Opacity = certainty/confidence
+- Pattern fill = different types within category</p>
+<p>Example Data Structure:
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;phases&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">    </span><span class="p">{</span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Analysis&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;start&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;end&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;color&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;#3498db&quot;</span><span class="p">},</span>
+<span class="w">    </span><span class="p">{</span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Design&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;start&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;end&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;color&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;#2ecc71&quot;</span><span class="p">},</span>
+<span class="w">    </span><span class="p">{</span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Development&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;start&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;end&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">8</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;color&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;#e74c3c&quot;</span><span class="p">},</span>
+<span class="w">    </span><span class="p">{</span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Testing&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;start&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">6</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;end&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">9</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;color&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;#f39c12&quot;</span><span class="p">}</span>
+<span class="w">  </span><span class="p">],</span>
+<span class="w">  </span><span class="nt">&quot;milestones&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">    </span><span class="p">{</span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Kickoff&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;time&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;icon&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;star&quot;</span><span class="p">},</span>
+<span class="w">    </span><span class="p">{</span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Design Review&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;time&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;icon&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;check&quot;</span><span class="p">},</span>
+<span class="w">    </span><span class="p">{</span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Launch&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;time&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">9</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;icon&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;rocket&quot;</span><span class="p">}</span>
+<span class="w">  </span><span class="p">]</span>
+<span class="p">}</span>
+</code></pre></div></td></tr></table></div></p>
+<p>Layout:
+- Main canvas: Timeline visualization
+- Side panel: Phase legend and details
+- Bottom: Time scale with labels</p>
+<p>Implementation: vis-timeline library or custom HTML5/SVG</p>
+</details>
+<h2 id="charts-for-quantitative-data">Charts for Quantitative Data</h2>
+<p>Numbers tell stories, and charts help us read them. When your learning objective involves quantitative comparisons, trends, or distributions, you've entered chart territory.</p>
+<p>Charts are so ubiquitous that it's easy to take them for granted. But choosing the right chart type is a genuine skill—and the wrong choice can mislead learners rather than enlighten them.</p>
+<h3 id="trend-charts-change-over-time">Trend Charts: Change Over Time</h3>
+<p><strong>Trend charts</strong> (typically line charts) show how values change over continuous time or some other continuous variable. The x-axis represents the independent variable, the y-axis the dependent variable, and the connecting line shows the pattern.</p>
+<p>Trend charts answer questions like:</p>
+<ul>
+<li>Is it going up or down?</li>
+<li>How fast is it changing?</li>
+<li>Are there cycles or patterns?</li>
+<li>When did it change direction?</li>
+<li>How do multiple trends compare?</li>
+</ul>
+<p>Key design decisions for trend charts:</p>
+<table>
+<thead>
+<tr>
+<th>Decision</th>
+<th>Options</th>
+<th>When to Use</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Scale</td>
+<td>Linear vs. logarithmic</td>
+<td>Log for exponential growth</td>
+</tr>
+<tr>
+<td>Points</td>
+<td>Shown vs. hidden</td>
+<td>Show for sparse data</td>
+</tr>
+<tr>
+<td>Line style</td>
+<td>Solid vs. dashed</td>
+<td>Distinguish actual vs. projected</td>
+</tr>
+<tr>
+<td>Area fill</td>
+<td>None vs. filled</td>
+<td>Emphasize cumulative values</td>
+</tr>
+<tr>
+<td>Multiple series</td>
+<td>Overlaid vs. small multiples</td>
+<td>Overlaid for comparison</td>
+</tr>
+</tbody>
+</table>
+<h3 id="distribution-charts-showing-spread">Distribution Charts: Showing Spread</h3>
+<p><strong>Distribution charts</strong> reveal how values are spread across a range. Instead of asking "what's the value?" they ask "how many values fall in each range?"</p>
+<p>Common distribution visualizations:</p>
+<ul>
+<li><strong>Histograms</strong>: Bars showing frequency in ranges</li>
+<li><strong>Box plots</strong>: Summary statistics (median, quartiles, outliers)</li>
+<li><strong>Violin plots</strong>: Distribution shape with density</li>
+<li><strong>Density plots</strong>: Smooth continuous distribution curve</li>
+</ul>
+<p>These are essential for statistics education, quality control concepts, and any domain where understanding variability matters as much as understanding averages.</p>
+<h3 id="correlation-displays-relationships-between-variables">Correlation Displays: Relationships Between Variables</h3>
+<p>When you want to show how two quantitative variables relate, you need a <strong>correlation display</strong>—typically a scatter plot. Each point represents one observation, positioned according to its values on both variables.</p>
+<p>Scatter plots reveal:</p>
+<ul>
+<li><strong>Positive correlation</strong>: Points trend upward</li>
+<li><strong>Negative correlation</strong>: Points trend downward</li>
+<li><strong>No correlation</strong>: Points scattered randomly</li>
+<li><strong>Non-linear relationships</strong>: Curved patterns</li>
+<li><strong>Outliers</strong>: Points far from the trend</li>
+</ul>
+<p>Adding a trend line (linear regression) quantifies the relationship and makes it visually explicit.</p>
+<h4 id="diagram-chart-type-selection-guide">Diagram: Chart Type Selection Guide</h4>
+<details>
+<summary>Chart Type Selection Guide</summary>
+<p>Type: infographic</p>
+<p>Purpose: Help learners choose the appropriate chart type for their data</p>
+<p>Bloom Taxonomy Level: Apply</p>
+<p>Learning Objective: Students will be able to select the most appropriate chart type based on the nature of their data and the question they want to answer.</p>
+<p>Layout: Decision matrix with data type on one axis and question type on the other</p>
+<p>Data Types (rows):
+- Categorical (names, groups)
+- Time series (values over time)
+- Distribution (spread of values)
+- Relationship (two variables)
+- Part-to-whole (percentages)</p>
+<p>Question Types (columns):
+- Compare values
+- Show change
+- Show composition
+- Show distribution
+- Show relationship</p>
+<p>Matrix Cells (recommended chart types):
+| | Compare | Change | Composition | Distribution | Relationship |
+|---|---------|--------|-------------|--------------|--------------|
+| Categorical | Bar | Grouped Bar | Stacked Bar | - | - |
+| Time Series | Line | Area | Stacked Area | - | Dual Axis |
+| Distribution | - | - | - | Histogram | - |
+| Relationship | - | - | - | - | Scatter |
+| Part-to-Whole | - | - | Pie/Donut | - | - |</p>
+<p>Interactive Features:
+- Click any cell to see example chart
+- Hover for description of when to use
+- Toggle "advanced charts" for more options (violin, treemap, etc.)
+- "Show me" button generates sample chart</p>
+<p>Visual Styling:
+- Color-coded by chart family
+- Icons representing each chart type
+- Highlight "best practice" recommendations in green
+- Warning symbols for commonly misused combinations</p>
+<p>Implementation: Interactive HTML/CSS grid with JavaScript popups</p>
+</details>
+<h2 id="spatial-visualizations">Spatial Visualizations</h2>
+<p>Sometimes location is the key dimension. <strong>Spatial visualizations</strong> show where things are—on a map, in a room, across an anatomy, or through space.</p>
+<h3 id="maps-geographic-context">Maps: Geographic Context</h3>
+<p>When your content has a geographic component, <strong>maps</strong> provide the essential context. Students studying migration patterns, regional economics, climate zones, or historical campaigns need to see <em>where</em> things happened.</p>
+<p>Interactive map features:</p>
+<ul>
+<li><strong>Zoom and pan</strong>: Explore at different scales</li>
+<li><strong>Layers</strong>: Toggle different data overlays</li>
+<li><strong>Markers</strong>: Points of interest</li>
+<li><strong>Regions</strong>: Colored areas (choropleth maps)</li>
+<li><strong>Movement arrows</strong>: Show flows and migration</li>
+</ul>
+<div class="admonition example">
+<p class="admonition-title">Real-World MicroSim Examples</p>
+<p>The <strong>Interactive World Cities Map</strong> MicroSim uses Leaflet to display major cities across continents, allowing learners to explore geographic distribution and urban patterns.</p>
+</div>
+<p>Maps aren't just for geography. Any spatial layout can use map-like visualization:</p>
+<ul>
+<li><strong>Campus maps</strong>: Building locations and routes</li>
+<li><strong>Anatomical diagrams</strong>: Organ locations and systems</li>
+<li><strong>Network topologies</strong>: Physical device placement</li>
+<li><strong>Game boards</strong>: Spatial strategy visualization</li>
+</ul>
+<h4 id="diagram-spatial-visualization-types">Diagram: Spatial Visualization Types</h4>
+<details>
+<summary>Spatial Visualization Types</summary>
+<p>Type: diagram</p>
+<p>Purpose: Show the variety of spatial visualization approaches and when to use each</p>
+<p>Bloom Taxonomy Level: Understand</p>
+<p>Learning Objective: Students will be able to distinguish between different spatial visualization types and select appropriate approaches for location-based content.</p>
+<p>Layout: 2x3 grid of visualization type examples</p>
+<p>Visualization Types:</p>
+<ol>
+<li>Geographic Map</li>
+<li>Use case: Real-world locations</li>
+<li>Example: World map with city markers</li>
+<li>Library: Leaflet</li>
+<li>
+<p>Features: Zoom, layers, real geography</p>
+</li>
+<li>
+<p>Schematic Map</p>
+</li>
+<li>Use case: Simplified spatial relationships</li>
+<li>Example: Subway map, circuit diagram</li>
+<li>Library: SVG or Canvas</li>
+<li>
+<p>Features: Distorted for clarity, not to scale</p>
+</li>
+<li>
+<p>Floor Plan</p>
+</li>
+<li>Use case: Indoor spaces, architecture</li>
+<li>Example: Building layout, room arrangement</li>
+<li>Library: SVG or Canvas</li>
+<li>
+<p>Features: To scale, overhead view</p>
+</li>
+<li>
+<p>Anatomical Diagram</p>
+</li>
+<li>Use case: Biological structures</li>
+<li>Example: Human body systems</li>
+<li>Library: SVG with regions</li>
+<li>
+<p>Features: Labels, system highlighting</p>
+</li>
+<li>
+<p>Network Topology</p>
+</li>
+<li>Use case: Physical system layout</li>
+<li>Example: Computer network, power grid</li>
+<li>Library: vis-network with fixed positions</li>
+<li>
+<p>Features: Geographic placement + connections</p>
+</li>
+<li>
+<p>3D Spatial</p>
+</li>
+<li>Use case: Volume, depth relationships</li>
+<li>Example: Molecular structure, architectural walk-through</li>
+<li>Library: Three.js</li>
+<li>Features: Rotation, perspective</li>
+</ol>
+<p>Visual Styling:
+- Each type shown as a thumbnail with label
+- Distinctive visual style for each
+- "Best for" caption under each</p>
+<p>Interactive Features:
+- Click type to see larger example
+- Hover for use case details</p>
+<p>Implementation: Static SVG grid with modal popups for examples</p>
+</details>
+<h2 id="flow-and-state-diagrams">Flow and State Diagrams</h2>
+<p>Some concepts are best understood as processes with decisions, branches, and states. <strong>Flowcharts</strong> and <strong>state machine diagrams</strong> excel at showing these logical structures.</p>
+<h3 id="flowcharts-decisions-and-processes">Flowcharts: Decisions and Processes</h3>
+<p>The humble <strong>flowchart</strong> might be the most widely recognized diagram type in business and technology. Rectangles for processes, diamonds for decisions, arrows for flow—it's a visual language that most professionals already speak.</p>
+<p>Flowcharts are perfect for:</p>
+<ul>
+<li><strong>Algorithms</strong>: Step-by-step computation</li>
+<li><strong>Business processes</strong>: Workflows and procedures</li>
+<li><strong>Troubleshooting guides</strong>: Decision trees</li>
+<li><strong>System interactions</strong>: Data flow between components</li>
+</ul>
+<p>The key insight flowcharts provide is <strong>branching logic</strong>. When you reach a decision point, the path you take depends on a condition. This fundamental concept underlies all programming and much of critical thinking.</p>
+<div class="admonition example">
+<p class="admonition-title">Real-World MicroSim Examples</p>
+<p>The <strong>MkDocs Build Process Workflow</strong>, <strong>ADDIE Model Workflow</strong>, and <strong>Data-Driven Ethics Process Flow</strong> MicroSims all use Mermaid-based flowcharts to illustrate complex sequential processes with decision points.</p>
+</div>
+<h3 id="state-machine-diagrams-being-vs-doing">State Machine Diagrams: Being vs. Doing</h3>
+<p>While flowcharts focus on <em>what happens</em>, <strong>state machine diagrams</strong> focus on <em>what state the system is in</em>. This subtle distinction is crucial for understanding systems with persistence and memory.</p>
+<p>A state machine consists of:</p>
+<ul>
+<li><strong>States</strong>: Conditions the system can be in</li>
+<li><strong>Transitions</strong>: Events that cause state changes</li>
+<li><strong>Guards</strong>: Conditions that enable transitions</li>
+<li><strong>Actions</strong>: Activities that occur during transitions</li>
+</ul>
+<p>State machines are essential for teaching:</p>
+<ul>
+<li><strong>User interface behavior</strong>: Button states, form validation</li>
+<li><strong>Protocol design</strong>: Communication states</li>
+<li><strong>Game logic</strong>: Character states, game phases</li>
+<li><strong>Workflow status</strong>: Document approval stages</li>
+</ul>
+<h4 id="diagram-state-machine-template">Diagram: State Machine Template</h4>
+<details>
+<summary>State Machine Visualization Template</summary>
+<p>Type: diagram</p>
+<p>Purpose: Provide a template for state machine MicroSims</p>
+<p>Bloom Taxonomy Level: Analyze</p>
+<p>Learning Objective: Students will be able to trace state transitions in a state machine diagram and predict system behavior given a sequence of events.</p>
+<p>Components:</p>
+<p>States (rounded rectangles):
+- Name prominently displayed
+- Optional: entry actions, exit actions
+- Visual distinction for special states:
+  - Initial state: filled circle
+  - Final state: filled circle with ring
+  - Current state: highlighted border</p>
+<p>Transitions (arrows):
+- Event label above arrow
+- Guard condition in brackets [guard]
+- Action after slash /action
+- Self-loops for events that don't change state</p>
+<p>Layout Options:
+- Hierarchical: States arranged top-to-bottom
+- Circular: States around a center
+- Left-to-right: Timeline-like progression</p>
+<p>Example State Machine (Document Workflow):
+- States: Draft, Under Review, Approved, Rejected, Published
+- Transitions:
+  - Draft --submit→ Under Review
+  - Under Review --approve→ Approved
+  - Under Review --reject→ Rejected
+  - Rejected --revise→ Draft
+  - Approved --publish→ Published</p>
+<p>Interactive Features:
+- Click state to see description
+- Click transition to see event details
+- "Simulate" mode: click events to watch state changes
+- Current state indicator moves with transitions
+- Event history displayed</p>
+<p>Visual Styling:
+- State colors indicate category (e.g., active vs. terminal)
+- Transition arrow colors indicate event type
+- Animation for state transitions
+- Pulsing effect on current state</p>
+<p>Implementation: Mermaid.js for static, custom SVG/JS for interactive simulation</p>
+</details>
+<h2 id="paradigm-selection-the-art-of-matching">Paradigm Selection: The Art of Matching</h2>
+<p>Now that you've seen the full buffet of visualization paradigms, the crucial skill is selection. <strong>Paradigm selection</strong> is the art of looking at a learning objective and recognizing which visualization approach will best illuminate the concept.</p>
+<p>This isn't always obvious. Consider teaching "how a bill becomes a law." You could use:</p>
+<ul>
+<li>A <strong>flowchart</strong> (focus on decision points and branches)</li>
+<li>A <strong>timeline</strong> (focus on sequence and duration)</li>
+<li>A <strong>state machine</strong> (focus on bill status transitions)</li>
+<li>A <strong>network graph</strong> (focus on stakeholder relationships)</li>
+</ul>
+<p>Each reveals different aspects of the same process. The "right" choice depends on what aspect you want learners to understand.</p>
+<h3 id="concept-characteristics-the-diagnostic-framework">Concept Characteristics: The Diagnostic Framework</h3>
+<p><strong>Concept characteristics</strong> are the inherent properties of educational content that suggest appropriate visualization approaches. By analyzing these characteristics, you can systematically match concepts to paradigms.</p>
+<p>Key characteristics to analyze:</p>
+<table>
+<thead>
+<tr>
+<th>Characteristic</th>
+<th>Questions to Ask</th>
+<th>Implications</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Temporality</strong></td>
+<td>Does time matter? Is there sequence?</td>
+<td>Timeline, sequence, motion</td>
+</tr>
+<tr>
+<td><strong>Relationship structure</strong></td>
+<td>How are parts related? Hierarchical? Networked?</td>
+<td>Graph, hierarchy, influence diagram</td>
+</tr>
+<tr>
+<td><strong>Quantitative nature</strong></td>
+<td>Are there numbers? Comparisons? Distributions?</td>
+<td>Charts, statistical displays</td>
+</tr>
+<tr>
+<td><strong>Spatial organization</strong></td>
+<td>Does location matter? Is there physical arrangement?</td>
+<td>Maps, spatial diagrams</td>
+</tr>
+<tr>
+<td><strong>Process vs. state</strong></td>
+<td>Focus on actions or conditions?</td>
+<td>Flowchart vs. state machine</td>
+</tr>
+<tr>
+<td><strong>Category membership</strong></td>
+<td>Are things being classified? Do categories overlap?</td>
+<td>Venn diagram, classification display</td>
+</tr>
+<tr>
+<td><strong>Causality</strong></td>
+<td>Do things cause other things? Are there feedback loops?</td>
+<td>Cause-effect, influence diagram</td>
+</tr>
+<tr>
+<td><strong>Dynamism</strong></td>
+<td>Does it change continuously? Are there forces?</td>
+<td>Physics simulation, animation</td>
+</tr>
+</tbody>
+</table>
+<h3 id="visual-affordances-what-visualizations-suggest">Visual Affordances: What Visualizations "Suggest"</h3>
+<p><strong>Visual affordances</strong> are the actions or interpretations that a visualization naturally suggests. A button looks "clickable." A slider looks "draggable." A network looks "explorable."</p>
+<p>Understanding affordances helps you match visualization to learning activity:</p>
+<ul>
+<li><strong>Passive viewing</strong>: Diagrams, infographics</li>
+<li><strong>Exploration</strong>: Networks, maps, timelines</li>
+<li><strong>Manipulation</strong>: Simulations, interactive charts</li>
+<li><strong>Construction</strong>: Builders, editors, sorters</li>
+<li><strong>Prediction</strong>: Cause-effect displays, simulations</li>
+</ul>
+<p>The affordance should match the learning objective's verb. If learners need to "analyze relationships," give them an explorable network. If they need to "predict outcomes," give them a manipulable simulation. If they need to "classify items," give them a sorting activity.</p>
+<h4 id="diagram-paradigm-affordance-mapping">Diagram: Paradigm-Affordance Mapping</h4>
+<details>
+<summary>Paradigm-Affordance Mapping</summary>
+<p>Type: infographic</p>
+<p>Purpose: Show how different visualization paradigms afford different types of learning interactions</p>
+<p>Bloom Taxonomy Level: Evaluate</p>
+<p>Learning Objective: Students will be able to evaluate the match between visualization paradigms and learning objectives based on affordance alignment.</p>
+<p>Layout: Matrix with paradigms as rows and learning activities as columns</p>
+<p>Paradigms (rows):
+1. Motion/Physics Simulation
+2. Network Graph
+3. Hierarchy Display
+4. Timeline/Sequence
+5. Statistical Chart
+6. Spatial Map
+7. Flowchart
+8. State Machine
+9. Venn/Set Diagram
+10. Classification Display</p>
+<p>Learning Activities (columns):
+1. Observe/Watch
+2. Explore/Navigate
+3. Compare/Contrast
+4. Manipulate/Experiment
+5. Predict/Hypothesize
+6. Construct/Build
+7. Classify/Sort
+8. Trace/Follow
+9. Analyze Relationships</p>
+<p>Matrix Values (color-coded strength):
+- Strong fit (green): Paradigm naturally affords this activity
+- Moderate fit (yellow): Possible with additional design work
+- Poor fit (red): Fighting against the paradigm's nature
+- Not applicable (gray): Doesn't make sense for this combination</p>
+<p>Example entries:
+- Motion Simulation × Predict = Strong (natural experiment)
+- Network Graph × Analyze Relationships = Strong (core purpose)
+- Timeline × Trace/Follow = Strong (natural affordance)
+- Venn Diagram × Classify/Sort = Strong (core purpose)
+- Statistical Chart × Manipulate = Moderate (with interactive controls)</p>
+<p>Interactive Features:
+- Click cell to see examples of that combination
+- Filter by Bloom's taxonomy level
+- Highlight best matches for a given learning objective
+- Export recommendations</p>
+<p>Visual Styling:
+- Color intensity indicates strength
+- Icons for each activity type
+- Hover details with rationale</p>
+<p>Implementation: Interactive HTML table with filtering</p>
+</details>
+<h2 id="putting-it-all-together-your-pattern-recognition-toolkit">Putting It All Together: Your Pattern Recognition Toolkit</h2>
+<p>Congratulations! You've just toured the complete MicroSim visualization landscape. Let's consolidate what you've learned into a practical toolkit you can use immediately.</p>
+<h3 id="the-five-minute-paradigm-selection-process">The Five-Minute Paradigm Selection Process</h3>
+<p>When faced with a new learning objective, run through this quick analysis:</p>
+<ol>
+<li><strong>What's changing?</strong></li>
+<li>Time → Timeline/Sequence</li>
+<li>Position → Motion Simulation</li>
+<li>State → State Machine</li>
+<li>
+<p>Quantity → Charts</p>
+</li>
+<li>
+<p><strong>What's related?</strong></p>
+</li>
+<li>Hierarchy → Hierarchy Display</li>
+<li>Network → Network Graph</li>
+<li>Sets → Venn Diagram</li>
+<li>
+<p>Causes → Influence Diagram</p>
+</li>
+<li>
+<p><strong>What should learners do?</strong></p>
+</li>
+<li>Observe → Any visualization</li>
+<li>Explore → Network, Map, Timeline</li>
+<li>Manipulate → Simulation, Interactive Chart</li>
+<li>Classify → Venn, Classification Display</li>
+<li>
+<p>Trace → Flowchart, State Machine</p>
+</li>
+<li>
+<p><strong>What level of Bloom's Taxonomy?</strong></p>
+</li>
+<li>Remember → Static diagrams, simple displays</li>
+<li>Understand → Explorable visualizations</li>
+<li>Apply → Interactive simulations</li>
+<li>Analyze → Network analysis, cause-effect</li>
+<li>Evaluate → Comparison tools, rubric applications</li>
+<li>Create → Builders, editors, constructors</li>
+</ol>
+<h3 id="common-paradigm-pairings">Common Paradigm Pairings</h3>
+<p>Many MicroSims combine paradigms for richer learning experiences:</p>
+<ul>
+<li><strong>Simulation + Chart</strong>: Show physics while graphing variables over time</li>
+<li><strong>Network + Timeline</strong>: Display relationship evolution</li>
+<li><strong>Flowchart + State Machine</strong>: Process view with state awareness</li>
+<li><strong>Map + Timeline</strong>: Historical events with geographic context</li>
+<li><strong>Classification + Network</strong>: Category membership plus relationships</li>
+</ul>
+<h3 id="your-pattern-library-is-your-superpower">Your Pattern Library Is Your Superpower</h3>
+<p>Here's the optimistic truth that motivated this chapter: <strong>most educational concepts fit known patterns</strong>. The more patterns you recognize, the faster you can design effective MicroSims.</p>
+<p>You're not starting from scratch every time. You're recognizing "Oh, this is a classification problem—I'll use a Venn or sorting approach" or "This involves feedback loops—influence diagram time." Pattern recognition transforms design from creative struggle to informed selection.</p>
+<p>And remember: the AI tools you'll use in later chapters already know these patterns too. When you tell an AI "create a motion simulation showing harmonic oscillation" or "build a network graph of character relationships," you're speaking a shared language. The patterns are the vocabulary.</p>
+<h2 id="summary-and-key-takeaways">Summary and Key Takeaways</h2>
+<p>Let's recap the visualization paradigms you've mastered:</p>
+<p><strong>Motion and Physics Family:</strong>
+- Motion Simulation: Objects moving through space
+- Physics Simulation: Realistic forces and behaviors
+- Dynamic Systems: Multiple interacting variables
+- Cause-Effect Display: Input → Output relationships</p>
+<p><strong>Network and Graph Family:</strong>
+- Network Graph: Nodes and edges showing connections
+- Relationship Graph: Semantic meaning on connections
+- Hierarchy Display: Tree structures, parent-child
+- Dependency Mapping: Prerequisites and requirements
+- Influence Diagram: Causal networks</p>
+<p><strong>Set and Classification Family:</strong>
+- Venn Diagram: Overlapping categories
+- Set Visualization: Membership and containment
+- Classification Display: Sorting and categorizing</p>
+<p><strong>Timeline and Sequence Family:</strong>
+- Sequence Display: Ordered steps
+- Process Timeline: Duration and overlap</p>
+<p><strong>Chart Family:</strong>
+- Trend Chart: Change over continuous variable
+- Distribution Chart: Spread of values
+- Correlation Display: Relationship between variables</p>
+<p><strong>Spatial Family:</strong>
+- Spatial Visualization: Location-based displays
+- Maps: Geographic context</p>
+<p><strong>Flow and State Family:</strong>
+- Flowchart: Processes with decisions
+- State Machine Diagram: States and transitions</p>
+<p><strong>Meta-Skills:</strong>
+- Paradigm Selection: Matching concept to visualization
+- Concept Characteristics: Analyzing content properties
+- Visual Affordances: Understanding what visualizations suggest</p>
+<p>With these patterns in your toolkit, you're ready to tackle any learning objective and quickly identify the visualization approach that will make it shine. In the next chapter, we'll dive into actually writing MicroSim specifications—turning your paradigm selection into detailed blueprints that AI tools can build.</p>
+<p>Welcome to the pattern library. Now go make some learning magic happen!</p>
+<details class="question">
+<summary>Review Questions</summary>
+<ol>
+<li><strong>What visualization paradigm would you choose for teaching the water cycle, and why?</strong></li>
+</ol>
+<p>The water cycle involves continuous transformation (liquid → gas → liquid) happening in different locations. A <strong>motion/physics simulation</strong> combined with <strong>spatial visualization</strong> would work well—showing particles moving through the cycle stages positioned on a simplified geography (ocean, atmosphere, mountains).</p>
+<ol>
+<li><strong>When would you choose a state machine diagram over a flowchart?</strong></li>
+</ol>
+<p>Choose a state machine when the <strong>current state matters</strong> for understanding behavior—when the system "remembers" where it is and that affects what can happen next. Flowcharts are better when you're showing a <strong>linear process</strong> that starts, executes, and ends without persistent state.</p>
+<ol>
+<li><strong>What concept characteristics suggest using a network graph?</strong></li>
+</ol>
+<p>Network graphs are indicated when: (a) multiple entities exist that need to be shown, (b) relationships between entities are non-hierarchical, (c) the pattern of connections matters for understanding, and (d) learners need to explore or analyze the relationship structure.</p>
+</details>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../02-prerequisite-analysis-microsim-fundamentals/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Prerequisite Analysis and MicroSim Fundamentals">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Prerequisite Analysis and MicroSim Fundamentals
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../04-visualization-libraries-tools/" class="md-footer__link md-footer__link--next" aria-label="Next: Visualization Libraries and Tools">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Visualization Libraries and Tools
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2025 Dan McCreary. Licensed under <a href="license/">CC BY-NC-SA 4.0</a> for non-commercial use.
+    </div>
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.copy", "navigation.expand", "navigation.path", "navigation.prune", "navigation.indexes", "toc.follow", "navigation.top", "navigation.footer", "content.action.edit"], "search": "../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.83f73b43.min.js"></script>
+      
+        <script src="../../js/extra.js"></script>
+      
+    
+  </body>
+</html>

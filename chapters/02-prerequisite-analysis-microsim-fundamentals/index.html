@@ -1,0 +1,2735 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Learn the fundamentals of MicroSims and how to analyze prerequisite knowledge for effective educational simulation design">
+      
+      
+        <meta name="author" content="Dan McCreary">
+      
+      
+        <link rel="canonical" href="https://dmccreary.github.io/automating-instructional-design/chapters/02-prerequisite-analysis-microsim-fundamentals/">
+      
+      
+        <link rel="prev" href="../01-foundations-learning-objective-analysis/">
+      
+      
+        <link rel="next" href="../03-microsim-pattern-library/">
+      
+      
+      <link rel="icon" href="../../img/favicon.ico">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.43">
+    
+    
+      
+        <title>Prerequisite Analysis and MicroSim Fundamentals - Automating Instructional Design</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.0253249f.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../css/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+      
+        <meta  property="og:type"  content="website" >
+      
+        <meta  property="og:title"  content="Prerequisite Analysis and MicroSim Fundamentals - Automating Instructional Design" >
+      
+        <meta  property="og:description"  content="Learn the fundamentals of MicroSims and how to analyze prerequisite knowledge for effective educational simulation design" >
+      
+        <meta  property="og:image"  content="https://dmccreary.github.io/automating-instructional-design/assets/images/social/chapters/02-prerequisite-analysis-microsim-fundamentals/index.png" >
+      
+        <meta  property="og:image:type"  content="image/png" >
+      
+        <meta  property="og:image:width"  content="1200" >
+      
+        <meta  property="og:image:height"  content="630" >
+      
+        <meta  property="og:url"  content="https://dmccreary.github.io/automating-instructional-design/chapters/02-prerequisite-analysis-microsim-fundamentals/" >
+      
+        <meta  name="twitter:card"  content="summary_large_image" >
+      
+        <meta  name="twitter:title"  content="Prerequisite Analysis and MicroSim Fundamentals - Automating Instructional Design" >
+      
+        <meta  name="twitter:description"  content="Learn the fundamentals of MicroSims and how to analyze prerequisite knowledge for effective educational simulation design" >
+      
+        <meta  name="twitter:image"  content="https://dmccreary.github.io/automating-instructional-design/assets/images/social/chapters/02-prerequisite-analysis-microsim-fundamentals/index.png" >
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="orange">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#prerequisite-analysis-and-microsim-fundamentals" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Automating Instructional Design" class="md-header__button md-logo" aria-label="Automating Instructional Design" data-md-component="logo">
+      
+  <img src="../../img/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Automating Instructional Design
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Prerequisite Analysis and MicroSim Fundamentals
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/dmccreary/automating-instructional-design" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub Repo
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Automating Instructional Design" class="md-nav__button md-logo" aria-label="Automating Instructional Design" data-md-component="logo">
+      
+  <img src="../../img/logo.png" alt="logo">
+
+    </a>
+    Automating Instructional Design
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/dmccreary/automating-instructional-design" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub Repo
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../course-description/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Course Description
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+    
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Chapters
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Chapters
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../01-foundations-learning-objective-analysis/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Foundations of Learning Objective Analysis
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Prerequisite Analysis and MicroSim Fundamentals
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Prerequisite Analysis and MicroSim Fundamentals
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      Summary
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#concepts-covered" class="md-nav__link">
+    <span class="md-ellipsis">
+      Concepts Covered
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    <span class="md-ellipsis">
+      Prerequisites
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-birth-of-microsims-a-brief-history" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Birth of MicroSims: A Brief History
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-is-an-interactive-simulation" class="md-nav__link">
+    <span class="md-ellipsis">
+      What Is an Interactive Simulation?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#microsims-simulations-that-scale" class="md-nav__link">
+    <span class="md-ellipsis">
+      MicroSims: Simulations That Scale
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="MicroSims: Simulations That Scale">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-traditional-simulation-vs-microsim-architecture" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Traditional Simulation vs MicroSim Architecture
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#characteristics-of-effective-microsims" class="md-nav__link">
+    <span class="md-ellipsis">
+      Characteristics of Effective MicroSims
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#microsim-types-by-blooms-level" class="md-nav__link">
+    <span class="md-ellipsis">
+      MicroSim Types by Bloom's Level
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="MicroSim Types by Bloom's Level">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-microsim-types-by-blooms-level" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: MicroSim Types by Bloom's Level
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ai-assisted-design-your-new-creative-partner" class="md-nav__link">
+    <span class="md-ellipsis">
+      AI-Assisted Design: Your New Creative Partner
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="AI-Assisted Design: Your New Creative Partner">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-human-ai-collaboration-loop" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Human-AI Collaboration Loop
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The Human-AI Collaboration Loop">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-human-ai-collaboration-loop" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Human-AI Collaboration Loop
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#understanding-prerequisite-knowledge" class="md-nav__link">
+    <span class="md-ellipsis">
+      Understanding Prerequisite Knowledge
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Understanding Prerequisite Knowledge">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#identifying-prerequisites" class="md-nav__link">
+    <span class="md-ellipsis">
+      Identifying Prerequisites
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#assumed-knowledge-setting-the-baseline" class="md-nav__link">
+    <span class="md-ellipsis">
+      Assumed Knowledge: Setting the Baseline
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Assumed Knowledge: Setting the Baseline">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-prerequisite-vs-assumed-knowledge" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Prerequisite vs Assumed Knowledge
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#documenting-assumptions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Documenting Assumptions
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#concept-dependencies-mapping-the-learning-landscape" class="md-nav__link">
+    <span class="md-ellipsis">
+      Concept Dependencies: Mapping the Learning Landscape
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Concept Dependencies: Mapping the Learning Landscape">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#types-of-dependencies" class="md-nav__link">
+    <span class="md-ellipsis">
+      Types of Dependencies
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Types of Dependencies">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-concept-dependency-graph-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Concept Dependency Graph Example
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#creating-dependency-maps" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creating Dependency Maps
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#learning-pathways-routes-through-the-content" class="md-nav__link">
+    <span class="md-ellipsis">
+      Learning Pathways: Routes Through the Content
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Learning Pathways: Routes Through the Content">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#personalized-pathways" class="md-nav__link">
+    <span class="md-ellipsis">
+      Personalized Pathways
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Personalized Pathways">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-learning-pathway-visualization" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Learning Pathway Visualization
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#simulation-readiness-is-this-concept-ready-for-microsim-treatment" class="md-nav__link">
+    <span class="md-ellipsis">
+      Simulation Readiness: Is This Concept Ready for MicroSim Treatment?
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Simulation Readiness: Is This Concept Ready for MicroSim Treatment?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-simulation-readiness-checklist" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Simulation Readiness Checklist
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The Simulation Readiness Checklist">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-simulation-readiness-assessment" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Simulation Readiness Assessment
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#putting-it-all-together-from-objective-to-microsim" class="md-nav__link">
+    <span class="md-ellipsis">
+      Putting It All Together: From Objective to MicroSim
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#chapter-summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      Chapter Summary
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#review-questions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Review Questions
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../03-microsim-pattern-library/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    The MicroSim Pattern Library
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../04-visualization-libraries-tools/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Visualization Libraries and Tools
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../05-writing-microsim-specifications/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Writing Effective MicroSim Specifications
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../06-adapting-audience-levels/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Adapting for Audience Levels
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../07-cognitive-load-visual-design/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Cognitive Load and Visual Design
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../08-anticipating-misconceptions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Anticipating Misconceptions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../09-generating-microsims-ai-tools/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Generating MicroSims with AI Tools
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../10-quality-evaluation-frameworks/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Quality Evaluation Frameworks
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../11-user-testing-iteration/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    User Testing and Iteration
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../12-accessibility-deployment-completion/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Accessibility, Deployment, and Course Completion
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+          
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../stories/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Stories
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../learning-graph/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Learning Graph
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+          
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../sims/graph-viewer/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    MicroSims
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../checklist/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Checklist
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../glossary/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Glossary
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../how-we-built-this-site/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    How We Built This Site
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../references/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    References
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../feedback/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Feedback
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../license/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    License
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../contact/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Contact
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      Summary
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#concepts-covered" class="md-nav__link">
+    <span class="md-ellipsis">
+      Concepts Covered
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    <span class="md-ellipsis">
+      Prerequisites
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-birth-of-microsims-a-brief-history" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Birth of MicroSims: A Brief History
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-is-an-interactive-simulation" class="md-nav__link">
+    <span class="md-ellipsis">
+      What Is an Interactive Simulation?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#microsims-simulations-that-scale" class="md-nav__link">
+    <span class="md-ellipsis">
+      MicroSims: Simulations That Scale
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="MicroSims: Simulations That Scale">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-traditional-simulation-vs-microsim-architecture" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Traditional Simulation vs MicroSim Architecture
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#characteristics-of-effective-microsims" class="md-nav__link">
+    <span class="md-ellipsis">
+      Characteristics of Effective MicroSims
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#microsim-types-by-blooms-level" class="md-nav__link">
+    <span class="md-ellipsis">
+      MicroSim Types by Bloom's Level
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="MicroSim Types by Bloom's Level">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-microsim-types-by-blooms-level" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: MicroSim Types by Bloom's Level
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ai-assisted-design-your-new-creative-partner" class="md-nav__link">
+    <span class="md-ellipsis">
+      AI-Assisted Design: Your New Creative Partner
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="AI-Assisted Design: Your New Creative Partner">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-human-ai-collaboration-loop" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Human-AI Collaboration Loop
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The Human-AI Collaboration Loop">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-human-ai-collaboration-loop" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Human-AI Collaboration Loop
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#understanding-prerequisite-knowledge" class="md-nav__link">
+    <span class="md-ellipsis">
+      Understanding Prerequisite Knowledge
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Understanding Prerequisite Knowledge">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#identifying-prerequisites" class="md-nav__link">
+    <span class="md-ellipsis">
+      Identifying Prerequisites
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#assumed-knowledge-setting-the-baseline" class="md-nav__link">
+    <span class="md-ellipsis">
+      Assumed Knowledge: Setting the Baseline
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Assumed Knowledge: Setting the Baseline">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-prerequisite-vs-assumed-knowledge" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Prerequisite vs Assumed Knowledge
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#documenting-assumptions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Documenting Assumptions
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#concept-dependencies-mapping-the-learning-landscape" class="md-nav__link">
+    <span class="md-ellipsis">
+      Concept Dependencies: Mapping the Learning Landscape
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Concept Dependencies: Mapping the Learning Landscape">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#types-of-dependencies" class="md-nav__link">
+    <span class="md-ellipsis">
+      Types of Dependencies
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Types of Dependencies">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-concept-dependency-graph-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Concept Dependency Graph Example
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#creating-dependency-maps" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creating Dependency Maps
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#learning-pathways-routes-through-the-content" class="md-nav__link">
+    <span class="md-ellipsis">
+      Learning Pathways: Routes Through the Content
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Learning Pathways: Routes Through the Content">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#personalized-pathways" class="md-nav__link">
+    <span class="md-ellipsis">
+      Personalized Pathways
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Personalized Pathways">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-learning-pathway-visualization" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Learning Pathway Visualization
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#simulation-readiness-is-this-concept-ready-for-microsim-treatment" class="md-nav__link">
+    <span class="md-ellipsis">
+      Simulation Readiness: Is This Concept Ready for MicroSim Treatment?
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Simulation Readiness: Is This Concept Ready for MicroSim Treatment?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-simulation-readiness-checklist" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Simulation Readiness Checklist
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The Simulation Readiness Checklist">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-simulation-readiness-assessment" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Simulation Readiness Assessment
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#putting-it-all-together-from-objective-to-microsim" class="md-nav__link">
+    <span class="md-ellipsis">
+      Putting It All Together: From Objective to MicroSim
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#chapter-summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      Chapter Summary
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#review-questions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Review Questions
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+    <a href="https://github.com/dmccreary/automating-instructional-design/blob/master/docs/chapters/02-prerequisite-analysis-microsim-fundamentals/index.md" title="Edit this page" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
+    </a>
+  
+  
+
+
+<h1 id="prerequisite-analysis-and-microsim-fundamentals">Prerequisite Analysis and MicroSim Fundamentals</h1>
+<h2 id="summary">Summary</h2>
+<p>This chapter introduces the core concepts of MicroSims and interactive simulations while teaching you how to analyze prerequisite knowledge and concept dependencies. You will learn to identify assumed knowledge, map learning pathways, and assess whether a learning objective is ready for simulation. These skills are essential for designing effective educational simulations that meet learners where they are and build on their existing knowledge.</p>
+<h2 id="concepts-covered">Concepts Covered</h2>
+<p>This chapter covers the following 8 concepts from the learning graph:</p>
+<ol>
+<li>MicroSim</li>
+<li>Interactive Simulation</li>
+<li>AI-Assisted Design</li>
+<li>Prerequisite Knowledge</li>
+<li>Assumed Knowledge</li>
+<li>Simulation Readiness</li>
+<li>Concept Dependencies</li>
+<li>Learning Pathway</li>
+</ol>
+<h2 id="prerequisites">Prerequisites</h2>
+<p>This chapter builds on concepts from:</p>
+<ul>
+<li><a href="../01-foundations-learning-objective-analysis/">Chapter 1: Foundations of Learning Objective Analysis</a></li>
+</ul>
+<hr />
+<h2 id="the-birth-of-microsims-a-brief-history">The Birth of MicroSims: A Brief History</h2>
+<p>In 2023, educational technologist <strong>Valarie Lockhart</strong> coined the term "MicroSim" to describe a new paradigm in educational simulation design. The name captures the essence of the approach: <em>micro</em> for small, focused, single-concept learning experiences, and <em>sim</em> for simulation—interactive digital environments where learners can experiment, explore, and discover.</p>
+<p>The timing wasn't accidental. As large language models exploded in capability, Lockhart and others recognized that the bottleneck in educational content creation was shifting. It was no longer primarily about <em>technical</em> capability—AI could now generate working code. The bottleneck had moved to <em>pedagogical</em> capability—knowing what to build and why.</p>
+<div class="admonition info">
+<p class="admonition-title">MicroSim Research Foundation</p>
+<p>The theoretical framework for MicroSims was formalized in the paper "MicroSims: A Framework for AI-Generated, Scalable Educational Simulations with Universal Embedding and Adaptive Learning Support," published in November 2025. This paper established the principles for designing simulations that are both pedagogically sound and AI-generatable.</p>
+</div>
+<p>By December 2025, the first courses in generating intelligent textbooks using MicroSims were being taught by <strong>Dan McCreary</strong>. These courses leveraged the growing power of large language models and, crucially, introduced the concept of <em>Claude Code Skills</em>—structured rule sets that ensure consistency and high-quality content generation. Without such guardrails, AI-generated educational content tends to drift, vary wildly in quality, and miss pedagogical targets. Skills brought discipline to the creative process.</p>
+<p>Today, hundreds of working MicroSim examples spanning audiences from kindergarten to graduate school are available in the <a href="https://dmccreary.github.io/microsims/">MicroSim Textbook</a>. This open resource demonstrates the breadth of what's possible when thoughtful instructional design meets AI-assisted implementation.</p>
+<p>But enough history. Let's dive into what MicroSims actually <em>are</em> and why they matter for your work as an instructional designer.</p>
+<h2 id="what-is-an-interactive-simulation">What Is an Interactive Simulation?</h2>
+<p>An <strong>interactive simulation</strong> is a digital environment that models some aspect of the real world (or an abstract concept) and allows users to manipulate variables, observe outcomes, and develop understanding through experimentation. Unlike passive content like videos or text, simulations put learners in the driver's seat.</p>
+<p>Interactive simulations have been used in education for decades:</p>
+<ul>
+<li><strong>Flight simulators</strong> train pilots without risking actual aircraft</li>
+<li><strong>PhET simulations</strong> from the University of Colorado help students explore physics and chemistry</li>
+<li><strong>Business simulations</strong> let MBA students run virtual companies</li>
+<li><strong>Medical simulations</strong> allow practitioners to practice procedures safely</li>
+</ul>
+<p>What makes these effective isn't just the interactivity—it's the <em>feedback loop</em>. Learners take an action, observe a consequence, adjust their mental model, and try again. This cycle mirrors how humans naturally learn through experience.</p>
+<table>
+<thead>
+<tr>
+<th>Passive Learning</th>
+<th>Interactive Learning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Watch a video about gravity</td>
+<td>Drop virtual objects and observe acceleration</td>
+</tr>
+<tr>
+<td>Read about supply and demand</td>
+<td>Adjust price and quantity sliders, watch market response</td>
+</tr>
+<tr>
+<td>Listen to a lecture on recursion</td>
+<td>Step through a recursive algorithm visually</td>
+</tr>
+<tr>
+<td>Memorize sorting algorithm steps</td>
+<td>Watch algorithms race to sort different datasets</td>
+</tr>
+</tbody>
+</table>
+<p>The problem with traditional interactive simulations is that they're expensive and time-consuming to build. A high-quality PhET simulation might take a team of developers, designers, and subject matter experts months to create. That's fine for foundational concepts taught to millions of students, but it doesn't scale to the long tail of specialized topics.</p>
+<p>Enter MicroSims.</p>
+<h2 id="microsims-simulations-that-scale">MicroSims: Simulations That Scale</h2>
+<p>A <strong>MicroSim</strong> is a small, focused interactive simulation designed to teach a single concept or learning objective. The "micro" isn't just about size—it's about <em>scope</em>. Each MicroSim targets one specific learning goal and does that one thing well.</p>
+<p>Here's what distinguishes MicroSims from traditional educational simulations:</p>
+<table>
+<thead>
+<tr>
+<th>Traditional Simulation</th>
+<th>MicroSim</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Covers many concepts</td>
+<td>Covers one concept</td>
+</tr>
+<tr>
+<td>Complex, feature-rich</td>
+<td>Simple, focused</td>
+</tr>
+<tr>
+<td>Months to develop</td>
+<td>Hours to generate</td>
+</tr>
+<tr>
+<td>Requires development team</td>
+<td>Generated with AI assistance</td>
+</tr>
+<tr>
+<td>Standalone application</td>
+<td>Embeds in any web page</td>
+</tr>
+<tr>
+<td>One-size-fits-all</td>
+<td>Adaptable to audience level</td>
+</tr>
+</tbody>
+</table>
+<p>The power of MicroSims comes from their composability. Instead of building one massive simulation that tries to teach everything about a topic, you build a <em>library</em> of focused MicroSims that can be assembled into learning pathways. It's like the difference between a single encyclopedic textbook and a modular curriculum where each piece can be updated, replaced, or recombined independently.</p>
+<h4 id="diagram-traditional-simulation-vs-microsim-architecture">Diagram: Traditional Simulation vs MicroSim Architecture</h4>
+<details>
+<summary>Traditional Simulation vs MicroSim Architecture</summary>
+<p>Type: diagram</p>
+<p>Purpose: Contrast the monolithic architecture of traditional simulations with the modular, composable architecture of MicroSims</p>
+<p>Bloom Taxonomy Level: Understand</p>
+<p>Learning Objective: Students will be able to explain the architectural differences between traditional simulations and MicroSim-based approaches.</p>
+<p>Components to show:
+Left side - Traditional Simulation:
+- Large monolithic box labeled "Comprehensive Simulation"
+- Multiple concepts listed inside (Concept A, B, C, D, E)
+- Single entry point at top
+- Heavy dependencies shown as tangled lines between concepts
+- Labels: "Long development time", "Hard to update", "Fixed scope"</p>
+<p>Right side - MicroSim Architecture:
+- Multiple small boxes, each containing single concept
+- MicroSim A, MicroSim B, MicroSim C, MicroSim D, MicroSim E
+- Clean arrows showing optional learning pathways between them
+- Central "Learning Pathway Manager" connecting to each
+- Labels: "Quick to create", "Easy to update", "Flexible combinations"</p>
+<p>Visual Style: Side-by-side comparison diagram
+Color Scheme:
+- Traditional: Grays and muted colors suggesting complexity
+- MicroSim: Bright, distinct colors for each module suggesting clarity</p>
+<p>Annotations:
+- Arrow pointing to traditional: "Months to build"
+- Arrow pointing to MicroSims: "Hours per simulation"
+- Bottom comparison: "Update one concept = rebuild everything" vs "Update one concept = replace one MicroSim"</p>
+<p>Implementation: HTML/CSS/SVG with responsive layout</p>
+</details>
+<h3 id="characteristics-of-effective-microsims">Characteristics of Effective MicroSims</h3>
+<p>Not every small simulation qualifies as a well-designed MicroSim. Effective MicroSims share several characteristics:</p>
+<ul>
+<li><strong>Single Learning Objective</strong>: Each MicroSim targets exactly one learning objective at a specific Bloom's level</li>
+<li><strong>Immediate Feedback</strong>: Learners receive instant visual or textual feedback on their actions</li>
+<li><strong>Learner Control</strong>: Users can manipulate relevant parameters through intuitive controls (sliders, buttons, drag-and-drop)</li>
+<li><strong>Progressive Disclosure</strong>: Complexity is revealed gradually, not dumped all at once</li>
+<li><strong>Embedded Assessment</strong>: The simulation itself reveals whether learners understand the concept</li>
+<li><strong>Universal Embedding</strong>: MicroSims work in any web context—LMS, textbook, standalone page</li>
+<li><strong>Responsive Design</strong>: They adapt to different screen sizes and devices</li>
+</ul>
+<div class="admonition tip">
+<p class="admonition-title">The 30-Second Test</p>
+<p>A well-designed MicroSim should communicate its purpose within 30 seconds. If a learner can't figure out what they're supposed to do or learn, the simulation needs work. Complexity should come from the <em>concept</em>, not the <em>interface</em>.</p>
+</div>
+<h3 id="microsim-types-by-blooms-level">MicroSim Types by Bloom's Level</h3>
+<p>Different learning objectives call for different types of MicroSims. Here's how MicroSim types map to Bloom's Taxonomy:</p>
+<table>
+<thead>
+<tr>
+<th>Bloom's Level</th>
+<th>MicroSim Type</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Remember</td>
+<td>Flashcard, Matching, Sorting</td>
+<td>Drag vocabulary terms to definitions</td>
+</tr>
+<tr>
+<td>Understand</td>
+<td>Visualization, Animation, Comparison</td>
+<td>Watch supply/demand curves shift and intersect</td>
+</tr>
+<tr>
+<td>Apply</td>
+<td>Calculator, Solver, Procedure Practice</td>
+<td>Calculate compound interest with adjustable parameters</td>
+</tr>
+<tr>
+<td>Analyze</td>
+<td>Data Explorer, Pattern Finder, Relationship Mapper</td>
+<td>Explore correlations in a dataset</td>
+</tr>
+<tr>
+<td>Evaluate</td>
+<td>Classifier, Rubric Applier, Decision Tree</td>
+<td>Judge whether code samples follow best practices</td>
+</tr>
+<tr>
+<td>Create</td>
+<td>Model Builder, Designer, Composer</td>
+<td>Build a state machine diagram from requirements</td>
+</tr>
+</tbody>
+</table>
+<p>This mapping isn't rigid—many MicroSims span multiple levels. But having a primary target level helps focus the design and ensures the simulation actually tests what you intend.</p>
+<h4 id="diagram-microsim-types-by-blooms-level">Diagram: MicroSim Types by Bloom's Level</h4>
+<details>
+<summary>MicroSim Types by Bloom's Level</summary>
+<p>Type: infographic</p>
+<p>Purpose: Show the mapping between Bloom's Taxonomy levels and appropriate MicroSim types with visual examples</p>
+<p>Bloom Taxonomy Level: Understand</p>
+<p>Learning Objective: Given a learning objective at a specific Bloom's level, students will be able to identify appropriate MicroSim types.</p>
+<p>Layout: Six-row table/grid format with visual icons for each MicroSim type</p>
+<p>Rows (bottom to top, matching Bloom's hierarchy):
+1. Remember (Blue background)
+   - Icon: Brain with cards
+   - MicroSim Types: Flashcard Drill, Term Matcher, Concept Sorter
+   - Example thumbnail: Cards being matched
+   - Key action: "Recall and recognize"</p>
+<ol>
+<li>Understand (Green background)</li>
+<li>Icon: Lightbulb with animation frames</li>
+<li>MicroSim Types: Animated Explainer, Comparison Viewer, Concept Visualizer</li>
+<li>Example thumbnail: Animated diagram</li>
+<li>
+<p>Key action: "See and comprehend"</p>
+</li>
+<li>
+<p>Apply (Yellow background)</p>
+</li>
+<li>Icon: Calculator/tool</li>
+<li>MicroSim Types: Interactive Calculator, Step-by-Step Solver, Procedure Simulator</li>
+<li>Example thumbnail: Slider adjusting values</li>
+<li>
+<p>Key action: "Use and execute"</p>
+</li>
+<li>
+<p>Analyze (Orange background)</p>
+</li>
+<li>Icon: Magnifying glass over data</li>
+<li>MicroSim Types: Data Explorer, Pattern Detector, Relationship Grapher</li>
+<li>Example thumbnail: Network graph</li>
+<li>
+<p>Key action: "Examine and connect"</p>
+</li>
+<li>
+<p>Evaluate (Pink background)</p>
+</li>
+<li>Icon: Balance scale with checkmarks</li>
+<li>MicroSim Types: Quality Classifier, Rubric Applier, Decision Simulator</li>
+<li>Example thumbnail: Items being sorted into categories</li>
+<li>
+<p>Key action: "Judge and decide"</p>
+</li>
+<li>
+<p>Create (Purple background)</p>
+</li>
+<li>Icon: Pencil with sparkles</li>
+<li>MicroSim Types: Model Builder, Design Canvas, Composition Tool</li>
+<li>Example thumbnail: User-constructed diagram</li>
+<li>Key action: "Design and produce"</li>
+</ol>
+<p>Interactive Features:
+- Hover over any MicroSim type to see full description
+- Click to see live example from MicroSim library
+- Filter by subject area</p>
+<p>Implementation: HTML/CSS grid with icons and hover states, responsive design</p>
+</details>
+<h2 id="ai-assisted-design-your-new-creative-partner">AI-Assisted Design: Your New Creative Partner</h2>
+<p><strong>AI-assisted design</strong> refers to the use of artificial intelligence tools—particularly large language models like Claude—to help create educational content. This isn't about replacing instructional designers; it's about amplifying their capabilities.</p>
+<p>Think of AI as a very fast, very knowledgeable assistant who can:</p>
+<ul>
+<li>Generate working code from natural language descriptions</li>
+<li>Produce multiple variations of content quickly</li>
+<li>Adapt existing content for different audiences</li>
+<li>Check specifications for completeness and consistency</li>
+<li>Suggest improvements based on pedagogical principles</li>
+</ul>
+<p>But AI assistants have significant limitations:</p>
+<ul>
+<li>They don't inherently <em>understand</em> how humans learn</li>
+<li>They can generate plausible-sounding but pedagogically flawed content</li>
+<li>They may miss cultural context or accessibility requirements</li>
+<li>They need clear, specific instructions to produce quality output</li>
+<li>They can't evaluate whether a simulation actually teaches effectively</li>
+</ul>
+<p>This is why the knowledge you're building in this course matters so much. AI is a powerful tool, but tools need skilled operators. A chainsaw in the hands of a trained arborist creates beautiful results; the same chainsaw wielded randomly creates a mess (and possibly a trip to the emergency room).</p>
+<div class="admonition warning">
+<p class="admonition-title">The Plausible Nonsense Problem</p>
+<p>AI can generate content that <em>sounds</em> educational but doesn't actually support learning. It might create a simulation that's visually impressive but targets the wrong concept, or one that technically works but overwhelms learners with cognitive load. Your job as an instructional designer is to specify clearly and evaluate critically.</p>
+</div>
+<h3 id="the-human-ai-collaboration-loop">The Human-AI Collaboration Loop</h3>
+<p>Effective AI-assisted design follows an iterative loop:</p>
+<ol>
+<li><strong>Human specifies</strong> the learning objective, audience, and constraints</li>
+<li><strong>AI generates</strong> a first draft (specification, code, content)</li>
+<li><strong>Human evaluates</strong> against pedagogical criteria</li>
+<li><strong>Human refines</strong> the specification based on what's missing or wrong</li>
+<li><strong>AI regenerates</strong> with improved instructions</li>
+<li><strong>Repeat</strong> until quality standards are met</li>
+<li><strong>Human tests</strong> with actual learners</li>
+<li><strong>Human iterates</strong> based on learner feedback</li>
+</ol>
+<p>Notice that humans bookend the process. We define what success looks like, and we verify that we've achieved it. AI accelerates the middle steps but doesn't replace human judgment at the critical points.</p>
+<h4 id="diagram-human-ai-collaboration-loop">Diagram: Human-AI Collaboration Loop</h4>
+<details>
+<summary>Human-AI Collaboration Loop</summary>
+<p>Type: workflow</p>
+<p>Purpose: Illustrate the iterative collaboration between human instructional designers and AI tools in MicroSim development</p>
+<p>Bloom Taxonomy Level: Understand</p>
+<p>Learning Objective: Students will be able to describe the stages of human-AI collaboration in educational content development.</p>
+<p>Visual style: Circular workflow diagram with alternating human and AI steps</p>
+<p>Steps (clockwise from top):
+1. SPECIFY (Human, blue)
+   - Icon: Person with document
+   - Hover text: "Define learning objective, audience, and requirements"
+   - Position: 12 o'clock</p>
+<ol>
+<li>GENERATE (AI, purple)</li>
+<li>Icon: Robot/AI chip</li>
+<li>Hover text: "AI produces first draft of simulation or content"</li>
+<li>
+<p>Position: 2 o'clock</p>
+</li>
+<li>
+<p>EVALUATE (Human, blue)</p>
+</li>
+<li>Icon: Person with magnifying glass</li>
+<li>Hover text: "Check against pedagogical criteria and learning goals"</li>
+<li>
+<p>Position: 4 o'clock</p>
+</li>
+<li>
+<p>REFINE (Human, blue)</p>
+</li>
+<li>Icon: Person with pencil</li>
+<li>Hover text: "Improve specification based on evaluation"</li>
+<li>
+<p>Position: 6 o'clock</p>
+</li>
+<li>
+<p>REGENERATE (AI, purple)</p>
+</li>
+<li>Icon: Robot with refresh arrow</li>
+<li>Hover text: "AI creates improved version with better instructions"</li>
+<li>
+<p>Position: 8 o'clock</p>
+</li>
+<li>
+<p>TEST (Human, blue)</p>
+</li>
+<li>Icon: Person with group of learners</li>
+<li>Hover text: "Validate with actual target learners"</li>
+<li>Position: 10 o'clock</li>
+</ol>
+<p>Center element:
+- "Quality MicroSim" with star icon
+- Arrows showing iteration cycles</p>
+<p>Annotations:
+- Inner loop (steps 2-5): "Rapid iteration cycle"
+- Outer path (including step 6): "Learner validation cycle"</p>
+<p>Color coding:
+- Human steps: Educational blue
+- AI steps: Tech purple
+- Arrows: Gradient between</p>
+<p>Implementation: HTML/CSS/SVG with hover interactions, responsive circular layout</p>
+</details>
+<h2 id="understanding-prerequisite-knowledge">Understanding Prerequisite Knowledge</h2>
+<p><strong>Prerequisite knowledge</strong> is what learners must already know before they can successfully engage with new content. It's the foundation on which new learning is built. Miss this foundation, and everything constructed on top will be shaky.</p>
+<p>Consider teaching someone to solve quadratic equations. What must they already know?</p>
+<ul>
+<li>Basic arithmetic operations</li>
+<li>Order of operations (PEMDAS)</li>
+<li>Variables and algebraic notation</li>
+<li>Solving linear equations</li>
+<li>The concept of squaring a number</li>
+<li>The concept of square roots</li>
+</ul>
+<p>Try teaching the quadratic formula to someone who doesn't understand what a variable is, and you'll quickly discover why prerequisite analysis matters.</p>
+<p>In the context of MicroSims, prerequisite knowledge determines:</p>
+<ul>
+<li><strong>What the MicroSim can assume</strong> learners already understand</li>
+<li><strong>What vocabulary</strong> can be used without explanation</li>
+<li><strong>What complexity</strong> is appropriate for controls and displays</li>
+<li><strong>Where learners might struggle</strong> if prerequisites are missing</li>
+<li><strong>What scaffolding</strong> might be needed for learners with gaps</li>
+</ul>
+<h3 id="identifying-prerequisites">Identifying Prerequisites</h3>
+<p>Prerequisites come in several varieties:</p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+<th>Example for "Binary Search"</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Conceptual</strong></td>
+<td>Abstract ideas that must be understood</td>
+<td>Understanding what "sorted" means</td>
+</tr>
+<tr>
+<td><strong>Procedural</strong></td>
+<td>Skills or processes that must be mastered</td>
+<td>Ability to compare two values</td>
+</tr>
+<tr>
+<td><strong>Terminological</strong></td>
+<td>Vocabulary that must be known</td>
+<td>Words like "array," "index," "midpoint"</td>
+</tr>
+<tr>
+<td><strong>Contextual</strong></td>
+<td>Background knowledge that provides meaning</td>
+<td>Why we might need to search large datasets</td>
+</tr>
+</tbody>
+</table>
+<p>Failing to identify prerequisites leads to the "curse of knowledge" problem—experts forget what it's like not to know something and inadvertently skip over crucial foundations.</p>
+<div class="admonition note">
+<p class="admonition-title">The Expert Blind Spot</p>
+<p>Subject matter experts are often the worst at identifying prerequisites because the foundational knowledge has become so automatic they no longer notice it. This is why instructional designers add value—they can ask the "naive" questions that experts have forgotten to ask.</p>
+</div>
+<h2 id="assumed-knowledge-setting-the-baseline">Assumed Knowledge: Setting the Baseline</h2>
+<p><strong>Assumed knowledge</strong> is a specific type of prerequisite—it's knowledge that learners are expected to bring to the learning experience, which won't be taught or reviewed. It's the documented starting point.</p>
+<p>Every educational experience makes assumptions. A calculus course assumes algebra. A Python programming course might assume basic computer literacy but not prior programming experience. A corporate training on a new software tool might assume familiarity with the previous version.</p>
+<p>The key is to make these assumptions <em>explicit</em>. This serves multiple purposes:</p>
+<ul>
+<li><strong>Learners</strong> can self-assess whether they're ready</li>
+<li><strong>Instructional designers</strong> know what to build on vs. what to teach</li>
+<li><strong>AI tools</strong> know what vocabulary and concepts to use freely</li>
+<li><strong>Assessment</strong> can distinguish between missing prerequisites and failure to learn new content</li>
+</ul>
+<h4 id="diagram-prerequisite-vs-assumed-knowledge">Diagram: Prerequisite vs Assumed Knowledge</h4>
+<details>
+<summary>Prerequisite vs Assumed Knowledge</summary>
+<p>Type: diagram</p>
+<p>Purpose: Clarify the relationship between prerequisite knowledge, assumed knowledge, and new content being taught</p>
+<p>Bloom Taxonomy Level: Understand</p>
+<p>Learning Objective: Students will be able to distinguish between prerequisite knowledge and assumed knowledge in instructional design.</p>
+<p>Layout: Layered/foundation diagram showing knowledge building blocks</p>
+<p>Components:
+Bottom layer (Foundation):
+- Label: "Assumed Knowledge"
+- Color: Solid gray
+- Description: "What learners are expected to already know—not taught in this course"
+- Examples shown: "Basic computer literacy", "Reading comprehension", "Prior course content"
+- Visual: Solid, stable blocks</p>
+<p>Middle layer (Bridge):
+- Label: "Prerequisite Knowledge"
+- Color: Dotted/hatched pattern
+- Description: "Required foundations—may need review or scaffolding"
+- Examples: "Concepts from Chapter 1", "Prior module content"
+- Visual: Blocks with some gaps that might need filling</p>
+<p>Top layer (Target):
+- Label: "New Content"
+- Color: Bright blue
+- Description: "What this chapter/module teaches"
+- Examples: "MicroSim design", "Prerequisite analysis"
+- Visual: New blocks being added</p>
+<p>Side annotations:
+- Arrow from Assumed to Prerequisite: "Builds on"
+- Arrow from Prerequisite to New: "Enables"
+- Gap indicator between layers: "Potential struggle points"</p>
+<p>Right side checklist:
+- "Assumed Knowledge: Document but don't teach"
+- "Prerequisite Knowledge: Review or scaffold"
+- "New Content: Primary focus"</p>
+<p>Implementation: HTML/CSS layered diagram, responsive design</p>
+</details>
+<h3 id="documenting-assumptions">Documenting Assumptions</h3>
+<p>When creating a MicroSim or any educational content, document assumptions clearly:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="gu">## Assumed Knowledge</span>
+
+This MicroSim assumes learners:
+<span class="k">-</span><span class="w"> </span>Can read and interpret basic graphs (x-y axes, data points)
+<span class="k">-</span><span class="w"> </span>Understand the concept of variables in mathematics
+<span class="k">-</span><span class="w"> </span>Have basic mouse/touchscreen interaction skills
+<span class="k">-</span><span class="w"> </span>Know what &quot;average&quot; means in everyday language
+
+This MicroSim does NOT assume:
+<span class="k">-</span><span class="w"> </span>Prior statistics coursework
+<span class="k">-</span><span class="w"> </span>Programming knowledge
+<span class="k">-</span><span class="w"> </span>Familiarity with specific statistical software
+</code></pre></div></td></tr></table></div>
+<p>This documentation helps everyone—including the AI tools generating content—understand the boundaries.</p>
+<h2 id="concept-dependencies-mapping-the-learning-landscape">Concept Dependencies: Mapping the Learning Landscape</h2>
+<p><strong>Concept dependencies</strong> describe the relationships between concepts—specifically, which concepts must be understood before others can be learned. These dependencies form a graph structure where concepts are nodes and dependencies are directed edges.</p>
+<p>Understanding dependencies is crucial because:</p>
+<ul>
+<li><strong>Sequencing</strong>: You can't teach B before A if B depends on A</li>
+<li><strong>Diagnosis</strong>: If a learner struggles with C, the problem might be with B or A</li>
+<li><strong>Scaffolding</strong>: Knowing the chain helps identify where to provide support</li>
+<li><strong>Assessment</strong>: Testing should check prerequisites before advanced concepts</li>
+</ul>
+<h3 id="types-of-dependencies">Types of Dependencies</h3>
+<p>Dependencies come in several flavors:</p>
+<table>
+<thead>
+<tr>
+<th>Dependency Type</th>
+<th>Description</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Hard prerequisite</strong></td>
+<td>Absolutely must know A before B</td>
+<td>Must know addition before multiplication</td>
+</tr>
+<tr>
+<td><strong>Soft prerequisite</strong></td>
+<td>Helpful to know A before B, but not strictly required</td>
+<td>Helpful to know history of AI before studying current models</td>
+</tr>
+<tr>
+<td><strong>Corequisite</strong></td>
+<td>A and B should be learned together</td>
+<td>Learning syntax and semantics of a programming construct</td>
+</tr>
+<tr>
+<td><strong>Parallel</strong></td>
+<td>A and B can be learned in any order</td>
+<td>Different sorting algorithms</td>
+</tr>
+</tbody>
+</table>
+<p>Most learning graphs use hard prerequisites as their primary structure, with soft prerequisites as supplementary recommendations.</p>
+<h4 id="diagram-concept-dependency-graph-example">Diagram: Concept Dependency Graph Example</h4>
+<details>
+<summary>Concept Dependency Graph Example</summary>
+<p>Type: graph-model</p>
+<p>Purpose: Demonstrate how concept dependencies form a directed acyclic graph (DAG) using this chapter's concepts as an example</p>
+<p>Bloom Taxonomy Level: Analyze</p>
+<p>Learning Objective: Students will be able to read a concept dependency graph and identify prerequisite chains.</p>
+<p>Node types:
+1. Foundation Concepts (blue circles, largest)
+   - From Chapter 1: Learning Objective, Bloom's Taxonomy</p>
+<ol>
+<li>Chapter 2 Core Concepts (green circles, medium)</li>
+<li>Interactive Simulation</li>
+<li>MicroSim</li>
+<li>AI-Assisted Design</li>
+<li>Prerequisite Knowledge</li>
+<li>Assumed Knowledge</li>
+<li>Concept Dependencies</li>
+<li>Simulation Readiness</li>
+<li>Learning Pathway</li>
+</ol>
+<p>Sample dependency structure:
+- Learning Objective → MicroSim
+- Learning Objective → Prerequisite Knowledge
+- Interactive Simulation → MicroSim
+- Bloom's Taxonomy → Simulation Readiness
+- Prerequisite Knowledge → Assumed Knowledge
+- Prerequisite Knowledge → Concept Dependencies
+- Concept Dependencies → Learning Pathway
+- MicroSim + AI-Assisted Design → Simulation Readiness</p>
+<p>Edge types:
+- REQUIRES (solid arrows): Hard prerequisite
+- SUPPORTS (dashed arrows): Soft prerequisite</p>
+<p>Layout: Hierarchical left-to-right showing dependency flow</p>
+<p>Interactive features:
+- Click node to highlight all prerequisites (upstream)
+- Shift-click to highlight all dependents (downstream)
+- Hover to see concept definition
+- Toggle to show/hide soft prerequisites
+- Animation showing "learning path" traversal</p>
+<p>Visual styling:
+- Node size indicates number of dependents
+- Edge thickness indicates strength of dependency
+- Color gradient from blue (foundational) to green (advanced)</p>
+<p>Legend:
+- Solid arrow: "Must learn first"
+- Dashed arrow: "Helpful to learn first"
+- Node size: "Number of concepts that depend on this"</p>
+<p>Implementation: vis-network with hierarchical layout, responsive width</p>
+</details>
+<h3 id="creating-dependency-maps">Creating Dependency Maps</h3>
+<p>When designing a curriculum or analyzing existing content, creating a dependency map helps visualize the structure:</p>
+<ol>
+<li><strong>List all concepts</strong> to be covered</li>
+<li><strong>For each concept, ask</strong>: "What must a learner know before they can understand this?"</li>
+<li><strong>Draw edges</strong> from prerequisites to dependent concepts</li>
+<li><strong>Check for cycles</strong>—if you find any, there's a logical error (you can't require A before B and B before A)</li>
+<li><strong>Identify entry points</strong>—concepts with no prerequisites (these are your starting points)</li>
+<li><strong>Identify culminating concepts</strong>—concepts that nothing else depends on (these are your endpoints)</li>
+</ol>
+<p>The resulting graph is a <strong>Directed Acyclic Graph (DAG)</strong>—directed because dependencies have a direction, and acyclic because there can't be circular dependencies.</p>
+<h2 id="learning-pathways-routes-through-the-content">Learning Pathways: Routes Through the Content</h2>
+<p>A <strong>learning pathway</strong> is a sequence of concepts or learning experiences designed to take learners from their starting knowledge to a target goal. It's the route through the dependency graph.</p>
+<p>Given a well-constructed dependency map, multiple valid pathways might exist. Consider a map with these dependencies:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code>A → C
+B → C
+C → D
+C → E
+D → F
+E → F
+</code></pre></div></td></tr></table></div>
+<p>To reach F, a learner must complete A or B (or both), then C, then both D and E. But the <em>order</em> of A and B, and the order of D and E, is flexible. Valid pathways include:</p>
+<ul>
+<li>A → B → C → D → E → F</li>
+<li>B → A → C → E → D → F</li>
+<li>A → C → D → B → C → E → F (with C reviewed)</li>
+</ul>
+<h3 id="personalized-pathways">Personalized Pathways</h3>
+<p>One of the exciting possibilities with AI-assisted education is <strong>personalized pathways</strong>. Instead of all learners following the same fixed sequence, each learner's path can be:</p>
+<ul>
+<li><strong>Adjusted based on prior knowledge</strong>: Skip what they already know</li>
+<li><strong>Branched based on interests</strong>: Explore optional tangents</li>
+<li><strong>Paced based on performance</strong>: Spend more time where needed</li>
+<li><strong>Varied based on learning style</strong>: Different representations of the same concept</li>
+</ul>
+<p>MicroSims support personalized pathways beautifully because they're modular. A pathway system can:</p>
+<ol>
+<li>Assess what the learner already knows</li>
+<li>Identify the shortest path to the learning goal</li>
+<li>Recommend the next MicroSim to engage with</li>
+<li>Track progress and adjust recommendations</li>
+</ol>
+<h4 id="diagram-learning-pathway-visualization">Diagram: Learning Pathway Visualization</h4>
+<details>
+<summary>Learning Pathway Visualization</summary>
+<p>Type: microsim</p>
+<p>Purpose: Interactive demonstration of how learners can take different paths through a concept dependency graph based on their prior knowledge and goals</p>
+<p>Bloom Taxonomy Level: Apply</p>
+<p>Learning Objective: Students will be able to trace valid learning pathways through a dependency graph and identify which concepts can be skipped based on prior knowledge.</p>
+<p>Canvas layout:
+- Main area (80%): Graph visualization showing concepts as nodes
+- Side panel (20%): Controls and pathway display</p>
+<p>Visual elements:
+- 12 concept nodes arranged in dependency graph
+- Nodes colored by status: gray (locked), blue (available), green (completed), gold (current target)
+- Directed edges showing prerequisites
+- Highlighted path showing current recommended route</p>
+<p>Sample concept graph:
+- Start: "Basic Math" (entry point, no prerequisites)
+- Level 1: "Variables", "Equations" (both require Basic Math)
+- Level 2: "Functions" (requires Variables), "Inequalities" (requires Equations)
+- Level 3: "Linear Functions", "Quadratic Equations"
+- Goal: "Systems of Equations"</p>
+<p>Interactive controls:
+- Checkbox list: "Mark as already known" for each concept
+- Dropdown: "Select your goal"
+- Button: "Calculate shortest path"
+- Button: "Reset"
+- Display: Current pathway as numbered list
+- Display: "Estimated time to goal"</p>
+<p>Behavior:
+- When concept marked as known, it turns green and dependents become available (blue)
+- Clicking "Calculate shortest path" highlights the recommended route
+- Clicking a concept shows its description and prerequisites
+- Invalid paths (skipping prerequisites) show warning</p>
+<p>Default state:
+- All concepts locked except entry points
+- Goal set to final concept
+- Full pathway displayed</p>
+<p>Animation:
+- Smooth transitions when concepts unlock
+- Path highlights with animated pulse</p>
+<p>Implementation: p5.js with force-directed graph layout, responsive canvas using updateCanvasSize()</p>
+</details>
+<h2 id="simulation-readiness-is-this-concept-ready-for-microsim-treatment">Simulation Readiness: Is This Concept Ready for MicroSim Treatment?</h2>
+<p>Not every learning objective benefits equally from a MicroSim. <strong>Simulation readiness</strong> is an assessment of whether a given concept or learning objective is a good candidate for interactive simulation.</p>
+<p>Some concepts are <em>highly</em> simulation-ready:</p>
+<ul>
+<li>Dynamic systems where variables interact</li>
+<li>Processes that unfold over time</li>
+<li>Cause-and-effect relationships</li>
+<li>Comparisons between approaches</li>
+<li>Concepts with visual or spatial components</li>
+<li>Procedures that can be practiced</li>
+</ul>
+<p>Other concepts are <em>less</em> simulation-ready:</p>
+<ul>
+<li>Pure memorization of facts (flashcards might be better than simulations)</li>
+<li>Historical events (timelines or narratives might be better)</li>
+<li>Definitions and terminology (glossaries or matching games)</li>
+<li>Emotional or ethical reasoning (discussions or case studies)</li>
+</ul>
+<h3 id="the-simulation-readiness-checklist">The Simulation Readiness Checklist</h3>
+<p>When evaluating whether to build a MicroSim for a learning objective, consider these questions:</p>
+<p><strong>Interactivity Value</strong></p>
+<ul>
+<li>[ ] Can learners manipulate meaningful parameters?</li>
+<li>[ ] Do different inputs produce visibly different outputs?</li>
+<li>[ ] Is there something to <em>discover</em> through interaction?</li>
+<li>[ ] Would passive viewing be significantly less effective?</li>
+</ul>
+<p><strong>Visual Representation</strong></p>
+<ul>
+<li>[ ] Can the concept be represented visually?</li>
+<li>[ ] Would visualization clarify rather than complicate?</li>
+<li>[ ] Are there relationships that diagrams can show better than text?</li>
+</ul>
+<p><strong>Feedback Opportunity</strong></p>
+<ul>
+<li>[ ] Can the simulation provide immediate feedback?</li>
+<li>[ ] Can learners recognize when they're right or wrong?</li>
+<li>[ ] Is there a clear success state?</li>
+</ul>
+<p><strong>Scope Appropriateness</strong></p>
+<ul>
+<li>[ ] Can the concept be isolated into a single MicroSim?</li>
+<li>[ ] Is the concept not too trivial (making a MicroSim overkill)?</li>
+<li>[ ] Is the concept not too complex (requiring multiple MicroSims)?</li>
+</ul>
+<p>If you're answering "yes" to most of these, you have a good MicroSim candidate. If you're getting mostly "no" answers, consider a different content format.</p>
+<h4 id="diagram-simulation-readiness-assessment">Diagram: Simulation Readiness Assessment</h4>
+<details>
+<summary>Simulation Readiness Assessment</summary>
+<p>Type: infographic</p>
+<p>Purpose: Provide a visual decision tree for assessing whether a learning objective is a good candidate for MicroSim development</p>
+<p>Bloom Taxonomy Level: Evaluate</p>
+<p>Learning Objective: Given a learning objective, students will be able to assess its simulation readiness using established criteria.</p>
+<p>Layout: Flowchart/decision tree with four main evaluation branches</p>
+<p>Entry point:
+- "Learning Objective" box at top
+- Arrow down to first decision</p>
+<p>Decision branches:</p>
+<ol>
+<li>Interactivity Check (Blue branch)</li>
+<li>Question: "Can learners manipulate meaningful parameters?"</li>
+<li>Yes → Continue</li>
+<li>
+<p>No → "Consider: Visualization, Video, or Text"</p>
+</li>
+<li>
+<p>Visualization Check (Green branch)</p>
+</li>
+<li>Question: "Can this be represented visually in a meaningful way?"</li>
+<li>Yes → Continue</li>
+<li>
+<p>No → "Consider: Audio, Discussion, or Reading"</p>
+</li>
+<li>
+<p>Feedback Check (Yellow branch)</p>
+</li>
+<li>Question: "Can the simulation provide immediate, meaningful feedback?"</li>
+<li>Yes → Continue</li>
+<li>
+<p>No → "Consider: Practice exercises with delayed feedback"</p>
+</li>
+<li>
+<p>Scope Check (Orange branch)</p>
+</li>
+<li>Question: "Can this fit in a single focused MicroSim?"</li>
+<li>Yes → "✓ Good MicroSim Candidate!"</li>
+<li>Too small → "Consider: Part of larger MicroSim"</li>
+<li>Too large → "Consider: Multiple MicroSims"</li>
+</ol>
+<p>End states (color-coded boxes):
+- Green: "Build a MicroSim"
+- Yellow: "Consider alternatives"
+- Orange: "Adjust scope first"</p>
+<p>Side panel: Quick checklist version of all criteria</p>
+<p>Interactive features:
+- Click each decision point for detailed explanation
+- Hover for examples at each branch
+- Input field to test your own learning objective</p>
+<p>Implementation: HTML/CSS/JavaScript flowchart, responsive layout</p>
+</details>
+<h2 id="putting-it-all-together-from-objective-to-microsim">Putting It All Together: From Objective to MicroSim</h2>
+<p>Let's trace through the complete process of taking a learning objective and preparing it for MicroSim development.</p>
+<p><strong>Starting Point</strong>: "Students will understand how binary search works."</p>
+<p><strong>Step 1: Refine the Objective</strong>
+This objective uses "understand"—not specific enough. Let's rewrite:
+"Students will predict which half of a sorted array will be searched next during binary search execution."</p>
+<p><strong>Step 2: Identify Prerequisites</strong>
+What must learners already know?</p>
+<ul>
+<li>What an array is (conceptual)</li>
+<li>What "sorted" means (conceptual)</li>
+<li>How to compare values (procedural)</li>
+<li>Array indexing notation (terminological)</li>
+<li>Why searching matters (contextual)</li>
+</ul>
+<p><strong>Step 3: Document Assumed Knowledge</strong>
+We'll assume learners know:</p>
+<ul>
+<li>Basic programming concepts</li>
+<li>What arrays/lists are</li>
+<li>How to compare numbers</li>
+</ul>
+<p>We won't assume:</p>
+<ul>
+<li>Any sorting algorithm knowledge</li>
+<li>Binary search specifically</li>
+<li>Big O notation</li>
+</ul>
+<p><strong>Step 4: Map Dependencies</strong>
+Binary search understanding depends on:</p>
+<ul>
+<li>Arrays → Sorted Arrays → Binary Search</li>
+<li>Comparison Operations → Binary Search</li>
+<li>(Optional) Linear Search → Binary Search (for comparison)</li>
+</ul>
+<p><strong>Step 5: Assess Simulation Readiness</strong></p>
+<ul>
+<li>Interactivity: YES—learners can step through and predict</li>
+<li>Visualization: YES—array and pointer positions are visual</li>
+<li>Feedback: YES—predictions can be immediately verified</li>
+<li>Scope: YES—single algorithm, single MicroSim</li>
+</ul>
+<p><strong>Step 6: Specify the MicroSim</strong>
+Now we're ready to write a detailed specification that an AI tool or developer can implement. We know exactly what the learner should already understand, what we're teaching, and why a simulation is the right format.</p>
+<div class="admonition success">
+<p class="admonition-title">The Power of Preparation</p>
+<p>This six-step process might seem like a lot of work before any "real" development happens. But this preparation is what makes AI-assisted generation effective. A clear specification with documented prerequisites and dependencies produces dramatically better results than a vague request like "make a binary search simulator."</p>
+</div>
+<h2 id="chapter-summary">Chapter Summary</h2>
+<p>You've now learned the foundational concepts that bridge learning objectives and MicroSim development:</p>
+<ul>
+<li><strong>MicroSims</strong> are small, focused simulations targeting single learning objectives—coined by Valarie Lockhart in 2023 and formalized in the 2025 research framework</li>
+<li><strong>Interactive simulations</strong> put learners in control, creating powerful feedback loops for learning</li>
+<li><strong>AI-assisted design</strong> amplifies instructional designers' capabilities but requires clear specifications and human judgment</li>
+<li><strong>Prerequisite knowledge</strong> is what learners must know before engaging with new content</li>
+<li><strong>Assumed knowledge</strong> is the documented baseline that won't be taught</li>
+<li><strong>Concept dependencies</strong> form graphs that structure curriculum sequencing</li>
+<li><strong>Learning pathways</strong> are routes through the dependency graph from start to goal</li>
+<li><strong>Simulation readiness</strong> assesses whether a concept is a good MicroSim candidate</li>
+</ul>
+<p>With these tools, you're ready to start analyzing any learning domain for MicroSim potential. In the next chapter, we'll explore the pattern library of visualization types and match them to different kinds of learning objectives.</p>
+<p>Remember: The world needs better education, and now we have tools to create it at scale. That's not just professionally exciting—it's genuinely optimistic. Every well-designed MicroSim has the potential to help someone learn something they couldn't learn before. And that makes the world a little bit better, one simulation at a time.</p>
+<hr />
+<h2 id="review-questions">Review Questions</h2>
+<details class="question">
+<summary>Who coined the term 'MicroSim' and when?</summary>
+<p><strong>Valarie Lockhart</strong> coined the term "MicroSim" in <strong>2023</strong> to describe small, focused interactive simulations designed to teach single concepts.</p>
+</details>
+<details class="question">
+<summary>What are the key differences between traditional educational simulations and MicroSims?</summary>
+<p>Key differences include:</p>
+<table>
+<thead>
+<tr>
+<th>Traditional Simulation</th>
+<th>MicroSim</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Covers many concepts</td>
+<td>Covers one concept</td>
+</tr>
+<tr>
+<td>Months to develop</td>
+<td>Hours to generate</td>
+</tr>
+<tr>
+<td>Requires development team</td>
+<td>Generated with AI assistance</td>
+</tr>
+<tr>
+<td>Standalone application</td>
+<td>Embeds in any web page</td>
+</tr>
+<tr>
+<td>One-size-fits-all</td>
+<td>Adaptable to audience</td>
+</tr>
+</tbody>
+</table>
+<p>The fundamental shift is from monolithic, expensive productions to modular, composable, AI-assisted creations.</p>
+</details>
+<details class="question">
+<summary>What is the difference between prerequisite knowledge and assumed knowledge?</summary>
+<p><strong>Prerequisite knowledge</strong> is what learners must know before engaging with new content—it may need to be reviewed or scaffolded.</p>
+<p><strong>Assumed knowledge</strong> is a subset of prerequisites that is documented as the baseline expectation—it won't be taught or reviewed in the current content. It's the explicit starting line.</p>
+</details>
+<details class="question">
+<summary>What four criteria should be evaluated to assess simulation readiness?</summary>
+<p>The four key criteria are:</p>
+<ol>
+<li><strong>Interactivity Value</strong>: Can learners manipulate meaningful parameters with different outcomes?</li>
+<li><strong>Visual Representation</strong>: Can the concept be effectively shown visually?</li>
+<li><strong>Feedback Opportunity</strong>: Can the simulation provide immediate, meaningful feedback?</li>
+<li><strong>Scope Appropriateness</strong>: Can the concept fit in a single focused MicroSim?</li>
+</ol>
+<p>If most answers are "yes," the concept is a good MicroSim candidate.</p>
+</details>
+<details class="question">
+<summary>Where can you find hundreds of working MicroSim examples?</summary>
+<p>The <a href="https://dmccreary.github.io/microsims/">MicroSim Textbook</a> contains hundreds of working MicroSim examples spanning audiences from kindergarten to graduate school, demonstrating the breadth of what's possible with AI-assisted educational simulation design.</p>
+</details>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../01-foundations-learning-objective-analysis/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Foundations of Learning Objective Analysis">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Foundations of Learning Objective Analysis
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../03-microsim-pattern-library/" class="md-footer__link md-footer__link--next" aria-label="Next: The MicroSim Pattern Library">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                The MicroSim Pattern Library
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2025 Dan McCreary. Licensed under <a href="license/">CC BY-NC-SA 4.0</a> for non-commercial use.
+    </div>
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.copy", "navigation.expand", "navigation.path", "navigation.prune", "navigation.indexes", "toc.follow", "navigation.top", "navigation.footer", "content.action.edit"], "search": "../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.83f73b43.min.js"></script>
+      
+        <script src="../../js/extra.js"></script>
+      
+    
+  </body>
+</html>

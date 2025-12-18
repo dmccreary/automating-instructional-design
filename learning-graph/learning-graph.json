@@ -1,0 +1,2121 @@
+{
+  "metadata": {
+    "title": "Automating Instructional Design Learning Graph",
+    "description": "A comprehensive learning graph with 200 concepts covering the transformation of learning objectives into interactive MicroSimulations using AI-assisted tools.",
+    "creator": "Dan McCreary",
+    "date": "2025-12-17",
+    "version": "1.0",
+    "format": "Learning Graph JSON v1.0",
+    "schema": "https://raw.githubusercontent.com/dmccreary/learning-graphs/refs/heads/main/src/schema/learning-graph-schema.json",
+    "license": "CC BY-NC-SA 4.0 DEED"
+  },
+  "groups": {
+    "FOUND": {
+      "classifierName": "Foundation Concepts",
+      "color": "LightCoral",
+      "font": {
+        "color": "white"
+      }
+    },
+    "BLOOM": {
+      "classifierName": "Bloom's Taxonomy",
+      "color": "PeachPuff",
+      "font": {
+        "color": "black"
+      }
+    },
+    "VISUA": {
+      "classifierName": "Visualization Types",
+      "color": "LightYellow",
+      "font": {
+        "color": "black"
+      }
+    },
+    "LIBRA": {
+      "classifierName": "Libraries & Tools",
+      "color": "PaleTurquoise",
+      "font": {
+        "color": "black"
+      }
+    },
+    "SPECI": {
+      "classifierName": "Specification",
+      "color": "Lavender",
+      "font": {
+        "color": "black"
+      }
+    },
+    "COGNI": {
+      "classifierName": "Cognitive Science",
+      "color": "PaleGreen",
+      "font": {
+        "color": "black"
+      }
+    },
+    "AUDIE": {
+      "classifierName": "Audience Adaptation",
+      "color": "LightPink",
+      "font": {
+        "color": "black"
+      }
+    },
+    "EVALU": {
+      "classifierName": "Evaluation & Testing",
+      "color": "PowderBlue",
+      "font": {
+        "color": "black"
+      }
+    },
+    "ITERA": {
+      "classifierName": "Iteration & Workflow",
+      "color": "Thistle",
+      "font": {
+        "color": "black"
+      }
+    },
+    "ACCES": {
+      "classifierName": "Accessibility",
+      "color": "Honeydew",
+      "font": {
+        "color": "black"
+      }
+    },
+    "DEPLO": {
+      "classifierName": "Deployment",
+      "color": "MistyRose",
+      "font": {
+        "color": "black"
+      }
+    },
+    "CAPST": {
+      "classifierName": "Capstone",
+      "color": "Plum",
+      "font": {
+        "color": "white"
+      }
+    }
+  },
+  "nodes": [
+    {
+      "id": 1,
+      "label": "Instructional Design",
+      "group": "FOUND",
+      "shape": "box"
+    },
+    {
+      "id": 2,
+      "label": "Learning Objective",
+      "group": "FOUND"
+    },
+    {
+      "id": 3,
+      "label": "MicroSim",
+      "group": "FOUND"
+    },
+    {
+      "id": 4,
+      "label": "Interactive Simulation",
+      "group": "FOUND"
+    },
+    {
+      "id": 5,
+      "label": "Educational Technology",
+      "group": "FOUND",
+      "shape": "box"
+    },
+    {
+      "id": 6,
+      "label": "AI-Assisted Design",
+      "group": "FOUND"
+    },
+    {
+      "id": 7,
+      "label": "Bloom's Taxonomy",
+      "group": "BLOOM"
+    },
+    {
+      "id": 8,
+      "label": "Cognitive Complexity",
+      "group": "BLOOM"
+    },
+    {
+      "id": 9,
+      "label": "Remember Level",
+      "group": "BLOOM"
+    },
+    {
+      "id": 10,
+      "label": "Understand Level",
+      "group": "BLOOM"
+    },
+    {
+      "id": 11,
+      "label": "Apply Level",
+      "group": "BLOOM"
+    },
+    {
+      "id": 12,
+      "label": "Analyze Level",
+      "group": "BLOOM"
+    },
+    {
+      "id": 13,
+      "label": "Evaluate Level",
+      "group": "BLOOM"
+    },
+    {
+      "id": 14,
+      "label": "Create Level",
+      "group": "BLOOM"
+    },
+    {
+      "id": 15,
+      "label": "Action Verbs",
+      "group": "BLOOM"
+    },
+    {
+      "id": 16,
+      "label": "Measurable Outcomes",
+      "group": "BLOOM"
+    },
+    {
+      "id": 17,
+      "label": "Learning Outcome",
+      "group": "BLOOM"
+    },
+    {
+      "id": 18,
+      "label": "Objective Decomposition",
+      "group": "BLOOM"
+    },
+    {
+      "id": 19,
+      "label": "Atomic Concepts",
+      "group": "BLOOM"
+    },
+    {
+      "id": 20,
+      "label": "Compound Objectives",
+      "group": "BLOOM"
+    },
+    {
+      "id": 21,
+      "label": "Prerequisite Knowledge",
+      "group": "FOUND"
+    },
+    {
+      "id": 22,
+      "label": "Assumed Knowledge",
+      "group": "FOUND"
+    },
+    {
+      "id": 23,
+      "label": "Simulation Readiness",
+      "group": "FOUND"
+    },
+    {
+      "id": 24,
+      "label": "Concept Dependencies",
+      "group": "FOUND"
+    },
+    {
+      "id": 25,
+      "label": "Learning Pathway",
+      "group": "FOUND"
+    },
+    {
+      "id": 26,
+      "label": "Visualization Paradigm",
+      "group": "VISUA"
+    },
+    {
+      "id": 27,
+      "label": "p5.js Animation",
+      "group": "LIBRA"
+    },
+    {
+      "id": 28,
+      "label": "Network Graph",
+      "group": "VISUA"
+    },
+    {
+      "id": 29,
+      "label": "vis-network Library",
+      "group": "LIBRA"
+    },
+    {
+      "id": 30,
+      "label": "Timeline Visualization",
+      "group": "VISUA"
+    },
+    {
+      "id": 31,
+      "label": "vis-timeline Library",
+      "group": "LIBRA"
+    },
+    {
+      "id": 32,
+      "label": "Chart Visualization",
+      "group": "VISUA"
+    },
+    {
+      "id": 33,
+      "label": "Chart.js Library",
+      "group": "LIBRA"
+    },
+    {
+      "id": 34,
+      "label": "Plotly Library",
+      "group": "LIBRA"
+    },
+    {
+      "id": 35,
+      "label": "Map Visualization",
+      "group": "VISUA"
+    },
+    {
+      "id": 36,
+      "label": "Leaflet Library",
+      "group": "LIBRA"
+    },
+    {
+      "id": 37,
+      "label": "Diagram Visualization",
+      "group": "VISUA"
+    },
+    {
+      "id": 38,
+      "label": "Mermaid Library",
+      "group": "LIBRA"
+    },
+    {
+      "id": 39,
+      "label": "Venn Diagram",
+      "group": "VISUA"
+    },
+    {
+      "id": 40,
+      "label": "Set Visualization",
+      "group": "VISUA"
+    },
+    {
+      "id": 41,
+      "label": "Motion Simulation",
+      "group": "VISUA"
+    },
+    {
+      "id": 42,
+      "label": "Physics Simulation",
+      "group": "VISUA"
+    },
+    {
+      "id": 43,
+      "label": "Dynamic Systems",
+      "group": "VISUA"
+    },
+    {
+      "id": 44,
+      "label": "Cause-Effect Display",
+      "group": "VISUA"
+    },
+    {
+      "id": 45,
+      "label": "Relationship Graph",
+      "group": "VISUA"
+    },
+    {
+      "id": 46,
+      "label": "Hierarchy Display",
+      "group": "VISUA"
+    },
+    {
+      "id": 47,
+      "label": "Dependency Mapping",
+      "group": "VISUA"
+    },
+    {
+      "id": 48,
+      "label": "Influence Diagram",
+      "group": "VISUA"
+    },
+    {
+      "id": 49,
+      "label": "Sequence Display",
+      "group": "VISUA"
+    },
+    {
+      "id": 50,
+      "label": "Process Timeline",
+      "group": "VISUA"
+    },
+    {
+      "id": 51,
+      "label": "Trend Chart",
+      "group": "VISUA"
+    },
+    {
+      "id": 52,
+      "label": "Distribution Chart",
+      "group": "VISUA"
+    },
+    {
+      "id": 53,
+      "label": "Correlation Display",
+      "group": "VISUA"
+    },
+    {
+      "id": 54,
+      "label": "Spatial Visualization",
+      "group": "VISUA"
+    },
+    {
+      "id": 55,
+      "label": "Flowchart",
+      "group": "VISUA"
+    },
+    {
+      "id": 56,
+      "label": "State Machine Diagram",
+      "group": "VISUA"
+    },
+    {
+      "id": 57,
+      "label": "Classification Display",
+      "group": "VISUA"
+    },
+    {
+      "id": 58,
+      "label": "Paradigm Selection",
+      "group": "VISUA"
+    },
+    {
+      "id": 59,
+      "label": "Concept Characteristics",
+      "group": "VISUA"
+    },
+    {
+      "id": 60,
+      "label": "Visual Affordances",
+      "group": "VISUA"
+    },
+    {
+      "id": 61,
+      "label": "Specification Document",
+      "group": "SPECI"
+    },
+    {
+      "id": 62,
+      "label": "Visual Description",
+      "group": "SPECI"
+    },
+    {
+      "id": 63,
+      "label": "Interaction Behavior",
+      "group": "SPECI"
+    },
+    {
+      "id": 64,
+      "label": "Behavior Constraints",
+      "group": "SPECI"
+    },
+    {
+      "id": 65,
+      "label": "Success Criteria",
+      "group": "SPECI"
+    },
+    {
+      "id": 66,
+      "label": "Edge Case Definition",
+      "group": "SPECI"
+    },
+    {
+      "id": 67,
+      "label": "Specification Ambiguity",
+      "group": "SPECI"
+    },
+    {
+      "id": 68,
+      "label": "Intent Preservation",
+      "group": "SPECI"
+    },
+    {
+      "id": 69,
+      "label": "AI Interpretation",
+      "group": "SPECI"
+    },
+    {
+      "id": 70,
+      "label": "Prompt Engineering",
+      "group": "ITERA"
+    },
+    {
+      "id": 71,
+      "label": "Refinement Prompt",
+      "group": "ITERA"
+    },
+    {
+      "id": 72,
+      "label": "Generation Workflow",
+      "group": "ITERA"
+    },
+    {
+      "id": 73,
+      "label": "Output Interpretation",
+      "group": "ITERA"
+    },
+    {
+      "id": 74,
+      "label": "Issue Identification",
+      "group": "ITERA"
+    },
+    {
+      "id": 75,
+      "label": "Regeneration Decision",
+      "group": "ITERA"
+    },
+    {
+      "id": 76,
+      "label": "Manual Adjustment",
+      "group": "ITERA"
+    },
+    {
+      "id": 77,
+      "label": "Version Control",
+      "group": "ITERA"
+    },
+    {
+      "id": 78,
+      "label": "Iteration Management",
+      "group": "ITERA"
+    },
+    {
+      "id": 79,
+      "label": "Cognitive Development",
+      "group": "AUDIE"
+    },
+    {
+      "id": 80,
+      "label": "Piaget Stages",
+      "group": "AUDIE",
+      "shape": "box"
+    },
+    {
+      "id": 81,
+      "label": "Vygotsky Theory",
+      "group": "AUDIE",
+      "shape": "box"
+    },
+    {
+      "id": 82,
+      "label": "Early Childhood Design",
+      "group": "AUDIE"
+    },
+    {
+      "id": 83,
+      "label": "Elementary Design",
+      "group": "AUDIE"
+    },
+    {
+      "id": 84,
+      "label": "Middle School Design",
+      "group": "AUDIE"
+    },
+    {
+      "id": 85,
+      "label": "High School Design",
+      "group": "AUDIE"
+    },
+    {
+      "id": 86,
+      "label": "Undergraduate Design",
+      "group": "AUDIE"
+    },
+    {
+      "id": 87,
+      "label": "Graduate Design",
+      "group": "AUDIE"
+    },
+    {
+      "id": 88,
+      "label": "Corporate Training Design",
+      "group": "AUDIE"
+    },
+    {
+      "id": 89,
+      "label": "Touch Target Size",
+      "group": "AUDIE"
+    },
+    {
+      "id": 90,
+      "label": "Simple Cause-Effect",
+      "group": "AUDIE"
+    },
+    {
+      "id": 91,
+      "label": "Guided Exploration",
+      "group": "AUDIE"
+    },
+    {
+      "id": 92,
+      "label": "Scaffolded Complexity",
+      "group": "AUDIE"
+    },
+    {
+      "id": 93,
+      "label": "Reading Support",
+      "group": "AUDIE"
+    },
+    {
+      "id": 94,
+      "label": "Abstract Concepts",
+      "group": "AUDIE"
+    },
+    {
+      "id": 95,
+      "label": "Multiple Variables",
+      "group": "AUDIE"
+    },
+    {
+      "id": 96,
+      "label": "Hypothesis Testing",
+      "group": "AUDIE"
+    },
+    {
+      "id": 97,
+      "label": "Real-World Application",
+      "group": "AUDIE"
+    },
+    {
+      "id": 98,
+      "label": "Data Interpretation",
+      "group": "AUDIE"
+    },
+    {
+      "id": 99,
+      "label": "Theoretical Foundations",
+      "group": "AUDIE"
+    },
+    {
+      "id": 100,
+      "label": "Mathematical Relations",
+      "group": "AUDIE"
+    },
+    {
+      "id": 101,
+      "label": "Research Applications",
+      "group": "AUDIE"
+    },
+    {
+      "id": 102,
+      "label": "Parameter Space",
+      "group": "AUDIE"
+    },
+    {
+      "id": 103,
+      "label": "Job-Relevant Scenarios",
+      "group": "AUDIE"
+    },
+    {
+      "id": 104,
+      "label": "Time-Efficient Design",
+      "group": "AUDIE"
+    },
+    {
+      "id": 105,
+      "label": "Cognitive Load Theory",
+      "group": "COGNI"
+    },
+    {
+      "id": 106,
+      "label": "Intrinsic Load",
+      "group": "COGNI"
+    },
+    {
+      "id": 107,
+      "label": "Extraneous Load",
+      "group": "COGNI"
+    },
+    {
+      "id": 108,
+      "label": "Germane Load",
+      "group": "COGNI"
+    },
+    {
+      "id": 109,
+      "label": "Split Attention Effect",
+      "group": "COGNI"
+    },
+    {
+      "id": 110,
+      "label": "Progressive Disclosure",
+      "group": "COGNI"
+    },
+    {
+      "id": 111,
+      "label": "Color Accessibility",
+      "group": "ACCES"
+    },
+    {
+      "id": 112,
+      "label": "Contrast Design",
+      "group": "ACCES",
+      "shape": "box"
+    },
+    {
+      "id": 113,
+      "label": "Animation Speed",
+      "group": "COGNI"
+    },
+    {
+      "id": 114,
+      "label": "Learner Control",
+      "group": "COGNI"
+    },
+    {
+      "id": 115,
+      "label": "Visual Simplicity",
+      "group": "COGNI"
+    },
+    {
+      "id": 116,
+      "label": "Information Density",
+      "group": "COGNI"
+    },
+    {
+      "id": 117,
+      "label": "Cognitive Load Meter",
+      "group": "COGNI"
+    },
+    {
+      "id": 118,
+      "label": "Design Tradeoffs",
+      "group": "COGNI"
+    },
+    {
+      "id": 119,
+      "label": "Mental Effort",
+      "group": "COGNI"
+    },
+    {
+      "id": 120,
+      "label": "Working Memory",
+      "group": "COGNI",
+      "shape": "box"
+    },
+    {
+      "id": 121,
+      "label": "Long-Term Memory",
+      "group": "COGNI"
+    },
+    {
+      "id": 122,
+      "label": "Schema Formation",
+      "group": "COGNI"
+    },
+    {
+      "id": 123,
+      "label": "Misconception",
+      "group": "COGNI"
+    },
+    {
+      "id": 124,
+      "label": "Common Misconceptions",
+      "group": "COGNI"
+    },
+    {
+      "id": 125,
+      "label": "Misconception Correction",
+      "group": "COGNI"
+    },
+    {
+      "id": 126,
+      "label": "Misconception Reinforcement",
+      "group": "COGNI"
+    },
+    {
+      "id": 127,
+      "label": "Productive Failure",
+      "group": "COGNI"
+    },
+    {
+      "id": 128,
+      "label": "Prediction Prompt",
+      "group": "COGNI"
+    },
+    {
+      "id": 129,
+      "label": "Conceptual Boundary",
+      "group": "COGNI"
+    },
+    {
+      "id": 130,
+      "label": "Mental Model",
+      "group": "COGNI"
+    },
+    {
+      "id": 131,
+      "label": "Conceptual Change",
+      "group": "COGNI"
+    },
+    {
+      "id": 132,
+      "label": "Intuition Testing",
+      "group": "COGNI"
+    },
+    {
+      "id": 133,
+      "label": "Model Comparison",
+      "group": "COGNI"
+    },
+    {
+      "id": 134,
+      "label": "Claude Code Skills",
+      "group": "LIBRA"
+    },
+    {
+      "id": 135,
+      "label": "MicroSim Generator",
+      "group": "LIBRA"
+    },
+    {
+      "id": 136,
+      "label": "Template Library",
+      "group": "LIBRA"
+    },
+    {
+      "id": 137,
+      "label": "Iterative Refinement",
+      "group": "ITERA"
+    },
+    {
+      "id": 138,
+      "label": "Conversation Prompting",
+      "group": "ITERA"
+    },
+    {
+      "id": 139,
+      "label": "Code Generation",
+      "group": "LIBRA"
+    },
+    {
+      "id": 140,
+      "label": "Output Validation",
+      "group": "EVALU"
+    },
+    {
+      "id": 141,
+      "label": "Technical Evaluation",
+      "group": "EVALU"
+    },
+    {
+      "id": 142,
+      "label": "Pedagogical Evaluation",
+      "group": "EVALU"
+    },
+    {
+      "id": 143,
+      "label": "UX Evaluation",
+      "group": "EVALU"
+    },
+    {
+      "id": 144,
+      "label": "Functionality Testing",
+      "group": "EVALU"
+    },
+    {
+      "id": 145,
+      "label": "Responsiveness Testing",
+      "group": "EVALU"
+    },
+    {
+      "id": 146,
+      "label": "Bug Identification",
+      "group": "EVALU"
+    },
+    {
+      "id": 147,
+      "label": "Objective Alignment",
+      "group": "EVALU"
+    },
+    {
+      "id": 148,
+      "label": "Cognitive Level Match",
+      "group": "EVALU"
+    },
+    {
+      "id": 149,
+      "label": "Effectiveness Measure",
+      "group": "EVALU"
+    },
+    {
+      "id": 150,
+      "label": "Intuitiveness",
+      "group": "EVALU"
+    },
+    {
+      "id": 151,
+      "label": "Engagement Balance",
+      "group": "EVALU"
+    },
+    {
+      "id": 152,
+      "label": "Evaluation Rubric",
+      "group": "EVALU"
+    },
+    {
+      "id": 153,
+      "label": "Rubric Development",
+      "group": "EVALU"
+    },
+    {
+      "id": 154,
+      "label": "Automated Evaluation",
+      "group": "EVALU"
+    },
+    {
+      "id": 155,
+      "label": "Human Evaluation",
+      "group": "EVALU"
+    },
+    {
+      "id": 156,
+      "label": "Documentation Standard",
+      "group": "EVALU"
+    },
+    {
+      "id": 157,
+      "label": "Reusability",
+      "group": "EVALU"
+    },
+    {
+      "id": 158,
+      "label": "Think-Aloud Protocol",
+      "group": "EVALU"
+    },
+    {
+      "id": 159,
+      "label": "A/B Testing",
+      "group": "EVALU"
+    },
+    {
+      "id": 160,
+      "label": "Learner Feedback",
+      "group": "EVALU"
+    },
+    {
+      "id": 161,
+      "label": "Age-Based Feedback",
+      "group": "EVALU"
+    },
+    {
+      "id": 162,
+      "label": "Ability-Based Feedback",
+      "group": "EVALU"
+    },
+    {
+      "id": 163,
+      "label": "Observation Technique",
+      "group": "EVALU"
+    },
+    {
+      "id": 164,
+      "label": "Test Interpretation",
+      "group": "EVALU"
+    },
+    {
+      "id": 165,
+      "label": "Change Prioritization",
+      "group": "ITERA"
+    },
+    {
+      "id": 166,
+      "label": "Ethical Research",
+      "group": "EVALU"
+    },
+    {
+      "id": 167,
+      "label": "Design-Test-Refine Cycle",
+      "group": "ITERA"
+    },
+    {
+      "id": 168,
+      "label": "Critical Changes",
+      "group": "ITERA"
+    },
+    {
+      "id": 169,
+      "label": "Nice-to-Have Changes",
+      "group": "ITERA"
+    },
+    {
+      "id": 170,
+      "label": "Fundamental Redesign",
+      "group": "ITERA"
+    },
+    {
+      "id": 171,
+      "label": "Incremental Improvement",
+      "group": "ITERA"
+    },
+    {
+      "id": 172,
+      "label": "Scope Creep Prevention",
+      "group": "ITERA"
+    },
+    {
+      "id": 173,
+      "label": "Completion Criteria",
+      "group": "ITERA"
+    },
+    {
+      "id": 174,
+      "label": "Change Log",
+      "group": "ITERA"
+    },
+    {
+      "id": 175,
+      "label": "Design Rationale",
+      "group": "ITERA"
+    },
+    {
+      "id": 176,
+      "label": "Universal Design",
+      "group": "ACCES",
+      "shape": "box"
+    },
+    {
+      "id": 177,
+      "label": "UDL Principles",
+      "group": "ACCES"
+    },
+    {
+      "id": 178,
+      "label": "Screen Reader Support",
+      "group": "ACCES"
+    },
+    {
+      "id": 179,
+      "label": "Keyboard Navigation",
+      "group": "ACCES"
+    },
+    {
+      "id": 180,
+      "label": "Color Blindness Design",
+      "group": "ACCES"
+    },
+    {
+      "id": 181,
+      "label": "Reduced Motion",
+      "group": "ACCES"
+    },
+    {
+      "id": 182,
+      "label": "Multilingual Support",
+      "group": "ACCES"
+    },
+    {
+      "id": 183,
+      "label": "Vocabulary Level",
+      "group": "ACCES"
+    },
+    {
+      "id": 184,
+      "label": "Cultural Sensitivity",
+      "group": "ACCES"
+    },
+    {
+      "id": 185,
+      "label": "Prior Knowledge Support",
+      "group": "ACCES"
+    },
+    {
+      "id": 186,
+      "label": "Differentiation Strategy",
+      "group": "ACCES"
+    },
+    {
+      "id": 187,
+      "label": "Accessibility Audit",
+      "group": "ACCES"
+    },
+    {
+      "id": 188,
+      "label": "Constraint Simulation",
+      "group": "ACCES"
+    },
+    {
+      "id": 189,
+      "label": "LMS Integration",
+      "group": "DEPLO"
+    },
+    {
+      "id": 190,
+      "label": "Intelligent Textbook",
+      "group": "DEPLO"
+    },
+    {
+      "id": 191,
+      "label": "Learning Analytics",
+      "group": "DEPLO"
+    },
+    {
+      "id": 192,
+      "label": "Interaction Tracking",
+      "group": "DEPLO"
+    },
+    {
+      "id": 193,
+      "label": "Maintenance Planning",
+      "group": "DEPLO"
+    },
+    {
+      "id": 194,
+      "label": "Library Organization",
+      "group": "DEPLO"
+    },
+    {
+      "id": 195,
+      "label": "Educator Collaboration",
+      "group": "DEPLO"
+    },
+    {
+      "id": 196,
+      "label": "Content Sharing",
+      "group": "DEPLO"
+    },
+    {
+      "id": 197,
+      "label": "Portfolio Project",
+      "group": "CAPST"
+    },
+    {
+      "id": 198,
+      "label": "Reflection Journal",
+      "group": "CAPST"
+    },
+    {
+      "id": 199,
+      "label": "Peer Feedback",
+      "group": "CAPST"
+    },
+    {
+      "id": 200,
+      "label": "Self-Evaluation",
+      "group": "CAPST"
+    }
+  ],
+  "edges": [
+    {
+      "from": 2,
+      "to": 1
+    },
+    {
+      "from": 3,
+      "to": 2
+    },
+    {
+      "from": 3,
+      "to": 4
+    },
+    {
+      "from": 4,
+      "to": 5
+    },
+    {
+      "from": 6,
+      "to": 5
+    },
+    {
+      "from": 7,
+      "to": 2
+    },
+    {
+      "from": 8,
+      "to": 7
+    },
+    {
+      "from": 9,
+      "to": 7
+    },
+    {
+      "from": 10,
+      "to": 7
+    },
+    {
+      "from": 10,
+      "to": 9
+    },
+    {
+      "from": 11,
+      "to": 7
+    },
+    {
+      "from": 11,
+      "to": 10
+    },
+    {
+      "from": 12,
+      "to": 7
+    },
+    {
+      "from": 12,
+      "to": 11
+    },
+    {
+      "from": 13,
+      "to": 7
+    },
+    {
+      "from": 13,
+      "to": 12
+    },
+    {
+      "from": 14,
+      "to": 7
+    },
+    {
+      "from": 14,
+      "to": 13
+    },
+    {
+      "from": 15,
+      "to": 7
+    },
+    {
+      "from": 16,
+      "to": 2
+    },
+    {
+      "from": 16,
+      "to": 15
+    },
+    {
+      "from": 17,
+      "to": 2
+    },
+    {
+      "from": 17,
+      "to": 16
+    },
+    {
+      "from": 18,
+      "to": 2
+    },
+    {
+      "from": 18,
+      "to": 19
+    },
+    {
+      "from": 19,
+      "to": 2
+    },
+    {
+      "from": 20,
+      "to": 2
+    },
+    {
+      "from": 20,
+      "to": 19
+    },
+    {
+      "from": 21,
+      "to": 2
+    },
+    {
+      "from": 21,
+      "to": 24
+    },
+    {
+      "from": 22,
+      "to": 21
+    },
+    {
+      "from": 23,
+      "to": 3
+    },
+    {
+      "from": 23,
+      "to": 18
+    },
+    {
+      "from": 24,
+      "to": 19
+    },
+    {
+      "from": 25,
+      "to": 24
+    },
+    {
+      "from": 25,
+      "to": 21
+    },
+    {
+      "from": 26,
+      "to": 3
+    },
+    {
+      "from": 27,
+      "to": 26
+    },
+    {
+      "from": 27,
+      "to": 41
+    },
+    {
+      "from": 28,
+      "to": 26
+    },
+    {
+      "from": 28,
+      "to": 45
+    },
+    {
+      "from": 29,
+      "to": 28
+    },
+    {
+      "from": 30,
+      "to": 26
+    },
+    {
+      "from": 30,
+      "to": 49
+    },
+    {
+      "from": 31,
+      "to": 30
+    },
+    {
+      "from": 32,
+      "to": 26
+    },
+    {
+      "from": 32,
+      "to": 51
+    },
+    {
+      "from": 33,
+      "to": 32
+    },
+    {
+      "from": 34,
+      "to": 32
+    },
+    {
+      "from": 35,
+      "to": 26
+    },
+    {
+      "from": 35,
+      "to": 54
+    },
+    {
+      "from": 36,
+      "to": 35
+    },
+    {
+      "from": 37,
+      "to": 26
+    },
+    {
+      "from": 37,
+      "to": 55
+    },
+    {
+      "from": 38,
+      "to": 37
+    },
+    {
+      "from": 39,
+      "to": 26
+    },
+    {
+      "from": 39,
+      "to": 57
+    },
+    {
+      "from": 40,
+      "to": 39
+    },
+    {
+      "from": 41,
+      "to": 4
+    },
+    {
+      "from": 42,
+      "to": 41
+    },
+    {
+      "from": 43,
+      "to": 42
+    },
+    {
+      "from": 44,
+      "to": 41
+    },
+    {
+      "from": 45,
+      "to": 4
+    },
+    {
+      "from": 46,
+      "to": 45
+    },
+    {
+      "from": 47,
+      "to": 45
+    },
+    {
+      "from": 47,
+      "to": 24
+    },
+    {
+      "from": 48,
+      "to": 45
+    },
+    {
+      "from": 49,
+      "to": 4
+    },
+    {
+      "from": 50,
+      "to": 49
+    },
+    {
+      "from": 51,
+      "to": 4
+    },
+    {
+      "from": 52,
+      "to": 51
+    },
+    {
+      "from": 53,
+      "to": 51
+    },
+    {
+      "from": 54,
+      "to": 4
+    },
+    {
+      "from": 55,
+      "to": 4
+    },
+    {
+      "from": 56,
+      "to": 55
+    },
+    {
+      "from": 57,
+      "to": 4
+    },
+    {
+      "from": 58,
+      "to": 26
+    },
+    {
+      "from": 58,
+      "to": 59
+    },
+    {
+      "from": 59,
+      "to": 19
+    },
+    {
+      "from": 60,
+      "to": 26
+    },
+    {
+      "from": 61,
+      "to": 3
+    },
+    {
+      "from": 62,
+      "to": 61
+    },
+    {
+      "from": 63,
+      "to": 61
+    },
+    {
+      "from": 63,
+      "to": 4
+    },
+    {
+      "from": 64,
+      "to": 63
+    },
+    {
+      "from": 65,
+      "to": 61
+    },
+    {
+      "from": 65,
+      "to": 16
+    },
+    {
+      "from": 66,
+      "to": 61
+    },
+    {
+      "from": 66,
+      "to": 64
+    },
+    {
+      "from": 67,
+      "to": 61
+    },
+    {
+      "from": 68,
+      "to": 2
+    },
+    {
+      "from": 68,
+      "to": 67
+    },
+    {
+      "from": 69,
+      "to": 6
+    },
+    {
+      "from": 69,
+      "to": 68
+    },
+    {
+      "from": 70,
+      "to": 6
+    },
+    {
+      "from": 71,
+      "to": 70
+    },
+    {
+      "from": 71,
+      "to": 137
+    },
+    {
+      "from": 72,
+      "to": 6
+    },
+    {
+      "from": 72,
+      "to": 134
+    },
+    {
+      "from": 73,
+      "to": 72
+    },
+    {
+      "from": 74,
+      "to": 73
+    },
+    {
+      "from": 75,
+      "to": 74
+    },
+    {
+      "from": 75,
+      "to": 77
+    },
+    {
+      "from": 76,
+      "to": 74
+    },
+    {
+      "from": 77,
+      "to": 72
+    },
+    {
+      "from": 78,
+      "to": 77
+    },
+    {
+      "from": 79,
+      "to": 80
+    },
+    {
+      "from": 79,
+      "to": 81
+    },
+    {
+      "from": 82,
+      "to": 79
+    },
+    {
+      "from": 82,
+      "to": 89
+    },
+    {
+      "from": 83,
+      "to": 79
+    },
+    {
+      "from": 83,
+      "to": 91
+    },
+    {
+      "from": 84,
+      "to": 79
+    },
+    {
+      "from": 85,
+      "to": 79
+    },
+    {
+      "from": 86,
+      "to": 79
+    },
+    {
+      "from": 87,
+      "to": 79
+    },
+    {
+      "from": 88,
+      "to": 79
+    },
+    {
+      "from": 89,
+      "to": 4
+    },
+    {
+      "from": 90,
+      "to": 44
+    },
+    {
+      "from": 91,
+      "to": 4
+    },
+    {
+      "from": 92,
+      "to": 91
+    },
+    {
+      "from": 92,
+      "to": 110
+    },
+    {
+      "from": 93,
+      "to": 83
+    },
+    {
+      "from": 94,
+      "to": 84
+    },
+    {
+      "from": 95,
+      "to": 94
+    },
+    {
+      "from": 96,
+      "to": 95
+    },
+    {
+      "from": 97,
+      "to": 85
+    },
+    {
+      "from": 98,
+      "to": 97
+    },
+    {
+      "from": 99,
+      "to": 86
+    },
+    {
+      "from": 100,
+      "to": 99
+    },
+    {
+      "from": 101,
+      "to": 87
+    },
+    {
+      "from": 102,
+      "to": 101
+    },
+    {
+      "from": 103,
+      "to": 88
+    },
+    {
+      "from": 104,
+      "to": 103
+    },
+    {
+      "from": 105,
+      "to": 106
+    },
+    {
+      "from": 105,
+      "to": 107
+    },
+    {
+      "from": 105,
+      "to": 108
+    },
+    {
+      "from": 106,
+      "to": 120
+    },
+    {
+      "from": 107,
+      "to": 120
+    },
+    {
+      "from": 108,
+      "to": 120
+    },
+    {
+      "from": 108,
+      "to": 122
+    },
+    {
+      "from": 109,
+      "to": 105
+    },
+    {
+      "from": 110,
+      "to": 105
+    },
+    {
+      "from": 110,
+      "to": 116
+    },
+    {
+      "from": 111,
+      "to": 112
+    },
+    {
+      "from": 113,
+      "to": 41
+    },
+    {
+      "from": 113,
+      "to": 114
+    },
+    {
+      "from": 114,
+      "to": 4
+    },
+    {
+      "from": 115,
+      "to": 107
+    },
+    {
+      "from": 116,
+      "to": 105
+    },
+    {
+      "from": 117,
+      "to": 105
+    },
+    {
+      "from": 118,
+      "to": 105
+    },
+    {
+      "from": 118,
+      "to": 115
+    },
+    {
+      "from": 119,
+      "to": 105
+    },
+    {
+      "from": 121,
+      "to": 120
+    },
+    {
+      "from": 122,
+      "to": 121
+    },
+    {
+      "from": 123,
+      "to": 130
+    },
+    {
+      "from": 124,
+      "to": 123
+    },
+    {
+      "from": 125,
+      "to": 124
+    },
+    {
+      "from": 125,
+      "to": 131
+    },
+    {
+      "from": 126,
+      "to": 124
+    },
+    {
+      "from": 127,
+      "to": 125
+    },
+    {
+      "from": 128,
+      "to": 123
+    },
+    {
+      "from": 128,
+      "to": 132
+    },
+    {
+      "from": 129,
+      "to": 123
+    },
+    {
+      "from": 130,
+      "to": 122
+    },
+    {
+      "from": 131,
+      "to": 130
+    },
+    {
+      "from": 132,
+      "to": 130
+    },
+    {
+      "from": 133,
+      "to": 130
+    },
+    {
+      "from": 133,
+      "to": 131
+    },
+    {
+      "from": 134,
+      "to": 6
+    },
+    {
+      "from": 135,
+      "to": 134
+    },
+    {
+      "from": 135,
+      "to": 61
+    },
+    {
+      "from": 136,
+      "to": 135
+    },
+    {
+      "from": 137,
+      "to": 135
+    },
+    {
+      "from": 138,
+      "to": 70
+    },
+    {
+      "from": 138,
+      "to": 137
+    },
+    {
+      "from": 139,
+      "to": 134
+    },
+    {
+      "from": 140,
+      "to": 139
+    },
+    {
+      "from": 141,
+      "to": 140
+    },
+    {
+      "from": 142,
+      "to": 141
+    },
+    {
+      "from": 143,
+      "to": 141
+    },
+    {
+      "from": 144,
+      "to": 141
+    },
+    {
+      "from": 145,
+      "to": 141
+    },
+    {
+      "from": 146,
+      "to": 144
+    },
+    {
+      "from": 147,
+      "to": 2
+    },
+    {
+      "from": 147,
+      "to": 142
+    },
+    {
+      "from": 148,
+      "to": 8
+    },
+    {
+      "from": 148,
+      "to": 142
+    },
+    {
+      "from": 149,
+      "to": 142
+    },
+    {
+      "from": 150,
+      "to": 4
+    },
+    {
+      "from": 151,
+      "to": 143
+    },
+    {
+      "from": 152,
+      "to": 141
+    },
+    {
+      "from": 152,
+      "to": 142
+    },
+    {
+      "from": 152,
+      "to": 143
+    },
+    {
+      "from": 153,
+      "to": 152
+    },
+    {
+      "from": 154,
+      "to": 152
+    },
+    {
+      "from": 155,
+      "to": 152
+    },
+    {
+      "from": 156,
+      "to": 152
+    },
+    {
+      "from": 157,
+      "to": 156
+    },
+    {
+      "from": 158,
+      "to": 160
+    },
+    {
+      "from": 159,
+      "to": 160
+    },
+    {
+      "from": 160,
+      "to": 3
+    },
+    {
+      "from": 161,
+      "to": 160
+    },
+    {
+      "from": 161,
+      "to": 79
+    },
+    {
+      "from": 162,
+      "to": 160
+    },
+    {
+      "from": 163,
+      "to": 158
+    },
+    {
+      "from": 164,
+      "to": 158
+    },
+    {
+      "from": 164,
+      "to": 159
+    },
+    {
+      "from": 165,
+      "to": 164
+    },
+    {
+      "from": 166,
+      "to": 158
+    },
+    {
+      "from": 167,
+      "to": 160
+    },
+    {
+      "from": 167,
+      "to": 141
+    },
+    {
+      "from": 168,
+      "to": 165
+    },
+    {
+      "from": 169,
+      "to": 165
+    },
+    {
+      "from": 170,
+      "to": 165
+    },
+    {
+      "from": 171,
+      "to": 165
+    },
+    {
+      "from": 172,
+      "to": 165
+    },
+    {
+      "from": 173,
+      "to": 167
+    },
+    {
+      "from": 174,
+      "to": 78
+    },
+    {
+      "from": 175,
+      "to": 174
+    },
+    {
+      "from": 177,
+      "to": 176
+    },
+    {
+      "from": 178,
+      "to": 176
+    },
+    {
+      "from": 179,
+      "to": 176
+    },
+    {
+      "from": 180,
+      "to": 176
+    },
+    {
+      "from": 180,
+      "to": 111
+    },
+    {
+      "from": 181,
+      "to": 176
+    },
+    {
+      "from": 181,
+      "to": 113
+    },
+    {
+      "from": 182,
+      "to": 176
+    },
+    {
+      "from": 183,
+      "to": 176
+    },
+    {
+      "from": 184,
+      "to": 176
+    },
+    {
+      "from": 185,
+      "to": 176
+    },
+    {
+      "from": 185,
+      "to": 22
+    },
+    {
+      "from": 186,
+      "to": 176
+    },
+    {
+      "from": 186,
+      "to": 92
+    },
+    {
+      "from": 187,
+      "to": 176
+    },
+    {
+      "from": 187,
+      "to": 152
+    },
+    {
+      "from": 188,
+      "to": 187
+    },
+    {
+      "from": 189,
+      "to": 3
+    },
+    {
+      "from": 190,
+      "to": 3
+    },
+    {
+      "from": 191,
+      "to": 189
+    },
+    {
+      "from": 192,
+      "to": 3
+    },
+    {
+      "from": 193,
+      "to": 189
+    },
+    {
+      "from": 194,
+      "to": 136
+    },
+    {
+      "from": 194,
+      "to": 157
+    },
+    {
+      "from": 195,
+      "to": 194
+    },
+    {
+      "from": 196,
+      "to": 194
+    },
+    {
+      "from": 197,
+      "to": 167
+    },
+    {
+      "from": 197,
+      "to": 160
+    },
+    {
+      "from": 197,
+      "to": 152
+    },
+    {
+      "from": 198,
+      "to": 167
+    },
+    {
+      "from": 199,
+      "to": 160
+    },
+    {
+      "from": 200,
+      "to": 152
+    }
+  ]
+}

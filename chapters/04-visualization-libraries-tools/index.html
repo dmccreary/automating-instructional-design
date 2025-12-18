@@ -1,0 +1,3333 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="A comprehensive guide to JavaScript visualization libraries for creating educational MicroSims">
+      
+      
+        <meta name="author" content="Dan McCreary">
+      
+      
+        <link rel="canonical" href="https://dmccreary.github.io/automating-instructional-design/chapters/04-visualization-libraries-tools/">
+      
+      
+        <link rel="prev" href="../03-microsim-pattern-library/">
+      
+      
+        <link rel="next" href="../05-writing-microsim-specifications/">
+      
+      
+      <link rel="icon" href="../../img/favicon.ico">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.43">
+    
+    
+      
+        <title>Visualization Libraries and Tools - Automating Instructional Design</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.0253249f.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../css/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+      
+        <meta  property="og:type"  content="website" >
+      
+        <meta  property="og:title"  content="Visualization Libraries and Tools - Automating Instructional Design" >
+      
+        <meta  property="og:description"  content="A comprehensive guide to JavaScript visualization libraries for creating educational MicroSims" >
+      
+        <meta  property="og:image"  content="https://dmccreary.github.io/automating-instructional-design/assets/images/social/chapters/04-visualization-libraries-tools/index.png" >
+      
+        <meta  property="og:image:type"  content="image/png" >
+      
+        <meta  property="og:image:width"  content="1200" >
+      
+        <meta  property="og:image:height"  content="630" >
+      
+        <meta  property="og:url"  content="https://dmccreary.github.io/automating-instructional-design/chapters/04-visualization-libraries-tools/" >
+      
+        <meta  name="twitter:card"  content="summary_large_image" >
+      
+        <meta  name="twitter:title"  content="Visualization Libraries and Tools - Automating Instructional Design" >
+      
+        <meta  name="twitter:description"  content="A comprehensive guide to JavaScript visualization libraries for creating educational MicroSims" >
+      
+        <meta  name="twitter:image"  content="https://dmccreary.github.io/automating-instructional-design/assets/images/social/chapters/04-visualization-libraries-tools/index.png" >
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="orange">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#visualization-libraries-and-tools" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Automating Instructional Design" class="md-header__button md-logo" aria-label="Automating Instructional Design" data-md-component="logo">
+      
+  <img src="../../img/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Automating Instructional Design
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Visualization Libraries and Tools
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/dmccreary/automating-instructional-design" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub Repo
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Automating Instructional Design" class="md-nav__button md-logo" aria-label="Automating Instructional Design" data-md-component="logo">
+      
+  <img src="../../img/logo.png" alt="logo">
+
+    </a>
+    Automating Instructional Design
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/dmccreary/automating-instructional-design" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub Repo
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../course-description/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Course Description
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+    
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Chapters
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Chapters
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../01-foundations-learning-objective-analysis/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Foundations of Learning Objective Analysis
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../02-prerequisite-analysis-microsim-fundamentals/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Prerequisite Analysis and MicroSim Fundamentals
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../03-microsim-pattern-library/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    The MicroSim Pattern Library
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Visualization Libraries and Tools
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Visualization Libraries and Tools
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      Summary
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#concepts-covered" class="md-nav__link">
+    <span class="md-ellipsis">
+      Concepts Covered
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    <span class="md-ellipsis">
+      Prerequisites
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#welcome-to-the-visualization-toolbox" class="md-nav__link">
+    <span class="md-ellipsis">
+      Welcome to the Visualization Toolbox
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Welcome to the Visualization Toolbox">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-visualization-library-decision-tree" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Visualization Library Decision Tree
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#p5js-the-swiss-army-knife-of-animation" class="md-nav__link">
+    <span class="md-ellipsis">
+      p5.js: The Swiss Army Knife of Animation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="p5.js: The Swiss Army Knife of Animation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-makes-p5js-special" class="md-nav__link">
+    <span class="md-ellipsis">
+      What Makes p5.js Special?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-anatomy-of-a-p5js-microsim" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Anatomy of a p5.js MicroSim
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#when-to-choose-p5js" class="md-nav__link">
+    <span class="md-ellipsis">
+      When to Choose p5.js
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="When to Choose p5.js">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-p5js-microsim-architecture" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: p5.js MicroSim Architecture
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#chart-visualization-telling-stories-with-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      Chart Visualization: Telling Stories with Data
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Chart Visualization: Telling Stories with Data">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#chartjs-simple-beautiful-and-fast" class="md-nav__link">
+    <span class="md-ellipsis">
+      Chart.js: Simple, Beautiful, and Fast
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Chart.js: Simple, Beautiful, and Fast">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#chartjs-in-action" class="md-nav__link">
+    <span class="md-ellipsis">
+      Chart.js in Action
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#plotly-when-you-need-mathematical-muscle" class="md-nav__link">
+    <span class="md-ellipsis">
+      Plotly: When You Need Mathematical Muscle
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Plotly: When You Need Mathematical Muscle">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-chart-type-selection-guide" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Chart Type Selection Guide
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vis-network-when-relationships-are-everything" class="md-nav__link">
+    <span class="md-ellipsis">
+      vis-network: When Relationships Are Everything
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="vis-network: When Relationships Are Everything">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#understanding-network-visualization" class="md-nav__link">
+    <span class="md-ellipsis">
+      Understanding Network Visualization
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-vis-network-architecture-pattern" class="md-nav__link">
+    <span class="md-ellipsis">
+      The vis-network Architecture Pattern
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#when-vis-network-shines" class="md-nav__link">
+    <span class="md-ellipsis">
+      When vis-network Shines
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="When vis-network Shines">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-learning-dependency-network-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Learning Dependency Network Example
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#timeline-visualization-history-comes-alive" class="md-nav__link">
+    <span class="md-ellipsis">
+      Timeline Visualization: History Comes Alive
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Timeline Visualization: History Comes Alive">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-power-of-temporal-context" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Power of Temporal Context
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vis-timeline-features" class="md-nav__link">
+    <span class="md-ellipsis">
+      vis-timeline Features
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#timeline-best-practices-for-education" class="md-nav__link">
+    <span class="md-ellipsis">
+      Timeline Best Practices for Education
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#map-visualization-geography-matters" class="md-nav__link">
+    <span class="md-ellipsis">
+      Map Visualization: Geography Matters
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Map Visualization: Geography Matters">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#leaflet-fundamentals" class="md-nav__link">
+    <span class="md-ellipsis">
+      Leaflet Fundamentals
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#educational-map-applications" class="md-nav__link">
+    <span class="md-ellipsis">
+      Educational Map Applications
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mermaid-diagrams-from-text" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mermaid: Diagrams from Text
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Mermaid: Diagrams from Text">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-joy-of-text-based-diagrams" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Joy of Text-Based Diagrams
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mermaid-diagram-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mermaid Diagram Types
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#styling-mermaid-for-education" class="md-nav__link">
+    <span class="md-ellipsis">
+      Styling Mermaid for Education
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Styling Mermaid for Education">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-microsim-generation-workflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: MicroSim Generation Workflow
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#claude-code-skills-ai-powered-generation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Claude Code Skills: AI-Powered Generation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Claude Code Skills: AI-Powered Generation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-are-claude-code-skills" class="md-nav__link">
+    <span class="md-ellipsis">
+      What Are Claude Code Skills?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-microsim-generator-ecosystem" class="md-nav__link">
+    <span class="md-ellipsis">
+      The MicroSim Generator Ecosystem
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-skills-match-to-requests" class="md-nav__link">
+    <span class="md-ellipsis">
+      How Skills Match to Requests
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#template-libraries-standing-on-shoulders" class="md-nav__link">
+    <span class="md-ellipsis">
+      Template Libraries: Standing on Shoulders
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Template Libraries: Standing on Shoulders">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-standard-microsim-structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Standard MicroSim Structure
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#template-components" class="md-nav__link">
+    <span class="md-ellipsis">
+      Template Components
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#url-parameters-for-extended-functionality" class="md-nav__link">
+    <span class="md-ellipsis">
+      URL Parameters for Extended Functionality
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#code-generation-from-specification-to-working-microsim" class="md-nav__link">
+    <span class="md-ellipsis">
+      Code Generation: From Specification to Working MicroSim
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Code Generation: From Specification to Working MicroSim">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-specification-to-code-pipeline" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Specification-to-Code Pipeline
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-makes-a-good-specification" class="md-nav__link">
+    <span class="md-ellipsis">
+      What Makes a Good Specification?
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="What Makes a Good Specification?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-specification-quality-checklist" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Specification Quality Checklist
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#iterative-refinement" class="md-nav__link">
+    <span class="md-ellipsis">
+      Iterative Refinement
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#putting-it-all-together-the-library-selection-matrix" class="md-nav__link">
+    <span class="md-ellipsis">
+      Putting It All Together: The Library Selection Matrix
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Putting It All Together: The Library Selection Matrix">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-decision-framework" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Decision Framework
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-takeaways" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key Takeaways
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    <span class="md-ellipsis">
+      References
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../05-writing-microsim-specifications/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Writing Effective MicroSim Specifications
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../06-adapting-audience-levels/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Adapting for Audience Levels
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../07-cognitive-load-visual-design/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Cognitive Load and Visual Design
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../08-anticipating-misconceptions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Anticipating Misconceptions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../09-generating-microsims-ai-tools/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Generating MicroSims with AI Tools
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../10-quality-evaluation-frameworks/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Quality Evaluation Frameworks
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../11-user-testing-iteration/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    User Testing and Iteration
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../12-accessibility-deployment-completion/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Accessibility, Deployment, and Course Completion
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+          
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../stories/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Stories
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../learning-graph/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Learning Graph
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+          
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../sims/graph-viewer/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    MicroSims
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../checklist/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Checklist
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../glossary/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Glossary
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../how-we-built-this-site/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    How We Built This Site
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../references/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    References
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../feedback/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Feedback
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../license/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    License
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../contact/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Contact
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      Summary
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#concepts-covered" class="md-nav__link">
+    <span class="md-ellipsis">
+      Concepts Covered
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    <span class="md-ellipsis">
+      Prerequisites
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#welcome-to-the-visualization-toolbox" class="md-nav__link">
+    <span class="md-ellipsis">
+      Welcome to the Visualization Toolbox
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Welcome to the Visualization Toolbox">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-visualization-library-decision-tree" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Visualization Library Decision Tree
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#p5js-the-swiss-army-knife-of-animation" class="md-nav__link">
+    <span class="md-ellipsis">
+      p5.js: The Swiss Army Knife of Animation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="p5.js: The Swiss Army Knife of Animation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-makes-p5js-special" class="md-nav__link">
+    <span class="md-ellipsis">
+      What Makes p5.js Special?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-anatomy-of-a-p5js-microsim" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Anatomy of a p5.js MicroSim
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#when-to-choose-p5js" class="md-nav__link">
+    <span class="md-ellipsis">
+      When to Choose p5.js
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="When to Choose p5.js">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-p5js-microsim-architecture" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: p5.js MicroSim Architecture
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#chart-visualization-telling-stories-with-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      Chart Visualization: Telling Stories with Data
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Chart Visualization: Telling Stories with Data">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#chartjs-simple-beautiful-and-fast" class="md-nav__link">
+    <span class="md-ellipsis">
+      Chart.js: Simple, Beautiful, and Fast
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Chart.js: Simple, Beautiful, and Fast">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#chartjs-in-action" class="md-nav__link">
+    <span class="md-ellipsis">
+      Chart.js in Action
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#plotly-when-you-need-mathematical-muscle" class="md-nav__link">
+    <span class="md-ellipsis">
+      Plotly: When You Need Mathematical Muscle
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Plotly: When You Need Mathematical Muscle">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-chart-type-selection-guide" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Chart Type Selection Guide
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vis-network-when-relationships-are-everything" class="md-nav__link">
+    <span class="md-ellipsis">
+      vis-network: When Relationships Are Everything
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="vis-network: When Relationships Are Everything">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#understanding-network-visualization" class="md-nav__link">
+    <span class="md-ellipsis">
+      Understanding Network Visualization
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-vis-network-architecture-pattern" class="md-nav__link">
+    <span class="md-ellipsis">
+      The vis-network Architecture Pattern
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#when-vis-network-shines" class="md-nav__link">
+    <span class="md-ellipsis">
+      When vis-network Shines
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="When vis-network Shines">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-learning-dependency-network-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Learning Dependency Network Example
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#timeline-visualization-history-comes-alive" class="md-nav__link">
+    <span class="md-ellipsis">
+      Timeline Visualization: History Comes Alive
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Timeline Visualization: History Comes Alive">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-power-of-temporal-context" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Power of Temporal Context
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vis-timeline-features" class="md-nav__link">
+    <span class="md-ellipsis">
+      vis-timeline Features
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#timeline-best-practices-for-education" class="md-nav__link">
+    <span class="md-ellipsis">
+      Timeline Best Practices for Education
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#map-visualization-geography-matters" class="md-nav__link">
+    <span class="md-ellipsis">
+      Map Visualization: Geography Matters
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Map Visualization: Geography Matters">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#leaflet-fundamentals" class="md-nav__link">
+    <span class="md-ellipsis">
+      Leaflet Fundamentals
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#educational-map-applications" class="md-nav__link">
+    <span class="md-ellipsis">
+      Educational Map Applications
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mermaid-diagrams-from-text" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mermaid: Diagrams from Text
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Mermaid: Diagrams from Text">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-joy-of-text-based-diagrams" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Joy of Text-Based Diagrams
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mermaid-diagram-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mermaid Diagram Types
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#styling-mermaid-for-education" class="md-nav__link">
+    <span class="md-ellipsis">
+      Styling Mermaid for Education
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Styling Mermaid for Education">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-microsim-generation-workflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: MicroSim Generation Workflow
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#claude-code-skills-ai-powered-generation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Claude Code Skills: AI-Powered Generation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Claude Code Skills: AI-Powered Generation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-are-claude-code-skills" class="md-nav__link">
+    <span class="md-ellipsis">
+      What Are Claude Code Skills?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-microsim-generator-ecosystem" class="md-nav__link">
+    <span class="md-ellipsis">
+      The MicroSim Generator Ecosystem
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-skills-match-to-requests" class="md-nav__link">
+    <span class="md-ellipsis">
+      How Skills Match to Requests
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#template-libraries-standing-on-shoulders" class="md-nav__link">
+    <span class="md-ellipsis">
+      Template Libraries: Standing on Shoulders
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Template Libraries: Standing on Shoulders">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-standard-microsim-structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Standard MicroSim Structure
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#template-components" class="md-nav__link">
+    <span class="md-ellipsis">
+      Template Components
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#url-parameters-for-extended-functionality" class="md-nav__link">
+    <span class="md-ellipsis">
+      URL Parameters for Extended Functionality
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#code-generation-from-specification-to-working-microsim" class="md-nav__link">
+    <span class="md-ellipsis">
+      Code Generation: From Specification to Working MicroSim
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Code Generation: From Specification to Working MicroSim">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-specification-to-code-pipeline" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Specification-to-Code Pipeline
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-makes-a-good-specification" class="md-nav__link">
+    <span class="md-ellipsis">
+      What Makes a Good Specification?
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="What Makes a Good Specification?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-specification-quality-checklist" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Specification Quality Checklist
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#iterative-refinement" class="md-nav__link">
+    <span class="md-ellipsis">
+      Iterative Refinement
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#putting-it-all-together-the-library-selection-matrix" class="md-nav__link">
+    <span class="md-ellipsis">
+      Putting It All Together: The Library Selection Matrix
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Putting It All Together: The Library Selection Matrix">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-decision-framework" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Decision Framework
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-takeaways" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key Takeaways
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    <span class="md-ellipsis">
+      References
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+    <a href="https://github.com/dmccreary/automating-instructional-design/blob/master/docs/chapters/04-visualization-libraries-tools/index.md" title="Edit this page" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
+    </a>
+  
+  
+
+
+<h1 id="visualization-libraries-and-tools">Visualization Libraries and Tools</h1>
+<h2 id="summary">Summary</h2>
+<p>This chapter introduces the JavaScript libraries and tools used to implement MicroSims. You will learn about p5.js for animations, vis-network for relationship graphs, vis-timeline for temporal displays, Chart.js and Plotly for data visualizations, Leaflet for maps, and Mermaid for diagrams. The chapter also covers Claude Code skills, the MicroSim generator, template libraries, and code generation workflows. By understanding these tools, you will be able to select the right technology for implementing any visualization paradigm.</p>
+<h2 id="concepts-covered">Concepts Covered</h2>
+<p>This chapter covers the following 15 concepts from the learning graph:</p>
+<ol>
+<li>p5.js Animation</li>
+<li>vis-network Library</li>
+<li>Timeline Visualization</li>
+<li>vis-timeline Library</li>
+<li>Chart Visualization</li>
+<li>Chart.js Library</li>
+<li>Plotly Library</li>
+<li>Map Visualization</li>
+<li>Leaflet Library</li>
+<li>Diagram Visualization</li>
+<li>Mermaid Library</li>
+<li>Claude Code Skills</li>
+<li>MicroSim Generator</li>
+<li>Template Library</li>
+<li>Code Generation</li>
+</ol>
+<h2 id="prerequisites">Prerequisites</h2>
+<p>This chapter builds on concepts from:</p>
+<ul>
+<li><a href="../03-microsim-pattern-library/">Chapter 3: The MicroSim Pattern Library</a></li>
+</ul>
+<hr />
+<h2 id="welcome-to-the-visualization-toolbox">Welcome to the Visualization Toolbox</h2>
+<p>Congratulations! You've made it to what we affectionately call the "candy store" chapter of this course. Here, we'll explore the delightful array of JavaScript libraries that transform abstract learning objectives into interactive, engaging visual experiences. Think of these libraries as your artistic palette, each color uniquely suited for painting different educational masterpieces.</p>
+<p>The beauty of modern web development is that you don't need to reinvent the wheel (or the slider, or the graph, or the map). Brilliant developers have created open-source libraries that handle the heavy lifting, allowing you to focus on what matters most: designing experiences that help people learn. As the saying goes, "Why write a thousand lines of code when you can import one library and write ten?"</p>
+<p>This chapter will equip you with the knowledge to select the right tool for any educational visualization challenge. By the end, you'll be like a well-stocked craftsperson, reaching confidently for p5.js when animation is needed, vis-network when relationships matter, or Chart.js when data needs to speak. Let's dive in!</p>
+<h4 id="diagram-visualization-library-decision-tree">Diagram: Visualization Library Decision Tree</h4>
+<details>
+<summary>Visualization Library Decision Tree</summary>
+<p>Type: diagram</p>
+<p>Bloom Taxonomy: Understand</p>
+<p>Learning Objective: Help learners understand which visualization library to select based on their learning objective characteristics</p>
+<p>Purpose: Guide learners through the decision-making process of selecting the appropriate JavaScript library for their MicroSim based on the type of content being visualized</p>
+<p>Components to show:
+- Start node: "What type of content?"
+- Decision branches for: Animation/Physics, Data/Statistics, Relationships/Networks, Time-based, Geographic, Process/Workflow
+- Library endpoints: p5.js, Chart.js, Plotly, vis-network, vis-timeline, Leaflet, Mermaid</p>
+<p>Flow structure:
+1. Start → "Is it animated or physics-based?"
+   - Yes → p5.js
+   - No → Continue
+2. "Is it data/statistics?"
+   - Yes → "Need mathematical functions?" → Yes → Plotly, No → Chart.js
+   - No → Continue
+3. "Shows relationships/networks?"
+   - Yes → vis-network
+   - No → Continue
+4. "Time-based/chronological?"
+   - Yes → vis-timeline
+   - No → Continue
+5. "Geographic/location-based?"
+   - Yes → Leaflet
+   - No → Mermaid (process/workflow default)</p>
+<p>Visual style: Top-down flowchart with colored decision diamonds and rectangular library nodes
+Color scheme: Decision nodes in light purple, library endpoints in distinct colors matching their brand identities (p5.js pink, Chart.js orange, Plotly blue, vis-network teal, vis-timeline green, Leaflet forest green, Mermaid purple)</p>
+<p>Implementation: Mermaid flowchart or vis-network with hierarchical layout</p>
+</details>
+<hr />
+<h2 id="p5js-the-swiss-army-knife-of-animation">p5.js: The Swiss Army Knife of Animation</h2>
+<p>If JavaScript libraries were superheroes, p5.js would be the one that can fly, has super strength, AND makes excellent coffee. Originally created by Lauren McCarthy as a way to make coding accessible to artists and designers, p5.js has become the go-to library for creative, animated, and interactive visualizations on the web.</p>
+<h3 id="what-makes-p5js-special">What Makes p5.js Special?</h3>
+<p>p5.js excels at creating custom animations, physics simulations, and interactive visual experiences. Unlike libraries designed for specific chart types, p5.js gives you a blank canvas and says, "Go wild!" This flexibility makes it perfect for educational simulations where you need precise control over every pixel.</p>
+<p>Key characteristics of p5.js include:</p>
+<ul>
+<li><strong>The setup() and draw() paradigm</strong>: Initialize once, then loop continuously</li>
+<li><strong>Immediate mode rendering</strong>: Every frame, you draw everything from scratch</li>
+<li><strong>Built-in functions</strong>: Shapes, colors, transformations, all at your fingertips</li>
+<li><strong>Mouse and keyboard handling</strong>: Interactivity made simple</li>
+<li><strong>Width-responsive design</strong>: Adapts to container size automatically</li>
+</ul>
+<h3 id="the-anatomy-of-a-p5js-microsim">The Anatomy of a p5.js MicroSim</h3>
+<p>Every p5.js MicroSim follows a consistent structure with distinct regions for drawing and controls. This separation keeps the educational content visually clean while providing interactive elements below.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1">// Canvas dimensions - the foundation of every MicroSim</span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">canvasWidth</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">400</span><span class="p">;</span><span class="w">              </span><span class="c1">// Initial width (responsive)</span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">drawHeight</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">400</span><span class="p">;</span><span class="w">               </span><span class="c1">// Drawing/simulation area height</span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">controlHeight</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">50</span><span class="p">;</span><span class="w">             </span><span class="c1">// Controls area height</span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">canvasHeight</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">drawHeight</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">controlHeight</span><span class="p">;</span>
+
+<span class="kd">function</span><span class="w"> </span><span class="nx">setup</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">updateCanvasSize</span><span class="p">();</span><span class="w">               </span><span class="c1">// Get container width first!</span>
+<span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">canvas</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">createCanvas</span><span class="p">(</span><span class="nx">canvasWidth</span><span class="p">,</span><span class="w"> </span><span class="nx">canvasHeight</span><span class="p">);</span>
+<span class="w">  </span><span class="nx">canvas</span><span class="p">.</span><span class="nx">parent</span><span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s1">&#39;main&#39;</span><span class="p">));</span>
+
+<span class="w">  </span><span class="c1">// Create your sliders and controls here</span>
+<span class="w">  </span><span class="nx">describe</span><span class="p">(</span><span class="s1">&#39;Educational description for screen readers&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">LABEL</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kd">function</span><span class="w"> </span><span class="nx">draw</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">updateCanvasSize</span><span class="p">();</span>
+
+<span class="w">  </span><span class="c1">// Drawing area (light blue background)</span>
+<span class="w">  </span><span class="nx">fill</span><span class="p">(</span><span class="s1">&#39;aliceblue&#39;</span><span class="p">);</span>
+<span class="w">  </span><span class="nx">stroke</span><span class="p">(</span><span class="s1">&#39;silver&#39;</span><span class="p">);</span>
+<span class="w">  </span><span class="nx">rect</span><span class="p">(</span><span class="mf">0</span><span class="p">,</span><span class="w"> </span><span class="mf">0</span><span class="p">,</span><span class="w"> </span><span class="nx">canvasWidth</span><span class="p">,</span><span class="w"> </span><span class="nx">drawHeight</span><span class="p">);</span>
+
+<span class="w">  </span><span class="c1">// Control area (white background)</span>
+<span class="w">  </span><span class="nx">fill</span><span class="p">(</span><span class="s1">&#39;white&#39;</span><span class="p">);</span>
+<span class="w">  </span><span class="nx">noStroke</span><span class="p">();</span>
+<span class="w">  </span><span class="nx">rect</span><span class="p">(</span><span class="mf">0</span><span class="p">,</span><span class="w"> </span><span class="nx">drawHeight</span><span class="p">,</span><span class="w"> </span><span class="nx">canvasWidth</span><span class="p">,</span><span class="w"> </span><span class="nx">controlHeight</span><span class="p">);</span>
+
+<span class="w">  </span><span class="c1">// Your visualization code goes here</span>
+<span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<div class="admonition tip">
+<p class="admonition-title">Always Start with updateCanvasSize()</p>
+<p>The most common mistake new MicroSim creators make is forgetting to call <code>updateCanvasSize()</code> at the beginning of <code>setup()</code>. This function reads the container width and ensures your simulation adapts to any screen size.</p>
+</div>
+<h3 id="when-to-choose-p5js">When to Choose p5.js</h3>
+<p>p5.js is your best friend when you need:</p>
+<table>
+<thead>
+<tr>
+<th>Use Case</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Physics simulations</td>
+<td>Bouncing balls, projectile motion, pendulums</td>
+</tr>
+<tr>
+<td>Custom animations</td>
+<td>Visualizing algorithms, state changes</td>
+</tr>
+<tr>
+<td>Interactive exploration</td>
+<td>Parameter spaces, function behavior</td>
+</tr>
+<tr>
+<td>Game-like experiences</td>
+<td>Educational games, gamified assessments</td>
+</tr>
+<tr>
+<td>Creative visualizations</td>
+<td>Generative art, data sonification</td>
+</tr>
+</tbody>
+</table>
+<p>However, p5.js might be overkill for standard charts or diagrams. If you're just plotting bar charts, Chart.js will get you there faster. Think of it this way: you <em>could</em> use a chainsaw to cut butter, but a butter knife is probably more appropriate.</p>
+<h4 id="diagram-p5js-microsim-architecture">Diagram: p5.js MicroSim Architecture</h4>
+<details>
+<summary>p5.js MicroSim Architecture</summary>
+<p>Type: diagram</p>
+<p>Bloom Taxonomy: Understand</p>
+<p>Learning Objective: Visualize the standard structure of a p5.js MicroSim with its distinct regions and responsive design</p>
+<p>Components to show:
+- Container (main element in HTML)
+- Canvas (created by p5.js)
+- Draw Region (top area with aliceblue background)
+- Control Region (bottom area with white background)
+- Slider elements in control region
+- Labels in control region</p>
+<p>Layout:
+- Vertical stack showing:
+  1. Browser window frame
+  2. Main container (full width)
+  3. Canvas divided into:
+     - Top: Draw region (labeled "drawHeight")
+     - Bottom: Control region (labeled "controlHeight")
+  4. Arrows showing responsive width behavior</p>
+<p>Annotations:
+- "canvasWidth = container.offsetWidth" pointing to width
+- "Fixed heights, variable width" annotation
+- "updateCanvasSize() called each frame" near draw loop indicator</p>
+<p>Color scheme: Draw region in aliceblue, control region in white, canvas border in silver</p>
+<p>Implementation: Mermaid block diagram or p5.js static rendering</p>
+</details>
+<hr />
+<h2 id="chart-visualization-telling-stories-with-data">Chart Visualization: Telling Stories with Data</h2>
+<p>Data without visualization is like a joke without a punchline: technically complete, but missing the impact. Charts transform raw numbers into visual patterns that our pattern-recognizing brains can instantly comprehend. In this section, we'll explore two powerful charting libraries: Chart.js for simplicity and Plotly for sophistication.</p>
+<h3 id="chartjs-simple-beautiful-and-fast">Chart.js: Simple, Beautiful, and Fast</h3>
+<p>Chart.js is the library you reach for when you need a professional-looking chart in minutes, not hours. It supports all the standard chart types that business professionals and educators love:</p>
+<ul>
+<li><strong>Line charts</strong>: Trends over time, continuous data</li>
+<li><strong>Bar charts</strong>: Comparing categories, discrete values</li>
+<li><strong>Pie and Doughnut charts</strong>: Parts of a whole (use sparingly!)</li>
+<li><strong>Radar charts</strong>: Multi-dimensional comparisons</li>
+<li><strong>Scatter plots</strong>: Correlations and distributions</li>
+<li><strong>Bubble charts</strong>: Three-dimensional data visualization</li>
+</ul>
+<h4 id="chartjs-in-action">Chart.js in Action</h4>
+<p>Here's the basic pattern for creating a Chart.js visualization:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">ctx</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;myChart&#39;</span><span class="p">).</span><span class="nx">getContext</span><span class="p">(</span><span class="s1">&#39;2d&#39;</span><span class="p">);</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">myChart</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">Chart</span><span class="p">(</span><span class="nx">ctx</span><span class="p">,</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">type</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;bar&#39;</span><span class="p">,</span><span class="w">  </span><span class="c1">// or &#39;line&#39;, &#39;pie&#39;, &#39;doughnut&#39;, &#39;radar&#39;, &#39;scatter&#39;</span>
+<span class="w">    </span><span class="nx">data</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nx">labels</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="s1">&#39;Category A&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Category B&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Category C&#39;</span><span class="p">],</span>
+<span class="w">        </span><span class="nx">datasets</span><span class="o">:</span><span class="w"> </span><span class="p">[{</span>
+<span class="w">            </span><span class="nx">label</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;Dataset 1&#39;</span><span class="p">,</span>
+<span class="w">            </span><span class="nx">data</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="mf">65</span><span class="p">,</span><span class="w"> </span><span class="mf">59</span><span class="p">,</span><span class="w"> </span><span class="mf">80</span><span class="p">],</span>
+<span class="w">            </span><span class="nx">backgroundColor</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;rgba(54, 162, 235, 0.8)&#39;</span><span class="p">,</span>
+<span class="w">            </span><span class="nx">borderColor</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;rgb(54, 162, 235)&#39;</span><span class="p">,</span>
+<span class="w">            </span><span class="nx">borderWidth</span><span class="o">:</span><span class="w"> </span><span class="mf">1</span>
+<span class="w">        </span><span class="p">}]</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="w">    </span><span class="nx">options</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nx">responsive</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">        </span><span class="nx">scales</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="nx">y</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">beginAtZero</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="w"> </span><span class="p">}</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">});</span>
+</code></pre></div></td></tr></table></div>
+<p>Chart.js handles tooltips, legends, and animations automatically. It's like having a skilled graphic designer on call who works for free and never complains about deadlines.</p>
+<table>
+<thead>
+<tr>
+<th>Chart Type</th>
+<th>Best For</th>
+<th>Avoid When</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Line</td>
+<td>Trends over time</td>
+<td>Categorical comparisons</td>
+</tr>
+<tr>
+<td>Bar</td>
+<td>Comparing categories</td>
+<td>Continuous data</td>
+</tr>
+<tr>
+<td>Pie/Doughnut</td>
+<td>Parts of whole (3-6 slices)</td>
+<td>More than 6 categories</td>
+</tr>
+<tr>
+<td>Radar</td>
+<td>Multi-variable comparison</td>
+<td>Single variable analysis</td>
+</tr>
+<tr>
+<td>Scatter</td>
+<td>Correlations</td>
+<td>Categorical data</td>
+</tr>
+</tbody>
+</table>
+<h3 id="plotly-when-you-need-mathematical-muscle">Plotly: When You Need Mathematical Muscle</h3>
+<p>While Chart.js excels at standard business charts, Plotly shines when you need to plot mathematical functions, create scientific visualizations, or provide advanced interactivity. Plotly is particularly powerful for:</p>
+<ul>
+<li><strong>Mathematical function plots</strong>: $f(x) = \sin(x)$, polynomial curves, exponential growth</li>
+<li><strong>Interactive exploration</strong>: Hover tooltips showing precise coordinates</li>
+<li><strong>Slider integration</strong>: Move points along curves to explore function behavior</li>
+<li><strong>Scientific notation</strong>: Proper axis formatting for technical content</li>
+</ul>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">function</span><span class="w"> </span><span class="nx">f</span><span class="p">(</span><span class="nx">x</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nb">Math</span><span class="p">.</span><span class="nx">sin</span><span class="p">(</span><span class="nx">x</span><span class="p">);</span><span class="w">  </span><span class="c1">// Your mathematical function</span>
+<span class="p">}</span>
+
+<span class="c1">// Generate data points</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[];</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[];</span>
+<span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kd">let</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">-</span><span class="mf">6.28</span><span class="p">;</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mf">6.28</span><span class="p">;</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="mf">0.01</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">x</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">i</span><span class="p">);</span>
+<span class="w">    </span><span class="nx">y</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">f</span><span class="p">(</span><span class="nx">i</span><span class="p">));</span>
+<span class="p">}</span>
+
+<span class="c1">// Create the plot</span>
+<span class="nx">Plotly</span><span class="p">.</span><span class="nx">newPlot</span><span class="p">(</span><span class="s1">&#39;plot&#39;</span><span class="p">,</span><span class="w"> </span><span class="p">[{</span>
+<span class="w">    </span><span class="nx">x</span><span class="o">:</span><span class="w"> </span><span class="nx">x</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">y</span><span class="o">:</span><span class="w"> </span><span class="nx">y</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">type</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;scatter&#39;</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">mode</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;lines&#39;</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">name</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;y = sin(x)&#39;</span>
+<span class="p">}],</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">responsive</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">title</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;Sine Function Visualization&#39;</span>
+<span class="p">});</span>
+</code></pre></div></td></tr></table></div>
+<div class="admonition note">
+<p class="admonition-title">Choosing Between Chart.js and Plotly</p>
+<p>Use <strong>Chart.js</strong> when you're visualizing discrete data categories or need standard business charts. Use <strong>Plotly</strong> when you're plotting continuous mathematical functions or need advanced scientific visualization features.</p>
+</div>
+<h4 id="diagram-chart-type-selection-guide">Diagram: Chart Type Selection Guide</h4>
+<details>
+<summary>Chart Type Selection Guide</summary>
+<p>Type: infographic</p>
+<p>Bloom Taxonomy: Apply</p>
+<p>Learning Objective: Help learners quickly identify the appropriate chart type based on their data characteristics and communication goals</p>
+<p>Layout: 2x3 grid of chart type cards with decision criteria</p>
+<p>Cards (each with small icon, name, use case, and example):
+1. Line Chart
+   - Icon: Simple line graph
+   - Use when: Showing trends over time
+   - Example: "Stock prices over 12 months"
+   - Library: Chart.js or Plotly</p>
+<ol>
+<li>Bar Chart</li>
+<li>Icon: Vertical bars</li>
+<li>Use when: Comparing categories</li>
+<li>Example: "Sales by region"</li>
+<li>
+<p>Library: Chart.js</p>
+</li>
+<li>
+<p>Pie/Doughnut</p>
+</li>
+<li>Icon: Pie segments</li>
+<li>Use when: Parts of a whole (max 6)</li>
+<li>Example: "Market share distribution"</li>
+<li>
+<p>Library: Chart.js</p>
+</li>
+<li>
+<p>Scatter Plot</p>
+</li>
+<li>Icon: Scattered dots</li>
+<li>Use when: Showing correlations</li>
+<li>Example: "Height vs. weight"</li>
+<li>
+<p>Library: Chart.js or Plotly</p>
+</li>
+<li>
+<p>Function Plot</p>
+</li>
+<li>Icon: Curved line (sine wave)</li>
+<li>Use when: Mathematical functions</li>
+<li>Example: "y = sin(x)"</li>
+<li>
+<p>Library: Plotly</p>
+</li>
+<li>
+<p>Radar Chart</p>
+</li>
+<li>Icon: Spider web shape</li>
+<li>Use when: Multi-variable comparison</li>
+<li>Example: "Skill assessment profiles"</li>
+<li>Library: Chart.js</li>
+</ol>
+<p>Color coding: Each card has a distinct background color
+Interactive features: Hover over each card to see expanded description</p>
+<p>Implementation: HTML/CSS grid with Chart.js mini-examples or static images</p>
+</details>
+<hr />
+<h2 id="vis-network-when-relationships-are-everything">vis-network: When Relationships Are Everything</h2>
+<p>Some concepts are inherently relational. Consider learning graphs, organizational hierarchies, social networks, or dependency structures. These concepts don't fit neatly into rows and columns; they exist as webs of connections. Enter vis-network, a library designed specifically for visualizing nodes and edges.</p>
+<h3 id="understanding-network-visualization">Understanding Network Visualization</h3>
+<p>A network visualization consists of two fundamental elements:</p>
+<ul>
+<li><strong>Nodes</strong>: The entities (concepts, people, systems, components)</li>
+<li><strong>Edges</strong>: The relationships between entities (dependencies, connections, influences)</li>
+</ul>
+<p>vis-network brings these elements to life with physics-based layouts, smooth animations, and rich interactivity. Nodes can be dragged, clusters can be expanded, and hovering reveals details. It transforms static relationship data into an explorable landscape.</p>
+<h3 id="the-vis-network-architecture-pattern">The vis-network Architecture Pattern</h3>
+<p>When creating a vis-network MicroSim, we follow a standardized layout called "vis-network-tutorial":</p>
+<ul>
+<li><strong>Graph on the left</strong>: The network visualization occupies most of the canvas</li>
+<li><strong>Controls on the right</strong>: Interactive controls and status panels</li>
+<li><strong>Title at top center</strong>: Clear identification</li>
+<li><strong>Legend in upper left</strong>: Color and symbol key</li>
+</ul>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1">// Define nodes with fixed positions for educational clarity</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">nodeData</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span>
+<span class="w">    </span><span class="p">{</span><span class="w"> </span><span class="nx">id</span><span class="o">:</span><span class="w"> </span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="nx">label</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;Learning Objective&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">x</span><span class="o">:</span><span class="w"> </span><span class="o">-</span><span class="mf">300</span><span class="p">,</span><span class="w"> </span><span class="nx">y</span><span class="o">:</span><span class="w"> </span><span class="o">-</span><span class="mf">100</span><span class="w"> </span><span class="p">},</span>
+<span class="w">    </span><span class="p">{</span><span class="w"> </span><span class="nx">id</span><span class="o">:</span><span class="w"> </span><span class="mf">2</span><span class="p">,</span><span class="w"> </span><span class="nx">label</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;Prerequisite 1&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">x</span><span class="o">:</span><span class="w"> </span><span class="o">-</span><span class="mf">450</span><span class="p">,</span><span class="w"> </span><span class="nx">y</span><span class="o">:</span><span class="w"> </span><span class="mf">50</span><span class="w"> </span><span class="p">},</span>
+<span class="w">    </span><span class="p">{</span><span class="w"> </span><span class="nx">id</span><span class="o">:</span><span class="w"> </span><span class="mf">3</span><span class="p">,</span><span class="w"> </span><span class="nx">label</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;Prerequisite 2&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">x</span><span class="o">:</span><span class="w"> </span><span class="o">-</span><span class="mf">150</span><span class="p">,</span><span class="w"> </span><span class="nx">y</span><span class="o">:</span><span class="w"> </span><span class="mf">50</span><span class="w"> </span><span class="p">},</span>
+<span class="w">    </span><span class="p">{</span><span class="w"> </span><span class="nx">id</span><span class="o">:</span><span class="w"> </span><span class="mf">4</span><span class="p">,</span><span class="w"> </span><span class="nx">label</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;Foundation Concept&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">x</span><span class="o">:</span><span class="w"> </span><span class="o">-</span><span class="mf">300</span><span class="p">,</span><span class="w"> </span><span class="nx">y</span><span class="o">:</span><span class="w"> </span><span class="mf">200</span><span class="w"> </span><span class="p">}</span>
+<span class="p">];</span>
+
+<span class="c1">// Define edges (relationships)</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">edgeData</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span>
+<span class="w">    </span><span class="p">{</span><span class="w"> </span><span class="kr">from</span><span class="o">:</span><span class="w"> </span><span class="mf">2</span><span class="p">,</span><span class="w"> </span><span class="nx">to</span><span class="o">:</span><span class="w"> </span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="nx">label</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;enables&#39;</span><span class="w"> </span><span class="p">},</span>
+<span class="w">    </span><span class="p">{</span><span class="w"> </span><span class="kr">from</span><span class="o">:</span><span class="w"> </span><span class="mf">3</span><span class="p">,</span><span class="w"> </span><span class="nx">to</span><span class="o">:</span><span class="w"> </span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="nx">label</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;enables&#39;</span><span class="w"> </span><span class="p">},</span>
+<span class="w">    </span><span class="p">{</span><span class="w"> </span><span class="kr">from</span><span class="o">:</span><span class="w"> </span><span class="mf">4</span><span class="p">,</span><span class="w"> </span><span class="nx">to</span><span class="o">:</span><span class="w"> </span><span class="mf">2</span><span class="w"> </span><span class="p">},</span>
+<span class="w">    </span><span class="p">{</span><span class="w"> </span><span class="kr">from</span><span class="o">:</span><span class="w"> </span><span class="mf">4</span><span class="p">,</span><span class="w"> </span><span class="nx">to</span><span class="o">:</span><span class="w"> </span><span class="mf">3</span><span class="w"> </span><span class="p">}</span>
+<span class="p">];</span>
+
+<span class="c1">// Critical: Disable mouse zoom for iframe embedding!</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">options</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">interaction</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nx">zoomView</span><span class="o">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">        </span><span class="c1">// Prevents scroll hijacking</span>
+<span class="w">        </span><span class="nx">dragView</span><span class="o">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">        </span><span class="c1">// Prevents accidental panning</span>
+<span class="w">        </span><span class="nx">navigationButtons</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="w"> </span><span class="c1">// Provides explicit zoom controls</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="w">    </span><span class="nx">physics</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">enabled</span><span class="o">:</span><span class="w"> </span><span class="kc">false</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="c1">// Use fixed positions for clarity</span>
+<span class="p">};</span>
+</code></pre></div></td></tr></table></div>
+<div class="admonition warning">
+<p class="admonition-title">Always Disable Mouse Zoom in iframes</p>
+<p>When embedding vis-network in a textbook via iframe, you MUST disable <code>zoomView</code> and <code>dragView</code>. Otherwise, users scrolling through your textbook will accidentally zoom the diagram instead of scrolling the page. This is one of the most common usability mistakes in educational visualizations.</p>
+</div>
+<h3 id="when-vis-network-shines">When vis-network Shines</h3>
+<p>vis-network is the perfect choice for:</p>
+<ul>
+<li><strong>Learning graphs</strong>: Showing concept dependencies and prerequisites</li>
+<li><strong>Knowledge maps</strong>: Visualizing how topics interconnect</li>
+<li><strong>Organizational structures</strong>: Beyond simple hierarchies</li>
+<li><strong>System architectures</strong>: Component relationships</li>
+<li><strong>Social networks</strong>: Influence and connection patterns</li>
+<li><strong>Causal diagrams</strong>: Cause-and-effect relationships</li>
+</ul>
+<h4 id="diagram-learning-dependency-network-example">Diagram: Learning Dependency Network Example</h4>
+<details>
+<summary>Learning Dependency Network Example</summary>
+<p>Type: graph-model</p>
+<p>Bloom Taxonomy: Analyze</p>
+<p>Learning Objective: Demonstrate how vis-network can visualize learning dependencies between concepts, showing prerequisites flowing to target learning objectives</p>
+<p>Node types:
+1. Foundation concepts (gray circles)
+   - Example: "Basic Arithmetic"
+2. Prerequisite concepts (light blue rectangles)
+   - Example: "Variables", "Functions"
+3. Target concept (green hexagon)
+   - Example: "Calculus"
+4. Advanced concepts (purple diamonds)
+   - Example: "Differential Equations"</p>
+<p>Edge types:
+1. PREREQUISITE_OF (solid arrows)
+   - Points from prerequisite to dependent concept
+2. EXTENDS (dashed arrows)
+   - Points from concept to advanced application</p>
+<p>Sample data structure:
+- Basic Arithmetic → Variables
+- Basic Arithmetic → Functions
+- Variables → Algebra
+- Functions → Algebra
+- Algebra → Calculus
+- Calculus → Differential Equations</p>
+<p>Layout: Hierarchical with foundation concepts at bottom, target concepts at top</p>
+<p>Interactive features:
+- Click node to highlight all prerequisites
+- Hover to see concept definition
+- Step-through mode to show learning path
+- Legend explaining node types and colors</p>
+<p>Color scheme:
+- Foundation: #e0e0e0 (gray)
+- Prerequisites: #4facfe (blue)
+- Target: #4caf50 (green)
+- Advanced: #9c27b0 (purple)</p>
+<p>Implementation: vis-network JavaScript library with hierarchical layout</p>
+</details>
+<hr />
+<h2 id="timeline-visualization-history-comes-alive">Timeline Visualization: History Comes Alive</h2>
+<p>Time is the fourth dimension, and vis-timeline helps you visualize it beautifully. Whether you're teaching historical events, project phases, or evolutionary processes, timeline visualizations place events in their temporal context, helping learners understand sequence, duration, and causality.</p>
+<h3 id="the-power-of-temporal-context">The Power of Temporal Context</h3>
+<p>Consider teaching the history of computing. You could list events:</p>
+<ul>
+<li>1943: ENIAC development begins</li>
+<li>1969: ARPANET goes live</li>
+<li>1989: Tim Berners-Lee proposes the World Wide Web</li>
+</ul>
+<p>Or you could <em>show</em> them on a timeline, letting learners see the gaps, the clusters of innovation, and the accelerating pace of change. Visual timelines answer questions like "How long between X and Y?" instantly, without calculation.</p>
+<h3 id="vis-timeline-features">vis-timeline Features</h3>
+<p>The vis-timeline library provides:</p>
+<ul>
+<li><strong>Zoom and pan</strong>: Explore different time scales</li>
+<li><strong>Category filtering</strong>: Show/hide event categories</li>
+<li><strong>Hover tooltips</strong>: Additional context without clutter</li>
+<li><strong>Click for details</strong>: Full event descriptions</li>
+<li><strong>Date ranges</strong>: Events with duration, not just points</li>
+</ul>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1">// Timeline data structure</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">events</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="nx">id</span><span class="o">:</span><span class="w"> </span><span class="mf">1</span><span class="p">,</span>
+<span class="w">        </span><span class="nx">content</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;ARPANET Goes Live&#39;</span><span class="p">,</span>
+<span class="w">        </span><span class="nx">start</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;1969-10-29&#39;</span><span class="p">,</span>
+<span class="w">        </span><span class="nx">group</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;networking&#39;</span><span class="p">,</span>
+<span class="w">        </span><span class="nx">title</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;First message sent over ARPANET: &quot;LO&quot; (the system crashed before &quot;LOGIN&quot;)&#39;</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="nx">id</span><span class="o">:</span><span class="w"> </span><span class="mf">2</span><span class="p">,</span>
+<span class="w">        </span><span class="nx">content</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;World Wide Web Proposed&#39;</span><span class="p">,</span>
+<span class="w">        </span><span class="nx">start</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;1989-03-12&#39;</span><span class="p">,</span>
+<span class="w">        </span><span class="nx">group</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;web&#39;</span><span class="p">,</span>
+<span class="w">        </span><span class="nx">title</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;Tim Berners-Lee submits &quot;Information Management: A Proposal&quot;&#39;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">];</span>
+
+<span class="c1">// Timeline options</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">options</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">zoomable</span><span class="o">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">  </span><span class="c1">// Use buttons instead (prevents scroll hijacking)</span>
+<span class="w">    </span><span class="nx">moveable</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">   </span><span class="c1">// Allow click-and-drag panning</span>
+<span class="w">    </span><span class="nx">showCurrentTime</span><span class="o">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">tooltip</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">followMouse</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="w"> </span><span class="p">}</span>
+<span class="p">};</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="timeline-best-practices-for-education">Timeline Best Practices for Education</h3>
+<p>When creating educational timelines:</p>
+<ol>
+<li><strong>Limit categories to 3-6</strong>: Too many colors become confusing</li>
+<li><strong>Provide rich tooltips</strong>: Include "why this matters" context</li>
+<li><strong>Use consistent date formatting</strong>: Choose one style and stick with it</li>
+<li><strong>Add navigation buttons</strong>: Since scroll-zoom is disabled, provide explicit controls</li>
+<li><strong>Include a "Fit All" button</strong>: Let users reset to see the full timeline</li>
+</ol>
+<hr />
+<h2 id="map-visualization-geography-matters">Map Visualization: Geography Matters</h2>
+<p>Some learning objectives are inherently spatial. Migration patterns, global events, regional comparisons, facility layouts: these concepts need maps. Leaflet is the leading open-source JavaScript library for interactive maps, and it integrates beautifully into educational MicroSims.</p>
+<h3 id="leaflet-fundamentals">Leaflet Fundamentals</h3>
+<p>Leaflet provides:</p>
+<ul>
+<li><strong>Multiple tile layers</strong>: Street maps, satellite imagery, terrain</li>
+<li><strong>Markers with popups</strong>: Click for information</li>
+<li><strong>GeoJSON support</strong>: Complex regions and boundaries</li>
+<li><strong>Layer controls</strong>: Toggle different data layers</li>
+<li><strong>Responsive design</strong>: Works on mobile devices</li>
+</ul>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1">// Initialize the map</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">map</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">L</span><span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="s1">&#39;map&#39;</span><span class="p">).</span><span class="nx">setView</span><span class="p">([</span><span class="mf">37.7749</span><span class="p">,</span><span class="w"> </span><span class="o">-</span><span class="mf">122.4194</span><span class="p">],</span><span class="w"> </span><span class="mf">10</span><span class="p">);</span>
+
+<span class="c1">// Add a tile layer (OpenStreetMap)</span>
+<span class="nx">L</span><span class="p">.</span><span class="nx">tileLayer</span><span class="p">(</span><span class="s1">&#39;https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png&#39;</span><span class="p">,</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">attribution</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;© OpenStreetMap contributors&#39;</span>
+<span class="p">}).</span><span class="nx">addTo</span><span class="p">(</span><span class="nx">map</span><span class="p">);</span>
+
+<span class="c1">// Add markers</span>
+<span class="nx">L</span><span class="p">.</span><span class="nx">marker</span><span class="p">([</span><span class="mf">37.7749</span><span class="p">,</span><span class="w"> </span><span class="o">-</span><span class="mf">122.4194</span><span class="p">])</span>
+<span class="w">    </span><span class="p">.</span><span class="nx">bindPopup</span><span class="p">(</span><span class="s1">&#39;&lt;b&gt;San Francisco&lt;/b&gt;&lt;br&gt;The tech capital!&#39;</span><span class="p">)</span>
+<span class="w">    </span><span class="p">.</span><span class="nx">addTo</span><span class="p">(</span><span class="nx">map</span><span class="p">);</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="educational-map-applications">Educational Map Applications</h3>
+<p>Maps are essential for teaching:</p>
+<table>
+<thead>
+<tr>
+<th>Subject Area</th>
+<th>Map Application</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>History</td>
+<td>Battle movements, empire expansions</td>
+</tr>
+<tr>
+<td>Geography</td>
+<td>Climate zones, population density</td>
+</tr>
+<tr>
+<td>Science</td>
+<td>Specimen locations, geological features</td>
+</tr>
+<tr>
+<td>Business</td>
+<td>Market regions, supply chains</td>
+</tr>
+<tr>
+<td>Environmental</td>
+<td>Pollution patterns, conservation areas</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition tip">
+<p class="admonition-title">Always Include Attribution</p>
+<p>When using OpenStreetMap tiles, include proper attribution. It's not just polite; it's required by the license. Plus, acknowledging the work of open-source communities models good academic practice for your learners.</p>
+</div>
+<hr />
+<h2 id="mermaid-diagrams-from-text">Mermaid: Diagrams from Text</h2>
+<p>Sometimes you need a diagram, but you don't need interactivity. You need a flowchart, a state diagram, or an entity-relationship diagram. Mermaid lets you create these from simple text descriptions, making them easy to version control, modify, and maintain.</p>
+<h3 id="the-joy-of-text-based-diagrams">The Joy of Text-Based Diagrams</h3>
+<p>Consider this Mermaid flowchart definition:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span></pre></div></td><td class="code"><div><pre><span></span><code>flowchart TD
+    Start(&quot;Identify Learning Objective&quot;):::startNode
+    Analyze[&quot;Analyze Concept Type&quot;]:::processNode
+    Decision{&quot;Animation Needed?&quot;}:::decisionNode
+    P5[&quot;Use p5.js&quot;]:::libraryNode
+    Static{&quot;Data-Driven?&quot;}:::decisionNode
+    Chart[&quot;Use Chart.js&quot;]:::libraryNode
+    Network{&quot;Relational?&quot;}:::decisionNode
+    VisNet[&quot;Use vis-network&quot;]:::libraryNode
+    Mermaid[&quot;Use Mermaid&quot;]:::libraryNode
+
+    Start --&gt; Analyze --&gt; Decision
+    Decision --&gt;|Yes| P5
+    Decision --&gt;|No| Static
+    Static --&gt;|Yes| Chart
+    Static --&gt;|No| Network
+    Network --&gt;|Yes| VisNet
+    Network --&gt;|No| Mermaid
+</code></pre></div></td></tr></table></div>
+<p>From this simple text, Mermaid generates a professional flowchart. No drag-and-drop required. No pixel-pushing. Just describe the structure, and Mermaid renders it.</p>
+<h3 id="mermaid-diagram-types">Mermaid Diagram Types</h3>
+<p>Mermaid supports multiple diagram types:</p>
+<ul>
+<li><strong>Flowcharts</strong>: Process flows and decision trees</li>
+<li><strong>Sequence diagrams</strong>: Interactions over time</li>
+<li><strong>State diagrams</strong>: State machines and lifecycles</li>
+<li><strong>Entity-relationship diagrams</strong>: Database schemas</li>
+<li><strong>Class diagrams</strong>: Object-oriented structures</li>
+<li><strong>User journey maps</strong>: UX flows</li>
+</ul>
+<h3 id="styling-mermaid-for-education">Styling Mermaid for Education</h3>
+<p>For educational textbooks, we enhance Mermaid diagrams with:</p>
+<ul>
+<li><strong>16-point fonts</strong>: Readable from the back of the classroom</li>
+<li><strong>Colorful backgrounds</strong>: Visual distinction between node types</li>
+<li><strong>Interactive tooltips</strong>: Educational context on hover</li>
+</ul>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>classDef startNode fill:#667eea,stroke:#333,stroke-width:2px,color:#fff,font-size:16px
+classDef processNode fill:#764ba2,stroke:#333,stroke-width:2px,color:#fff,font-size:16px
+classDef decisionNode fill:#f093fb,stroke:#333,stroke-width:2px,color:#333,font-size:16px
+</code></pre></div></td></tr></table></div>
+<h4 id="diagram-microsim-generation-workflow">Diagram: MicroSim Generation Workflow</h4>
+<details>
+<summary>MicroSim Generation Workflow</summary>
+<p>Type: workflow</p>
+<p>Bloom Taxonomy: Apply</p>
+<p>Learning Objective: Show the complete workflow from learning objective to deployed MicroSim, emphasizing the role of Claude Code skills</p>
+<p>Purpose: Illustrate the step-by-step process of generating a MicroSim using AI-assisted tools</p>
+<p>Visual style: Flowchart with swimlanes</p>
+<p>Swimlanes:
+1. Instructional Designer
+2. Claude Code
+3. MicroSim Files</p>
+<p>Steps:
+1. Start: "Define Learning Objective" (Designer)
+   Hover: "What specific concept should students understand?"</p>
+<ol>
+<li>
+<p>Process: "Analyze Concept Type" (Designer)
+   Hover: "Is it animated? Data-driven? Relational? Geographic?"</p>
+</li>
+<li>
+<p>Process: "Select Library Type" (Designer)
+   Hover: "Based on concept type, choose p5.js, Chart.js, vis-network, etc."</p>
+</li>
+<li>
+<p>Process: "Write Specification" (Designer)
+   Hover: "Describe the MicroSim in detail: visual elements, controls, data"</p>
+</li>
+<li>
+<p>Process: "Invoke MicroSim Generator Skill" (Claude Code)
+   Hover: "AI generates code following library-specific patterns"</p>
+</li>
+<li>
+<p>Process: "Generate Files" (MicroSim Files)
+   Hover: "main.html, script.js, style.css, index.md, metadata.json"</p>
+</li>
+<li>
+<p>Decision: "Test in Browser" (Designer)
+   Hover: "Does it work? Does it teach the concept effectively?"</p>
+</li>
+</ol>
+<p>8a. Process: "Iterate with Feedback" (Claude Code) - if issues
+   Hover: "Refine based on testing results"</p>
+<p>8b. Process: "Deploy to Textbook" (MicroSim Files) - if success
+   Hover: "Add to mkdocs.yml navigation, embed via iframe"</p>
+<ol>
+<li>End: "MicroSim Live!" (All)</li>
+</ol>
+<p>Color coding:
+- Designer steps: Blue (#2196f3)
+- Claude Code steps: Purple (#9c27b0)
+- File operations: Green (#4caf50)
+- Decision: Yellow (#ffc107)</p>
+<p>Implementation: Mermaid flowchart with swimlane structure</p>
+</details>
+<hr />
+<h2 id="claude-code-skills-ai-powered-generation">Claude Code Skills: AI-Powered Generation</h2>
+<p>Now we arrive at the magic that ties everything together: Claude Code skills. These are specialized AI capabilities that can generate complete, working MicroSims from natural language descriptions. Instead of writing hundreds of lines of JavaScript yourself, you describe what you want, and the skill produces production-ready code.</p>
+<h3 id="what-are-claude-code-skills">What Are Claude Code Skills?</h3>
+<p>A Claude Code skill is a set of instructions and templates that guide AI-assisted code generation. Each skill knows:</p>
+<ul>
+<li><strong>The target library</strong>: p5.js, Chart.js, vis-network, etc.</li>
+<li><strong>Required file structure</strong>: main.html, script.js, style.css, etc.</li>
+<li><strong>Best practices</strong>: Responsive design, accessibility, educational patterns</li>
+<li><strong>Common pitfalls</strong>: What to avoid and how to fix issues</li>
+</ul>
+<h3 id="the-microsim-generator-ecosystem">The MicroSim Generator Ecosystem</h3>
+<p>The microsim-generator skill is actually a <em>router</em> that directs requests to specialized sub-skills:</p>
+<table>
+<thead>
+<tr>
+<th>Sub-Skill</th>
+<th>Library</th>
+<th>Primary Use</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>microsim-p5</td>
+<td>p5.js</td>
+<td>Animations, physics simulations</td>
+</tr>
+<tr>
+<td>chartjs-generator</td>
+<td>Chart.js</td>
+<td>Standard data charts</td>
+</tr>
+<tr>
+<td>math-function-plotter-plotly</td>
+<td>Plotly.js</td>
+<td>Mathematical function plots</td>
+</tr>
+<tr>
+<td>vis-network</td>
+<td>vis-network</td>
+<td>Relationship graphs</td>
+</tr>
+<tr>
+<td>timeline-generator</td>
+<td>vis-timeline</td>
+<td>Chronological events</td>
+</tr>
+<tr>
+<td>map-generator</td>
+<td>Leaflet</td>
+<td>Geographic visualizations</td>
+</tr>
+<tr>
+<td>mermaid-generator</td>
+<td>Mermaid</td>
+<td>Flowcharts and diagrams</td>
+</tr>
+</tbody>
+</table>
+<h3 id="how-skills-match-to-requests">How Skills Match to Requests</h3>
+<p>When you invoke the MicroSim generator, it analyzes your request for trigger words and data characteristics:</p>
+<ul>
+<li>"bouncing ball simulation" → microsim-p5 (animation, physics)</li>
+<li>"bar chart comparing sales" → chartjs-generator (categorical data)</li>
+<li>"plot sine function" → math-function-plotter-plotly (mathematical function)</li>
+<li>"show concept dependencies" → vis-network (nodes and edges)</li>
+<li>"timeline of historical events" → timeline-generator (dates)</li>
+<li>"map of university locations" → map-generator (coordinates)</li>
+<li>"flowchart of the process" → mermaid-generator (workflow)</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Routing Criteria</p>
+<p>The MicroSim generator uses a scoring system (0-100) to match requests to skills. A score of 90-100 means perfect match; 70-89 is strong match; 50-69 is moderate. The generator selects the highest-scoring skill for your request.</p>
+</div>
+<hr />
+<h2 id="template-libraries-standing-on-shoulders">Template Libraries: Standing on Shoulders</h2>
+<p>Every MicroSim follows a standard file structure that makes maintenance, modification, and sharing straightforward. This modularity is not just good engineering; it's pedagogically sound. When learners (or other instructors) want to modify a MicroSim, they know exactly where to look.</p>
+<h3 id="the-standard-microsim-structure">The Standard MicroSim Structure</h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code>docs/sims/[microsim-name]/
+├── index.md          # Documentation with iframe embed
+├── main.html         # HTML container with library CDN links
+├── script.js         # All visualization logic
+├── style.css         # Responsive styling
+├── data.json         # Data separated from code (optional)
+└── metadata.json     # Dublin Core metadata
+</code></pre></div></td></tr></table></div>
+<p>This separation provides several benefits:</p>
+<ul>
+<li><strong>Data independence</strong>: Update data without touching code</li>
+<li><strong>Style customization</strong>: Change appearance without logic changes</li>
+<li><strong>Documentation co-location</strong>: Explanation lives with the code</li>
+<li><strong>Metadata for search</strong>: Faceted search engines can find MicroSims</li>
+<li><strong>Version control friendly</strong>: Each file has a clear purpose</li>
+</ul>
+<h3 id="template-components">Template Components</h3>
+<p>Each template type includes:</p>
+<ol>
+<li><strong>HTML boilerplate</strong>: Proper meta tags, CDN links, semantic structure</li>
+<li><strong>CSS defaults</strong>: aliceblue background, responsive breakpoints, iframe-friendly margins</li>
+<li><strong>JavaScript patterns</strong>: Standard initialization, event handling, responsive updates</li>
+<li><strong>Documentation structure</strong>: Consistent sections for overview, features, customization</li>
+</ol>
+<h3 id="url-parameters-for-extended-functionality">URL Parameters for Extended Functionality</h3>
+<p>MicroSims can accept URL parameters for special modes:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="cm">&lt;!-- Normal mode --&gt;</span>
+<span class="p">&lt;</span><span class="nt">iframe</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;main.html&quot;</span> <span class="na">height</span><span class="o">=</span><span class="s">&quot;500&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">iframe</span><span class="p">&gt;</span>
+
+<span class="cm">&lt;!-- Quiz mode: Enable assessment features --&gt;</span>
+<span class="p">&lt;</span><span class="nt">iframe</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;main.html?quiz-mode=true&quot;</span> <span class="na">height</span><span class="o">=</span><span class="s">&quot;500&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">iframe</span><span class="p">&gt;</span>
+
+<span class="cm">&lt;!-- Editor mode: Allow dragging nodes to new positions --&gt;</span>
+<span class="p">&lt;</span><span class="nt">iframe</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;main.html?editor-mode=true&quot;</span> <span class="na">height</span><span class="o">=</span><span class="s">&quot;500&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">iframe</span><span class="p">&gt;</span>
+</code></pre></div></td></tr></table></div>
+<p>These parameters enable the same MicroSim to serve multiple purposes without code duplication.</p>
+<hr />
+<h2 id="code-generation-from-specification-to-working-microsim">Code Generation: From Specification to Working MicroSim</h2>
+<p>The final piece of our puzzle is understanding how specifications become working code. This is where the rubber meets the road, where learning objectives transform into interactive experiences.</p>
+<h3 id="the-specification-to-code-pipeline">The Specification-to-Code Pipeline</h3>
+<p>The code generation process follows these steps:</p>
+<ol>
+<li><strong>Specification writing</strong>: Describe the MicroSim in detail</li>
+<li><strong>Skill invocation</strong>: Call the appropriate generator skill</li>
+<li><strong>Template selection</strong>: Match request to templates</li>
+<li><strong>Placeholder replacement</strong>: Fill in specific values</li>
+<li><strong>Code generation</strong>: Produce all required files</li>
+<li><strong>Validation</strong>: Test and iterate</li>
+</ol>
+<h3 id="what-makes-a-good-specification">What Makes a Good Specification?</h3>
+<p>A specification should include:</p>
+<ul>
+<li><strong>Learning objective</strong>: What concept will learners understand?</li>
+<li><strong>Visual elements</strong>: What should appear on screen?</li>
+<li><strong>Interactive controls</strong>: Sliders, buttons, checkboxes?</li>
+<li><strong>Default values</strong>: Initial state of all parameters</li>
+<li><strong>Behavior description</strong>: What happens when users interact?</li>
+<li><strong>Edge cases</strong>: What should happen at extreme values?</li>
+</ul>
+<h4 id="diagram-specification-quality-checklist">Diagram: Specification Quality Checklist</h4>
+<details>
+<summary>Specification Quality Checklist</summary>
+<p>Type: infographic</p>
+<p>Bloom Taxonomy: Evaluate</p>
+<p>Learning Objective: Help learners evaluate the completeness and quality of their MicroSim specifications before generation</p>
+<p>Layout: Checklist-style infographic with categories</p>
+<p>Categories with checkboxes:</p>
+<p><strong>Educational Foundation</strong>
+- [ ] Learning objective clearly stated
+- [ ] Bloom's taxonomy level identified
+- [ ] Target audience specified
+- [ ] Prerequisites noted</p>
+<p><strong>Visual Design</strong>
+- [ ] All visual elements described
+- [ ] Colors specified (or defaults accepted)
+- [ ] Layout structure defined
+- [ ] Responsive behavior noted</p>
+<p><strong>Interactivity</strong>
+- [ ] All controls listed
+- [ ] Control ranges and defaults specified
+- [ ] User actions and responses described
+- [ ] Edge case behavior defined</p>
+<p><strong>Technical Details</strong>
+- [ ] Library type identified
+- [ ] Data structure described
+- [ ] File naming convention followed
+- [ ] Integration method specified</p>
+<p>Visual style: Clean checklist with green checkmarks, organized in expandable sections</p>
+<p>Implementation: HTML/CSS interactive checklist or static infographic</p>
+</details>
+<h3 id="iterative-refinement">Iterative Refinement</h3>
+<p>Code generation is rarely one-and-done. The typical workflow is:</p>
+<ol>
+<li><strong>Generate</strong> initial version from specification</li>
+<li><strong>Test</strong> in browser (both standalone and in iframe)</li>
+<li><strong>Identify</strong> issues or improvements needed</li>
+<li><strong>Refine</strong> specification or request changes</li>
+<li><strong>Regenerate</strong> or modify existing code</li>
+<li><strong>Repeat</strong> until satisfied</li>
+</ol>
+<p>This iterative approach mirrors the broader instructional design process. Just as learning objectives are refined through testing with actual learners, MicroSim specifications are refined through testing with actual browsers.</p>
+<div class="admonition tip">
+<p class="admonition-title">Future Enhancement: xAPI Integration</p>
+<p>While not covered in this chapter, MicroSims can be extended with xAPI (Experience API) protocols to track learner interactions. Every slider movement, button click, and visualization state can be logged to a Learning Record Store (LRS) for analytics. This capability will be explored in a later chapter on learning analytics.</p>
+</div>
+<hr />
+<h2 id="putting-it-all-together-the-library-selection-matrix">Putting It All Together: The Library Selection Matrix</h2>
+<p>After exploring all these libraries, you might feel like a kid in a candy store, unsure which treat to pick first. Here's a comprehensive matrix to guide your selection:</p>
+<table>
+<thead>
+<tr>
+<th>If Your Concept...</th>
+<th>Use This Library</th>
+<th>Key Strength</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Involves motion, physics, or custom animation</td>
+<td>p5.js</td>
+<td>Complete flexibility</td>
+</tr>
+<tr>
+<td>Compares categories with standard charts</td>
+<td>Chart.js</td>
+<td>Quick, professional results</td>
+</tr>
+<tr>
+<td>Plots mathematical functions</td>
+<td>Plotly</td>
+<td>Scientific precision</td>
+</tr>
+<tr>
+<td>Shows relationships between entities</td>
+<td>vis-network</td>
+<td>Interactive exploration</td>
+</tr>
+<tr>
+<td>Displays events over time</td>
+<td>vis-timeline</td>
+<td>Temporal navigation</td>
+</tr>
+<tr>
+<td>Involves geographic locations</td>
+<td>Leaflet</td>
+<td>Real-world mapping</td>
+</tr>
+<tr>
+<td>Describes processes or workflows</td>
+<td>Mermaid</td>
+<td>Text-based simplicity</td>
+</tr>
+</tbody>
+</table>
+<h3 id="the-decision-framework">The Decision Framework</h3>
+<p>When selecting a library, ask these questions in order:</p>
+<ol>
+<li><strong>Is animation or physics essential?</strong> → p5.js</li>
+<li><strong>Is it primarily data/statistics?</strong> → Chart.js or Plotly</li>
+<li><strong>Are there relationships/connections?</strong> → vis-network</li>
+<li><strong>Is time the organizing principle?</strong> → vis-timeline</li>
+<li><strong>Is geography involved?</strong> → Leaflet</li>
+<li><strong>Is it a process or workflow?</strong> → Mermaid</li>
+</ol>
+<p>If you're still unsure, remember that p5.js can do almost anything (at the cost of more development time), while specialized libraries offer faster development for their specific domains.</p>
+<hr />
+<h2 id="key-takeaways">Key Takeaways</h2>
+<p>As we close this chapter, let's crystallize the essential knowledge:</p>
+<ol>
+<li>
+<p><strong>p5.js is your creative powerhouse</strong>: When you need custom animations, physics simulations, or complete control, p5.js delivers. Just remember to call <code>updateCanvasSize()</code> first!</p>
+</li>
+<li>
+<p><strong>Chart.js handles standard visualizations beautifully</strong>: Bar, line, pie, radar, scatter; if it's a standard chart type, Chart.js is your fastest path to professional results.</p>
+</li>
+<li>
+<p><strong>Plotly excels at mathematical functions</strong>: When $f(x)$ needs visualization with precise coordinates and sliders, Plotly is the scientific choice.</p>
+</li>
+<li>
+<p><strong>vis-network makes relationships visible</strong>: Nodes, edges, and the connections between concepts come alive with interactive graph visualization.</p>
+</li>
+<li>
+<p><strong>vis-timeline puts events in context</strong>: Chronological data deserves chronological visualization; vis-timeline delivers with zoom, pan, and filtering.</p>
+</li>
+<li>
+<p><strong>Leaflet brings maps to education</strong>: Geographic concepts need geographic visualization; Leaflet provides the foundation.</p>
+</li>
+<li>
+<p><strong>Mermaid creates diagrams from text</strong>: When you need flowcharts or diagrams without interactivity overhead, Mermaid's text-based approach is unbeatable.</p>
+</li>
+<li>
+<p><strong>Claude Code skills accelerate development</strong>: AI-assisted generation transforms specifications into working code, dramatically reducing development time.</p>
+</li>
+<li>
+<p><strong>Modularity matters</strong>: Separate files for HTML, JavaScript, CSS, and data make MicroSims maintainable, modifiable, and shareable.</p>
+</li>
+<li>
+<p><strong>Iteration is expected</strong>: Code generation is the beginning, not the end. Test, refine, and iterate to perfection.</p>
+</li>
+</ol>
+<p>The world becomes a better place when educators can focus on pedagogy while AI handles the implementation details. With these tools in your belt, you're equipped to transform any learning objective into an interactive, engaging MicroSim. Now go forth and visualize!</p>
+<hr />
+<h2 id="references">References</h2>
+<ul>
+<li><a href="https://p5js.org/reference/">p5.js Documentation</a></li>
+<li><a href="https://www.chartjs.org/docs/">Chart.js Documentation</a></li>
+<li><a href="https://plotly.com/javascript/">Plotly.js Documentation</a></li>
+<li><a href="https://visjs.github.io/vis-network/docs/network/">vis-network Documentation</a></li>
+<li><a href="https://visjs.github.io/vis-timeline/docs/timeline/">vis-timeline Documentation</a></li>
+<li><a href="https://leafletjs.com/reference.html">Leaflet Documentation</a></li>
+<li><a href="https://mermaid.js.org/">Mermaid Documentation</a></li>
+</ul>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../03-microsim-pattern-library/" class="md-footer__link md-footer__link--prev" aria-label="Previous: The MicroSim Pattern Library">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                The MicroSim Pattern Library
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../05-writing-microsim-specifications/" class="md-footer__link md-footer__link--next" aria-label="Next: Writing Effective MicroSim Specifications">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Writing Effective MicroSim Specifications
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2025 Dan McCreary. Licensed under <a href="license/">CC BY-NC-SA 4.0</a> for non-commercial use.
+    </div>
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.copy", "navigation.expand", "navigation.path", "navigation.prune", "navigation.indexes", "toc.follow", "navigation.top", "navigation.footer", "content.action.edit"], "search": "../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.83f73b43.min.js"></script>
+      
+        <script src="../../js/extra.js"></script>
+      
+    
+  </body>
+</html>
