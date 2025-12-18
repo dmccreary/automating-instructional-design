@@ -98,3 +98,20 @@ Run the chapter-content-generator skill on @docs/chapters/07-cognitive-load-visu
 The writing level is college students or business professionals.
 Make the tone fun, and optimistic with a holistic view that knowing how to automate instructional design will make the world a better place.  Feel free to add puns and jokes to lighten the tone.
 Do not put leading spaces in the <details> text.
+
+# Chapter 8
+
+Run the chapter-content-generator skill on @docs/chapters/08-anticipating-misconceptions/index.md
+The writing level is college students or business professionals.
+Make the tone fun, and optimistic with a holistic view that knowing how to automate instructional design will make the world a better place.  Feel free to add puns and jokes to lighten the tone.
+Do not put leading spaces in the <details> text.
+
+# Chapter 9
+Run the chapter-content-generator skill on @docs/chapters/09-generating-microsims-ai-tools/index.md
+The writing level is college students or business professionals.
+Make the tone fun, and optimistic with a holistic view that knowing how to automate instructional design will make the world a better place.  Feel free to add puns and jokes to lighten the tone.
+Do not put leading spaces in the <details> text.
+
+Put a special emphasis on the the use of Claude Code Skill as the strategies that Claude Code Skills use for intelligently putting the right content into the context window.  Describe how Claude limits users to 30 skills and only puts a short 100-token summary of skills into a context window.  Go into depth about creating rules that make your MicroSims consistent across an entire textbook or group of textbooks.  Describe strategies for putting rules in global enterprise rule repositories, business unit repositories, department repositories, project repositories and personal project rules.  Describe how conflicting rules can be resolved similar to the way that the "!important" rule in CSS can be resolved. Discuss the pros and cons of having many hierarchies of rules compared to one or two repositories of rules.
+
+# Chapter 10
