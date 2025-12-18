@@ -28,6 +28,14 @@ This chapter covers the following 20 concepts from the learning graph:
 18. Completion Criteria
 19. Change Log
 20. Design Rationale
+21. Google Analytics
+22. Simulation Tracking
+23. xAPI
+24. Tracking Who-What-When
+25. Learning Record Store
+26. xAPI events to a LRS
+27. IEEE Learning Standards
+28. Total Learning Architecture
 
 ## Prerequisites
 

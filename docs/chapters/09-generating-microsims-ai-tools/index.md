@@ -1500,4 +1500,8 @@ For those wanting to dive deeper into AI-assisted development:
 ??? question "Test Your Understanding: Refinement vs. Regeneration"
     You've generated a MicroSim and found three issues: (1) a single wrong default value, (2) the entire animation approach is too slow and needs a different implementation, and (3) a typo in a label. How would you handle each issue?
 
-    **Answer**: (1) **Manual fix** - changing one value is faster than explaining it. (2) **Regeneration or major refinement prompt** - a fundamental approach change needs AI help. (3) **Manual fix** - typos are trivial to fix directly. The optimal approach is hybrid: manually fix the value and typo, then submit a refinement prompt focused solely on the animation approach.
+    **Answer**:
+
+    1. **Manual fix** - changing one value is faster than explaining it. 
+    2. **Regeneration or major refinement prompt** - a fundamental approach change needs AI help. 
+    3. **Manual fix** - typos are trivial to fix directly. The optimal approach is hybrid: manually fix the value and typo, then submit a refinement prompt focused solely on the animation approach.

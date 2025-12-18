@@ -9,6 +9,7 @@ edit_uri: 'blob/master/docs'
 
 nav:
   - Home: index.md
+  - About This Course: about.md
   - Course Description: course-description.md
   - Chapters:
     - Overview: chapters/index.md

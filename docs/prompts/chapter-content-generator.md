@@ -115,3 +115,24 @@ Do not put leading spaces in the <details> text.
 Put a special emphasis on the the use of Claude Code Skill as the strategies that Claude Code Skills use for intelligently putting the right content into the context window.  Describe how Claude limits users to 30 skills and only puts a short 100-token summary of skills into a context window.  Go into depth about creating rules that make your MicroSims consistent across an entire textbook or group of textbooks.  Describe strategies for putting rules in global enterprise rule repositories, business unit repositories, department repositories, project repositories and personal project rules.  Describe how conflicting rules can be resolved similar to the way that the "!important" rule in CSS can be resolved. Discuss the pros and cons of having many hierarchies of rules compared to one or two repositories of rules.
 
 # Chapter 10
+
+Run the chapter-content-generator skill on @docs/chapters/10-quality-evaluation-frameworks/index.md
+The writing level is college students or business professionals.
+Make the tone fun, and optimistic with a holistic view that knowing how to automate instructional design will make the world a better place.  Feel free to add puns and jokes to lighten the tone.
+Do not put leading spaces in the <details> text.
+
+Put a focus on creating a completeness quality score rubric so that LLMs can check of
+all the required components for a MicroSim are in place.  Note that a completeness
+quality score does not cover the usability of the MicroSim.
+
+Go through the standardization process step-by-step: /Users/danmccreary/Documents/ws/claude-skills/skills/microsim-utils/references/standarization.md and not how the completeness score is calculated.  Not that some MicroSims such as those written in p5.js have an additional metric such as is the link for "Edit in the p5.js Editor" present in the index.md file.  Other MicroSim types do
+not have this metric.
+
+For the section on the metadata, use the MicroSim JSON Schema here: 
+/Users/danmccreary/Documents/ws/microsims/src/microsim-schema/microsim-schema.json
+Note that every microsim directory should contain a metadata.json file.
+There is a VERY important quote: "You can't reuse what you can't find."  If all microsims have detailed
+metadata.json file then search tools like https://dmccreary.github.io/search-microsims/ can quickly narrow down a database of MicroSims by a facet such as subject, grade-level or JavaScript library.  AI agents in the future will be able to find similar MicroSims and use these as the basis for new designs.
+Note that most generative AI systems are very precise at following the rules within an JSON Schema.
+Discuss the idea of having a quality score for each metadata.json file, including how popular a MicroSim is and if studies have shown it is effective at helping students learn.
+
