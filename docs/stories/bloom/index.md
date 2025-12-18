@@ -61,6 +61,7 @@ The taxonomy spread like wildfire through education systems worldwide. Textbook 
 
 ## Panel 6: Cracks in the Pyramid
 
+![](./panel-06.png)
 <details>
 Panel 6: Create a wide-landscape (16:9) illustration in a classic graphic-novel style with hand-inked linework, subtle cross-hatching, and a warm mid-20th-century academic tone. Use a muted sepia and chalkboard-green color palette with soft amber lighting and strong light-and-shadow contrast. Maintain consistent character design for Benjamin Bloom: a slender, clean-shaven man now in his 70s with thinning dark hair combed back, round wire-rim glasses, and conservative 1970s academic attire, expressing quiet intelligence and determination. The visual language should emphasize ideas becoming structure through recurring symbols—tangled lines for confusion, ladders and pyramids for insight, and grids for clarity—rendered as chalk drawings, notes, or overlays within the environment. Avoid photorealism, modern fonts, or bright colors; keep the composition cinematic, grounded, and intellectually heroic, ensuring the scene feels part of a cohesive narrative about the organization of human learning.
 
@@ -71,6 +72,7 @@ By the 1990s, the educational landscape had transformed beyond recognition. Comp
 
 ## Panel 7: Rewriting the Language of Learning
 
+![](./panel-07.png)
 <details>
 Panel 7: Create a wide-landscape (16:9) illustration in a classic graphic-novel style with hand-inked linework, subtle cross-hatching, and a warm mid-20th-century academic tone. Use a muted sepia and chalkboard-green color palette with soft amber lighting and strong light-and-shadow contrast. The visual language should emphasize ideas becoming structure through recurring symbols—tangled lines for confusion, ladders and pyramids for insight, and grids for clarity—rendered as chalk drawings, notes, or overlays within the environment. Avoid photorealism, modern fonts, or bright colors; keep the composition cinematic, grounded, and intellectually heroic, ensuring the scene feels part of a cohesive narrative about the organization of human learning.
 
@@ -83,6 +85,7 @@ David Krathwohl, who had worked alongside Bloom since the very beginning, took u
 
 ## Panel 8: A Living Taxonomy
 
+![](./panel-08.png)
 <details>
 Panel 8: Create a wide-landscape (16:9) illustration in a classic graphic-novel style with hand-inked linework, subtle cross-hatching, and a warm mid-20th-century academic tone. Use a muted sepia and chalkboard-green color palette with soft amber lighting and strong light-and-shadow contrast. The visual language should emphasize ideas becoming structure through recurring symbols—tangled lines for confusion, ladders and pyramids for insight, and grids for clarity—rendered as chalk drawings, notes, or overlays within the environment. Avoid photorealism, modern fonts, or bright colors; keep the composition cinematic, grounded, and intellectually heroic, ensuring the scene feels part of a cohesive narrative about the organization of human learning.
 
@@ -93,6 +96,7 @@ The Revised Bloom's Taxonomy, published in 2001, wasn't just an update—it was 
 
 ## Panel 9: Bridging Minds and Machines
 
+![](./panel-09.png)
 <details>
 Panel 9: Create a wide-landscape (16:9) illustration in a classic graphic-novel style with hand-inked linework, subtle cross-hatching, and a warm mid-20th-century academic tone. Use a muted sepia and chalkboard-green color palette with soft amber lighting and strong light-and-shadow contrast. The visual language should emphasize ideas becoming structure through recurring symbols—tangled lines for confusion, ladders and pyramids for insight, and grids for clarity—rendered as chalk drawings, notes, or overlays within the environment. Avoid photorealism, modern fonts, or bright colors; keep the composition cinematic, grounded, and intellectually heroic, ensuring the scene feels part of a cohesive narrative about the organization of human learning.
 
@@ -103,6 +107,7 @@ As computers grew more powerful, something remarkable happened: Bloom's taxonomy
 
 ## Panel 10: Learning at Scale
 
+![](./panel-10.png)
 <details>
 Panel 10: Create a wide-landscape (16:9) illustration in a classic graphic-novel style with hand-inked linework, subtle cross-hatching, and a brighter modern academic tone. Use a warm color palette with soft amber lighting and strong light-and-shadow contrast. The visual language should emphasize ideas becoming structure through recurring symbols—tangled lines for confusion, ladders and pyramids for insight, and grids for clarity—rendered as modern graphics drawings, notes, or overlays within the environment. Avoid photorealism, and user modern fonts, and brighter colors; keep the composition cinematic, grounded, and intellectually heroic, ensuring the scene feels part of a cohesive narrative about the organization of human learning.
 
@@ -113,6 +118,7 @@ Today, artificial intelligence systems can generate entire curricula aligned to 
 
 ## Panel 11: The Invisible Infrastructure
 
+![](./panel-11.png)
 <details>
 Panel 11: Create a wide-landscape (16:9) illustration in a classic graphic-novel style with hand-inked linework, subtle cross-hatching, and a brighter modern academic tone. Use a warm color palette with soft amber lighting and strong light-and-shadow contrast. The visual language should emphasize ideas becoming structure through recurring symbols—tangled lines for confusion, ladders and pyramids for insight, and grids for clarity—rendered as modern graphics drawings, notes, or overlays within the environment. Avoid photorealism, and user modern fonts, and brighter colors; keep the composition cinematic, grounded, and intellectually heroic, ensuring the scene feels part of a cohesive narrative about the organization of human learning.
 
@@ -123,8 +129,8 @@ Most learners today have never heard of Benjamin Bloom, yet his ideas shape thei
 
 ## Panel 12: A Legacy That Creates
 
+![](./panel-12.png)
 <details>
-
 Panel 12: Create a wide-landscape (16:9) illustration in a classic graphic-novel style with hand-inked linework, subtle cross-hatching, and a warm mid-20th-century academic tone. Use a muted sepia and chalkboard-green color palette with soft amber lighting and strong light-and-shadow contrast. Maintain consistent character design for Benjamin Bloom: a slender, clean-shaven man in his 40s with thinning dark hair combed back, round wire-rim glasses, and conservative 1940s academic attire, expressing quiet intelligence and determination. The visual language should emphasize ideas becoming structure through recurring symbols—tangled lines for confusion, ladders and pyramids for insight, and grids for clarity—rendered as chalk drawings, notes, or overlays within the environment. Avoid photorealism, modern fonts, or bright colors; keep the composition cinematic, grounded, and intellectually heroic, ensuring the scene feels part of a cohesive narrative about the organization of human learning.
 
 Final reflective panel. Bloom's original handwritten notes rest in a museum-like archive, while holographic versions of the taxonomy project into the air nearby. A closing visual metaphor shows a learner at the top of the structure, creating something new, while an AI assistant quietly supports them. The legacy is clear: a human-centered theory that continues to guide both educators and intelligent machines.

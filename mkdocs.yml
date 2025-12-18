@@ -24,6 +24,11 @@ nav:
     - Quality Evaluation Frameworks: chapters/10-quality-evaluation-frameworks/index.md
     - User Testing and Iteration: chapters/11-user-testing-iteration/index.md
     - Accessibility, Deployment, and Course Completion: chapters/12-accessibility-deployment-completion/index.md
+  
+  - Stories:
+    - List of Stories: stories/index.md
+    - Bloom's Taxonomy: stories/bloom/index.md
+
   - Learning Graph:
     - Introduction: learning-graph/index.md
     - Course Description Assessment: learning-graph/course-description-assessment.md
@@ -31,6 +36,7 @@ nav:
     - Graph Quality Analysis: learning-graph/quality-metrics.md
     - Concept Taxonomy: learning-graph/concept-taxonomy.md
     - Taxonomy Distribution Report: learning-graph/taxonomy-distribution.md
+  
   - MicroSims:
     - Graph Viewer: sims/graph-viewer/index.md
   - Checklist: checklist.md
