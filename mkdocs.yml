@@ -39,6 +39,7 @@ nav:
   
   - MicroSims:
     - Graph Viewer: sims/graph-viewer/index.md
+    - Bloom's Taxonomy: sims/bloom-taxonomy/index.md
   - Checklist: checklist.md
   - Glossary: glossary.md
   - How We Built This Site: how-we-built-this-site.md
