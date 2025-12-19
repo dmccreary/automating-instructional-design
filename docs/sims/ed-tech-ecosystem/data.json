@@ -1,0 +1,327 @@
+{
+  "metadata": {
+    "title": "Educational Technology Ecosystem",
+    "description": "Interactive network diagram showing ed-tech components in concentric rings",
+    "lastUpdated": "2025-12-19",
+    "version": "1.0"
+  },
+  "colors": {
+    "learner": {
+      "background": "#FF8C00",
+      "border": "#CC7000",
+      "font": "#FFFFFF"
+    },
+    "inner": {
+      "background": "#3498DB",
+      "border": "#2980B9",
+      "font": "#FFFFFF"
+    },
+    "middle": {
+      "background": "#27AE60",
+      "border": "#1E8449",
+      "font": "#FFFFFF"
+    },
+    "outer": {
+      "background": "#7F8C8D",
+      "border": "#5D6D7E",
+      "font": "#FFFFFF"
+    }
+  },
+  "nodes": [
+    {
+      "id": "learner",
+      "label": "Learner",
+      "ring": "center",
+      "x": 5,
+      "y": -8,
+      "description": "The learner is at the center of all educational technology. Every tool, platform, and service exists to support and enhance the learning experience.",
+      "examples": [
+        "Students",
+        "Professionals",
+        "Lifelong learners",
+        "Self-directed learners"
+      ]
+    },
+    {
+      "id": "microsims",
+      "label": "MicroSims",
+      "ring": "inner",
+      "x": 9,
+      "y": -174,
+      "description": "Interactive simulations that allow learners to explore concepts through hands-on experimentation. They transform abstract ideas into visual, manipulable experiences.",
+      "examples": [
+        "p5.js simulations",
+        "PhET Interactive Simulations",
+        "Desmos activities",
+        "GeoGebra applets"
+      ]
+    },
+    {
+      "id": "video",
+      "label": "Video Content",
+      "ring": "inner",
+      "x": 168,
+      "y": -9,
+      "description": "Pre-recorded or live video materials that deliver instructional content visually. Effective for demonstrations, lectures, and storytelling.",
+      "examples": [
+        "Khan Academy videos",
+        "YouTube tutorials",
+        "Coursera lectures",
+        "TED-Ed animations"
+      ]
+    },
+    {
+      "id": "reading",
+      "label": "Reading Materials",
+      "ring": "inner",
+      "x": -5,
+      "y": 139,
+      "description": "Text-based educational resources including textbooks, articles, and documentation. Foundation for deep, reflective learning.",
+      "examples": [
+        "Digital textbooks",
+        "MkDocs sites",
+        "Wikipedia articles",
+        "Research papers"
+      ]
+    },
+    {
+      "id": "practice",
+      "label": "Practice Exercises",
+      "ring": "inner",
+      "x": -230,
+      "y": -24,
+      "description": "Activities that allow learners to apply knowledge and receive feedback. Essential for skill development and knowledge retention.",
+      "examples": [
+        "Quizzes",
+        "Coding challenges",
+        "Problem sets",
+        "Flashcards (Anki)"
+      ]
+    },
+    {
+      "id": "lms",
+      "label": "LMS",
+      "ring": "middle",
+      "x": -177,
+      "y": -177,
+      "description": "Learning Management Systems organize courses, track progress, and manage educational content. The central hub for structured learning.",
+      "examples": [
+        "Canvas",
+        "Moodle",
+        "Blackboard",
+        "Google Classroom"
+      ]
+    },
+    {
+      "id": "assessment",
+      "label": "Assessment Tools",
+      "ring": "middle",
+      "x": 177,
+      "y": -177,
+      "description": "Tools for evaluating learner understanding through tests, projects, and portfolios. Provide data on learning outcomes.",
+      "examples": [
+        "Gradescope",
+        "Kahoot!",
+        "Turnitin",
+        "Formative"
+      ]
+    },
+    {
+      "id": "communication",
+      "label": "Communication\nPlatforms",
+      "ring": "middle",
+      "x": 141,
+      "y": 228,
+      "description": "Enable interaction between learners, instructors, and peers. Support collaboration, questions, and community building.",
+      "examples": [
+        "Slack",
+        "Discord",
+        "Zoom",
+        "Microsoft Teams"
+      ]
+    },
+    {
+      "id": "authoring",
+      "label": "Content\nAuthoring Tools",
+      "ring": "middle",
+      "x": -191,
+      "y": 196,
+      "description": "Software for creating educational content including courses, videos, and interactive materials.",
+      "examples": [
+        "Articulate 360",
+        "Adobe Captivate",
+        "H5P",
+        "Canva"
+      ]
+    },
+    {
+      "id": "cloud",
+      "label": "Cloud Services",
+      "ring": "outer",
+      "x": -22,
+      "y": -319,
+      "description": "Scalable computing infrastructure that hosts and delivers educational content and services globally.",
+      "examples": [
+        "AWS",
+        "Google Cloud",
+        "Azure",
+        "Vercel"
+      ]
+    },
+    {
+      "id": "analytics",
+      "label": "Analytics\nPlatforms",
+      "ring": "outer",
+      "x": 282,
+      "y": -76,
+      "description": "Systems that collect and analyze learning data to improve educational outcomes and personalize experiences.",
+      "examples": [
+        "Google Analytics",
+        "Learning Analytics tools",
+        "xAPI/Tin Can",
+        "Tableau"
+      ]
+    },
+    {
+      "id": "ai",
+      "label": "AI/ML\nServices",
+      "ring": "outer",
+      "x": -25,
+      "y": 294,
+      "description": "Artificial intelligence and machine learning services that power adaptive learning, content generation, and intelligent tutoring.",
+      "examples": [
+        "Claude",
+        "OpenAI GPT",
+        "Anthropic API",
+        "TensorFlow"
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "from": "microsims",
+      "to": "learner",
+      "label": "explores"
+    },
+    {
+      "from": "video",
+      "to": "learner",
+      "label": "watches"
+    },
+    {
+      "from": "reading",
+      "to": "learner",
+      "label": "studies"
+    },
+    {
+      "from": "practice",
+      "to": "learner",
+      "label": "practices"
+    },
+    {
+      "from": "lms",
+      "to": "microsims",
+      "label": "delivers"
+    },
+    {
+      "from": "lms",
+      "to": "video",
+      "label": "organizes"
+    },
+    {
+      "from": "lms",
+      "to": "reading",
+      "label": "hosts"
+    },
+    {
+      "from": "lms",
+      "to": "practice",
+      "label": "assigns"
+    },
+    {
+      "from": "assessment",
+      "to": "practice",
+      "label": "evaluates"
+    },
+    {
+      "from": "assessment",
+      "to": "microsims",
+      "label": "measures"
+    },
+    {
+      "from": "communication",
+      "to": "video",
+      "label": "enables live"
+    },
+    {
+      "from": "communication",
+      "to": "practice",
+      "label": "supports"
+    },
+    {
+      "from": "authoring",
+      "to": "microsims",
+      "label": "creates"
+    },
+    {
+      "from": "authoring",
+      "to": "video",
+      "label": "produces"
+    },
+    {
+      "from": "authoring",
+      "to": "reading",
+      "label": "writes"
+    },
+    {
+      "from": "authoring",
+      "to": "practice",
+      "label": "designs"
+    },
+    {
+      "from": "cloud",
+      "to": "lms",
+      "label": "hosts"
+    },
+    {
+      "from": "cloud",
+      "to": "assessment",
+      "label": "scales"
+    },
+    {
+      "from": "cloud",
+      "to": "communication",
+      "label": "powers"
+    },
+    {
+      "from": "cloud",
+      "to": "authoring",
+      "label": "stores"
+    },
+    {
+      "from": "analytics",
+      "to": "lms",
+      "label": "tracks"
+    },
+    {
+      "from": "analytics",
+      "to": "assessment",
+      "label": "analyzes"
+    },
+    {
+      "from": "ai",
+      "to": "authoring",
+      "label": "assists"
+    },
+    {
+      "from": "ai",
+      "to": "assessment",
+      "label": "adapts"
+    },
+    {
+      "from": "ai",
+      "to": "lms",
+      "label": "personalizes"
+    }
+  ]
+}

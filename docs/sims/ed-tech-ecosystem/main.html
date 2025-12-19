@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Educational Technology Ecosystem</title>
+    <script src="https://unpkg.com/vis-network/standalone/umd/vis-network.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div id="network"></div>
+
+        <!-- Title at top center -->
+        <div class="title">Educational Technology Ecosystem</div>
+
+        <!-- Legend in upper left -->
+        <div class="legend">
+            <div class="legend-item">
+                <div class="legend-color color-learner"></div>
+                <span><strong>Learner</strong></span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color color-inner"></div>
+                <span><strong>Direct Learning Tools</strong></span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color color-middle"></div>
+                <span><strong>Support Systems</strong></span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color color-outer"></div>
+                <span><strong>Infrastructure</strong></span>
+            </div>
+        </div>
+
+        <!-- Edit mode indicator -->
+        <div class="edit-indicator" id="edit-indicator">EDIT MODE</div>
+
+        <!-- Right panel with info -->
+        <div class="right-panel">
+            <!-- Save controls (hidden by default, shown in edit mode) -->
+            <div class="save-controls" id="save-controls">
+                <button class="btn btn-save" id="save-btn">Save Positions</button>
+            </div>
+
+            <div class="info-panel" id="info-panel">
+                <div class="info-title" id="info-title">Educational Technology Ecosystem</div>
+                <div class="info-text" id="info-text">
+                    <p>This diagram shows how educational technology components work together to support learning.</p>
+                    <p><strong>Hover</strong> over any component to see its description.</p>
+                    <p><strong>Click</strong> to see examples of tools in that category.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="ed-tech-ecosystem.js"></script>
+</body>
+</html>
