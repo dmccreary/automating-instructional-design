@@ -20,8 +20,9 @@ body {
 
 /* Sidebar Styles */
 .sidebar {
-    width: 300px;
-    min-width: 300px;
+    /* Initial width - OK if the labels wrap to two lines */
+    width: 200px;
+    min-width: 200px;
     background-color: #fff;
     border-right: 1px solid #ddd;
     display: flex;
@@ -181,7 +182,8 @@ body {
 }
 
 #legend {
-    max-height: 300px;
+    /* avoid scrollbars */
+    max-height: 400px;
     overflow-y: auto;
 }
 
