@@ -18,7 +18,7 @@ Test your understanding of cognitive development theory and how to design MicroS
 
     **Concept Tested:** Piaget Stages
 
-    **See:** [Piaget's Stages: A Classic Framework](#piagets-stages-a-classic-framework)
+    **See:** [Chapter Content](index.md)
 
 ---
 
@@ -36,7 +36,7 @@ Test your understanding of cognitive development theory and how to design MicroS
 
     **Concept Tested:** Vygotsky Theory
 
-    **See:** [Vygotsky's Zone of Proximal Development](#vygotskys-zone-of-proximal-development)
+    **See:** [Chapter Content](index.md)
 
 ---
 
@@ -54,7 +54,7 @@ Test your understanding of cognitive development theory and how to design MicroS
 
     **Concept Tested:** Touch Target Size
 
-    **See:** [Touch Target Size: Bigger Is Better](#touch-target-size-bigger-is-better)
+    **See:** [Chapter Content](index.md)
 
 ---
 
@@ -72,7 +72,7 @@ Test your understanding of cognitive development theory and how to design MicroS
 
     **Concept Tested:** Guided Exploration, Scaffolded Complexity
 
-    **See:** [Elementary Design (Ages 7-11)](#elementary-design-ages-7-11)
+    **See:** [Chapter Content](index.md)
 
 ---
 
@@ -90,7 +90,7 @@ Test your understanding of cognitive development theory and how to design MicroS
 
     **Concept Tested:** Hypothesis Testing
 
-    **See:** [Middle School Design (Ages 12-14)](#middle-school-design-ages-12-14)
+    **See:** [Chapter Content](index.md)
 
 ---
 
@@ -108,7 +108,7 @@ Test your understanding of cognitive development theory and how to design MicroS
 
     **Concept Tested:** Real-World Application, Data Interpretation
 
-    **See:** [High School Design (Ages 15-18)](#high-school-design-ages-15-18)
+    **See:** [Chapter Content](index.md)
 
 ---
 
@@ -126,7 +126,7 @@ Test your understanding of cognitive development theory and how to design MicroS
 
     **Concept Tested:** Mathematical Relations, Theoretical Foundations
 
-    **See:** [Undergraduate Design (Ages 18-22)](#undergraduate-design-ages-18-22)
+    **See:** [Chapter Content](index.md)
 
 ---
 
@@ -144,7 +144,7 @@ Test your understanding of cognitive development theory and how to design MicroS
 
     **Concept Tested:** Parameter Space, Research Applications
 
-    **See:** [Graduate Design (Ages 22+)](#graduate-design-ages-22)
+    **See:** [Chapter Content](index.md)
 
 ---
 
@@ -162,7 +162,7 @@ Test your understanding of cognitive development theory and how to design MicroS
 
     **Concept Tested:** Job-Relevant Scenarios, Time-Efficient Design
 
-    **See:** [Corporate Training Design](#corporate-training-design)
+    **See:** [Chapter Content](index.md)
 
 ---
 
@@ -180,5 +180,5 @@ Test your understanding of cognitive development theory and how to design MicroS
 
     **Concept Tested:** Cognitive Development, Piaget Stages
 
-    **See:** [The Science Behind Audience Adaptation](#the-science-behind-audience-adaptation)
+    **See:** [Chapter Content](index.md)
 

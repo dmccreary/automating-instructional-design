@@ -18,7 +18,7 @@ Test your understanding of visualization paradigms, from motion simulations to s
 
     **Concept Tested:** Visualization Paradigm
 
-    **See:** [Understanding Visualization Paradigms](#understanding-visualization-paradigms)
+    **See:** [Chapter Content](index.md)
 
 ---
 
@@ -36,7 +36,7 @@ Test your understanding of visualization paradigms, from motion simulations to s
 
     **Concept Tested:** Motion Simulation
 
-    **See:** [Motion and Physics Simulations](#motion-and-physics-simulations)
+    **See:** [Chapter Content](index.md)
 
 ---
 
@@ -54,7 +54,7 @@ Test your understanding of visualization paradigms, from motion simulations to s
 
     **Concept Tested:** Dynamic Systems
 
-    **See:** [Dynamic Systems: When Everything Affects Everything](#dynamic-systems-when-everything-affects-everything)
+    **See:** [Chapter Content](index.md)
 
 ---
 
@@ -72,7 +72,7 @@ Test your understanding of visualization paradigms, from motion simulations to s
 
     **Concept Tested:** Network Graph
 
-    **See:** [Network Graphs: Nodes and Edges](#network-graphs-nodes-and-edges)
+    **See:** [Chapter Content](index.md)
 
 ---
 
@@ -90,7 +90,7 @@ Test your understanding of visualization paradigms, from motion simulations to s
 
     **Concept Tested:** Venn Diagram
 
-    **See:** [Venn Diagrams: The Classic Overlap](#venn-diagrams-the-classic-overlap)
+    **See:** [Chapter Content](index.md)
 
 ---
 
@@ -108,7 +108,7 @@ Test your understanding of visualization paradigms, from motion simulations to s
 
     **Concept Tested:** State Machine Diagram
 
-    **See:** [State Machine Diagrams: Being vs. Doing](#state-machine-diagrams-being-vs-doing)
+    **See:** [Chapter Content](index.md)
 
 ---
 
@@ -126,7 +126,7 @@ Test your understanding of visualization paradigms, from motion simulations to s
 
     **Concept Tested:** Concept Characteristics
 
-    **See:** [Concept Characteristics: The Diagnostic Framework](#concept-characteristics-the-diagnostic-framework)
+    **See:** [Chapter Content](index.md)
 
 ---
 
@@ -144,7 +144,7 @@ Test your understanding of visualization paradigms, from motion simulations to s
 
     **Concept Tested:** Trend Chart
 
-    **See:** [Trend Charts: Change Over Time](#trend-charts-change-over-time)
+    **See:** [Chapter Content](index.md)
 
 ---
 
@@ -162,7 +162,7 @@ Test your understanding of visualization paradigms, from motion simulations to s
 
     **Concept Tested:** Visual Affordances
 
-    **See:** [Visual Affordances: What Visualizations "Suggest"](#visual-affordances-what-visualizations-suggest)
+    **See:** [Chapter Content](index.md)
 
 ---
 
@@ -180,5 +180,5 @@ Test your understanding of visualization paradigms, from motion simulations to s
 
     **Concept Tested:** Flowchart
 
-    **See:** [Flowcharts: Decisions and Processes](#flowcharts-decisions-and-processes)
+    **See:** [Chapter Content](index.md)
 

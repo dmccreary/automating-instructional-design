@@ -18,7 +18,7 @@ Test your understanding of AI collaboration techniques, prompt engineering, and 
 
     **Concept Tested:** Prompt Engineering
 
-    **See:** [Prompt Engineering: Speaking AI's Language](#prompt-engineering-speaking-ais-language)
+    **See:** [Chapter Content](index.md)
 
 ---
 
@@ -36,7 +36,7 @@ Test your understanding of AI collaboration techniques, prompt engineering, and 
 
     **Concept Tested:** Generation Workflow
 
-    **See:** [The Generation Workflow: From Specification to Simulation](#the-generation-workflow-from-specification-to-simulation)
+    **See:** [Chapter Content](index.md)
 
 ---
 
@@ -54,7 +54,7 @@ Test your understanding of AI collaboration techniques, prompt engineering, and 
 
     **Concept Tested:** Generation Workflow
 
-    **See:** [Time Distribution Across Phases](#time-distribution-across-phases)
+    **See:** [Chapter Content](index.md)
 
 ---
 
@@ -72,7 +72,7 @@ Test your understanding of AI collaboration techniques, prompt engineering, and 
 
     **Concept Tested:** Refinement Prompt
 
-    **See:** [Refinement Prompts: The Art of Iteration](#refinement-prompts-the-art-of-iteration)
+    **See:** [Chapter Content](index.md)
 
 ---
 
@@ -90,7 +90,7 @@ Test your understanding of AI collaboration techniques, prompt engineering, and 
 
     **Concept Tested:** Regeneration Decision
 
-    **See:** [The Regeneration Decision: Try Again or Fix by Hand?](#the-regeneration-decision-try-again-or-fix-by-hand)
+    **See:** [Chapter Content](index.md)
 
 ---
 
@@ -108,7 +108,7 @@ Test your understanding of AI collaboration techniques, prompt engineering, and 
 
     **Concept Tested:** Claude Code Skills
 
-    **See:** [Claude Code Skills: Intelligent Context Management](#claude-code-skills-intelligent-context-management)
+    **See:** [Chapter Content](index.md)
 
 ---
 
@@ -126,7 +126,7 @@ Test your understanding of AI collaboration techniques, prompt engineering, and 
 
     **Concept Tested:** Rule Hierarchy
 
-    **See:** [Building Consistency with Rule Hierarchies](#building-consistency-with-rule-hierarchies)
+    **See:** [Chapter Content](index.md)
 
 ---
 
@@ -144,7 +144,7 @@ Test your understanding of AI collaboration techniques, prompt engineering, and 
 
     **Concept Tested:** Manual Adjustment, Iteration Management
 
-    **See:** [Personal Ownership of Code: Learning to Let Go](#personal-ownership-of-code-learning-to-let-go)
+    **See:** [Chapter Content](index.md)
 
 ---
 
@@ -162,7 +162,7 @@ Test your understanding of AI collaboration techniques, prompt engineering, and 
 
     **Concept Tested:** Version Control
 
-    **See:** [Git Workflow for MicroSim Development](#git-workflow-for-microsim-development)
+    **See:** [Chapter Content](index.md)
 
 ---
 
@@ -180,5 +180,5 @@ Test your understanding of AI collaboration techniques, prompt engineering, and 
 
     **Concept Tested:** Iteration Management
 
-    **See:** [Iteration Anti-Patterns](#iteration-anti-patterns)
+    **See:** [Chapter Content](index.md)
 

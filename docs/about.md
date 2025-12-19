@@ -26,7 +26,7 @@ No programming experience required. The course focuses on specification, evaluat
 
 ## Getting Started
 
-Start with [Chapter 1: Foundations of Learning Objective Analysis](chapters/01/index.md).
+Start with [Chapter 1: Foundations of Learning Objective Analysis](chapters/01-foundations-learning-objective-analysis/index.md).
 
 ## Navigation
 

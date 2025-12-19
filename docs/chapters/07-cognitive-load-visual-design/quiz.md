@@ -18,7 +18,7 @@ Test your understanding of cognitive load theory, working memory limitations, an
 
     **Concept Tested:** Working Memory
 
-    **See:** [Working Memory: The Scratchpad of Consciousness](#working-memory-the-scratchpad-of-consciousness)
+    **See:** [Chapter Content](index.md)
 
 ---
 
@@ -36,7 +36,7 @@ Test your understanding of cognitive load theory, working memory limitations, an
 
     **Concept Tested:** Schema Formation
 
-    **See:** [Schema Formation: Building Mental LEGO Sets](#schema-formation-building-mental-lego-sets)
+    **See:** [Chapter Content](index.md)
 
 ---
 
@@ -54,7 +54,7 @@ Test your understanding of cognitive load theory, working memory limitations, an
 
     **Concept Tested:** Extraneous Load
 
-    **See:** [Extraneous Load: The Villain of Instructional Design](#extraneous-load-the-villain-of-instructional-design)
+    **See:** [Chapter Content](index.md)
 
 ---
 
@@ -72,7 +72,7 @@ Test your understanding of cognitive load theory, working memory limitations, an
 
     **Concept Tested:** Split Attention Effect
 
-    **See:** [The Split Attention Effect: When Your Eyes and Brain Can't Agree](#the-split-attention-effect-when-your-eyes-and-brain-cant-agree)
+    **See:** [Chapter Content](index.md)
 
 ---
 
@@ -90,7 +90,7 @@ Test your understanding of cognitive load theory, working memory limitations, an
 
     **Concept Tested:** Split Attention Effect
 
-    **See:** [Solutions: Integration Over Separation](#solutions-integration-over-separation)
+    **See:** [Chapter Content](index.md)
 
 ---
 
@@ -108,7 +108,7 @@ Test your understanding of cognitive load theory, working memory limitations, an
 
     **Concept Tested:** Progressive Disclosure
 
-    **See:** [Progressive Disclosure: The Art of the Reveal](#progressive-disclosure-the-art-of-the-reveal)
+    **See:** [Chapter Content](index.md)
 
 ---
 
@@ -126,7 +126,7 @@ Test your understanding of cognitive load theory, working memory limitations, an
 
     **Concept Tested:** Learner Control, Animation Speed
 
-    **See:** [Learner Control: The Power of Pause](#learner-control-the-power-of-pause)
+    **See:** [Chapter Content](index.md)
 
 ---
 
@@ -144,7 +144,7 @@ Test your understanding of cognitive load theory, working memory limitations, an
 
     **Concept Tested:** Design Tradeoffs
 
-    **See:** [The Minimal Effective Design](#the-minimal-effective-design)
+    **See:** [Chapter Content](index.md)
 
 ---
 
@@ -162,7 +162,7 @@ Test your understanding of cognitive load theory, working memory limitations, an
 
     **Concept Tested:** Germane Load
 
-    **See:** [Germane Load: The Productive Struggle](#germane-load-the-productive-struggle)
+    **See:** [Chapter Content](index.md)
 
 ---
 
@@ -180,5 +180,5 @@ Test your understanding of cognitive load theory, working memory limitations, an
 
     **Concept Tested:** Intrinsic Load
 
-    **See:** [Intrinsic Load: The Inherent Difficulty](#intrinsic-load-the-inherent-difficulty)
+    **See:** [Chapter Content](index.md)
 

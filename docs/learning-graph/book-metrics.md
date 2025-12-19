@@ -16,7 +16,7 @@ This file contains overall metrics for the intelligent textbook.
 | Glossary Terms | 198 | [Glossary](../glossary.md) | Defined terms |
 | FAQs | 60 | [FAQ](../faq.md) | Frequently asked questions |
 | Quiz Questions | 120 | - | Questions across all chapters |
-| MicroSims | 2 | [Simulations](../sims/index.md) | Interactive MicroSims |
+| MicroSims | 2 | - | Interactive MicroSims |
 
 ## Student-Facing Content Metrics
 

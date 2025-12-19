@@ -18,7 +18,7 @@ Test your understanding of mental models, common misconceptions, and design stra
 
     **Concept Tested:** Mental Model
 
-    **See:** [Mental Models: The Invisible Architects of Understanding](#mental-models-the-invisible-architects-of-understanding)
+    **See:** [Chapter Content](index.md)
 
 ---
 
@@ -36,7 +36,7 @@ Test your understanding of mental models, common misconceptions, and design stra
 
     **Concept Tested:** Misconception
 
-    **See:** [Misconceptions: When Mental Models Go Wrong](#misconceptions-when-mental-models-go-wrong)
+    **See:** [Chapter Content](index.md)
 
 ---
 
@@ -54,7 +54,7 @@ Test your understanding of mental models, common misconceptions, and design stra
 
     **Concept Tested:** Misconception Correction
 
-    **See:** [Why Simple Telling Doesn't Work](#why-simple-telling-doesnt-work)
+    **See:** [Chapter Content](index.md)
 
 ---
 
@@ -72,7 +72,7 @@ Test your understanding of mental models, common misconceptions, and design stra
 
     **Concept Tested:** Conceptual Change
 
-    **See:** [Conceptual Change: The Deep Restructuring of Understanding](#conceptual-change-the-deep-restructuring-of-understanding)
+    **See:** [Chapter Content](index.md)
 
 ---
 
@@ -90,7 +90,7 @@ Test your understanding of mental models, common misconceptions, and design stra
 
     **Concept Tested:** Productive Failure
 
-    **See:** [Productive Failure: Embracing the Struggle](#productive-failure-embracing-the-struggle)
+    **See:** [Chapter Content](index.md)
 
 ---
 
@@ -108,7 +108,7 @@ Test your understanding of mental models, common misconceptions, and design stra
 
     **Concept Tested:** Prediction Prompt
 
-    **See:** [Prediction Prompts: The Power of Commitment](#prediction-prompts-the-power-of-commitment)
+    **See:** [Chapter Content](index.md)
 
 ---
 
@@ -126,7 +126,7 @@ Test your understanding of mental models, common misconceptions, and design stra
 
     **Concept Tested:** Misconception Reinforcement
 
-    **See:** [Misconception Reinforcement: When Good Intentions Go Bad](#misconception-reinforcement-when-good-intentions-go-bad)
+    **See:** [Chapter Content](index.md)
 
 ---
 
@@ -144,7 +144,7 @@ Test your understanding of mental models, common misconceptions, and design stra
 
     **Concept Tested:** Conceptual Boundary
 
-    **See:** [Conceptual Boundaries: Knowing the Limits of Models](#conceptual-boundaries-knowing-the-limits-of-models)
+    **See:** [Chapter Content](index.md)
 
 ---
 
@@ -162,7 +162,7 @@ Test your understanding of mental models, common misconceptions, and design stra
 
     **Concept Tested:** Model Comparison
 
-    **See:** [Model Comparison: Side-by-Side Enlightenment](#model-comparison-side-by-side-enlightenment)
+    **See:** [Chapter Content](index.md)
 
 ---
 
@@ -180,5 +180,5 @@ Test your understanding of mental models, common misconceptions, and design stra
 
     **Concept Tested:** Misconception Correction
 
-    **See:** [The PREDICT Framework](#the-predict-framework)
+    **See:** [Chapter Content](index.md)
 

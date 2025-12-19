@@ -18,7 +18,7 @@ Test your understanding of accessibility principles, deployment strategies, and 
 
     **Concept Tested:** Universal Design
 
-    **See:** [Universal Design: Building for Everyone from the Start](#universal-design-building-for-everyone-from-the-start)
+    **See:** [Chapter Content](index.md)
 
 ---
 
@@ -36,7 +36,7 @@ Test your understanding of accessibility principles, deployment strategies, and 
 
     **Concept Tested:** UDL Principles
 
-    **See:** [UDL Principles: The Educational Lens on Accessibility](#udl-principles-the-educational-lens-on-accessibility)
+    **See:** [Chapter Content](index.md)
 
 ---
 
@@ -54,7 +54,7 @@ Test your understanding of accessibility principles, deployment strategies, and 
 
     **Concept Tested:** Screen Reader Support
 
-    **See:** [The p5.js describe() Function: Non-Negotiable for Quality](#the-p5js-describe-function-non-negotiable-for-quality)
+    **See:** [Chapter Content](index.md)
 
 ---
 
@@ -72,7 +72,7 @@ Test your understanding of accessibility principles, deployment strategies, and 
 
     **Concept Tested:** Keyboard Navigation
 
-    **See:** [The MicroSim Control Architecture Solution](#the-microsim-control-architecture-solution)
+    **See:** [Chapter Content](index.md)
 
 ---
 
@@ -90,7 +90,7 @@ Test your understanding of accessibility principles, deployment strategies, and 
 
     **Concept Tested:** Color Blindness Design, Color Accessibility
 
-    **See:** [Design Strategies for Color Blindness](#design-strategies-for-color-blindness)
+    **See:** [Chapter Content](index.md)
 
 ---
 
@@ -108,7 +108,7 @@ Test your understanding of accessibility principles, deployment strategies, and 
 
     **Concept Tested:** Reduced Motion
 
-    **See:** [Reduced Motion: Respecting Vestibular Sensitivities](#reduced-motion-respecting-vestibular-sensitivities)
+    **See:** [Chapter Content](index.md)
 
 ---
 
@@ -126,7 +126,7 @@ Test your understanding of accessibility principles, deployment strategies, and 
 
     **Concept Tested:** Accessibility Audit
 
-    **See:** [Accessibility Audit and Constraint Simulation](#accessibility-audit-and-constraint-simulation)
+    **See:** [Chapter Content](index.md)
 
 ---
 
@@ -144,7 +144,7 @@ Test your understanding of accessibility principles, deployment strategies, and 
 
     **Concept Tested:** LMS Integration
 
-    **See:** [Integration Methods](#integration-methods)
+    **See:** [Chapter Content](index.md)
 
 ---
 
@@ -162,7 +162,7 @@ Test your understanding of accessibility principles, deployment strategies, and 
 
     **Concept Tested:** Intelligent Textbook
 
-    **See:** [What Makes a Textbook "Intelligent"?](#what-makes-a-textbook-intelligent)
+    **See:** [Chapter Content](index.md)
 
 ---
 
@@ -180,5 +180,5 @@ Test your understanding of accessibility principles, deployment strategies, and 
 
     **Concept Tested:** Portfolio Project
 
-    **See:** [Portfolio Requirements](#portfolio-requirements)
+    **See:** [Chapter Content](index.md)
 

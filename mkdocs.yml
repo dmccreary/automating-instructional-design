@@ -60,9 +60,14 @@ nav:
     - Course Description Assessment: learning-graph/course-description-assessment.md
     - Concept Enumeration: learning-graph/concept-list.md
     - Graph Quality Analysis: learning-graph/quality-metrics.md
+    - Book Metrics: learning-graph/book-metrics.md
+    - Chapter Metrics: learning-graph/chapter-metrics.md
     - Concept Taxonomy: learning-graph/concept-taxonomy.md
     - Taxonomy Distribution Report: learning-graph/taxonomy-distribution.md
+    - Diagram Details: learning-graph/diagram-details.md
+    - Diagram Table: learning-graph/diagram-table.md
     - FAQ Quality Report: learning-graph/faq-quality-report.md
+    - Glossary Quality Report: learning-graph/glossary-quality-report.md
     - Quiz Generation Report: learning-graph/quiz-generation-report.md
 
   - MicroSims:
@@ -79,8 +84,13 @@ nav:
  
   - Prompts:
     - List of Prompts: prompts/index.md
-    - prompts/bloom-taxonomy-microsim.md
-    - prompts/chapter-content-generator.md
+    - Bloom Taxonomy MicroSim: prompts/bloom-taxonomy-microsim.md
+    - Bloom Story: prompts/bloom-story.md
+    - Chapter Content Generator: prompts/chapter-content-generator.md
+    - Cover: prompts/cover.md
+    - FAQ: prompts/faq.md
+    - Glossary: prompts/glossary.md
+    - Quiz Generator: prompts/quiz-generator.md
 # Dan's MicroSite Standards from here down
 
 theme:

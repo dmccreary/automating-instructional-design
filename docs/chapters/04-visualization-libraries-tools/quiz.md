@@ -18,7 +18,7 @@ Test your understanding of JavaScript visualization libraries and tools for crea
 
     **Concept Tested:** p5.js Animation
 
-    **See:** [p5.js: The Swiss Army Knife of Animation](#p5js-the-swiss-army-knife-of-animation)
+    **See:** [Chapter Content](index.md)
 
 ---
 
@@ -36,7 +36,7 @@ Test your understanding of JavaScript visualization libraries and tools for crea
 
     **Concept Tested:** p5.js Animation
 
-    **See:** [The Anatomy of a p5.js MicroSim](#the-anatomy-of-a-p5js-microsim)
+    **See:** [Chapter Content](index.md)
 
 ---
 
@@ -54,7 +54,7 @@ Test your understanding of JavaScript visualization libraries and tools for crea
 
     **Concept Tested:** Plotly Library
 
-    **See:** [Plotly: When You Need Mathematical Muscle](#plotly-when-you-need-mathematical-muscle)
+    **See:** [Chapter Content](index.md)
 
 ---
 
@@ -72,7 +72,7 @@ Test your understanding of JavaScript visualization libraries and tools for crea
 
     **Concept Tested:** vis-network Library
 
-    **See:** [The vis-network Architecture Pattern](#the-vis-network-architecture-pattern)
+    **See:** [Chapter Content](index.md)
 
 ---
 
@@ -90,7 +90,7 @@ Test your understanding of JavaScript visualization libraries and tools for crea
 
     **Concept Tested:** Mermaid Library
 
-    **See:** [Mermaid: Diagrams from Text](#mermaid-diagrams-from-text)
+    **See:** [Chapter Content](index.md)
 
 ---
 
@@ -108,7 +108,7 @@ Test your understanding of JavaScript visualization libraries and tools for crea
 
     **Concept Tested:** Leaflet Library
 
-    **See:** [Map Visualization: Geography Matters](#map-visualization-geography-matters)
+    **See:** [Chapter Content](index.md)
 
 ---
 
@@ -126,7 +126,7 @@ Test your understanding of JavaScript visualization libraries and tools for crea
 
     **Concept Tested:** MicroSim Generator
 
-    **See:** [The MicroSim Generator Ecosystem](#the-microsim-generator-ecosystem)
+    **See:** [Chapter Content](index.md)
 
 ---
 
@@ -144,7 +144,7 @@ Test your understanding of JavaScript visualization libraries and tools for crea
 
     **Concept Tested:** Template Library
 
-    **See:** [The Standard MicroSim Structure](#the-standard-microsim-structure)
+    **See:** [Chapter Content](index.md)
 
 ---
 
@@ -162,7 +162,7 @@ Test your understanding of JavaScript visualization libraries and tools for crea
 
     **Concept Tested:** Code Generation
 
-    **See:** [The Decision Framework](#the-decision-framework)
+    **See:** [Chapter Content](index.md)
 
 ---
 
@@ -180,5 +180,5 @@ Test your understanding of JavaScript visualization libraries and tools for crea
 
     **Concept Tested:** Chart.js Library
 
-    **See:** [Chart.js: Simple, Beautiful, and Fast](#chartjs-simple-beautiful-and-fast)
+    **See:** [Chapter Content](index.md)
 
