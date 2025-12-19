@@ -51,6 +51,11 @@ nav:
       - Quiz: chapters/12-accessibility-deployment-completion/quiz.md
     - 13. Capstone Projects: chapters/13-capstone-projects/index.md
   
+  - MicroSims:
+    - List of MicroSims: sims/index.md
+    - Graph Viewer: sims/graph-viewer/index.md
+    - Bloom's Taxonomy: sims/bloom-taxonomy/index.md
+
   - Stories:
     - List of Stories: stories/index.md
     - Bloom's Taxonomy: stories/bloom/index.md
@@ -70,9 +75,8 @@ nav:
     - Glossary Quality Report: learning-graph/glossary-quality-report.md
     - Quiz Generation Report: learning-graph/quiz-generation-report.md
 
-  - MicroSims:
-    - Graph Viewer: sims/graph-viewer/index.md
-    - Bloom's Taxonomy: sims/bloom-taxonomy/index.md
+
+  
   - Checklist: checklist.md
   - FAQ: faq.md
   - Glossary: glossary.md
@@ -131,8 +135,7 @@ extra_javascript:
 copyright: Copyright &copy; 2025 Dan McCreary. Licensed under <a href="license/">CC BY-NC-SA 4.0</a> for non-commercial use.
 extra:
   generator: false
-#extra:
-#  analytics:
-#    provider: google
-    # https://analytics.google.com/analytics/web/#/a1420179p349994530/admin/streams/table/4433129821
-#    property: G-XXXX
+extra:
+  analytics:
+    provider: google
+    property: G-S4GYB1W20G
