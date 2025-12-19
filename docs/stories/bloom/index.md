@@ -1,3 +1,9 @@
+---
+title: The Story of Bloom's Taxonomy
+description: A 12-panel graphic novel that chronicles the creation of the Boom Taxonomy and its impact on education.
+image: /sims/bloom/cover.png
+og:image: /sims/bloom/cover.png
+---
 # The Story of Bloom's Taxonomy
 
 ## Panel 1: The Problem of Learning
