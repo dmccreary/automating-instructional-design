@@ -25,6 +25,7 @@ nav:
     - Quality Evaluation Frameworks: chapters/10-quality-evaluation-frameworks/index.md
     - User Testing and Iteration: chapters/11-user-testing-iteration/index.md
     - Accessibility, Deployment, and Course Completion: chapters/12-accessibility-deployment-completion/index.md
+    - Capstone Projects: chapters/13-capstone-projects/index.md
   
   - Stories:
     - List of Stories: stories/index.md

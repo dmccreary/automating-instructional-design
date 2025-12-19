@@ -136,3 +136,57 @@ metadata.json file then search tools like https://dmccreary.github.io/search-mic
 Note that most generative AI systems are very precise at following the rules within an JSON Schema.
 Discuss the idea of having a quality score for each metadata.json file, including how popular a MicroSim is and if studies have shown it is effective at helping students learn.
 
+# Chapter 11
+
+
+Run the chapter-content-generator skill on @docs/chapters/11-user-testing-iteration/index.md
+The writing level is college students or business professionals.
+Make the tone fun, and optimistic with a holistic view that knowing how to automate instructional design will make the world a better place.  Feel free to add puns and jokes to lighten the tone.
+Do not put leading spaces in the <details> text.
+
+I have added some additional concepts to this chapter that need to be addressed.
+When we test MicroSims, we usually test them in two ways.  
+
+1. As a "standalone" exercise done in addition to a class lecture where the teacher shows a MicroSim and the class tries it out on their computer. 
+2. As part of an interactive intelligent textbook.
+
+One key thing to know - learning is a **non-linear** process.  In an interactive textbook students "chose their own adventure" and can hop around in any order driven by their curiosity.
+
+We can use tools like Google Analytics to see what web pages students visit and when.  However, to be effective at good A/B testing
+we want much more fine-grain tracking.  Web analytics tools like Google Analytics don't make it easy to track how long a student spent on a MicroSim and what controls they changed.  That is the fundamental difference between page-view tracking and simulation tracking.
+
+Fortunately, there is an excellent standard for tracking the entire "experience" that each student has on any MicroSim or intelligent textbook.  That is the "Experience Application Programming Interface" or just **xAPI** for short.  The xAPI is both conceptually simple and yet it can be complex.  At the simplest level, the xAPI is responsible for tracking who did what and when.  What student clicked what buttons on a MicroSim and the date and time they did this.
+
+xAPI events are the "fine grain" solution that we need to do A/B testing on our MicroSims.
+
+xAPI events are typically sent to a device called an "Learning Record Store" or LRS.  A LRS can take many forms. A LRS might be data store running in your browser (local storage) or it might be a server running in the cloud.  Obviously, this data contains information
+about the student actions (the who) and therefore the security of the LRS is highly regulated.  We will not go into
+all the security details, except to say that hyper-personalization of each students recommendations requires lots of data.
+The cost for gathering this data and storing it are non-trivial.  We discuss this in depth in another intelligent book [Graph LMS](https://dmccreary.github.io/graph-lms/).
+
+Both xAPI and the LRS standards are part of the IEEE learning standards process which include other standards
+that are part of the Total Learning Architecture.  Details are covered on the Graph LMS book.
+
+The ONLY fact that you must recall is that without interactivity, we can't track if a student us using a MicroSim.
+It is the job of the instructional designer to make sure that **every** microsim has at least one interactive event,
+even if it is just a check that the student use their mouse to hover over regions of an infographic MicroSim.
+
+21. Google Analytics
+22. Simulation Tracking
+23. xAPI
+24. Tracking Who-What-When
+25. Learning Record Store
+26. xAPI events to a LRS
+27. IEEE Learning Standards
+28. Total Learning Architecture
+
+# Chapter 12
+
+
+Run the chapter-content-generator skill on @docs/chapters/12-accessibility-deployment-completion/index.md
+The writing level is college students or business professionals.
+Make the tone fun, and optimistic with a holistic view that knowing how to automate instructional design will make the world a better place.  Feel free to add puns and jokes to lighten the tone.
+Do not put leading spaces in the <details> text.
+
+Place special attention to the ways that p5.js adds information such as the describe() function that is required of all p5.js microsims for a good quality score.
+Note that the current MicroSim architecture strongly suggests putting controls below the drawingArea.  Using ONLY mouse events to control an MicroSim can limit accessibility.

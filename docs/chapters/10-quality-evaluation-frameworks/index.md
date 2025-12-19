@@ -64,8 +64,6 @@ The three pillars of MicroSim quality form what we call the **Three-Lens Evaluat
 
 Let's explore each lens in detail, starting with the nuts and bolts of technical evaluation.
 
----
-
 ## The Three-Lens Evaluation Model
 
 Before diving into specifics, let's visualize how these three evaluation lenses work together to create a holistic quality assessment.
@@ -101,8 +99,6 @@ Implementation: HTML/CSS/JavaScript with SVG or p5.js
 </details>
 
 The magic happens at the intersection of all three circles. A MicroSim might achieve technical perfection—zero bugs, responsive across all devices—but if it confuses learners or targets the wrong cognitive level, it fails its educational mission. Similarly, a pedagogically brilliant simulation that crashes on mobile devices serves no one.
-
----
 
 ## Technical Evaluation: The Foundation of Trust
 
@@ -187,9 +183,9 @@ Common bug categories in MicroSims include:
 - **Browser incompatibilities**: Works in Chrome, fails in Safari
 - **Accessibility failures**: Screen readers can't parse content
 
-Pro tip: If you ever want to find bugs quickly, hand your MicroSim to a middle schooler. They will click everything, in every order, as fast as possible—and find edge cases you never imagined.
-
----
+!!! note "Pro tip"
+  If you ever want to find bugs quickly, hand your MicroSim to a middle schooler.
+  They will click everything, in every order, as fast as possible—and find edge cases you never imagined.
 
 ## Pedagogical Evaluation: Teaching What You Mean to Teach
 

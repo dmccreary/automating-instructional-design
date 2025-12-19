@@ -28,6 +28,9 @@ This textbook is organized into 12 chapters covering 200 concepts.
 
 12. [Accessibility, Deployment, and Course Completion](12-accessibility-deployment-completion/index.md) - Covers universal design, UDL principles, LMS integration, analytics, maintenance planning, and portfolio assessment.
 
+13. [Capstone Projects](./13-capstone-projects/index.md) - Guidance in creating a project where you work in teams to build
+a portion of an intelligent textbook with MicroSims.
+
 ## How to Use This Textbook
 
 This textbook follows a carefully designed learning progression where each chapter builds on concepts from previous chapters. The dependency structure ensures that prerequisite knowledge is always introduced before it is needed. We recommend completing chapters in order, especially for your first reading, as later chapters assume familiarity with earlier material.
