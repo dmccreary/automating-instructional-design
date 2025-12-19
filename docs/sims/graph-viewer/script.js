@@ -96,7 +96,7 @@ function initializeNetwork() {
         },
         nodes: {
             shape: 'box',
-            margin: 10,
+            margin: 4,
             font: {
                 size: 14,
                 face: 'Arial'

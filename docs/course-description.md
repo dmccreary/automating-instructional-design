@@ -3,24 +3,19 @@ title: Automating Instructional Design
 description: A hands-on course teaching educators how to transform learning objectives into interactive MicroSimulations using AI-assisted tools.
 quality_score: 100
 ---
-
 # Automating Instructional Design
 
 ## From Learning Objectives to Interactive MicroSimulations
 
-**Course Duration:** 12 Modules (Self-Paced or 12-Week Instructor-Led)
-**Level:** Intermediate
+**Course Duration:** 12 Modules (Self-Paced or 12-Week Instructor-Led)<br/>
+**Level:** Intermediate<br/>
 **Prerequisites:** Basic computer literacy; no programming experience required
-
----
 
 ## Course Overview
 
 This course teaches educators and training professionals how to leverage AI-assisted tools to transform learning objectives into interactive educational simulations called MicroSims. Participants will master the complete lifecycle of MicroSim development—from analyzing pedagogical goals through deployment and learner assessment—using Claude Code skills and a comprehensive library of visualization tools.
 
 The central challenge of instructional design automation is bridging the **semantic gap** between abstract learning outcomes and concrete interactive experiences. A well-crafted learning objective like "Students will understand the relationship between supply and demand" contains implicit assumptions about visualization, interaction, pacing, and assessment that must be made explicit before any simulation can be built. This course provides systematic methods for that translation.
-
----
 
 ## Target Audience
 
@@ -134,7 +129,6 @@ AI tools can generate working code from natural language descriptions, but they 
 
 **MicroSim for This Module:** *Audience Adaptation Slider* — A demonstration showing the same core concept (like fractions) rendered at different complexity levels. A slider moves between kindergarten and graduate school versions, highlighting what changes at each level.
 
-
 ### Module 5: Cognitive Load and Visual Design
 
 **Topics:**
@@ -195,7 +189,6 @@ AI tools can generate working code from natural language descriptions, but they 
 
 **MicroSim for This Module:** *Evaluation Rubric Builder* — An interactive tool where users select criteria from categorized lists to build custom evaluation rubrics. Can export rubrics as checklists for practical use.
 
-
 ### Module 9: User Testing Methods
 
 **Topics:**
@@ -210,7 +203,6 @@ AI tools can generate working code from natural language descriptions, but they 
 **Hands-On Activity:** Conduct a think-aloud test with 2-3 learners using a MicroSim you created. Document observations and identify three potential improvements.
 
 **MicroSim for This Module:** *Test Session Planner* — An interactive guide that helps users design user testing sessions. Inputs include learner age, concept complexity, and available time. Outputs include suggested protocols, question templates, and observation checklists.
-
 
 ### Module 10: Iteration and Refinement
 
@@ -241,7 +233,6 @@ AI tools can generate working code from natural language descriptions, but they 
 **Hands-On Activity:** Audit a MicroSim for accessibility issues. Implement at least three accessibility improvements.
 
 **MicroSim for This Module:** *Accessibility Simulator* — A tool that lets users experience a MicroSim under various simulated constraints: grayscale mode (color blindness), keyboard-only navigation, screen reader text output, and reduced motion settings.
-
 
 ### Module 12: Deployment and Integration
 
@@ -314,10 +305,10 @@ The following MicroSims are developed specifically to teach the concepts in this
 
 ## Required Tools and Resources
 
-### Software (Provided)
+### Software (Skill Libraries Provided Free)
 
-- Claude Code with MicroSim generation skills
-- Access to the MicroSim template library
+- Claude Code with MicroSim generation skills ($20/month Claude Pro required)
+- Access to the Claude Code Skill library on [GitHub](https://github.com/dmccreary/claude-skills/tree/main/skills)
 - Web browser with developer tools
 
 ### Recommended Background Reading
@@ -330,7 +321,6 @@ The following MicroSims are developed specifically to teach the concepts in this
 
 - **Self-paced:** Approximately 60-80 hours total
 - **Instructor-led:** 3-4 hours per week for 12 weeks
-
 
 ## Expected Outcomes
 
@@ -354,7 +344,6 @@ This course may not be the right fit if you:
 - Are looking for a library of pre-made simulations (this teaches creation)
 - Expect fully automated simulation generation without human judgment
 
-
 ## Concepts Covered in This Course
 
 The following concepts are explicitly taught and practiced:
@@ -374,6 +363,7 @@ The following concepts are explicitly taught and practiced:
 - Scaffolding strategies
 
 ### Cognitive Science Principles
+
 - Cognitive load theory (intrinsic, extraneous, germane load)
 - Split attention effect
 - Multimedia learning principles
@@ -381,6 +371,7 @@ The following concepts are explicitly taught and practiced:
 - Mental model formation
 
 ### Specification and Communication
+
 - MicroSim specification document writing
 - Visual element description without code
 - Behavior specification and constraints
@@ -388,6 +379,7 @@ The following concepts are explicitly taught and practiced:
 - Edge case documentation
 
 ### Audience Adaptation
+
 - Cognitive development stages (Piaget, Vygotsky)
 - Age-appropriate complexity calibration
 - Vocabulary level adjustment
@@ -395,6 +387,7 @@ The following concepts are explicitly taught and practiced:
 - Prior knowledge assessment
 
 ### Quality Assurance
+
 - Technical evaluation (functionality, responsiveness, bugs)
 - Pedagogical evaluation (alignment, cognitive level, effectiveness)
 - User experience evaluation (intuitiveness, accessibility, engagement)
@@ -402,6 +395,7 @@ The following concepts are explicitly taught and practiced:
 - Automated vs. human evaluation methods
 
 ### User Research
+
 - Think-aloud protocol design and facilitation
 - Observational techniques
 - Feedback interpretation
@@ -409,6 +403,7 @@ The following concepts are explicitly taught and practiced:
 - Ethical considerations in educational research
 
 ### Iteration and Refinement
+
 - Design-test-refine cycle management
 - Change prioritization frameworks
 - Version control for educational content
@@ -416,6 +411,7 @@ The following concepts are explicitly taught and practiced:
 - Scope management
 
 ### Accessibility and Inclusion
+
 - Universal Design for Learning (UDL) principles
 - Screen reader compatibility
 - Keyboard navigation requirements
@@ -424,6 +420,7 @@ The following concepts are explicitly taught and practiced:
 - Multilingual support strategies
 
 ### AI-Assisted Development
+
 - Prompt engineering for MicroSim generation
 - Iterative refinement conversations
 - Output interpretation and issue identification
@@ -431,19 +428,19 @@ The following concepts are explicitly taught and practiced:
 - Human-AI collaboration patterns
 
 ### Deployment and Maintenance
+
 - LMS integration techniques
 - Analytics implementation
 - Long-term maintenance planning
 - Library organization and reusability
 - Collaboration and sharing practices
 
----
-
 ## Concepts NOT Covered in This Course
 
 The following topics are outside the scope of this course:
 
 ### Programming and Technical Implementation
+
 - JavaScript, HTML, or CSS coding
 - p5.js, Chart.js, or other library APIs
 - Debugging code errors
@@ -452,6 +449,7 @@ The following topics are outside the scope of this course:
 - Version control systems (Git)
 
 ### Advanced Research Methods
+
 - Statistical analysis of learning outcomes
 - Randomized controlled trial design
 - Psychometric validation
@@ -459,6 +457,7 @@ The following topics are outside the scope of this course:
 - Machine learning for adaptive learning
 
 ### Graphic Design
+
 - Visual design principles (typography, color theory, composition)
 - Icon and illustration creation
 - Animation principles (beyond pedagogical considerations)
@@ -466,6 +465,7 @@ The following topics are outside the scope of this course:
 - Professional graphic design software (Photoshop, Illustrator, Figma)
 
 ### Learning Management System Administration
+
 - LMS configuration and setup
 - User management and permissions
 - Gradebook configuration
@@ -473,6 +473,7 @@ The following topics are outside the scope of this course:
 - SCORM/xAPI technical implementation
 
 ### Content Creation Beyond MicroSims
+
 - Video production and editing
 - Podcast or audio content creation
 - Written curriculum development
@@ -480,6 +481,7 @@ The following topics are outside the scope of this course:
 - Gamification and game-based learning design
 
 ### Organizational Change Management
+
 - Institutional adoption strategies
 - Faculty development programs
 - Budget planning and resource allocation
@@ -487,6 +489,7 @@ The following topics are outside the scope of this course:
 - Policy development
 
 ### Advanced Accessibility
+
 - WCAG 2.1 AA/AAA compliance auditing
 - Assistive technology testing
 - Legal accessibility requirements by jurisdiction
@@ -494,13 +497,12 @@ The following topics are outside the scope of this course:
 - Sign language interpretation
 
 ### Specialized Domains
+
 - Simulation for high-stakes training (medical, aviation, military)
 - Virtual reality or augmented reality development
 - Hardware-integrated simulations
 - Real-time multiplayer educational experiences
 - Adaptive learning system design
-
----
 
 ## Learning Objectives by Bloom's Taxonomy (2001 Revision)
 
@@ -577,8 +579,6 @@ The 2001 revision of Bloom's Taxonomy by Anderson and Krathwohl reorganized cogn
 - **Synthesize** feedback from multiple sources into prioritized design changes
 - **Author** a complete portfolio demonstrating mastery of the MicroSim development lifecycle
 
----
-
 ## Getting Started
 
 To begin this course:
@@ -588,4 +588,4 @@ To begin this course:
 3. Complete the Module 1 readings on Bloom's Taxonomy
 4. Begin the learning objective analysis activity
 
-Welcome to the future of instructional design.
+Welcome to the future of instructional design! - Dan McCreary

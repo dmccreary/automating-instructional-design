@@ -65,3 +65,6 @@ In fall 2023, working with [Val Lockhart](https://dmccreary.medium.com/micro-sim
 ### The Final Piece
 
 The introduction of [Claude Code Skills](https://dmccreary.github.io/claude-skills/) triggered a 100x productivity jump in MicroSim generation. The pieces finally came together: knowledge graphs for structure, AI for generation, and MicroSims for engagement. We're now ready to transform how instructional design is done.
+
+Dan McCreary
+December 19th, 2025
