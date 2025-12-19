@@ -69,7 +69,6 @@ let pulsePhase = 0;
 let mouseOverCanvas = false;
 
 // UI elements
-let generateButton;
 let randomButton;
 
 function setup() {
@@ -88,12 +87,8 @@ function setup() {
   calculateVerbPositions();
 
   // Create buttons
-  generateButton = createButton('Generate Template');
-  generateButton.position(10, drawHeight + 15);
-  generateButton.mousePressed(generateTemplate);
-
   randomButton = createButton('Random Verb');
-  randomButton.position(140, drawHeight + 15);
+  randomButton.position(10, drawHeight + 8);
   randomButton.mousePressed(selectRandomVerb);
 
   textFont('Arial');
@@ -119,42 +114,71 @@ function calculateVerbPositions() {
     const startAngle = i * anglePerLevel - HALF_PI;
     const levelPositions = [];
 
-    const verbCount = level.verbs.length;
-
-    // Use more of the wedge angle (95% instead of 85%)
+    // Use more of the wedge angle
     const verbAngleSpan = anglePerLevel * 0.92;
     const wedgePadding = (anglePerLevel - verbAngleSpan) / 2;
 
-    // Arrange verbs in two rows: inner and outer
-    const innerRowRadius = innerRadius + (outerRadius - innerRadius) * 0.3;
-    const outerRowRadius = innerRadius + (outerRadius - innerRadius) * 0.7;
+    // Arrange verbs in three rows: inner, middle, outer
+    const innerRowRadius = innerRadius + (outerRadius - innerRadius) * 0.2;
+    const middleRowRadius = innerRadius + (outerRadius - innerRadius) * 0.5;
+    const outerRowRadius = innerRadius + (outerRadius - innerRadius) * 0.8;
 
-    // Split verbs between two rows (5 outer, 3 inner for 8 verbs)
-    const outerRowCount = 5;
+    // Find the longest verb and sort verbs by length
+    const verbsWithLength = level.verbs.map((v, idx) => ({ verb: v, origIndex: idx, len: v.length }));
+    verbsWithLength.sort((a, b) => b.len - a.len);
 
-    for (let j = 0; j < verbCount; j++) {
-      const isOuterRow = j < outerRowCount;
-      const rowIndex = isOuterRow ? j : j - outerRowCount;
-      const rowCount = isOuterRow ? outerRowCount : (verbCount - outerRowCount);
+    // Distribution: 1 inner (longest), 3 middle, 4 outer
+    const innerVerbs = verbsWithLength.slice(0, 1);   // 1 longest
+    const middleVerbs = verbsWithLength.slice(1, 4);  // 3 next
+    const outerVerbs = verbsWithLength.slice(4, 8);   // 4 remaining
 
-      // Calculate angle position within the row
-      // Both rows use extended span to spread verbs wider
-      const rowAngleSpan = verbAngleSpan * 1.15;
-      const rowPadding = (verbAngleSpan - rowAngleSpan) / 2;
-      const angleStep = rowAngleSpan / (rowCount + 1);
-      const angle = startAngle + wedgePadding + rowPadding + angleStep * (rowIndex + 1);
-
-      // Select radius based on row
-      const r = isOuterRow ? outerRowRadius : innerRowRadius;
-
+    // Place inner row verb (1 verb, centered)
+    // Adjust angle for Evaluate and Understand to move them lower (higher y) to avoid overlap
+    const angleAdjust = (level.name === "Evaluate" || level.name === "Understand") ? 0.15 : 0;
+    for (let j = 0; j < innerVerbs.length; j++) {
+      const angle = startAngle + anglePerLevel / 2 + angleAdjust; // centered in wedge with adjustment
       levelPositions.push({
-        verb: level.verbs[j],
-        x: centerX + cos(angle) * r,
-        y: centerY + sin(angle) * r,
+        verb: innerVerbs[j].verb,
+        x: centerX + cos(angle) * innerRowRadius,
+        y: centerY + sin(angle) * innerRowRadius,
         angle: angle,
-        levelIndex: i
+        levelIndex: i,
+        isInnerRow: true  // flag for wider circle
       });
     }
+
+    // Place middle row verbs (3 verbs)
+    const middleAngleSpan = verbAngleSpan * 1.15;
+    const middlePadding = (verbAngleSpan - middleAngleSpan) / 2;
+    const middleStep = middleAngleSpan / (middleVerbs.length + 1);
+    for (let j = 0; j < middleVerbs.length; j++) {
+      const angle = startAngle + wedgePadding + middlePadding + middleStep * (j + 1);
+      levelPositions.push({
+        verb: middleVerbs[j].verb,
+        x: centerX + cos(angle) * middleRowRadius,
+        y: centerY + sin(angle) * middleRowRadius,
+        angle: angle,
+        levelIndex: i,
+        isInnerRow: false
+      });
+    }
+
+    // Place outer row verbs (4 verbs)
+    const outerAngleSpan = verbAngleSpan * 1.30;
+    const outerPadding = (verbAngleSpan - outerAngleSpan) / 2;
+    const outerStep = outerAngleSpan / (outerVerbs.length + 1);
+    for (let j = 0; j < outerVerbs.length; j++) {
+      const angle = startAngle + wedgePadding + outerPadding + outerStep * (j + 1);
+      levelPositions.push({
+        verb: outerVerbs[j].verb,
+        x: centerX + cos(angle) * outerRowRadius,
+        y: centerY + sin(angle) * outerRowRadius,
+        angle: angle,
+        levelIndex: i,
+        isInnerRow: false
+      });
+    }
+
     verbPositions.push(levelPositions);
   }
 }
@@ -194,6 +218,17 @@ function draw() {
   textSize(20);
   textAlign(CENTER, TOP);
   text("Bloom's Taxonomy Action Verb Wheel", canvasWidth / 2, 10);
+
+  // Draw example in control area when a verb is selected
+  if (selectedVerb && selectedLevel !== null) {
+    const level = bloomLevels[selectedLevel];
+    const example = level.example.replace('[VERB]', selectedVerb);
+    fill('#333');
+    noStroke();
+    textSize(14);
+    textAlign(LEFT, CENTER);
+    text("Example: " + example, 120, drawHeight + 20);
+  }
 
   // Reset text settings
   textAlign(LEFT, CENTER);
@@ -289,21 +324,37 @@ function drawVerbs() {
 
     for (let j = 0; j < levelPositions.length; j++) {
       const vp = levelPositions[j];
-      const isHovered = dist(mouseX, mouseY, vp.x, vp.y) < 25;
       const isSelected = selectedVerb === vp.verb && selectedLevel === i;
+
+      // Calculate circle width based on text width
+      textStyle(isSelected ? BOLD : NORMAL);
+      const verbTextWidth = textWidth(vp.verb);
+      const padding = 12; // horizontal padding around text
+      const ellipseWidth = verbTextWidth + padding * 2;
+      const ellipseHeight = 22; // fixed height
+
+      // Check hover using ellipse dimensions
+      const isHovered = abs(mouseX - vp.x) < ellipseWidth / 2 && abs(mouseY - vp.y) < ellipseHeight / 2;
 
       if (isHovered) {
         hoveredVerb = { verb: vp.verb, levelIndex: i };
       }
+
+      // Store dimensions for click detection
+      vp.ellipseWidth = ellipseWidth;
+      vp.ellipseHeight = ellipseHeight;
 
       // Verb background
       push();
       translate(vp.x, vp.y);
 
       // Pulsing effect for selected verb
-      let radius = 22;
+      let widthAdjust = 0;
+      let heightAdjust = 0;
       if (isSelected) {
-        radius += sin(pulsePhase * 3) * 3;
+        const pulse = sin(pulsePhase * 3) * 3;
+        widthAdjust = pulse;
+        heightAdjust = pulse * 0.7;
         fill(255, 255, 255, 240);
         stroke(level.color);
         strokeWeight(3);
@@ -317,12 +368,11 @@ function drawVerbs() {
         strokeWeight(1);
       }
 
-      ellipse(0, 0, radius * 2, radius * 1.4);
+      ellipse(0, 0, ellipseWidth + widthAdjust, ellipseHeight + heightAdjust);
 
       // Verb text
       fill(isSelected ? level.color : '#333');
       noStroke();
-      textStyle(isSelected ? BOLD : NORMAL);
       text(vp.verb, 0, 0);
       textStyle(NORMAL);
 
@@ -386,12 +436,14 @@ function drawCenter() {
 }
 
 function mousePressed() {
-  // Check if clicked on a verb
+  // Check if clicked on a verb using dynamic ellipse dimensions
   for (let i = 0; i < verbPositions.length; i++) {
     const levelPositions = verbPositions[i];
     for (let j = 0; j < levelPositions.length; j++) {
       const vp = levelPositions[j];
-      if (dist(mouseX, mouseY, vp.x, vp.y) < 25) {
+      const halfWidth = (vp.ellipseWidth || 44) / 2;
+      const halfHeight = (vp.ellipseHeight || 22) / 2;
+      if (abs(mouseX - vp.x) < halfWidth && abs(mouseY - vp.y) < halfHeight) {
         selectedVerb = vp.verb;
         selectedLevel = i;
         return;
@@ -403,22 +455,6 @@ function mousePressed() {
   if (dist(mouseX, mouseY, centerX, centerY) < innerRadius) {
     selectedVerb = null;
     selectedLevel = null;
-  }
-}
-
-function generateTemplate() {
-  if (selectedVerb) {
-    const level = bloomLevels[selectedLevel];
-    const template = `Learning Objective Template (${level.name} Level):\n\n"Students will be able to ${selectedVerb} [CONTENT/SKILL] by [METHOD/CONDITION]."\n\nExample: ${level.example.replace('[VERB]', selectedVerb)}`;
-
-    // Copy to clipboard
-    navigator.clipboard.writeText(template).then(() => {
-      alert('Template copied to clipboard!\n\n' + template);
-    }).catch(() => {
-      alert(template);
-    });
-  } else {
-    alert('Please select a verb first by clicking on one in the wheel.');
   }
 }
 
