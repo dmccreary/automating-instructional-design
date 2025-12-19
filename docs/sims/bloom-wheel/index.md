@@ -10,7 +10,7 @@ social:
 
 # Bloom's Taxonomy Action Verb Wheel
 
-<iframe src="main.html" height="662px" width="100%" scrolling="no"></iframe>
+<iframe src="main.html" height="702px" width="100%" scrolling="no"></iframe>
 
 [Run the Bloom Wheel MicroSim Fullscreen](./main.html){ .md-button .md-button--primary }
 

@@ -3,7 +3,7 @@
 
 // Canvas dimensions
 let canvasWidth = 600;
-let drawHeight = 600;
+let drawHeight = 660;
 let controlHeight = 60;
 let canvasHeight = drawHeight + controlHeight;
 
@@ -103,7 +103,8 @@ function setup() {
 
 function updateWheelDimensions() {
   centerX = canvasWidth / 2;
-  centerY = drawHeight / 2;
+  // halfway down the drawing area plus some for the title
+  centerY = drawHeight / 2 + 20;
   outerRadius = min(canvasWidth, drawHeight) * 0.45;
   innerRadius = outerRadius * 0.35;
   verbRadius = (outerRadius + innerRadius) / 2;
@@ -119,15 +120,32 @@ function calculateVerbPositions() {
     const levelPositions = [];
 
     const verbCount = level.verbs.length;
-    const verbAngleSpan = anglePerLevel * 0.85;
-    const verbAngleStep = verbAngleSpan / (verbCount - 1 || 1);
-    const verbStartAngle = startAngle + (anglePerLevel - verbAngleSpan) / 2;
+
+    // Use more of the wedge angle (95% instead of 85%)
+    const verbAngleSpan = anglePerLevel * 0.92;
+    const wedgePadding = (anglePerLevel - verbAngleSpan) / 2;
+
+    // Arrange verbs in two rows: inner and outer
+    const innerRowRadius = innerRadius + (outerRadius - innerRadius) * 0.3;
+    const outerRowRadius = innerRadius + (outerRadius - innerRadius) * 0.7;
+
+    // Split verbs between two rows (5 outer, 3 inner for 8 verbs)
+    const outerRowCount = 5;
 
     for (let j = 0; j < verbCount; j++) {
-      // Alternate between two radii for better spacing
-      const radiusOffset = (j % 2 === 0) ? -15 : 15;
-      const r = verbRadius + radiusOffset;
-      const angle = verbStartAngle + j * verbAngleStep;
+      const isOuterRow = j < outerRowCount;
+      const rowIndex = isOuterRow ? j : j - outerRowCount;
+      const rowCount = isOuterRow ? outerRowCount : (verbCount - outerRowCount);
+
+      // Calculate angle position within the row
+      // Both rows use extended span to spread verbs wider
+      const rowAngleSpan = verbAngleSpan * 1.15;
+      const rowPadding = (verbAngleSpan - rowAngleSpan) / 2;
+      const angleStep = rowAngleSpan / (rowCount + 1);
+      const angle = startAngle + wedgePadding + rowPadding + angleStep * (rowIndex + 1);
+
+      // Select radius based on row
+      const r = isOuterRow ? outerRowRadius : innerRowRadius;
 
       levelPositions.push({
         verb: level.verbs[j],
@@ -239,14 +257,19 @@ function drawWheel() {
     push();
     translate(x, y);
     let rotAngle = midAngle + HALF_PI;
-    if (midAngle > HALF_PI && midAngle < PI + HALF_PI) {
+    // Determine if label should be flipped for readability
+    let shouldFlip = midAngle > HALF_PI && midAngle < PI + HALF_PI;
+    // Special handling for Apply and Create labels
+    if (level.name === "Apply") shouldFlip = true;
+    if (level.name === "Create") shouldFlip = false;
+    if (shouldFlip) {
       rotAngle += PI;
     }
     rotate(rotAngle);
 
     fill('#333');
     noStroke();
-    textSize(12);
+    textSize(20);
     textAlign(CENTER, CENTER);
     text(level.name, 0, 0);
     pop();
@@ -418,13 +441,5 @@ function updateCanvasSize() {
   if (container) {
     canvasWidth = container.offsetWidth;
     canvasHeight = drawHeight + controlHeight;
-
-    // Reposition buttons
-    if (typeof generateButton !== 'undefined') {
-      generateButton.position(10, drawHeight + 15);
-    }
-    if (typeof randomButton !== 'undefined') {
-      randomButton.position(140, drawHeight + 15);
-    }
   }
 }
