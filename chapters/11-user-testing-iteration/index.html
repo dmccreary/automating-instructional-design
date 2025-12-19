@@ -6,7 +6,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="A hands-on guide to automating instructional design tasks using AI and other tools.">
+        <meta name="description" content="Comprehensive guide to user testing methodologies, xAPI analytics, and iterative refinement processes for MicroSims, covering think-aloud protocols, A/B testing, Learning Record Stores, and the design-test-refine cycle.">
       
       
         <meta name="author" content="Dan McCreary">
@@ -15,10 +15,10 @@
         <link rel="canonical" href="https://dmccreary.github.io/automating-instructional-design/chapters/11-user-testing-iteration/">
       
       
-        <link rel="prev" href="../10-quality-evaluation-frameworks/">
+        <link rel="prev" href="../10-quality-evaluation-frameworks/quiz/">
       
       
-        <link rel="next" href="../12-accessibility-deployment-completion/">
+        <link rel="next" href="quiz/">
       
       
       <link rel="icon" href="../../img/favicon.ico">
@@ -57,6 +57,16 @@
     <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
+  
+
+
+  
+  
+
+<script id="__analytics">function __md_analytics(){function e(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],e("js",new Date),e("config","G-S4GYB1W20G"),document.addEventListener("DOMContentLoaded",(function(){document.forms.search&&document.forms.search.query.addEventListener("blur",(function(){this.value&&e("event","search",{search_term:this.value})}));document$.subscribe((function(){var t=document.forms.feedback;if(void 0!==t)for(var a of t.querySelectorAll("[type=submit]"))a.addEventListener("click",(function(a){a.preventDefault();var n=document.location.pathname,d=this.getAttribute("data-md-value");e("event","feedback",{page:n,data:d}),t.firstElementChild.disabled=!0;var r=t.querySelector(".md-feedback__note [data-md-value='"+d+"']");r&&(r.hidden=!1)})),t.hidden=!1})),location$.subscribe((function(t){e("config","G-S4GYB1W20G",{page_path:t.pathname})}))}));var t=document.createElement("script");t.async=!0,t.src="https://www.googletagmanager.com/gtag/js?id=G-S4GYB1W20G",document.getElementById("__analytics").insertAdjacentElement("afterEnd",t)}</script>
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
 
     
     
@@ -65,7 +75,7 @@
       
         <meta  property="og:title"  content="User Testing and Iteration - Automating Instructional Design" >
       
-        <meta  property="og:description"  content="A hands-on guide to automating instructional design tasks using AI and other tools." >
+        <meta  property="og:description"  content="Comprehensive guide to user testing methodologies, xAPI analytics, and iterative refinement processes for MicroSims, covering think-aloud protocols, A/B testing, Learning Record Stores, and the design-test-refine cycle." >
       
         <meta  property="og:image"  content="https://dmccreary.github.io/automating-instructional-design/assets/images/social/chapters/11-user-testing-iteration/index.png" >
       
@@ -81,7 +91,7 @@
       
         <meta  name="twitter:title"  content="User Testing and Iteration - Automating Instructional Design" >
       
-        <meta  name="twitter:description"  content="A hands-on guide to automating instructional design tasks using AI and other tools." >
+        <meta  name="twitter:description"  content="Comprehensive guide to user testing methodologies, xAPI analytics, and iterative refinement processes for MicroSims, covering think-aloud protocols, A/B testing, Learning Record Stores, and the design-test-refine cycle." >
       
         <meta  name="twitter:image"  content="https://dmccreary.github.io/automating-instructional-design/assets/images/social/chapters/11-user-testing-iteration/index.png" >
       
@@ -280,6 +290,28 @@
   
   
     <li class="md-nav__item">
+      <a href="../../about/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    About This Course
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../course-description/" class="md-nav__link">
         
   
@@ -334,6 +366,8 @@
       
         
       
+        
+      
     
     
     
@@ -344,7 +378,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
         
           
           <div class="md-nav__link md-nav__container">
@@ -361,14 +395,14 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_3">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
             <span class="md-nav__icon md-icon"></span>
             Chapters
           </label>
@@ -382,316 +416,46 @@
   
   
   
-    <li class="md-nav__item">
-      <a href="../01-foundations-learning-objective-analysis/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Foundations of Learning Objective Analysis
     
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../02-prerequisite-analysis-microsim-fundamentals/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Prerequisite Analysis and MicroSim Fundamentals
     
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../03-microsim-pattern-library/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    The MicroSim Pattern Library
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../04-visualization-libraries-tools/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Visualization Libraries and Tools
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../05-writing-microsim-specifications/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Writing Effective MicroSim Specifications
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../06-adapting-audience-levels/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Adapting for Audience Levels
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../07-cognitive-load-visual-design/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Cognitive Load and Visual Design
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../08-anticipating-misconceptions/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Anticipating Misconceptions
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../09-generating-microsims-ai-tools/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Generating MicroSims with AI Tools
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../10-quality-evaluation-frameworks/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Quality Evaluation Frameworks
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-    
-  
-  
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
       
         
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
           
+        
+      
+        
+      
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../01-foundations-learning-objective-analysis/" class="md-nav__link">
+      
   
   
   <span class="md-ellipsis">
-    User Testing and Iteration
+    1. Foundations of Learning Objective Analysis
     
   </span>
   
 
-          <span class="md-nav__icon md-icon"></span>
-        </label>
       
-      <a href="./" class="md-nav__link md-nav__link--active">
-        
-  
-  
-  <span class="md-ellipsis">
-    User Testing and Iteration
-    
-  </span>
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
   
 
-      </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#summary" class="md-nav__link">
-    <span class="md-ellipsis">
-      Summary
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#concepts-covered" class="md-nav__link">
-    <span class="md-ellipsis">
-      Concepts Covered
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#prerequisites" class="md-nav__link">
-    <span class="md-ellipsis">
-      Prerequisites
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
       
     </li>
   
@@ -704,13 +468,540 @@
   
   
   
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../02-prerequisite-analysis-microsim-fundamentals/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    2. Prerequisite Analysis and MicroSim Fundamentals
+    
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../03-microsim-pattern-library/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    3. The MicroSim Pattern Library
+    
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../04-visualization-libraries-tools/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    4. Visualization Libraries and Tools
+    
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../05-writing-microsim-specifications/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    5. Writing Effective MicroSim Specifications
+    
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../06-adapting-audience-levels/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    6. Adapting for Audience Levels
+    
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../07-cognitive-load-visual-design/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    7. Cognitive Load and Visual Design
+    
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../08-anticipating-misconceptions/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    8. Anticipating Misconceptions
+    
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../09-generating-microsims-ai-tools/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    9. Generating MicroSims with AI Tools
+    
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../10-quality-evaluation-frameworks/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    10. Quality Evaluation Frameworks
+    
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_12" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="./" class="md-nav__link md-nav__link--active">
+              
+  
+  
+  <span class="md-ellipsis">
+    11. User Testing and Iteration
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link md-nav__link--active" for="__nav_4_12" id="__nav_4_12_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_12_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4_12">
+            <span class="md-nav__icon md-icon"></span>
+            11. User Testing and Iteration
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
     <li class="md-nav__item">
-      <a href="../12-accessibility-deployment-completion/" class="md-nav__link">
+      <a href="quiz/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    Accessibility, Deployment, and Course Completion
+    Quiz
     
   </span>
   
@@ -723,6 +1014,142 @@
             
           </ul>
         </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../12-accessibility-deployment-completion/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    12. Accessibility, Deployment, and Course Completion
+    
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../13-capstone-projects/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    13. Capstone Projects
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../sims/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    MicroSims
+    
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
       
     </li>
   
@@ -802,6 +1229,20 @@
       
         
       
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
     
     
     
@@ -844,47 +1285,18 @@
   
   
   
-    
-    
-      
+    <li class="md-nav__item">
+      <a href="../../checklist/" class="md-nav__link">
         
-          
-        
-      
-        
-      
-    
-    
-    
-    
-      
-        
-        
-      
-    
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-      
-        
-  
-  
-  
-    <a href="../../sims/graph-viewer/" class="md-nav__link">
-      
   
   
   <span class="md-ellipsis">
-    MicroSims
+    Checklist
     
   </span>
   
 
-      
-        <span class="md-nav__icon md-icon"></span>
-      
-    </a>
-  
-
-      
+      </a>
     </li>
   
 
@@ -896,12 +1308,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../../checklist/" class="md-nav__link">
+      <a href="../../faq/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    Checklist
+    FAQ
     
   </span>
   
@@ -1060,6 +1472,16 @@
       
         
       
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
     
     
     
@@ -1149,6 +1571,753 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#introduction-the-testing-mindset" class="md-nav__link">
+    <span class="md-ellipsis">
+      Introduction: The Testing Mindset
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#two-testing-contexts-standalone-vs-intelligent-textbook" class="md-nav__link">
+    <span class="md-ellipsis">
+      Two Testing Contexts: Standalone vs. Intelligent Textbook
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Two Testing Contexts: Standalone vs. Intelligent Textbook">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#standalone-microsim-testing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Standalone MicroSim Testing
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#intelligent-textbook-integration-testing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Intelligent Textbook Integration Testing
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#think-aloud-protocol-getting-inside-learners-heads" class="md-nav__link">
+    <span class="md-ellipsis">
+      Think-Aloud Protocol: Getting Inside Learners' Heads
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Think-Aloud Protocol: Getting Inside Learners&#39; Heads">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#how-it-works" class="md-nav__link">
+    <span class="md-ellipsis">
+      How It Works
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-youll-hear-and-what-it-means" class="md-nav__link">
+    <span class="md-ellipsis">
+      What You'll Hear (And What It Means)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-art-of-not-intervening" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Art of Not Intervening
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The Art of Not Intervening">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-think-aloud-protocol-workflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Think-Aloud Protocol Workflow
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#observation-techniques-watching-without-interfering" class="md-nav__link">
+    <span class="md-ellipsis">
+      Observation Techniques: Watching Without Interfering
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Observation Techniques: Watching Without Interfering">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#structured-observation-categories" class="md-nav__link">
+    <span class="md-ellipsis">
+      Structured Observation Categories
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#creating-an-observation-checklist" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creating an Observation Checklist
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#remote-observation-tools" class="md-nav__link">
+    <span class="md-ellipsis">
+      Remote Observation Tools
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gathering-learner-feedback-age-and-ability-considerations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Gathering Learner Feedback: Age and Ability Considerations
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Gathering Learner Feedback: Age and Ability Considerations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#age-based-feedback-strategies" class="md-nav__link">
+    <span class="md-ellipsis">
+      Age-Based Feedback Strategies
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ability-based-feedback-accommodations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ability-Based Feedback Accommodations
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-conversation-prompting-technique" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Conversation Prompting Technique
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ab-testing-the-scientific-approach-to-design-decisions" class="md-nav__link">
+    <span class="md-ellipsis">
+      A/B Testing: The Scientific Approach to Design Decisions
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="A/B Testing: The Scientific Approach to Design Decisions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ab-testing-fundamentals" class="md-nav__link">
+    <span class="md-ellipsis">
+      A/B Testing Fundamentals
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-page-views-vs-simulation-tracking-problem" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Page Views vs. Simulation Tracking Problem
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The Page Views vs. Simulation Tracking Problem">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-page-view-vs-simulation-tracking" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Page-View vs. Simulation Tracking
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#xapi-the-experience-api-for-fine-grained-tracking" class="md-nav__link">
+    <span class="md-ellipsis">
+      xAPI: The Experience API for Fine-Grained Tracking
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="xAPI: The Experience API for Fine-Grained Tracking">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-elegant-simplicity-of-who-what-when" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Elegant Simplicity of Who-What-When
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#xapi-statement-structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      xAPI Statement Structure
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#why-this-matters-for-ab-testing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why This Matters for A/B Testing
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-learning-record-store-where-xapi-events-live" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Learning Record Store: Where xAPI Events Live
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The Learning Record Store: Where xAPI Events Live">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-is-an-lrs" class="md-nav__link">
+    <span class="md-ellipsis">
+      What Is an LRS?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-privacy-and-security-consideration" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Privacy and Security Consideration
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The Privacy and Security Consideration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-xapi-data-flow" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: xAPI Data Flow
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ieee-learning-standards-and-total-learning-architecture" class="md-nav__link">
+    <span class="md-ellipsis">
+      IEEE Learning Standards and Total Learning Architecture
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="IEEE Learning Standards and Total Learning Architecture">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-standards-landscape" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Standards Landscape
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#total-learning-architecture-tla" class="md-nav__link">
+    <span class="md-ellipsis">
+      Total Learning Architecture (TLA)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-golden-rule-of-microsim-tracking" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Golden Rule of MicroSim Tracking
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-design-test-refine-cycle" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Design-Test-Refine Cycle
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The Design-Test-Refine Cycle">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-cycle-phases" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Cycle Phases
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#when-to-stop-iterating" class="md-nav__link">
+    <span class="md-ellipsis">
+      When to Stop Iterating
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="When to Stop Iterating">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-design-test-refine-cycle" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Design-Test-Refine Cycle
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#change-prioritization-critical-vs-nice-to-have" class="md-nav__link">
+    <span class="md-ellipsis">
+      Change Prioritization: Critical vs. Nice-to-Have
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Change Prioritization: Critical vs. Nice-to-Have">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-priority-matrix" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Priority Matrix
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#critical-changes-fix-these-first" class="md-nav__link">
+    <span class="md-ellipsis">
+      Critical Changes: Fix These First
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nice-to-have-changes-the-parking-lot" class="md-nav__link">
+    <span class="md-ellipsis">
+      Nice-to-Have Changes: The Parking Lot
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fundamental-redesign-vs-incremental-improvement" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fundamental Redesign vs. Incremental Improvement
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Fundamental Redesign vs. Incremental Improvement">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#signs-you-need-fundamental-redesign" class="md-nav__link">
+    <span class="md-ellipsis">
+      Signs You Need Fundamental Redesign
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#signs-incremental-improvement-will-work" class="md-nav__link">
+    <span class="md-ellipsis">
+      Signs Incremental Improvement Will Work
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-sunk-cost-trap" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Sunk Cost Trap
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#scope-creep-prevention-staying-focused" class="md-nav__link">
+    <span class="md-ellipsis">
+      Scope Creep Prevention: Staying Focused
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Scope Creep Prevention: Staying Focused">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#scope-creep-prevention-strategies" class="md-nav__link">
+    <span class="md-ellipsis">
+      Scope Creep Prevention Strategies
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-mvp-mindset" class="md-nav__link">
+    <span class="md-ellipsis">
+      The MVP Mindset
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#change-logs-and-design-rationale-documenting-your-decisions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Change Logs and Design Rationale: Documenting Your Decisions
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Change Logs and Design Rationale: Documenting Your Decisions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#maintaining-a-change-log" class="md-nav__link">
+    <span class="md-ellipsis">
+      Maintaining a Change Log
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#documenting-design-rationale" class="md-nav__link">
+    <span class="md-ellipsis">
+      Documenting Design Rationale
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ethical-research-considerations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ethical Research Considerations
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Ethical Research Considerations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#informed-consent" class="md-nav__link">
+    <span class="md-ellipsis">
+      Informed Consent
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#power-dynamics" class="md-nav__link">
+    <span class="md-ellipsis">
+      Power Dynamics
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#data-protection" class="md-nav__link">
+    <span class="md-ellipsis">
+      Data Protection
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#test-interpretation-making-sense-of-the-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      Test Interpretation: Making Sense of the Data
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Test Interpretation: Making Sense of the Data">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#confirmation-bias" class="md-nav__link">
+    <span class="md-ellipsis">
+      Confirmation Bias
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#overgeneralizing-from-small-samples" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overgeneralizing from Small Samples
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#confusing-correlation-with-causation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Confusing Correlation with Causation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-expert-blind-spot" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Expert Blind Spot
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The Expert Blind Spot">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-common-interpretation-pitfalls" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Common Interpretation Pitfalls
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#building-a-microsim-testing-culture" class="md-nav__link">
+    <span class="md-ellipsis">
+      Building a MicroSim Testing Culture
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Building a MicroSim Testing Culture">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#test-early-and-often" class="md-nav__link">
+    <span class="md-ellipsis">
+      Test Early and Often
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#build-testing-infrastructure" class="md-nav__link">
+    <span class="md-ellipsis">
+      Build Testing Infrastructure
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#celebrate-learning-from-failure" class="md-nav__link">
+    <span class="md-ellipsis">
+      Celebrate Learning from Failure
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#summary-the-iterative-mindset" class="md-nav__link">
+    <span class="md-ellipsis">
+      Summary: The Iterative Mindset
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-takeaways" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key Takeaways
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reflection-questions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reflection Questions
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    <span class="md-ellipsis">
+      References
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1177,7 +2346,7 @@
 <h2 id="summary">Summary</h2>
 <p>This chapter covers user testing methodologies and the iterative refinement process for MicroSims. You will learn think-aloud protocols, A/B testing design, and techniques for gathering learner feedback across different ages and abilities. The chapter addresses observation techniques, test interpretation, ethical research considerations, and the complete design-test-refine cycle. You will also master change prioritization, distinguishing critical from nice-to-have changes, deciding between fundamental redesign and incremental improvement, preventing scope creep, defining completion criteria, maintaining change logs, and documenting design rationale.</p>
 <h2 id="concepts-covered">Concepts Covered</h2>
-<p>This chapter covers the following 20 concepts from the learning graph:</p>
+<p>This chapter covers the following concepts from the learning graph:</p>
 <ol>
 <li>Iterative Refinement</li>
 <li>Conversation Prompting</li>
@@ -1199,6 +2368,14 @@
 <li>Completion Criteria</li>
 <li>Change Log</li>
 <li>Design Rationale</li>
+<li>Google Analytics</li>
+<li>Simulation Tracking</li>
+<li>xAPI</li>
+<li>Tracking Who-What-When</li>
+<li>Learning Record Store</li>
+<li>xAPI events to a LRS</li>
+<li>IEEE Learning Standards</li>
+<li>Total Learning Architecture</li>
 </ol>
 <h2 id="prerequisites">Prerequisites</h2>
 <p>This chapter builds on concepts from:</p>
@@ -1208,7 +2385,1008 @@
 <li><a href="../10-quality-evaluation-frameworks/">Chapter 10: Quality Evaluation Frameworks</a></li>
 </ul>
 <hr />
-<p>TODO: Generate Chapter Content</p>
+<h2 id="introduction-the-testing-mindset">Introduction: The Testing Mindset</h2>
+<p>Here's a truth that separates good instructional designers from great ones: <strong>the MicroSim you ship is never the MicroSim you first built.</strong></p>
+<p>No matter how brilliant your initial design, real learners will interact with it in ways you never anticipated. They'll miss the obvious button, ignore your carefully crafted instructions, and somehow discover that dragging the slider to -47 causes the entire simulation to explode (metaphorically, we hope). This isn't a failure—it's valuable data.</p>
+<p>User testing and iteration transform your "pretty good" MicroSim into an "actually works for real humans" MicroSim. Think of it as the difference between a rehearsal and opening night. Rehearsals are where you discover that the trapdoor sticks, the lighting cue is three seconds late, and the lead actor is allergic to the prop flowers. Better to discover these things before the audience arrives.</p>
+<p>This chapter equips you with the methodologies to gather meaningful feedback, the analytics infrastructure to track what learners actually do (not just what you hope they do), and the iteration frameworks to systematically improve your work. Along the way, we'll explore the cutting-edge world of xAPI and Learning Record Stores—technologies that make "who did what when" not just a philosophical question but an answerable one.</p>
+<p>Let's dive in. Your learners are waiting, and they have opinions.</p>
+<hr />
+<h2 id="two-testing-contexts-standalone-vs-intelligent-textbook">Two Testing Contexts: Standalone vs. Intelligent Textbook</h2>
+<p>Before we get into specific methodologies, it's crucial to understand that MicroSims live in two very different habitats, and each requires its own testing approach.</p>
+<h3 id="standalone-microsim-testing">Standalone MicroSim Testing</h3>
+<p>In the standalone context, a teacher presents a MicroSim during a class lecture, projecting it on the screen while students follow along on their own devices. Testing in this environment emphasizes:</p>
+<ul>
+<li><strong>Synchronization</strong>: Can all students keep up with the teacher's pace?</li>
+<li><strong>Technical reliability</strong>: Does it work on the mix of devices in the classroom?</li>
+<li><strong>Attention management</strong>: Does the MicroSim enhance or compete with the lecture?</li>
+<li><strong>Discussion prompts</strong>: Does it generate productive class conversation?</li>
+</ul>
+<h3 id="intelligent-textbook-integration-testing">Intelligent Textbook Integration Testing</h3>
+<p>When a MicroSim lives inside an interactive intelligent textbook, the testing challenges multiply. Here's the key insight that changes everything:</p>
+<div class="admonition tip">
+<p class="admonition-title">Learning is Non-Linear</p>
+<p>In an interactive textbook, students "choose their own adventure." They hop around driven by curiosity, skip sections they think they know, and revisit concepts they found confusing. Your MicroSim must work regardless of what path brought the student there.</p>
+</div>
+<p>Integration testing must verify:</p>
+<ul>
+<li><strong>Context independence</strong>: Does the MicroSim make sense without reading the preceding paragraphs?</li>
+<li><strong>Navigation flow</strong>: Can students easily return to where they were?</li>
+<li><strong>Cross-reference validity</strong>: Do links to other sections still work?</li>
+<li><strong>Progressive disclosure</strong>: Does complexity unfold appropriately for different entry points?</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Testing Context</th>
+<th>Primary Focus</th>
+<th>Key Challenge</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Standalone</td>
+<td>Live classroom dynamics</td>
+<td>Synchronization with instruction</td>
+</tr>
+<tr>
+<td>Intelligent Textbook</td>
+<td>Non-linear navigation</td>
+<td>Context-independent comprehension</td>
+</tr>
+<tr>
+<td>Both</td>
+<td>Technical reliability</td>
+<td>Cross-device compatibility</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="think-aloud-protocol-getting-inside-learners-heads">Think-Aloud Protocol: Getting Inside Learners' Heads</h2>
+<p>The think-aloud protocol is the Swiss Army knife of user testing. It's simple, powerful, and reveals insights that no amount of analytics can capture. The basic premise: ask learners to verbalize their thoughts while using your MicroSim.</p>
+<h3 id="how-it-works">How It Works</h3>
+<ol>
+<li><strong>Set up</strong>: Provide the learner with the MicroSim and a recording method (audio, video, or notes)</li>
+<li><strong>Instruct</strong>: "Please say out loud everything you're thinking as you work through this simulation"</li>
+<li><strong>Observe</strong>: Watch and listen without interrupting (this is harder than it sounds)</li>
+<li><strong>Follow up</strong>: Ask clarifying questions after they've finished</li>
+</ol>
+<h3 id="what-youll-hear-and-what-it-means">What You'll Hear (And What It Means)</h3>
+<table>
+<thead>
+<tr>
+<th>Verbalization</th>
+<th>What It Reveals</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>"I wonder if I should click this..."</td>
+<td>Unclear affordances</td>
+</tr>
+<tr>
+<td>"Wait, what just happened?"</td>
+<td>Missing feedback</td>
+</tr>
+<tr>
+<td>"I think this means..."</td>
+<td>Testing understanding</td>
+</tr>
+<tr>
+<td>"Oh! That makes sense now!"</td>
+<td>Effective visualization</td>
+</tr>
+<tr>
+<td>[Long silence]</td>
+<td>Confusion or deep thought</td>
+</tr>
+<tr>
+<td>"This is annoying"</td>
+<td>UX friction</td>
+</tr>
+</tbody>
+</table>
+<h3 id="the-art-of-not-intervening">The Art of Not Intervening</h3>
+<p>The hardest part of think-aloud testing is keeping your mouth shut. When a participant struggles with something obvious (to you), the instinct to help is overwhelming. Resist it. Their struggle is your data.</p>
+<p>That said, some intervention guidelines:</p>
+<ul>
+<li><strong>Do intervene</strong> if they're about to give up entirely</li>
+<li><strong>Don't intervene</strong> if they're merely frustrated</li>
+<li><strong>Do intervene</strong> if technical issues unrelated to your MicroSim cause problems</li>
+<li><strong>Don't intervene</strong> to "explain what you meant"</li>
+</ul>
+<h4 id="diagram-think-aloud-protocol-workflow">Diagram: Think-Aloud Protocol Workflow</h4>
+<details>
+<summary>Think-Aloud Protocol Workflow</summary>
+<p>Type: workflow</p>
+<p>Bloom Taxonomy: Apply (L3)</p>
+<p>Learning Objective: Students will apply the think-aloud protocol to gather qualitative feedback on MicroSim usability.</p>
+<p>Visual style: Flowchart with phases and decision points</p>
+<p>Phases:
+1. Start: "Prepare Testing Session"
+   Hover text: "Set up recording equipment, prepare consent forms, ready the MicroSim"</p>
+<ol>
+<li>
+<p>Process: "Brief Participant"
+   Hover text: "Explain think-aloud method, reassure them the MicroSim is being tested, not them"</p>
+</li>
+<li>
+<p>Process: "Begin Recording"
+   Hover text: "Start audio/video capture, note start time"</p>
+</li>
+<li>
+<p>Process: "Participant Uses MicroSim"
+   Hover text: "Observe silently, take notes on behaviors and verbalizations"</p>
+</li>
+<li>
+<p>Decision: "Participant Stuck?"
+   Hover text: "Are they making no progress for extended period?"</p>
+</li>
+</ol>
+<p>6a. Process: "Provide Minimal Hint" (if Yes)
+    Hover text: "Give smallest possible nudge to continue"</p>
+<p>6b. Process: "Continue Observing" (if No)
+    Hover text: "Let them work through challenges"</p>
+<ol>
+<li>
+<p>Decision: "Task Complete?"
+   Hover text: "Has participant finished or given up?"</p>
+</li>
+<li>
+<p>Process: "Conduct Debrief"
+   Hover text: "Ask follow-up questions about their experience"</p>
+</li>
+<li>
+<p>Process: "Analyze Recording"
+   Hover text: "Review footage, code behaviors, identify patterns"</p>
+</li>
+<li>
+<p>End: "Document Insights"
+    Hover text: "Write up findings with specific examples"</p>
+</li>
+</ol>
+<p>Color coding:
+- Blue: Preparation steps
+- Green: Active testing
+- Yellow: Decision points
+- Purple: Analysis steps</p>
+<p>Implementation: Mermaid or HTML/CSS/JavaScript flowchart</p>
+</details>
+<hr />
+<h2 id="observation-techniques-watching-without-interfering">Observation Techniques: Watching Without Interfering</h2>
+<p>While think-aloud protocols capture what learners are <em>thinking</em>, systematic observation captures what they're <em>doing</em>. Sometimes these tell very different stories.</p>
+<h3 id="structured-observation-categories">Structured Observation Categories</h3>
+<p>Professional observers typically track:</p>
+<ul>
+<li><strong>Navigation patterns</strong>: Where do they click first? What path do they take?</li>
+<li><strong>Time allocation</strong>: How long on each section? Where do they linger or rush?</li>
+<li><strong>Error recovery</strong>: When they make mistakes, how do they recover?</li>
+<li><strong>Attention indicators</strong>: Eye tracking, cursor hovering, scrolling patterns</li>
+<li><strong>Emotional responses</strong>: Facial expressions, posture, sighs of frustration or delight</li>
+</ul>
+<h3 id="creating-an-observation-checklist">Creating an Observation Checklist</h3>
+<p>Before testing, create a structured checklist of specific behaviors to watch for:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="gu">## Observation Checklist: Gravity Simulator MicroSim</span>
+
+<span class="gu">### Initial Engagement (First 30 seconds)</span>
+<span class="k">- [ ]</span> Notices title and description
+<span class="k">- [ ]</span> Reads instructions before interacting
+<span class="k">- [ ]</span> Immediately starts clicking controls
+<span class="k">- [ ]</span> Appears confused about purpose
+
+<span class="gu">### Control Usage</span>
+<span class="k">- [ ]</span> Uses mass slider
+<span class="k">- [ ]</span> Uses height slider
+<span class="k">- [ ]</span> Clicks reset button
+<span class="k">- [ ]</span> Attempts to drag objects directly
+
+<span class="gu">### Understanding Indicators</span>
+<span class="k">- [ ]</span> Predicts outcome before running simulation
+<span class="k">- [ ]</span> Compares different parameter combinations
+<span class="k">- [ ]</span> Tests edge cases (maximum/minimum values)
+<span class="k">- [ ]</span> Articulates correct relationship
+</code></pre></div></td></tr></table></div>
+<h3 id="remote-observation-tools">Remote Observation Tools</h3>
+<p>When in-person observation isn't possible, remote tools can capture much of the same data:</p>
+<ul>
+<li><strong>Screen recording software</strong>: Captures exactly what learners see and do</li>
+<li><strong>Click heatmaps</strong>: Aggregate data showing where many users click</li>
+<li><strong>Scroll depth tracking</strong>: How far down the page do learners actually go?</li>
+<li><strong>Session replay tools</strong>: Watch recordings of individual sessions</li>
+</ul>
+<hr />
+<h2 id="gathering-learner-feedback-age-and-ability-considerations">Gathering Learner Feedback: Age and Ability Considerations</h2>
+<p>Different learners require different feedback collection approaches. A method that works beautifully with graduate students might completely fail with fourth graders.</p>
+<h3 id="age-based-feedback-strategies">Age-Based Feedback Strategies</h3>
+<table>
+<thead>
+<tr>
+<th>Age Group</th>
+<th>Effective Methods</th>
+<th>What to Avoid</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>K-5</td>
+<td>Drawing responses, emoji ratings, short verbal answers</td>
+<td>Long surveys, abstract questions</td>
+</tr>
+<tr>
+<td>6-8</td>
+<td>Quick polls, comparison choices, peer discussion</td>
+<td>Complex rating scales</td>
+</tr>
+<tr>
+<td>9-12</td>
+<td>Written reflections, rating scales, focus groups</td>
+<td>Overly childish approaches</td>
+</tr>
+<tr>
+<td>Undergraduate</td>
+<td>Surveys, interviews, analytics review</td>
+<td>Unpaid lengthy studies</td>
+</tr>
+<tr>
+<td>Graduate/Professional</td>
+<td>Detailed critiques, comparative analysis</td>
+<td>Oversimplification</td>
+</tr>
+</tbody>
+</table>
+<h3 id="ability-based-feedback-accommodations">Ability-Based Feedback Accommodations</h3>
+<p>Learners with different abilities may need modified feedback methods:</p>
+<ul>
+<li><strong>Visual impairments</strong>: Verbal interviews, audio recordings, screen reader compatibility testing</li>
+<li><strong>Hearing impairments</strong>: Written surveys, chat-based feedback, visual rating scales</li>
+<li><strong>Motor impairments</strong>: Extended time, alternative input methods, verbal responses</li>
+<li><strong>Cognitive differences</strong>: Simplified questions, frequent breaks, visual supports</li>
+</ul>
+<h3 id="the-conversation-prompting-technique">The Conversation Prompting Technique</h3>
+<p>Conversation prompting uses natural dialogue to extract feedback without the formality of structured interviews. It works especially well with younger learners who clam up when they feel "tested."</p>
+<p>Instead of: "On a scale of 1-5, how would you rate the usability of this simulation?"</p>
+<p>Try: "If you were telling a friend about this, what would you say?"</p>
+<p>Instead of: "Did you understand the learning objective?"</p>
+<p>Try: "What do you think this was trying to teach you?"</p>
+<hr />
+<h2 id="ab-testing-the-scientific-approach-to-design-decisions">A/B Testing: The Scientific Approach to Design Decisions</h2>
+<p>When you have a design question that reasonable people disagree on, A/B testing provides an objective answer. Should the reset button be red or gray? Does adding sound effects improve learning? Is the horizontal or vertical layout more effective?</p>
+<h3 id="ab-testing-fundamentals">A/B Testing Fundamentals</h3>
+<p>An A/B test randomly assigns learners to one of two (or more) versions of your MicroSim and measures which performs better on a defined metric.</p>
+<p>Key components:</p>
+<ul>
+<li><strong>Control (A)</strong>: The current or baseline version</li>
+<li><strong>Treatment (B)</strong>: The version with your proposed change</li>
+<li><strong>Metric</strong>: What you're measuring (completion rate, time to understanding, quiz scores)</li>
+<li><strong>Sample size</strong>: Enough participants to detect meaningful differences</li>
+<li><strong>Randomization</strong>: Each learner has equal chance of seeing either version</li>
+</ul>
+<h3 id="the-page-views-vs-simulation-tracking-problem">The Page Views vs. Simulation Tracking Problem</h3>
+<p>Here's where many instructional designers hit a wall. Standard web analytics tools like Google Analytics are fantastic for tracking page views—which pages visitors see, how long they stay, where they click. But for MicroSim A/B testing, page views aren't enough.</p>
+<p>Consider what Google Analytics can tell you:</p>
+<ul>
+<li>Student visited the Gravity Simulator page</li>
+<li>They stayed for 4 minutes</li>
+<li>They left to the "Next Chapter" page</li>
+</ul>
+<p>And what it <em>cannot</em> tell you:</p>
+<ul>
+<li>Did they actually interact with the simulation?</li>
+<li>Which sliders did they adjust?</li>
+<li>How many times did they reset?</li>
+<li>Did they test the hypothesis the simulation was designed to demonstrate?</li>
+</ul>
+<p>This is the fundamental difference between <strong>page-view tracking</strong> and <strong>simulation tracking</strong>. Page-view tracking knows you were in the room; simulation tracking knows what you did while you were there.</p>
+<h4 id="diagram-page-view-vs-simulation-tracking">Diagram: Page-View vs. Simulation Tracking</h4>
+<details>
+<summary>Page-View vs. Simulation Tracking Comparison</summary>
+<p>Type: diagram</p>
+<p>Bloom Taxonomy: Analyze (L4)</p>
+<p>Learning Objective: Students will analyze the differences between page-view tracking and simulation tracking to select appropriate analytics for MicroSim evaluation.</p>
+<p>Layout: Side-by-side comparison with two columns</p>
+<p>Left Column - Page-View Tracking (Google Analytics):
+- Title: "What Traditional Analytics See"
+- Metrics shown:
+  - Page URL visited
+  - Time on page (aggregate)
+  - Referrer (where they came from)
+  - Device/browser information
+  - Geographic location
+  - Bounce rate
+- Limitation callout: "Cannot see interactions within the page"
+- Icon: Eye looking at a page outline</p>
+<p>Right Column - Simulation Tracking (xAPI):
+- Title: "What xAPI Sees"
+- Metrics shown:
+  - Each control interaction
+  - Slider value changes over time
+  - Button clicks with timestamps
+  - Prediction accuracy (if applicable)
+  - Time spent on specific activities
+  - Sequence of interactions
+- Advantage callout: "Fine-grained learning behavior data"
+- Icon: Magnifying glass looking at detailed interaction stream</p>
+<p>Center comparison:
+- Arrow pointing from left to right: "More Detail →"
+- Text: "The difference between knowing someone was in the room vs. knowing exactly what they did"</p>
+<p>Color scheme:
+- Left: Orange/yellow (surface level)
+- Right: Blue/purple (deep analysis)
+- Center: Gray (neutral)</p>
+<p>Implementation: HTML/CSS or SVG diagram</p>
+</details>
+<hr />
+<h2 id="xapi-the-experience-api-for-fine-grained-tracking">xAPI: The Experience API for Fine-Grained Tracking</h2>
+<p>This brings us to <strong>xAPI</strong> (the Experience API, sometimes called Tin Can API)—the technology that bridges the gap between "they visited the page" and "here's exactly how they learned."</p>
+<h3 id="the-elegant-simplicity-of-who-what-when">The Elegant Simplicity of Who-What-When</h3>
+<p>At its core, xAPI is beautifully simple. Every learning experience is recorded as a statement with three parts:</p>
+<p><strong>Actor</strong> (Who) → <strong>Verb</strong> (What) → <strong>Object</strong> (When + Context)</p>
+<p>For example:</p>
+<ul>
+<li><strong>Dan</strong> → <strong>completed</strong> → <strong>the Gravity Simulator at 2:34 PM</strong></li>
+<li><strong>Sarah</strong> → <strong>adjusted</strong> → <strong>the mass slider to 50kg</strong></li>
+<li><strong>Alex</strong> → <strong>predicted</strong> → <strong>that both balls would fall at the same speed</strong></li>
+<li><strong>Jordan</strong> → <strong>answered incorrectly</strong> → <strong>quiz question 3 about terminal velocity</strong></li>
+</ul>
+<p>These statements are machine-readable, standardized, and can be aggregated across millions of learners to reveal patterns no individual observation could uncover.</p>
+<h3 id="xapi-statement-structure">xAPI Statement Structure</h3>
+<p>A complete xAPI statement includes:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;actor&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Dan McCreary&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;mbox&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;mailto:dan@example.com&quot;</span>
+<span class="w">  </span><span class="p">},</span>
+<span class="w">  </span><span class="nt">&quot;verb&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;http://adlnet.gov/expapi/verbs/interacted&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;display&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="nt">&quot;en-US&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;interacted&quot;</span><span class="p">}</span>
+<span class="w">  </span><span class="p">},</span>
+<span class="w">  </span><span class="nt">&quot;object&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://example.com/microsims/gravity-simulator&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;definition&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="nt">&quot;en-US&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Gravity Simulator&quot;</span><span class="p">},</span>
+<span class="w">      </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;http://adlnet.gov/expapi/activities/simulation&quot;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">},</span>
+<span class="w">  </span><span class="nt">&quot;result&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;extensions&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">&quot;https://example.com/xapi/slider-value&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">50</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">},</span>
+<span class="w">  </span><span class="nt">&quot;timestamp&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2024-03-15T14:34:22.345Z&quot;</span>
+<span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="why-this-matters-for-ab-testing">Why This Matters for A/B Testing</h3>
+<p>With xAPI tracking in place, your A/B tests can measure things like:</p>
+<ul>
+<li>Average number of interactions before achieving understanding</li>
+<li>Sequence patterns that correlate with quiz success</li>
+<li>Time spent in exploration vs. targeted practice</li>
+<li>Whether students who adjust certain parameters score higher</li>
+<li>Drop-off points where learners abandon the simulation</li>
+</ul>
+<p>This is the fine-grained data needed to make evidence-based design decisions.</p>
+<hr />
+<h2 id="the-learning-record-store-where-xapi-events-live">The Learning Record Store: Where xAPI Events Live</h2>
+<p>xAPI events don't just float into the void—they need somewhere to go. That's where the <strong>Learning Record Store (LRS)</strong> comes in.</p>
+<h3 id="what-is-an-lrs">What Is an LRS?</h3>
+<p>A Learning Record Store is a database specifically designed to receive, store, and retrieve xAPI statements. Think of it as the filing cabinet for all learning experiences across your educational ecosystem.</p>
+<p>LRS implementations range from:</p>
+<ul>
+<li><strong>Browser-based (local storage)</strong>: For prototyping and privacy-sensitive contexts</li>
+<li><strong>Server-based (self-hosted)</strong>: Full control, requires technical infrastructure</li>
+<li><strong>Cloud-based (SaaS)</strong>: Easy setup, ongoing subscription costs</li>
+<li><strong>LMS-integrated</strong>: Built into Learning Management Systems like Moodle or Canvas</li>
+</ul>
+<h3 id="the-privacy-and-security-consideration">The Privacy and Security Consideration</h3>
+<p>Because xAPI tracks individual learner behavior in fine detail, LRS security is heavily regulated. The data reveals:</p>
+<ul>
+<li>What each student struggles with</li>
+<li>How fast or slow they learn</li>
+<li>Patterns that might indicate learning disabilities</li>
+<li>Engagement levels and attention spans</li>
+</ul>
+<p>This sensitivity means LRS systems must comply with:</p>
+<ul>
+<li><strong>FERPA</strong> (in the US) for student data protection</li>
+<li><strong>GDPR</strong> (in Europe) for personal data rights</li>
+<li><strong>Institutional IRB approval</strong> for research uses</li>
+</ul>
+<p>We won't go into all the security details here—the <a href="https://dmccreary.github.io/graph-lms/">Graph LMS</a> intelligent textbook covers this in depth. The key takeaway: hyper-personalization requires data, and that data comes with responsibility.</p>
+<h4 id="diagram-xapi-data-flow">Diagram: xAPI Data Flow</h4>
+<details>
+<summary>xAPI Data Flow Architecture</summary>
+<p>Type: diagram</p>
+<p>Bloom Taxonomy: Understand (L2)</p>
+<p>Learning Objective: Students will understand how xAPI events flow from MicroSim interactions to Learning Record Store storage and analytics.</p>
+<p>Components to show:
+- Left side: Student interacting with MicroSim on device (laptop, tablet, phone)
+- Center-left: MicroSim application with xAPI instrumentation code
+- Center: xAPI statements (Actor-Verb-Object boxes)
+- Center-right: Learning Record Store (database icon)
+- Right side: Analytics dashboard showing patterns</p>
+<p>Data flow arrows:
+1. Student interactions → MicroSim (clicks, drags, inputs)
+2. MicroSim → xAPI Statement Generator (event triggers)
+3. xAPI Statements → LRS via HTTP POST (secure connection indicated)
+4. LRS → Analytics Engine (query and aggregation)
+5. Analytics → Dashboard (visualizations)</p>
+<p>Annotations:
+- At MicroSim: "Every interactive event generates xAPI statement"
+- At LRS: "Stores millions of statements, queryable"
+- At Analytics: "Pattern recognition, A/B test results"</p>
+<p>Security indicators:
+- Lock icon on LRS
+- HTTPS notation on connections
+- "Anonymization possible" note</p>
+<p>Color scheme:
+- User interaction: Green
+- Technical components: Blue
+- Data flow: Gray arrows
+- Security: Red accents</p>
+<p>Implementation: SVG or vis-network</p>
+</details>
+<hr />
+<h2 id="ieee-learning-standards-and-total-learning-architecture">IEEE Learning Standards and Total Learning Architecture</h2>
+<p>xAPI and LRS don't exist in isolation—they're part of a broader ecosystem of learning technology standards maintained by IEEE (the Institute of Electrical and Electronics Engineers) and the ADL Initiative (Advanced Distributed Learning).</p>
+<h3 id="the-standards-landscape">The Standards Landscape</h3>
+<table>
+<thead>
+<tr>
+<th>Standard</th>
+<th>Purpose</th>
+<th>Key Features</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>xAPI</td>
+<td>Experience tracking</td>
+<td>Who-what-when statements, verb registry</td>
+</tr>
+<tr>
+<td>LRS</td>
+<td>Data storage</td>
+<td>Statement storage, query API, conformance testing</td>
+</tr>
+<tr>
+<td>cmi5</td>
+<td>LMS integration</td>
+<td>xAPI + traditional LMS features</td>
+</tr>
+<tr>
+<td>SCORM (legacy)</td>
+<td>Course packaging</td>
+<td>Single-file courses, completion tracking</td>
+</tr>
+<tr>
+<td>LTI</td>
+<td>Tool interoperability</td>
+<td>Embed tools across LMS platforms</td>
+</tr>
+</tbody>
+</table>
+<h3 id="total-learning-architecture-tla">Total Learning Architecture (TLA)</h3>
+<p>The Total Learning Architecture is the IEEE's vision for how all these standards work together. It encompasses:</p>
+<ul>
+<li><strong>Content delivery</strong>: How learning materials reach learners</li>
+<li><strong>Experience tracking</strong>: How interactions are recorded (xAPI)</li>
+<li><strong>Competency management</strong>: How skills and knowledge are assessed</li>
+<li><strong>Learner profiles</strong>: How individual learning histories inform personalization</li>
+<li><strong>Recommendation engines</strong>: How AI suggests next learning steps</li>
+</ul>
+<p>For a deep dive into TLA implementation, see the <a href="https://dmccreary.github.io/graph-lms/">Graph LMS</a> book.</p>
+<h3 id="the-golden-rule-of-microsim-tracking">The Golden Rule of MicroSim Tracking</h3>
+<p>Here's the most important takeaway from all these standards:</p>
+<div class="admonition warning">
+<p class="admonition-title">Every MicroSim Must Have At Least One Interactive Event</p>
+<p>Without interactivity, you cannot track whether a student actually used a MicroSim. It is the instructional designer's responsibility to ensure that <strong>every</strong> MicroSim has at least one trackable interaction—even if it's just detecting when a student hovers their mouse over regions of an infographic.</p>
+</div>
+<p>A MicroSim that students can passively view without any interaction is, from an analytics perspective, invisible. You'll know they loaded the page. You won't know if they learned anything.</p>
+<hr />
+<h2 id="the-design-test-refine-cycle">The Design-Test-Refine Cycle</h2>
+<p>Now that we have our testing methodologies and analytics infrastructure, let's put them together into a systematic improvement process.</p>
+<h3 id="the-cycle-phases">The Cycle Phases</h3>
+<p>The design-test-refine cycle is exactly what it sounds like—a loop that you repeat until your MicroSim meets quality standards:</p>
+<ol>
+<li><strong>Design</strong>: Create or modify the MicroSim based on specifications</li>
+<li><strong>Test</strong>: Gather data through user testing and analytics</li>
+<li><strong>Analyze</strong>: Interpret results, identify issues</li>
+<li><strong>Prioritize</strong>: Decide which changes to make first</li>
+<li><strong>Refine</strong>: Implement changes</li>
+<li><strong>Return to Step 2</strong>: Test again to verify improvements</li>
+</ol>
+<h3 id="when-to-stop-iterating">When to Stop Iterating</h3>
+<p>One of the hardest questions: when is a MicroSim "done enough"?</p>
+<p>Completion criteria might include:</p>
+<ul>
+<li>Usability test success rate exceeds 85%</li>
+<li>Average task completion time under target threshold</li>
+<li>No critical bugs in last two testing rounds</li>
+<li>Quality score meets minimum standard (see Chapter 10)</li>
+<li>A/B test shows no significant difference from best alternative</li>
+<li>Stakeholder approval obtained</li>
+</ul>
+<p>The enemy of done is perfect. At some point, your time is better spent creating new MicroSims rather than polishing existing ones.</p>
+<h4 id="diagram-design-test-refine-cycle">Diagram: Design-Test-Refine Cycle</h4>
+<details>
+<summary>Design-Test-Refine Cycle</summary>
+<p>Type: diagram</p>
+<p>Bloom Taxonomy: Apply (L3)</p>
+<p>Learning Objective: Students will apply the design-test-refine cycle to systematically improve MicroSim quality through iterative development.</p>
+<p>Visual style: Circular flow diagram with feedback loops</p>
+<p>Center: "High-Quality MicroSim" (the goal)</p>
+<p>Cycle phases arranged clockwise:
+1. DESIGN (Top)
+   - Create initial implementation
+   - Apply design principles
+   - Instrument for xAPI tracking</p>
+<ol>
+<li>TEST (Right)</li>
+<li>Run user testing sessions</li>
+<li>Collect analytics data</li>
+<li>
+<p>Gather qualitative feedback</p>
+</li>
+<li>
+<p>ANALYZE (Bottom-right)</p>
+</li>
+<li>Interpret test results</li>
+<li>Identify patterns and issues</li>
+<li>
+<p>Compare against criteria</p>
+</li>
+<li>
+<p>PRIORITIZE (Bottom-left)</p>
+</li>
+<li>Categorize issues (critical vs. nice-to-have)</li>
+<li>Estimate effort for each fix</li>
+<li>
+<p>Create ordered improvement list</p>
+</li>
+<li>
+<p>REFINE (Left)</p>
+</li>
+<li>Implement high-priority changes</li>
+<li>Update documentation</li>
+<li>Log changes for tracking</li>
+</ol>
+<p>Arrows connecting each phase clockwise
+Additional arrow from ANALYZE to center: "If criteria met, exit cycle"
+Exit indicator: "Deploy" arrow leaving the cycle</p>
+<p>Color scheme:
+- Design: Blue (#3B82F6)
+- Test: Green (#10B981)
+- Analyze: Yellow (#F59E0B)
+- Prioritize: Orange (#F97316)
+- Refine: Purple (#8B5CF6)
+- Center goal: Gold</p>
+<p>Implementation: SVG or p5.js animation showing cycle rotation</p>
+</details>
+<hr />
+<h2 id="change-prioritization-critical-vs-nice-to-have">Change Prioritization: Critical vs. Nice-to-Have</h2>
+<p>Not all feedback is created equal. A crash bug and a slightly-too-small font are both "issues," but they demand very different responses.</p>
+<h3 id="the-priority-matrix">The Priority Matrix</h3>
+<table>
+<thead>
+<tr>
+<th>Priority Level</th>
+<th>Criteria</th>
+<th>Examples</th>
+<th>Response Time</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Critical</strong></td>
+<td>Blocks learning, crashes, produces wrong results</td>
+<td>Calculation errors, data loss, broken core functionality</td>
+<td>Immediate</td>
+</tr>
+<tr>
+<td><strong>High</strong></td>
+<td>Significantly degrades experience or effectiveness</td>
+<td>Confusing interface, missed learning objectives</td>
+<td>Next iteration</td>
+</tr>
+<tr>
+<td><strong>Medium</strong></td>
+<td>Noticeable but workaroundable</td>
+<td>Slow performance, minor visual glitches</td>
+<td>When time permits</td>
+</tr>
+<tr>
+<td><strong>Low (Nice-to-Have)</strong></td>
+<td>Polishing, preferences, edge cases</td>
+<td>Animation smoothness, color preferences</td>
+<td>If extra time</td>
+</tr>
+</tbody>
+</table>
+<h3 id="critical-changes-fix-these-first">Critical Changes: Fix These First</h3>
+<p>Critical changes are non-negotiable. They include:</p>
+<ul>
+<li><strong>Factual errors</strong>: Physics formulas that give wrong answers</li>
+<li><strong>Accessibility blockers</strong>: Cannot be used by learners with disabilities</li>
+<li><strong>Platform failures</strong>: Crashes on common devices/browsers</li>
+<li><strong>Data corruption</strong>: Loses or incorrectly saves learner progress</li>
+<li><strong>Security vulnerabilities</strong>: Exposes learner data</li>
+</ul>
+<h3 id="nice-to-have-changes-the-parking-lot">Nice-to-Have Changes: The Parking Lot</h3>
+<p>Nice-to-have changes are the features and fixes that would be lovely but aren't essential. Keep a "parking lot" list of these ideas:</p>
+<ul>
+<li>Animation could be smoother</li>
+<li>Would be nice to have sound effects</li>
+<li>User suggested a dark mode</li>
+<li>Could add more preset scenarios</li>
+</ul>
+<p>Review the parking lot periodically. Some ideas improve with age (you understand their value better); others become obsolete (the underlying design changed).</p>
+<hr />
+<h2 id="fundamental-redesign-vs-incremental-improvement">Fundamental Redesign vs. Incremental Improvement</h2>
+<p>Sometimes testing reveals that small fixes won't suffice. The core design is flawed, and no amount of iteration will fix it. Recognizing this moment—and having the courage to start over—is a crucial skill.</p>
+<h3 id="signs-you-need-fundamental-redesign">Signs You Need Fundamental Redesign</h3>
+<ul>
+<li>Users consistently misunderstand the core concept</li>
+<li>Multiple unrelated issues all trace to the same design decision</li>
+<li>The simulation metaphor doesn't match the learning objective</li>
+<li>Technical debt makes every fix create new problems</li>
+<li>Stakeholders agree the direction is wrong</li>
+</ul>
+<h3 id="signs-incremental-improvement-will-work">Signs Incremental Improvement Will Work</h3>
+<ul>
+<li>Issues are isolated and independent</li>
+<li>Core functionality works; problems are at the edges</li>
+<li>Users "get it" but stumble on specific interactions</li>
+<li>Fixes are straightforward to implement and verify</li>
+<li>Each iteration shows measurable improvement</li>
+</ul>
+<h3 id="the-sunk-cost-trap">The Sunk Cost Trap</h3>
+<p>Beware the sunk cost fallacy: "We've invested so much in this design, we can't throw it away." If the design is fundamentally broken, the investment is already lost. Continuing to iterate on a flawed foundation wastes more resources than starting fresh.</p>
+<p>That said, don't be too quick to scrap and restart. Distinguish between "this approach can't work" and "this approach hasn't worked yet."</p>
+<hr />
+<h2 id="scope-creep-prevention-staying-focused">Scope Creep Prevention: Staying Focused</h2>
+<p>Scope creep is the gradual expansion of a project's goals beyond its original boundaries. In MicroSim development, it often sounds like:</p>
+<ul>
+<li>"While we're at it, could we also add..."</li>
+<li>"It would be really cool if this also demonstrated..."</li>
+<li>"The students would love it if we included..."</li>
+</ul>
+<p>Each addition seems small, but they accumulate into bloated, unfocused, never-finished projects.</p>
+<h3 id="scope-creep-prevention-strategies">Scope Creep Prevention Strategies</h3>
+<ol>
+<li><strong>Document original scope</strong>: Write down exactly what the MicroSim will and won't do</li>
+<li><strong>Parking lot additions</strong>: New ideas go to the list, not into the current iteration</li>
+<li><strong>Change control process</strong>: Additions require explicit approval and scope adjustment</li>
+<li><strong>Time boxing</strong>: Set deadlines and ship what's ready</li>
+<li><strong>Feature freeze dates</strong>: After a certain point, no new features until next version</li>
+</ol>
+<h3 id="the-mvp-mindset">The MVP Mindset</h3>
+<p>Embrace the Minimum Viable Product (MVP) approach:</p>
+<ul>
+<li>What's the smallest version that achieves the learning objective?</li>
+<li>Ship that first</li>
+<li>Iterate based on evidence, not speculation</li>
+<li>Version 2.0 can add the cool features—if testing shows they're needed</li>
+</ul>
+<hr />
+<h2 id="change-logs-and-design-rationale-documenting-your-decisions">Change Logs and Design Rationale: Documenting Your Decisions</h2>
+<p>Future you (and future collaborators) will thank present you for documenting what changed and why.</p>
+<h3 id="maintaining-a-change-log">Maintaining a Change Log</h3>
+<p>A change log records every modification to a MicroSim:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="gu">## Change Log: Gravity Simulator MicroSim</span>
+
+<span class="gu">### Version 1.3.0 (2024-03-15)</span>
+<span class="gs">**Changed:**</span>
+<span class="k">-</span><span class="w"> </span>Increased slider range from 0-100 to 0-200 (user feedback indicated 100 was too limiting)
+<span class="k">-</span><span class="w"> </span>Moved reset button to more prominent position (60% of users couldn&#39;t find it)
+
+<span class="gs">**Fixed:**</span>
+<span class="k">-</span><span class="w"> </span>Corrected calculation error in terminal velocity (was using wrong drag coefficient)
+<span class="k">-</span><span class="w"> </span>Fixed animation stutter on Safari browsers
+
+<span class="gs">**Added:**</span>
+<span class="k">-</span><span class="w"> </span>xAPI tracking for all slider interactions
+<span class="k">-</span><span class="w"> </span>Prediction prompt before running simulation
+
+<span class="gu">### Version 1.2.0 (2024-02-28)</span>
+...
+</code></pre></div></td></tr></table></div>
+<h3 id="documenting-design-rationale">Documenting Design Rationale</h3>
+<p>Beyond <em>what</em> changed, document <em>why</em>:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="gu">## Design Rationale: Gravity Simulator</span>
+
+<span class="gu">### Why Two Balls Instead of One?</span>
+The misconception that heavier objects fall faster is deeply ingrained.
+A single ball simulation would allow students to &quot;see&quot; confirmation of
+their misconception (heavy ball &quot;looks&quot; like it should fall faster).
+Side-by-side comparison makes the equivalence undeniable.
+
+<span class="gu">### Why No Air Resistance by Default?</span>
+Initial testing showed students became confused by air resistance
+before understanding basic gravitational acceleration. Progressive
+disclosure: unlock air resistance only after demonstrating understanding
+of the base case.
+
+<span class="gu">### Why This Color Scheme?</span>
+Red/blue balls tested better than other color combinations for:
+<span class="k">-</span><span class="w"> </span>Colorblind accessibility (distinguishable in all common types)
+<span class="k">-</span><span class="w"> </span>Contrast against white background
+<span class="k">-</span><span class="w"> </span>Association (red often = &quot;heavier&quot; in student mental models,
+  useful for confronting misconceptions)
+</code></pre></div></td></tr></table></div>
+<hr />
+<h2 id="ethical-research-considerations">Ethical Research Considerations</h2>
+<p>User testing with learners, especially children, involves ethical considerations that go beyond technical quality.</p>
+<h3 id="informed-consent">Informed Consent</h3>
+<p>Before any testing:</p>
+<ul>
+<li>Explain what you're testing (the MicroSim, not the learner)</li>
+<li>Describe what data will be collected</li>
+<li>Clarify how data will be used and stored</li>
+<li>For minors: obtain parental/guardian consent</li>
+<li>Allow withdrawal at any time without penalty</li>
+</ul>
+<h3 id="power-dynamics">Power Dynamics</h3>
+<p>Learners may feel pressure to please the tester, especially if:</p>
+<ul>
+<li>The tester is their teacher</li>
+<li>They think their grade depends on it</li>
+<li>They don't want to seem "stupid"</li>
+</ul>
+<p>Mitigate this by:</p>
+<ul>
+<li>Using neutral observers rather than instructors</li>
+<li>Emphasizing that you're testing the simulation, not them</li>
+<li>Celebrating when they find problems ("That's exactly what we needed to know!")</li>
+<li>Offering genuine appreciation for their time</li>
+</ul>
+<h3 id="data-protection">Data Protection</h3>
+<p>Learning analytics data requires careful handling:</p>
+<ul>
+<li>Anonymize data when possible</li>
+<li>Store securely with appropriate access controls</li>
+<li>Comply with applicable regulations (FERPA, GDPR, etc.)</li>
+<li>Delete data when no longer needed</li>
+<li>Never share individual learner data without consent</li>
+</ul>
+<hr />
+<h2 id="test-interpretation-making-sense-of-the-data">Test Interpretation: Making Sense of the Data</h2>
+<p>Collecting data is easy; interpreting it correctly is the art. Here are common pitfalls and how to avoid them.</p>
+<h3 id="confirmation-bias">Confirmation Bias</h3>
+<p>You built this MicroSim. You want it to work. This bias makes it easy to explain away negative feedback and amplify positive signals.</p>
+<p><strong>Antidote</strong>: Have someone else review the test results before you. What do they see?</p>
+<h3 id="overgeneralizing-from-small-samples">Overgeneralizing from Small Samples</h3>
+<p>Three users is not a statistically significant sample, no matter how clearly they articulate their feedback.</p>
+<p><strong>Antidote</strong>: Distinguish between "strong signal from few users" (investigate further) and "statistically significant finding" (act with confidence).</p>
+<h3 id="confusing-correlation-with-causation">Confusing Correlation with Causation</h3>
+<p>"Students who used the slider more scored higher on the quiz" doesn't mean using the slider caused higher scores. Maybe curious students both use sliders more and score higher.</p>
+<p><strong>Antidote</strong>: When possible, use controlled experiments (A/B tests) rather than observational data.</p>
+<h3 id="the-expert-blind-spot">The Expert Blind Spot</h3>
+<p>You understand this concept deeply. You can't easily see what's confusing to someone who doesn't. This is the "curse of knowledge."</p>
+<p><strong>Antidote</strong>: Watch novice users. Really watch them. Their struggles reveal what you can no longer see.</p>
+<h4 id="diagram-common-interpretation-pitfalls">Diagram: Common Interpretation Pitfalls</h4>
+<details>
+<summary>Test Interpretation Pitfalls</summary>
+<p>Type: infographic</p>
+<p>Bloom Taxonomy: Evaluate (L5)</p>
+<p>Learning Objective: Students will evaluate test results by identifying and avoiding common interpretation pitfalls.</p>
+<p>Layout: Four quadrant grid, each with a pitfall and its antidote</p>
+<p>Quadrant 1 (Top-left): "Confirmation Bias"
+- Icon: Rose-colored glasses
+- Description: "Seeing what you want to see"
+- Red flag: "Only positive feedback feels 'real'"
+- Antidote: "Get outside perspectives before reviewing data"</p>
+<p>Quadrant 2 (Top-right): "Small Sample Overgeneralization"
+- Icon: Three stick figures claiming to represent thousands
+- Description: "N=3 is not statistical significance"
+- Red flag: "Three users said this, so it must be true"
+- Antidote: "Note patterns, but verify with larger samples"</p>
+<p>Quadrant 3 (Bottom-left): "Correlation ≠ Causation"
+- Icon: Ice cream and drowning correlation graph
+- Description: "Just because A and B happen together..."
+- Red flag: "Users who did X also did Y, so X causes Y"
+- Antidote: "Design controlled experiments when possible"</p>
+<p>Quadrant 4 (Bottom-right): "Expert Blind Spot"
+- Icon: Flashlight illuminating only part of scene
+- Description: "Can't see what novices struggle with"
+- Red flag: "I don't understand why this is confusing"
+- Antidote: "Watch novices carefully; their struggles are data"</p>
+<p>Center text: "Good interpretation requires humility"</p>
+<p>Color scheme: Each quadrant a different pastel color, antidotes in green boxes</p>
+<p>Implementation: HTML/CSS grid or SVG infographic</p>
+</details>
+<hr />
+<h2 id="building-a-microsim-testing-culture">Building a MicroSim Testing Culture</h2>
+<p>Testing isn't a phase—it's a mindset. The best MicroSim creators integrate testing throughout their process.</p>
+<h3 id="test-early-and-often">Test Early and Often</h3>
+<p>Don't wait until the MicroSim is "done" to test. Test:</p>
+<ul>
+<li>Paper prototypes (before any code is written)</li>
+<li>Core interaction (before adding polish)</li>
+<li>Near-complete versions (before deployment)</li>
+<li>Deployed versions (continuous improvement)</li>
+</ul>
+<h3 id="build-testing-infrastructure">Build Testing Infrastructure</h3>
+<p>Invest in tools and processes that make testing easy:</p>
+<ul>
+<li>xAPI instrumentation templates</li>
+<li>Standard user testing scripts</li>
+<li>Feedback form templates</li>
+<li>Analytics dashboards</li>
+<li>Change log templates</li>
+</ul>
+<h3 id="celebrate-learning-from-failure">Celebrate Learning from Failure</h3>
+<p>When testing reveals problems, that's success. The test worked. You learned something. You can now make something better.</p>
+<p>The only failure is shipping without testing and never learning what could have been improved.</p>
+<hr />
+<h2 id="summary-the-iterative-mindset">Summary: The Iterative Mindset</h2>
+<p>User testing and iteration transform MicroSims from theoretical designs into proven learning tools. The key insights from this chapter:</p>
+<p><strong>Testing Methods:</strong>
+- Think-aloud protocols reveal what learners are thinking
+- Observation techniques capture what they're doing
+- Age-based and ability-based feedback strategies ensure inclusive data collection
+- A/B testing provides statistical confidence for design decisions</p>
+<p><strong>Analytics Infrastructure:</strong>
+- Google Analytics tracks page views but not simulation interactions
+- xAPI tracks fine-grained who-what-when data
+- Learning Record Stores provide secure storage for xAPI events
+- IEEE standards (TLA) integrate these technologies into coherent systems
+- Every MicroSim must have at least one interactive event for tracking</p>
+<p><strong>Iteration Framework:</strong>
+- The design-test-refine cycle systematically improves quality
+- Critical changes must be fixed immediately; nice-to-haves can wait
+- Recognize when fundamental redesign beats incremental improvement
+- Prevent scope creep with documented boundaries and parking lots
+- Maintain change logs and design rationale for future collaborators</p>
+<p><strong>Ethical Considerations:</strong>
+- Obtain informed consent, especially for minors
+- Protect learner data according to applicable regulations
+- Interpret results humbly, watching for common pitfalls</p>
+<p>The ultimate goal: MicroSims that genuinely help people learn. That's worth the effort of rigorous testing and continuous improvement.</p>
+<p>Now go test something. Your learners are waiting.</p>
+<hr />
+<h2 id="key-takeaways">Key Takeaways</h2>
+<ul>
+<li><strong>Think-aloud protocols</strong> reveal learner thought processes that analytics cannot capture</li>
+<li><strong>Observation techniques</strong> complement verbal feedback with behavioral data</li>
+<li><strong>A/B testing</strong> requires fine-grained simulation tracking, not just page views</li>
+<li><strong>xAPI</strong> provides who-what-when tracking: Actor → Verb → Object</li>
+<li><strong>Learning Record Stores</strong> securely store xAPI events for analysis</li>
+<li><strong>IEEE Learning Standards</strong> including the <strong>Total Learning Architecture</strong> integrate learning technologies</li>
+<li><strong>Every MicroSim must have at least one interactive event</strong> to enable tracking</li>
+<li>The <strong>design-test-refine cycle</strong> systematically improves quality through iteration</li>
+<li><strong>Change prioritization</strong> distinguishes critical issues from nice-to-haves</li>
+<li><strong>Scope creep prevention</strong> keeps projects focused and deliverable</li>
+<li><strong>Change logs and design rationale</strong> document decisions for future reference</li>
+<li><strong>Ethical research</strong> protects learner rights and data</li>
+</ul>
+<hr />
+<h2 id="reflection-questions">Reflection Questions</h2>
+<details class="question">
+<summary>How would you design an xAPI tracking strategy for a specific MicroSim?</summary>
+</details>
+<p>Consider what interactions are meaningful:
+- Which control changes indicate engagement vs. random clicking?
+- What sequence of actions suggests understanding?
+- How would you structure Actor-Verb-Object statements for key moments?
+- What aggregations would reveal A/B test results?</p>
+<details class="question">
+<summary>When should you choose fundamental redesign over incremental improvement?</summary>
+</details>
+<p>Signs pointing toward redesign:
+- Multiple unrelated issues trace to the same design decision
+- Users consistently misunderstand the core concept
+- Each fix creates new problems
+- Testing shows no improvement over iterations</p>
+<p>Signs supporting incremental improvement:
+- Issues are isolated and independent
+- Core functionality works
+- Each iteration shows measurable progress</p>
+<details class="question">
+<summary>What ethical considerations apply when testing MicroSims with children?</summary>
+</details>
+<p>Key considerations include:
+- Parental consent requirements
+- Age-appropriate testing methods
+- Power dynamics with adult testers
+- Data protection and privacy regulations
+- Making the experience positive regardless of outcomes</p>
+<hr />
+<h2 id="references">References</h2>
+<ol>
+<li>
+<p>Nielsen, J. (1994). <em>Usability Engineering</em>. Morgan Kaufmann. — Classic text on think-aloud testing and usability methods.</p>
+</li>
+<li>
+<p>Advanced Distributed Learning (ADL) Initiative. (2023). <em>xAPI Specification</em>. https://github.com/adlnet/xAPI-Spec — Official xAPI technical specification.</p>
+</li>
+<li>
+<p>IEEE Learning Technology Standards Committee. (2022). <em>Total Learning Architecture Reference Implementation</em>. https://adlnet.gov/tla — Overview of integrated learning standards.</p>
+</li>
+<li>
+<p>McCreary, D. (2024). <em>Graph LMS: Intelligent Learning Management Systems</em>. https://dmccreary.github.io/graph-lms/ — Deep dive into LRS implementation and learning analytics.</p>
+</li>
+<li>
+<p>Ericsson, K. A., &amp; Simon, H. A. (1993). <em>Protocol Analysis: Verbal Reports as Data</em>. MIT Press. — Foundational text on think-aloud methodology.</p>
+</li>
+<li>
+<p>U.S. Department of Education. (2021). <em>Family Educational Rights and Privacy Act (FERPA)</em>. https://www.ed.gov/ferpa — Student data protection requirements.</p>
+</li>
+</ol>
 
 
 
@@ -1220,6 +3398,8 @@
   
 
 
+
+  
 
 
 
@@ -1247,7 +3427,7 @@
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../10-quality-evaluation-frameworks/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Quality Evaluation Frameworks">
+          <a href="../10-quality-evaluation-frameworks/quiz/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Quiz">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -1257,20 +3437,20 @@
                 Previous
               </span>
               <div class="md-ellipsis">
-                Quality Evaluation Frameworks
+                Quiz
               </div>
             </div>
           </a>
         
         
           
-          <a href="../12-accessibility-deployment-completion/" class="md-footer__link md-footer__link--next" aria-label="Next: Accessibility, Deployment, and Course Completion">
+          <a href="quiz/" class="md-footer__link md-footer__link--next" aria-label="Next: Quiz">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Accessibility, Deployment, and Course Completion
+                Quiz
               </div>
             </div>
             <div class="md-footer__button md-icon">
@@ -1290,6 +3470,11 @@
       Copyright &copy; 2025 Dan McCreary. Licensed under <a href="license/">CC BY-NC-SA 4.0</a> for non-commercial use.
     </div>
   
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
   
 </div>
       

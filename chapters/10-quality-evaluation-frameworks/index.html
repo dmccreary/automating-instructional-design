@@ -6,7 +6,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="A hands-on guide to automating instructional design tasks using AI and other tools.">
+        <meta name="description" content="Comprehensive frameworks for evaluating MicroSim quality across technical, pedagogical, and user experience dimensions, including completeness rubrics, metadata standards, and strategies for search and reuse.">
       
       
         <meta name="author" content="Dan McCreary">
@@ -15,10 +15,10 @@
         <link rel="canonical" href="https://dmccreary.github.io/automating-instructional-design/chapters/10-quality-evaluation-frameworks/">
       
       
-        <link rel="prev" href="../09-generating-microsims-ai-tools/">
+        <link rel="prev" href="../09-generating-microsims-ai-tools/quiz/">
       
       
-        <link rel="next" href="../11-user-testing-iteration/">
+        <link rel="next" href="quiz/">
       
       
       <link rel="icon" href="../../img/favicon.ico">
@@ -57,6 +57,16 @@
     <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
+  
+
+
+  
+  
+
+<script id="__analytics">function __md_analytics(){function e(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],e("js",new Date),e("config","G-S4GYB1W20G"),document.addEventListener("DOMContentLoaded",(function(){document.forms.search&&document.forms.search.query.addEventListener("blur",(function(){this.value&&e("event","search",{search_term:this.value})}));document$.subscribe((function(){var t=document.forms.feedback;if(void 0!==t)for(var a of t.querySelectorAll("[type=submit]"))a.addEventListener("click",(function(a){a.preventDefault();var n=document.location.pathname,d=this.getAttribute("data-md-value");e("event","feedback",{page:n,data:d}),t.firstElementChild.disabled=!0;var r=t.querySelector(".md-feedback__note [data-md-value='"+d+"']");r&&(r.hidden=!1)})),t.hidden=!1})),location$.subscribe((function(t){e("config","G-S4GYB1W20G",{page_path:t.pathname})}))}));var t=document.createElement("script");t.async=!0,t.src="https://www.googletagmanager.com/gtag/js?id=G-S4GYB1W20G",document.getElementById("__analytics").insertAdjacentElement("afterEnd",t)}</script>
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
 
     
     
@@ -65,7 +75,7 @@
       
         <meta  property="og:title"  content="Quality Evaluation Frameworks - Automating Instructional Design" >
       
-        <meta  property="og:description"  content="A hands-on guide to automating instructional design tasks using AI and other tools." >
+        <meta  property="og:description"  content="Comprehensive frameworks for evaluating MicroSim quality across technical, pedagogical, and user experience dimensions, including completeness rubrics, metadata standards, and strategies for search and reuse." >
       
         <meta  property="og:image"  content="https://dmccreary.github.io/automating-instructional-design/assets/images/social/chapters/10-quality-evaluation-frameworks/index.png" >
       
@@ -81,7 +91,7 @@
       
         <meta  name="twitter:title"  content="Quality Evaluation Frameworks - Automating Instructional Design" >
       
-        <meta  name="twitter:description"  content="A hands-on guide to automating instructional design tasks using AI and other tools." >
+        <meta  name="twitter:description"  content="Comprehensive frameworks for evaluating MicroSim quality across technical, pedagogical, and user experience dimensions, including completeness rubrics, metadata standards, and strategies for search and reuse." >
       
         <meta  name="twitter:image"  content="https://dmccreary.github.io/automating-instructional-design/assets/images/social/chapters/10-quality-evaluation-frameworks/index.png" >
       
@@ -280,6 +290,28 @@
   
   
     <li class="md-nav__item">
+      <a href="../../about/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    About This Course
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../course-description/" class="md-nav__link">
         
   
@@ -334,6 +366,8 @@
       
         
       
+        
+      
     
     
     
@@ -344,7 +378,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
         
           
           <div class="md-nav__link md-nav__container">
@@ -361,14 +395,14 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_3">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
             <span class="md-nav__icon md-icon"></span>
             Chapters
           </label>
@@ -382,293 +416,46 @@
   
   
   
-    <li class="md-nav__item">
-      <a href="../01-foundations-learning-objective-analysis/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Foundations of Learning Objective Analysis
     
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../02-prerequisite-analysis-microsim-fundamentals/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Prerequisite Analysis and MicroSim Fundamentals
     
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../03-microsim-pattern-library/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    The MicroSim Pattern Library
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../04-visualization-libraries-tools/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Visualization Libraries and Tools
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../05-writing-microsim-specifications/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Writing Effective MicroSim Specifications
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../06-adapting-audience-levels/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Adapting for Audience Levels
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../07-cognitive-load-visual-design/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Cognitive Load and Visual Design
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../08-anticipating-misconceptions/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Anticipating Misconceptions
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../09-generating-microsims-ai-tools/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Generating MicroSims with AI Tools
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-    
-  
-  
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
       
         
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
           
+        
+      
+        
+      
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../01-foundations-learning-objective-analysis/" class="md-nav__link">
+      
   
   
   <span class="md-ellipsis">
-    Quality Evaluation Frameworks
+    1. Foundations of Learning Objective Analysis
     
   </span>
   
 
-          <span class="md-nav__icon md-icon"></span>
-        </label>
       
-      <a href="./" class="md-nav__link md-nav__link--active">
-        
-  
-  
-  <span class="md-ellipsis">
-    Quality Evaluation Frameworks
-    
-  </span>
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
   
 
-      </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#summary" class="md-nav__link">
-    <span class="md-ellipsis">
-      Summary
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#concepts-covered" class="md-nav__link">
-    <span class="md-ellipsis">
-      Concepts Covered
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#prerequisites" class="md-nav__link">
-    <span class="md-ellipsis">
-      Prerequisites
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
       
     </li>
   
@@ -681,18 +468,47 @@
   
   
   
-    <li class="md-nav__item">
-      <a href="../11-user-testing-iteration/" class="md-nav__link">
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
         
   
   
+  
+    <a href="../02-prerequisite-analysis-microsim-fundamentals/" class="md-nav__link">
+      
+  
+  
   <span class="md-ellipsis">
-    User Testing and Iteration
+    2. Prerequisite Analysis and MicroSim Fundamentals
     
   </span>
   
 
-      </a>
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
     </li>
   
 
@@ -704,13 +520,436 @@
   
   
   
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../03-microsim-pattern-library/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    3. The MicroSim Pattern Library
+    
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../04-visualization-libraries-tools/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    4. Visualization Libraries and Tools
+    
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../05-writing-microsim-specifications/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    5. Writing Effective MicroSim Specifications
+    
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../06-adapting-audience-levels/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    6. Adapting for Audience Levels
+    
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../07-cognitive-load-visual-design/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    7. Cognitive Load and Visual Design
+    
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../08-anticipating-misconceptions/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    8. Anticipating Misconceptions
+    
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../09-generating-microsims-ai-tools/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    9. Generating MicroSims with AI Tools
+    
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_11" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="./" class="md-nav__link md-nav__link--active">
+              
+  
+  
+  <span class="md-ellipsis">
+    10. Quality Evaluation Frameworks
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link md-nav__link--active" for="__nav_4_11" id="__nav_4_11_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_11_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4_11">
+            <span class="md-nav__icon md-icon"></span>
+            10. Quality Evaluation Frameworks
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
     <li class="md-nav__item">
-      <a href="../12-accessibility-deployment-completion/" class="md-nav__link">
+      <a href="quiz/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    Accessibility, Deployment, and Course Completion
+    Quiz
     
   </span>
   
@@ -723,6 +962,194 @@
             
           </ul>
         </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../11-user-testing-iteration/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    11. User Testing and Iteration
+    
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../12-accessibility-deployment-completion/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    12. Accessibility, Deployment, and Course Completion
+    
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../13-capstone-projects/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    13. Capstone Projects
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../sims/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    MicroSims
+    
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
       
     </li>
   
@@ -802,6 +1229,20 @@
       
         
       
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
     
     
     
@@ -844,47 +1285,18 @@
   
   
   
-    
-    
-      
+    <li class="md-nav__item">
+      <a href="../../checklist/" class="md-nav__link">
         
-          
-        
-      
-        
-      
-    
-    
-    
-    
-      
-        
-        
-      
-    
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-      
-        
-  
-  
-  
-    <a href="../../sims/graph-viewer/" class="md-nav__link">
-      
   
   
   <span class="md-ellipsis">
-    MicroSims
+    Checklist
     
   </span>
   
 
-      
-        <span class="md-nav__icon md-icon"></span>
-      
-    </a>
-  
-
-      
+      </a>
     </li>
   
 
@@ -896,12 +1308,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../../checklist/" class="md-nav__link">
+      <a href="../../faq/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    Checklist
+    FAQ
     
   </span>
   
@@ -1060,6 +1472,16 @@
       
         
       
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
     
     
     
@@ -1149,6 +1571,618 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#introduction-why-quality-matters-and-why-you-should-care" class="md-nav__link">
+    <span class="md-ellipsis">
+      Introduction: Why Quality Matters (And Why You Should Care)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-three-lens-evaluation-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Three-Lens Evaluation Model
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The Three-Lens Evaluation Model">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-three-lens-evaluation-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Three-Lens Evaluation Model
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#technical-evaluation-the-foundation-of-trust" class="md-nav__link">
+    <span class="md-ellipsis">
+      Technical Evaluation: The Foundation of Trust
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Technical Evaluation: The Foundation of Trust">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#output-validation-the-first-line-of-defense" class="md-nav__link">
+    <span class="md-ellipsis">
+      Output Validation: The First Line of Defense
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#functionality-testing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Functionality Testing
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#responsiveness-testing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Responsiveness Testing
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Responsiveness Testing">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-responsive-breakpoint-testing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Responsive Breakpoint Testing
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bug-identification-finding-the-gremlins" class="md-nav__link">
+    <span class="md-ellipsis">
+      Bug Identification: Finding the Gremlins
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pedagogical-evaluation-teaching-what-you-mean-to-teach" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pedagogical Evaluation: Teaching What You Mean to Teach
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Pedagogical Evaluation: Teaching What You Mean to Teach">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#objective-alignment-staying-on-target" class="md-nav__link">
+    <span class="md-ellipsis">
+      Objective Alignment: Staying on Target
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cognitive-level-match" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cognitive Level Match
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Cognitive Level Match">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-blooms-taxonomy-and-microsim-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Bloom's Taxonomy and MicroSim Types
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#effectiveness-measurement" class="md-nav__link">
+    <span class="md-ellipsis">
+      Effectiveness Measurement
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ux-evaluation-the-human-factor" class="md-nav__link">
+    <span class="md-ellipsis">
+      UX Evaluation: The Human Factor
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="UX Evaluation: The Human Factor">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#intuitiveness-can-they-figure-it-out" class="md-nav__link">
+    <span class="md-ellipsis">
+      Intuitiveness: Can They Figure It Out?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#engagement-balance-the-goldilocks-zone" class="md-nav__link">
+    <span class="md-ellipsis">
+      Engagement Balance: The Goldilocks Zone
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Engagement Balance: The Goldilocks Zone">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-engagement-vs-learning-trade-off" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Engagement vs. Learning Trade-off
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-completeness-quality-score-a-rubric-llms-can-follow" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Completeness Quality Score: A Rubric LLMs Can Follow
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The Completeness Quality Score: A Rubric LLMs Can Follow">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-100-point-completeness-rubric" class="md-nav__link">
+    <span class="md-ellipsis">
+      The 100-Point Completeness Rubric
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#quality-score-interpretation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Quality Score Interpretation
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-standardization-process-a-step-by-step-walkthrough" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Standardization Process: A Step-by-Step Walkthrough
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The Standardization Process: A Step-by-Step Walkthrough">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-1-locate-the-microsim-directory" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 1: Locate the MicroSim Directory
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-2-check-existing-quality-score" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 2: Check Existing Quality Score
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-3-verify-core-files-exist" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 3: Verify Core Files Exist
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-4-validate-indexmd-structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 4: Validate index.md Structure
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-5-validate-type-specific-requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 5: Validate Type-Specific Requirements
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-6-validate-content-sections" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 6: Validate Content Sections
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-7-validate-metadatajson" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 7: Validate metadata.json
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-8-calculate-and-record-quality-score" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 8: Calculate and Record Quality Score
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Step 8: Calculate and Record Quality Score">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-standardization-workflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Standardization Workflow
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#microsim-metadata-the-key-to-discoverability" class="md-nav__link">
+    <span class="md-ellipsis">
+      MicroSim Metadata: The Key to Discoverability
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="MicroSim Metadata: The Key to Discoverability">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-power-of-structured-metadata" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Power of Structured Metadata
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-microsim-json-schema" class="md-nav__link">
+    <span class="md-ellipsis">
+      The MicroSim JSON Schema
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#why-generative-ai-loves-json-schemas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why Generative AI Loves JSON Schemas
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#metadata-quality-scoring" class="md-nav__link">
+    <span class="md-ellipsis">
+      Metadata Quality Scoring
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Metadata Quality Scoring">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-metadata-enabled-search" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Metadata-Enabled Search
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#automated-vs-human-evaluation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Automated vs. Human Evaluation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Automated vs. Human Evaluation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-can-be-automated" class="md-nav__link">
+    <span class="md-ellipsis">
+      What Can Be Automated
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-requires-human-evaluation" class="md-nav__link">
+    <span class="md-ellipsis">
+      What Requires Human Evaluation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-hybrid-approach" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Hybrid Approach
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The Hybrid Approach">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-automated-vs-human-evaluation-matrix" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Automated vs. Human Evaluation Matrix
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#documentation-standards-writing-for-reuse" class="md-nav__link">
+    <span class="md-ellipsis">
+      Documentation Standards: Writing for Reuse
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Documentation Standards: Writing for Reuse">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-documentation-checklist" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Documentation Checklist
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lesson-plan-section" class="md-nav__link">
+    <span class="md-ellipsis">
+      Lesson Plan Section
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rubric-development-building-your-own-evaluation-tools" class="md-nav__link">
+    <span class="md-ellipsis">
+      Rubric Development: Building Your Own Evaluation Tools
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Rubric Development: Building Your Own Evaluation Tools">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#principles-of-effective-rubric-design" class="md-nav__link">
+    <span class="md-ellipsis">
+      Principles of Effective Rubric Design
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#customization-example-physics-microsim-rubric" class="md-nav__link">
+    <span class="md-ellipsis">
+      Customization Example: Physics MicroSim Rubric
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Customization Example: Physics MicroSim Rubric">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-evaluation-rubric-builder" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Evaluation Rubric Builder
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#designing-for-reusability-future-proofing-your-work" class="md-nav__link">
+    <span class="md-ellipsis">
+      Designing for Reusability: Future-Proofing Your Work
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Designing for Reusability: Future-Proofing Your Work">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#reusability-principles" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reusability Principles
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-metadata-reusability-connection" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Metadata-Reusability Connection
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#summary-the-quality-mindset" class="md-nav__link">
+    <span class="md-ellipsis">
+      Summary: The Quality Mindset
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-takeaways" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key Takeaways
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reflection-questions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reflection Questions
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    <span class="md-ellipsis">
+      References
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1175,9 +2209,9 @@
 
 <h1 id="quality-evaluation-frameworks">Quality Evaluation Frameworks</h1>
 <h2 id="summary">Summary</h2>
-<p>This chapter presents comprehensive frameworks for evaluating MicroSim quality across three dimensions: technical, pedagogical, and user experience. You will learn output validation techniques, functionality and responsiveness testing methods, and bug identification strategies. The chapter covers pedagogical evaluation including objective alignment, cognitive level matching, and effectiveness measurement. UX evaluation addresses intuitiveness and engagement balance. You will also learn rubric development, automated versus human evaluation methods, documentation standards, and designing for reusability.</p>
+<p>This chapter presents comprehensive frameworks for evaluating MicroSim quality across three dimensions: technical, pedagogical, and user experience. You will learn output validation techniques, quality scores, functionality and responsiveness testing methods, and bug identification strategies. The chapter covers pedagogical evaluation including objective alignment, cognitive level matching, and effectiveness measurement. UX evaluation addresses intuitiveness and engagement balance. You will also learn rubric development, automated versus human evaluation methods, documentation standards, metadata standards, and designing for reusability.</p>
 <h2 id="concepts-covered">Concepts Covered</h2>
-<p>This chapter covers the following 18 concepts from the learning graph:</p>
+<p>This chapter covers the following concepts from the learning graph:</p>
 <ol>
 <li>Output Validation</li>
 <li>Technical Evaluation</li>
@@ -1197,6 +2231,10 @@
 <li>Human Evaluation</li>
 <li>Documentation Standard</li>
 <li>Reusability</li>
+<li>Quality Score</li>
+<li>Standardization Score</li>
+<li>MicroSim Metadata</li>
+<li>Search and Reuse</li>
 </ol>
 <h2 id="prerequisites">Prerequisites</h2>
 <p>This chapter builds on concepts from:</p>
@@ -1205,7 +2243,1054 @@
 <li><a href="../09-generating-microsims-ai-tools/">Chapter 9: Generating MicroSims with AI Tools</a></li>
 </ul>
 <hr />
-<p>TODO: Generate Chapter Content</p>
+<h2 id="introduction-why-quality-matters-and-why-you-should-care">Introduction: Why Quality Matters (And Why You Should Care)</h2>
+<p>Here's a joke for you: How many instructional designers does it take to evaluate a MicroSim? Just one—but they'll need three different rubrics, a metadata schema, and a strong cup of coffee.</p>
+<p>All joking aside, creating a MicroSim is only half the battle. Without rigorous quality evaluation, you might deploy a simulation that looks pretty but teaches poorly, works on your laptop but crashes on a student's tablet, or disappears into the digital void because nobody can find it when they need it.</p>
+<p>This chapter arms you with the frameworks, rubrics, and standards needed to ensure your MicroSims are not just functional, but genuinely effective educational tools. Think of quality evaluation as the immune system of instructional design—it protects learners from buggy interfaces, misaligned objectives, and the heartbreak of a beautiful simulation that nobody can find or reuse.</p>
+<p>The three pillars of MicroSim quality form what we call the <strong>Three-Lens Evaluation Model</strong>:</p>
+<ul>
+<li><strong>Technical Quality</strong>: Does it work reliably across devices and browsers?</li>
+<li><strong>Pedagogical Quality</strong>: Does it actually teach what it claims to teach?</li>
+<li><strong>User Experience Quality</strong>: Is it intuitive and engaging without being distracting?</li>
+</ul>
+<p>Let's explore each lens in detail, starting with the nuts and bolts of technical evaluation.</p>
+<h2 id="the-three-lens-evaluation-model">The Three-Lens Evaluation Model</h2>
+<p>Before diving into specifics, let's visualize how these three evaluation lenses work together to create a holistic quality assessment.</p>
+<h4 id="diagram-three-lens-evaluation-model">Diagram: Three-Lens Evaluation Model</h4>
+<details>
+<summary>Three-Lens Evaluation Model</summary>
+<p>Type: diagram</p>
+<p>Bloom Taxonomy: Understand (L2)</p>
+<p>Learning Objective: Students will understand how technical, pedagogical, and UX evaluation dimensions interact to form a complete quality assessment framework.</p>
+<p>Components to show:
+- Three overlapping circles representing Technical, Pedagogical, and UX evaluation
+- Central intersection labeled "High-Quality MicroSim"
+- Each circle contains key evaluation criteria:
+  - Technical: Functionality, Responsiveness, Bug-Free, Standardization
+  - Pedagogical: Objective Alignment, Cognitive Level Match, Effectiveness
+  - UX: Intuitiveness, Engagement Balance, Accessibility
+- Arrows showing how deficiencies in one area impact overall quality</p>
+<p>Visual style: Venn diagram with three circles, center highlighted in gold</p>
+<p>Color scheme:
+- Technical: Blue (#3B82F6)
+- Pedagogical: Green (#10B981)
+- UX: Purple (#8B5CF6)
+- Center intersection: Gold (#F59E0B)</p>
+<p>Implementation: HTML/CSS/JavaScript with SVG or p5.js</p>
+</details>
+<p>The magic happens at the intersection of all three circles. A MicroSim might achieve technical perfection—zero bugs, responsive across all devices—but if it confuses learners or targets the wrong cognitive level, it fails its educational mission. Similarly, a pedagogically brilliant simulation that crashes on mobile devices serves no one.</p>
+<h2 id="technical-evaluation-the-foundation-of-trust">Technical Evaluation: The Foundation of Trust</h2>
+<p>Technical evaluation answers a fundamental question: <strong>Does this thing actually work?</strong></p>
+<p>It sounds simple, but "working" encompasses far more than just loading without errors. Technical quality includes functionality testing, responsiveness across devices, bug identification, and adherence to standardization requirements.</p>
+<h3 id="output-validation-the-first-line-of-defense">Output Validation: The First Line of Defense</h3>
+<p>Output validation is the process of verifying that a MicroSim produces expected results given specific inputs. Think of it as the quality control checkpoint on the assembly line.</p>
+<p>For AI-generated MicroSims, output validation is particularly critical because generative AI systems can produce code that looks correct but contains subtle logical errors. Consider a physics simulation where gravity is accidentally set to a positive value instead of negative—the objects float upward instead of falling. The code runs fine; the physics is just hilariously wrong.</p>
+<p>Key output validation checks include:</p>
+<ul>
+<li><strong>Visual correctness</strong>: Do elements render in expected positions and colors?</li>
+<li><strong>Mathematical accuracy</strong>: Do calculations produce correct results?</li>
+<li><strong>Behavioral consistency</strong>: Does the simulation respond predictably to user inputs?</li>
+<li><strong>Edge case handling</strong>: What happens with extreme values or unexpected inputs?</li>
+<li><strong>State management</strong>: Does the simulation reset properly?</li>
+</ul>
+<h3 id="functionality-testing">Functionality Testing</h3>
+<p>Functionality testing systematically verifies that every interactive element performs its intended function.</p>
+<table>
+<thead>
+<tr>
+<th>Test Category</th>
+<th>What to Check</th>
+<th>Common Failures</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Controls</td>
+<td>Sliders respond, buttons trigger actions</td>
+<td>Range limits not enforced</td>
+</tr>
+<tr>
+<td>Animations</td>
+<td>Start/stop/reset work correctly</td>
+<td>Animation loops don't reset</td>
+</tr>
+<tr>
+<td>Data Display</td>
+<td>Values update in real-time</td>
+<td>Display lag or stale values</td>
+</tr>
+<tr>
+<td>User Input</td>
+<td>Text fields validate input</td>
+<td>No input sanitization</td>
+</tr>
+<tr>
+<td>Audio/Visual</td>
+<td>Feedback triggers appropriately</td>
+<td>Missing confirmation signals</td>
+</tr>
+</tbody>
+</table>
+<h3 id="responsiveness-testing">Responsiveness Testing</h3>
+<p>In 2024, learners access content on everything from 27-inch desktop monitors to 5-inch smartphone screens. A MicroSim that only works on the developer's MacBook Pro is a MicroSim that fails most learners.</p>
+<p>Responsiveness testing verifies that:</p>
+<ul>
+<li>Canvas dimensions adapt to viewport size</li>
+<li>Control panels reorganize appropriately on smaller screens</li>
+<li>Touch targets are large enough for mobile interaction (minimum 44x44 pixels)</li>
+<li>Text remains readable at all breakpoints</li>
+<li>No horizontal scrolling is required</li>
+</ul>
+<h4 id="diagram-responsive-breakpoint-testing">Diagram: Responsive Breakpoint Testing</h4>
+<details>
+<summary>Responsive Breakpoint Testing</summary>
+<p>Type: diagram</p>
+<p>Bloom Taxonomy: Apply (L3)</p>
+<p>Learning Objective: Students will apply responsive design testing criteria to evaluate MicroSim adaptability across device sizes.</p>
+<p>Components to show:
+- Four device mockups side by side: Desktop (1920px), Laptop (1366px), Tablet (768px), Mobile (375px)
+- Each mockup shows same MicroSim at that breakpoint
+- Callout annotations showing what changes at each breakpoint:
+  - Control panel moves from side to bottom
+  - Fonts scale proportionally
+  - Touch targets increase size on mobile
+- Traffic light indicators: green (pass), yellow (issues), red (fail)</p>
+<p>Visual style: Device mockup comparison with annotations</p>
+<p>Color scheme: Device frames in dark gray, content areas in white, annotations in blue</p>
+<p>Implementation: HTML/CSS or static diagram</p>
+</details>
+<h3 id="bug-identification-finding-the-gremlins">Bug Identification: Finding the Gremlins</h3>
+<p>Bugs in educational software aren't just annoying—they can actively harm learning. A student who encounters a crash during a "eureka moment" may lose motivation entirely. A calculation error can reinforce misconceptions rather than correcting them.</p>
+<p>Common bug categories in MicroSims include:</p>
+<ul>
+<li><strong>Logic errors</strong>: Calculations produce wrong results</li>
+<li><strong>State corruption</strong>: Variables retain values when they shouldn't</li>
+<li><strong>Race conditions</strong>: Timing-dependent behavior causes inconsistency</li>
+<li><strong>Memory leaks</strong>: Performance degrades over extended use</li>
+<li><strong>Browser incompatibilities</strong>: Works in Chrome, fails in Safari</li>
+<li><strong>Accessibility failures</strong>: Screen readers can't parse content</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Pro tip</p>
+</div>
+<p>If you ever want to find bugs quickly, hand your MicroSim to a middle schooler.
+  They will click everything, in every order, as fast as possible—and find edge cases you never imagined.</p>
+<h2 id="pedagogical-evaluation-teaching-what-you-mean-to-teach">Pedagogical Evaluation: Teaching What You Mean to Teach</h2>
+<p>Technical perfection means nothing if a MicroSim doesn't effectively teach its intended concepts. Pedagogical evaluation examines whether the simulation aligns with learning objectives, targets appropriate cognitive levels, and demonstrably improves student understanding.</p>
+<h3 id="objective-alignment-staying-on-target">Objective Alignment: Staying on Target</h3>
+<p>Objective alignment verifies that every element of a MicroSim serves its stated learning objective. This sounds obvious, but scope creep is a constant temptation. A simulation designed to teach supply and demand might gradually accumulate features for market equilibrium, price elasticity, government intervention, and international trade—until it teaches nothing well.</p>
+<p>Questions to ask during objective alignment review:</p>
+<ul>
+<li>Does the simulation directly address the stated learning objective?</li>
+<li>Are there features that distract from the core concept?</li>
+<li>Can a learner complete the interaction without engaging with the key insight?</li>
+<li>Is the objective achievable within a reasonable time frame?</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Alignment Issue</th>
+<th>Symptom</th>
+<th>Solution</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Scope creep</td>
+<td>Too many concepts, unfocused</td>
+<td>Remove tangential features</td>
+</tr>
+<tr>
+<td>Hidden complexity</td>
+<td>Core concept buried in interface</td>
+<td>Simplify to essential elements</td>
+</tr>
+<tr>
+<td>False completion</td>
+<td>Can "finish" without understanding</td>
+<td>Add understanding checks</td>
+</tr>
+<tr>
+<td>Missing scaffolding</td>
+<td>Jumps to complex without building</td>
+<td>Add progressive difficulty</td>
+</tr>
+</tbody>
+</table>
+<h3 id="cognitive-level-match">Cognitive Level Match</h3>
+<p>Not all learning objectives are created equal. Bloom's Taxonomy (2001 revision) distinguishes six cognitive levels, from simple recall to creative synthesis. A MicroSim designed for "Remember" level learning (vocabulary flashcards) requires different design patterns than one targeting "Analyze" level (comparing multiple data sets).</p>
+<p><strong>Cognitive Level Matching Checklist:</strong></p>
+<ul>
+<li><strong>Remember (L1)</strong>: Does the sim support fact recall? (flashcards, matching games)</li>
+<li><strong>Understand (L2)</strong>: Does it enable explanation of concepts? (labeled diagrams, cause-effect demos)</li>
+<li><strong>Apply (L3)</strong>: Can learners use knowledge to solve problems? (parameter manipulation, scenario testing)</li>
+<li><strong>Analyze (L4)</strong>: Does it reveal relationships and patterns? (data exploration, network visualization)</li>
+<li><strong>Evaluate (L5)</strong>: Can learners make judgments based on criteria? (comparison tools, trade-off analysis)</li>
+<li><strong>Create (L6)</strong>: Does it support generating original work? (model builders, design tools)</li>
+</ul>
+<p>A common mismatch occurs when a learning objective targets "Analyze" but the MicroSim only supports "Understand"—the simulation explains concepts beautifully but never challenges learners to discover relationships themselves.</p>
+<h4 id="diagram-blooms-taxonomy-and-microsim-types">Diagram: Bloom's Taxonomy and MicroSim Types</h4>
+<details>
+<summary>Bloom's Taxonomy and MicroSim Types</summary>
+<p>Type: infographic</p>
+<p>Bloom Taxonomy: Analyze (L4)</p>
+<p>Learning Objective: Students will analyze the relationship between Bloom's Taxonomy cognitive levels and appropriate MicroSim types for each level.</p>
+<p>Layout: Vertical pyramid with six levels, each containing example MicroSim types</p>
+<p>Content:
+- Level 6 - Create: Model editors, free-form design tools, hypothesis builders
+- Level 5 - Evaluate: Comparison simulators, trade-off analyzers, judgment exercises
+- Level 4 - Analyze: Network graphs, data explorers, pattern identification tools
+- Level 3 - Apply: Parameter sliders, scenario testers, problem solvers
+- Level 2 - Understand: Animated explanations, cause-effect demos, concept maps
+- Level 1 - Remember: Flashcard games, matching exercises, term sorters</p>
+<p>Interactive elements:
+- Hover over each level to see detailed examples and design considerations
+- Click to expand with case studies of successful MicroSims at each level</p>
+<p>Color scheme: Gradient from light blue (Remember) to dark purple (Create)</p>
+<p>Implementation: HTML/CSS/JavaScript with progressive disclosure</p>
+</details>
+<h3 id="effectiveness-measurement">Effectiveness Measurement</h3>
+<p>The ultimate test of pedagogical quality is whether students actually learn. Effectiveness measurement goes beyond "Did they complete the simulation?" to ask "Did their understanding improve?"</p>
+<p>Methods for measuring MicroSim effectiveness include:</p>
+<ul>
+<li><strong>Pre/post assessments</strong>: Test understanding before and after MicroSim use</li>
+<li><strong>Embedded checkpoints</strong>: Questions within the simulation that verify understanding</li>
+<li><strong>Transfer tasks</strong>: Can learners apply concepts to new situations?</li>
+<li><strong>Long-term retention</strong>: Does understanding persist over time?</li>
+<li><strong>Comparison studies</strong>: How does learning compare to alternative methods?</li>
+</ul>
+<hr />
+<h2 id="ux-evaluation-the-human-factor">UX Evaluation: The Human Factor</h2>
+<p>A MicroSim can work perfectly and teach effectively, yet still frustrate users with confusing navigation, overwhelming interfaces, or interactions that feel like wrestling with an angry octopus.</p>
+<h3 id="intuitiveness-can-they-figure-it-out">Intuitiveness: Can They Figure It Out?</h3>
+<p>Intuitiveness measures whether users can accomplish their goals without extensive instruction. The gold standard is the "Grandma Test"—can someone with minimal technical background figure out how to use it within 30 seconds?</p>
+<p>Indicators of poor intuitiveness:</p>
+<ul>
+<li>Users click randomly hoping something happens</li>
+<li>The "obvious" next step isn't actually obvious</li>
+<li>Critical controls are hidden or unlabeled</li>
+<li>Feedback doesn't match user expectations</li>
+<li>Reset functions are hard to find</li>
+</ul>
+<h3 id="engagement-balance-the-goldilocks-zone">Engagement Balance: The Goldilocks Zone</h3>
+<p>There's a sweet spot between "so boring I'm falling asleep" and "so gamified I forgot I'm supposed to be learning." Engagement balance seeks that Goldilocks zone where learners are sufficiently motivated to persist without being distracted by bells, whistles, and virtual confetti.</p>
+<table>
+<thead>
+<tr>
+<th>Too Little Engagement</th>
+<th>Balanced</th>
+<th>Too Much Engagement</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Plain text only</td>
+<td>Subtle animations</td>
+<td>Constant motion</td>
+</tr>
+<tr>
+<td>No feedback</td>
+<td>Meaningful responses</td>
+<td>Points for everything</td>
+</tr>
+<tr>
+<td>Static displays</td>
+<td>Interactive controls</td>
+<td>Addictive mechanics</td>
+</tr>
+<tr>
+<td>No progress indication</td>
+<td>Clear milestones</td>
+<td>Leaderboards dominating</td>
+</tr>
+</tbody>
+</table>
+<p>The key question: <strong>Does the engagement serve the learning, or does learning serve the engagement?</strong></p>
+<h4 id="diagram-engagement-vs-learning-trade-off">Diagram: Engagement vs. Learning Trade-off</h4>
+<details>
+<summary>Engagement vs. Learning Trade-off</summary>
+<p>Type: chart</p>
+<p>Bloom Taxonomy: Evaluate (L5)</p>
+<p>Learning Objective: Students will evaluate the relationship between engagement features and learning effectiveness to identify optimal design approaches.</p>
+<p>Chart type: Scatter plot with trend curve</p>
+<p>X-axis: Engagement Features (0-10 scale)
+Y-axis: Learning Effectiveness (0-10 scale)</p>
+<p>Data points showing:
+- Low engagement/low learning: Static diagram (1,3)
+- Moderate engagement/high learning: Interactive simulation (5,8)
+- High engagement/moderate learning: Game-heavy design (9,5)
+- Optimal zone highlighted in green (4-6 on X, 7-9 on Y)</p>
+<p>Annotations:
+- "Boring" zone (left side)
+- "Optimal Balance" zone (center-top)
+- "Distraction Risk" zone (right side)
+- Curve showing diminishing returns on engagement beyond optimal point</p>
+<p>Color scheme: Blue dots, green optimal zone, trend line in dark gray</p>
+<p>Implementation: Chart.js or Plotly</p>
+</details>
+<hr />
+<h2 id="the-completeness-quality-score-a-rubric-llms-can-follow">The Completeness Quality Score: A Rubric LLMs Can Follow</h2>
+<p>Here's where the rubber meets the road. How do you translate these evaluation dimensions into a concrete, measurable score that both humans and AI systems can consistently apply?</p>
+<p>The <strong>Completeness Quality Score</strong> is a 100-point rubric that evaluates whether a MicroSim includes all required components for standardization. Note that this score measures <em>completeness</em>, not usability—a MicroSim can achieve a perfect 100 and still be pedagogically questionable. Think of it as a checklist for structural integrity, not artistic merit.</p>
+<div class="admonition tip">
+<p class="admonition-title">Why Completeness Matters for AI</p>
+<p>Large Language Models are remarkably precise at following structured rules. By encoding quality criteria as a rubric with clear checkpoints, we enable automated quality assessment during and after MicroSim generation.</p>
+</div>
+<h3 id="the-100-point-completeness-rubric">The 100-Point Completeness Rubric</h3>
+<table>
+<thead>
+<tr>
+<th>Test Name</th>
+<th>Description</th>
+<th>Points</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Title</td>
+<td>index.md file has a title in markdown level 1 header</td>
+<td>2</td>
+</tr>
+<tr>
+<td>main.html</td>
+<td>The file main.html is present in the MicroSim directory</td>
+<td>10</td>
+</tr>
+<tr>
+<td>Metadata 1</td>
+<td>index.md has title and description metadata in YAML</td>
+<td>3</td>
+</tr>
+<tr>
+<td>Metadata 2</td>
+<td>index.md has image references for social preview</td>
+<td>5</td>
+</tr>
+<tr>
+<td>metadata.json present</td>
+<td>A metadata.json file is present</td>
+<td>10</td>
+</tr>
+<tr>
+<td>metadata.json valid</td>
+<td>The MicroSim JSON Schema passes validation with no errors</td>
+<td>20</td>
+</tr>
+<tr>
+<td>iframe</td>
+<td>An iframe that uses src="main.html" is present</td>
+<td>10</td>
+</tr>
+<tr>
+<td>Fullscreen Link</td>
+<td>A button to view the MicroSim in fullscreen is present</td>
+<td>5</td>
+</tr>
+<tr>
+<td>iframe example</td>
+<td>An iframe example in an HTML source block is present for embedding</td>
+<td>5</td>
+</tr>
+<tr>
+<td>image</td>
+<td>A screenshot image is present and referenced in header metadata</td>
+<td>5</td>
+</tr>
+<tr>
+<td>Overview</td>
+<td>A description of the MicroSim and how to use it is present</td>
+<td>5</td>
+</tr>
+<tr>
+<td>Lesson Plan</td>
+<td>A detailed lesson plan is present</td>
+<td>10</td>
+</tr>
+<tr>
+<td>References</td>
+<td>A list of references in markdown format</td>
+<td>5</td>
+</tr>
+<tr>
+<td>Type-Specific Format</td>
+<td>Varies by type (e.g., p5.js editor link for p5.js MicroSims)</td>
+<td>5</td>
+</tr>
+<tr>
+<td><strong>Total</strong></td>
+<td></td>
+<td><strong>100</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="quality-score-interpretation">Quality Score Interpretation</h3>
+<ul>
+<li><strong>90-100</strong>: Production ready. All components present, excellent documentation.</li>
+<li><strong>70-89</strong>: Good quality. Most components present, may lack lesson plan.</li>
+<li><strong>50-69</strong>: Needs work. Core components present but minimal documentation.</li>
+<li><strong>Below 50</strong>: Incomplete. Missing critical components; do not deploy.</li>
+</ul>
+<p>The quality score is stored in the YAML frontmatter of the index.md file:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nn">---</span>
+<span class="nt">title</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Bouncing Ball Simulation</span>
+<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Interactive demonstration of gravity and elastic collisions</span>
+<span class="nt">quality_score</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">86</span>
+<span class="nn">---</span>
+</code></pre></div></td></tr></table></div>
+<hr />
+<h2 id="the-standardization-process-a-step-by-step-walkthrough">The Standardization Process: A Step-by-Step Walkthrough</h2>
+<p>Let's walk through the complete standardization process for bringing a MicroSim up to quality standards. This process is designed to be followed by humans or automated by AI agents.</p>
+<h3 id="step-1-locate-the-microsim-directory">Step 1: Locate the MicroSim Directory</h3>
+<p>MicroSim directories follow the standard structure:
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>docs/sims/[microsim-name]/
+</code></pre></div></td></tr></table></div></p>
+<p>The <code>microsim-name</code> must use kebab-case (lowercase letters and dashes only). No spaces, underscores, or uppercase characters.</p>
+<h3 id="step-2-check-existing-quality-score">Step 2: Check Existing Quality Score</h3>
+<p>Before diving into evaluation, check if a quality score already exists in the index.md YAML frontmatter:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nn">---</span>
+<span class="nt">quality_score</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">86</span>
+<span class="nn">---</span>
+</code></pre></div></td></tr></table></div>
+<p>If the score is 85 or above, the MicroSim meets standards. Consider whether your time is better spent creating new simulations rather than perfecting existing ones.</p>
+<h3 id="step-3-verify-core-files-exist">Step 3: Verify Core Files Exist</h3>
+<p>At minimum, a MicroSim directory must contain:</p>
+<ul>
+<li><code>main.html</code> - The core simulation file (required)</li>
+<li><code>index.md</code> - The MkDocs documentation page (required for integration)</li>
+<li><code>metadata.json</code> - Dublin Core metadata for discoverability (required for searchability)</li>
+</ul>
+<h3 id="step-4-validate-indexmd-structure">Step 4: Validate index.md Structure</h3>
+<p>The index.md file must include:</p>
+<p><strong>YAML Frontmatter (between <code>---</code> delimiters):</strong>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nn">---</span>
+<span class="nt">title</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Simulation Name</span>
+<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Brief description for SEO and social previews</span>
+<span class="nt">quality_score</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">75</span>
+<span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/sims/simulation-name/simulation-name.png</span>
+<span class="nt">og:image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/sims/simulation-name/simulation-name.png</span>
+<span class="nn">---</span>
+</code></pre></div></td></tr></table></div></p>
+<p><strong>Level 1 Header:</strong>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="gh"># Simulation Name</span>
+</code></pre></div></td></tr></table></div></p>
+<p><strong>Iframe Embed:</strong>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="p">&lt;</span><span class="nt">iframe</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;main.html&quot;</span> <span class="na">width</span><span class="o">=</span><span class="s">&quot;100%&quot;</span> <span class="na">height</span><span class="o">=</span><span class="s">&quot;600px&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">iframe</span><span class="p">&gt;</span>
+</code></pre></div></td></tr></table></div></p>
+<p><strong>Copy-Paste Iframe Example:</strong>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="sb">```html</span>
+<span class="p">&lt;</span><span class="nt">iframe</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;https://yourdomain.github.io/path/sims/name/main.html&quot;</span> <span class="na">width</span><span class="o">=</span><span class="s">&quot;100%&quot;</span> <span class="na">height</span><span class="o">=</span><span class="s">&quot;600px&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">iframe</span><span class="p">&gt;</span>
+<span class="sb">```</span>
+</code></pre></div></td></tr></table></div></p>
+<p><strong>Fullscreen Link:</strong>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>[<span class="nt">Run MicroSim in Fullscreen</span>](<span class="na">main.html</span>){ .md-button .md-button--primary }
+</code></pre></div></td></tr></table></div></p>
+<h3 id="step-5-validate-type-specific-requirements">Step 5: Validate Type-Specific Requirements</h3>
+<p>Different MicroSim types have additional requirements:</p>
+<p><strong>p5.js MicroSims</strong> must include a link to the p5.js editor:
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>[<span class="nt">Edit in the p5.js Editor</span>](<span class="na">https://editor.p5js.org/username/sketches/SKETCH_ID</span>)
+</code></pre></div></td></tr></table></div></p>
+<p>To detect if a MicroSim uses p5.js, check for:
+- Import statements for p5.js CDN in main.html
+- Use of p5.js functions like <code>setup()</code>, <code>draw()</code>, <code>createCanvas()</code></p>
+<p>Other library types (vis-network, Chart.js, D3.js) currently have no type-specific requirements, but this may change as the ecosystem evolves.</p>
+<h3 id="step-6-validate-content-sections">Step 6: Validate Content Sections</h3>
+<p>Check for presence of documentation sections:</p>
+<ul>
+<li><strong>Description/How to Use</strong>: Explains the MicroSim's purpose and interaction patterns</li>
+<li><strong>Lesson Plan</strong> (10 points): Learning objectives, target audience, prerequisites, activities, assessment</li>
+<li><strong>References</strong> (5 points): Links to relevant resources, papers, or library documentation</li>
+</ul>
+<h3 id="step-7-validate-metadatajson">Step 7: Validate metadata.json</h3>
+<p>The metadata.json file must pass schema validation. More on this in the next section.</p>
+<h3 id="step-8-calculate-and-record-quality-score">Step 8: Calculate and Record Quality Score</h3>
+<p>Sum points from the rubric and write the score to the index.md YAML frontmatter.</p>
+<h4 id="diagram-standardization-workflow">Diagram: Standardization Workflow</h4>
+<details>
+<summary>Standardization Workflow</summary>
+<p>Type: workflow</p>
+<p>Bloom Taxonomy: Apply (L3)</p>
+<p>Learning Objective: Students will apply the standardization workflow to evaluate and upgrade MicroSim quality.</p>
+<p>Visual style: Flowchart with decision diamonds and process rectangles</p>
+<p>Steps:
+1. Start: "Receive MicroSim Path"
+   Hover text: "User provides path to MicroSim directory"</p>
+<ol>
+<li>Decision: "Existing Score &gt;= 85?"
+   Hover text: "Check YAML frontmatter for quality_score field"</li>
+</ol>
+<p>3a. Process: "Skip Standardization" (if Yes)
+    Hover text: "MicroSim already meets quality standards"</p>
+<p>3b. Process: "Begin Evaluation Checklist" (if No)
+    Hover text: "Proceed with full standardization process"</p>
+<ol>
+<li>
+<p>Process: "Check Core Files"
+   Hover text: "Verify main.html, index.md, metadata.json exist"</p>
+</li>
+<li>
+<p>Process: "Validate index.md Structure"
+   Hover text: "Check YAML, headers, iframes, links"</p>
+</li>
+<li>
+<p>Decision: "Is p5.js MicroSim?"
+   Hover text: "Detect p5.js library usage in main.html"</p>
+</li>
+</ol>
+<p>7a. Process: "Check p5.js Editor Link" (if Yes)
+    Hover text: "Verify link to p5.js editor exists"</p>
+<p>7b. Process: "Continue to Content" (if No)
+    Hover text: "Skip type-specific checks"</p>
+<ol>
+<li>
+<p>Process: "Validate Content Sections"
+   Hover text: "Check description, lesson plan, references"</p>
+</li>
+<li>
+<p>Process: "Validate metadata.json"
+   Hover text: "Run JSON Schema validation"</p>
+</li>
+<li>
+<p>Process: "Calculate Quality Score"
+    Hover text: "Sum points from rubric"</p>
+</li>
+<li>
+<p>Process: "Write Score to index.md"
+    Hover text: "Update YAML frontmatter with quality_score"</p>
+</li>
+<li>
+<p>End: "Standardization Complete"
+    Hover text: "MicroSim meets documentation standards"</p>
+</li>
+</ol>
+<p>Color coding:
+- Blue: File operations
+- Yellow: Decision points
+- Green: Success outcomes
+- Purple: Validation steps</p>
+<p>Implementation: Mermaid or HTML/CSS/JavaScript flowchart</p>
+</details>
+<hr />
+<h2 id="microsim-metadata-the-key-to-discoverability">MicroSim Metadata: The Key to Discoverability</h2>
+<p>Here's a truth that should be embroidered on every instructional designer's laptop bag:</p>
+<blockquote>
+<p><strong>"You can't reuse what you can't find."</strong></p>
+</blockquote>
+<p>A brilliant MicroSim that's buried in an undocumented folder, lacking keywords and categorization, might as well not exist. Metadata is the bridge between creation and reuse—it makes simulations findable, comparable, and adaptable.</p>
+<h3 id="the-power-of-structured-metadata">The Power of Structured Metadata</h3>
+<p>The MicroSim ecosystem uses a comprehensive JSON Schema based on Dublin Core metadata standards, extended with educational and technical specifications. When every MicroSim includes a properly structured <code>metadata.json</code> file:</p>
+<ul>
+<li>Search tools like <a href="https://dmccreary.github.io/search-microsims/">https://dmccreary.github.io/search-microsims/</a> can quickly narrow down databases by subject, grade level, JavaScript library, or complexity</li>
+<li>AI agents can find similar MicroSims to use as templates for new designs</li>
+<li>Educators can filter simulations by Bloom's Taxonomy level, prerequisite concepts, or curriculum standards</li>
+</ul>
+<h3 id="the-microsim-json-schema">The MicroSim JSON Schema</h3>
+<p>The schema defines several major sections:</p>
+<p><strong>Dublin Core Metadata (dublinCore):</strong>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;dublinCore&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Gravity Simulator&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;creator&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;Dan McCreary&quot;</span><span class="p">],</span>
+<span class="w">    </span><span class="nt">&quot;subject&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;physics&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;gravity&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;mechanics&quot;</span><span class="p">],</span>
+<span class="w">    </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Interactive simulation demonstrating gravitational acceleration&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;date&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2024-01-15T10:30:00Z&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Interactive Simulation&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;format&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;text/html&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;rights&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;CC BY 4.0&quot;</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></td></tr></table></div></p>
+<p><strong>Search Metadata (search):</strong>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span>
+<span class="normal">9</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;search&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;tags&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;physics&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;gravity&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;freefall&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;STEM&quot;</span><span class="p">],</span>
+<span class="w">    </span><span class="nt">&quot;visualizationType&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;simulation&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;animation&quot;</span><span class="p">],</span>
+<span class="w">    </span><span class="nt">&quot;interactionLevel&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;moderate&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;complexity&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;relatedConcepts&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;acceleration&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;mass&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;velocity&quot;</span><span class="p">]</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></td></tr></table></div></p>
+<p><strong>Educational Metadata (educational):</strong>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;educational&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;gradeLevel&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;9&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;10&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;11&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;12&quot;</span><span class="p">],</span>
+<span class="w">    </span><span class="nt">&quot;subjectArea&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;Physics&quot;</span><span class="p">],</span>
+<span class="w">    </span><span class="nt">&quot;topic&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;Newtonian mechanics&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Gravitational acceleration&quot;</span><span class="p">],</span>
+<span class="w">    </span><span class="nt">&quot;learningObjectives&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">      </span><span class="s2">&quot;Demonstrate that gravitational acceleration is independent of mass&quot;</span>
+<span class="w">    </span><span class="p">],</span>
+<span class="w">    </span><span class="nt">&quot;bloomsTaxonomy&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;Understand&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Apply&quot;</span><span class="p">],</span>
+<span class="w">    </span><span class="nt">&quot;prerequisites&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;Basic algebra&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Concept of velocity&quot;</span><span class="p">],</span>
+<span class="w">    </span><span class="nt">&quot;difficulty&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Intermediate&quot;</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></td></tr></table></div></p>
+<p><strong>Technical Metadata (technical):</strong>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;technical&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;framework&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;p5.js&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;version&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;1.2.0&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;canvasDimensions&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">&quot;width&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">800</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;height&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">600</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;responsive&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="w">    </span><span class="nt">&quot;accessibility&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">&quot;screenReader&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;keyboardNavigation&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;colorContrast&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></td></tr></table></div></p>
+<h3 id="why-generative-ai-loves-json-schemas">Why Generative AI Loves JSON Schemas</h3>
+<p>Here's an optimistic insight: Large Language Models are remarkably good at following JSON Schema specifications. When you provide a well-defined schema, AI systems can:</p>
+<ul>
+<li>Generate valid metadata.json files for new MicroSims</li>
+<li>Validate existing metadata against schema requirements</li>
+<li>Suggest missing fields based on content analysis</li>
+<li>Maintain consistency across large MicroSim libraries</li>
+</ul>
+<p>This precision is a gift for quality automation. Instead of hoping an AI "gets it right," you define exactly what "right" means in a machine-readable format.</p>
+<h3 id="metadata-quality-scoring">Metadata Quality Scoring</h3>
+<p>Beyond structural validation, metadata can be evaluated for quality and completeness:</p>
+<table>
+<thead>
+<tr>
+<th>Criterion</th>
+<th>Description</th>
+<th>Weight</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Required fields present</td>
+<td>All required Dublin Core and educational fields</td>
+<td>40%</td>
+</tr>
+<tr>
+<td>Keyword richness</td>
+<td>Multiple relevant subject tags and search keywords</td>
+<td>15%</td>
+</tr>
+<tr>
+<td>Educational detail</td>
+<td>Learning objectives, Bloom's levels, prerequisites</td>
+<td>20%</td>
+</tr>
+<tr>
+<td>Technical completeness</td>
+<td>Framework, dimensions, accessibility info</td>
+<td>15%</td>
+</tr>
+<tr>
+<td>Usage data</td>
+<td>Popularity metrics, effectiveness studies (if available)</td>
+<td>10%</td>
+</tr>
+</tbody>
+</table>
+<p>Future metadata extensions may include:</p>
+<ul>
+<li><strong>Popularity metrics</strong>: View counts, embedding frequency, user ratings</li>
+<li><strong>Effectiveness data</strong>: Links to research studies demonstrating learning outcomes</li>
+<li><strong>Version history</strong>: Tracking iterations and improvements over time</li>
+<li><strong>Remix relationships</strong>: Which MicroSims were derived from this one?</li>
+</ul>
+<h4 id="diagram-metadata-enabled-search">Diagram: Metadata-Enabled Search</h4>
+<details>
+<summary>Metadata-Enabled Search</summary>
+<p>Type: microsim</p>
+<p>Bloom Taxonomy: Apply (L3)</p>
+<p>Learning Objective: Students will apply metadata filtering to efficiently search a MicroSim database by subject, grade level, and JavaScript library.</p>
+<p>Canvas layout:
+- Left panel (300px): Filter controls
+- Right panel (remaining): Search results grid</p>
+<p>Visual elements:
+- Dropdown filters: Subject Area, Grade Level, JS Library, Bloom's Level
+- Tag cloud showing popular search terms
+- Results displayed as cards with thumbnail, title, description
+- Quality score badge on each result card
+- Click card to view full metadata</p>
+<p>Interactive controls:
+- Dropdown: Subject Area (Math, Science, Physics, etc.)
+- Dropdown: Grade Level (K through Graduate)
+- Dropdown: JS Library (p5.js, vis-network, Chart.js, etc.)
+- Checkbox group: Bloom's Taxonomy levels
+- Slider: Minimum quality score (0-100)
+- Search button
+- Reset filters button</p>
+<p>Default parameters:
+- No filters applied initially
+- Results sorted by quality score descending</p>
+<p>Behavior:
+- Filter changes update results in real-time
+- Empty state shows "No results match your criteria"
+- Click result card to view full metadata modal
+- Shows count of matching results</p>
+<p>Implementation: HTML/CSS/JavaScript with mock data or API connection</p>
+</details>
+<hr />
+<h2 id="automated-vs-human-evaluation">Automated vs. Human Evaluation</h2>
+<p>Not all evaluation tasks require human judgment. Understanding when to automate and when to rely on human expertise is key to efficient quality assurance.</p>
+<h3 id="what-can-be-automated">What Can Be Automated</h3>
+<p>Automated evaluation excels at objective, rule-based checks:</p>
+<ul>
+<li><strong>Structural validation</strong>: File existence, YAML syntax, JSON schema compliance</li>
+<li><strong>Responsiveness testing</strong>: Viewport simulation across breakpoints</li>
+<li><strong>Performance metrics</strong>: Load time, memory usage, frame rate</li>
+<li><strong>Accessibility checks</strong>: Color contrast ratios, ARIA labels, keyboard navigation</li>
+<li><strong>Link verification</strong>: Broken links, missing images</li>
+<li><strong>Code quality</strong>: Linting, syntax errors, deprecated function usage</li>
+</ul>
+<p>Automated tools can run these checks consistently across hundreds of MicroSims without fatigue or variation.</p>
+<h3 id="what-requires-human-evaluation">What Requires Human Evaluation</h3>
+<p>Humans remain essential for subjective, context-dependent judgments:</p>
+<ul>
+<li><strong>Pedagogical alignment</strong>: Does this actually teach the concept?</li>
+<li><strong>Engagement quality</strong>: Is it engaging without being distracting?</li>
+<li><strong>Visual aesthetics</strong>: Does it look professional and inviting?</li>
+<li><strong>Cultural appropriateness</strong>: Are examples inclusive and sensitive?</li>
+<li><strong>Intuitive design</strong>: Can users figure it out without instructions?</li>
+<li><strong>Misconception handling</strong>: Does it address common student errors?</li>
+</ul>
+<p>Think of it this way: Computers can verify that a fullscreen button exists; only humans can judge whether students actually understand what they're supposed to learn.</p>
+<h3 id="the-hybrid-approach">The Hybrid Approach</h3>
+<p>The most effective quality assurance combines automated pre-checks with human review:</p>
+<ol>
+<li><strong>Automated tier</strong>: Run all rule-based checks; flag issues for human review</li>
+<li><strong>Human tier</strong>: Focus expert attention on pedagogical and UX evaluation</li>
+<li><strong>Crowd tier</strong>: Gather feedback from actual learners through user testing</li>
+</ol>
+<p>This pipeline ensures that human cognitive resources are spent on judgments that require human cognition, while machines handle the tedious verification work.</p>
+<h4 id="diagram-automated-vs-human-evaluation-matrix">Diagram: Automated vs. Human Evaluation Matrix</h4>
+<details>
+<summary>Automated vs. Human Evaluation Matrix</summary>
+<p>Type: diagram</p>
+<p>Bloom Taxonomy: Analyze (L4)</p>
+<p>Learning Objective: Students will analyze evaluation criteria to determine appropriate use of automated versus human evaluation methods.</p>
+<p>Layout: 2x2 matrix with automation potential (high/low) on X-axis and judgment complexity (objective/subjective) on Y-axis</p>
+<p>Quadrants:
+- Top-left (High automation, Objective): "Fully Automate"
+  - File structure checks
+  - JSON validation
+  - Responsiveness testing
+  - Link verification</p>
+<ul>
+<li>Top-right (Low automation, Objective): "Semi-Automate"</li>
+<li>Accessibility testing (some aspects)</li>
+<li>Code quality checks</li>
+<li>
+<p>Performance benchmarks</p>
+</li>
+<li>
+<p>Bottom-left (High automation, Subjective): "AI-Assisted"</p>
+</li>
+<li>Content summarization</li>
+<li>Keyword extraction</li>
+<li>
+<p>Similarity detection</p>
+</li>
+<li>
+<p>Bottom-right (Low automation, Subjective): "Human Required"</p>
+</li>
+<li>Pedagogical effectiveness</li>
+<li>Visual aesthetics</li>
+<li>Cultural sensitivity</li>
+<li>Engagement quality</li>
+</ul>
+<p>Color coding:
+- Green: Fully automate
+- Blue: Semi-automate
+- Yellow: AI-assisted
+- Purple: Human required</p>
+<p>Implementation: HTML/CSS grid or SVG diagram</p>
+</details>
+<hr />
+<h2 id="documentation-standards-writing-for-reuse">Documentation Standards: Writing for Reuse</h2>
+<p>Good documentation transforms a one-time creation into a reusable asset. Documentation standards ensure that anyone—including your future self—can understand, maintain, and adapt a MicroSim.</p>
+<h3 id="the-documentation-checklist">The Documentation Checklist</h3>
+<p>Every MicroSim should include:</p>
+<ol>
+<li><strong>Purpose statement</strong>: What does this simulation teach? (1-2 sentences)</li>
+<li><strong>Usage instructions</strong>: How do learners interact with it? (step-by-step)</li>
+<li><strong>Learning objectives</strong>: What should learners be able to do afterward?</li>
+<li><strong>Target audience</strong>: Grade level, prerequisites, assumed knowledge</li>
+<li><strong>Technical requirements</strong>: Browser compatibility, device recommendations</li>
+<li><strong>Customization guide</strong>: How can educators adapt it for different contexts?</li>
+<li><strong>Known limitations</strong>: What doesn't this simulation cover or do well?</li>
+</ol>
+<h3 id="lesson-plan-section">Lesson Plan Section</h3>
+<p>The lesson plan transforms a MicroSim from "neat demo" to "classroom-ready tool":</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="gu">## Lesson Plan</span>
+
+<span class="gu">### Learning Objectives</span>
+After completing this simulation, students will be able to:
+<span class="k">1.</span> Explain that gravitational acceleration is independent of object mass
+<span class="k">2.</span> Predict the fall time of objects of different masses
+
+<span class="gu">### Target Audience</span>
+<span class="k">-</span><span class="w"> </span>Grade level: 9-12 Physics
+<span class="k">-</span><span class="w"> </span>Prerequisites: Basic understanding of velocity and acceleration
+
+<span class="gu">### Activities</span>
+<span class="k">1.</span> <span class="gs">**Prediction phase**</span> (5 minutes): Ask students to predict which ball falls faster
+<span class="k">2.</span> <span class="gs">**Exploration phase**</span> (10 minutes): Students manipulate parameters and observe
+<span class="k">3.</span> <span class="gs">**Explanation phase**</span> (10 minutes): Discuss observations, introduce formula
+<span class="k">4.</span> <span class="gs">**Extension**</span> (optional): Introduce air resistance toggle
+
+<span class="gu">### Assessment</span>
+<span class="k">-</span><span class="w"> </span>Formative: Embedded prediction prompts in simulation
+<span class="k">-</span><span class="w"> </span>Summative: Exit ticket with transfer question
+</code></pre></div></td></tr></table></div>
+<hr />
+<h2 id="rubric-development-building-your-own-evaluation-tools">Rubric Development: Building Your Own Evaluation Tools</h2>
+<p>The completeness rubric provided in this chapter is a starting point, not a final destination. Different contexts may require different evaluation criteria.</p>
+<h3 id="principles-of-effective-rubric-design">Principles of Effective Rubric Design</h3>
+<ol>
+<li><strong>Specific criteria</strong>: Vague items like "good quality" can't be measured</li>
+<li><strong>Observable indicators</strong>: What evidence demonstrates each criterion?</li>
+<li><strong>Consistent scoring</strong>: Different evaluators should arrive at similar scores</li>
+<li><strong>Appropriate weighting</strong>: Not all criteria are equally important</li>
+<li><strong>Actionable feedback</strong>: Scores should indicate what to improve</li>
+</ol>
+<h3 id="customization-example-physics-microsim-rubric">Customization Example: Physics MicroSim Rubric</h3>
+<p>A physics department might extend the standard rubric with domain-specific criteria:</p>
+<table>
+<thead>
+<tr>
+<th>Criterion</th>
+<th>Description</th>
+<th>Points</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Physical accuracy</td>
+<td>Equations match textbook formulations</td>
+<td>15</td>
+</tr>
+<tr>
+<td>Unit labels</td>
+<td>All quantities display appropriate units</td>
+<td>10</td>
+</tr>
+<tr>
+<td>Edge case behavior</td>
+<td>Simulation handles extreme values correctly</td>
+<td>10</td>
+</tr>
+<tr>
+<td>Misconception targeting</td>
+<td>Addresses documented student misconceptions</td>
+<td>15</td>
+</tr>
+</tbody>
+</table>
+<h4 id="diagram-evaluation-rubric-builder">Diagram: Evaluation Rubric Builder</h4>
+<details>
+<summary>Evaluation Rubric Builder</summary>
+<p>Type: microsim</p>
+<p>Bloom Taxonomy: Create (L6)</p>
+<p>Learning Objective: Students will create custom evaluation rubrics by selecting and weighting criteria appropriate to their educational context.</p>
+<p>Canvas layout:
+- Left panel (350px): Criterion bank organized by category
+- Center panel (300px): Active rubric being built
+- Right panel (250px): Weighting and scoring controls</p>
+<p>Visual elements:
+- Categorized lists of criteria (Technical, Pedagogical, UX, Domain-specific)
+- Drag-and-drop interface for adding criteria to rubric
+- Weight sliders for each criterion (0-100%)
+- Total weight indicator (must sum to 100%)
+- Preview of rubric as checklist</p>
+<p>Interactive controls:
+- Checkbox lists for selecting criteria from each category
+- Sliders to adjust weights
+- Text input for custom criteria
+- Button: Add Custom Criterion
+- Button: Export Rubric as Markdown
+- Button: Export Rubric as JSON
+- Button: Reset to Default</p>
+<p>Default parameters:
+- Standard completeness rubric pre-loaded
+- Weights set to default values</p>
+<p>Behavior:
+- Drag criteria from bank to active rubric
+- Weight sliders automatically rebalance to sum to 100%
+- Preview updates in real-time
+- Export generates formatted rubric document</p>
+<p>Implementation: HTML/CSS/JavaScript with drag-and-drop library</p>
+</details>
+<hr />
+<h2 id="designing-for-reusability-future-proofing-your-work">Designing for Reusability: Future-Proofing Your Work</h2>
+<p>The final pillar of quality is reusability. A MicroSim that works today but can't be adapted, extended, or integrated tomorrow has limited value.</p>
+<h3 id="reusability-principles">Reusability Principles</h3>
+<ol>
+<li><strong>Separation of concerns</strong>: Keep content, logic, and presentation separate</li>
+<li><strong>Parameterization</strong>: Make key values adjustable without code changes</li>
+<li><strong>Documentation</strong>: Enable others to understand and modify</li>
+<li><strong>Standard formats</strong>: Use common file types and coding conventions</li>
+<li><strong>Open licensing</strong>: Choose licenses that permit educational reuse</li>
+<li><strong>Metadata completeness</strong>: Enable discovery through rich metadata</li>
+</ol>
+<h3 id="the-metadata-reusability-connection">The Metadata-Reusability Connection</h3>
+<p>Complete metadata directly enables reuse:</p>
+<ul>
+<li><strong>Search and discovery</strong>: Others can find your MicroSim when they need it</li>
+<li><strong>Adaptation</strong>: Metadata reveals what prerequisites and concepts are involved</li>
+<li><strong>Quality signals</strong>: Quality scores help educators choose reliable resources</li>
+<li><strong>Version tracking</strong>: Future authors know which version to reference</li>
+<li><strong>Attribution</strong>: Clear creator information enables proper credit</li>
+</ul>
+<p>Remember: <strong>You can't reuse what you can't find.</strong> Invest in metadata now, and your work pays dividends across the entire educational community.</p>
+<hr />
+<h2 id="summary-the-quality-mindset">Summary: The Quality Mindset</h2>
+<p>Quality evaluation isn't a one-time checkpoint—it's a mindset that infuses every stage of MicroSim development. From the first specification through final deployment, asking "Is this technically sound? Pedagogically effective? User-friendly? Findable and reusable?" keeps your work aligned with its educational mission.</p>
+<p>The frameworks in this chapter give you:</p>
+<ul>
+<li><strong>Three-Lens Evaluation Model</strong>: Technical, Pedagogical, and UX perspectives</li>
+<li><strong>100-Point Completeness Rubric</strong>: Measurable standards for structural quality</li>
+<li><strong>Standardization Workflow</strong>: Step-by-step process for bringing MicroSims to standard</li>
+<li><strong>Metadata Schema</strong>: Structured format for discoverability and search</li>
+<li><strong>Automated/Human Balance</strong>: Efficient allocation of evaluation resources</li>
+<li><strong>Documentation Standards</strong>: Templates for reusable lesson planning</li>
+<li><strong>Rubric Development</strong>: Tools for creating context-specific evaluation criteria</li>
+</ul>
+<p>Armed with these tools, you're ready not just to create MicroSims, but to create <em>good</em> MicroSims—simulations that work reliably, teach effectively, engage appropriately, and remain useful long after their first deployment.</p>
+<p>And that's the whole point, isn't it? We're not just making interactive widgets. We're building tools that help people understand the world better. That's worth doing well.</p>
+<hr />
+<h2 id="key-takeaways">Key Takeaways</h2>
+<ul>
+<li>Quality evaluation examines three dimensions: <strong>Technical</strong> (does it work?), <strong>Pedagogical</strong> (does it teach?), and <strong>UX</strong> (is it usable?)</li>
+<li>The <strong>Completeness Quality Score</strong> provides a 100-point rubric that LLMs and humans can consistently apply</li>
+<li><strong>Standardization</strong> follows a defined workflow: check existing score, validate structure, verify type-specific requirements, calculate and record quality</li>
+<li><strong>Metadata</strong> is essential for discoverability—"You can't reuse what you can't find"</li>
+<li>The <strong>MicroSim JSON Schema</strong> provides comprehensive structure for Dublin Core, educational, technical, and search metadata</li>
+<li><strong>Automated evaluation</strong> handles objective checks; <strong>human evaluation</strong> handles subjective judgments</li>
+<li><strong>Documentation standards</strong> transform one-time creations into reusable educational assets</li>
+<li>Custom <strong>rubrics</strong> can extend the standard framework for domain-specific needs</li>
+</ul>
+<hr />
+<h2 id="reflection-questions">Reflection Questions</h2>
+<details class="question">
+<summary>How would you prioritize evaluation dimensions for a time-limited review?</summary>
+</details>
+<p>If you only had 15 minutes to evaluate a MicroSim, you might focus on:
+1. Does it load without errors? (Technical pass/fail)
+2. Does it address its stated learning objective? (Pedagogical alignment)
+3. Can a first-time user figure out how to interact with it? (Intuitiveness)</p>
+<details class="question">
+<summary>What metadata fields would be most valuable for your teaching context?</summary>
+</details>
+<p>Consider your specific needs:
+- Do you need to filter by curriculum standards?
+- Is accessibility information critical for your learners?
+- Would Bloom's Taxonomy levels help you select appropriate complexity?</p>
+<details class="question">
+<summary>When would human evaluation be worth the additional time investment?</summary>
+</details>
+<p>Human evaluation is essential when:
+- The MicroSim addresses common misconceptions (requires domain expertise)
+- Cultural sensitivity is important (requires contextual judgment)
+- The simulation will be widely deployed (higher stakes justify investment)</p>
+<hr />
+<h2 id="references">References</h2>
+<ol>
+<li>
+<p>Anderson, L. W., &amp; Krathwohl, D. R. (Eds.). (2001). <em>A taxonomy for learning, teaching, and assessing: A revision of Bloom's taxonomy of educational objectives</em>. Longman.</p>
+</li>
+<li>
+<p>Dublin Core Metadata Initiative. (2020). <em>DCMI Metadata Terms</em>. https://www.dublincore.org/specifications/dublin-core/dcmi-terms/</p>
+</li>
+<li>
+<p>Nielsen, J. (1994). <em>Usability engineering</em>. Morgan Kaufmann.</p>
+</li>
+<li>
+<p>Web Content Accessibility Guidelines (WCAG) 2.1. (2018). W3C Recommendation. https://www.w3.org/TR/WCAG21/</p>
+</li>
+<li>
+<p>JSON Schema. (2020). <em>Understanding JSON Schema</em>. https://json-schema.org/understanding-json-schema/</p>
+</li>
+</ol>
 
 
 
@@ -1217,6 +3302,8 @@
   
 
 
+
+  
 
 
 
@@ -1244,7 +3331,7 @@
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../09-generating-microsims-ai-tools/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Generating MicroSims with AI Tools">
+          <a href="../09-generating-microsims-ai-tools/quiz/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Quiz">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -1254,20 +3341,20 @@
                 Previous
               </span>
               <div class="md-ellipsis">
-                Generating MicroSims with AI Tools
+                Quiz
               </div>
             </div>
           </a>
         
         
           
-          <a href="../11-user-testing-iteration/" class="md-footer__link md-footer__link--next" aria-label="Next: User Testing and Iteration">
+          <a href="quiz/" class="md-footer__link md-footer__link--next" aria-label="Next: Quiz">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                User Testing and Iteration
+                Quiz
               </div>
             </div>
             <div class="md-footer__button md-icon">
@@ -1287,6 +3374,11 @@
       Copyright &copy; 2025 Dan McCreary. Licensed under <a href="license/">CC BY-NC-SA 4.0</a> for non-commercial use.
     </div>
   
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
   
 </div>
       
