@@ -13,19 +13,43 @@ nav:
   - Course Description: course-description.md
   - Chapters:
     - Overview: chapters/index.md
-    - Foundations of Learning Objective Analysis: chapters/01-foundations-learning-objective-analysis/index.md
-    - Prerequisite Analysis and MicroSim Fundamentals: chapters/02-prerequisite-analysis-microsim-fundamentals/index.md
-    - The MicroSim Pattern Library: chapters/03-microsim-pattern-library/index.md
-    - Visualization Libraries and Tools: chapters/04-visualization-libraries-tools/index.md
-    - Writing Effective MicroSim Specifications: chapters/05-writing-microsim-specifications/index.md
-    - Adapting for Audience Levels: chapters/06-adapting-audience-levels/index.md
-    - Cognitive Load and Visual Design: chapters/07-cognitive-load-visual-design/index.md
-    - Anticipating Misconceptions: chapters/08-anticipating-misconceptions/index.md
-    - Generating MicroSims with AI Tools: chapters/09-generating-microsims-ai-tools/index.md
-    - Quality Evaluation Frameworks: chapters/10-quality-evaluation-frameworks/index.md
-    - User Testing and Iteration: chapters/11-user-testing-iteration/index.md
-    - Accessibility, Deployment, and Course Completion: chapters/12-accessibility-deployment-completion/index.md
-    - Capstone Projects: chapters/13-capstone-projects/index.md
+    - 1. Foundations of Learning Objective Analysis:
+      - Content: chapters/01-foundations-learning-objective-analysis/index.md
+      - Quiz: chapters/01-foundations-learning-objective-analysis/quiz.md
+    - 2. Prerequisite Analysis and MicroSim Fundamentals:
+      - Content: chapters/02-prerequisite-analysis-microsim-fundamentals/index.md
+      - Quiz: chapters/02-prerequisite-analysis-microsim-fundamentals/quiz.md
+    - 3. The MicroSim Pattern Library:
+      - Content: chapters/03-microsim-pattern-library/index.md
+      - Quiz: chapters/03-microsim-pattern-library/quiz.md
+    - 4. Visualization Libraries and Tools:
+      - Content: chapters/04-visualization-libraries-tools/index.md
+      - Quiz: chapters/04-visualization-libraries-tools/quiz.md
+    - 5. Writing Effective MicroSim Specifications:
+      - Content: chapters/05-writing-microsim-specifications/index.md
+      - Quiz: chapters/05-writing-microsim-specifications/quiz.md
+    - 6. Adapting for Audience Levels:
+      - Content: chapters/06-adapting-audience-levels/index.md
+      - Quiz: chapters/06-adapting-audience-levels/quiz.md
+    - 7. Cognitive Load and Visual Design:
+      - Content: chapters/07-cognitive-load-visual-design/index.md
+      - Quiz: chapters/07-cognitive-load-visual-design/quiz.md
+    - 8. Anticipating Misconceptions:
+      - Content: chapters/08-anticipating-misconceptions/index.md
+      - Quiz: chapters/08-anticipating-misconceptions/quiz.md
+    - 9. Generating MicroSims with AI Tools:
+      - Content: chapters/09-generating-microsims-ai-tools/index.md
+      - Quiz: chapters/09-generating-microsims-ai-tools/quiz.md
+    - 10. Quality Evaluation Frameworks:
+      - Content: chapters/10-quality-evaluation-frameworks/index.md
+      - Quiz: chapters/10-quality-evaluation-frameworks/quiz.md
+    - 11. User Testing and Iteration:
+      - Content: chapters/11-user-testing-iteration/index.md
+      - Quiz: chapters/11-user-testing-iteration/quiz.md
+    - 12. Accessibility, Deployment, and Course Completion:
+      - Content: chapters/12-accessibility-deployment-completion/index.md
+      - Quiz: chapters/12-accessibility-deployment-completion/quiz.md
+    - 13. Capstone Projects: chapters/13-capstone-projects/index.md
   
   - Stories:
     - List of Stories: stories/index.md
@@ -38,11 +62,14 @@ nav:
     - Graph Quality Analysis: learning-graph/quality-metrics.md
     - Concept Taxonomy: learning-graph/concept-taxonomy.md
     - Taxonomy Distribution Report: learning-graph/taxonomy-distribution.md
-  
+    - FAQ Quality Report: learning-graph/faq-quality-report.md
+    - Quiz Generation Report: learning-graph/quiz-generation-report.md
+
   - MicroSims:
     - Graph Viewer: sims/graph-viewer/index.md
     - Bloom's Taxonomy: sims/bloom-taxonomy/index.md
   - Checklist: checklist.md
+  - FAQ: faq.md
   - Glossary: glossary.md
   - How We Built This Site: how-we-built-this-site.md
   - References: references.md
