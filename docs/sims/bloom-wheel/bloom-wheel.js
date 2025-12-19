@@ -225,7 +225,7 @@ function draw() {
     const example = level.example.replace('[VERB]', selectedVerb);
     fill('#333');
     noStroke();
-    textSize(14);
+    textSize(16);
     textAlign(LEFT, CENTER);
     text("Example: " + example, 120, drawHeight + 20);
   }
@@ -390,16 +390,16 @@ function drawCenter() {
     // Level name
     fill(level.color);
     noStroke();
-    textSize(16);
+    textSize(20);
     textStyle(BOLD);
-    text(level.name, centerX, centerY - 35);
+    text(level.name, centerX, centerY - 65);
     textStyle(NORMAL);
 
     // Selected verb
     fill('#333');
-    textSize(22);
+    textSize(32);
     textStyle(BOLD);
-    text(selectedVerb, centerX, centerY - 10);
+    text(selectedVerb, centerX, centerY - 20);
     textStyle(NORMAL);
 
     // Level description
