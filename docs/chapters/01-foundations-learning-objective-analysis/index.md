@@ -133,6 +133,10 @@ Interactive Features:
 Implementation: HTML/CSS/JavaScript with SVG graphics, responsive design
 </details>
 
+<iframe src="../../sims/ed-tech-ecosystem/main.html" height="700px" width="100%" scrolling="no"></iframe>
+
+[Run the Ed-Tech Ecosystem MicroSim Fullscreen](../../sims/ed-tech-ecosystem/main.html){ .md-button .md-button--primary }
+
 ## Learning Objectives: The North Star of Instruction
 
 A **learning objective** is a clear, specific statement that describes what learners will be able to do after completing an instructional experience. Notice the emphasis on *do*—good learning objectives focus on observable, measurable behaviors, not vague internal states.
@@ -410,6 +414,10 @@ Behavior:
 
 Implementation: p5.js with responsive canvas, use updateCanvasSize() in setup()
 </details>
+
+<iframe src="../../sims/bloom-wheel/main.html" height="550px" width="100%" scrolling="no"></iframe>
+
+[Run the Bloom's Taxonomy Wheel MicroSim Fullscreen](../../sims/bloom-wheel/main.html){ .md-button .md-button--primary }
 
 ## Action Verbs: The Secret Sauce of Learning Objectives
 
