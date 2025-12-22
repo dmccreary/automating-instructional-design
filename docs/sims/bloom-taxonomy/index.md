@@ -69,5 +69,6 @@ Students demonstrate understanding by correctly classifying learning objectives 
 
 ## References
 
+- [Wikipedia Image](https://en.wikipedia.org/wiki/Bloom%27s_taxonomy#/media/File:Bloom's_revised_taxonomy.svg)
 - Anderson, L.W., & Krathwohl, D.R. (Eds.). (2001). A Taxonomy for Learning, Teaching, and Assessing: A Revision of Bloom's Taxonomy of Educational Objectives. Longman.
 - Bloom, B.S. (Ed.). (1956). Taxonomy of Educational Objectives: The Classification of Educational Goals. Handbook I: Cognitive Domain. Longman.
