@@ -1,0 +1,264 @@
+/* Educational Technology Ecosystem Stylesheet
+ * ============================================
+ * Concentric ring layout with learner at center
+ */
+
+/* ===========================================
+   RESET & BASE STYLES
+   =========================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+}
+
+/* ===========================================
+   MAIN CONTAINER & NETWORK CANVAS
+   =========================================== */
+.container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+
+#network {
+    width: 100%;
+    height: 100%;
+    background-color: #f5f5f5;
+}
+
+/* ===========================================
+   TITLE (Top Center)
+   =========================================== */
+.title {
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+    background-color: rgba(245, 245, 245, 0.9);
+    padding: 5px 15px;
+    border-radius: 5px;
+    z-index: 10;
+}
+
+/* ===========================================
+   LEGEND (Upper Left)
+   =========================================== */
+.legend {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    padding: 10px 12px;
+    background-color: rgba(255, 255, 255, 0.95);
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    z-index: 10;
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    margin: 5px 0;
+    font-size: 12px;
+}
+
+.legend-color {
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    margin-right: 8px;
+    border: 2px solid #333;
+}
+
+/* Color scheme for the ecosystem rings */
+.color-learner { background-color: #FF8C00; }  /* Warm orange for learner */
+.color-inner { background-color: #3498DB; }    /* Bright educational blue */
+.color-middle { background-color: #27AE60; }   /* Supportive green */
+.color-outer { background-color: #7F8C8D; }    /* Infrastructure gray */
+
+/* ===========================================
+   RIGHT PANEL (Info Display)
+   =========================================== */
+.right-panel {
+    position: absolute;
+    top: 50px;
+    right: 10px;
+    width: 220px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    z-index: 10;
+}
+
+/* ===========================================
+   INFO PANEL
+   =========================================== */
+.info-panel {
+    background-color: rgba(255, 255, 255, 0.95);
+    border-radius: 8px;
+    padding: 15px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+.info-title {
+    font-weight: bold;
+    font-size: 16px;
+    margin-bottom: 10px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid #ddd;
+}
+
+.info-text {
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+.info-text p {
+    margin-bottom: 10px;
+}
+
+.info-text ul {
+    margin: 10px 0;
+    padding-left: 20px;
+}
+
+.info-text li {
+    margin: 5px 0;
+}
+
+.info-category {
+    display: inline-block;
+    padding: 3px 8px;
+    border-radius: 4px;
+    font-size: 11px;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 8px;
+}
+
+.category-learner { background-color: #FF8C00; }
+.category-inner { background-color: #3498DB; }
+.category-middle { background-color: #27AE60; }
+.category-outer { background-color: #7F8C8D; }
+
+/* ===========================================
+   EDIT MODE INDICATOR
+   =========================================== */
+.edit-indicator {
+    display: none;  /* Hidden by default, shown via JS in edit mode */
+    position: absolute;
+    top: 10px;
+    right: 300px;
+    background-color: #e74c3c;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 14px;
+    z-index: 20;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.7; }
+}
+
+/* ===========================================
+   SAVE CONTROLS
+   =========================================== */
+.save-controls {
+    display: none;  /* Hidden by default, shown via JS in edit mode */
+    background-color: rgba(255, 255, 255, 0.95);
+    border-radius: 8px;
+    padding: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    justify-content: center;
+}
+
+.btn {
+    padding: 10px 20px;
+    font-size: 14px;
+    font-weight: bold;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.btn-save {
+    background-color: #27AE60;
+    color: white;
+    width: 100%;
+}
+
+.btn-save:hover {
+    background-color: #1E8449;
+    transform: translateY(-1px);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.btn-save:active {
+    transform: translateY(0);
+}
+
+/* ===========================================
+   RESPONSIVE STYLES
+   =========================================== */
+@media (max-width: 768px) {
+    .title {
+        font-size: 16px;
+        top: 5px;
+    }
+
+    .legend {
+        padding: 6px 8px;
+        max-width: 180px;
+    }
+
+    .legend-item {
+        font-size: 10px;
+    }
+
+    .legend-color {
+        width: 14px;
+        height: 14px;
+    }
+
+    .right-panel {
+        width: 220px;
+        top: 40px;
+    }
+
+    .info-panel {
+        padding: 10px;
+    }
+
+    .info-title {
+        font-size: 14px;
+    }
+
+    .info-text {
+        font-size: 11px;
+    }
+}
+
+@media (max-width: 480px) {
+    .legend {
+        display: none;
+    }
+
+    .right-panel {
+        width: 180px;
+    }
+}
