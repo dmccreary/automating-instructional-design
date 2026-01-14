@@ -3,7 +3,7 @@
 /// <reference types="p5/global" />
 // Canvas dimensions
 let canvasWidth = 800;
-let drawHeight = 750;
+let drawHeight = 850;  // Increased to accommodate buttons
 let controlHeight = 50;
 let canvasHeight = drawHeight + controlHeight;
 const margin = 20;
@@ -12,12 +12,15 @@ const margin = 20;
 let mouseOverCanvas = false;
 let hoveredNode = -1;
 let selectedNode = -1;
+let hoveredButton = null;  // Track which button is hovered {nodeId, type: 'pass'|'fail'}
 let auditResults = {};  // Track pass/fail status for each test
 
 // Colors from specification
 const colors = {
   pass: '#10B981',
+  passDark: '#059669',
   fail: '#EF4444',
+  failDark: '#DC2626',
   inProgress: '#F59E0B',
   summary: '#3B82F6',
   start: '#6366F1',      // Indigo for start/end
@@ -26,10 +29,11 @@ const colors = {
   textLight: '#64748B',
   nodeText: '#FFFFFF',
   connector: '#94A3B8',
-  connectorHighlight: '#475569'
+  connectorHighlight: '#475569',
+  buttonBorder: '#E2E8F0'
 };
 
-// Audit steps data
+// Audit steps data - Y positions adjusted to accommodate Pass/Fail buttons below test nodes
 const steps = [
   {
     id: 'start',
@@ -37,7 +41,7 @@ const steps = [
     label: 'Begin\nAccessibility\nAudit',
     color: colors.start,
     x: 0.5,
-    y: 0.06,
+    y: 0.05,
     description: 'Start the systematic accessibility audit process for your MicroSim. Each test evaluates a different dimension of accessibility.'
   },
   {
@@ -46,7 +50,7 @@ const steps = [
     label: 'Keyboard\nNavigation',
     color: colors.inProgress,
     x: 0.5,
-    y: 0.18,
+    y: 0.15,
     testNum: 1,
     questions: [
       'Can you Tab to all controls?',
@@ -61,7 +65,7 @@ const steps = [
     label: 'Screen Reader\nCompatibility',
     color: colors.inProgress,
     x: 0.5,
-    y: 0.30,
+    y: 0.27,
     testNum: 2,
     questions: [
       'Does describe() provide current state?',
@@ -76,7 +80,7 @@ const steps = [
     label: 'Color and\nContrast',
     color: colors.inProgress,
     x: 0.5,
-    y: 0.42,
+    y: 0.39,
     testNum: 3,
     questions: [
       'Does it pass WCAG contrast ratios?',
@@ -91,7 +95,7 @@ const steps = [
     label: 'Motion and\nAnimation',
     color: colors.inProgress,
     x: 0.5,
-    y: 0.54,
+    y: 0.51,
     testNum: 4,
     questions: [
       'Does it respect prefers-reduced-motion?',
@@ -106,7 +110,7 @@ const steps = [
     label: 'Touch and\nMotor',
     color: colors.inProgress,
     x: 0.5,
-    y: 0.66,
+    y: 0.63,
     testNum: 5,
     questions: [
       'Are touch targets >= 44x44px?',
@@ -121,7 +125,7 @@ const steps = [
     label: 'Generate\nAudit Report',
     color: colors.summary,
     x: 0.5,
-    y: 0.80,
+    y: 0.75,
     description: 'Review all test results. The report lists passed tests, failed tests with severity, and prioritizes fixes.'
   },
   {
@@ -130,15 +134,21 @@ const steps = [
     label: 'Audit\nComplete',
     color: colors.start,
     x: 0.5,
-    y: 0.93,
+    y: 0.87,
     description: 'The accessibility audit is complete. Address any failed tests to improve MicroSim accessibility.'
   }
 ];
 
 // Node dimensions
 const nodeWidth = 120;
-const nodeHeight = 55;
+const nodeHeight = 62;  // Extended down 30 to contain buttons
 const branchWidth = 160;
+
+// Button dimensions for Pass/Fail controls
+const buttonWidth = 50;
+const buttonHeight = 18;  // Reduced by 4 (2 top + 2 bottom margins)
+const buttonGap = 10;  // Gap between Pass and Fail buttons
+const buttonYOffset = 6;  // Moved up 20 to sit inside node
 
 function setup() {
   updateCanvasSize();
@@ -202,7 +212,9 @@ function drawConnectors() {
     const current = steps[i];
     const next = steps[i + 1];
 
+    // Start connector from bottom of current node
     const y1 = current.y * drawHeight + nodeHeight / 2 + 5;
+    // End connector at top of next node
     const y2 = next.y * drawHeight - nodeHeight / 2 - 5;
 
     const isHighlighted = (hoveredNode === i || hoveredNode === i + 1 ||
@@ -211,51 +223,8 @@ function drawConnectors() {
     stroke(isHighlighted ? colors.connectorHighlight : colors.connector);
     strokeWeight(isHighlighted ? 2.5 : 2);
 
-    if (current.type === 'test') {
-      // Draw pass/fail branches
-      const branchX = mainX + branchWidth / 2;
-      const failX = mainX - branchWidth / 2;
-
-      // Main connector continues down the middle
-      line(mainX, y1, mainX, y2);
-
-      // Draw pass branch (right)
-      const passY = current.y * drawHeight + nodeHeight / 2 + 15;
-      noFill();
-      beginShape();
-      vertex(mainX + nodeWidth / 2, current.y * drawHeight);
-      vertex(branchX, current.y * drawHeight);
-      vertex(branchX, passY);
-      vertex(branchX - 15, passY + 10);
-      endShape();
-
-      // Pass label
-      fill(colors.pass);
-      noStroke();
-      textSize(10);
-      textAlign(CENTER, CENTER);
-      text('Pass', branchX + 5, current.y * drawHeight - 10);
-
-      // Draw fail branch (left)
-      stroke(isHighlighted ? colors.connectorHighlight : colors.connector);
-      noFill();
-      beginShape();
-      vertex(mainX - nodeWidth / 2, current.y * drawHeight);
-      vertex(failX, current.y * drawHeight);
-      vertex(failX, passY);
-      vertex(failX + 15, passY + 10);
-      endShape();
-
-      // Fail label
-      fill(colors.fail);
-      noStroke();
-      textSize(10);
-      text('Fail', failX - 5, current.y * drawHeight - 10);
-
-    } else {
-      // Simple vertical connector
-      line(mainX, y1, mainX, y2);
-    }
+    // Simple vertical connector for all nodes
+    line(mainX, y1, mainX, y2);
 
     // Arrowhead at next node
     drawArrowhead(mainX, y2, HALF_PI, isHighlighted);
@@ -328,11 +297,12 @@ function drawNode(step, isHovered, isSelected) {
     rectMode(CORNER);
   }
 
-  // Test number badge
+  // Test number badge in upper left for test nodes
   if (step.testNum) {
     fill(255);
     noStroke();
-    ellipse(x - nodeWidth / 2 + 12, y - nodeHeight / 2 + 12, 20, 20);
+    // the circle enclosing the number in the upper left
+    circle(x - nodeWidth / 2 + 12, y - nodeHeight / 2 + 12, 17);
     fill(nodeColor);
     textSize(11);
     textAlign(CENTER, CENTER);
@@ -350,7 +320,9 @@ function drawNode(step, isHovered, isSelected) {
 
   const lines = step.label.split('\n');
   const lineHeight = 13;
-  const startY = y - (lines.length - 1) * lineHeight / 2;
+  // For test nodes, shift text up to make room for buttons; for ellipses, center vertically
+  const textOffset = (step.type === 'test') ? -10 : 0;
+  const startY = y - (lines.length - 1) * lineHeight / 2 + textOffset;
 
   for (let i = 0; i < lines.length; i++) {
     text(lines[i], x, startY + i * lineHeight);
@@ -381,6 +353,73 @@ function drawNode(step, isHovered, isSelected) {
       line(iconX + 3, iconY - 3, iconX - 3, iconY + 3);
     }
   }
+
+  // Draw Pass/Fail buttons for test nodes
+  if (step.type === 'test') {
+    drawPassFailButtons(step, x, y);
+  }
+}
+
+function drawPassFailButtons(step, x, y) {
+  const buttonY = y + buttonYOffset;
+  const totalWidth = buttonWidth * 2 + buttonGap;
+  const passX = x - totalWidth / 2;
+  const failX = x + buttonGap / 2;
+
+  const result = auditResults[step.id];
+  const isPassHovered = hoveredButton && hoveredButton.nodeId === step.id && hoveredButton.type === 'pass';
+  const isFailHovered = hoveredButton && hoveredButton.nodeId === step.id && hoveredButton.type === 'fail';
+
+  // Pass button
+  if (result === true) {
+    // Selected state - filled
+    fill(colors.pass);
+    stroke(colors.passDark);
+  } else if (isPassHovered) {
+    // Hover state
+    fill(colors.pass + '30');  // 30 = ~19% opacity
+    stroke(colors.pass);
+  } else {
+    // Default state - outline only
+    fill(255);
+    stroke(colors.pass);
+  }
+  strokeWeight(2);
+  rect(passX, buttonY, buttonWidth, buttonHeight, 4);
+
+  // Pass button text
+  fill(result === true ? 255 : colors.pass);
+  noStroke();
+  textSize(11);
+  textAlign(CENTER, CENTER);
+  textStyle(BOLD);
+  text('Pass', passX + buttonWidth / 2, buttonY + buttonHeight / 2);
+
+  // Fail button
+  if (result === false) {
+    // Selected state - filled
+    fill(colors.fail);
+    stroke(colors.failDark);
+  } else if (isFailHovered) {
+    // Hover state
+    fill(colors.fail + '30');
+    stroke(colors.fail);
+  } else {
+    // Default state - outline only
+    fill(255);
+    stroke(colors.fail);
+  }
+  strokeWeight(2);
+  rect(failX, buttonY, buttonWidth, buttonHeight, 4);
+
+  // Fail button text
+  fill(result === false ? 255 : colors.fail);
+  noStroke();
+  textSize(11);
+  textAlign(CENTER, CENTER);
+  text('Fail', failX + buttonWidth / 2, buttonY + buttonHeight / 2);
+
+  textStyle(NORMAL);
 }
 
 function drawControlArea() {
@@ -410,7 +449,7 @@ function drawControlArea() {
   fill(colors.textLight);
   textSize(11);
   textAlign(LEFT, CENTER);
-  text('Click test nodes: Left = Pass, Right = Fail', 20, centerY);
+  text('Click Pass or Fail buttons to record test results', 20, centerY);
 
   // Progress indicator
   let passed = 0, failed = 0, total = 0;
@@ -494,20 +533,49 @@ function getNodeAt(mx, my) {
   return -1;
 }
 
+function getButtonAt(mx, my) {
+  // Account for the translate(0, 30) offset in draw()
+  const adjustedMy = my - 30;
+
+  for (let step of steps) {
+    if (step.type !== 'test') continue;
+
+    const x = step.x * canvasWidth;
+    const y = step.y * drawHeight;
+    const btnY = y + buttonYOffset;
+    const totalWidth = buttonWidth * 2 + buttonGap;
+    const passX = x - totalWidth / 2;
+    const failX = x + buttonGap / 2;
+
+    // Check Pass button
+    if (mx >= passX && mx <= passX + buttonWidth &&
+        adjustedMy >= btnY && adjustedMy <= btnY + buttonHeight) {
+      return { nodeId: step.id, type: 'pass' };
+    }
+
+    // Check Fail button
+    if (mx >= failX && mx <= failX + buttonWidth &&
+        adjustedMy >= btnY && adjustedMy <= btnY + buttonHeight) {
+      return { nodeId: step.id, type: 'fail' };
+    }
+  }
+  return null;
+}
+
 function mouseMoved() {
   hoveredNode = getNodeAt(mouseX, mouseY);
+  hoveredButton = getButtonAt(mouseX, mouseY);
 
   // Check reset button
-  const buttonWidth = 90;
-  const buttonHeight = 30;
-  const buttonX = canvasWidth / 2 - buttonWidth / 2;
-  const buttonY = drawHeight + controlHeight / 2 - buttonHeight / 2;
+  const resetBtnWidth = 90;
+  const resetBtnHeight = 30;
+  const resetBtnX = canvasWidth / 2 - resetBtnWidth / 2;
+  const resetBtnY = drawHeight + controlHeight / 2 - resetBtnHeight / 2;
 
-  if ((hoveredNode >= 0 && steps[hoveredNode].type === 'test') ||
-      (mouseX >= buttonX && mouseX <= buttonX + buttonWidth &&
-       mouseY >= buttonY && mouseY <= buttonY + buttonHeight)) {
-    cursor(HAND);
-  } else if (hoveredNode >= 0) {
+  const overResetBtn = mouseX >= resetBtnX && mouseX <= resetBtnX + resetBtnWidth &&
+                       mouseY >= resetBtnY && mouseY <= resetBtnY + resetBtnHeight;
+
+  if (hoveredButton || overResetBtn || hoveredNode >= 0) {
     cursor(HAND);
   } else {
     cursor(ARROW);
@@ -516,35 +584,35 @@ function mouseMoved() {
 
 function mousePressed() {
   // Check reset button
-  const buttonWidth = 90;
-  const buttonHeight = 30;
-  const buttonX = canvasWidth / 2 - buttonWidth / 2;
-  const buttonY = drawHeight + controlHeight / 2 - buttonHeight / 2;
+  const resetBtnWidth = 90;
+  const resetBtnHeight = 30;
+  const resetBtnX = canvasWidth / 2 - resetBtnWidth / 2;
+  const resetBtnY = drawHeight + controlHeight / 2 - resetBtnHeight / 2;
 
-  if (mouseX >= buttonX && mouseX <= buttonX + buttonWidth &&
-      mouseY >= buttonY && mouseY <= buttonY + buttonHeight) {
+  if (mouseX >= resetBtnX && mouseX <= resetBtnX + resetBtnWidth &&
+      mouseY >= resetBtnY && mouseY <= resetBtnY + resetBtnHeight) {
     resetAudit();
     return;
   }
 
-  // Check node click
+  // Check Pass/Fail button clicks
+  const clickedButton = getButtonAt(mouseX, mouseY);
+  if (clickedButton) {
+    auditResults[clickedButton.nodeId] = (clickedButton.type === 'pass');
+    // Also select the corresponding node to show its details
+    for (let i = 0; i < steps.length; i++) {
+      if (steps[i].id === clickedButton.nodeId) {
+        selectedNode = i;
+        break;
+      }
+    }
+    return;
+  }
+
+  // Check node click (for selecting/deselecting to view details)
   const clickedNode = getNodeAt(mouseX, mouseY);
 
   if (clickedNode >= 0) {
-    const step = steps[clickedNode];
-
-    if (step.type === 'test') {
-      // Determine pass/fail based on click position
-      const x = step.x * canvasWidth;
-      if (mouseX >= x) {
-        // Right side = pass
-        auditResults[step.id] = true;
-      } else {
-        // Left side = fail
-        auditResults[step.id] = false;
-      }
-    }
-
     selectedNode = (selectedNode === clickedNode) ? -1 : clickedNode;
   } else {
     selectedNode = -1;
