@@ -1,0 +1,45 @@
+{
+  "title": "Probability Concept Adaptation",
+  "description": "An interactive comparison demonstrating how a single probability concept is adapted for seven different audience levels, from early childhood games with colorful ducks to graduate-level MCMC samplers and corporate risk decision tools.",
+  "creator": "Dan McCreary",
+  "subject": ["Education", "Instructional Design", "Probability", "Audience Analysis"],
+  "date": "2025-01-13",
+  "type": "Interactive Simulation",
+  "format": "text/html",
+  "language": "en",
+  "rights": "CC BY 4.0",
+  "gradeLevel": "High School, Undergraduate, Graduate, Professional",
+  "subjectArea": "Instructional Design",
+  "topic": "Audience-Appropriate Content Design",
+  "learningObjectives": [
+    "Identify how mathematical concepts are adapted for different age groups",
+    "Analyze the progression from concrete to abstract representations",
+    "Compare instructional approaches across expertise levels",
+    "Design audience-appropriate versions of educational concepts"
+  ],
+  "bloomsTaxonomyLevels": ["Analyze", "Evaluate", "Create"],
+  "duration": "10-15 minutes",
+  "prerequisites": ["Basic understanding of instructional design", "Familiarity with Bloom's Taxonomy"],
+  "framework": "p5.js",
+  "canvasDimensions": "responsive x 500",
+  "responsive": "Width-responsive",
+  "dependencies": ["p5.js 1.11.10"],
+  "accessibility": {
+    "screenReaderSupport": true,
+    "keyboardNavigation": false,
+    "highContrast": true
+  },
+  "controls": [
+    {
+      "type": "click",
+      "description": "Click tabs to switch between the seven audience level views"
+    },
+    {
+      "type": "click",
+      "description": "Click Compare Mode button to enable side-by-side comparison"
+    }
+  ],
+  "modelType": "Comparative Visualization",
+  "assumptions": ["Seven distinct audience levels represent typical educational/professional contexts"],
+  "limitations": ["Sketch previews are simplified representations of full MicroSims", "Comparison limited to two views at a time"]
+}

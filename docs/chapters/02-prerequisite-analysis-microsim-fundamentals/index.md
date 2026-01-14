@@ -129,6 +129,10 @@ Annotations:
 Implementation: HTML/CSS/SVG with responsive layout
 </details>
 
+<iframe src="../../sims/sim-vs-microsim/main.html" height="502px" width="100%" scrolling="no"></iframe>
+
+[Run the Simulation Comparison Fullscreen](../../sims/sim-vs-microsim/main.html){ .md-button .md-button--primary }
+
 ### Characteristics of Effective MicroSims
 
 Not every small simulation qualifies as a well-designed MicroSim. Effective MicroSims share several characteristics:
@@ -217,6 +221,10 @@ Interactive Features:
 
 Implementation: HTML/CSS grid with icons and hover states, responsive design
 </details>
+
+<iframe src="../../sims/microsim-bloom-types/main.html" height="502px" width="100%" scrolling="no"></iframe>
+
+[Run the MicroSim Types Fullscreen](../../sims/microsim-bloom-types/main.html){ .md-button .md-button--primary }
 
 ## AI-Assisted Design: Your New Creative Partner
 
@@ -319,6 +327,10 @@ Color coding:
 Implementation: HTML/CSS/SVG with hover interactions, responsive circular layout
 </details>
 
+<iframe src="../../sims/human-ai-loop/main.html" height="502px" width="100%" scrolling="no"></iframe>
+
+[Run the Human-AI Loop Fullscreen](../../sims/human-ai-loop/main.html){ .md-button .md-button--primary }
+
 ## Understanding Prerequisite Knowledge
 
 **Prerequisite knowledge** is what learners must already know before they can successfully engage with new content. It's the foundation on which new learning is built. Miss this foundation, and everything constructed on top will be shaky.
@@ -419,6 +431,10 @@ Right side checklist:
 
 Implementation: HTML/CSS layered diagram, responsive design
 </details>
+
+<iframe src="../../sims/prereq-assumed/main.html" height="452px" width="100%" scrolling="no"></iframe>
+
+[Run the Prereq vs Assumed Fullscreen](../../sims/prereq-assumed/main.html){ .md-button .md-button--primary }
 
 ### Documenting Assumptions
 
@@ -527,6 +543,10 @@ Legend:
 Implementation: vis-network with hierarchical layout, responsive width
 </details>
 
+<iframe src="../../sims/concept-dependencies/main.html" height="500px" width="100%" scrolling="no"></iframe>
+
+[Run the Concept Dependencies Fullscreen](../../sims/concept-dependencies/main.html){ .md-button .md-button--primary }
+
 ### Creating Dependency Maps
 
 When designing a curriculum or analyzing existing content, creating a dependency map helps visualize the structure:
@@ -631,6 +651,10 @@ Animation:
 
 Implementation: p5.js with force-directed graph layout, responsive canvas using updateCanvasSize()
 </details>
+
+<iframe src="../../sims/learning-pathway/main.html" height="502px" width="100%" scrolling="no"></iframe>
+
+[Run the Learning Pathway Fullscreen](../../sims/learning-pathway/main.html){ .md-button .md-button--primary }
 
 ## Simulation Readiness: Is This Concept Ready for MicroSim Treatment?
 
@@ -738,6 +762,10 @@ Interactive features:
 
 Implementation: HTML/CSS/JavaScript flowchart, responsive layout
 </details>
+
+<iframe src="../../sims/sim-readiness/main.html" height="502px" width="100%" scrolling="no"></iframe>
+
+[Run the Simulation Readiness Fullscreen](../../sims/sim-readiness/main.html){ .md-button .md-button--primary }
 
 ## Putting It All Together: From Objective to MicroSim
 

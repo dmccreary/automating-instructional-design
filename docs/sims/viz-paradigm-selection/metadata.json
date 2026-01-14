@@ -1,0 +1,72 @@
+{
+  "title": "Visualization Paradigm Selection",
+  "description": "An interactive decision tree helping learners identify which visualization paradigm (Timeline, Map, Network Graph, Chart, or Flowchart) best fits their content type based on data characteristics.",
+  "creator": "Dan McCreary",
+  "subject": ["Data Visualization", "Instructional Design", "Information Design"],
+  "date": "2025-01-13",
+  "type": "Interactive Simulation",
+  "format": "text/html",
+  "language": "en",
+  "rights": "CC BY 4.0",
+  "gradeLevel": "High School, Undergraduate, Graduate",
+  "subjectArea": "Data Visualization",
+  "topic": "Visualization Selection",
+  "learningObjectives": [
+    "Identify five common visualization paradigms",
+    "Match content characteristics to appropriate visualization types",
+    "Explain when to use Timeline, Map, Network Graph, Chart, or Flowchart",
+    "Apply visualization selection criteria to real-world scenarios"
+  ],
+  "bloomsTaxonomyLevels": ["Remember", "Understand", "Apply"],
+  "duration": "5-10 minutes",
+  "prerequisites": ["Basic understanding of data types"],
+  "framework": "p5.js",
+  "canvasDimensions": "responsive x 500",
+  "responsive": "Width-responsive",
+  "dependencies": ["p5.js 1.11.10"],
+  "accessibility": {
+    "screenReaderSupport": true,
+    "keyboardNavigation": false,
+    "highContrast": true
+  },
+  "controls": [
+    {
+      "type": "hover",
+      "description": "Hover over visualization options to preview selection"
+    },
+    {
+      "type": "click",
+      "description": "Click on visualization type to see detailed information and examples"
+    }
+  ],
+  "visualizationTypes": [
+    {
+      "name": "Timeline",
+      "useCase": "Sequential events, change over time",
+      "color": "#3498DB"
+    },
+    {
+      "name": "Map",
+      "useCase": "Geographic locations, spatial data",
+      "color": "#2ECC71"
+    },
+    {
+      "name": "Network Graph",
+      "useCase": "Relationships, connections, dependencies",
+      "color": "#9B59B6"
+    },
+    {
+      "name": "Chart",
+      "useCase": "Quantities, comparisons, statistics",
+      "color": "#E67E22"
+    },
+    {
+      "name": "Flowchart",
+      "useCase": "Processes, workflows, decisions",
+      "color": "#E74C3C"
+    }
+  ],
+  "modelType": "Decision Tree Visualization",
+  "assumptions": ["User has content to visualize and needs guidance on paradigm selection"],
+  "limitations": ["Does not cover specialized visualization types like treemaps, heatmaps, or 3D visualizations"]
+}

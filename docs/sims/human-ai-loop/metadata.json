@@ -1,0 +1,42 @@
+{
+  "title": "Human-AI Collaboration Loop",
+  "description": "An interactive circular workflow diagram showing the iterative process between humans and AI when creating quality educational MicroSims, featuring six alternating steps: Specify, Generate, Evaluate, Refine, Regenerate, and Test.",
+  "creator": "Dan McCreary",
+  "created": "2026-01-13",
+  "modified": "2026-01-13",
+  "subject": ["instructional design", "human-AI collaboration", "workflow", "iterative design", "MicroSim development"],
+  "type": "InteractiveResource",
+  "format": "text/html",
+  "language": "en",
+  "rights": "Creative Commons Attribution 4.0 International (CC BY 4.0)",
+  "publisher": "Automating Instructional Design",
+  "source": "https://dmccreary.github.io/automating-instructional-design/",
+  "relation": "Part of the Automating Instructional Design intelligent textbook",
+  "coverage": "Educational technology, AI-assisted content creation",
+  "audience": "Instructional designers, educators, curriculum developers",
+  "educationalLevel": "Professional development",
+  "learningResourceType": "Interactive visualization",
+  "interactivityType": "Expositive",
+  "interactivityLevel": "Medium",
+  "typicalLearningTime": "PT5M",
+  "technicalRequirements": "Modern web browser with JavaScript enabled",
+  "library": "p5.js",
+  "libraryVersion": "1.9.4",
+  "concepts": [
+    "human-AI collaboration",
+    "iterative design process",
+    "specification",
+    "AI generation",
+    "evaluation criteria",
+    "refinement cycle",
+    "learner testing"
+  ],
+  "keywords": [
+    "human-AI loop",
+    "collaboration workflow",
+    "MicroSim creation",
+    "iterative development",
+    "quality assurance",
+    "instructional design automation"
+  ]
+}

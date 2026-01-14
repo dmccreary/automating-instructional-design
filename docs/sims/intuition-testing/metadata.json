@@ -1,0 +1,83 @@
+{
+  "title": "Intuition Testing",
+  "description": "An interactive MicroSim that allows learners to experience intuition testing and compare their intuitive responses to scientific understanding, revealing common misconceptions in physics and biology through timed scenario-based questions with animated explanations.",
+  "creator": "Dan McCreary",
+  "created": "2026-01-14",
+  "modified": "2026-01-14",
+  "subject": ["intuition testing", "misconceptions", "cognitive science", "physics education", "biology education"],
+  "type": "InteractiveResource",
+  "format": "text/html",
+  "language": "en",
+  "rights": "Creative Commons Attribution 4.0 International (CC BY 4.0)",
+  "publisher": "Automating Instructional Design",
+  "source": "https://dmccreary.github.io/automating-instructional-design/",
+  "relation": "Part of the Automating Instructional Design intelligent textbook",
+  "coverage": "Educational technology, science education, cognitive psychology, instructional design",
+  "audience": "Educators, instructional designers, science students, cognitive science researchers",
+  "educationalLevel": "Secondary education, Undergraduate",
+  "learningResourceType": "Interactive simulation",
+  "interactivityType": "Active",
+  "interactivityLevel": "High",
+  "typicalLearningTime": "PT15M",
+  "technicalRequirements": "Modern web browser with JavaScript enabled",
+  "library": "p5.js",
+  "libraryVersion": "1.11.10",
+  "bloomLevel": "Analyze",
+  "concepts": [
+    "intuition testing",
+    "scientific misconceptions",
+    "circular motion",
+    "falling objects",
+    "electric current",
+    "natural selection",
+    "metacognition",
+    "System 1 thinking"
+  ],
+  "keywords": [
+    "intuition testing",
+    "misconception identification",
+    "physics misconceptions",
+    "biology misconceptions",
+    "cognitive science education",
+    "inquiry-based learning",
+    "formative assessment",
+    "conceptual change"
+  ],
+  "scenarios": [
+    {
+      "id": 1,
+      "title": "Circular Motion",
+      "topic": "Newton's First Law",
+      "commonMisconception": "Circular impetus"
+    },
+    {
+      "id": 2,
+      "title": "Falling Objects",
+      "topic": "Gravitational acceleration",
+      "commonMisconception": "Aristotelian physics"
+    },
+    {
+      "id": 3,
+      "title": "Electric Current",
+      "topic": "Current conservation",
+      "commonMisconception": "Current consumption model"
+    },
+    {
+      "id": 4,
+      "title": "Evolution",
+      "topic": "Natural selection",
+      "commonMisconception": "Lamarckian inheritance"
+    }
+  ],
+  "defaultParameters": {
+    "timer": {
+      "duration": 10,
+      "unit": "seconds"
+    },
+    "scenarios": 4,
+    "animationDuration": {
+      "duration": 3,
+      "unit": "seconds"
+    }
+  }
+}

@@ -1,0 +1,273 @@
+/* Relationship Graph Types Stylesheet
+ * ====================================
+ * Demonstrates different edge relationship types in graph visualizations
+ */
+
+/* ===========================================
+   RESET & BASE STYLES
+   =========================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+}
+
+/* ===========================================
+   MAIN CONTAINER & NETWORK CANVAS
+   =========================================== */
+.container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+
+#network {
+    width: 100%;
+    height: 100%;
+    background-color: #f5f5f5;
+}
+
+/* ===========================================
+   TITLE (Top Center)
+   =========================================== */
+.title {
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+    background-color: rgba(245, 245, 245, 0.9);
+    padding: 5px 15px;
+    border-radius: 5px;
+    z-index: 10;
+}
+
+/* ===========================================
+   LEGEND (Upper Left)
+   =========================================== */
+.legend {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    padding: 12px 15px;
+    background-color: rgba(255, 255, 255, 0.95);
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    z-index: 10;
+}
+
+.legend-title {
+    font-weight: bold;
+    font-size: 14px;
+    margin-bottom: 10px;
+    padding-bottom: 6px;
+    border-bottom: 1px solid #ddd;
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    margin: 8px 0;
+    font-size: 12px;
+    padding: 4px 8px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.legend-item:hover {
+    background-color: #f0f0f0;
+}
+
+.legend-item.active {
+    background-color: #e8e8e8;
+}
+
+.legend-line {
+    width: 40px;
+    height: 4px;
+    margin-right: 10px;
+    position: relative;
+}
+
+/* Edge type styles for legend */
+.prerequisite-line {
+    background-color: #2980B9;
+}
+
+.prerequisite-line::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: -3px;
+    border: 5px solid transparent;
+    border-left-color: #2980B9;
+}
+
+.related-line {
+    background: repeating-linear-gradient(
+        90deg,
+        #7F8C8D 0px,
+        #7F8C8D 5px,
+        transparent 5px,
+        transparent 10px
+    );
+}
+
+.contrasts-line {
+    background-color: #E74C3C;
+}
+
+.exemplifies-line {
+    background: repeating-linear-gradient(
+        90deg,
+        #27AE60 0px,
+        #27AE60 2px,
+        transparent 2px,
+        transparent 6px
+    );
+}
+
+.exemplifies-line::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: -3px;
+    border: 5px solid transparent;
+    border-left-color: #27AE60;
+}
+
+.influences-line {
+    background-color: #9B59B6;
+    border-radius: 0 0 10px 10px;
+    transform: rotate(-10deg);
+}
+
+.influences-line::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: -3px;
+    border: 5px solid transparent;
+    border-left-color: #9B59B6;
+}
+
+.legend-hint {
+    font-size: 10px;
+    color: #888;
+    margin-top: 8px;
+    text-align: center;
+    font-style: italic;
+}
+
+/* ===========================================
+   RIGHT PANEL (Info Display)
+   =========================================== */
+.right-panel {
+    position: absolute;
+    top: 50px;
+    right: 10px;
+    width: 220px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    z-index: 10;
+}
+
+/* ===========================================
+   INFO PANEL
+   =========================================== */
+.info-panel {
+    background-color: rgba(255, 255, 255, 0.95);
+    border-radius: 8px;
+    padding: 15px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+.info-title {
+    font-weight: bold;
+    font-size: 16px;
+    margin-bottom: 10px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid #ddd;
+}
+
+.info-text {
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+.info-text p {
+    margin-bottom: 10px;
+}
+
+.info-hint {
+    background-color: #f8f8f8;
+    padding: 8px;
+    border-radius: 4px;
+    border-left: 3px solid #3498DB;
+}
+
+/* ===========================================
+   RESPONSIVE STYLES
+   =========================================== */
+@media (max-width: 768px) {
+    .title {
+        font-size: 16px;
+        top: 5px;
+    }
+
+    .legend {
+        padding: 8px 10px;
+        max-width: 160px;
+    }
+
+    .legend-title {
+        font-size: 12px;
+    }
+
+    .legend-item {
+        font-size: 10px;
+        margin: 5px 0;
+    }
+
+    .legend-line {
+        width: 30px;
+    }
+
+    .right-panel {
+        width: 180px;
+        top: 40px;
+    }
+
+    .info-panel {
+        padding: 10px;
+    }
+
+    .info-title {
+        font-size: 14px;
+    }
+
+    .info-text {
+        font-size: 11px;
+    }
+}
+
+@media (max-width: 480px) {
+    .legend {
+        display: none;
+    }
+
+    .right-panel {
+        width: 160px;
+    }
+}

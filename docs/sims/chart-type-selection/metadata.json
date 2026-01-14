@@ -1,0 +1,70 @@
+{
+  "title": "Chart Type Selection Guide",
+  "description": "An interactive infographic that helps learners quickly identify the appropriate chart type based on their data characteristics and communication goals, featuring six common chart types with icons, use cases, and examples.",
+  "creator": "Dan McCreary",
+  "subject": ["Data Visualization", "Chart Selection", "Education"],
+  "date": "2026-01-13",
+  "type": "Interactive Simulation",
+  "format": "text/html",
+  "language": "en",
+  "rights": "CC BY 4.0",
+  "gradeLevel": "High School, Undergraduate",
+  "subjectArea": "Data Science, Statistics, Information Design",
+  "topic": "Chart Type Selection and Data Visualization",
+  "learningObjectives": [
+    "Identify common chart types and their visual characteristics",
+    "Explain when to use each chart type based on data characteristics",
+    "Select the appropriate chart type for a given scenario",
+    "Compare different chart types and justify selection decisions"
+  ],
+  "bloomsTaxonomyLevels": ["Remember", "Understand", "Apply"],
+  "duration": "5-15 minutes",
+  "prerequisites": ["Basic understanding of data types"],
+  "framework": "p5.js",
+  "canvasDimensions": "responsive x 450",
+  "responsive": "Width-responsive",
+  "dependencies": ["p5.js 1.11.10"],
+  "controls": [
+    {
+      "type": "hover",
+      "description": "Hover over chart cards to see expanded descriptions"
+    },
+    {
+      "type": "click",
+      "description": "Click to select and highlight a card"
+    }
+  ],
+  "chartTypes": [
+    {
+      "name": "Line Chart",
+      "useCase": "Showing trends over time",
+      "library": "Chart.js or Plotly"
+    },
+    {
+      "name": "Bar Chart",
+      "useCase": "Comparing categories",
+      "library": "Chart.js"
+    },
+    {
+      "name": "Pie/Doughnut",
+      "useCase": "Parts of a whole (max 6)",
+      "library": "Chart.js"
+    },
+    {
+      "name": "Scatter Plot",
+      "useCase": "Showing correlations",
+      "library": "Chart.js or Plotly"
+    },
+    {
+      "name": "Function Plot",
+      "useCase": "Mathematical functions",
+      "library": "Plotly"
+    },
+    {
+      "name": "Radar Chart",
+      "useCase": "Multi-variable comparison",
+      "library": "Chart.js"
+    }
+  ],
+  "modelType": "Infographic Decision Guide"
+}

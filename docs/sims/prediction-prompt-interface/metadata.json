@@ -1,0 +1,62 @@
+{
+  "title": "Prediction Prompt Interface",
+  "description": "An annotated mockup demonstrating best practices for designing prediction prompt interfaces in educational MicroSims. Shows the 5-panel workflow: Setup, Prediction Input, Reasoning Capture, Observation, and Reflection. Teaches instructional designers how to effectively capture learner predictions before observations to maximize engagement and learning.",
+  "creator": "Dan McCreary",
+  "created": "2026-01-14",
+  "modified": "2026-01-14",
+  "subject": ["prediction prompts", "instructional design patterns", "educational UI design", "prediction-observation-reflection", "active learning"],
+  "type": "InteractiveResource",
+  "format": "text/html",
+  "language": "en",
+  "rights": "Creative Commons Attribution 4.0 International (CC BY 4.0)",
+  "publisher": "Automating Instructional Design",
+  "source": "https://dmccreary.github.io/automating-instructional-design/",
+  "relation": "Part of the Automating Instructional Design intelligent textbook",
+  "coverage": "Educational technology, instructional design, learning interface design",
+  "audience": "Instructional designers, educators, curriculum developers, educational technology specialists",
+  "educationalLevel": "Professional development, Graduate",
+  "learningResourceType": "Interactive infographic",
+  "interactivityType": "Expositive",
+  "interactivityLevel": "Medium",
+  "typicalLearningTime": "PT10M",
+  "technicalRequirements": "Modern web browser with JavaScript enabled",
+  "library": "p5.js",
+  "libraryVersion": "1.11.10",
+  "bloomLevel": "Apply",
+  "concepts": [
+    "prediction prompts",
+    "prediction-observation-reflection cycle",
+    "cognitive commitment",
+    "confidence indicators",
+    "reasoning capture",
+    "visual comparison",
+    "structured reflection",
+    "UI design patterns"
+  ],
+  "keywords": [
+    "prediction prompt interface",
+    "MicroSim design pattern",
+    "educational UI",
+    "learning interface",
+    "POE cycle",
+    "active learning",
+    "engagement design",
+    "instructional design"
+  ],
+  "panels": {
+    "total": 5,
+    "names": [
+      "Setup",
+      "Prediction Input",
+      "Reasoning Capture",
+      "Observation",
+      "Reflection"
+    ]
+  },
+  "colorScheme": {
+    "blue": "Prompts and questions",
+    "yellow": "Learner input areas",
+    "green": "Observation and results",
+    "orange": "Reflection and warnings"
+  }
+}

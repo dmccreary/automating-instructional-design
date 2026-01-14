@@ -69,6 +69,10 @@ Key characteristics of working memory include:
 
 The dual-channel aspect is particularly important for MicroSim designers. You have two information highways into working memory: one for what learners see and one for what they hear or read. Use both wisely, and you can effectively double your bandwidth. Use them poorly, and you create a traffic jam.
 
+<iframe src="../../sims/working-memory-architecture/main.html" height="502px" width="100%" scrolling="no" style="overflow: hidden;"></iframe>
+
+[Run MicroSim Fullscreen](../../sims/working-memory-architecture/main.html){ .md-button .md-button--primary }
+
 #### Diagram: Working Memory Architecture
 
 <details markdown="1">
@@ -144,6 +148,10 @@ Schema formation happens through:
 !!! tip "Design Insight"
     Every MicroSim should be designed to build or activate schemas. When learners can connect simulation experiences to existing mental frameworks, learning becomes dramatically more efficient.
 
+<iframe src="../../sims/schema-formation-process/main.html" height="502px" width="100%" scrolling="no" style="overflow: hidden;"></iframe>
+
+[Run MicroSim Fullscreen](../../sims/schema-formation-process/main.html){ .md-button .md-button--primary }
+
 #### Diagram: Schema Formation Process
 
 <details markdown="1">
@@ -204,6 +212,10 @@ Mental effort includes:
 - Deciding what to do next
 
 When mental effort is well-spent, learning happens. When it's wasted on the wrong things, learning suffers. The goal of good instructional design is to ensure that mental effort goes toward productive cognitive activities, not toward deciphering confusing interfaces or searching for information.
+
+<iframe src="../../sims/cognitive-load-types/main.html" height="502px" width="100%" scrolling="no" style="overflow: hidden;"></iframe>
+
+[Run MicroSim Fullscreen](../../sims/cognitive-load-types/main.html){ .md-button .md-button--primary }
 
 #### Diagram: The Three Types of Cognitive Load
 
@@ -307,6 +319,10 @@ Here's the crucial design principle: **your goal is to minimize extraneous load 
 
 !!! warning "The Paradox of Effort"
     Sometimes making things "easier" actually harms learning. If you reduce germane load by doing the thinking for learners (giving answers without requiring processing), you might reduce effort but also reduce learning. The goal isn't minimal effort—it's *well-directed* effort.
+
+<iframe src="../../sims/cognitive-load-simulator/main.html" height="502px" width="100%" scrolling="no" style="overflow: hidden;"></iframe>
+
+[Run MicroSim Fullscreen](../../sims/cognitive-load-simulator/main.html){ .md-button .md-button--primary }
 
 #### Diagram: Cognitive Load MicroSim
 
@@ -418,6 +434,10 @@ Best practices for avoiding split attention:
 - Present related information simultaneously, not sequentially
 - When audio is used, synchronize it with visual changes
 
+<iframe src="../../sims/split-attention-effect/main.html" height="502px" width="100%" scrolling="no" style="overflow: hidden;"></iframe>
+
+[Run MicroSim Fullscreen](../../sims/split-attention-effect/main.html){ .md-button .md-button--primary }
+
 #### Diagram: Split Attention Effect Comparison
 
 <details markdown="1">
@@ -511,6 +531,10 @@ Optimal information density depends on:
 
 A good rule of thumb: if learners need to "study" your interface to figure out how to use it, your information density is too high. The interface should be so clear that learners can focus entirely on the content.
 
+<iframe src="../../sims/info-density-spectrum/main.html" height="502px" width="100%" scrolling="no" style="overflow: hidden;"></iframe>
+
+[Run MicroSim Fullscreen](../../sims/info-density-spectrum/main.html){ .md-button .md-button--primary }
+
 #### Diagram: Information Density Spectrum
 
 <details markdown="1">
@@ -591,6 +615,10 @@ Consider a MicroSim teaching electrical circuits. Progressive disclosure might w
 - **Stage 5**: Full circuit builder with component library
 
 Each stage builds on the previous, and learners can return to earlier stages for review. The simulation grows with the learner's understanding.
+
+<iframe src="../../sims/progressive-disclosure-demo/main.html" height="502px" width="100%" scrolling="no" style="overflow: hidden;"></iframe>
+
+[Run MicroSim Fullscreen](../../sims/progressive-disclosure-demo/main.html){ .md-button .md-button--primary }
 
 #### Diagram: Progressive Disclosure in Action
 
@@ -724,6 +752,10 @@ Segmentation works because it:
 - Allows learners to repeat difficult segments
 - Provides a sense of progress and accomplishment
 
+<iframe src="../../sims/animation-control-guide/main.html" height="502px" width="100%" scrolling="no" style="overflow: hidden;"></iframe>
+
+[Run MicroSim Fullscreen](../../sims/animation-control-guide/main.html){ .md-button .md-button--primary }
+
 #### Diagram: Animation Control Best Practices
 
 <details markdown="1">
@@ -830,6 +862,10 @@ Since we can't insert a probe into learners' brains (and they probably wouldn't 
    - Comprehension checks
 
 A good cognitive load meter combines multiple indicators for a more robust estimate. Even an imperfect estimate is better than no information at all.
+
+<iframe src="../../sims/cognitive-load-meter/main.html" height="502px" width="100%" scrolling="no" style="overflow: hidden;"></iframe>
+
+[Run MicroSim Fullscreen](../../sims/cognitive-load-meter/main.html){ .md-button .md-button--primary }
 
 #### Diagram: Cognitive Load Meter Design
 
@@ -963,6 +999,10 @@ Every element you add beyond the minimal effective design carries risk:
 - Risk of maintenance burden
 
 Start minimal. Add elements only when testing shows they're needed. This approach almost always produces better learning outcomes than building everything you can imagine and hoping learners will find value in it.
+
+<iframe src="../../sims/design-tradeoff-tree/main.html" height="502px" width="100%" scrolling="no" style="overflow: hidden;"></iframe>
+
+[Run MicroSim Fullscreen](../../sims/design-tradeoff-tree/main.html){ .md-button .md-button--primary }
 
 #### Diagram: Design Tradeoff Decision Tree
 

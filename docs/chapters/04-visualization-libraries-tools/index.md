@@ -48,6 +48,10 @@ The beauty of modern web development is that you don't need to reinvent the whee
 
 This chapter will equip you with the knowledge to select the right tool for any educational visualization challenge. By the end, you'll be like a well-stocked craftsperson, reaching confidently for p5.js when animation is needed, vis-network when relationships matter, or Chart.js when data needs to speak. Let's dive in!
 
+<iframe src="../../sims/viz-library-decision/main.html" height="502px" width="100%" scrolling="no" style="overflow: hidden;"></iframe>
+
+[Run MicroSim Fullscreen](../../sims/viz-library-decision/main.html){ .md-button .md-button--primary }
+
 #### Diagram: Visualization Library Decision Tree
 
 <details markdown="1">
@@ -159,6 +163,10 @@ p5.js is your best friend when you need:
 | Creative visualizations | Generative art, data sonification |
 
 However, p5.js might be overkill for standard charts or diagrams. If you're just plotting bar charts, Chart.js will get you there faster. Think of it this way: you *could* use a chainsaw to cut butter, but a butter knife is probably more appropriate.
+
+<iframe src="../../sims/p5-architecture/main.html" height="502px" width="100%" scrolling="no" style="overflow: hidden;"></iframe>
+
+[Run MicroSim Fullscreen](../../sims/p5-architecture/main.html){ .md-button .md-button--primary }
 
 #### Diagram: p5.js MicroSim Architecture
 
@@ -289,6 +297,10 @@ Plotly.newPlot('plot', [{
 !!! note "Choosing Between Chart.js and Plotly"
     Use **Chart.js** when you're visualizing discrete data categories or need standard business charts. Use **Plotly** when you're plotting continuous mathematical functions or need advanced scientific visualization features.
 
+<iframe src="../../sims/chart-type-selection/main.html" height="502px" width="100%" scrolling="no" style="overflow: hidden;"></iframe>
+
+[Run MicroSim Fullscreen](../../sims/chart-type-selection/main.html){ .md-button .md-button--primary }
+
 #### Diagram: Chart Type Selection Guide
 
 <details markdown="1">
@@ -409,6 +421,10 @@ vis-network is the perfect choice for:
 - **System architectures**: Component relationships
 - **Social networks**: Influence and connection patterns
 - **Causal diagrams**: Cause-and-effect relationships
+
+<iframe src="../../sims/learning-dependency-network/main.html" height="502px" width="100%" scrolling="no" style="overflow: hidden;"></iframe>
+
+[Run MicroSim Fullscreen](../../sims/learning-dependency-network/main.html){ .md-button .md-button--primary }
 
 #### Diagram: Learning Dependency Network Example
 
@@ -629,6 +645,10 @@ classDef processNode fill:#764ba2,stroke:#333,stroke-width:2px,color:#fff,font-s
 classDef decisionNode fill:#f093fb,stroke:#333,stroke-width:2px,color:#333,font-size:16px
 ```
 
+<iframe src="../../sims/microsim-generation-workflow/main.html" height="502px" width="100%" scrolling="no" style="overflow: hidden;"></iframe>
+
+[Run MicroSim Fullscreen](../../sims/microsim-generation-workflow/main.html){ .md-button .md-button--primary }
+
 #### Diagram: MicroSim Generation Workflow
 
 <details markdown="1">
@@ -810,6 +830,10 @@ A specification should include:
 - **Default values**: Initial state of all parameters
 - **Behavior description**: What happens when users interact?
 - **Edge cases**: What should happen at extreme values?
+
+<iframe src="../../sims/spec-quality-checklist/main.html" height="502px" width="100%" scrolling="no" style="overflow: hidden;"></iframe>
+
+[Run MicroSim Fullscreen](../../sims/spec-quality-checklist/main.html){ .md-button .md-button--primary }
 
 #### Diagram: Specification Quality Checklist
 

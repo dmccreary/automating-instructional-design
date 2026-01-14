@@ -1,0 +1,17 @@
+{
+    "name": "Color Blindness Simulator",
+    "description": "Interactive simulation to test MicroSim color schemes under simulated color vision deficiencies including deuteranopia, protanopia, tritanopia, and monochromacy.",
+    "keywords": ["color blindness", "accessibility", "color vision deficiency", "deuteranopia", "protanopia", "tritanopia", "monochromacy", "color simulation", "WCAG", "a11y"],
+    "bloomLevel": "Apply",
+    "bloomLevelNumber": 3,
+    "learningObjective": "Students will apply color accessibility principles by testing MicroSim color schemes under simulated color vision deficiencies.",
+    "concepts": ["color blindness", "color accessibility", "deuteranopia", "protanopia", "tritanopia", "monochromacy", "color transformation", "inclusive design"],
+    "prerequisites": ["basic color theory", "understanding of accessibility principles"],
+    "implementation": "p5.js",
+    "interactivityLevel": "high",
+    "estimatedTime": "5-10 minutes",
+    "dateCreated": "2025-01-14",
+    "version": "1.0.0",
+    "author": "Dan McCreary",
+    "license": "MIT"
+}

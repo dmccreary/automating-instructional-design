@@ -1,0 +1,52 @@
+{
+  "title": "Working Memory Architecture",
+  "description": "An interactive block diagram visualization of Baddeley's Working Memory Model, showing the Central Executive, Phonological Loop, Visuospatial Sketchpad, Episodic Buffer, and Long-Term Memory with capacity indicators and information flow arrows.",
+  "creator": "Claude AI",
+  "date": "2026-01-13",
+  "format": "text/html",
+  "type": "InteractiveResource",
+  "subject": [
+    "Working Memory",
+    "Cognitive Psychology",
+    "Baddeley's Model",
+    "Instructional Design",
+    "Learning Sciences",
+    "Memory Systems"
+  ],
+  "audience": "Educators, instructional designers, and students learning about cognitive architecture and memory systems",
+  "rights": "MIT License",
+  "language": "en",
+  "source": "Based on Baddeley and Hitch's Working Memory Model (1974) and Baddeley's Episodic Buffer extension (2000)",
+  "relation": "Part of Automating Instructional Design intelligent textbook",
+  "coverage": "Structure and function of human working memory system",
+  "bloomLevel": "Understand",
+  "learningObjective": "Help learners visualize the structure and limitations of working memory, including its dual-channel nature and connection to long-term memory",
+  "interactivity": {
+    "features": [
+      "Hover tooltips for component descriptions",
+      "Click for detailed examples of each component",
+      "Labeled arrows showing information flow",
+      "Capacity indicators on working memory components"
+    ],
+    "inputMethod": "Mouse hover and click"
+  },
+  "technicalRequirements": {
+    "library": "p5.js",
+    "version": "1.11.10",
+    "browser": "Modern browser with JavaScript enabled"
+  },
+  "visualElements": {
+    "diagramType": "Block diagram with dual processing channels",
+    "colorScheme": {
+      "centralExecutive": "#805AAA",
+      "phonologicalLoop": "#4682C8",
+      "visuospatialSketchpad": "#3CA05A",
+      "episodicBuffer": "#9664B4",
+      "longTermMemory": "#C8A53C"
+    },
+    "dimensions": {
+      "drawHeight": 450,
+      "controlHeight": 50
+    }
+  }
+}

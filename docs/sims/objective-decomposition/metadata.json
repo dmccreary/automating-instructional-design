@@ -1,0 +1,43 @@
+{
+  "title": "Objective Decomposition Tree",
+  "description": "An interactive visualization showing how compound learning objectives decompose into skill clusters and atomic concepts using a hierarchical tree structure with prerequisite relationships.",
+  "creator": "Dan McCreary",
+  "subject": ["Education", "Instructional Design", "Learning Objectives"],
+  "date": "2025-01-13",
+  "type": "Interactive Simulation",
+  "format": "text/html",
+  "language": "en",
+  "rights": "CC BY 4.0",
+  "gradeLevel": "Undergraduate, Graduate",
+  "subjectArea": "Education",
+  "topic": "Objective Decomposition",
+  "learningObjectives": [
+    "Decompose compound learning objectives into atomic concepts",
+    "Identify prerequisite relationships between concepts",
+    "Classify objectives by their complexity level"
+  ],
+  "bloomsTaxonomyLevels": ["Analyze", "Apply"],
+  "duration": "5-10 minutes",
+  "prerequisites": ["Understanding of learning objectives"],
+  "framework": "vis-network",
+  "canvasDimensions": "responsive x 500",
+  "responsive": "Width-responsive",
+  "dependencies": ["vis-network"],
+  "controls": [
+    {
+      "type": "button",
+      "name": "Next",
+      "description": "Step through the guided exploration"
+    },
+    {
+      "type": "button",
+      "name": "Reset",
+      "description": "Reset the visualization to the beginning"
+    },
+    {
+      "type": "click",
+      "description": "Click nodes to view detailed information"
+    }
+  ],
+  "modelType": "Hierarchical Graph Visualization"
+}

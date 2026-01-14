@@ -1,0 +1,66 @@
+{
+  "title": "Hypothesis Testing Interface",
+  "description": "An interactive pendulum simulation demonstrating the hypothesis testing interface pattern for educational MicroSims. Students make predictions about pendulum behavior, adjust variables (length, angle, mass), run controlled experiments, and compare predictions against actual results to discover physics principles.",
+  "creator": "Dan McCreary",
+  "created": "2026-01-13",
+  "modified": "2026-01-13",
+  "subject": ["hypothesis testing", "scientific method", "pendulum physics", "educational design patterns", "interactive simulation"],
+  "type": "InteractiveResource",
+  "format": "text/html",
+  "language": "en",
+  "rights": "Creative Commons Attribution 4.0 International (CC BY 4.0)",
+  "publisher": "Automating Instructional Design",
+  "source": "https://dmccreary.github.io/automating-instructional-design/",
+  "relation": "Part of the Automating Instructional Design intelligent textbook",
+  "coverage": "Educational technology, physics education, instructional design",
+  "audience": "Instructional designers, educators, physics students, curriculum developers",
+  "educationalLevel": "Secondary education, Undergraduate",
+  "learningResourceType": "Interactive simulation",
+  "interactivityType": "Active",
+  "interactivityLevel": "High",
+  "typicalLearningTime": "PT15M",
+  "technicalRequirements": "Modern web browser with JavaScript enabled",
+  "library": "p5.js",
+  "libraryVersion": "1.11.10",
+  "bloomLevel": "Analyze",
+  "concepts": [
+    "hypothesis testing",
+    "scientific method",
+    "controlled experimentation",
+    "pendulum motion",
+    "period measurement",
+    "variable isolation",
+    "prediction and observation",
+    "experimental design"
+  ],
+  "keywords": [
+    "hypothesis testing interface",
+    "MicroSim design pattern",
+    "pendulum simulation",
+    "physics education",
+    "inquiry-based learning",
+    "scientific inquiry",
+    "experimental method",
+    "interactive physics"
+  ],
+  "defaultParameters": {
+    "length": {
+      "min": 10,
+      "max": 100,
+      "default": 50,
+      "unit": "cm"
+    },
+    "angle": {
+      "min": 5,
+      "max": 45,
+      "default": 15,
+      "unit": "degrees"
+    },
+    "mass": {
+      "min": 10,
+      "max": 500,
+      "default": 100,
+      "unit": "grams"
+    }
+  }
+}

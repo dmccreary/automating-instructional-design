@@ -137,6 +137,10 @@ That said, some intervention guidelines:
 - **Do intervene** if technical issues unrelated to your MicroSim cause problems
 - **Don't intervene** to "explain what you meant"
 
+<iframe src="../../sims/think-aloud-protocol/main.html" height="502px" width="100%" scrolling="no" style="overflow: hidden;"></iframe>
+
+[Run MicroSim Fullscreen](../../sims/think-aloud-protocol/main.html){ .md-button .md-button--primary }
+
 #### Diagram: Think-Aloud Protocol Workflow
 
 <details markdown="1">
@@ -317,6 +321,10 @@ And what it *cannot* tell you:
 
 This is the fundamental difference between **page-view tracking** and **simulation tracking**. Page-view tracking knows you were in the room; simulation tracking knows what you did while you were there.
 
+<iframe src="../../sims/page-view-tracking-comparison/main.html" height="502px" width="100%" scrolling="no" style="overflow: hidden;"></iframe>
+
+[Run MicroSim Fullscreen](../../sims/page-view-tracking-comparison/main.html){ .md-button .md-button--primary }
+
 #### Diagram: Page-View vs. Simulation Tracking
 
 <details markdown="1">
@@ -462,6 +470,10 @@ This sensitivity means LRS systems must comply with:
 
 We won't go into all the security details here—the [Graph LMS](https://dmccreary.github.io/graph-lms/) intelligent textbook covers this in depth. The key takeaway: hyper-personalization requires data, and that data comes with responsibility.
 
+<iframe src="../../sims/xapi-data-flow/main.html" height="502px" width="100%" scrolling="no" style="overflow: hidden;"></iframe>
+
+[Run MicroSim Fullscreen](../../sims/xapi-data-flow/main.html){ .md-button .md-button--primary }
+
 #### Diagram: xAPI Data Flow
 
 <details markdown="1">
@@ -573,6 +585,10 @@ Completion criteria might include:
 - Stakeholder approval obtained
 
 The enemy of done is perfect. At some point, your time is better spent creating new MicroSims rather than polishing existing ones.
+
+<iframe src="../../sims/design-test-refine-cycle/main.html" height="502px" width="100%" scrolling="no" style="overflow: hidden;"></iframe>
+
+[Run MicroSim Fullscreen](../../sims/design-test-refine-cycle/main.html){ .md-button .md-button--primary }
 
 #### Diagram: Design-Test-Refine Cycle
 

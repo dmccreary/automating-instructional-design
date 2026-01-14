@@ -1,0 +1,65 @@
+{
+  "title": "Visual Description Completeness Checklist",
+  "description": "An interactive checklist for instructional designers to verify that their visual descriptions include all essential components for effective AI-assisted MicroSim generation.",
+  "creator": "Dan McCreary",
+  "subject": ["Education", "Instructional Design", "Visual Description", "Quality Assurance", "Checklist"],
+  "date": "2026-01-13",
+  "type": "Interactive Simulation",
+  "format": "text/html",
+  "language": "en",
+  "rights": "CC BY 4.0",
+  "gradeLevel": "High School, Undergraduate, Graduate, Professional",
+  "subjectArea": "Education, Instructional Design, AI-Assisted Development",
+  "topic": "Visual Description Specifications",
+  "learningObjectives": [
+    "Recall the essential components of a complete visual description",
+    "Verify that visual descriptions include all necessary specifications",
+    "Understand the importance of detailed specifications for AI code generation",
+    "Apply a systematic approach to creating visual specifications"
+  ],
+  "bloomsTaxonomyLevels": ["Remember", "Understand"],
+  "duration": "5-15 minutes",
+  "prerequisites": ["Basic understanding of visual design concepts", "Familiarity with MicroSim specifications"],
+  "framework": "p5.js",
+  "canvasDimensions": "responsive x 550",
+  "responsive": "Width-responsive",
+  "dependencies": ["p5.js 1.11.10"],
+  "accessibility": {
+    "screenReaderSupport": true,
+    "keyboardNavigation": false,
+    "highContrast": true
+  },
+  "controls": [
+    {
+      "type": "click",
+      "description": "Click checkboxes to mark items as complete"
+    },
+    {
+      "type": "click",
+      "description": "Click category headers to expand/collapse sections"
+    },
+    {
+      "type": "hover",
+      "description": "Hover over items to see example specifications in tooltips"
+    },
+    {
+      "type": "button",
+      "description": "Reset All button clears all checkboxes"
+    },
+    {
+      "type": "button",
+      "description": "Export Text button copies checklist status to clipboard"
+    }
+  ],
+  "modelType": "Interactive Checklist",
+  "assumptions": [
+    "Complete visual descriptions improve AI generation quality",
+    "Systematic checking reduces omissions",
+    "Example specifications help clarify expectations"
+  ],
+  "limitations": [
+    "Checklist covers common elements but may not include domain-specific requirements",
+    "Does not validate the quality of specifications, only their presence",
+    "Export function requires clipboard API support in browser"
+  ]
+}

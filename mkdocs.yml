@@ -53,10 +53,98 @@ nav:
   
   - MicroSims:
     - List of MicroSims: sims/index.md
-    - Graph Viewer: sims/graph-viewer/index.md
+    - Acceptance Test Matrix: sims/acceptance-test-matrix/index.md
+    - Accessibility Audit Workflow: sims/accessibility-audit-workflow/index.md
+    - Accessible Control Layout: sims/accessible-control-layout/index.md
+    - AI Generation Workflow: sims/ai-generation-workflow/index.md
+    - Animation Control Guide: sims/animation-control-guide/index.md
+    - Automated Human Evaluation: sims/automated-human-evaluation/index.md
+    - Bloom MicroSim Types: sims/bloom-microsim-types/index.md
     - Bloom's Taxonomy: sims/bloom-taxonomy/index.md
+    - Bloom's Taxonomy Pyramid: sims/blooms-pyramid/index.md
     - Bloom Wheel: sims/bloom-wheel/index.md
+    - Cause Effect Display: sims/cause-effect-display/index.md
+    - Chapter 1 Concept Map: sims/chapter1-concept-map/index.md
+    - Chart Selection: sims/chart-selection/index.md
+    - Chart Type Selection: sims/chart-type-selection/index.md
+    - Classification Matrix: sims/classification-matrix/index.md
+    - Claude Code Architecture: sims/claude-code-architecture/index.md
+    - Cognitive Development Chart: sims/cognitive-development-chart/index.md
+    - Cognitive Load Meter: sims/cognitive-load-meter/index.md
+    - Cognitive Load Simulator: sims/cognitive-load-simulator/index.md
+    - Cognitive Load Types: sims/cognitive-load-types/index.md
+    - Color Blindness Simulator: sims/color-blindness-simulator/index.md
+    - Concept Dependencies: sims/concept-dependencies/index.md
+    - Corporate Learning Module: sims/corporate-learning-module/index.md
+    - Design Test Refine Cycle: sims/design-test-refine-cycle/index.md
+    - Design Tradeoff Tree: sims/design-tradeoff-tree/index.md
+    - Early Childhood Pattern: sims/early-childhood-pattern/index.md
     - Ed-Tech Ecosystem: sims/ed-tech-ecosystem/index.md
+    - Edge Case Discovery: sims/edge-case-discovery/index.md
+    - Elementary Scaffolding: sims/elementary-scaffolding/index.md
+    - Engagement Learning Tradeoff: sims/engagement-learning-tradeoff/index.md
+    - Evaluation Rubric Builder: sims/evaluation-rubric-builder/index.md
+    - Graph Viewer: sims/graph-viewer/index.md
+    - Human-AI Loop: sims/human-ai-loop/index.md
+    - Hypothesis Testing Interface: sims/hypothesis-testing-interface/index.md
+    - Info Density Spectrum: sims/info-density-spectrum/index.md
+    - Intent Preservation Matrix: sims/intent-preservation-matrix/index.md
+    - Interaction Spec Template: sims/interaction-spec-template/index.md
+    - Interpretation Pitfalls: sims/interpretation-pitfalls/index.md
+    - Intuition Testing: sims/intuition-testing/index.md
+    - Issue Identification Workflow: sims/issue-identification-workflow/index.md
+    - Iteration Dashboard: sims/iteration-dashboard/index.md
+    - Learning Dependency Network: sims/learning-dependency-network/index.md
+    - Learning Pathway: sims/learning-pathway/index.md
+    - Math Relationship Explorer: sims/math-relationship-explorer/index.md
+    - Mental Model Formation: sims/mental-model-formation/index.md
+    - Metadata Search: sims/metadata-search/index.md
+    - MicroSim Bloom Types: sims/microsim-bloom-types/index.md
+    - MicroSim Generation Workflow: sims/microsim-generation-workflow/index.md
+    - Misconception Catalog: sims/misconception-catalog/index.md
+    - Misconception Correction Cycle: sims/misconception-correction-cycle/index.md
+    - Model Boundaries: sims/model-boundaries/index.md
+    - Model Comparison Tool: sims/model-comparison-tool/index.md
+    - Objective Decomposition: sims/objective-decomposition/index.md
+    - Ohms Law Simulator: sims/ohms-law-simulator/index.md
+    - p5 Architecture: sims/p5-architecture/index.md
+    - Page View Tracking Comparison: sims/page-view-tracking-comparison/index.md
+    - Paradigm Affordance: sims/paradigm-affordance/index.md
+    - Parameter Space Explorer: sims/parameter-space-explorer/index.md
+    - Physics Sim Architecture: sims/physics-sim-architecture/index.md
+    - Portfolio Components: sims/portfolio-components/index.md
+    - Prediction Prompt Interface: sims/prediction-prompt-interface/index.md
+    - Prereq vs Assumed: sims/prereq-assumed/index.md
+    - Probability Adaptation: sims/probability-adaptation/index.md
+    - Probability Tree Explorer: sims/probability-tree-explorer/index.md
+    - Process Timeline: sims/process-timeline/index.md
+    - Progressive Disclosure Demo: sims/progressive-disclosure-demo/index.md
+    - Prompt Engineering Practices: sims/prompt-engineering-practices/index.md
+    - Real World Data Pattern: sims/real-world-data-pattern/index.md
+    - Relationship Graph Types: sims/relationship-graph-types/index.md
+    - Responsive Breakpoint Testing: sims/responsive-breakpoint-testing/index.md
+    - Rule Hierarchy Cascade: sims/rule-hierarchy-cascade/index.md
+    - Schema Formation Process: sims/schema-formation-process/index.md
+    - Sim Readiness: sims/sim-readiness/index.md
+    - Sim vs MicroSim: sims/sim-vs-microsim/index.md
+    - SMART Objectives: sims/smart-objectives/index.md
+    - Sorting Algorithm Race: sims/sorting-algorithm-race/index.md
+    - Spatial Viz Types: sims/spatial-viz-types/index.md
+    - Spec Clarity Analyzer: sims/spec-clarity-analyzer/index.md
+    - Spec Quality Checklist: sims/spec-quality-checklist/index.md
+    - Split Attention Effect: sims/split-attention-effect/index.md
+    - Standardization Workflow: sims/standardization-workflow/index.md
+    - State Machine Template: sims/state-machine-template/index.md
+    - Success Criteria Workflow: sims/success-criteria-workflow/index.md
+    - Think Aloud Protocol: sims/think-aloud-protocol/index.md
+    - Three Lens Evaluation: sims/three-lens-evaluation/index.md
+    - Venn Builder: sims/venn-builder/index.md
+    - Visual Description Checklist: sims/visual-description-checklist/index.md
+    - Viz Library Decision: sims/viz-library-decision/index.md
+    - Viz Paradigm Selection: sims/viz-paradigm-selection/index.md
+    - Working Memory Architecture: sims/working-memory-architecture/index.md
+    - xAPI Data Flow: sims/xapi-data-flow/index.md
+    - ZPD Visualization: sims/zpd-visualization/index.md
 
   - Stories:
     - List of Stories: stories/index.md
@@ -129,10 +217,15 @@ markdown_extensions:
   - pymdownx.superfences
   - pymdownx.highlight:
       linenums: true
+  # enable LaTeX equation rendering
+  - pymdownx.arithmatex:
+      generic: true
 extra_css:
    - css/extra.css
 extra_javascript:
    - js/extra.js
+   # needed for mathjax to work
+   - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
 copyright: Copyright &copy; 2025 Dan McCreary. Licensed under <a href="license/">CC BY-NC-SA 4.0</a> for non-commercial use.
 extra:
   generator: false

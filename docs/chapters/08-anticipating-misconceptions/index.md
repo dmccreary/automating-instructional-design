@@ -79,6 +79,10 @@ The problem isn't that learners have mental models—that's inevitable and neces
 !!! tip "Design Insight"
     Before designing any MicroSim, ask yourself: "What do learners probably already believe about this topic?" The answer will shape everything from your visual design to your interaction patterns.
 
+<iframe src="../../sims/mental-model-formation/main.html" height="502px" width="100%" scrolling="no" style="overflow: hidden;"></iframe>
+
+[Run MicroSim Fullscreen](../../sims/mental-model-formation/main.html){ .md-button .md-button--primary }
+
 #### Diagram: Mental Model Formation and Influence
 
 <details markdown="1">
@@ -189,6 +193,10 @@ Physics is a goldmine of misconceptions because everyday intuition developed in 
 !!! note "Subject-Specific Research"
     For any topic you're designing MicroSims for, search the research literature for "common misconceptions in [topic]." Decades of education research have cataloged misconceptions across nearly every domain.
 
+<iframe src="../../sims/misconception-catalog/main.html" height="502px" width="100%" scrolling="no" style="overflow: hidden;"></iframe>
+
+[Run MicroSim Fullscreen](../../sims/misconception-catalog/main.html){ .md-button .md-button--primary }
+
 #### Diagram: Misconception Catalog by Domain
 
 <details markdown="1">
@@ -291,6 +299,10 @@ Research consistently shows that simply telling learners the correct information
 - Verbal knowledge and intuitive mental models can coexist independently
 
 A learner might correctly answer "Do heavier objects fall faster?" with "No" on a test while still intuitively expecting a bowling ball to beat a marble to the ground. The verbal knowledge and the mental model haven't integrated.
+
+<iframe src="../../sims/misconception-correction-cycle/main.html" height="502px" width="100%" scrolling="no" style="overflow: hidden;"></iframe>
+
+[Run MicroSim Fullscreen](../../sims/misconception-correction-cycle/main.html){ .md-button .md-button--primary }
 
 #### Diagram: Misconception Correction Cycle
 
@@ -415,6 +427,10 @@ Effective MicroSims can build boundary awareness by:
 
 !!! tip "Progressive Model Disclosure"
     Consider designing MicroSims that start with simpler models and progressively reveal their limitations. When learners experience the boundary, they're motivated to learn the more sophisticated model.
+
+<iframe src="../../sims/model-boundaries/main.html" height="502px" width="100%" scrolling="no" style="overflow: hidden;"></iframe>
+
+[Run MicroSim Fullscreen](../../sims/model-boundaries/main.html){ .md-button .md-button--primary }
 
 #### Diagram: Model Boundaries Visualization
 
@@ -556,6 +572,10 @@ Effective prediction prompts in MicroSims:
 - **Vary difficulty**: Some predictions should be easy (builds confidence), some challenging
 - **Address common misconceptions**: Design predictions that expose typical wrong beliefs
 
+<iframe src="../../sims/prediction-prompt-interface/main.html" height="502px" width="100%" scrolling="no" style="overflow: hidden;"></iframe>
+
+[Run MicroSim Fullscreen](../../sims/prediction-prompt-interface/main.html){ .md-button .md-button--primary }
+
 #### Diagram: Prediction Prompt Interface Design
 
 <details markdown="1">
@@ -651,6 +671,10 @@ Good intuition tests share several features:
 - Option A: Go to the concert because you already paid (misconception: sunk cost fallacy)
 - Option B: Go to the friend's event since you'd enjoy it more (correct: sunk costs are irrelevant)
 - Option C: Stay home since you're sick (partially correct but avoids the core question)
+
+<iframe src="../../sims/intuition-testing/main.html" height="502px" width="100%" scrolling="no" style="overflow: hidden;"></iframe>
+
+[Run MicroSim Fullscreen](../../sims/intuition-testing/main.html){ .md-button .md-button--primary }
 
 #### Diagram: Intuition Testing MicroSim
 
@@ -763,6 +787,10 @@ A powerful visual tool is the model comparison table:
 | Moon | ??? | Orbits Earth | Orbits |
 
 The naive model works for some cases, fails for others. The scientific model explains all cases consistently. Seeing this comparison makes the superiority of the scientific model undeniable.
+
+<iframe src="../../sims/model-comparison-tool/main.html" height="502px" width="100%" scrolling="no" style="overflow: hidden;"></iframe>
+
+[Run MicroSim Fullscreen](../../sims/model-comparison-tool/main.html){ .md-button .md-button--primary }
 
 #### Diagram: Model Comparison Interactive Tool
 

@@ -1,0 +1,85 @@
+{
+  "title": "Learning Dependency Network",
+  "description": "An interactive vis-network visualization demonstrating how learning dependencies between concepts can be represented, showing prerequisites flowing to target learning objectives with different node shapes for concept types.",
+  "creator": "Dan McCreary",
+  "subject": ["Education", "Instructional Design", "Learning Dependencies", "Concept Mapping", "Curriculum Design"],
+  "date": "2025-01-13",
+  "type": "Interactive Simulation",
+  "format": "text/html",
+  "language": "en",
+  "rights": "CC BY 4.0",
+  "gradeLevel": "Undergraduate, Graduate",
+  "subjectArea": "Education, Mathematics, Curriculum Design",
+  "topic": "Learning Dependencies and Prerequisites",
+  "learningObjectives": [
+    "Understand how learning dependencies form a directed graph structure",
+    "Analyze prerequisite chains to identify required knowledge",
+    "Distinguish between different concept types (foundation, prerequisite, target, advanced)",
+    "Apply dependency analysis to plan learning paths"
+  ],
+  "bloomsTaxonomyLevels": ["Understand", "Analyze", "Apply"],
+  "duration": "5-15 minutes",
+  "prerequisites": ["Basic understanding of learning progressions", "Familiarity with graph structures"],
+  "framework": "vis-network",
+  "canvasDimensions": "responsive x 500",
+  "responsive": "Width-responsive",
+  "dependencies": ["vis-network"],
+  "controls": [
+    {
+      "type": "click",
+      "description": "Click nodes to highlight all prerequisites"
+    },
+    {
+      "type": "hover",
+      "description": "Hover over nodes to see concept definitions"
+    },
+    {
+      "type": "button",
+      "name": "Reset View",
+      "description": "Clear highlighting and return to default view"
+    },
+    {
+      "type": "navigation",
+      "description": "Built-in vis-network navigation buttons"
+    }
+  ],
+  "modelType": "Directed Acyclic Graph (DAG)",
+  "nodeTypes": [
+    {
+      "name": "Foundation",
+      "shape": "circle",
+      "color": "#e0e0e0",
+      "description": "Base concepts that form the starting point of learning"
+    },
+    {
+      "name": "Prerequisite",
+      "shape": "rectangle",
+      "color": "#4facfe",
+      "description": "Required concepts that must be learned before progressing"
+    },
+    {
+      "name": "Target",
+      "shape": "hexagon",
+      "color": "#4caf50",
+      "description": "The main learning objective"
+    },
+    {
+      "name": "Advanced",
+      "shape": "diamond",
+      "color": "#9c27b0",
+      "description": "Extensions beyond the target concept"
+    }
+  ],
+  "edgeTypes": [
+    {
+      "name": "PREREQUISITE_OF",
+      "style": "solid",
+      "description": "Points from prerequisite to dependent concept"
+    },
+    {
+      "name": "EXTENDS",
+      "style": "dashed",
+      "description": "Points from concept to advanced application"
+    }
+  ]
+}

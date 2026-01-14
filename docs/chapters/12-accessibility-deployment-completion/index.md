@@ -261,6 +261,10 @@ function keyPressed() {
 }
 ```
 
+<iframe src="../../sims/accessible-control-layout/main.html" height="502px" width="100%" scrolling="no" style="overflow: hidden;"></iframe>
+
+[Run MicroSim Fullscreen](../../sims/accessible-control-layout/main.html){ .md-button .md-button--primary }
+
 #### Diagram: Accessible MicroSim Control Layout
 
 <details markdown="1">
@@ -360,6 +364,10 @@ When you need distinct colors that work for colorblind users, consider:
 - **Blue and Red**: Works for most color blindness types
 - **Adding patterns**: Stripes, dots, or textures supplement color
 - **Using saturation differences**: Light vs. dark versions of same hue
+
+<iframe src="../../sims/color-blindness-simulator/main.html" height="502px" width="100%" scrolling="no" style="overflow: hidden;"></iframe>
+
+[Run MicroSim Fullscreen](../../sims/color-blindness-simulator/main.html){ .md-button .md-button--primary }
 
 #### Diagram: Color Blindness Simulation
 
@@ -592,6 +600,10 @@ The best way to understand accessibility needs is to experience constraints your
 - **Enable reduced motion** in system preferences
 
 This isn't about feeling sorry for learners with disabilities—it's about understanding what "usable" actually means for them.
+
+<iframe src="../../sims/accessibility-audit-workflow/main.html" height="502px" width="100%" scrolling="no" style="overflow: hidden;"></iframe>
+
+[Run MicroSim Fullscreen](../../sims/accessibility-audit-workflow/main.html){ .md-button .md-button--primary }
 
 #### Diagram: Accessibility Audit Workflow
 
@@ -942,6 +954,10 @@ Your final portfolio should include:
 - Where the MicroSim is deployed
 - Integration method
 - Maintenance plan
+
+<iframe src="../../sims/portfolio-components/main.html" height="502px" width="100%" scrolling="no" style="overflow: hidden;"></iframe>
+
+[Run MicroSim Fullscreen](../../sims/portfolio-components/main.html){ .md-button .md-button--primary }
 
 #### Diagram: Portfolio Project Components
 

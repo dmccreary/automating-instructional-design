@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Concept Dependencies Graph</title>
+    <script src="https://unpkg.com/vis-network/standalone/umd/vis-network.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div id="network"></div>
+
+        <!-- Title at top center -->
+        <div class="title">Concept Dependencies Graph</div>
+
+        <!-- Legend in upper left -->
+        <div class="legend">
+            <div class="legend-title">Edge Types</div>
+            <div class="legend-item">
+                <div class="legend-line solid"></div>
+                <span><strong>REQUIRES</strong> - Hard prerequisite</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-line dashed"></div>
+                <span><strong>SUPPORTS</strong> - Soft prerequisite</span>
+            </div>
+            <div class="legend-title" style="margin-top: 10px;">Node Colors</div>
+            <div class="legend-item">
+                <div class="legend-color color-default"></div>
+                <span>Default concept</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color color-selected"></div>
+                <span>Selected concept</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color color-upstream"></div>
+                <span>Prerequisite</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color color-downstream"></div>
+                <span>Leads to</span>
+            </div>
+        </div>
+
+        <!-- Right panel with controls and info -->
+        <div class="right-panel">
+            <div class="controls">
+                <button class="btn btn-secondary" id="reset-btn">Reset View</button>
+            </div>
+
+            <div class="info-panel" id="info-panel">
+                <div class="info-title" id="info-title">Concept Dependencies</div>
+                <div class="info-text" id="info-text">
+                    <p><strong>Click</strong> a concept to highlight its dependencies.</p>
+                    <p><strong>Hover</strong> to see descriptions.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="concept-dependencies.js"></script>
+</body>
+</html>

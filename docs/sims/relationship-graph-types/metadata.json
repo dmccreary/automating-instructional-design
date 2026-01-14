@@ -1,0 +1,77 @@
+{
+  "title": "Relationship Graph Types",
+  "description": "An interactive visualization demonstrating different types of relationships (prerequisite, related to, contrasts with, exemplifies, influences) that can be represented in educational knowledge graphs.",
+  "creator": "Dan McCreary",
+  "subject": ["Education", "Knowledge Graphs", "Concept Mapping", "Data Visualization"],
+  "date": "2026-01-13",
+  "type": "Interactive Simulation",
+  "format": "text/html",
+  "language": "en",
+  "rights": "CC BY 4.0",
+  "gradeLevel": "Undergraduate, Graduate",
+  "subjectArea": "Instructional Design",
+  "topic": "Graph Visualization Relationships",
+  "learningObjectives": [
+    "Identify five common relationship types used in knowledge graphs",
+    "Distinguish between directional and bidirectional relationships",
+    "Apply appropriate relationship types when creating concept maps",
+    "Analyze existing diagrams to identify relationship patterns"
+  ],
+  "bloomsTaxonomyLevels": ["Remember", "Understand", "Apply", "Analyze"],
+  "duration": "5-10 minutes",
+  "prerequisites": [],
+  "framework": "vis-network",
+  "canvasDimensions": "responsive x 500",
+  "responsive": "Width-responsive",
+  "dependencies": ["vis-network"],
+  "controls": [
+    {
+      "type": "click",
+      "name": "Legend Items",
+      "description": "Click on legend items to highlight edges of that relationship type"
+    },
+    {
+      "type": "click",
+      "name": "Empty Space",
+      "description": "Click on empty space to reset highlighting"
+    },
+    {
+      "type": "navigation",
+      "name": "Navigation Buttons",
+      "description": "Zoom and pan controls (enabled)"
+    }
+  ],
+  "edgeTypes": [
+    {
+      "name": "Prerequisites",
+      "style": "solid arrow",
+      "color": "#2980B9",
+      "description": "Concept A must be learned before Concept B"
+    },
+    {
+      "name": "Related to",
+      "style": "dashed line",
+      "color": "#7F8C8D",
+      "description": "Concepts share common themes or overlap"
+    },
+    {
+      "name": "Contrasts with",
+      "style": "solid line",
+      "color": "#E74C3C",
+      "description": "Concepts are opposites or differ significantly"
+    },
+    {
+      "name": "Exemplifies",
+      "style": "dotted arrow",
+      "color": "#27AE60",
+      "description": "Concept A is an example or instance of Concept B"
+    },
+    {
+      "name": "Influences",
+      "style": "curved arrow",
+      "color": "#9B59B6",
+      "description": "Concept A affects or shapes Concept B"
+    }
+  ],
+  "modelType": "Relationship Type Demonstration"
+}

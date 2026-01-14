@@ -68,6 +68,10 @@ Let's explore each lens in detail, starting with the nuts and bolts of technical
 
 Before diving into specifics, let's visualize how these three evaluation lenses work together to create a holistic quality assessment.
 
+<iframe src="../../sims/three-lens-evaluation/main.html" height="502px" width="100%" scrolling="no" style="overflow: hidden;"></iframe>
+
+[Run MicroSim Fullscreen](../../sims/three-lens-evaluation/main.html){ .md-button .md-button--primary }
+
 #### Diagram: Three-Lens Evaluation Model
 
 <details markdown="1">
@@ -143,6 +147,10 @@ Responsiveness testing verifies that:
 - Touch targets are large enough for mobile interaction (minimum 44x44 pixels)
 - Text remains readable at all breakpoints
 - No horizontal scrolling is required
+
+<iframe src="../../sims/responsive-breakpoint-testing/main.html" height="502px" width="100%" scrolling="no" style="overflow: hidden;"></iframe>
+
+[Run MicroSim Fullscreen](../../sims/responsive-breakpoint-testing/main.html){ .md-button .md-button--primary }
 
 #### Diagram: Responsive Breakpoint Testing
 
@@ -224,6 +232,10 @@ Not all learning objectives are created equal. Bloom's Taxonomy (2001 revision) 
 
 A common mismatch occurs when a learning objective targets "Analyze" but the MicroSim only supports "Understand"—the simulation explains concepts beautifully but never challenges learners to discover relationships themselves.
 
+<iframe src="../../sims/bloom-microsim-types/main.html" height="502px" width="100%" scrolling="no" style="overflow: hidden;"></iframe>
+
+[Run MicroSim Fullscreen](../../sims/bloom-microsim-types/main.html){ .md-button .md-button--primary }
+
 #### Diagram: Bloom's Taxonomy and MicroSim Types
 
 <details markdown="1">
@@ -295,6 +307,10 @@ There's a sweet spot between "so boring I'm falling asleep" and "so gamified I f
 | No progress indication | Clear milestones | Leaderboards dominating |
 
 The key question: **Does the engagement serve the learning, or does learning serve the engagement?**
+
+<iframe src="../../sims/engagement-learning-tradeoff/main.html" height="502px" width="100%" scrolling="no" style="overflow: hidden;"></iframe>
+
+[Run MicroSim Fullscreen](../../sims/engagement-learning-tradeoff/main.html){ .md-button .md-button--primary }
 
 #### Diagram: Engagement vs. Learning Trade-off
 
@@ -479,6 +495,10 @@ The metadata.json file must pass schema validation. More on this in the next sec
 
 Sum points from the rubric and write the score to the index.md YAML frontmatter.
 
+<iframe src="../../sims/standardization-workflow/main.html" height="502px" width="100%" scrolling="no" style="overflow: hidden;"></iframe>
+
+[Run MicroSim Fullscreen](../../sims/standardization-workflow/main.html){ .md-button .md-button--primary }
+
 #### Diagram: Standardization Workflow
 
 <details markdown="1">
@@ -661,6 +681,10 @@ Future metadata extensions may include:
 - **Version history**: Tracking iterations and improvements over time
 - **Remix relationships**: Which MicroSims were derived from this one?
 
+<iframe src="../../sims/metadata-search/main.html" height="502px" width="100%" scrolling="no" style="overflow: hidden;"></iframe>
+
+[Run MicroSim Fullscreen](../../sims/metadata-search/main.html){ .md-button .md-button--primary }
+
 #### Diagram: Metadata-Enabled Search
 
 <details markdown="1">
@@ -745,6 +769,10 @@ The most effective quality assurance combines automated pre-checks with human re
 3. **Crowd tier**: Gather feedback from actual learners through user testing
 
 This pipeline ensures that human cognitive resources are spent on judgments that require human cognition, while machines handle the tedious verification work.
+
+<iframe src="../../sims/automated-human-evaluation/main.html" height="502px" width="100%" scrolling="no" style="overflow: hidden;"></iframe>
+
+[Run MicroSim Fullscreen](../../sims/automated-human-evaluation/main.html){ .md-button .md-button--primary }
 
 #### Diagram: Automated vs. Human Evaluation Matrix
 
@@ -859,6 +887,10 @@ A physics department might extend the standard rubric with domain-specific crite
 | Unit labels | All quantities display appropriate units | 10 |
 | Edge case behavior | Simulation handles extreme values correctly | 10 |
 | Misconception targeting | Addresses documented student misconceptions | 15 |
+
+<iframe src="../../sims/evaluation-rubric-builder/main.html" height="502px" width="100%" scrolling="no" style="overflow: hidden;"></iframe>
+
+[Run MicroSim Fullscreen](../../sims/evaluation-rubric-builder/main.html){ .md-button .md-button--primary }
 
 #### Diagram: Evaluation Rubric Builder
 

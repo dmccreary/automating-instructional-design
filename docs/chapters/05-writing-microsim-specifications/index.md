@@ -99,6 +99,10 @@ Now compare it to this **vivid** specification:
 
 The second version leaves nothing to imagination or interpretation. An AI—or a human developer—could implement this without asking any questions.
 
+<iframe src="../../sims/visual-description-checklist/main.html" height="502px" width="100%" scrolling="no" style="overflow: hidden;"></iframe>
+
+[Run MicroSim Fullscreen](../../sims/visual-description-checklist/main.html){ .md-button .md-button--primary }
+
 #### Diagram: Visual Description Completeness Checklist
 
 <details markdown="1">
@@ -187,6 +191,10 @@ A precise specification says:
 > "A horizontal slider labeled 'Speed' appears below the animation canvas. The slider ranges from 0.1 (labeled 'Slow Motion') to 3.0 (labeled 'Fast Forward') with a default value of 1.0 (labeled 'Normal'). As the user drags the slider handle, the simulation speed multiplier updates in real-time—no button press required. The current numeric value displays above the slider, updating as the handle moves. Moving the slider to 0.1 causes the animation to run at one-tenth speed; moving to 3.0 causes it to run at triple speed."
 
 The precise version answers every question: What's the range? What are the labels? What's the default? When does it take effect? What feedback does the user receive?
+
+<iframe src="../../sims/interaction-spec-template/main.html" height="502px" width="100%" scrolling="no" style="overflow: hidden;"></iframe>
+
+[Run MicroSim Fullscreen](../../sims/interaction-spec-template/main.html){ .md-button .md-button--primary }
 
 #### Diagram: Interaction Specification Template
 
@@ -327,6 +335,10 @@ Here's what success criteria look like for a pendulum simulation:
 > 2. The relationship between length and period is visually apparent when adjusting the length slider
 > 3. Energy display updates in real-time, showing conservation of energy principle
 
+<iframe src="../../sims/success-criteria-workflow/main.html" height="502px" width="100%" scrolling="no" style="overflow: hidden;"></iframe>
+
+[Run MicroSim Fullscreen](../../sims/success-criteria-workflow/main.html){ .md-button .md-button--primary }
+
 #### Diagram: Success Criteria Flow
 
 <details markdown="1">
@@ -427,6 +439,10 @@ For each edge case, specify:
 > - Trigger: Moving both sliders to their extreme values
 > - Expected Behavior: Simulation runs normally but oscillation dies out within 2 seconds; informational tooltip appears: "High damping absorbs energy quickly!"
 > - Rationale: Even unusual combinations should produce valid, educational results
+
+<iframe src="../../sims/edge-case-discovery/main.html" height="502px" width="100%" scrolling="no" style="overflow: hidden;"></iframe>
+
+[Run MicroSim Fullscreen](../../sims/edge-case-discovery/main.html){ .md-button .md-button--primary }
 
 #### Diagram: Edge Case Discovery MicroSim
 
@@ -570,6 +586,10 @@ Protect your intent by:
 4. **Review generated results** against the Intent Statement
 5. **Resist scope creep** that dilutes the core message
 
+<iframe src="../../sims/intent-preservation-matrix/main.html" height="502px" width="100%" scrolling="no" style="overflow: hidden;"></iframe>
+
+[Run MicroSim Fullscreen](../../sims/intent-preservation-matrix/main.html){ .md-button .md-button--primary }
+
 #### Diagram: Intent Preservation Matrix
 
 <details markdown="1">
@@ -706,6 +726,10 @@ Here's a specification structured for optimal AI interpretation:
 > - Parameter changes take effect immediately if pendulum is stationary
 > - If pendulum is moving when parameter changed, it continues with new parameters
 > - Motion stops when angular velocity drops below 0.001 radians/frame
+
+<iframe src="../../sims/spec-clarity-analyzer/main.html" height="502px" width="100%" scrolling="no" style="overflow: hidden;"></iframe>
+
+[Run MicroSim Fullscreen](../../sims/spec-clarity-analyzer/main.html){ .md-button .md-button--primary }
 
 #### Diagram: AI Specification Interpretation MicroSim
 
@@ -872,6 +896,10 @@ These verify the MicroSim can support learning analytics:
 - Timestamps available for time-on-task analysis
 - Error states and recovery actions are distinguishable in logs
 
+<iframe src="../../sims/acceptance-test-matrix/main.html" height="502px" width="100%" scrolling="no" style="overflow: hidden;"></iframe>
+
+[Run MicroSim Fullscreen](../../sims/acceptance-test-matrix/main.html){ .md-button .md-button--primary }
+
 #### Diagram: Acceptance Test Coverage Matrix
 
 <details markdown="1">
@@ -970,6 +998,10 @@ Now let's see how all these concepts combine into complete, production-ready spe
 ### Example 1: Ohm's Law Interactive Demonstration
 
 This specification teaches the relationship between voltage, current, and resistance.
+
+<iframe src="../../sims/ohms-law-simulator/main.html" height="502px" width="100%" scrolling="no" style="overflow: hidden;"></iframe>
+
+[Run MicroSim Fullscreen](../../sims/ohms-law-simulator/main.html){ .md-button .md-button--primary }
 
 #### Diagram: Ohm's Law Circuit Simulator
 
@@ -1126,6 +1158,10 @@ Implementation: p5.js with responsive canvas design
 ### Example 2: Probability Tree Diagram Explorer
 
 This specification teaches conditional probability through interactive tree diagrams.
+
+<iframe src="../../sims/probability-tree-explorer/main.html" height="502px" width="100%" scrolling="no" style="overflow: hidden;"></iframe>
+
+[Run MicroSim Fullscreen](../../sims/probability-tree-explorer/main.html){ .md-button .md-button--primary }
 
 #### Diagram: Probability Tree Explorer
 
@@ -1284,6 +1320,10 @@ Implementation: p5.js with responsive canvas design
 ### Example 3: Sorting Algorithm Race
 
 This specification compares different sorting algorithms visually.
+
+<iframe src="../../sims/sorting-algorithm-race/main.html" height="502px" width="100%" scrolling="no" style="overflow: hidden;"></iframe>
+
+[Run MicroSim Fullscreen](../../sims/sorting-algorithm-race/main.html){ .md-button .md-button--primary }
 
 #### Diagram: Sorting Algorithm Racing MicroSim
 

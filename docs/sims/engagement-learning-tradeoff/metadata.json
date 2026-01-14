@@ -1,0 +1,81 @@
+{
+  "title": "Engagement-Learning Tradeoff",
+  "description": "An interactive scatter plot MicroSim exploring the relationship between engagement features and learning effectiveness, demonstrating the diminishing returns of excessive gamification and helping designers find the optimal balance.",
+  "creator": "Claude AI",
+  "date": "2026-01-14",
+  "format": "text/html",
+  "type": "InteractiveResource",
+  "subject": [
+    "Instructional Design",
+    "Educational Psychology",
+    "Learning Sciences",
+    "Gamification",
+    "Engagement Theory",
+    "Multimedia Learning"
+  ],
+  "audience": "Educators, instructional designers, curriculum developers, and students learning about educational technology design",
+  "rights": "MIT License",
+  "language": "en",
+  "source": "Based on research on seductive details effect (Mayer, 2009), cognitive load theory (Sweller, 1988), and game-based learning (Plass et al., 2015)",
+  "relation": "Part of Automating Instructional Design intelligent textbook",
+  "coverage": "Principles for balancing engagement and learning effectiveness in educational design",
+  "bloomLevel": "Evaluate",
+  "learningObjective": "Students will evaluate the relationship between engagement features and learning effectiveness to identify optimal design approaches",
+  "interactivity": {
+    "features": [
+      "Scatter plot with data points",
+      "Hover tooltips with example descriptions",
+      "Clickable zones with design recommendations",
+      "Engagement level slider",
+      "User point visualization with trend-based learning calculation",
+      "Zone-specific feedback messages"
+    ],
+    "inputMethod": "Mouse hover, mouse click, slider drag, checkbox toggle"
+  },
+  "technicalRequirements": {
+    "library": "p5.js",
+    "version": "1.11.10",
+    "browser": "Modern browser with JavaScript enabled"
+  },
+  "visualElements": {
+    "chartType": "Scatter plot with trend curve",
+    "zones": {
+      "boring": {
+        "range": "0-3 on X-axis",
+        "color": "Light red/pink"
+      },
+      "optimal": {
+        "range": "4-6 on X-axis, 7-10 on Y-axis",
+        "color": "Light green"
+      },
+      "distraction": {
+        "range": "7-10 on X-axis",
+        "color": "Light orange"
+      }
+    },
+    "colorScheme": {
+      "dataPoints": "#3498DB",
+      "userPoint": "#E91E63",
+      "trendLine": "#505050",
+      "boringZone": "rgba(255, 200, 200, 0.3)",
+      "optimalZone": "rgba(200, 255, 200, 0.4)",
+      "distractionZone": "rgba(255, 230, 200, 0.3)"
+    },
+    "dimensions": {
+      "drawHeight": 400,
+      "controlHeight": 50
+    }
+  },
+  "dataPoints": [
+    {"name": "Static Diagram", "engagement": 1, "learning": 3},
+    {"name": "Labeled Image", "engagement": 2, "learning": 4},
+    {"name": "Step-by-Step Guide", "engagement": 3, "learning": 6},
+    {"name": "Interactive Simulation", "engagement": 5, "learning": 8},
+    {"name": "Adaptive Quiz", "engagement": 4.5, "learning": 7.5},
+    {"name": "Guided Discovery", "engagement": 5.5, "learning": 8.5},
+    {"name": "Complex Game", "engagement": 7, "learning": 6.5},
+    {"name": "Game-Heavy Design", "engagement": 9, "learning": 5},
+    {"name": "Social Competition", "engagement": 8, "learning": 4.5},
+    {"name": "Exploratory Sandbox", "engagement": 6, "learning": 7}
+  ]
+}

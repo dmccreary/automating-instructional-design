@@ -234,6 +234,12 @@ Interactive Features:
 Implementation: HTML/CSS with SVG pyramid, responsive design that stacks vertically on mobile
 </details>
 
+<iframe src="../../sims/blooms-pyramid/main.html" height="552px" width="100%" scrolling="no"></iframe>
+
+[Run the Bloom's Taxonomy Pyramid Fullscreen](../../sims/blooms-pyramid/main.html){ .md-button .md-button--primary }
+<br/>
+[Edit Bloom's Taxonomy Pyramid Using the p5.js Editor](https://editor.p5js.org/dmccreary/sketches/...){ .md-button }
+
 Let's explore each level in more detail, because understanding these categories is essential for writing effective learning objectives and—later in this course—for selecting the right type of MicroSim for each learning goal.
 
 ### Level 1: Remember
@@ -538,6 +544,12 @@ Interactive Features:
 Implementation: HTML/CSS/JavaScript, responsive grid layout
 </details>
 
+<iframe src="../../sims/smart-objectives/main.html" height="502px" width="100%" scrolling="no"></iframe>
+
+[Run the SMART Objectives Fullscreen](../../sims/smart-objectives/main.html){ .md-button .md-button--primary }
+<br/>
+[Edit SMART Objectives Using the p5.js Editor](https://editor.p5js.org/dmccreary/sketches/...){ .md-button }
+
 ## Decomposing Objectives: From Compound to Atomic
 
 Not all learning objectives are created equal in terms of scope. Some objectives are small and focused; others try to pack in multiple skills or concepts. Understanding this distinction is crucial for effective instructional design.
@@ -665,6 +677,10 @@ Implementation: vis-network with hierarchical layout
 Canvas: Responsive width, 500px height minimum
 </details>
 
+<iframe src="../../sims/objective-decomposition/main.html" height="500px" width="100%" scrolling="no"></iframe>
+
+[Run the Objective Decomposition Tree Fullscreen](../../sims/objective-decomposition/main.html){ .md-button .md-button--primary }
+
 Why does decomposition matter for AI-assisted instructional design? Because AI tools work best with clear, specific instructions. When you ask an AI to generate a MicroSim for a compound objective, it may not know which component to focus on. But ask it to generate a MicroSim for "learners will calculate the mean of a data set," and it can create something targeted and effective.
 
 ## Putting It All Together: The Instructional Design Mindset
@@ -743,6 +759,10 @@ Interactive features:
 
 Implementation: vis-network library with physics simulation
 </details>
+
+<iframe src="../../sims/chapter1-concept-map/main.html" height="550px" width="100%" scrolling="no"></iframe>
+
+[Run the Chapter 1 Concept Map Fullscreen](../../sims/chapter1-concept-map/main.html){ .md-button .md-button--primary }
 
 ## Chapter Summary
 

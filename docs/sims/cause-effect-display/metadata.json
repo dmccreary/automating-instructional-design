@@ -1,0 +1,61 @@
+{
+  "title": "Cause-Effect Display",
+  "description": "An interactive demonstration of the standard MicroSim structure showing a control panel with input variables (causes) on the left and a visualization area displaying output effects (water state changes) on the right, with immediate visual feedback.",
+  "creator": "Dan McCreary",
+  "subject": ["Education", "Instructional Design", "Simulation Design", "Physics"],
+  "date": "2025-01-13",
+  "type": "Interactive Simulation",
+  "format": "text/html",
+  "language": "en",
+  "rights": "CC BY 4.0",
+  "gradeLevel": "Middle School, High School, Undergraduate",
+  "subjectArea": "Education, Physics",
+  "topic": "Cause-Effect Relationships, Water Phase Transitions",
+  "learningObjectives": [
+    "Identify the cause-effect structure in educational simulations",
+    "Explain how input variables affect output visualizations",
+    "Describe the phase transitions of water based on temperature and pressure",
+    "Apply the cause-effect pattern to design simulations"
+  ],
+  "bloomsTaxonomyLevels": ["Understand", "Apply", "Analyze"],
+  "duration": "5-10 minutes",
+  "prerequisites": ["Basic understanding of states of matter"],
+  "framework": "p5.js",
+  "canvasDimensions": "responsive x 500",
+  "responsive": "Width-responsive",
+  "dependencies": ["p5.js 1.11.10"],
+  "accessibility": {
+    "screenReaderSupport": true,
+    "keyboardNavigation": true,
+    "highContrast": true
+  },
+  "controls": [
+    {
+      "type": "slider",
+      "name": "Temperature",
+      "range": "-20 to 150 C",
+      "description": "Controls the temperature affecting water state"
+    },
+    {
+      "type": "slider",
+      "name": "Pressure",
+      "range": "0.1 to 2.0 atm",
+      "description": "Controls atmospheric pressure affecting boiling/freezing points"
+    },
+    {
+      "type": "slider",
+      "name": "Humidity",
+      "range": "0 to 100%",
+      "description": "Controls humidity level affecting water volume"
+    }
+  ],
+  "modelType": "Cause-Effect Visualization",
+  "assumptions": [
+    "Simplified phase transition model",
+    "Linear relationship between pressure and boiling/freezing points"
+  ],
+  "limitations": [
+    "Does not show exact phase diagram",
+    "Pressure effects are approximated"
+  ]
+}

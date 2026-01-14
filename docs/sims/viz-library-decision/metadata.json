@@ -1,0 +1,55 @@
+{
+  "title": "Visualization Library Decision Tree",
+  "description": "An interactive decision tree that guides learners through selecting the appropriate JavaScript visualization library based on their content type and requirements, featuring seven library endpoints with descriptions.",
+  "creator": "Dan McCreary",
+  "subject": ["Data Visualization", "Web Development", "Education Technology"],
+  "date": "2026-01-13",
+  "type": "Interactive Simulation",
+  "format": "text/html",
+  "language": "en",
+  "rights": "CC BY 4.0",
+  "gradeLevel": "High School, Undergraduate, Graduate",
+  "subjectArea": "Computer Science, Instructional Design",
+  "topic": "Visualization Library Selection",
+  "learningObjectives": [
+    "Identify characteristics of different JavaScript visualization libraries",
+    "Match content types to appropriate visualization tools",
+    "Navigate decision criteria for library selection",
+    "Justify library selection decisions based on content requirements"
+  ],
+  "bloomsTaxonomyLevels": ["Remember", "Understand", "Apply"],
+  "duration": "5-15 minutes",
+  "prerequisites": ["Basic understanding of web development concepts"],
+  "framework": "p5.js",
+  "canvasDimensions": "responsive x 450",
+  "responsive": "Width-responsive",
+  "dependencies": ["p5.js 1.11.10"],
+  "controls": [
+    {
+      "type": "click",
+      "description": "Click Yes/No buttons to navigate through decision nodes"
+    },
+    {
+      "type": "click",
+      "description": "Click library endpoints to view descriptions and path"
+    },
+    {
+      "type": "hover",
+      "description": "Hover over library nodes to see descriptions"
+    },
+    {
+      "type": "button",
+      "description": "Reset button to start decision tree over"
+    }
+  ],
+  "modelType": "Decision Tree",
+  "librariesCovered": [
+    "p5.js",
+    "Chart.js",
+    "Plotly",
+    "vis-network",
+    "vis-timeline",
+    "Leaflet",
+    "Mermaid"
+  ]
+}

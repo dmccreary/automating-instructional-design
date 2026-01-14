@@ -139,6 +139,9 @@ Interactive Features:
 Implementation: HTML/CSS/JavaScript with SVG graphics
 </details>
 
+<iframe src="../../sims/viz-paradigm-selection/main.html" height="502px" width="100%" scrolling="no"></iframe>
+[Run Fullscreen](../../sims/viz-paradigm-selection/main.html){ .md-button .md-button--primary }
+
 ## Motion and Physics Simulations
 
 Let's start with the paradigm that brings learning to life—literally. **Motion simulations** show objects moving through space, while **physics simulations** add realistic forces like gravity, friction, and acceleration. These are the rock stars of STEM education because they let learners see abstract equations become tangible reality.
@@ -224,6 +227,9 @@ Labels:
 Implementation: SVG diagram with optional animation showing the loop cycling
 </details>
 
+<iframe src="../../sims/physics-sim-architecture/main.html" height="452px" width="100%" scrolling="no"></iframe>
+[Run Fullscreen](../../sims/physics-sim-architecture/main.html){ .md-button .md-button--primary }
+
 ### Dynamic Systems: When Everything Affects Everything
 
 **Dynamic systems** represent an important subset of physics simulations where multiple variables interact and influence each other over time. Unlike simple motion where one object follows a trajectory, dynamic systems involve feedback loops, equilibrium states, and emergent behavior.
@@ -295,6 +301,9 @@ Design Principles:
 
 Implementation: p5.js with responsive canvas
 </details>
+
+<iframe src="../../sims/cause-effect-display/main.html" height="502px" width="100%" scrolling="no"></iframe>
+[Run Fullscreen](../../sims/cause-effect-display/main.html){ .md-button .md-button--primary }
 
 ## Network and Graph Visualizations
 
@@ -409,6 +418,9 @@ Visual Styling:
 Implementation: vis-network JavaScript library
 </details>
 
+<iframe src="../../sims/relationship-graph-types/main.html" height="500px" width="100%" scrolling="no"></iframe>
+[Run Fullscreen](../../sims/relationship-graph-types/main.html){ .md-button .md-button--primary }
+
 ### Hierarchy Displays: Top-Down Organization
 
 **Hierarchy displays** are specialized network graphs where relationships are strictly top-down (or parent-child). Every node has at most one parent, creating a tree structure.
@@ -522,6 +534,9 @@ Validation:
 Implementation: p5.js or SVG with drag-and-drop
 </details>
 
+<iframe src="../../sims/venn-builder/main.html" height="502px" width="100%" scrolling="no"></iframe>
+[Run Fullscreen](../../sims/venn-builder/main.html){ .md-button .md-button--primary }
+
 ### Set Visualizations: Beyond the Circle
 
 While Venn diagrams are the poster child for set visualization, they're not the only option. **Set visualizations** encompass any approach to showing membership and categorization:
@@ -600,6 +615,9 @@ Example Application:
 
 Implementation: HTML5 drag-and-drop or p5.js
 </details>
+
+<iframe src="../../sims/classification-matrix/main.html" height="502px" width="100%" scrolling="no"></iframe>
+[Run Fullscreen](../../sims/classification-matrix/main.html){ .md-button .md-button--primary }
 
 ## Timelines and Sequence Displays
 
@@ -694,6 +712,9 @@ Layout:
 
 Implementation: vis-timeline library or custom HTML5/SVG
 </details>
+
+<iframe src="../../sims/process-timeline/main.html" height="352px" width="100%" scrolling="no"></iframe>
+[Run Fullscreen](../../sims/process-timeline/main.html){ .md-button .md-button--primary }
 
 ## Charts for Quantitative Data
 
@@ -802,6 +823,9 @@ Visual Styling:
 Implementation: Interactive HTML/CSS grid with JavaScript popups
 </details>
 
+<iframe src="../../sims/chart-selection/main.html" height="502px" width="100%" scrolling="no"></iframe>
+[Run Fullscreen](../../sims/chart-selection/main.html){ .md-button .md-button--primary }
+
 ## Spatial Visualizations
 
 Sometimes location is the key dimension. **Spatial visualizations** show where things are—on a map, in a room, across an anatomy, or through space.
@@ -891,6 +915,9 @@ Interactive Features:
 
 Implementation: Static SVG grid with modal popups for examples
 </details>
+
+<iframe src="../../sims/spatial-viz-types/main.html" height="452px" width="100%" scrolling="no"></iframe>
+[Run Fullscreen](../../sims/spatial-viz-types/main.html){ .md-button .md-button--primary }
 
 ## Flow and State Diagrams
 
@@ -987,6 +1014,9 @@ Visual Styling:
 
 Implementation: Mermaid.js for static, custom SVG/JS for interactive simulation
 </details>
+
+<iframe src="../../sims/state-machine-template/main.html" height="502px" width="100%" scrolling="no"></iframe>
+[Run Fullscreen](../../sims/state-machine-template/main.html){ .md-button .md-button--primary }
 
 ## Paradigm Selection: The Art of Matching
 
@@ -1095,6 +1125,9 @@ Visual Styling:
 
 Implementation: Interactive HTML table with filtering
 </details>
+
+<iframe src="../../sims/paradigm-affordance/main.html" height="452px" width="100%" scrolling="no"></iframe>
+[Run Fullscreen](../../sims/paradigm-affordance/main.html){ .md-button .md-button--primary }
 
 ## Putting It All Together: Your Pattern Recognition Toolkit
 

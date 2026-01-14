@@ -1,0 +1,65 @@
+{
+  "title": "Split Attention Effect Demonstration",
+  "description": "An interactive side-by-side comparison visualization showing how split attention design (separated labels and legends) increases cognitive load compared to integrated design (labels embedded in diagrams), with simulated eye-tracking patterns and cognitive cost metrics.",
+  "creator": "Claude AI",
+  "date": "2026-01-13",
+  "format": "text/html",
+  "type": "InteractiveResource",
+  "subject": [
+    "Cognitive Load Theory",
+    "Split Attention Effect",
+    "Instructional Design",
+    "Multimedia Learning",
+    "Educational Psychology"
+  ],
+  "audience": "Educators, instructional designers, and students learning about cognitive load and effective visual design",
+  "rights": "MIT License",
+  "language": "en",
+  "source": "Based on John Sweller's Cognitive Load Theory and research on the Split Attention Effect",
+  "relation": "Part of Automating Instructional Design intelligent textbook",
+  "coverage": "Principles of integrating visual and textual information in instructional materials",
+  "bloomLevel": "Analyze",
+  "learningObjective": "Help learners recognize split attention problems and understand the superior effectiveness of integrated designs through direct comparison",
+  "interactivity": {
+    "features": [
+      "Toggle eye-tracking visualization",
+      "Try it yourself progressive reveal mode",
+      "Hover tooltips for cognitive cost analysis",
+      "Side-by-side design comparison",
+      "Animated eye movement paths",
+      "Mental load indicators"
+    ],
+    "inputMethod": "Mouse hover, click buttons"
+  },
+  "technicalRequirements": {
+    "library": "p5.js",
+    "version": "1.11.10",
+    "browser": "Modern browser with JavaScript enabled"
+  },
+  "visualElements": {
+    "chartType": "Side-by-side comparison infographic",
+    "colorScheme": {
+      "problematicDesign": "#e74c3c",
+      "effectiveDesign": "#27ae60",
+      "neutral": "#3498db"
+    },
+    "dimensions": {
+      "drawHeight": 450,
+      "controlHeight": 50
+    }
+  },
+  "cognitiveMetrics": {
+    "splitDesign": {
+      "eyeMovementDistance": "847 pixels",
+      "timeToComprehension": "45 seconds",
+      "workingMemoryLoad": "High (6-7 chunks)",
+      "learningOutcome": "62% retention"
+    },
+    "integratedDesign": {
+      "eyeMovementDistance": "312 pixels",
+      "timeToComprehension": "22 seconds",
+      "workingMemoryLoad": "Low (3-4 chunks)",
+      "learningOutcome": "89% retention"
+    }
+  }
+}

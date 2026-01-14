@@ -1,0 +1,59 @@
+{
+  "title": "Concept Dependencies Graph",
+  "description": "An interactive directed acyclic graph showing concept dependencies with REQUIRES (hard prerequisites) and SUPPORTS (soft prerequisites) edge types. Click nodes to highlight upstream and downstream dependencies.",
+  "creator": "Dan McCreary",
+  "subject": ["Education", "Instructional Design", "Concept Mapping", "Learning Dependencies"],
+  "date": "2025-01-13",
+  "type": "Interactive Simulation",
+  "format": "text/html",
+  "language": "en",
+  "rights": "CC BY 4.0",
+  "gradeLevel": "Undergraduate, Graduate",
+  "subjectArea": "Education, Computer Science",
+  "topic": "Concept Dependencies and Prerequisites",
+  "learningObjectives": [
+    "Identify prerequisite relationships between concepts",
+    "Distinguish between hard and soft dependencies",
+    "Plan a learning path through interconnected topics",
+    "Understand how concepts build upon each other"
+  ],
+  "bloomsTaxonomyLevels": ["Understand", "Analyze", "Apply"],
+  "duration": "5-10 minutes",
+  "prerequisites": ["Basic understanding of learning progressions"],
+  "framework": "vis-network",
+  "canvasDimensions": "responsive x 500",
+  "responsive": "Width-responsive",
+  "dependencies": ["vis-network"],
+  "controls": [
+    {
+      "type": "click",
+      "description": "Click nodes to highlight upstream and downstream dependencies"
+    },
+    {
+      "type": "hover",
+      "description": "Hover over nodes to see concept descriptions"
+    },
+    {
+      "type": "button",
+      "name": "Reset View",
+      "description": "Clear highlighting and return to default view"
+    },
+    {
+      "type": "navigation",
+      "description": "Built-in vis-network navigation buttons for zoom and pan"
+    }
+  ],
+  "modelType": "Directed Acyclic Graph (DAG)",
+  "edgeTypes": [
+    {
+      "name": "REQUIRES",
+      "style": "solid",
+      "description": "Hard prerequisite - concept must be learned before proceeding"
+    },
+    {
+      "name": "SUPPORTS",
+      "style": "dashed",
+      "description": "Soft prerequisite - helpful but not strictly required"
+    }
+  ]
+}

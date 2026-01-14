@@ -72,6 +72,10 @@ Before we dive into specific age groups, we need to understand *why* different a
 
 Understanding these patterns gives you superpowers as an instructional designer. Instead of guessing what will work, you can make principled decisions based on decades of research. Think of it as having a roadmap for the human mind.
 
+<iframe src="../../sims/cognitive-development-chart/main.html" height="502px" width="100%" scrolling="no" style="overflow: hidden;"></iframe>
+
+[Run MicroSim Fullscreen](../../sims/cognitive-development-chart/main.html){ .md-button .md-button--primary }
+
 #### Diagram: Cognitive Development Progression
 
 <details markdown="1">
@@ -135,6 +139,10 @@ For MicroSim designers, Vygotsky's insights translate directly into scaffolding 
 - **Current ability**: What the learner can do without help
 - **ZPD**: What the learner can do with guidance, hints, or scaffolding
 - **Beyond reach**: What's too advanced even with maximum support
+
+<iframe src="../../sims/zpd-visualization/main.html" height="502px" width="100%" scrolling="no" style="overflow: hidden;"></iframe>
+
+[Run MicroSim Fullscreen](../../sims/zpd-visualization/main.html){ .md-button .md-button--primary }
 
 #### Diagram: Zone of Proximal Development
 
@@ -220,6 +228,10 @@ Young children are building their mental models of how the world works. Every in
 
 Those colorful celebration animations in the Reading for Kindergarten project? They're not just fun—they're essential. Positive reinforcement through sparkles, stars, and cheerful sounds creates dopamine responses that reinforce learning. It's neuroscience in action!
 
+<iframe src="../../sims/early-childhood-pattern/main.html" height="502px" width="100%" scrolling="no" style="overflow: hidden;"></iframe>
+
+[Run MicroSim Fullscreen](../../sims/early-childhood-pattern/main.html){ .md-button .md-button--primary }
+
 #### Diagram: Early Childhood MicroSim Pattern
 
 <details markdown="1">
@@ -297,6 +309,10 @@ Elementary students have wildly varying reading abilities. A third-grader might 
 - Optional text-to-speech for any on-screen text
 
 Never let reading ability become a barrier to learning content! If a student understands fractions but struggles with reading, the fraction MicroSim shouldn't punish them.
+
+<iframe src="../../sims/elementary-scaffolding/main.html" height="502px" width="100%" scrolling="no" style="overflow: hidden;"></iframe>
+
+[Run MicroSim Fullscreen](../../sims/elementary-scaffolding/main.html){ .md-button .md-button--primary }
 
 #### Diagram: Elementary Scaffolding Progression
 
@@ -388,6 +404,10 @@ The cognitive load increases, but so does the learning potential. Students begin
 
 MicroSims are perfect for this because they allow safe, rapid experimentation. A student might test 50 hypotheses in a simulation that would take weeks in a physical lab.
 
+<iframe src="../../sims/hypothesis-testing-interface/main.html" height="502px" width="100%" scrolling="no" style="overflow: hidden;"></iframe>
+
+[Run MicroSim Fullscreen](../../sims/hypothesis-testing-interface/main.html){ .md-button .md-button--primary }
+
 #### Diagram: Hypothesis Testing Interface
 
 <details markdown="1">
@@ -471,6 +491,10 @@ A physics MicroSim shouldn't just show abstract forces—it should simulate car 
 - Make predictions based on patterns
 
 MicroSims that generate data for analysis are incredibly powerful here. Students experience being scientists rather than just learning about science.
+
+<iframe src="../../sims/real-world-data-pattern/main.html" height="502px" width="100%" scrolling="no" style="overflow: hidden;"></iframe>
+
+[Run MicroSim Fullscreen](../../sims/real-world-data-pattern/main.html){ .md-button .md-button--primary }
 
 #### Diagram: Real-World Data MicroSim
 
@@ -564,6 +588,10 @@ The Signal Processing course ([github.com/dmccreary/signal-processing](https://g
 
 These simulations don't hide the mathematics—they illuminate it through interaction.
 
+<iframe src="../../sims/math-relationship-explorer/main.html" height="502px" width="100%" scrolling="no" style="overflow: hidden;"></iframe>
+
+[Run MicroSim Fullscreen](../../sims/math-relationship-explorer/main.html){ .md-button .md-button--primary }
+
 #### Diagram: Mathematical Relationship Explorer
 
 <details markdown="1">
@@ -644,6 +672,10 @@ The line between learning and discovery blurs at this level. A well-designed Mic
 - Where models break down or become unrealistic
 
 MicroSims that map parameter spaces—showing stability regions, chaotic zones, and interesting boundaries—are incredibly valuable for developing expert intuition.
+
+<iframe src="../../sims/parameter-space-explorer/main.html" height="502px" width="100%" scrolling="no" style="overflow: hidden;"></iframe>
+
+[Run MicroSim Fullscreen](../../sims/parameter-space-explorer/main.html){ .md-button .md-button--primary }
 
 #### Diagram: Parameter Space Explorer
 
@@ -831,6 +863,10 @@ When adapting a MicroSim concept for a specific audience, work through these que
 ### The Same Concept at Seven Levels
 
 Let's see how a single concept—probability—might be designed differently for each audience:
+
+<iframe src="../../sims/probability-adaptation/main.html" height="502px" width="100%" scrolling="no" style="overflow: hidden;"></iframe>
+
+[Run MicroSim Fullscreen](../../sims/probability-adaptation/main.html){ .md-button .md-button--primary }
 
 #### Diagram: Probability Across Audience Levels
 

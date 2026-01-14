@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Misconception Catalog</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            background-color: #f8f9fa;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        h1 {
+            font-size: 2rem;
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            color: #6c757d;
+            font-size: 1.1rem;
+        }
+
+        /* Controls Section */
+        .controls {
+            background: white;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            align-items: center;
+        }
+
+        .search-box {
+            flex: 1;
+            min-width: 250px;
+            position: relative;
+        }
+
+        .search-box input {
+            width: 100%;
+            padding: 12px 12px 12px 40px;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            font-size: 1rem;
+            transition: border-color 0.3s;
+        }
+
+        .search-box input:focus {
+            outline: none;
+            border-color: #3498db;
+        }
+
+        .search-box::before {
+            content: "\1F50D";
+            position: absolute;
+            left: 12px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 1.2rem;
+        }
+
+        .filter-group {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+        }
+
+        .filter-group label {
+            font-weight: 600;
+            color: #495057;
+            font-size: 0.9rem;
+        }
+
+        .filter-group select {
+            padding: 10px 15px;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            font-size: 0.95rem;
+            background: white;
+            cursor: pointer;
+        }
+
+        .filter-group select:focus {
+            outline: none;
+            border-color: #3498db;
+        }
+
+        .my-list-btn {
+            padding: 10px 20px;
+            background: #27ae60;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 0.95rem;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: background 0.3s;
+        }
+
+        .my-list-btn:hover {
+            background: #219a52;
+        }
+
+        .my-list-count {
+            background: white;
+            color: #27ae60;
+            padding: 2px 8px;
+            border-radius: 10px;
+            font-weight: bold;
+        }
+
+        /* Domain Tabs */
+        .domain-tabs {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 5px;
+            margin-bottom: 20px;
+            background: white;
+            padding: 10px;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .domain-tab {
+            padding: 10px 18px;
+            border: none;
+            background: #f0f0f0;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 0.95rem;
+            font-weight: 500;
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .domain-tab:hover {
+            background: #e0e0e0;
+        }
+
+        .domain-tab.active {
+            color: white;
+        }
+
+        .domain-tab .count {
+            background: rgba(255,255,255,0.3);
+            padding: 2px 8px;
+            border-radius: 10px;
+            font-size: 0.8rem;
+        }
+
+        /* Domain-specific colors */
+        .domain-tab[data-domain="all"].active { background: #6c757d; }
+        .domain-tab[data-domain="physics"].active { background: #3498db; }
+        .domain-tab[data-domain="biology"].active { background: #27ae60; }
+        .domain-tab[data-domain="chemistry"].active { background: #9b59b6; }
+        .domain-tab[data-domain="mathematics"].active { background: #e74c3c; }
+        .domain-tab[data-domain="economics"].active { background: #f39c12; }
+        .domain-tab[data-domain="computer-science"].active { background: #1abc9c; }
+        .domain-tab[data-domain="psychology"].active { background: #e91e63; }
+        .domain-tab[data-domain="earth-science"].active { background: #795548; }
+
+        /* Cards Grid */
+        .cards-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            overflow: hidden;
+            transition: transform 0.3s, box-shadow 0.3s;
+            cursor: pointer;
+        }
+
+        .card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+        }
+
+        .card-header {
+            padding: 15px 20px;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .card-header .domain-label {
+            font-size: 0.8rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .card-header .difficulty {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            font-size: 0.8rem;
+        }
+
+        .difficulty-icon {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.7rem;
+        }
+
+        .difficulty-easy { background: #d4edda; color: #155724; }
+        .difficulty-medium { background: #fff3cd; color: #856404; }
+        .difficulty-hard { background: #f8d7da; color: #721c24; }
+
+        /* Domain header colors */
+        .card[data-domain="physics"] .card-header { background: #3498db; }
+        .card[data-domain="biology"] .card-header { background: #27ae60; }
+        .card[data-domain="chemistry"] .card-header { background: #9b59b6; }
+        .card[data-domain="mathematics"] .card-header { background: #e74c3c; }
+        .card[data-domain="economics"] .card-header { background: #f39c12; }
+        .card[data-domain="computer-science"] .card-header { background: #1abc9c; }
+        .card[data-domain="psychology"] .card-header { background: #e91e63; }
+        .card[data-domain="earth-science"] .card-header { background: #795548; }
+
+        .card-body {
+            padding: 20px;
+        }
+
+        .misconception-statement {
+            font-weight: 700;
+            font-size: 1.1rem;
+            color: #2c3e50;
+            margin-bottom: 12px;
+            line-height: 1.4;
+        }
+
+        .intuition-reason {
+            font-style: italic;
+            color: #6c757d;
+            margin-bottom: 12px;
+            font-size: 0.95rem;
+        }
+
+        .correct-concept {
+            background: #e8f5e9;
+            padding: 12px;
+            border-radius: 8px;
+            border-left: 4px solid #27ae60;
+            margin-bottom: 15px;
+            font-size: 0.95rem;
+        }
+
+        .correct-concept strong {
+            color: #27ae60;
+        }
+
+        .card-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 12px;
+        }
+
+        .meta-item {
+            background: #f8f9fa;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 0.85rem;
+            color: #495057;
+        }
+
+        .meta-item strong {
+            color: #2c3e50;
+        }
+
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+            margin-bottom: 12px;
+        }
+
+        .tag {
+            background: #e9ecef;
+            padding: 4px 10px;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            color: #495057;
+        }
+
+        .card-actions {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 12px;
+            border-top: 1px solid #e9ecef;
+        }
+
+        .expand-btn {
+            background: none;
+            border: none;
+            color: #3498db;
+            cursor: pointer;
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .expand-btn:hover {
+            text-decoration: underline;
+        }
+
+        .add-to-list-btn {
+            background: #f8f9fa;
+            border: 2px solid #27ae60;
+            color: #27ae60;
+            padding: 6px 12px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 0.85rem;
+            transition: all 0.3s;
+        }
+
+        .add-to-list-btn:hover {
+            background: #27ae60;
+            color: white;
+        }
+
+        .add-to-list-btn.added {
+            background: #27ae60;
+            color: white;
+        }
+
+        /* Expanded Card Content */
+        .expanded-content {
+            display: none;
+            padding: 20px;
+            background: #f8f9fa;
+            border-top: 1px solid #e9ecef;
+        }
+
+        .card.expanded .expanded-content {
+            display: block;
+        }
+
+        .expanded-section {
+            margin-bottom: 15px;
+        }
+
+        .expanded-section h4 {
+            color: #2c3e50;
+            margin-bottom: 8px;
+            font-size: 0.95rem;
+        }
+
+        .expanded-section p, .expanded-section ul {
+            font-size: 0.9rem;
+            color: #495057;
+        }
+
+        .expanded-section ul {
+            padding-left: 20px;
+        }
+
+        .expanded-section li {
+            margin-bottom: 5px;
+        }
+
+        .related-misconceptions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .related-link {
+            background: #e3f2fd;
+            color: #1976d2;
+            padding: 5px 12px;
+            border-radius: 15px;
+            font-size: 0.85rem;
+            cursor: pointer;
+            text-decoration: none;
+            transition: background 0.3s;
+        }
+
+        .related-link:hover {
+            background: #bbdefb;
+        }
+
+        .citation {
+            font-size: 0.85rem;
+            color: #6c757d;
+            font-style: italic;
+        }
+
+        .citation a {
+            color: #3498db;
+        }
+
+        /* My List Modal */
+        .modal-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0,0,0,0.5);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal-overlay.active {
+            display: flex;
+        }
+
+        .modal {
+            background: white;
+            border-radius: 12px;
+            max-width: 600px;
+            width: 90%;
+            max-height: 80vh;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .modal-header {
+            padding: 20px;
+            background: #27ae60;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .modal-header h2 {
+            font-size: 1.3rem;
+        }
+
+        .modal-close {
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        .modal-body {
+            padding: 20px;
+            overflow-y: auto;
+            flex: 1;
+        }
+
+        .my-list-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 12px;
+            background: #f8f9fa;
+            border-radius: 8px;
+            margin-bottom: 10px;
+        }
+
+        .my-list-item-text {
+            flex: 1;
+        }
+
+        .my-list-item-domain {
+            font-size: 0.75rem;
+            color: #6c757d;
+            text-transform: uppercase;
+        }
+
+        .remove-btn {
+            background: #dc3545;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 0.85rem;
+        }
+
+        .modal-footer {
+            padding: 15px 20px;
+            background: #f8f9fa;
+            display: flex;
+            gap: 10px;
+            justify-content: flex-end;
+        }
+
+        .modal-btn {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 0.95rem;
+        }
+
+        .modal-btn-primary {
+            background: #3498db;
+            color: white;
+        }
+
+        .modal-btn-secondary {
+            background: #6c757d;
+            color: white;
+        }
+
+        .empty-list {
+            text-align: center;
+            padding: 40px;
+            color: #6c757d;
+        }
+
+        /* Results info */
+        .results-info {
+            margin-bottom: 15px;
+            color: #6c757d;
+            font-size: 0.95rem;
+        }
+
+        .no-results {
+            text-align: center;
+            padding: 60px 20px;
+            color: #6c757d;
+        }
+
+        .no-results h3 {
+            margin-bottom: 10px;
+            color: #495057;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .controls {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            .filter-group {
+                flex-wrap: wrap;
+            }
+
+            .cards-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .domain-tabs {
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Misconception Catalog</h1>
+            <p class="subtitle">A browsable reference of common student misconceptions organized by subject domain</p>
+        </header>
+
+        <div class="controls">
+            <div class="search-box">
+                <input type="text" id="searchInput" placeholder="Search misconceptions by keyword...">
+            </div>
+            <div class="filter-group">
+                <label>Grade Level:</label>
+                <select id="gradeFilter">
+                    <option value="all">All Levels</option>
+                    <option value="K-5">K-5</option>
+                    <option value="6-8">6-8</option>
+                    <option value="9-12">9-12</option>
+                    <option value="College">College</option>
+                </select>
+            </div>
+            <div class="filter-group">
+                <label>Sort by:</label>
+                <select id="sortBy">
+                    <option value="prevalence">Prevalence</option>
+                    <option value="difficulty">Difficulty to Correct</option>
+                    <option value="domain">Domain</option>
+                </select>
+            </div>
+            <button class="my-list-btn" id="myListBtn">
+                My List <span class="my-list-count" id="myListCount">0</span>
+            </button>
+        </div>
+
+        <div class="domain-tabs" id="domainTabs">
+            <!-- Tabs generated by JavaScript -->
+        </div>
+
+        <div class="results-info" id="resultsInfo"></div>
+
+        <div class="cards-grid" id="cardsGrid">
+            <!-- Cards generated by JavaScript -->
+        </div>
+    </div>
+
+    <!-- My List Modal -->
+    <div class="modal-overlay" id="myListModal">
+        <div class="modal">
+            <div class="modal-header">
+                <h2>My Misconception List</h2>
+                <button class="modal-close" id="modalClose">&times;</button>
+            </div>
+            <div class="modal-body" id="myListBody">
+                <!-- List items generated by JavaScript -->
+            </div>
+            <div class="modal-footer">
+                <button class="modal-btn modal-btn-secondary" id="clearListBtn">Clear All</button>
+                <button class="modal-btn modal-btn-primary" id="exportListBtn">Export as JSON</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="misconception-catalog.js"></script>
+</body>
+</html>

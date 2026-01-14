@@ -1,0 +1,54 @@
+{
+    "title": "Mental Model Formation",
+    "description": "An interactive radial diagram showing how mental models form from six sources (Direct Experience, Observation, Instruction, Analogy, Intuition, Cultural Transmission) and influence predictions, interpretations, problem-solving, and communication. Demonstrates the filtering effect of existing models on new information and the feedback loop for model updates.",
+    "creator": "Dan McCreary",
+    "date": "2026-01-14",
+    "subject": [
+        "Mental Models",
+        "Cognitive Science",
+        "Instructional Design",
+        "Learning Science",
+        "Knowledge Construction",
+        "Educational Psychology"
+    ],
+    "type": "InteractiveResource",
+    "format": "text/html",
+    "language": "en",
+    "rights": "MIT License",
+    "source": "https://dmccreary.github.io/automating-instructional-design/",
+    "relation": "Part of the Automating Instructional Design intelligent textbook",
+    "coverage": "Introduction to mental model formation for instructional designers and educators",
+    "audience": {
+        "educationLevel": "Undergraduate, Graduate, Professional Development",
+        "typicalAgeRange": "18+",
+        "role": [
+            "Instructional Designer",
+            "Educator",
+            "Learning Experience Designer",
+            "Cognitive Scientist",
+            "Educational Technology Specialist"
+        ]
+    },
+    "learningResourceType": "Simulation",
+    "interactivityType": "active",
+    "interactivityLevel": "medium",
+    "bloomsTaxonomy": "Understand",
+    "bloomsLevel": 2,
+    "learningObjective": "Help learners visualize how mental models form from various sources and influence the interpretation of new information",
+    "keywords": [
+        "mental models",
+        "knowledge construction",
+        "cognitive science",
+        "learning theory",
+        "conceptual change",
+        "prior knowledge",
+        "misconceptions",
+        "instructional design",
+        "knowledge filtering",
+        "feedback loops"
+    ],
+    "technicalRequirements": {
+        "browser": "Modern browser with JavaScript enabled",
+        "library": "p5.js 1.11.10"
+    }
+}

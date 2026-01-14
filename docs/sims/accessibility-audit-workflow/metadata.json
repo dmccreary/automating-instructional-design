@@ -1,0 +1,65 @@
+{
+  "title": "Accessibility Audit Workflow",
+  "description": "An interactive flowchart for conducting systematic accessibility audits on MicroSims, evaluating keyboard navigation, screen reader compatibility, color contrast, motion, and touch accessibility dimensions.",
+  "creator": "Dan McCreary",
+  "subject": ["Education", "Accessibility", "WCAG", "Instructional Design", "Quality Assurance"],
+  "date": "2026-01-14",
+  "type": "Interactive Simulation",
+  "format": "text/html",
+  "language": "en",
+  "rights": "CC BY 4.0",
+  "gradeLevel": "High School, Undergraduate, Graduate, Professional",
+  "subjectArea": "Education, Instructional Design, Web Accessibility, Inclusive Design",
+  "topic": "Accessibility Testing",
+  "learningObjectives": [
+    "Identify the five key dimensions of MicroSim accessibility testing",
+    "Evaluate MicroSims against WCAG accessibility criteria",
+    "Conduct systematic accessibility audits using a structured workflow",
+    "Prioritize accessibility fixes based on impact and severity"
+  ],
+  "bloomsTaxonomyLevels": ["Evaluate"],
+  "duration": "10-30 minutes",
+  "prerequisites": [
+    "Basic understanding of web accessibility concepts",
+    "Familiarity with MicroSim development",
+    "Knowledge of WCAG guidelines helpful but not required"
+  ],
+  "framework": "p5.js",
+  "canvasDimensions": "responsive x 600",
+  "responsive": "Width-responsive",
+  "dependencies": ["p5.js 1.11.10"],
+  "accessibility": {
+    "screenReaderSupport": true,
+    "keyboardNavigation": true,
+    "highContrast": true
+  },
+  "controls": [
+    {
+      "type": "click",
+      "description": "Click left side of test node to mark as Fail"
+    },
+    {
+      "type": "click",
+      "description": "Click right side of test node to mark as Pass"
+    },
+    {
+      "type": "click",
+      "description": "Click any node to view details and test questions"
+    },
+    {
+      "type": "button",
+      "description": "Reset All button clears all test results"
+    }
+  ],
+  "modelType": "Interactive Workflow Flowchart",
+  "assumptions": [
+    "Systematic auditing improves accessibility compliance",
+    "Visual pass/fail tracking helps identify gaps",
+    "Specific test questions guide thorough evaluation"
+  ],
+  "limitations": [
+    "Audit checklist covers common issues but may not catch all edge cases",
+    "Does not perform automated accessibility testing",
+    "Requires manual testing of each criterion"
+  ]
+}

@@ -1,0 +1,46 @@
+{
+    "title": "Interaction Specification Template",
+    "description": "An interactive p5.js visualization showing the three-part structure of well-specified interactions: Trigger, Response, and Feedback. Demonstrates how to document user interactions for educational simulations.",
+    "creator": "Dan McCreary",
+    "date": "2026-01-13",
+    "type": "InteractiveResource",
+    "format": "text/html",
+    "subject": [
+        "Interaction Design",
+        "User Experience",
+        "Instructional Design",
+        "Educational Technology",
+        "MicroSim Development"
+    ],
+    "language": "en",
+    "rights": "Creative Commons Attribution 4.0 International License",
+    "source": "Automating Instructional Design Project",
+    "relation": "https://dmccreary.github.io/automating-instructional-design/",
+    "coverage": "Foundational interaction design concept applicable to educational simulation development and UX specification",
+    "audience": "Instructional designers, educators, and developers creating interactive educational simulations",
+    "educationalLevel": "Intermediate",
+    "bloomTaxonomyLevel": "Apply",
+    "learningObjective": "Students will be able to structure interaction specifications using a consistent template that ensures completeness",
+    "keywords": [
+        "interaction design",
+        "trigger response feedback",
+        "user interaction",
+        "specification template",
+        "UX design",
+        "MicroSim",
+        "p5.js",
+        "instructional design",
+        "interactive learning"
+    ],
+    "version": "1.0",
+    "library": "p5.js",
+    "libraryVersion": "1.11.10",
+    "features": [
+        "Three interconnected components (Trigger, Response, Feedback)",
+        "Expandable/collapsible sub-items",
+        "Hover tooltips with descriptions",
+        "Animated connecting arrows",
+        "Color-coded boxes with icons",
+        "Responsive canvas layout"
+    ]
+}

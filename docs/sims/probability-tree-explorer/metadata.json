@@ -1,0 +1,73 @@
+{
+  "title": "Probability Tree Explorer",
+  "description": "An interactive probability tree visualization for understanding compound probabilities when drawing balls without replacement, demonstrating why probabilities multiply along branches through proportional branch widths.",
+  "creator": "Dan McCreary",
+  "subject": ["Mathematics", "Probability", "Statistics"],
+  "date": "2025-01-13",
+  "type": "Interactive Simulation",
+  "format": "text/html",
+  "language": "en",
+  "rights": "CC BY 4.0",
+  "gradeLevel": "Middle School, High School, Undergraduate",
+  "subjectArea": "Mathematics",
+  "topic": "Compound Probability",
+  "learningObjectives": [
+    "Calculate compound probabilities by tracing paths through a probability tree",
+    "Explain why probabilities multiply along branches",
+    "Distinguish between independent and dependent (conditional) probabilities",
+    "Analyze how removing items affects subsequent probabilities (without replacement)"
+  ],
+  "bloomsTaxonomyLevels": ["Understand", "Apply", "Analyze"],
+  "duration": "10-15 minutes",
+  "prerequisites": ["Basic probability concepts", "Fraction operations"],
+  "framework": "p5.js",
+  "canvasDimensions": "responsive x 550",
+  "responsive": "Width-responsive (max 800px)",
+  "dependencies": ["p5.js 1.11.10"],
+  "accessibility": {
+    "screenReaderSupport": true,
+    "keyboardNavigation": false,
+    "highContrast": true
+  },
+  "controls": [
+    {
+      "type": "slider",
+      "label": "Red Balls",
+      "range": "1-10",
+      "default": 5,
+      "description": "Adjust the number of red balls in the bag"
+    },
+    {
+      "type": "slider",
+      "label": "Blue Balls",
+      "range": "1-10",
+      "default": 3,
+      "description": "Adjust the number of blue balls in the bag"
+    },
+    {
+      "type": "button",
+      "label": "Reset",
+      "description": "Reset to default values (5 red, 3 blue)"
+    },
+    {
+      "type": "checkbox",
+      "label": "Show Calculations",
+      "description": "Toggle display of all outcome probabilities"
+    },
+    {
+      "type": "hover",
+      "description": "Hover over outcome nodes to see detailed calculation"
+    }
+  ],
+  "modelType": "Educational Visualization",
+  "assumptions": [
+    "Drawing without replacement (balls not returned)",
+    "Each ball equally likely to be drawn",
+    "Order matters (RB different from BR)"
+  ],
+  "limitations": [
+    "Limited to two sequential draws",
+    "Maximum 10 balls of each color",
+    "Does not show with-replacement comparison"
+  ]
+}

@@ -59,6 +59,10 @@ Before diving into specific techniques, let's understand the complete **generati
 
 Each phase has its own skills and decision points. The workflow isn't always linear—you might jump back to specification if you realize something was missing, or skip refinement if the initial generation nails it.
 
+<iframe src="../../sims/microsim-generation-workflow/main.html" height="502px" width="100%" scrolling="no" style="overflow: hidden;"></iframe>
+
+[Run MicroSim Fullscreen](../../sims/microsim-generation-workflow/main.html){ .md-button .md-button--primary }
+
 #### Diagram: MicroSim Generation Workflow
 
 <details markdown="1">
@@ -270,6 +274,10 @@ You can just specify **what functionality** you want the MicroSim to do.
     The simulation will show a ball bouncing around the drawing area of the canvas.
     Allow the user to start and pause the simulation and change the ball's speed.
 
+<iframe src="../../sims/prompt-engineering-practices/main.html" height="502px" width="100%" scrolling="no" style="overflow: hidden;"></iframe>
+
+[Run MicroSim Fullscreen](../../sims/prompt-engineering-practices/main.html){ .md-button .md-button--primary }
+
 #### Diagram: Prompt Engineering Best Practices
 
 <details markdown="1">
@@ -440,6 +448,10 @@ requests a MicroSim or provides simulation specifications.
 
 !!! note "Skill Economy"
     With only 30 skill slots, consider creating composite skills that handle related tasks rather than highly specialized single-purpose skills. A `microsim-generator` skill that handles multiple visualization types is often more valuable than separate skills for each type.
+
+<iframe src="../../sims/claude-code-architecture/main.html" height="502px" width="100%" scrolling="no" style="overflow: hidden;"></iframe>
+
+[Run MicroSim Fullscreen](../../sims/claude-code-architecture/main.html){ .md-button .md-button--primary }
 
 #### Diagram: Claude Code Skills Architecture
 
@@ -646,6 +658,10 @@ The `[MANDATORY]` tag (or similar marker) indicates that this rule is not subjec
 | Normal | Can be overridden by more specific rules | Default preferences |
 | `[RECOMMENDED]` | Should only be overridden with justification | Best practices |
 | `[MANDATORY]` | Cannot be overridden | Legal, accessibility, safety |
+
+<iframe src="../../sims/rule-hierarchy-cascade/main.html" height="502px" width="100%" scrolling="no" style="overflow: hidden;"></iframe>
+
+[Run MicroSim Fullscreen](../../sims/rule-hierarchy-cascade/main.html){ .md-button .md-button--primary }
 
 #### Diagram: Rule Hierarchy Cascade
 
@@ -959,6 +975,10 @@ When you find multiple issues, triage them:
 5. **Enhancement**: Would be nice but not required (extra features)
 
 Address blockers and critical issues first. Don't waste time on polish if fundamentals are broken.
+
+<iframe src="../../sims/issue-identification-workflow/main.html" height="502px" width="100%" scrolling="no" style="overflow: hidden;"></iframe>
+
+[Run MicroSim Fullscreen](../../sims/issue-identification-workflow/main.html){ .md-button .md-button--primary }
 
 #### Diagram: Issue Identification Workflow
 
@@ -1341,6 +1361,10 @@ If you meet these criteria, ship it. You can always iterate post-deployment base
 | Manual takeover | Writing more code than AI | Step back, rethink prompts |
 | Regeneration spiral | Each regeneration introduces new issues | Return to last good version |
 | Polish paralysis | Spending hours on minor visual tweaks | Set time boxes for polish |
+
+<iframe src="../../sims/iteration-dashboard/main.html" height="502px" width="100%" scrolling="no" style="overflow: hidden;"></iframe>
+
+[Run MicroSim Fullscreen](../../sims/iteration-dashboard/main.html){ .md-button .md-button--primary }
 
 #### Diagram: Iteration Management Dashboard
 
