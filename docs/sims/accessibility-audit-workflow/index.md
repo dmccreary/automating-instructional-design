@@ -11,7 +11,7 @@ social:
 
 # Accessibility Audit Workflow
 
-<iframe src="main.html" height="602px" width="100%" scrolling="no"></iframe>
+<iframe src="main.html" height="802px" width="100%" scrolling="no"></iframe>
 
 [Run the Accessibility Audit Workflow Fullscreen](./main.html){ .md-button .md-button--primary }
 <br/>

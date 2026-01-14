@@ -1,11 +1,12 @@
 // Accessibility Audit Workflow MicroSim
 // Interactive flowchart for conducting systematic accessibility audits on MicroSims
-
+/// <reference types="p5/global" />
 // Canvas dimensions
 let canvasWidth = 800;
-let drawHeight = 550;
+let drawHeight = 750;
 let controlHeight = 50;
 let canvasHeight = drawHeight + controlHeight;
+const margin = 20;
 
 // State
 let mouseOverCanvas = false;
@@ -162,20 +163,14 @@ function setup() {
 function draw() {
   updateCanvasSize();
 
-  // Background
-  background(colors.background);
-
   // Draw area
-  fill(colors.background);
-  noStroke();
+  fill('aliceblue');
+  stroke('silver');
   rect(0, 0, canvasWidth, drawHeight);
 
   // Control area
-  fill(255);
+  fill('white');
   rect(0, drawHeight, canvasWidth, controlHeight);
-  stroke(colors.connector);
-  strokeWeight(1);
-  line(0, drawHeight, canvasWidth, drawHeight);
 
   // Title
   fill(colors.text);
@@ -183,9 +178,11 @@ function draw() {
   textSize(18);
   textAlign(CENTER, TOP);
   textStyle(BOLD);
-  text('Accessibility Audit Workflow', canvasWidth / 2, 8);
+  text('Accessibility Audit Workflow', canvasWidth/2, 8);
   textStyle(NORMAL);
 
+  push();
+  translate(0, 30);
   // Draw connectors first (behind nodes)
   drawConnectors();
 
@@ -193,7 +190,7 @@ function draw() {
   for (let i = 0; i < steps.length; i++) {
     drawNode(steps[i], i === hoveredNode, i === selectedNode);
   }
-
+  pop();
   // Draw control area
   drawControlArea();
 }
@@ -271,7 +268,8 @@ function drawArrowhead(x, y, angle, isHighlighted) {
   rotate(angle);
   fill(isHighlighted ? colors.connectorHighlight : colors.connector);
   noStroke();
-  triangle(0, 0, -6, -10, 6, -10);
+  // Triangle pointing right, which becomes down after HALF_PI rotation
+  triangle(0, 0, -10, -6, -10, 6);
   pop();
 }
 
@@ -426,17 +424,20 @@ function drawControlArea() {
   const statusText = `Tests: ${passed} passed, ${failed} failed, ${total - passed - failed} pending`;
   text(statusText, canvasWidth - 20, centerY);
 
-  // Description panel when node is selected
-  if (selectedNode >= 0) {
-    drawDescriptionPanel(steps[selectedNode]);
+  // Description panel when node is hovered or selected
+  const activeNode = hoveredNode >= 0 ? hoveredNode : selectedNode;
+  if (activeNode >= 0) {
+    drawDescriptionPanel(steps[activeNode]);
   }
 }
 
 function drawDescriptionPanel(step) {
-  const panelWidth = min(canvasWidth - 40, 450);
-  const panelHeight = 80;
-  const panelX = (canvasWidth - panelWidth) / 2;
-  const panelY = drawHeight - panelHeight - 15;
+  const panelWidth = 180;
+  const panelHeight = step.questions ? 120 : 100;
+  const panelX = canvasWidth - panelWidth - 15;
+  // Position panel vertically based on the node's position
+  const nodeY = step.y * drawHeight + 30;
+  const panelY = constrain(nodeY - panelHeight / 2, 50, drawHeight - panelHeight - 10);
 
   // Semi-transparent background
   fill(255, 250);
@@ -447,28 +448,31 @@ function drawDescriptionPanel(step) {
   // Title
   fill(step.color);
   noStroke();
-  textSize(13);
+  textSize(12);
   textAlign(LEFT, TOP);
   textStyle(BOLD);
-  text(step.label.replace(/\n/g, ' '), panelX + 12, panelY + 10);
+  text(step.label.replace(/\n/g, ' '), panelX + 10, panelY + 10);
   textStyle(NORMAL);
 
   // Description or questions
   fill(colors.text);
-  textSize(11);
+  textSize(10);
   textAlign(LEFT, TOP);
 
   if (step.questions) {
-    const questionY = panelY + 28;
+    const questionY = panelY + 32;
     for (let i = 0; i < step.questions.length; i++) {
-      text('- ' + step.questions[i], panelX + 12, questionY + i * 14);
+      text('• ' + step.questions[i], panelX + 10, questionY + i * 26, panelWidth - 20, 26);
     }
   } else {
-    text(step.description, panelX + 12, panelY + 28, panelWidth - 24, panelHeight - 40);
+    text(step.description, panelX + 10, panelY + 32, panelWidth - 20, panelHeight - 44);
   }
 }
 
 function getNodeAt(mx, my) {
+  // Account for the translate(0, 30) offset in draw()
+  const adjustedMy = my - 30;
+
   for (let i = 0; i < steps.length; i++) {
     const step = steps[i];
     const x = step.x * canvasWidth;
@@ -477,12 +481,12 @@ function getNodeAt(mx, my) {
     if (step.type === 'start' || step.type === 'end') {
       // Ellipse hit test
       const dx = (mx - x) / (nodeWidth / 2);
-      const dy = (my - y) / (nodeHeight / 2);
+      const dy = (adjustedMy - y) / (nodeHeight / 2);
       if (dx * dx + dy * dy <= 1) return i;
     } else {
       // Rectangle hit test
       if (mx >= x - nodeWidth / 2 && mx <= x + nodeWidth / 2 &&
-          my >= y - nodeHeight / 2 && my <= y + nodeHeight / 2) {
+          adjustedMy >= y - nodeHeight / 2 && adjustedMy <= y + nodeHeight / 2) {
         return i;
       }
     }

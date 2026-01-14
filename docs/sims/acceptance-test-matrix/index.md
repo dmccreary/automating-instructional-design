@@ -10,7 +10,7 @@ social:
 
 # Acceptance Test Matrix
 
-<iframe src="main.html" height="700px" width="100%" scrolling="no"></iframe>
+<iframe src="main.html" height="960px" width="100%" scrolling="no"></iframe>
 
 [Run the Acceptance Test Matrix Fullscreen](./main.html){ .md-button .md-button--primary }
 
@@ -54,6 +54,8 @@ Ensures the MicroSim effectively supports learning:
 Confirms implementation quality and standards:
 
 - **Runs in p5.js editor**: Compatible with standard development environment
+- **IFrame safe**: Runs correctly when embedded in a fixed-height iframe and sample iframe provided
+
 - **Responsive design works**: Adapts to all screen sizes
 - **Accessibility included**: ARIA labels and keyboard support
 - **Loads in <3 seconds**: Fast initial render
