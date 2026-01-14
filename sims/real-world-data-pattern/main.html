@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real-World Data Pattern MicroSim</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-annotation@2.0.0/dist/chartjs-plugin-annotation.min.js"></script>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #f5f5f5;
+            padding: 10px;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        .main-area {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .chart-area {
+            width: 700px;
+            height: 400px;
+            padding: 15px;
+            position: relative;
+        }
+        .control-panel {
+            width: 300px;
+            height: 400px;
+            padding: 15px;
+            background-color: #f8f9fa;
+            border-left: 1px solid #dee2e6;
+            overflow-y: auto;
+        }
+        .interpretation-area {
+            width: 100%;
+            min-height: 200px;
+            padding: 15px;
+            background-color: #e7f3ff;
+            border-top: 2px solid #0066cc;
+        }
+        h2 {
+            font-size: 16px;
+            color: #333;
+            margin-bottom: 10px;
+            border-bottom: 2px solid #0066cc;
+            padding-bottom: 5px;
+        }
+        h3 {
+            font-size: 14px;
+            color: #555;
+            margin: 15px 0 8px 0;
+        }
+        .slider-group {
+            margin-bottom: 12px;
+        }
+        .slider-group label {
+            display: block;
+            font-size: 12px;
+            color: #666;
+            margin-bottom: 4px;
+        }
+        .slider-group input[type="range"] {
+            width: 100%;
+            cursor: pointer;
+        }
+        .slider-value {
+            font-size: 11px;
+            color: #0066cc;
+            text-align: right;
+        }
+        .toggle-group {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+            font-size: 13px;
+        }
+        .toggle-group input {
+            margin-right: 8px;
+            cursor: pointer;
+        }
+        .toggle-group label {
+            cursor: pointer;
+        }
+        select {
+            width: 100%;
+            padding: 8px;
+            font-size: 13px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            background-color: white;
+            cursor: pointer;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+            font-size: 13px;
+            font-weight: bold;
+            color: white;
+            background-color: #0066cc;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+        button:hover {
+            background-color: #0052a3;
+        }
+        button.secondary {
+            background-color: #6c757d;
+        }
+        button.secondary:hover {
+            background-color: #545b62;
+        }
+        .stats-box {
+            background-color: white;
+            border: 1px solid #dee2e6;
+            border-radius: 4px;
+            padding: 10px;
+            margin-top: 10px;
+            font-size: 12px;
+        }
+        .stats-box .stat-row {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 4px;
+        }
+        .stats-box .stat-label {
+            color: #666;
+        }
+        .stats-box .stat-value {
+            font-weight: bold;
+            color: #333;
+        }
+        .prompts-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+        }
+        .prompt-card {
+            background-color: white;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            padding: 12px;
+            font-size: 13px;
+        }
+        .prompt-card .prompt-question {
+            color: #0066cc;
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+        .prompt-card .prompt-input {
+            width: 100%;
+            min-height: 50px;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 12px;
+            resize: vertical;
+        }
+        .data-source {
+            margin-top: 15px;
+            padding: 10px;
+            background-color: #fff3cd;
+            border: 1px solid #ffc107;
+            border-radius: 4px;
+            font-size: 11px;
+        }
+        .data-source a {
+            color: #0066cc;
+            text-decoration: none;
+        }
+        .data-source a:hover {
+            text-decoration: underline;
+        }
+        #chartCanvas {
+            max-width: 100%;
+            max-height: 100%;
+        }
+        @media (max-width: 1000px) {
+            .chart-area, .control-panel {
+                width: 100%;
+                height: auto;
+            }
+            .control-panel {
+                border-left: none;
+                border-top: 1px solid #dee2e6;
+            }
+            .prompts-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="main-area">
+            <div class="chart-area">
+                <canvas id="chartCanvas"></canvas>
+            </div>
+            <div class="control-panel">
+                <h2>Model Controls</h2>
+
+                <h3>Data Source</h3>
+                <select id="datasetSelect">
+                    <option value="global_temp">Global Temperature Anomaly</option>
+                    <option value="co2_levels">Atmospheric CO2 Levels</option>
+                    <option value="sea_level">Sea Level Rise</option>
+                </select>
+
+                <h3>Model Parameters</h3>
+                <div class="slider-group">
+                    <label>CO2 Sensitivity Factor</label>
+                    <input type="range" id="sensitivitySlider" min="0.5" max="3" step="0.1" value="1.5">
+                    <div class="slider-value" id="sensitivityValue">1.5</div>
+                </div>
+
+                <div class="slider-group">
+                    <label>Base Temperature (C)</label>
+                    <input type="range" id="baselineSlider" min="-0.5" max="0.5" step="0.05" value="0">
+                    <div class="slider-value" id="baselineValue">0.00</div>
+                </div>
+
+                <div class="slider-group">
+                    <label>Time Lag (years)</label>
+                    <input type="range" id="lagSlider" min="0" max="20" step="1" value="5">
+                    <div class="slider-value" id="lagValue">5</div>
+                </div>
+
+                <div class="slider-group">
+                    <label>Add Noise</label>
+                    <input type="range" id="noiseSlider" min="0" max="0.3" step="0.01" value="0">
+                    <div class="slider-value" id="noiseValue">0.00</div>
+                </div>
+
+                <h3>Display Options</h3>
+                <div class="toggle-group">
+                    <input type="checkbox" id="showRealData" checked>
+                    <label for="showRealData">Show Real Data</label>
+                </div>
+                <div class="toggle-group">
+                    <input type="checkbox" id="showModel" checked>
+                    <label for="showModel">Show Model Prediction</label>
+                </div>
+                <div class="toggle-group">
+                    <input type="checkbox" id="showResiduals">
+                    <label for="showResiduals">Show Residuals</label>
+                </div>
+                <div class="toggle-group">
+                    <input type="checkbox" id="showTrendline">
+                    <label for="showTrendline">Show Trend Line</label>
+                </div>
+
+                <div class="slider-group">
+                    <label>Time Range</label>
+                    <input type="range" id="yearStartSlider" min="1880" max="2000" step="10" value="1880">
+                    <div class="slider-value" id="yearRangeValue">1880 - 2023</div>
+                </div>
+
+                <button id="exportBtn">Export Data (CSV)</button>
+                <button id="resetBtn" class="secondary">Reset Parameters</button>
+
+                <div class="stats-box">
+                    <h3 style="margin-top: 0;">Model Statistics</h3>
+                    <div class="stat-row">
+                        <span class="stat-label">R-squared:</span>
+                        <span class="stat-value" id="rSquared">0.85</span>
+                    </div>
+                    <div class="stat-row">
+                        <span class="stat-label">RMSE:</span>
+                        <span class="stat-value" id="rmse">0.12 C</span>
+                    </div>
+                    <div class="stat-row">
+                        <span class="stat-label">Data Points:</span>
+                        <span class="stat-value" id="dataPoints">144</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="interpretation-area">
+            <h2>Guided Interpretation Prompts</h2>
+            <div class="prompts-grid">
+                <div class="prompt-card">
+                    <div class="prompt-question">What pattern do you observe in the real data?</div>
+                    <textarea class="prompt-input" placeholder="Describe the overall trend and any notable features you see in the actual temperature data..."></textarea>
+                </div>
+                <div class="prompt-card">
+                    <div class="prompt-question">How well does your model match reality?</div>
+                    <textarea class="prompt-input" placeholder="Adjust the parameters and describe how closely your model predictions align with the real observations..."></textarea>
+                </div>
+                <div class="prompt-card">
+                    <div class="prompt-question">What factors might explain the differences?</div>
+                    <textarea class="prompt-input" placeholder="Consider what variables our simple model might be missing that could account for residual errors..."></textarea>
+                </div>
+                <div class="prompt-card">
+                    <div class="prompt-question">What does this suggest about future trends?</div>
+                    <textarea class="prompt-input" placeholder="Based on your model and the observed patterns, what predictions might you make about the next 20-50 years..."></textarea>
+                </div>
+            </div>
+
+            <div class="data-source">
+                <strong>Data Sources:</strong>
+                Temperature data from <a href="https://data.giss.nasa.gov/gistemp/" target="_blank">NASA GISS</a>.
+                CO2 data from <a href="https://gml.noaa.gov/ccgg/trends/" target="_blank">NOAA GML</a>.
+                Sea level data from <a href="https://climate.nasa.gov/vital-signs/sea-level/" target="_blank">NASA Climate</a>.
+                Data collection methods: Land and ocean temperature measurements from weather stations and satellites;
+                CO2 measured at Mauna Loa Observatory; Sea level from tide gauges and satellite altimetry.
+            </div>
+        </div>
+    </div>
+
+    <br/>
+    <a href=".">Back to Documentation</a>
+
+    <script src="real-world-data-pattern.js"></script>
+</body>
+</html>

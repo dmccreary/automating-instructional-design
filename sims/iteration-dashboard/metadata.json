@@ -1,0 +1,49 @@
+{
+    "name": "Iteration Dashboard",
+    "description": "Multi-panel dashboard for tracking iteration progress with quality gates, version history, quality metrics, issues tracker, and decision log",
+    "type": "infographic",
+    "bloomLevel": "Evaluate",
+    "bloomCode": "L5",
+    "learningObjective": "Provide a multi-panel dashboard for tracking iteration progress with quality gates",
+    "implementation": "p5.js",
+    "features": [
+        "Version history timeline with quality scores",
+        "Quality metrics bar chart with color coding",
+        "Issues tracker with severity filtering",
+        "Decision log with rationale",
+        "Interactive quality gates",
+        "Add/Resolve issue simulation",
+        "Hover tooltips for metrics"
+    ],
+    "concepts": [
+        "iteration",
+        "quality gates",
+        "version control",
+        "issue tracking",
+        "quality metrics",
+        "technical quality",
+        "pedagogical alignment",
+        "user experience",
+        "accessibility",
+        "deployment readiness"
+    ],
+    "interactivity": [
+        "Click versions to view history",
+        "Hover over metrics for details",
+        "Filter issues by severity",
+        "Add and resolve issues",
+        "Reset to initial state"
+    ],
+    "qualityGates": {
+        "testingReady": "All critical issues resolved",
+        "deployReady": "Quality score > 85"
+    },
+    "colorScheme": {
+        "headers": "#1e3c78",
+        "passing": "#2e7d32",
+        "failing": "#c62828",
+        "warning": "#f1c40f"
+    },
+    "created": "2026-01-14",
+    "version": "1.0"
+}

@@ -1,0 +1,77 @@
+{
+  "title": "Accessible Control Layout",
+  "description": "An interactive diagram showing recommended MicroSim structure with proper accessibility for mouse, keyboard, and screen reader users.",
+  "creator": "Claude AI",
+  "date": "2026-01-14",
+  "format": "text/html",
+  "type": "InteractiveResource",
+  "subject": [
+    "Accessibility",
+    "User Interface Design",
+    "Inclusive Design",
+    "Screen Reader Support",
+    "Keyboard Navigation"
+  ],
+  "audience": "Educators, instructional designers, and developers creating accessible educational simulations",
+  "rights": "MIT License",
+  "language": "en",
+  "source": "Based on WCAG 2.1 guidelines and p5.js accessibility best practices",
+  "relation": "Part of Automating Instructional Design intelligent textbook",
+  "coverage": "Accessibility principles for educational MicroSim design",
+  "bloomLevel": "Apply",
+  "learningObjective": "Students will apply accessible layout principles to design MicroSim interfaces that work for mouse, keyboard, and screen reader users.",
+  "interactivity": {
+    "features": [
+      "Clickable sections showing detailed requirements",
+      "Tab navigation flow visualization toggle",
+      "Animated visual elements",
+      "Detail panel overlay",
+      "Reset view button"
+    ],
+    "inputMethod": "Mouse click, keyboard Tab navigation"
+  },
+  "technicalRequirements": {
+    "library": "p5.js",
+    "version": "1.11.10",
+    "browser": "Modern browser with JavaScript enabled"
+  },
+  "visualElements": {
+    "sections": [
+      {
+        "id": "canvas",
+        "label": "Canvas Area",
+        "purpose": "Visual simulation with screen reader support"
+      },
+      {
+        "id": "status",
+        "label": "Status Area",
+        "purpose": "aria-live region for dynamic announcements"
+      },
+      {
+        "id": "controls",
+        "label": "Control Panel",
+        "purpose": "Keyboard-accessible sliders and buttons"
+      }
+    ],
+    "colorScheme": {
+      "canvasArea": "#E5E7EB",
+      "statusArea": "#DBEAFE",
+      "controlPanel": "#D1FAE5",
+      "focusIndicator": "#3B82F6",
+      "annotations": "#10B981",
+      "background": "#FAFAFA"
+    },
+    "dimensions": {
+      "drawHeight": 450,
+      "controlHeight": 50
+    }
+  },
+  "accessibilityPrinciples": [
+    "Controls placed below canvas, not overlapping",
+    "All controls reachable via keyboard Tab",
+    "describe() provides canvas content to screen readers",
+    "aria-live for dynamic status updates",
+    "Visible focus indicators on all interactive elements",
+    "Logical tab order: left-to-right, top-to-bottom"
+  ]
+}

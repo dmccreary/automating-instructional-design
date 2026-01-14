@@ -1,0 +1,49 @@
+{
+  "title": "Cognitive Development Progression Chart",
+  "description": "An interactive area chart visualization showing how four key cognitive capabilities (concrete thinking, abstract reasoning, metacognition, and working memory) develop across the human lifespan from birth to age 25, with milestone markers and Zone of Proximal Development indicators.",
+  "creator": "Claude AI",
+  "date": "2026-01-13",
+  "format": "text/html",
+  "type": "InteractiveResource",
+  "subject": [
+    "Cognitive Development",
+    "Developmental Psychology",
+    "Instructional Design",
+    "Educational Psychology",
+    "Learning Sciences"
+  ],
+  "audience": "Educators, instructional designers, and students learning about cognitive development",
+  "rights": "MIT License",
+  "language": "en",
+  "source": "Based on Piaget's cognitive development theory and Vygotsky's Zone of Proximal Development",
+  "relation": "Part of Automating Instructional Design intelligent textbook",
+  "coverage": "Human cognitive development from birth through age 25",
+  "bloomLevel": "Understand",
+  "learningObjective": "Students will be able to describe how cognitive capabilities progress through developmental stages",
+  "interactivity": {
+    "features": [
+      "Hover tooltips for capability details",
+      "Toggle Zone of Proximal Development bands",
+      "Developmental milestone markers"
+    ],
+    "inputMethod": "Mouse hover and click"
+  },
+  "technicalRequirements": {
+    "library": "p5.js",
+    "version": "1.11.10",
+    "browser": "Modern browser with JavaScript enabled"
+  },
+  "visualElements": {
+    "chartType": "Area chart with overlapping regions",
+    "colorScheme": {
+      "concreteTinking": "#87CEEB",
+      "abstractReasoning": "#9370DB",
+      "metacognition": "#FFA500",
+      "workingMemory": "#90EE90"
+    },
+    "dimensions": {
+      "drawHeight": 400,
+      "controlHeight": 50
+    }
+  }
+}

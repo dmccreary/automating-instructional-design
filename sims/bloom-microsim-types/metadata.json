@@ -1,0 +1,66 @@
+{
+  "title": "Bloom's Taxonomy MicroSim Types",
+  "description": "An interactive pyramid infographic showing appropriate MicroSim types for each level of Bloom's Taxonomy, from Remember (flashcard games, matching exercises) to Create (model editors, hypothesis builders), with design considerations and case studies for each cognitive level.",
+  "creator": "Dan McCreary",
+  "subject": ["Education", "Instructional Design", "Learning Theory", "MicroSim Design"],
+  "date": "2025-01-14",
+  "type": "Interactive Infographic",
+  "format": "text/html",
+  "language": "en",
+  "rights": "CC BY 4.0",
+  "gradeLevel": "High School, Undergraduate, Graduate",
+  "subjectArea": "Education, Instructional Design",
+  "topic": "Bloom's Taxonomy, MicroSim Types, Cognitive Levels",
+  "learningObjectives": [
+    "Identify the six levels of Bloom's Taxonomy and their cognitive processes",
+    "Match MicroSim types to appropriate cognitive levels",
+    "Analyze the relationship between cognitive complexity and simulation design",
+    "Evaluate which MicroSim type best fits a given learning objective"
+  ],
+  "bloomsTaxonomyLevels": ["Analyze"],
+  "bloomsLevel": "L4",
+  "duration": "5-15 minutes",
+  "prerequisites": ["Basic understanding of Bloom's Taxonomy"],
+  "framework": "p5.js",
+  "canvasDimensions": "responsive x 550",
+  "responsive": "Width-responsive",
+  "dependencies": ["p5.js 1.11.10"],
+  "accessibility": {
+    "screenReaderSupport": true,
+    "keyboardNavigation": false,
+    "highContrast": true
+  },
+  "controls": [
+    {
+      "type": "hover",
+      "description": "Hover over pyramid levels to see MicroSim types and design considerations"
+    },
+    {
+      "type": "click",
+      "description": "Click on levels to view case studies of successful MicroSims at each level"
+    }
+  ],
+  "modelType": "Informational Visualization",
+  "visualElements": {
+    "layout": "Vertical pyramid with six horizontal sections",
+    "colorScheme": {
+      "L1-Remember": "#EF4444 (Red)",
+      "L2-Understand": "#F97316 (Orange)",
+      "L3-Apply": "#F59E0B (Yellow)",
+      "L4-Analyze": "#10B981 (Green)",
+      "L5-Evaluate": "#3B82F6 (Blue)",
+      "L6-Create": "#8B5CF6 (Purple)"
+    },
+    "annotations": ["Lower-Order Thinking Skills (LOTS) arrow", "Higher-Order Thinking Skills (HOTS) arrow"]
+  },
+  "microsimTypes": {
+    "Remember": ["Flashcard games", "Matching exercises", "Term sorters"],
+    "Understand": ["Animated explanations", "Cause-effect demos", "Concept maps"],
+    "Apply": ["Parameter sliders", "Scenario testers", "Problem solvers"],
+    "Analyze": ["Network graphs", "Data explorers", "Pattern identification tools"],
+    "Evaluate": ["Comparison simulators", "Trade-off analyzers", "Judgment exercises"],
+    "Create": ["Model editors", "Free-form design tools", "Hypothesis builders"]
+  },
+  "assumptions": ["Six-level revised Bloom's Taxonomy (2001)"],
+  "limitations": ["Shows representative MicroSim types, not exhaustive list", "Design considerations are guidelines, not strict rules"]
+}

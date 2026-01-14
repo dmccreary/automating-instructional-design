@@ -1,0 +1,222 @@
+/* Objective Decomposition Tree Stylesheet */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: aliceblue;
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+
+#network {
+    width: 100%;
+    height: 100%;
+    background-color: aliceblue;
+}
+
+.title {
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 20px;
+    font-weight: bold;
+    color: black;
+    background-color: aliceblue;
+    z-index: 10;
+}
+
+.legend {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    padding: 8px 10px;
+    background-color: rgba(255, 255, 255, 0.95);
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    z-index: 10;
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    margin: 4px 0;
+    font-size: 11px;
+}
+
+.legend-color {
+    width: 16px;
+    height: 16px;
+    margin-right: 6px;
+    border: 2px solid #333;
+}
+
+.color-compound {
+    background-color: #EF5350;
+    border-radius: 3px;
+}
+
+.color-cluster {
+    background-color: #FF9800;
+    border-radius: 3px;
+}
+
+.color-atomic {
+    background-color: #66BB6A;
+    border-radius: 50%;
+}
+
+.legend-line {
+    width: 20px;
+    height: 2px;
+    background-color: #666;
+    margin-right: 6px;
+}
+
+.legend-line.dashed {
+    background: repeating-linear-gradient(
+        90deg,
+        #999,
+        #999 3px,
+        transparent 3px,
+        transparent 6px
+    );
+}
+
+.right-panel {
+    position: absolute;
+    top: 50px;
+    right: 10px;
+    width: 260px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    z-index: 10;
+}
+
+.status-info {
+    background-color: rgba(255, 255, 255, 0.95);
+    border-radius: 8px;
+    padding: 12px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.status-title {
+    font-weight: bold;
+    margin-bottom: 6px;
+    font-size: 13px;
+}
+
+.status-text {
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+.controls {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.95);
+    padding: 10px 12px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.step-counter {
+    font-size: 12px;
+    color: #666;
+    margin-right: 8px;
+}
+
+.btn {
+    padding: 8px 16px;
+    font-size: 13px;
+    font-weight: bold;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.btn-primary {
+    background-color: #2196f3;
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: #1976d2;
+}
+
+.btn-primary:disabled {
+    background-color: #90caf9;
+    cursor: not-allowed;
+}
+
+.btn-secondary {
+    background-color: #757575;
+    color: white;
+}
+
+.btn-secondary:hover {
+    background-color: #616161;
+}
+
+.node-info {
+    background-color: rgba(255, 255, 255, 0.95);
+    border-radius: 8px;
+    padding: 12px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    border-left: 4px solid #2196f3;
+}
+
+.info-title {
+    font-weight: bold;
+    font-size: 14px;
+    margin-bottom: 4px;
+    color: #1565C0;
+}
+
+.info-bloom {
+    font-size: 11px;
+    color: #666;
+    margin-bottom: 8px;
+    font-style: italic;
+}
+
+.info-desc {
+    font-size: 12px;
+    line-height: 1.4;
+    color: #333;
+}
+
+@media (max-width: 600px) {
+    .title {
+        font-size: 16px;
+    }
+
+    .legend {
+        padding: 6px 8px;
+    }
+
+    .legend-item {
+        font-size: 10px;
+    }
+
+    .right-panel {
+        width: 200px;
+    }
+
+    .btn {
+        padding: 6px 12px;
+        font-size: 12px;
+    }
+}

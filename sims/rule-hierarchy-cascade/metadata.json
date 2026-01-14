@@ -1,0 +1,45 @@
+{
+  "title": "Rule Hierarchy Cascade",
+  "description": "An interactive visualization showing how rules cascade through 5 organizational hierarchy levels (Enterprise, Business Unit, Department, Project, Personal) and how conflicts are resolved using specificity principles.",
+  "creator": "Dan McCreary",
+  "subject": ["Instructional Design", "Configuration Management", "Systems Architecture"],
+  "date": "2025-01-14",
+  "type": "Interactive Simulation",
+  "format": "text/html",
+  "language": "en",
+  "rights": "CC BY 4.0",
+  "gradeLevel": "Undergraduate, Graduate, Professional",
+  "subjectArea": "Instructional Design",
+  "topic": "Rule Hierarchy and Cascade",
+  "learningObjectives": [
+    "Explain how rules cascade through organizational hierarchies",
+    "Identify when a rule can and cannot be overridden",
+    "Predict how conflicts between levels are resolved",
+    "Apply the 'most specific wins' principle to configuration conflicts"
+  ],
+  "bloomsTaxonomyLevels": ["Analyze", "Understand"],
+  "duration": "5-10 minutes",
+  "prerequisites": ["Basic understanding of hierarchical systems"],
+  "framework": "p5.js",
+  "canvasDimensions": "responsive x 550",
+  "responsive": "Width-responsive",
+  "dependencies": ["p5.js 1.11.10"],
+  "accessibility": {
+    "screenReaderSupport": true,
+    "keyboardNavigation": false,
+    "highContrast": true
+  },
+  "controls": [
+    {
+      "type": "hover",
+      "description": "Hover over hierarchy levels and rule chips to see details"
+    },
+    {
+      "type": "click",
+      "description": "Click Animate Cascade button to visualize rule flow"
+    }
+  ],
+  "modelType": "Informational Visualization",
+  "assumptions": ["5-level organizational hierarchy", "Most specific level wins conflict resolution"],
+  "limitations": ["Does not show complex multi-path inheritance", "Simplified conflict resolution model"]
+}

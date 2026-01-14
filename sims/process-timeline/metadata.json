@@ -1,0 +1,57 @@
+{
+  "title": "Process Timeline",
+  "description": "An interactive process timeline showing the steps in an instructional design workflow. Click steps to highlight and view details, navigate with Previous/Next buttons.",
+  "creator": "Dan McCreary",
+  "subject": ["Education", "Instructional Design", "Process Visualization", "Workflow"],
+  "date": "2026-01-13",
+  "type": "Interactive Simulation",
+  "format": "text/html",
+  "language": "en",
+  "rights": "CC BY 4.0",
+  "gradeLevel": "High School, Undergraduate, Graduate",
+  "subjectArea": "Education, Instructional Design",
+  "topic": "Instructional Design Process",
+  "learningObjectives": [
+    "Identify the sequential steps in the instructional design process",
+    "Explain the purpose of each phase in the design workflow",
+    "Understand the iterative nature of instructional design",
+    "Apply the process framework to real-world learning scenarios"
+  ],
+  "bloomsTaxonomyLevels": ["Remember", "Understand", "Apply"],
+  "duration": "5-10 minutes",
+  "prerequisites": ["Basic understanding of education or training concepts"],
+  "framework": "p5.js",
+  "canvasDimensions": "responsive x 350",
+  "responsive": "Width-responsive",
+  "dependencies": ["p5.js 1.11.10"],
+  "accessibility": {
+    "screenReaderSupport": true,
+    "keyboardNavigation": true,
+    "highContrast": true
+  },
+  "controls": [
+    {
+      "type": "click",
+      "description": "Click on step nodes to select and view details"
+    },
+    {
+      "type": "button",
+      "description": "Previous/Next buttons to navigate through steps"
+    },
+    {
+      "type": "keyboard",
+      "description": "Left/Right arrow keys for navigation"
+    }
+  ],
+  "modelType": "Process Timeline Visualization",
+  "assumptions": [
+    "Instructional design follows a systematic process",
+    "Steps are generally completed in sequence",
+    "Iteration and revision are part of the process"
+  ],
+  "limitations": [
+    "Simplified representation of the ADDIE model",
+    "Does not show parallel activities or complex dependencies",
+    "Fixed set of steps (not customizable in this version)"
+  ]
+}

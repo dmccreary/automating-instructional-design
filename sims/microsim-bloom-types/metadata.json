@@ -1,0 +1,49 @@
+{
+  "title": "MicroSim Types by Bloom's Taxonomy",
+  "description": "Interactive infographic showing different types of educational MicroSims mapped to Bloom's Taxonomy cognitive levels, from Remember (basic recall) to Create (original synthesis).",
+  "creator": "Dan McCreary",
+  "date": "2026-01-13",
+  "subject": [
+    "Bloom's Taxonomy",
+    "Educational Technology",
+    "Instructional Design",
+    "MicroSims",
+    "Learning Objectives",
+    "Cognitive Levels"
+  ],
+  "type": "InteractiveResource",
+  "format": "text/html",
+  "language": "en",
+  "rights": "Creative Commons Attribution 4.0 International (CC BY 4.0)",
+  "source": "Automating Instructional Design Textbook",
+  "relation": "https://dmccreary.github.io/automating-instructional-design/",
+  "coverage": "Educational visualization for instructional designers and educators",
+  "bloomLevel": "Understand",
+  "learningObjective": "Students will be able to identify appropriate MicroSim types for different cognitive learning objectives based on Bloom's Taxonomy levels.",
+  "prerequisites": [
+    "Basic understanding of Bloom's Taxonomy",
+    "Familiarity with educational simulation concepts"
+  ],
+  "interactivity": "hover",
+  "implementation": "p5.js",
+  "audience": [
+    "Instructional Designers",
+    "Educators",
+    "Educational Technology Specialists",
+    "Curriculum Developers"
+  ],
+  "keywords": [
+    "bloom taxonomy",
+    "microsim",
+    "simulation",
+    "interactive learning",
+    "cognitive levels",
+    "educational design",
+    "remember",
+    "understand",
+    "apply",
+    "analyze",
+    "evaluate",
+    "create"
+  ]
+}

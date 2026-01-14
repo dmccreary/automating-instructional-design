@@ -1,0 +1,73 @@
+{
+  "title": "Cognitive Load Simulator",
+  "description": "An interactive MicroSim for experimenting with instructional design choices and visualizing their impact on intrinsic, extraneous, and germane cognitive load based on Cognitive Load Theory.",
+  "creator": "Claude AI",
+  "date": "2026-01-13",
+  "format": "text/html",
+  "type": "InteractiveResource",
+  "subject": [
+    "Cognitive Load Theory",
+    "Instructional Design",
+    "Educational Psychology",
+    "Learning Sciences",
+    "Working Memory"
+  ],
+  "audience": "Educators, instructional designers, and students learning about cognitive load theory and its applications",
+  "rights": "MIT License",
+  "language": "en",
+  "source": "Based on Cognitive Load Theory (Sweller, 1988) and multimedia learning principles (Mayer, 2009)",
+  "relation": "Part of Automating Instructional Design intelligent textbook",
+  "coverage": "Instructional design principles for managing cognitive load",
+  "bloomLevel": "Analyze",
+  "learningObjective": "Allow learners to experiment with different instructional design choices and see their impact on the three types of cognitive load, developing intuition for design tradeoffs",
+  "interactivity": {
+    "features": [
+      "Scenario selection dropdown",
+      "Visual complexity slider",
+      "Text density slider",
+      "Element separation slider",
+      "Decorative elements toggle",
+      "Worked example toggle",
+      "Prior knowledge slider",
+      "Real-time load visualization",
+      "Overload warning indicator"
+    ],
+    "inputMethod": "Mouse click, slider drag, dropdown selection"
+  },
+  "technicalRequirements": {
+    "library": "p5.js",
+    "version": "1.11.10",
+    "browser": "Modern browser with JavaScript enabled"
+  },
+  "visualElements": {
+    "previewArea": "Dynamic instructional scenario visualization",
+    "loadBars": "Horizontal bar meters for three load types plus total",
+    "colorScheme": {
+      "intrinsicLoad": "#3498DB",
+      "extraneousLoad": "#E74C3C",
+      "germaneLoad": "#2ECC71",
+      "background": "#FAFAFA"
+    },
+    "dimensions": {
+      "drawHeight": 500,
+      "controlHeight": 50
+    }
+  },
+  "scenarios": [
+    {
+      "name": "Supply/Demand Curve",
+      "domain": "Economics",
+      "baseIntrinsic": 6
+    },
+    {
+      "name": "Cell Division",
+      "domain": "Biology",
+      "baseIntrinsic": 7
+    },
+    {
+      "name": "Electrical Circuit",
+      "domain": "Physics",
+      "baseIntrinsic": 5
+    }
+  ]
+}

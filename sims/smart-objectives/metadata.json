@@ -1,0 +1,37 @@
+{
+  "title": "SMART Learning Objectives Framework",
+  "description": "An interactive visualization of the SMART framework showing Specific, Measurable, Achievable, Relevant, and Time-bound components with examples of good and poor objectives.",
+  "creator": "Dan McCreary",
+  "subject": ["Education", "Instructional Design", "Learning Objectives"],
+  "date": "2025-01-13",
+  "type": "Interactive Simulation",
+  "format": "text/html",
+  "language": "en",
+  "rights": "CC BY 4.0",
+  "gradeLevel": "High School, Undergraduate, Graduate",
+  "subjectArea": "Education",
+  "topic": "SMART Learning Objectives",
+  "learningObjectives": [
+    "Explain each component of the SMART framework",
+    "Evaluate learning objectives against SMART criteria",
+    "Transform vague objectives into SMART objectives"
+  ],
+  "bloomsTaxonomyLevels": ["Understand", "Apply", "Evaluate"],
+  "duration": "5-10 minutes",
+  "prerequisites": ["Basic understanding of learning objectives"],
+  "framework": "p5.js",
+  "canvasDimensions": "responsive x 502",
+  "responsive": "Width-responsive",
+  "dependencies": ["p5.js 1.11.10"],
+  "controls": [
+    {
+      "type": "hover",
+      "description": "Hover over panels to see descriptions"
+    },
+    {
+      "type": "click",
+      "description": "Click on panels to view more examples"
+    }
+  ],
+  "modelType": "Informational Visualization"
+}

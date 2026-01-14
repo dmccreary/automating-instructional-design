@@ -1,0 +1,95 @@
+{
+  "title": "Edge Case Discovery Simulator",
+  "description": "An interactive physics simulation where students experiment with parameter boundaries to identify edge cases including negative gravity, oversized objects, energy conservation violations, and tunneling effects.",
+  "creator": "Dan McCreary",
+  "subject": ["Software Testing", "Edge Cases", "Quality Assurance", "Physics Simulation"],
+  "date": "2025-01-13",
+  "type": "Interactive Simulation",
+  "format": "text/html",
+  "language": "en",
+  "rights": "CC BY 4.0",
+  "gradeLevel": "High School, Undergraduate",
+  "subjectArea": "Computer Science, Software Engineering",
+  "topic": "Edge Case Testing",
+  "learningObjectives": [
+    "Define what constitutes an edge case in software systems",
+    "Identify edge cases by experimenting with parameter boundaries",
+    "Explain why edge case testing is important for software quality",
+    "Predict potential edge cases given a system specification"
+  ],
+  "bloomsTaxonomyLevels": ["Analyze", "Apply", "Evaluate"],
+  "duration": "15-20 minutes",
+  "prerequisites": ["Basic understanding of physics concepts", "Familiarity with software testing terminology"],
+  "framework": "p5.js",
+  "canvasDimensions": "responsive x 502",
+  "responsive": "Width-responsive",
+  "dependencies": ["p5.js 1.11.10"],
+  "accessibility": {
+    "screenReaderSupport": true,
+    "keyboardNavigation": false,
+    "highContrast": true
+  },
+  "controls": [
+    {
+      "type": "slider",
+      "name": "Gravity",
+      "range": "-10 to 10",
+      "default": 9.8,
+      "description": "Controls gravitational acceleration; negative values cause upward 'falling'"
+    },
+    {
+      "type": "slider",
+      "name": "Ball Radius",
+      "range": "1 to 200",
+      "default": 20,
+      "description": "Sets the ball size; large values create oversized ball edge case"
+    },
+    {
+      "type": "slider",
+      "name": "Bounciness",
+      "range": "0 to 2",
+      "default": 0.8,
+      "description": "Coefficient of restitution; values above 1 cause energy gain"
+    },
+    {
+      "type": "slider",
+      "name": "Initial Speed",
+      "range": "0 to 1000",
+      "default": 100,
+      "description": "Starting velocity magnitude; extreme values may cause tunneling"
+    },
+    {
+      "type": "button",
+      "name": "Log State",
+      "description": "Saves current parameters and ball state to the edge case log"
+    },
+    {
+      "type": "button",
+      "name": "Reset",
+      "description": "Returns all parameters to default values"
+    },
+    {
+      "type": "button",
+      "name": "Restart Ball",
+      "description": "Relaunches the ball from center with current speed setting"
+    }
+  ],
+  "edgeCasesDetected": [
+    "Ball escaped container (tunneling)",
+    "Ball larger than container",
+    "Energy not conserved",
+    "Performance degradation",
+    "Collision detection failed"
+  ],
+  "modelType": "Physics Simulation",
+  "assumptions": [
+    "Simplified 2D physics model",
+    "Instantaneous collision response",
+    "No air resistance or friction"
+  ],
+  "limitations": [
+    "Does not simulate realistic multi-body physics",
+    "Performance edge cases depend on hardware",
+    "Tunneling detection is reactive rather than preventive"
+  ]
+}

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 1 Concept Map</title>
+    <script src="https://unpkg.com/vis-network/standalone/umd/vis-network.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div id="network"></div>
+
+        <div class="title">Chapter 1: Foundations Concept Map</div>
+
+        <div class="legend">
+            <div class="legend-item">
+                <div class="legend-color color-core"></div>
+                <span><strong>Core</strong> - Main concepts</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color color-bloom"></div>
+                <span><strong>Bloom's</strong> - Taxonomy</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color color-levels"></div>
+                <span><strong>Levels</strong> - Six cognitive levels</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color color-objective"></div>
+                <span><strong>Objective</strong> - Components</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color color-decomposition"></div>
+                <span><strong>Decomposition</strong></span>
+            </div>
+        </div>
+
+        <div class="right-panel">
+            <div class="controls">
+                <button class="btn btn-primary" id="toggle-labels">Hide Labels</button>
+                <button class="btn btn-secondary" id="reset-btn">Reset</button>
+            </div>
+
+            <div class="status-info">
+                <div class="status-title">Instructions:</div>
+                <div class="status-text">
+                    Click a node to see its definition and highlight connections.
+                    Hover to preview relationships.
+                </div>
+            </div>
+
+            <div class="node-info" id="node-info" style="display: none;">
+                <div id="node-info-content"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="chapter1-concept-map.js"></script>
+</body>
+</html>

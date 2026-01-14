@@ -1,0 +1,45 @@
+{
+  "title": "Prompt Engineering Practices",
+  "description": "An interactive infographic providing a quick reference for crafting effective MicroSim generation prompts, organized into five expandable sections covering context setting, specification depth, technical constraints, examples and patterns, and output format, with good and bad examples for each practice.",
+  "creator": "Dan McCreary",
+  "subject": ["Education", "Prompt Engineering", "AI-Assisted Development", "MicroSim Generation"],
+  "date": "2025-01-14",
+  "type": "Interactive Infographic",
+  "format": "text/html",
+  "language": "en",
+  "rights": "CC BY 4.0",
+  "gradeLevel": "High School, Undergraduate, Graduate, Professional",
+  "subjectArea": "Education Technology",
+  "topic": "Prompt Engineering for MicroSim Generation",
+  "learningObjectives": [
+    "Identify the five key categories of effective MicroSim generation prompts",
+    "Distinguish between good and bad prompt examples for each category",
+    "Apply the checklist when crafting new MicroSim prompts",
+    "Understand the relative impact of different prompt elements on generation success"
+  ],
+  "bloomsTaxonomyLevels": ["Apply"],
+  "duration": "5-10 minutes",
+  "prerequisites": ["Basic understanding of AI prompt engineering", "Familiarity with MicroSim concepts"],
+  "framework": "p5.js",
+  "canvasDimensions": "responsive x 550",
+  "responsive": "Width-responsive",
+  "dependencies": ["p5.js 1.11.10"],
+  "controls": [
+    {
+      "type": "click",
+      "description": "Click section headers to expand/collapse practice categories"
+    },
+    {
+      "type": "hover",
+      "description": "Hover over checklist items to see good and bad examples"
+    }
+  ],
+  "colorScheme": {
+    "sectionHeaders": "Blue gradient for different sections",
+    "goodExamples": "Green (#10B981)",
+    "badExamples": "Red (#EF4444)",
+    "impactHigh": "Amber (#F59E0B)",
+    "impactMedium": "Yellow (#FBBF24)"
+  },
+  "modelType": "Informational Infographic"
+}

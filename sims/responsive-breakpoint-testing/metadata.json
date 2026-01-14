@@ -1,0 +1,102 @@
+{
+  "title": "Responsive Breakpoint Testing",
+  "description": "An interactive visualization for evaluating MicroSim adaptability across device sizes, displaying device mockups with layout comparisons and testing checklists.",
+  "creator": "Claude AI",
+  "date": "2026-01-14",
+  "format": "text/html",
+  "type": "InteractiveResource",
+  "subject": [
+    "Responsive Design",
+    "Breakpoint Testing",
+    "Mobile-First Design",
+    "User Interface Design",
+    "Accessibility",
+    "Cross-Device Compatibility"
+  ],
+  "audience": "Educators, instructional designers, and developers creating responsive educational simulations",
+  "rights": "MIT License",
+  "language": "en",
+  "source": "Based on responsive design best practices from Material Design, Apple HIG, and WCAG guidelines",
+  "relation": "Part of Automating Instructional Design intelligent textbook",
+  "coverage": "Responsive design testing and evaluation for educational MicroSims",
+  "bloomLevel": "Apply",
+  "learningObjective": "Students will apply responsive design testing criteria to evaluate MicroSim adaptability across device sizes",
+  "interactivity": {
+    "features": [
+      "Click on devices to view detailed checklists",
+      "Traffic light indicators showing pass/warning/fail status",
+      "Hover effects on device mockups",
+      "Responsive canvas that adapts to container width"
+    ],
+    "inputMethod": "Mouse click, hover"
+  },
+  "technicalRequirements": {
+    "library": "p5.js",
+    "version": "1.11.10",
+    "browser": "Modern browser with JavaScript enabled"
+  },
+  "visualElements": {
+    "deviceMockups": [
+      {
+        "name": "Desktop",
+        "width": "1920px",
+        "type": "monitor"
+      },
+      {
+        "name": "Laptop",
+        "width": "1366px",
+        "type": "laptop"
+      },
+      {
+        "name": "Tablet",
+        "width": "768px",
+        "type": "tablet"
+      },
+      {
+        "name": "Mobile",
+        "width": "375px",
+        "type": "phone"
+      }
+    ],
+    "colorScheme": {
+      "deviceFrame": "#333333",
+      "canvas": "#E3F2FD",
+      "controlPanel": "#FFF3E0",
+      "annotation": "#1976D2",
+      "pass": "#4CAF50",
+      "warning": "#FF9800",
+      "fail": "#F44336",
+      "background": "#F5F7FA"
+    },
+    "dimensions": {
+      "drawHeight": 400,
+      "controlHeight": 50
+    }
+  },
+  "breakpointChanges": {
+    "desktop": [
+      "Control panel on right side",
+      "Full horizontal layout",
+      "Standard font sizes",
+      "Mouse-optimized targets"
+    ],
+    "laptop": [
+      "Slightly condensed layout",
+      "Side panel may narrow",
+      "Font sizes maintained",
+      "Mouse interactions"
+    ],
+    "tablet": [
+      "Control panel moves to bottom",
+      "Vertical stacking begins",
+      "Touch targets: 44px minimum",
+      "Fonts scale down slightly"
+    ],
+    "mobile": [
+      "Single column layout",
+      "Controls below canvas",
+      "Large touch targets: 48px+",
+      "Increased font weight"
+    ]
+  }
+}

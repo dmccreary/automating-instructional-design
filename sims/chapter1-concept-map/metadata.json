@@ -1,0 +1,43 @@
+{
+  "title": "Chapter 1 Concept Map",
+  "description": "An interactive concept map showing the relationships between all 17 concepts covered in Chapter 1 - Foundations of Learning Objective Analysis.",
+  "creator": "Dan McCreary",
+  "subject": ["Education", "Instructional Design", "Concept Mapping"],
+  "date": "2025-01-13",
+  "type": "Interactive Simulation",
+  "format": "text/html",
+  "language": "en",
+  "rights": "CC BY 4.0",
+  "gradeLevel": "Undergraduate, Graduate",
+  "subjectArea": "Education",
+  "topic": "Chapter 1 Concepts",
+  "learningObjectives": [
+    "Trace relationships between instructional design concepts",
+    "Explain how learning objectives connect to Bloom's Taxonomy",
+    "Identify the role of objective decomposition"
+  ],
+  "bloomsTaxonomyLevels": ["Analyze", "Understand"],
+  "duration": "5-10 minutes",
+  "prerequisites": ["Reading Chapter 1"],
+  "framework": "vis-network",
+  "canvasDimensions": "responsive x 550",
+  "responsive": "Width-responsive",
+  "dependencies": ["vis-network"],
+  "controls": [
+    {
+      "type": "button",
+      "name": "Toggle Labels",
+      "description": "Show or hide edge relationship labels"
+    },
+    {
+      "type": "button",
+      "name": "Reset",
+      "description": "Reset the visualization"
+    },
+    {
+      "type": "click",
+      "description": "Click nodes to see definitions and highlight connections"
+    }
+  ],
+  "modelType": "Concept Map Graph"
+}

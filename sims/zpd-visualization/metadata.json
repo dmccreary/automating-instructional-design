@@ -1,0 +1,50 @@
+{
+  "title": "Zone of Proximal Development Visualization",
+  "description": "An interactive visualization of Vygotsky's Zone of Proximal Development showing three concentric learning zones (Can Do Independently, ZPD, Cannot Do Yet) with adjustable scaffolding level and MicroSim feature mapping.",
+  "creator": "Dan McCreary",
+  "subject": ["Education", "Educational Psychology", "Instructional Design", "Learning Theory"],
+  "date": "2025-01-13",
+  "type": "Interactive Simulation",
+  "format": "text/html",
+  "language": "en",
+  "rights": "CC BY 4.0",
+  "gradeLevel": "High School, Undergraduate, Graduate",
+  "subjectArea": "Education",
+  "topic": "Zone of Proximal Development",
+  "learningObjectives": [
+    "Identify the three zones in Vygotsky's ZPD model",
+    "Explain how scaffolding expands the Zone of Proximal Development",
+    "Understand the implications of ZPD for instructional design",
+    "Recognize how MicroSim features map to different learning zones"
+  ],
+  "bloomsTaxonomyLevels": ["Remember", "Understand"],
+  "duration": "5-15 minutes",
+  "prerequisites": ["Basic understanding of learning theory"],
+  "framework": "p5.js",
+  "canvasDimensions": "responsive x 500",
+  "responsive": "Width-responsive",
+  "dependencies": ["p5.js 1.11.10"],
+  "accessibility": {
+    "screenReaderSupport": true,
+    "keyboardNavigation": false,
+    "highContrast": true
+  },
+  "controls": [
+    {
+      "type": "slider",
+      "description": "Adjust scaffolding level (0-100%) to see how support expands the ZPD"
+    },
+    {
+      "type": "hover",
+      "description": "Hover over zones to see detailed descriptions and examples"
+    },
+    {
+      "type": "button",
+      "description": "Toggle visibility of MicroSim feature mapping"
+    }
+  ],
+  "modelType": "Infographic Visualization",
+  "assumptions": ["Three-zone model based on Vygotsky's original theory", "Traffic light color metaphor (green/yellow/red)"],
+  "limitations": ["Does not show dynamic progression of zones over time", "Simplified representation of complex cognitive development theory"],
+  "theoreticalBasis": "Vygotsky's sociocultural theory of cognitive development (1978)"
+}

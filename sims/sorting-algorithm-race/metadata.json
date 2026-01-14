@@ -1,0 +1,26 @@
+{
+  "title": "Sorting Algorithm Race",
+  "description": "Interactive MicroSim comparing the efficiency of four sorting algorithms (Bubble Sort, Selection Sort, Insertion Sort, and Quick Sort) racing to sort identical arrays. Students observe real-time comparison and swap counts to understand Big-O notation in practice.",
+  "type": "microsim",
+  "creator": "Dan McCreary",
+  "created": "2026-01-13",
+  "modified": "2026-01-13",
+  "subject": ["Computer Science", "Algorithms", "Data Structures"],
+  "educationLevel": ["High School", "Introductory College"],
+  "bloomTaxonomy": ["Analyze", "Evaluate"],
+  "learningObjective": "Students will be able to compare the efficiency of different sorting algorithms by observing their operation counts and completion times on identical datasets.",
+  "prerequisites": ["Arrays", "Basic programming concepts", "Concept of sorting"],
+  "concepts": ["Sorting Algorithms", "Big-O Notation", "Algorithm Efficiency", "Time Complexity", "Bubble Sort", "Selection Sort", "Insertion Sort", "Quick Sort"],
+  "implementation": "p5.js",
+  "interactivityLevel": "High",
+  "estimatedTime": "15-30 minutes",
+  "keywords": ["sorting", "algorithms", "comparison", "race", "visualization", "big-o", "complexity"],
+  "license": "Creative Commons Attribution 4.0 International",
+  "format": "text/html",
+  "language": "en",
+  "accessibility": {
+    "hasVisualContent": true,
+    "hasAudioContent": false,
+    "hasInteractiveElements": true
+  }
+}

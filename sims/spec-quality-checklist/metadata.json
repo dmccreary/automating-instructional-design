@@ -1,0 +1,41 @@
+{
+  "title": "Specification Quality Checklist",
+  "description": "An interactive checklist for evaluating the completeness and quality of MicroSim specifications before AI-assisted generation, organized into four categories: Educational Foundation, Visual Design, Interactivity, and Technical Details.",
+  "creator": "Dan McCreary",
+  "subject": ["Education", "Instructional Design", "Quality Assurance", "MicroSim Development"],
+  "date": "2025-01-13",
+  "type": "Interactive Simulation",
+  "format": "text/html",
+  "language": "en",
+  "rights": "CC BY 4.0",
+  "gradeLevel": "High School, Undergraduate, Graduate",
+  "subjectArea": "Education Technology",
+  "topic": "MicroSim Specification Quality",
+  "learningObjectives": [
+    "Identify the four key categories of a complete MicroSim specification",
+    "Evaluate specifications for completeness before generation",
+    "Understand the relationship between specification quality and generation success"
+  ],
+  "bloomsTaxonomyLevels": ["Evaluate"],
+  "duration": "5-15 minutes",
+  "prerequisites": ["Basic understanding of MicroSim specifications", "Familiarity with instructional design concepts"],
+  "framework": "p5.js",
+  "canvasDimensions": "responsive x 500",
+  "responsive": "Width-responsive",
+  "dependencies": ["p5.js 1.11.10"],
+  "controls": [
+    {
+      "type": "click",
+      "description": "Click category headers to expand/collapse sections"
+    },
+    {
+      "type": "click",
+      "description": "Click checkboxes to toggle completion status"
+    },
+    {
+      "type": "click",
+      "description": "Click Reset All button to clear all checkboxes"
+    }
+  ],
+  "modelType": "Informational Visualization"
+}

@@ -1,0 +1,39 @@
+{
+    "title": "Elementary Scaffolding Progression",
+    "description": "An interactive MicroSim demonstrating scaffolded learning through a physics simulation where controls unlock progressively as learners complete experiments at each level.",
+    "creator": "Dan McCreary",
+    "created": "2026-01-13",
+    "modified": "2026-01-13",
+    "type": "InteractiveResource",
+    "format": "text/html",
+    "language": "en",
+    "subject": [
+        "Instructional Design",
+        "Scaffolding",
+        "Educational Technology",
+        "Physics Simulation",
+        "Learning Progression"
+    ],
+    "educationalLevel": "Graduate",
+    "audience": "Instructional Designers, Educators, Education Students",
+    "rights": "MIT License",
+    "source": "Automating Instructional Design Textbook",
+    "relation": "https://dmccreary.github.io/automating-instructional-design/",
+    "coverage": "Scaffolding techniques in instructional design",
+    "bloomTaxonomy": "Apply",
+    "learningObjective": "Students will be able to design scaffolded learning sequences that progressively introduce complexity",
+    "interactivityType": "active",
+    "interactivityLevel": "high",
+    "typicalLearningTime": "PT15M",
+    "technicalRequirements": "Modern web browser with JavaScript enabled",
+    "keywords": [
+        "scaffolding",
+        "progressive disclosure",
+        "instructional design",
+        "physics simulation",
+        "educational games",
+        "learning progression",
+        "zone of proximal development",
+        "mastery learning"
+    ]
+}

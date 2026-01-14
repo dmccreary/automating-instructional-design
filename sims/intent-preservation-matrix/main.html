@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intent Preservation Matrix</title>
+    <script src="https://unpkg.com/vis-network/standalone/umd/vis-network.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div id="network"></div>
+
+        <!-- Title at top center -->
+        <div class="title">Intent Preservation Matrix</div>
+
+        <!-- Legend in upper left -->
+        <div class="legend">
+            <div class="legend-title">Hierarchy Levels</div>
+            <div class="legend-item">
+                <div class="legend-color level-objective"></div>
+                <span>Learning Objective</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color level-concept"></div>
+                <span>Key Concepts</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color level-feature"></div>
+                <span>Features/Elements</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color level-detail"></div>
+                <span>Specification Details</span>
+            </div>
+            <div class="legend-title" style="margin-top: 10px;">Status</div>
+            <div class="legend-item">
+                <div class="legend-color level-orphan"></div>
+                <span>Orphan (unconnected)</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color level-highlighted"></div>
+                <span>Highlighted</span>
+            </div>
+        </div>
+
+        <!-- Right panel with controls and info -->
+        <div class="right-panel">
+            <div class="controls">
+                <button class="btn btn-primary" id="toggle-orphans">Show Orphans</button>
+                <button class="btn btn-secondary" id="reset-btn">Reset View</button>
+            </div>
+
+            <div class="info-panel" id="info-panel">
+                <div class="info-title" id="info-title">Intent Preservation Matrix</div>
+                <div class="info-text" id="info-text">
+                    <p><strong>Click</strong> any element to highlight its connections.</p>
+                    <p><strong>Hover</strong> to see details and rationale.</p>
+                    <hr>
+                    <p style="font-size: 11px;">
+                        Every specification detail should trace back to a learning objective through the hierarchy.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="intent-preservation-matrix.js"></script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+{
+    "title": "Interpretation Pitfalls in User Testing",
+    "description": "An interactive four-quadrant infographic that helps students identify and avoid common interpretation pitfalls when analyzing user testing data, including confirmation bias, small sample overgeneralization, correlation/causation confusion, and expert blind spot.",
+    "creator": "Dan McCreary",
+    "date": "2026-01-14",
+    "subject": [
+        "User Testing",
+        "Cognitive Biases",
+        "Research Methods",
+        "Instructional Design",
+        "Usability Evaluation"
+    ],
+    "type": "InteractiveResource",
+    "format": "text/html",
+    "language": "en",
+    "rights": "MIT License",
+    "source": "https://dmccreary.github.io/automating-instructional-design/",
+    "relation": "Part of the Automating Instructional Design intelligent textbook",
+    "coverage": "Common interpretation errors in user testing and usability evaluation",
+    "audience": {
+        "educationLevel": "Undergraduate, Graduate, Professional Development",
+        "typicalAgeRange": "18+",
+        "role": [
+            "Instructional Designer",
+            "UX Researcher",
+            "Usability Analyst",
+            "Educational Technology Specialist",
+            "Product Designer"
+        ]
+    },
+    "learningResourceType": "Simulation",
+    "interactivityType": "active",
+    "interactivityLevel": "high",
+    "bloomsTaxonomy": "Evaluate",
+    "bloomsLevel": 5,
+    "learningObjective": "Help students identify and avoid common interpretation pitfalls when analyzing user testing data",
+    "keywords": [
+        "interpretation pitfalls",
+        "confirmation bias",
+        "overgeneralization",
+        "correlation causation",
+        "expert blind spot",
+        "user testing",
+        "cognitive bias",
+        "research methodology",
+        "usability testing"
+    ],
+    "technicalRequirements": {
+        "browser": "Modern browser with JavaScript enabled",
+        "library": "p5.js 1.11.10"
+    }
+}

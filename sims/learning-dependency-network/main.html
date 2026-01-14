@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learning Dependency Network</title>
+    <script src="https://unpkg.com/vis-network/standalone/umd/vis-network.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div id="network"></div>
+
+        <!-- Title at top center -->
+        <div class="title">Learning Dependency Network</div>
+
+        <!-- Legend in upper left -->
+        <div class="legend">
+            <div class="legend-title">Node Types</div>
+            <div class="legend-item">
+                <div class="legend-shape shape-foundation"></div>
+                <span><strong>Foundation</strong> - Base concepts</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-shape shape-prerequisite"></div>
+                <span><strong>Prerequisite</strong> - Required concepts</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-shape shape-target"></div>
+                <span><strong>Target</strong> - Learning goal</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-shape shape-advanced"></div>
+                <span><strong>Advanced</strong> - Extensions</span>
+            </div>
+            <div class="legend-title" style="margin-top: 12px;">Edge Types</div>
+            <div class="legend-item">
+                <div class="legend-line solid"></div>
+                <span><strong>PREREQUISITE_OF</strong></span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-line dashed"></div>
+                <span><strong>EXTENDS</strong></span>
+            </div>
+        </div>
+
+        <!-- Right panel with controls and info -->
+        <div class="right-panel">
+            <div class="controls">
+                <button class="btn btn-secondary" id="reset-btn">Reset View</button>
+            </div>
+
+            <div class="info-panel" id="info-panel">
+                <div class="info-title" id="info-title">Learning Dependencies</div>
+                <div class="info-text" id="info-text">
+                    <p><strong>Click</strong> a concept to highlight all its prerequisites.</p>
+                    <p><strong>Hover</strong> to see concept definitions.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="learning-dependency-network.js"></script>
+</body>
+</html>

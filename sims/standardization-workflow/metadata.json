@@ -1,0 +1,69 @@
+{
+  "name": "Standardization Workflow",
+  "description": "Interactive flowchart showing the MicroSim standardization process for evaluating and upgrading quality scores.",
+  "type": "microsim",
+  "library": "p5.js",
+  "version": "1.0.0",
+  "author": "Dan McCreary",
+  "date_created": "2025-01-14",
+  "date_modified": "2025-01-14",
+  "bloom_taxonomy": {
+    "level": 3,
+    "name": "Apply",
+    "description": "Students will apply the standardization workflow to evaluate and upgrade MicroSim quality."
+  },
+  "learning_objectives": [
+    "Understand the complete standardization workflow for MicroSims",
+    "Identify decision points and their conditions in the workflow",
+    "Apply the workflow to evaluate MicroSim quality",
+    "Recognize the different types of validation steps"
+  ],
+  "concepts": [
+    "standardization",
+    "workflow",
+    "quality-assurance",
+    "validation",
+    "metadata",
+    "flowchart",
+    "decision-making"
+  ],
+  "prerequisites": [
+    "Basic understanding of MicroSim structure",
+    "Familiarity with YAML frontmatter",
+    "Knowledge of quality metrics"
+  ],
+  "interactive_features": [
+    "Click nodes to see detailed descriptions",
+    "Hover for step previews",
+    "Slider to adjust sample quality score",
+    "Toggle to switch between p5.js and non-p5.js types",
+    "Dynamic path highlighting based on inputs"
+  ],
+  "color_scheme": {
+    "file_operations": "#3B82F6",
+    "decision_points": "#F59E0B",
+    "success_outcomes": "#10B981",
+    "validation_steps": "#8B5CF6",
+    "terminals": "#6366F1"
+  },
+  "dimensions": {
+    "width": "responsive",
+    "max_width": 900,
+    "draw_height": 550,
+    "control_height": 50
+  },
+  "files": [
+    "main.html",
+    "standardization-workflow.js",
+    "index.md",
+    "metadata.json"
+  ],
+  "tags": [
+    "workflow",
+    "flowchart",
+    "quality-assurance",
+    "standardization",
+    "interactive",
+    "educational"
+  ]
+}

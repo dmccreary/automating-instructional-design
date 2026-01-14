@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relationship Graph Types</title>
+    <script src="https://unpkg.com/vis-network/standalone/umd/vis-network.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div id="network"></div>
+
+        <!-- Title at top center -->
+        <div class="title">Relationship Graph Types</div>
+
+        <!-- Legend in upper left -->
+        <div class="legend">
+            <div class="legend-title">Edge Types</div>
+            <div class="legend-item" data-type="prerequisite">
+                <div class="legend-line prerequisite-line"></div>
+                <span>Prerequisites</span>
+            </div>
+            <div class="legend-item" data-type="related">
+                <div class="legend-line related-line"></div>
+                <span>Related to</span>
+            </div>
+            <div class="legend-item" data-type="contrasts">
+                <div class="legend-line contrasts-line"></div>
+                <span>Contrasts with</span>
+            </div>
+            <div class="legend-item" data-type="exemplifies">
+                <div class="legend-line exemplifies-line"></div>
+                <span>Exemplifies</span>
+            </div>
+            <div class="legend-item" data-type="influences">
+                <div class="legend-line influences-line"></div>
+                <span>Influences</span>
+            </div>
+            <div class="legend-hint">Click to highlight</div>
+        </div>
+
+        <!-- Right panel with info -->
+        <div class="right-panel">
+            <div class="info-panel" id="info-panel">
+                <div class="info-title" id="info-title">Relationship Types</div>
+                <div class="info-text" id="info-text">
+                    <p>This visualization demonstrates different types of relationships that can be represented in knowledge graphs.</p>
+                    <p><strong>Click</strong> on a legend item to highlight edges of that type.</p>
+                    <p><strong>Click</strong> on empty space to reset the view.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="relationship-graph-types.js"></script>
+</body>
+</html>
