@@ -10,10 +10,11 @@ social:
 
 # Accessible Control Layout
 
-<iframe src="main.html" height="600px" width="100%" scrolling="no"></iframe>
+<iframe src="main.html" height="430px" width="100%" scrolling="no"></iframe>
 
 [Run the Accessible Control Layout Fullscreen](./main.html){ .md-button .md-button--primary }
-[Edit the Accessible Control Layout Using the p5.js Editor](https://editor.p5js.org/)
+
+[Edit the Accessible Control Layout Using the p5.js Editor](https://editor.p5js.org/dmccreary/sketches/H9W-HNkDI)
 
 ## Description
 
