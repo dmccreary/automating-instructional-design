@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accessibility Audit Workflow</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="module">
+        import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+        mermaid.initialize({
+            startOnLoad: true,
+            theme: 'default',
+            flowchart: {
+                useMaxWidth: true,
+                htmlLabels: true,
+                curve: 'basis',
+                nodeSpacing: 25,
+                rankSpacing: 35
+            }
+        });
+    </script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Accessibility Audit Workflow</h1>
+        </header>
+        <div class="diagram-area" id="diagramArea">
+            <div class="mermaid">
+flowchart TD
+    Start(["Begin<br/>Accessibility<br/>Audit"]):::startNode
+    Test1["1. Keyboard<br/>Navigation<br/><br/>"]:::testNode
+    Test2["2. Screen Reader<br/>Compatibility<br/><br/>"]:::testNode
+    Test3["3. Color and<br/>Contrast<br/><br/>"]:::testNode
+    Test4["4. Motion and<br/>Animation<br/><br/>"]:::testNode
+    Test5["5. Touch and<br/>Motor<br/><br/>"]:::testNode
+    Report["Generate<br/>Audit Report"]:::summaryNode
+    End(["Audit<br/>Complete"]):::endNode
+
+    Start --> Test1
+    Test1 --> Test2
+    Test2 --> Test3
+    Test3 --> Test4
+    Test4 --> Test5
+    Test5 --> Report
+    Report --> End
+
+    classDef startNode fill:#6366F1,stroke:#4F46E5,stroke-width:2px,color:#fff,font-size:14px
+    classDef testNode fill:#F59E0B,stroke:#D97706,stroke-width:2px,color:#fff,font-size:14px
+    classDef summaryNode fill:#3B82F6,stroke:#2563EB,stroke-width:2px,color:#fff,font-size:14px
+    classDef endNode fill:#6366F1,stroke:#4F46E5,stroke-width:2px,color:#fff,font-size:14px
+
+    linkStyle default stroke:#94A3B8,stroke-width:2px
+            </div>
+            <div class="button-overlays" id="buttonOverlays"></div>
+        </div>
+        <div class="control-area">
+            <span class="instructions">Click Pass or Fail buttons to record test results</span>
+            <button class="reset-btn" id="resetBtn">Reset All</button>
+            <span class="progress" id="progress">Tests: 0 passed, 0 failed, 5 pending</span>
+        </div>
+    </div>
+    <div id="tooltip"></div>
+
+    <script>
+        // Test data with questions
+        const testData = {
+            'Test1': {
+                name: 'Keyboard Navigation',
+                questions: [
+                    'Can you Tab to all controls?',
+                    'Can you activate buttons with Enter/Space?',
+                    'Is focus visible at all times?'
+                ]
+            },
+            'Test2': {
+                name: 'Screen Reader Compatibility',
+                questions: [
+                    'Does describe() provide current state?',
+                    'Are all controls labeled?',
+                    'Are live regions announcing changes?'
+                ]
+            },
+            'Test3': {
+                name: 'Color and Contrast',
+                questions: [
+                    'Does it pass WCAG contrast ratios?',
+                    'Is color not the only differentiator?',
+                    'Is it usable in grayscale?'
+                ]
+            },
+            'Test4': {
+                name: 'Motion and Animation',
+                questions: [
+                    'Does it respect prefers-reduced-motion?',
+                    'Can animations be paused?',
+                    'Is there a static alternative?'
+                ]
+            },
+            'Test5': {
+                name: 'Touch and Motor',
+                questions: [
+                    'Are touch targets >= 44x44px?',
+                    'Is precision not required?',
+                    'Are there keyboard alternatives to drag?'
+                ]
+            }
+        };
+
+        // Tooltip data for all nodes
+        const tooltips = {
+            'Start': 'Start the systematic accessibility audit process for your MicroSim. Each test evaluates a different dimension of accessibility.',
+            'Report': 'Review all test results. The report lists passed tests, failed tests with severity, and prioritizes fixes.',
+            'End': 'The accessibility audit is complete. Address any failed tests to improve MicroSim accessibility.'
+        };
+
+        // State
+        const auditResults = {
+            'Test1': null,
+            'Test2': null,
+            'Test3': null,
+            'Test4': null,
+            'Test5': null
+        };
+
+        const tooltip = document.getElementById('tooltip');
+        const progressEl = document.getElementById('progress');
+        const resetBtn = document.getElementById('resetBtn');
+
+        function updateProgress() {
+            let passed = 0, failed = 0, pending = 0;
+            for (const key in auditResults) {
+                if (auditResults[key] === true) passed++;
+                else if (auditResults[key] === false) failed++;
+                else pending++;
+            }
+            progressEl.textContent = `Tests: ${passed} passed, ${failed} failed, ${pending} pending`;
+        }
+
+        function updateNodeColor(testId, result) {
+            const node = findNodeElement(testId);
+            if (!node) return;
+
+            const rect = node.querySelector('rect') || node.querySelector('polygon');
+            if (rect) {
+                if (result === true) {
+                    rect.style.fill = '#10B981';
+                    rect.style.stroke = '#059669';
+                } else if (result === false) {
+                    rect.style.fill = '#EF4444';
+                    rect.style.stroke = '#DC2626';
+                } else {
+                    rect.style.fill = '#F59E0B';
+                    rect.style.stroke = '#D97706';
+                }
+            }
+        }
+
+        function setResult(testId, result) {
+            auditResults[testId] = result;
+            updateProgress();
+            updateNodeColor(testId, result);
+
+            // Update button states
+            const passBtn = document.querySelector(`[data-test="${testId}"].pass-btn`);
+            const failBtn = document.querySelector(`[data-test="${testId}"].fail-btn`);
+            if (passBtn && failBtn) {
+                passBtn.classList.toggle('selected', result === true);
+                failBtn.classList.toggle('selected', result === false);
+            }
+        }
+
+        function resetAudit() {
+            for (const key in auditResults) {
+                auditResults[key] = null;
+                updateNodeColor(key, null);
+            }
+            document.querySelectorAll('.pass-btn, .fail-btn').forEach(btn => {
+                btn.classList.remove('selected');
+            });
+            updateProgress();
+        }
+
+        function findNodeElement(testId) {
+            // Try different ID patterns used by Mermaid versions
+            let node = document.getElementById('flowchart-' + testId + '-0');
+            if (node) return node;
+
+            // Try without the -0 suffix
+            node = document.getElementById('flowchart-' + testId);
+            if (node) return node;
+
+            // Search by data-id attribute
+            node = document.querySelector(`[data-id="${testId}"]`);
+            if (node) return node;
+
+            // Search all nodes for matching ID pattern
+            const allNodes = document.querySelectorAll('.node');
+            for (const n of allNodes) {
+                if (n.id && n.id.includes(testId)) {
+                    return n;
+                }
+            }
+
+            return null;
+        }
+
+        function createButtonOverlays() {
+            const overlays = document.getElementById('buttonOverlays');
+            const diagramArea = document.getElementById('diagramArea');
+            overlays.innerHTML = '';
+
+            for (const testId in testData) {
+                const nodeEl = findNodeElement(testId);
+                if (!nodeEl) {
+                    console.log('Node not found for:', testId);
+                    continue;
+                }
+
+                const nodeRect = nodeEl.getBoundingClientRect();
+                const areaRect = diagramArea.getBoundingClientRect();
+
+                const buttonContainer = document.createElement('div');
+                buttonContainer.className = 'node-buttons';
+
+                // Position buttons inside the node, near the bottom
+                const centerX = nodeRect.left - areaRect.left + nodeRect.width / 2;
+                const bottomY = nodeRect.bottom - areaRect.top - 32; // 32px from bottom to fit inside node
+
+                buttonContainer.style.left = centerX + 'px';
+                buttonContainer.style.top = bottomY + 'px';
+
+                console.log(`Positioning ${testId} at (${centerX}, ${bottomY})`);
+
+                const passBtn = document.createElement('button');
+                passBtn.className = 'pass-btn';
+                passBtn.textContent = 'Pass';
+                passBtn.dataset.test = testId;
+                passBtn.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    setResult(testId, true);
+                });
+
+                const failBtn = document.createElement('button');
+                failBtn.className = 'fail-btn';
+                failBtn.textContent = 'Fail';
+                failBtn.dataset.test = testId;
+                failBtn.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    setResult(testId, false);
+                });
+
+                buttonContainer.appendChild(passBtn);
+                buttonContainer.appendChild(failBtn);
+                overlays.appendChild(buttonContainer);
+            }
+
+            console.log('Button overlays created:', overlays.children.length);
+        }
+
+        function setupTooltips() {
+            const nodes = document.querySelectorAll('.node');
+            nodes.forEach(node => {
+                const nodeId = node.id.replace('flowchart-', '').split('-')[0];
+
+                let tooltipContent = '';
+                if (testData[nodeId]) {
+                    tooltipContent = `<strong>${testData[nodeId].name}</strong><ul>`;
+                    testData[nodeId].questions.forEach(q => {
+                        tooltipContent += `<li>${q}</li>`;
+                    });
+                    tooltipContent += '</ul>';
+                } else if (tooltips[nodeId]) {
+                    tooltipContent = tooltips[nodeId];
+                }
+
+                if (tooltipContent) {
+                    node.addEventListener('mouseenter', () => {
+                        tooltip.innerHTML = tooltipContent;
+                        tooltip.classList.add('visible');
+                    });
+                    node.addEventListener('mousemove', (e) => {
+                        const x = e.pageX + 65;
+                        const y = e.pageY - 35;
+                        const tooltipRect = tooltip.getBoundingClientRect();
+                        const maxX = window.innerWidth - tooltipRect.width - 20;
+                        const maxY = window.innerHeight - tooltipRect.height - 20;
+                        tooltip.style.left = Math.min(x, maxX) + 'px';
+                        tooltip.style.top = Math.min(y, maxY) + 'px';
+                    });
+                    node.addEventListener('mouseleave', () => {
+                        tooltip.classList.remove('visible');
+                    });
+                }
+            });
+        }
+
+        function waitForMermaid() {
+            const mermaidDiv = document.querySelector('.mermaid');
+            const svg = mermaidDiv.querySelector('svg');
+            if (svg && document.querySelectorAll('.node').length > 0) {
+                setupTooltips();
+                createButtonOverlays();
+            } else {
+                setTimeout(waitForMermaid, 100);
+            }
+        }
+
+        // Handle window resize and scroll
+        window.addEventListener('resize', () => {
+            createButtonOverlays();
+        });
+
+        document.getElementById('diagramArea').addEventListener('scroll', () => {
+            createButtonOverlays();
+        });
+
+        // Reset button handler
+        resetBtn.addEventListener('click', resetAudit);
+
+        // Initialize
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', () => setTimeout(waitForMermaid, 100));
+        } else {
+            setTimeout(waitForMermaid, 100);
+        }
+    </script>
+</body>
+</html>

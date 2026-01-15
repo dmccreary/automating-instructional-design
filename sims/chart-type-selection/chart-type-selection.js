@@ -142,6 +142,7 @@ function draw() {
   fill('#666');
   textSize(14);
   textAlign(CENTER, CENTER);
+  noStroke();
   let instruction = selectedCard >= 0
     ? "Click anywhere to deselect. Hover over cards for more details."
     : "Hover over cards to see details. Click a card to highlight it.";
@@ -184,6 +185,7 @@ function drawCard(index, x, y) {
   textSize(15);
   textAlign(LEFT, TOP);
   textStyle(BOLD);
+  noStroke();
   text(card.name, x + 70, y + 18);
   textStyle(NORMAL);
 
@@ -191,6 +193,7 @@ function drawCard(index, x, y) {
   fill(isSelected ? 'rgba(255,255,255,0.9)' : '#555');
   textSize(11);
   textAlign(LEFT, TOP);
+  noStroke();
   text("Use when:", x + 70, y + 38);
 
   fill(isSelected ? 'white' : '#333');
@@ -201,11 +204,13 @@ function drawCard(index, x, y) {
   fill(isSelected ? 'rgba(255,255,255,0.8)' : '#777');
   textSize(10);
   textAlign(LEFT, BOTTOM);
+  noStroke();
   text("Example: " + card.example, x + 10, y + cardHeight - 25);
 
   // Library recommendation
   fill(isSelected ? 'rgba(255,255,255,0.7)' : '#999');
   textSize(9);
+  noStroke();
   text("Library: " + card.library, x + 10, y + cardHeight - 10);
 }
 
@@ -357,6 +362,7 @@ function drawTooltip(index) {
   textSize(14);
   textAlign(LEFT, CENTER);
   textStyle(BOLD);
+  noStroke();
   text(card.name, tooltipX + 12, tooltipY + 14);
   textStyle(NORMAL);
 
@@ -364,6 +370,7 @@ function drawTooltip(index) {
   fill('#333');
   textSize(11);
   textAlign(LEFT, TOP);
+  noStroke();
   text(card.expanded, tooltipX + 12, tooltipY + 38, tooltipWidth - 24, 60);
 }
 

@@ -1249,6 +1249,12 @@
         
       
         
+          
+        
+      
+        
+          
+        
       
         
           
@@ -2510,6 +2516,93 @@
         
       </ul>
     </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#case-study-p5js-vs-mermaid-for-interactive-workflows" class="md-nav__link">
+    <span class="md-ellipsis">
+      Case Study: p5.js vs Mermaid for Interactive Workflows
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Case Study: p5.js vs Mermaid for Interactive Workflows">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-challenge-interactive-accessibility-audit-workflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Challenge: Interactive Accessibility Audit Workflow
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#implementation-1-p5js-canvas-based" class="md-nav__link">
+    <span class="md-ellipsis">
+      Implementation 1: p5.js (Canvas-Based)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#implementation-2-mermaidjs-render-overlay" class="md-nav__link">
+    <span class="md-ellipsis">
+      Implementation 2: Mermaid.js (Render + Overlay)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#quantitative-comparison" class="md-nav__link">
+    <span class="md-ellipsis">
+      Quantitative Comparison
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#problems-encountered" class="md-nav__link">
+    <span class="md-ellipsis">
+      Problems Encountered
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#maintainability-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      Maintainability Analysis
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#decision-rules-when-to-choose-each" class="md-nav__link">
+    <span class="md-ellipsis">
+      Decision Rules: When to Choose Each
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-key-insight" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Key Insight
+    </span>
+  </a>
   
 </li>
         
@@ -4344,6 +4437,209 @@ git<span class="w"> </span>branch<span class="w"> </span>-d<span class="w"> </sp
 - Blue: Information / neutral</p>
 <p>Implementation: HTML/CSS/JavaScript dashboard with local storage for persistence</p>
 </details>
+<h2 id="case-study-p5js-vs-mermaid-for-interactive-workflows">Case Study: p5.js vs Mermaid for Interactive Workflows</h2>
+<p>To illustrate the importance of library selection and the regeneration decision, let's examine a real case where the same MicroSim was implemented using two different approaches: p5.js and Mermaid.js.</p>
+<h3 id="the-challenge-interactive-accessibility-audit-workflow">The Challenge: Interactive Accessibility Audit Workflow</h3>
+<p>The goal was to create an interactive workflow diagram that guides users through a systematic accessibility audit. The workflow has 8 steps including 5 test nodes, each requiring:</p>
+<ul>
+<li><strong>Pass/Fail buttons</strong> embedded within each test node</li>
+<li><strong>Color changes</strong> to reflect test results (green for pass, red for fail, orange for pending)</li>
+<li><strong>Progress tracking</strong> showing passed, failed, and pending counts</li>
+<li><strong>Tooltips</strong> displaying test questions on hover</li>
+<li><strong>Reset functionality</strong> to start a new audit</li>
+</ul>
+<h3 id="implementation-1-p5js-canvas-based">Implementation 1: p5.js (Canvas-Based)</h3>
+<p>The p5.js version treats everything as a custom drawing problem. All elements—nodes, connectors, buttons, text—are rendered programmatically on an HTML canvas.</p>
+<iframe src="../../sims/accessibility-audit-workflow/main.html" height="700px" width="100%" scrolling="no" style="overflow: hidden;"></iframe>
+
+<p><a class="md-button" href="../../sims/accessibility-audit-workflow/main.html">View p5.js Version Fullscreen</a></p>
+<p><strong>Architecture:</strong>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code>JavaScript (p5.js)
+  └── Data: steps[] array (single source of truth)
+        └── Rendering: draw() loop
+              └── Interaction: mousePressed() with hit detection
+</code></pre></div></td></tr></table></div></p>
+<h3 id="implementation-2-mermaidjs-render-overlay">Implementation 2: Mermaid.js (Render + Overlay)</h3>
+<p>The Mermaid version uses the library to render the flowchart SVG, then overlays interactive HTML buttons using JavaScript DOM manipulation.</p>
+<iframe src="../../sims/accessibility-audit-mermaid/main.html" height="1000px" width="100%" scrolling="no" style="overflow: hidden;"></iframe>
+
+<p><a class="md-button" href="../../sims/accessibility-audit-mermaid/main.html">View Mermaid Version Fullscreen</a></p>
+<p><strong>Architecture:</strong>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code>Mermaid.js (external library)
+  └── Mermaid Syntax (in HTML) → SVG Output (black box)
+        └── JavaScript (custom)
+              └── Data: testData{} object (duplicates node info)
+                    └── DOM Manipulation: overlays, color changes
+</code></pre></div></td></tr></table></div></p>
+<h3 id="quantitative-comparison">Quantitative Comparison</h3>
+<table>
+<thead>
+<tr>
+<th>Metric</th>
+<th>p5.js Version</th>
+<th>Mermaid Version</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Total Lines of Code</td>
+<td>644</td>
+<td>522 (330 HTML + 192 CSS)</td>
+</tr>
+<tr>
+<td>Files</td>
+<td>1 (.js)</td>
+<td>2 (.html, .css)</td>
+</tr>
+<tr>
+<td>Data Locations</td>
+<td>1 (steps array)</td>
+<td>2 (Mermaid syntax + JS object)</td>
+</tr>
+<tr>
+<td>Debug Difficulty</td>
+<td>Low</td>
+<td>High</td>
+</tr>
+</tbody>
+</table>
+<h3 id="problems-encountered">Problems Encountered</h3>
+<p><strong>p5.js Problems (Minor):</strong></p>
+<ol>
+<li>Button positioning within nodes—straightforward arithmetic adjustments</li>
+<li>Text centering in ellipses—conditional offset for node types</li>
+<li>Connector spacing—manual Y-position adjustments</li>
+</ol>
+<p><strong>Resolution:</strong> All problems were simple coordinate calculations.</p>
+<p><strong>Mermaid Problems (Significant):</strong></p>
+<ol>
+<li><strong>Node ID discovery</strong>—Mermaid v11 generates IDs like <code>flowchart-Test1-0</code>, but this varies by version</li>
+<li><strong>Button visibility</strong>—Required z-index debugging and scroll offset handling</li>
+<li><strong>SVG manipulation</strong>—Changing node colors requires DOM queries into generated SVG</li>
+<li><strong>Positioning overlays</strong>—<code>getBoundingClientRect()</code> relative to container with scroll offsets</li>
+<li><strong>Data duplication</strong>—Node info exists in both Mermaid syntax AND JavaScript object</li>
+</ol>
+<p><strong>Resolution:</strong> Required workaround functions, debug logging, and multiple iteration cycles.</p>
+<h3 id="maintainability-analysis">Maintainability Analysis</h3>
+<p><strong>Adding a new test step:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Task</th>
+<th>p5.js</th>
+<th>Mermaid</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Places to update</td>
+<td>1 (steps array)</td>
+<td>3 (Mermaid syntax, testData{}, auditResults{})</td>
+</tr>
+<tr>
+<td>Risk of inconsistency</td>
+<td>Low</td>
+<td>High</td>
+</tr>
+<tr>
+<td>Time required</td>
+<td>~2 minutes</td>
+<td>~5 minutes</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Changing node appearance:</strong></p>
+<ul>
+<li><strong>p5.js:</strong> Full control via <code>drawNode()</code> function—shapes, colors, effects, animations</li>
+<li><strong>Mermaid:</strong> Limited to <code>classDef</code> CSS-like syntax or post-render DOM manipulation</li>
+</ul>
+<h3 id="decision-rules-when-to-choose-each">Decision Rules: When to Choose Each</h3>
+<p>Based on this case study, here are decision rules for the <strong>regeneration decision</strong> when choosing between implementations:</p>
+<p><strong>Choose p5.js when:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Condition</th>
+<th>Weight</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Workflow nodes need embedded interactive controls (buttons, sliders)</td>
+<td>Critical</td>
+</tr>
+<tr>
+<td>Node appearance changes based on state (color, size, shape)</td>
+<td>High</td>
+</tr>
+<tr>
+<td>Custom animations or transitions are needed</td>
+<td>High</td>
+</tr>
+<tr>
+<td>Pixel-precise positioning is required</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>Diagram will be frequently modified</td>
+<td>Medium</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Choose Mermaid when:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Condition</th>
+<th>Weight</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Workflow is static (view-only, no interaction)</td>
+<td>Critical</td>
+</tr>
+<tr>
+<td>Standard flowchart shapes are sufficient</td>
+<td>High</td>
+</tr>
+<tr>
+<td>Diagram is documentation (not a learning tool)</td>
+<td>High</td>
+</tr>
+<tr>
+<td>Quick prototype needed</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>Diagram content comes from text/markdown source</td>
+<td>Medium</td>
+</tr>
+</tbody>
+</table>
+<h3 id="the-key-insight">The Key Insight</h3>
+<blockquote>
+<p><strong>If users need to click ON diagram elements (not just view them), use p5.js.</strong>
+<strong>If the diagram is documentation or navigation, use Mermaid.</strong></p>
+</blockquote>
+<p>This case study demonstrates why the <strong>regeneration decision</strong> matters. When the original Mermaid implementation encountered significant interaction challenges, the appropriate response was to recognize that the library choice was fundamentally mismatched to the requirements—and either regenerate with a different approach or accept significant workaround complexity.</p>
+<p>For interactive educational workflows with embedded controls, the additional p5.js code complexity is more than offset by:</p>
+<ol>
+<li>Single source of truth for data</li>
+<li>Predictable, debuggable coordinate system</li>
+<li>No dependency on library internals</li>
+<li>Full control over all visual elements</li>
+<li>Straightforward maintenance path</li>
+</ol>
+<p>Mermaid excels at its intended purpose: generating attractive diagrams from text descriptions. When interactivity extends beyond basic tooltips, the abstraction becomes a liability rather than an asset.</p>
+<hr />
 <h2 id="putting-it-all-together-the-complete-ai-collaboration-workflow">Putting It All Together: The Complete AI Collaboration Workflow</h2>
 <p>Let's synthesize everything into a practical workflow you can follow:</p>
 <h3 id="pre-generation-checklist">Pre-Generation Checklist</h3>
