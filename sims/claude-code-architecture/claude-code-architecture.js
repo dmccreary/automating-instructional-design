@@ -1,21 +1,19 @@
 // Claude Code Skills Architecture Diagram
-// Shows how skills manage context through summary indexing and on-demand loading
+// Shows how skill summaries lead to SKILL.md loading, then template loading
 
 let canvasWidth = 400;
-let drawHeight = 450;
-let controlHeight = 50;
+let drawHeight = 580;
+let controlHeight = 60;
 let canvasHeight = drawHeight + controlHeight;
-let margin = 15;
+let margin = 20;
 
-// Animation variables
-let loadingProgress = 0;
-let isLoading = false;
-let loadingSkillIndex = -1;
-let pulsePhase = 0;
+// Animation state
+let currentStep = 0; // 0=index only, 1=skill loading, 2=skill loaded, 3=template loading, 4=template loaded
+let animationProgress = 0;
+let animationSpeed = 0.02;
 
-// Skill data (30 skills with names and loaded state)
-let skills = [];
-let skillNames = [
+// Skill data - 30 skill summaries
+let skillSummaries = [
   "microsim-generator", "learning-graph", "chapter-generator", "quiz-generator",
   "glossary-generator", "book-metrics", "faq-generator", "skill-creator",
   "reference-generator", "concept-classifier", "physics-sim", "pi-keys",
@@ -26,33 +24,62 @@ let skillNames = [
   "search-index", "cache-manager"
 ];
 
-// Context window sections
-let contextSections = {
-  conversation: { size: 25, label: "Conversation History" },
-  skillIndex: { size: 15, label: "Skill Index (~3000 tokens)" },
-  activeSkill: { size: 20, label: "Active Skill Content" },
-  workingSpace: { size: 40, label: "Working Space" }
-};
+// Token counts
+let indexTokens = 3000;      // ~100 tokens per skill × 30 skills
+let skillTokens = 5000;      // Full SKILL.md
+let templateTokens = 2000;   // Template file
 
 // Colors
 let colors = {};
 
 // Hover state
 let hoveredSkill = null;
-let hoveredSection = null;
 
-// Scenario state
-let scenarioActive = false;
-let scenarioStep = 0;
-let scenarioTimer = 0;
+// Skill descriptions for tooltips
+let skillDescriptions = {
+  "microsim-generator": "Creates interactive simulations using p5.js, Chart.js, vis-network, etc.",
+  "learning-graph": "Generates concept dependencies and learning pathways",
+  "chapter-generator": "Creates structured chapter outlines for textbooks",
+  "quiz-generator": "Builds multiple-choice assessments aligned to concepts",
+  "glossary-generator": "Produces ISO 11179 compliant term definitions",
+  "book-metrics": "Analyzes content metrics for intelligent textbooks",
+  "faq-generator": "Creates FAQs from course content and concepts",
+  "skill-creator": "Guides creation of new Claude Code skills",
+  "reference-generator": "Curates academic references for textbooks",
+  "concept-classifier": "Creates classification quizzes using p5.js",
+  "physics-sim": "Generates physics-based interactive simulations",
+  "pi-keys": "Controls RGB LEDs on Raspberry Pi 500+ keyboard",
+  "moving-rainbow": "MicroPython programs for LED strip projects",
+  "installer": "Installs MkDocs Material templates and tools",
+  "linkedin-post": "Generates LinkedIn announcements for textbooks",
+  "readme-generator": "Creates GitHub README files with best practices",
+  "venn-builder": "Creates interactive Venn diagram visualizations",
+  "chart-selector": "Helps select appropriate chart types for data",
+  "timeline-viz": "Creates interactive timeline visualizations",
+  "network-graph": "Builds network/graph visualizations with vis-network",
+  "code-reviewer": "Reviews code for quality and best practices",
+  "test-generator": "Generates unit tests for code",
+  "doc-writer": "Creates documentation for codebases",
+  "api-analyzer": "Analyzes API endpoints and documentation",
+  "schema-validator": "Validates JSON/data schemas",
+  "data-processor": "Processes and transforms data formats",
+  "image-optimizer": "Optimizes images for web delivery",
+  "file-converter": "Converts between file formats",
+  "search-index": "Creates search indexes for content",
+  "cache-manager": "Manages caching strategies"
+};
+
+// User prompt
+let userPrompt = "Use the microsim-generator skill to create a pendulum physics simulation";
 
 function updateCanvasSize() {
   const container = document.querySelector('main');
-  if (container) {
-    canvasWidth = Math.min(container.offsetWidth - 40, 800);
+  if (container && container.offsetWidth > 100) {
+    canvasWidth = Math.min(container.offsetWidth - 40, 700);
   } else {
-    canvasWidth = Math.min(windowWidth - 40, 800);
+    canvasWidth = Math.min(window.innerWidth - 40, 700);
   }
+  canvasWidth = Math.max(canvasWidth, 400);
   canvasHeight = drawHeight + controlHeight;
 }
 
@@ -65,99 +92,81 @@ function setup() {
     canvas.parent(mainElement);
   }
 
-  // Define colors
   colors = {
-    contextBorder: color(59, 130, 246),      // Blue
-    loaded: color(34, 197, 94),               // Green
-    available: color(156, 163, 175),          // Gray
-    userInput: color(250, 204, 21),           // Yellow
-    skillSummary: color(251, 146, 60),        // Orange
     background: color(248, 250, 252),
+    contextBorder: color(59, 130, 246),
+    indexColor: color(156, 163, 175),
+    indexHighlight: color(251, 146, 60),
+    skillColor: color(34, 197, 94),
+    templateColor: color(168, 85, 247),
     text: color(30, 41, 59),
-    white: color(255, 255, 255),
-    lightBlue: color(219, 234, 254),
-    lightGreen: color(220, 252, 231),
-    lightOrange: color(254, 243, 199),
-    lightPurple: color(243, 232, 255)
+    white: color(255),
+    userPrompt: color(250, 204, 21),
+    lightGray: color(229, 231, 235)
   };
-
-  // Initialize skills
-  initializeSkills();
 
   textFont('Arial');
-}
-
-function initializeSkills() {
-  skills = [];
-  for (let i = 0; i < 30; i++) {
-    skills.push({
-      name: skillNames[i],
-      loaded: false,
-      summary: getSummary(skillNames[i])
-    });
-  }
-  // Pre-load a few skills
-  skills[0].loaded = true;  // microsim-generator
-  skills[1].loaded = true;  // learning-graph
-}
-
-function getSummary(name) {
-  const summaries = {
-    "microsim-generator": "Creates interactive simulations using p5.js, vis-network, etc.",
-    "learning-graph": "Generates concept dependencies and learning pathways",
-    "chapter-generator": "Creates structured chapter outlines for textbooks",
-    "quiz-generator": "Builds multiple-choice assessments aligned to concepts",
-    "glossary-generator": "Produces ISO 11179 compliant term definitions",
-    "book-metrics": "Analyzes content metrics for intelligent textbooks",
-    "faq-generator": "Creates FAQs from course content and concepts",
-    "skill-creator": "Guides creation of new Claude Code skills",
-    "reference-generator": "Curates academic references for textbooks",
-    "concept-classifier": "Creates classification quizzes using p5.js",
-    "physics-sim": "Generates physics-based interactive simulations",
-    "pi-keys": "Controls RGB LEDs on Raspberry Pi 500+ keyboard"
-  };
-  return summaries[name] || "Specialized skill for " + name.replace(/-/g, " ");
 }
 
 function draw() {
   background(colors.background);
 
-  // Update animations
-  pulsePhase = (pulsePhase + 0.03) % TWO_PI;
-  updateLoading();
-  updateScenario();
+  // Update animation
+  updateAnimation();
 
-  // Check hover states
+  // Check hover state
   checkHover();
 
   // Draw title
+  drawTitle();
+
+  // Draw user prompt
+  drawUserPrompt();
+
+  // Draw context window
+  drawContextWindow();
+
+  // Draw explanation panel
+  drawExplanation();
+
+  // Draw controls
+  drawControls();
+
+  // Draw hover tooltip (last so it's on top)
+  if (hoveredSkill !== null) {
+    drawSkillTooltip();
+  }
+}
+
+function drawTitle() {
   fill(colors.text);
   noStroke();
   textSize(16);
   textStyle(BOLD);
-  textAlign(CENTER, CENTER);
-  text("Claude Code Skills Architecture", canvasWidth / 2, 20);
+  textAlign(CENTER, TOP);
+  text("Claude Code Skill Loading", canvasWidth / 2, 10);
+}
 
-  // Draw main components
-  drawContextWindow();
-  drawSkillRegistry();
-  drawLoadingMechanism();
-  drawScenarioPanel();
+function drawUserPrompt() {
+  let y = 35;
 
-  // Draw hover tooltip
-  if (hoveredSkill !== null) {
-    drawSkillTooltip();
-  }
+  // User prompt box
+  fill(colors.userPrompt);
+  noStroke();
+  rect(margin, y, canvasWidth - 2 * margin, 30, 6);
 
-  // Draw control region
-  drawControlRegion();
+  fill(colors.text);
+  textSize(11);
+  textStyle(NORMAL);
+  textAlign(LEFT, CENTER);
+  text('User: "' + userPrompt + '"', margin + 10, y + 15);
 }
 
 function drawContextWindow() {
   let x = margin;
-  let y = 45;
-  let w = canvasWidth * 0.45;
-  let h = 200;
+  let y = 80;
+  let w = canvasWidth - 2 * margin;
+  let h = 400;
 
   // Context window border
   stroke(colors.contextBorder);
@@ -168,343 +177,308 @@ function drawContextWindow() {
   // Title
   fill(colors.text);
   noStroke();
-  textSize(11);
+  textSize(12);
   textStyle(BOLD);
   textAlign(LEFT, TOP);
   text("Context Window", x + 10, y + 8);
 
-  // Fixed boundary indicator
-  textSize(8);
-  textStyle(ITALIC);
+  // Token counter
+  let totalTokens = indexTokens;
+  if (currentStep >= 2) totalTokens += skillTokens;
+  if (currentStep >= 4) totalTokens += templateTokens;
+  if (currentStep === 1) totalTokens += Math.floor(skillTokens * animationProgress);
+  if (currentStep === 3) totalTokens += skillTokens + Math.floor(templateTokens * animationProgress);
+
+  textSize(10);
+  textStyle(NORMAL);
   fill(colors.contextBorder);
-  text("(128K token limit)", x + 100, y + 10);
+  textAlign(RIGHT, TOP);
+  text(totalTokens.toLocaleString() + " / 128,000 tokens", x + w - 10, y + 10);
 
-  // Draw sections
-  let sectionY = y + 30;
+  // Draw sections based on current step
+  let sectionY = y + 35;
   let sectionW = w - 20;
-  let totalPercent = 0;
 
-  let sectionColors = [
-    colors.lightBlue,
-    colors.lightOrange,
-    colors.lightGreen,
-    colors.lightPurple
-  ];
+  // Section 1: Skill Index (always visible)
+  drawSkillIndex(x + 10, sectionY, sectionW, 170);
+  sectionY += 180;
 
-  let sectionKeys = Object.keys(contextSections);
-  for (let i = 0; i < sectionKeys.length; i++) {
-    let key = sectionKeys[i];
-    let section = contextSections[key];
-    let sectionH = (h - 40) * (section.size / 100);
+  // Section 2: SKILL.md (visible from step 1+)
+  if (currentStep >= 1) {
+    drawSkillMd(x + 10, sectionY, sectionW, 90);
+  }
+  sectionY += 100;
 
-    // Section background
-    fill(sectionColors[i]);
-    stroke(150);
-    strokeWeight(1);
-    rect(x + 10, sectionY, sectionW, sectionH, 4);
-
-    // Section label
-    fill(colors.text);
-    noStroke();
-    textSize(9);
-    textStyle(NORMAL);
-    textAlign(LEFT, CENTER);
-    text(section.label, x + 15, sectionY + sectionH / 2);
-
-    // Percentage
-    textAlign(RIGHT, CENTER);
-    textSize(8);
-    fill(100);
-    text(section.size + "%", x + sectionW + 5, sectionY + sectionH / 2);
-
-    sectionY += sectionH + 2;
+  // Section 3: Template (visible from step 3+)
+  if (currentStep >= 3) {
+    drawTemplate(x + 10, sectionY, sectionW, 70);
   }
 }
 
-function drawSkillRegistry() {
-  let x = canvasWidth * 0.55;
-  let y = 45;
-  let w = canvasWidth * 0.42;
-  let h = 200;
+function drawSkillIndex(x, y, w, h) {
+  // Background
+  fill(colors.lightGray);
+  stroke(150);
+  strokeWeight(1);
+  rect(x, y, w, h, 6);
 
-  // Registry border (like a card catalog)
-  stroke(139, 90, 43);
-  strokeWeight(2);
-  fill(colors.white);
-  rect(x, y, w, h, 8);
-
-  // Wood grain effect on edges
-  fill(210, 180, 140);
-  noStroke();
-  rect(x, y, w, 25, 8, 8, 0, 0);
-  rect(x, y + h - 10, w, 10, 0, 0, 8, 8);
-
-  // Title
+  // Label
   fill(colors.text);
-  textSize(11);
+  noStroke();
+  textSize(10);
   textStyle(BOLD);
   textAlign(LEFT, TOP);
-  text("Skill Registry (30 Skills)", x + 10, y + 6);
+  text("Skill Index (~" + indexTokens.toLocaleString() + " tokens)", x + 8, y + 6);
 
-  // Card catalog icon
-  textSize(14);
-  text("\uD83D\uDDC3", x + w - 25, y + 4);
-
-  // Skill cards grid (6 columns x 5 rows)
-  let cardW = (w - 30) / 6;
-  let cardH = 25;
-  let startX = x + 10;
-  let startY = y + 30;
+  // Draw 30 skill tokens in 6 columns x 5 rows
+  let cols = 6;
+  let rows = 5;
+  let padding = 8;
+  let gapX = 4;
+  let gapY = 6;
+  let tokenW = (w - 2 * padding - (cols - 1) * gapX) / cols;
+  let tokenH = 22;  // Fixed height, decoupled from container
+  let startX = x + padding;
+  let startY = y + 25;
 
   for (let i = 0; i < 30; i++) {
-    let col = i % 6;
-    let row = Math.floor(i / 6);
-    let cardX = startX + col * (cardW + 2);
-    let cardY = startY + row * (cardH + 3);
+    let col = i % cols;
+    let row = Math.floor(i / cols);
+    let tx = startX + col * (tokenW + gapX);
+    let ty = startY + row * (tokenH + gapY);
 
-    // Card color based on state
-    if (skills[i].loaded) {
-      fill(colors.loaded);
-      if (isLoading && loadingSkillIndex === i) {
-        // Pulsing effect while loading
-        let pulse = sin(pulsePhase * 3) * 0.3 + 0.7;
-        fill(lerpColor(colors.available, colors.loaded, loadingProgress));
-      }
-    } else {
-      fill(colors.available);
-    }
+    // Highlight microsim-generator (index 0) when matched
+    let isHighlighted = i === 0 && currentStep >= 1;
+    let isHovered = hoveredSkill === i;
 
-    // Highlight on hover
-    if (hoveredSkill === i) {
+    if (isHighlighted) {
+      fill(colors.indexHighlight);
+      stroke(colors.indexHighlight);
+      strokeWeight(2);
+    } else if (isHovered) {
+      fill(color(180, 190, 200));
       stroke(colors.contextBorder);
       strokeWeight(2);
     } else {
-      stroke(100);
+      fill(colors.indexColor);
+      stroke(120);
       strokeWeight(1);
     }
 
-    rect(cardX, cardY, cardW, cardH, 3);
+    rect(tx, ty, tokenW, tokenH, 4);
 
-    // Skill name (abbreviated)
-    fill(skills[i].loaded ? 255 : colors.text);
+    // Full skill name with wrapping
+    fill(isHighlighted ? colors.white : colors.text);
     noStroke();
-    textSize(6);
+    textSize(9);
     textStyle(NORMAL);
     textAlign(CENTER, CENTER);
-    let shortName = skills[i].name.substring(0, 8);
-    if (skills[i].name.length > 8) shortName += "..";
-    text(shortName, cardX + cardW / 2, cardY + cardH / 2);
+    textWrap(WORD);
+
+    // Use text with bounding box for wrapping
+    let skillName = skillSummaries[i];
+    text(skillName, tx + 2, ty + 2, tokenW - 4, tokenH - 4);
   }
-
-  // Legend
-  let legendY = y + h - 8;
-  fill(colors.loaded);
-  noStroke();
-  rect(x + 10, legendY, 8, 8, 2);
-  fill(colors.text);
-  textSize(7);
-  textAlign(LEFT, CENTER);
-  text("Loaded", x + 22, legendY + 4);
-
-  fill(colors.available);
-  rect(x + 60, legendY, 8, 8, 2);
-  fill(colors.text);
-  text("Available", x + 72, legendY + 4);
 }
 
-function drawLoadingMechanism() {
-  let midX = canvasWidth * 0.5;
-  let y = 260;
+function drawSkillMd(x, y, w, h) {
+  let progress = currentStep === 1 ? animationProgress : 1;
+  let currentH = h * progress;
 
-  // Title
-  fill(colors.text);
-  noStroke();
-  textSize(10);
-  textStyle(BOLD);
-  textAlign(CENTER, TOP);
-  text("Loading Mechanism", midX, y);
-
-  // Arrow 1: Conversation to Registry (Relevance Detection)
-  let arrow1StartX = margin + canvasWidth * 0.22;
-  let arrow1StartY = y + 25;
-  let arrow1EndX = canvasWidth * 0.55;
-  let arrow1EndY = y + 25;
-
-  stroke(colors.skillSummary);
+  // Background with loading animation
+  fill(lerpColor(colors.lightGray, color(220, 252, 231), progress));
+  stroke(colors.skillColor);
   strokeWeight(2);
-  drawArrow(arrow1StartX, arrow1StartY, arrow1EndX, arrow1EndY);
+  rect(x, y, w, currentH, 6);
 
-  fill(colors.skillSummary);
-  noStroke();
-  textSize(8);
-  textStyle(ITALIC);
-  text("Relevance Detection", (arrow1StartX + arrow1EndX) / 2, arrow1StartY - 8);
+  if (progress > 0.3) {
+    // Label
+    fill(colors.text);
+    noStroke();
+    textSize(10);
+    textStyle(BOLD);
+    textAlign(LEFT, TOP);
+    text("microsim-generator/SKILL.md (~" + skillTokens.toLocaleString() + " tokens)", x + 8, y + 6);
 
-  // Arrow 2: Registry to Context (On-demand Loading)
-  let arrow2StartX = canvasWidth * 0.55;
-  let arrow2StartY = y + 50;
-  let arrow2EndX = margin + canvasWidth * 0.22;
-  let arrow2EndY = y + 50;
+    if (progress > 0.5) {
+      // Content preview
+      textSize(8);
+      textStyle(NORMAL);
+      fill(80);
+      let lines = [
+        "• Routes to appropriate visualization library (p5.js, Chart.js, etc.)",
+        "• Analyzes user requirements for best match",
+        "• Generates complete MicroSim packages",
+        "• Creates HTML, JavaScript, CSS, documentation"
+      ];
+      for (let i = 0; i < lines.length && i < Math.floor((progress - 0.5) * 8); i++) {
+        text(lines[i], x + 12, y + 24 + i * 14);
+      }
+    }
+  }
+}
 
-  stroke(colors.loaded);
+function drawTemplate(x, y, w, h) {
+  let progress = currentStep === 3 ? animationProgress : 1;
+  let currentH = h * progress;
+
+  // Background with loading animation
+  fill(lerpColor(colors.lightGray, color(243, 232, 255), progress));
+  stroke(colors.templateColor);
   strokeWeight(2);
-  drawArrow(arrow2StartX, arrow2StartY, arrow2EndX, arrow2EndY);
+  rect(x, y, w, currentH, 6);
 
-  fill(colors.loaded);
-  noStroke();
-  text("On-demand Loading", (arrow2StartX + arrow2EndX) / 2, arrow2StartY + 12);
+  if (progress > 0.3) {
+    // Label
+    fill(colors.text);
+    noStroke();
+    textSize(10);
+    textStyle(BOLD);
+    textAlign(LEFT, TOP);
+    text("p5js-template.md (~" + templateTokens.toLocaleString() + " tokens)", x + 8, y + 6);
 
-  // Visual metaphor: Books being pulled
-  textSize(16);
-  let bookX = midX - 10 + sin(pulsePhase) * 5;
-  text("\uD83D\uDCDA", bookX, y + 37);
+    if (progress > 0.5) {
+      // Content preview
+      textSize(8);
+      textStyle(NORMAL);
+      fill(80);
+      let lines = [
+        "• Standard p5.js MicroSim structure",
+        "• Responsive canvas setup, draw loop pattern"
+      ];
+      for (let i = 0; i < lines.length && i < Math.floor((progress - 0.5) * 4); i++) {
+        text(lines[i], x + 12, y + 24 + i * 14);
+      }
+    }
+  }
 }
 
-function drawArrow(x1, y1, x2, y2) {
-  line(x1, y1, x2, y2);
-
-  // Arrowhead
-  let angle = atan2(y2 - y1, x2 - x1);
-  let arrowSize = 8;
-
-  push();
-  translate(x2, y2);
-  rotate(angle);
-  fill(colors.loaded);
-  noStroke();
-  triangle(0, 0, -arrowSize, -arrowSize / 2, -arrowSize, arrowSize / 2);
-  pop();
-}
-
-function drawScenarioPanel() {
+function drawExplanation() {
   let x = margin;
-  let y = 320;
+  let y = 490;
   let w = canvasWidth - 2 * margin;
-  let h = 115;
 
-  // Panel background
   fill(255, 255, 240);
-  stroke(colors.userInput);
-  strokeWeight(2);
-  rect(x, y, w, h, 8);
+  stroke(200);
+  strokeWeight(1);
+  rect(x, y, w, 75, 6);
 
-  // Title
   fill(colors.text);
   noStroke();
   textSize(10);
   textStyle(BOLD);
   textAlign(LEFT, TOP);
-  text("Example Scenario", x + 10, y + 8);
 
-  // User message
-  fill(colors.userInput);
-  rect(x + 10, y + 25, w - 20, 22, 4);
-  fill(colors.text);
-  textSize(9);
-  textStyle(NORMAL);
-  textAlign(LEFT, CENTER);
-  text("User: \"Create a physics simulation for pendulum motion\"", x + 15, y + 36);
+  let explanations = [
+    "Step 1: Context starts with 30 skill summaries (~100 tokens each)",
+    "Step 2: User prompt matches 'microsim-generator' skill",
+    "Step 3: Full SKILL.md loaded into context (+5,000 tokens)",
+    "Step 4: Skill requests p5.js template (+2,000 tokens)",
+    "Complete: All resources loaded, ready to generate MicroSim"
+  ];
 
-  // Skill index scan
-  let scanY = y + 55;
-  fill(colors.lightOrange);
-  rect(x + 10, scanY, w - 20, 22, 4);
+  for (let i = 0; i < explanations.length; i++) {
+    let stepNum = Math.floor(currentStep / 1);
+    if (currentStep === 1 || currentStep === 3) stepNum = currentStep;
 
-  fill(colors.text);
-  textSize(9);
-  textAlign(LEFT, CENTER);
-  text("Skill index scan: ", x + 15, scanY + 11);
-
-  // Highlighted skills
-  let highlightX = x + 100;
-
-  // physics-sim skill
-  fill(scenarioActive && scenarioStep >= 1 ? colors.loaded : colors.available);
-  stroke(100);
-  strokeWeight(1);
-  rect(highlightX, scanY + 3, 65, 16, 3);
-  fill(scenarioActive && scenarioStep >= 1 ? 255 : colors.text);
-  noStroke();
-  textSize(8);
-  textAlign(CENTER, CENTER);
-  text("physics-sim", highlightX + 32, scanY + 11);
-
-  // microsim-generator skill
-  fill(scenarioActive && scenarioStep >= 2 ? colors.loaded : colors.available);
-  stroke(100);
-  strokeWeight(1);
-  rect(highlightX + 75, scanY + 3, 95, 16, 3);
-  fill(scenarioActive && scenarioStep >= 2 ? 255 : colors.text);
-  noStroke();
-  text("microsim-generator", highlightX + 122, scanY + 11);
-
-  // Result
-  let resultY = y + 85;
-  fill(colors.lightGreen);
-  noStroke();
-  rect(x + 10, resultY, w - 20, 22, 4);
-
-  fill(colors.text);
-  textSize(9);
-  textAlign(LEFT, CENTER);
-
-  if (scenarioActive && scenarioStep >= 3) {
-    text("Both skills loaded into context. Remaining space: ~80K tokens available", x + 15, resultY + 11);
-  } else {
-    text("Click 'Run Scenario' to see the loading process", x + 15, resultY + 11);
+    if (i <= Math.floor((currentStep + 1) / 1)) {
+      fill(i === Math.min(currentStep, 4) ? colors.contextBorder : colors.text);
+      textStyle(i === Math.min(currentStep, 4) ? BOLD : NORMAL);
+    } else {
+      fill(180);
+      textStyle(NORMAL);
+    }
+    text((i === Math.min(currentStep, 4) ? "→ " : "   ") + explanations[i], x + 10, y + 8 + i * 13);
   }
 }
 
-function drawControlRegion() {
-  // Control region background
-  fill(255);
-  noStroke();
-  rect(0, drawHeight, canvasWidth, controlHeight);
+function drawControls() {
+  let y = drawHeight + 10;
 
-  // Separator line
+  // Separator
   stroke(200);
   strokeWeight(1);
   line(0, drawHeight, canvasWidth, drawHeight);
 
-  // Run Scenario button
-  let btnX = canvasWidth / 2 - 80;
-  let btnY = drawHeight + 12;
-  let btnW = 100;
-  let btnH = 28;
+  // Step button
+  let btnX = canvasWidth / 2 - 60;
+  let btnW = 80;
+  let btnH = 32;
 
-  fill(scenarioActive ? colors.available : colors.contextBorder);
+  fill(currentStep >= 4 ? colors.lightGray : colors.contextBorder);
   noStroke();
-  rect(btnX, btnY, btnW, btnH, 6);
+  rect(btnX, y + 5, btnW, btnH, 6);
 
-  fill(255);
-  textSize(11);
+  fill(colors.white);
+  textSize(12);
   textStyle(BOLD);
   textAlign(CENTER, CENTER);
-  text(scenarioActive ? "Running..." : "Run Scenario", btnX + btnW / 2, btnY + btnH / 2);
+  text(currentStep >= 4 ? "Done" : "Next Step", btnX + btnW / 2, y + 5 + btnH / 2);
 
   // Reset button
   let resetX = canvasWidth / 2 + 30;
-  fill(colors.available);
-  rect(resetX, btnY, 60, btnH, 6);
-  fill(255);
-  text("Reset", resetX + 30, btnY + btnH / 2);
+  fill(colors.indexColor);
+  rect(resetX, y + 5, 60, btnH, 6);
+  fill(colors.white);
+  text("Reset", resetX + 30, y + 5 + btnH / 2);
+}
 
-  // Instructions
-  fill(colors.text);
-  textSize(9);
-  textStyle(ITALIC);
-  textAlign(LEFT, CENTER);
-  text("Click skills to load/unload", margin, drawHeight + 25);
+function updateAnimation() {
+  if (currentStep === 1 || currentStep === 3) {
+    animationProgress += animationSpeed;
+    if (animationProgress >= 1) {
+      animationProgress = 0;
+      currentStep++;
+    }
+  }
+}
+
+function checkHover() {
+  hoveredSkill = null;
+
+  // Calculate skill index position (matches drawSkillIndex)
+  let x = margin;
+  let y = 80;
+  let w = canvasWidth - 2 * margin;
+  let h = 400;
+  let sectionY = y + 35;
+  let sectionW = w - 20;
+  let indexH = 180;
+
+  let cols = 6;
+  let rows = 5;
+  let padding = 8;
+  let gapX = 4;
+  let gapY = 6;
+  let tokenW = (sectionW - 2 * padding - (cols - 1) * gapX) / cols;
+  let tokenH = 22;  // Fixed height, decoupled from container
+  let startX = x + 10 + padding;
+  let startY = sectionY + 25;
+
+  for (let i = 0; i < 30; i++) {
+    let col = i % cols;
+    let row = Math.floor(i / cols);
+    let tx = startX + col * (tokenW + gapX);
+    let ty = startY + row * (tokenH + gapY);
+
+    if (mouseX >= tx && mouseX <= tx + tokenW &&
+        mouseY >= ty && mouseY <= ty + tokenH) {
+      hoveredSkill = i;
+      break;
+    }
+  }
 }
 
 function drawSkillTooltip() {
-  let skill = skills[hoveredSkill];
-  let boxW = 180;
-  let boxH = 55;
+  let skillName = skillSummaries[hoveredSkill];
+  let description = skillDescriptions[skillName] || "Specialized skill for " + skillName.replace(/-/g, " ");
+
+  let boxW = 200;
+  let boxH = 60;
   let boxX = mouseX + 15;
   let boxY = mouseY + 15;
 
-  // Keep on screen
+  // Keep tooltip on screen
   if (boxX + boxW > canvasWidth - 10) boxX = mouseX - boxW - 15;
   if (boxY + boxH > canvasHeight - 10) boxY = mouseY - boxH - 15;
 
@@ -517,171 +491,47 @@ function drawSkillTooltip() {
   // Skill name
   fill(colors.contextBorder);
   noStroke();
-  textSize(10);
+  textSize(11);
   textStyle(BOLD);
   textAlign(LEFT, TOP);
-  text(skill.name, boxX + 8, boxY + 6);
+  text(skillName, boxX + 8, boxY + 6);
 
-  // Status
+  // Token estimate
   textSize(8);
   textStyle(NORMAL);
-  fill(skill.loaded ? colors.loaded : colors.available);
-  text(skill.loaded ? "LOADED" : "AVAILABLE", boxX + 8, boxY + 20);
+  fill(colors.indexHighlight);
+  text("~100 tokens in index", boxX + 8, boxY + 22);
 
-  // Summary
+  // Description with word wrap
   fill(colors.text);
-  textSize(8);
-
-  // Word wrap
-  let words = skill.summary.split(' ');
-  let line = '';
-  let y = boxY + 32;
-
-  for (let word of words) {
-    let testLine = line + word + ' ';
-    if (textWidth(testLine) > boxW - 16 && line !== '') {
-      text(line.trim(), boxX + 8, y);
-      line = word + ' ';
-      y += 10;
-      if (y > boxY + boxH - 5) break;
-    } else {
-      line = testLine;
-    }
-  }
-  if (y <= boxY + boxH - 5) {
-    text(line.trim(), boxX + 8, y);
-  }
-}
-
-function checkHover() {
-  hoveredSkill = null;
-
-  // Check skill cards
-  let regX = canvasWidth * 0.55;
-  let regY = 45;
-  let w = canvasWidth * 0.42;
-  let cardW = (w - 30) / 6;
-  let cardH = 25;
-  let startX = regX + 10;
-  let startY = regY + 30;
-
-  for (let i = 0; i < 30; i++) {
-    let col = i % 6;
-    let row = Math.floor(i / 6);
-    let cardX = startX + col * (cardW + 2);
-    let cardY = startY + row * (cardH + 3);
-
-    if (mouseX >= cardX && mouseX <= cardX + cardW &&
-        mouseY >= cardY && mouseY <= cardY + cardH) {
-      hoveredSkill = i;
-      break;
-    }
-  }
+  textSize(9);
+  textWrap(WORD);
+  text(description, boxX + 8, boxY + 36, boxW - 16, boxH - 42);
 }
 
 function mousePressed() {
-  // Check skill card clicks
-  let regX = canvasWidth * 0.55;
-  let regY = 45;
-  let w = canvasWidth * 0.42;
-  let cardW = (w - 30) / 6;
-  let cardH = 25;
-  let startX = regX + 10;
-  let startY = regY + 30;
+  let y = drawHeight + 10;
+  let btnH = 32;
 
-  for (let i = 0; i < 30; i++) {
-    let col = i % 6;
-    let row = Math.floor(i / 6);
-    let cardX = startX + col * (cardW + 2);
-    let cardY = startY + row * (cardH + 3);
-
-    if (mouseX >= cardX && mouseX <= cardX + cardW &&
-        mouseY >= cardY && mouseY <= cardY + cardH) {
-      // Toggle skill loaded state with animation
-      if (!isLoading) {
-        if (skills[i].loaded) {
-          skills[i].loaded = false;
-        } else {
-          isLoading = true;
-          loadingSkillIndex = i;
-          loadingProgress = 0;
-        }
-      }
-      return;
-    }
-  }
-
-  // Check Run Scenario button
-  let btnX = canvasWidth / 2 - 80;
-  let btnY = drawHeight + 12;
-  let btnW = 100;
-  let btnH = 28;
+  // Next Step button
+  let btnX = canvasWidth / 2 - 60;
+  let btnW = 80;
 
   if (mouseX >= btnX && mouseX <= btnX + btnW &&
-      mouseY >= btnY && mouseY <= btnY + btnH) {
-    if (!scenarioActive) {
-      scenarioActive = true;
-      scenarioStep = 0;
-      scenarioTimer = 0;
+      mouseY >= y + 5 && mouseY <= y + 5 + btnH) {
+    if (currentStep < 4 && currentStep !== 1 && currentStep !== 3) {
+      currentStep++;
+      animationProgress = 0;
     }
-    return;
   }
 
-  // Check Reset button
+  // Reset button
   let resetX = canvasWidth / 2 + 30;
   if (mouseX >= resetX && mouseX <= resetX + 60 &&
-      mouseY >= btnY && mouseY <= btnY + btnH) {
-    resetScenario();
-    return;
+      mouseY >= y + 5 && mouseY <= y + 5 + btnH) {
+    currentStep = 0;
+    animationProgress = 0;
   }
-}
-
-function updateLoading() {
-  if (isLoading) {
-    loadingProgress += 0.05;
-    if (loadingProgress >= 1) {
-      skills[loadingSkillIndex].loaded = true;
-      isLoading = false;
-      loadingProgress = 0;
-      loadingSkillIndex = -1;
-    }
-  }
-}
-
-function updateScenario() {
-  if (scenarioActive) {
-    scenarioTimer++;
-
-    if (scenarioTimer === 30 && scenarioStep === 0) {
-      scenarioStep = 1;
-      // Load physics-sim
-      let physicsIndex = skillNames.indexOf("physics-sim");
-      if (physicsIndex >= 0) skills[physicsIndex].loaded = true;
-    }
-
-    if (scenarioTimer === 60 && scenarioStep === 1) {
-      scenarioStep = 2;
-      // microsim-generator already loaded
-    }
-
-    if (scenarioTimer === 90 && scenarioStep === 2) {
-      scenarioStep = 3;
-      scenarioActive = false;
-    }
-  }
-}
-
-function resetScenario() {
-  scenarioActive = false;
-  scenarioStep = 0;
-  scenarioTimer = 0;
-
-  // Reset skills to initial state
-  for (let skill of skills) {
-    skill.loaded = false;
-  }
-  skills[0].loaded = true;  // microsim-generator
-  skills[1].loaded = true;  // learning-graph
 }
 
 function windowResized() {

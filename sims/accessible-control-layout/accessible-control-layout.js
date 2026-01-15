@@ -4,12 +4,12 @@
 
 // Canvas dimensions
 let canvasWidth = 800;
-let drawHeight = 450;
+let drawHeight = 500;
 let controlHeight = 50;
 let canvasHeight = drawHeight + controlHeight;
 let margin = 20;
 
-// Section data
+// Section data with fixed heights (decoupled from layoutH)
 const sections = [
   {
     id: 'canvas',
@@ -22,8 +22,8 @@ const sections = [
       'Include focus indicator when canvas receives focus',
       'Ensure visual elements have sufficient color contrast'
     ],
-    heightRatio: 0.45,
-    color: '#E5E7EB',
+    fixedHeight: 150,
+    color: 'aliceblue',
     borderColor: '#9CA3AF'
   },
   {
@@ -37,8 +37,8 @@ const sections = [
       'Update status text when simulation values change',
       'Keep announcements concise and meaningful'
     ],
-    heightRatio: 0.12,
-    color: '#DBEAFE',
+    fixedHeight: 55,
+    color: 'aliceblue',
     borderColor: '#3B82F6'
   },
   {
@@ -53,8 +53,8 @@ const sections = [
       'Controls placed BELOW canvas, not overlapping',
       'Logical tab order: left-to-right, top-to-bottom'
     ],
-    heightRatio: 0.22,
-    color: '#D1FAE5',
+    fixedHeight: 130,
+    color: '#FFFFFF',
     borderColor: '#10B981'
   }
 ];
@@ -65,6 +65,10 @@ let hoveredSection = null;
 let showTabFlow = true;
 let animationPhase = 0;
 
+// Actual p5.js sliders
+let speedSlider, sizeSlider, countSlider;
+let slidersCreated = false;
+
 function setup() {
   updateCanvasSize();
   const canvas = createCanvas(canvasWidth, canvasHeight);
@@ -72,8 +76,26 @@ function setup() {
 
   textFont('Arial');
   createControls();
+  createSliders();
 
   describe('Interactive diagram showing accessible MicroSim layout with three sections: Canvas Area at top for visual simulation with screen reader support, Status Area in middle for announcing changes via aria-live, and Control Panel at bottom with keyboard-accessible sliders and buttons. Click sections for detailed accessibility requirements.', LABEL);
+}
+
+function createSliders() {
+  // Create actual p5.js sliders
+  speedSlider = createSlider(1, 10, 5);
+  speedSlider.style('width', '100px');
+  speedSlider.attribute('aria-label', 'Speed control');
+
+  sizeSlider = createSlider(10, 100, 50);
+  sizeSlider.style('width', '100px');
+  sizeSlider.attribute('aria-label', 'Size control');
+
+  countSlider = createSlider(1, 20, 8);
+  countSlider.style('width', '100px');
+  countSlider.attribute('aria-label', 'Count control');
+
+  slidersCreated = true;
 }
 
 function createControls() {
@@ -151,8 +173,8 @@ function draw() {
   // Calculate layout
   let layoutX = margin;
   let layoutY = 55;
-  let layoutW = canvasWidth - 2 * margin;
-  let layoutH = drawHeight - layoutY - 10;
+  let layoutW = canvasWidth - 2 * margin - 50;
+  let layoutH = drawHeight - layoutY - 90;
 
   // Draw main layout container
   fill(255);
@@ -163,11 +185,10 @@ function draw() {
   // Draw sections
   let currentY = layoutY + 10;
   let sectionPadding = 8;
-  let availableHeight = layoutH - 20;
 
   for (let i = 0; i < sections.length; i++) {
     let section = sections[i];
-    let sectionHeight = availableHeight * section.heightRatio;
+    let sectionHeight = section.fixedHeight;
     let sectionX = layoutX + 10;
     let sectionW = layoutW - 20;
 
@@ -204,11 +225,8 @@ function draw() {
 
   // Draw tab flow arrows
   if (showTabFlow) {
-    drawTabFlowArrows(layoutX, layoutY, layoutW, layoutH);
+    drawTabFlowArrows(layoutX + 15, layoutY, layoutW, layoutH);
   }
-
-  // Draw annotations
-  drawAnnotations(layoutX, layoutY, layoutW, layoutH);
 
   // Draw detail panel if section selected
   if (selectedSection) {
@@ -245,18 +263,18 @@ function drawSection(section, isSelected, isHovered) {
     drawingContext.setLineDash([]);
   }
 
-  // Section label
+  // Section label (positioned at top of region)
   fill(50);
   noStroke();
   textSize(16);
-  textAlign(CENTER, CENTER);
+  textAlign(CENTER, TOP);
   textStyle(BOLD);
-  text(section.label, b.x + b.w / 2, b.y + b.h / 2 - 10);
+  text(section.label, b.x + b.w / 2, b.y + 8);
   textStyle(NORMAL);
 
   textSize(12);
   fill(80);
-  text(section.sublabel, b.x + b.w / 2, b.y + b.h / 2 + 10);
+  text(section.sublabel, b.x + b.w / 2, b.y + 28);
 
   // Draw mock controls for control panel
   if (section.id === 'controls') {
@@ -298,6 +316,7 @@ function drawMockCanvas(b) {
   endShape();
 
   // describe() indicator
+  noStroke();
   fill(100);
   textSize(10);
   textAlign(LEFT, BOTTOM);
@@ -321,49 +340,59 @@ function drawMockStatus(b) {
   fill(59, 130, 246);
   textSize(9);
   textAlign(RIGHT, CENTER);
-  text('aria-live="polite"', b.x + b.w - 20, statusY);
+  text('Use aria-live="polite" for screen readers', b.x + b.w - 20, statusY);
   pop();
 }
 
 function drawMockControls(b) {
-  // Draw mock sliders and buttons
-  let controlY = b.y + b.h / 2 - 20;
-  let buttonY = b.y + b.h / 2 + 15;
+  // Position actual p5.js sliders within the control panel
+  let sliderY = b.y + 50;
+  let sliderSpacing = 180;
+  let labelWidth = 70;
+  let sliderStartX = b.x + 20;
 
-  // Mock sliders
-  let sliderX = b.x + 30;
-  let sliderSpacing = 120;
+  if (slidersCreated) {
+    // Hide sliders when detail panel is shown
+    if (selectedSection) {
+      speedSlider.hide();
+      sizeSlider.hide();
+      countSlider.hide();
+    } else {
+      speedSlider.show();
+      sizeSlider.show();
+      countSlider.show();
 
-  for (let i = 0; i < 3; i++) {
-    let x = sliderX + i * sliderSpacing;
+      // Get canvas position for absolute positioning
+      let canvasElement = document.querySelector('canvas');
+      let canvasRect = canvasElement.getBoundingClientRect();
 
-    // Label
-    fill(60);
-    textSize(9);
-    textAlign(CENTER, BOTTOM);
-    noStroke();
-    text(['Speed', 'Size', 'Count'][i], x + 40, controlY - 2);
+      // Position and draw labels for each slider
+      let sliders = [
+        { slider: speedSlider, label: 'Speed', value: speedSlider.value() },
+        { slider: sizeSlider, label: 'Size', value: sizeSlider.value() },
+        { slider: countSlider, label: 'Count', value: countSlider.value() }
+      ];
 
-    // Slider track
-    fill(200);
-    noStroke();
-    rect(x, controlY, 80, 6, 3);
+      for (let i = 0; i < sliders.length; i++) {
+        let x = sliderStartX + i * sliderSpacing;
+        let s = sliders[i];
 
-    // Slider thumb
-    fill(59, 130, 246);
-    let thumbPos = x + 20 + i * 20;
-    ellipse(thumbPos, controlY + 3, 12, 12);
+        // Draw label and value to the left of slider
+        fill(60);
+        noStroke();
+        textSize(12);
+        textAlign(LEFT, CENTER);
+        text(s.label + ': ' + s.value, x+20, sliderY+3);
 
-    // Focus indicator on first slider
-    if (i === 0) {
-      noFill();
-      stroke('#3B82F6');
-      strokeWeight(2);
-      ellipse(thumbPos, controlY + 3, 18, 18);
+        // Position the actual slider
+        let sliderX = x + labelWidth;
+        s.slider.position(canvasRect.left + sliderX, canvasRect.top + sliderY - 8);
+      }
     }
   }
 
-  // Mock buttons
+  // Mock buttons below sliders
+  let buttonY = b.y + 70;
   let buttonX = b.x + b.w / 2 - 120;
   let buttons = ['Start', 'Pause', 'Reset'];
 
@@ -536,7 +565,8 @@ function drawDetailPanel(section) {
   textSize(11);
   let reqY = panelY + 132;
   for (let i = 0; i < section.requirements.length; i++) {
-    fill('#10B981');
+    fill('green');
+    // Checkmark
     text('\u2713', panelX + 25, reqY);
     fill(70);
     text(section.requirements[i], panelX + 45, reqY, panelW - 70, 20);

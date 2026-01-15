@@ -2,7 +2,7 @@
 // Shows best practices for animation controls in MicroSims
 
 let canvasWidth = 400;
-let canvasHeight = 700;
+let canvasHeight = 520;
 let drawWidth, drawHeight;
 let margin = 20;
 
@@ -23,6 +23,7 @@ let gravity = 0.2;
 
 // UI state
 let hoveredElement = null;
+let hoveredRegion = null;
 let draggingScrubber = false;
 
 // Control positions
@@ -30,8 +31,6 @@ let controlsY;
 let scrubberY;
 let speedSliderY;
 let advancedY;
-let dosY;
-let dontsY;
 
 // Speed options
 let speedOptions = [0.25, 0.5, 1.0, 1.5, 2.0];
@@ -44,7 +43,7 @@ function updateCanvasSize() {
   } else {
     canvasWidth = min(windowWidth - 40, 600);
   }
-  canvasHeight = 700;
+  canvasHeight = 430;
   drawWidth = canvasWidth;
   drawHeight = canvasHeight;
 }
@@ -55,7 +54,7 @@ function setup() {
   canvas.parent('canvas-container');
 
   // Define colors
-  bgColor = color(248, 250, 252);
+  bgColor = color(240, 248, 255); // aliceblue
   textColor = color(30, 41, 59);
   accentColor = color(59, 130, 246);
   controlBgColor = color(241, 245, 249);
@@ -79,9 +78,7 @@ function calculatePositions() {
   controlsY = 200;
   scrubberY = 260;
   speedSliderY = 320;
-  advancedY = 380;
-  dosY = 460;
-  dontsY = 560;
+  advancedY = 390;
 }
 
 function initializeBalls() {
@@ -108,6 +105,7 @@ function initializeBalls() {
 
 function draw() {
   background(bgColor);
+  hoveredRegion = null;
 
   // Update animation if playing
   if (isPlaying) {
@@ -141,12 +139,6 @@ function draw() {
 
   // Draw advanced controls
   drawAdvancedControls();
-
-  // Draw best practices
-  drawBestPractices();
-
-  // Draw Do's and Don'ts
-  drawDosAndDonts();
 }
 
 function drawTitle() {
@@ -170,7 +162,7 @@ function drawViewport() {
   let vpW = drawWidth - 2 * margin;
   let vpH = 120;
 
-  fill(30, 41, 59);
+  fill(192, 192, 192); // silver
   stroke(accentColor);
   strokeWeight(2);
   rect(vpX, vpY, vpW, vpH, 8);
@@ -183,20 +175,23 @@ function drawViewport() {
     let displayY = map(ball.y, 0, 100, vpY + 20, vpY + vpH - 20);
     ellipse(displayX, displayY, ball.radius * 2);
 
-    // Draw shadow
+    // Draw shadow at floor level, directly under ball
     fill(0, 50);
-    ellipse(displayX + 2, displayY + vpH - 40, ball.radius * 2, ball.radius * 0.5);
+    ellipse(displayX, vpY + vpH - 15, ball.radius * 2, ball.radius * 0.5);
   }
 
   // Viewport label
-  fill(255, 200);
+  fill(60);
   noStroke();
   textSize(10);
   textAlign(LEFT, TOP);
   text("Sample Physics Animation", vpX + 10, vpY + 5);
 
-  // Callout annotation for viewport
-  drawCallout(vpX + vpW + 5, vpY + 30, "Animation viewport\nshows simulation\nin progress", -1, 0);
+  // Check hover and show callout
+  if (mouseX > vpX && mouseX < vpX + vpW && mouseY > vpY && mouseY < vpY + vpH) {
+    hoveredRegion = 'viewport';
+    drawCallout(vpX + vpW + 5, vpY + 30, "Animation viewport\nshows simulation\nin progress", -1, 0);
+  }
 }
 
 function updateBalls() {
@@ -229,7 +224,7 @@ function drawTransportControls() {
   textSize(12);
   textStyle(BOLD);
   textAlign(LEFT, CENTER);
-  text("Transport Controls", margin, y - 20);
+  text("Transport Controls", margin, y);
 
   // Control bar background
   fill(controlBgColor);
@@ -265,9 +260,12 @@ function drawTransportControls() {
   let skipEndX = centerX + btnSpacing * 2;
   drawButton(skipEndX, btnY, btnSize, 'skipEnd', hoveredElement === 'skipEnd');
 
-  // Annotations
-  drawCallout(playX, y + barH + 15, "Prominent play/pause\nMost used control", 0, 1);
-  drawCallout(resetX - 30, y - 5, "Reset - Always\nprovide escape hatch", 0, -1);
+  // Check hover and show callout to the right of control bar
+  if (mouseX > centerX - barW/2 && mouseX < centerX + barW/2 && mouseY > y - 25 && mouseY < y + barH + 10) {
+    hoveredRegion = 'transport';
+    let rightEdge = centerX + barW/2 + 10;
+    drawCallout(rightEdge, y, "Play/pause is prominent\nas most used control.\nReset provides an\nescape hatch.", 1, 0);
+  }
 }
 
 function drawButton(x, y, size, type, hovered) {
@@ -323,7 +321,7 @@ function drawButton(x, y, size, type, hovered) {
 
 function drawScrubber() {
   let y = scrubberY;
-  let x = margin + 40;
+  let x = margin + 20;
   let w = drawWidth - 2 * margin - 80;
 
   // Section label
@@ -332,7 +330,7 @@ function drawScrubber() {
   textSize(12);
   textStyle(BOLD);
   textAlign(LEFT, CENTER);
-  text("Timeline / Scrubber", margin, y - 15);
+  text("Timeline", margin, y - 15);
 
   // Track background
   fill(220);
@@ -369,9 +367,12 @@ function drawScrubber() {
   let totalSec = (animationDuration / 10).toFixed(1);
   text(currentSec + "s / " + totalSec + "s", x + w + 10, y + 12);
 
-  // Annotations
-  drawCallout(x + w/2, y + 35, "Scrubber - Allow random\naccess to any point", 0, 1);
-  drawCallout(x + w/4, y - 8, "Segment markers\nshow structure", 0, -1);
+  // Check hover and show callout to the right
+  if (mouseX > margin && mouseX < drawWidth - margin && mouseY > y - 20 && mouseY < y + 30) {
+    hoveredRegion = 'scrubber';
+    let rightEdge = x + w + 50;
+    drawCallout(rightEdge, y, "Allow random access\nto any point. Markers\nshow structure.", 1, 0);
+  }
 }
 
 function drawSpeedControl() {
@@ -424,8 +425,12 @@ function drawSpeedControl() {
   textAlign(LEFT, CENTER);
   text("Current: " + speedOptions[currentSpeedIndex] + "x", x + w + 30, y + 12);
 
-  // Annotation
-  drawCallout(x + w/2, y + 50, "Speed slider - Default to 1x\nAllow slower for complex content", 0, 1);
+  // Check hover and show callout to the right
+  if (mouseX > margin && mouseX < drawWidth - margin && mouseY > y - 20 && mouseY < y + 45) {
+    hoveredRegion = 'speed';
+    let rightEdge = x + w + 150;
+    drawCallout(rightEdge, y, "Default to 1x speed.\nAllow slower playback\nfor complex content.", 1, 0);
+  }
 }
 
 function drawAdvancedControls() {
@@ -517,149 +522,7 @@ function drawAdvancedControls() {
   text("Quality", qualX + 40, btnY);
 }
 
-function drawBestPractices() {
-  let y = dosY;
-
-  // Section label
-  fill(textColor);
-  noStroke();
-  textSize(12);
-  textStyle(BOLD);
-  textAlign(LEFT, CENTER);
-  text("Best Practices", margin, y - 15);
-
-  // Background
-  fill(34, 197, 94, 20);
-  noStroke();
-  rect(margin, y, drawWidth - 2 * margin, 80, 8);
-
-  // Check marks and tips
-  let tips = [
-    "Controls should follow media player conventions",
-    "Most important controls should be most prominent",
-    "Provide keyboard shortcuts (space = play/pause)",
-    "Remember user preferences between sessions"
-  ];
-
-  fill(textColor);
-  textSize(10);
-  textStyle(NORMAL);
-  textAlign(LEFT, CENTER);
-
-  for (let i = 0; i < tips.length; i++) {
-    let tipY = y + 15 + i * 18;
-
-    // Checkmark
-    fill(34, 197, 94);
-    noStroke();
-    ellipse(margin + 15, tipY, 14, 14);
-
-    stroke(255);
-    strokeWeight(2);
-    line(margin + 11, tipY, margin + 14, tipY + 3);
-    line(margin + 14, tipY + 3, margin + 19, tipY - 3);
-
-    // Text
-    fill(textColor);
-    noStroke();
-    text(tips[i], margin + 30, tipY);
-  }
-}
-
-function drawDosAndDonts() {
-  let y = dontsY;
-  let colW = (drawWidth - 3 * margin) / 2;
-
-  // DO section
-  fill(textColor);
-  noStroke();
-  textSize(12);
-  textStyle(BOLD);
-  textAlign(LEFT, CENTER);
-  text("DO", margin, y - 15);
-
-  fill(34, 197, 94, 20);
-  noStroke();
-  rect(margin, y, colW, 110, 8);
-
-  let dos = [
-    "Use familiar iconography",
-    "Make controls touch-friendly",
-    "Show current state clearly",
-    "Support keyboard navigation"
-  ];
-
-  fill(textColor);
-  textSize(10);
-  textStyle(NORMAL);
-
-  for (let i = 0; i < dos.length; i++) {
-    let itemY = y + 18 + i * 24;
-
-    // Plus icon
-    fill(34, 197, 94);
-    noStroke();
-    rectMode(CENTER);
-    rect(margin + 15, itemY, 12, 12, 2);
-    rectMode(CORNER);
-
-    fill(255);
-    textAlign(CENTER, CENTER);
-    textStyle(BOLD);
-    text("+", margin + 15, itemY - 1);
-
-    fill(textColor);
-    textStyle(NORMAL);
-    textAlign(LEFT, CENTER);
-    text(dos[i], margin + 28, itemY);
-  }
-
-  // DON'T section
-  let dontX = margin * 2 + colW;
-
-  fill(textColor);
-  textSize(12);
-  textStyle(BOLD);
-  text("DON'T", dontX, y - 15);
-
-  fill(239, 68, 68, 20);
-  noStroke();
-  rect(dontX, y, colW, 110, 8);
-
-  let donts = [
-    "Auto-play without consent",
-    "Hide essential controls",
-    "Use non-standard icons",
-    "Forget mobile users"
-  ];
-
-  fill(textColor);
-  textSize(10);
-  textStyle(NORMAL);
-
-  for (let i = 0; i < donts.length; i++) {
-    let itemY = y + 18 + i * 24;
-
-    // X icon
-    fill(239, 68, 68);
-    noStroke();
-    rectMode(CENTER);
-    rect(dontX + 15, itemY, 12, 12, 2);
-    rectMode(CORNER);
-
-    stroke(255);
-    strokeWeight(2);
-    line(dontX + 11, itemY - 4, dontX + 19, itemY + 4);
-    line(dontX + 11, itemY + 4, dontX + 19, itemY - 4);
-
-    fill(textColor);
-    noStroke();
-    textAlign(LEFT, CENTER);
-    text(donts[i], dontX + 28, itemY);
-  }
-}
-
-function drawCallout(x, y, text, anchorX, anchorY) {
+function drawCallout(x, y, labelText, anchorX, anchorY) {
   push();
 
   // Constrain callout to canvas
@@ -682,7 +545,7 @@ function drawCallout(x, y, text, anchorX, anchorY) {
   strokeWeight(2);
 
   textSize(9);
-  let lines = text.split('\n');
+  let lines = labelText.split('\n');
   let boxH = lines.length * 12 + padding * 2;
 
   rectMode(CORNER);

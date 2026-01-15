@@ -459,8 +459,6 @@
         
       
         
-          
-        
       
         
           
@@ -983,53 +981,20 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#interactive-features" class="md-nav__link">
+  <a href="#best-practices" class="md-nav__link">
     <span class="md-ellipsis">
-      Interactive Features
+      Best Practices
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#key-best-practices" class="md-nav__link">
+  <a href="#interactive-features" class="md-nav__link">
     <span class="md-ellipsis">
-      Key Best Practices
+      Interactive Features
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="Key Best Practices">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#design-conventions" class="md-nav__link">
-    <span class="md-ellipsis">
-      Design Conventions
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#dos" class="md-nav__link">
-    <span class="md-ellipsis">
-      Do's
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#donts" class="md-nav__link">
-    <span class="md-ellipsis">
-      Don'ts
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -1232,7 +1197,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../chart-selection/" class="md-nav__link">
+      <a href="../chart-selection/index.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3265,53 +3230,20 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#interactive-features" class="md-nav__link">
+  <a href="#best-practices" class="md-nav__link">
     <span class="md-ellipsis">
-      Interactive Features
+      Best Practices
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#key-best-practices" class="md-nav__link">
+  <a href="#interactive-features" class="md-nav__link">
     <span class="md-ellipsis">
-      Key Best Practices
+      Interactive Features
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="Key Best Practices">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#design-conventions" class="md-nav__link">
-    <span class="md-ellipsis">
-      Design Conventions
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#dos" class="md-nav__link">
-    <span class="md-ellipsis">
-      Do's
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#donts" class="md-nav__link">
-    <span class="md-ellipsis">
-      Don'ts
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -3376,6 +3308,9 @@
 
 <h1 id="animation-control-guide">Animation Control Guide</h1>
 <p>This interactive infographic demonstrates best practices for animation controls in MicroSims, providing a template that designers can follow when building educational simulations.</p>
+<iframe src="main.html" width="100%" height="500px" scrolling="no"></iframe>
+
+<p><a href="main.html">Fullscreen</a></p>
 <h2 id="about-this-microsim">About This MicroSim</h2>
 <p>The guide showcases the essential components of a well-designed animation control system:</p>
 <ol>
@@ -3415,11 +3350,38 @@
 <li>Fullscreen button</li>
 <li>Quality/detail level selector</li>
 </ol>
-<iframe src="main.html" width="100%" height="720px" scrolling="no" style="overflow: hidden; border: 1px solid #ccc; border-radius: 8px;"></iframe>
-
-<p><a href="main.html" target="_blank" title="Open in a new tab to expand">
-  <img src="/automating-instructional-design/img/icons/fullscreen.png" alt="Fullscreen" style="cursor: pointer; width: 24px; height: 24px;">
-</a></p>
+<h2 id="best-practices">Best Practices</h2>
+<p>Controls should follow these guidelines:</p>
+<ul>
+<li>:white_check_mark: <strong>Follow media player conventions</strong> - Users already know how video players work</li>
+<li>:white_check_mark: <strong>Make important controls prominent</strong> - Play/pause should be the most visible element</li>
+<li>:white_check_mark: <strong>Provide keyboard shortcuts</strong> - Space for play/pause, arrows for stepping</li>
+<li>:white_check_mark: <strong>Remember user preferences</strong> - Store settings between sessions</li>
+</ul>
+<div class="grid cards">
+<ul>
+<li>
+<p>:material-check-circle:{ .lg .middle } <strong>DO</strong></p>
+<hr />
+<ul>
+<li>Use familiar iconography</li>
+<li>Make controls touch-friendly</li>
+<li>Show current state clearly</li>
+<li>Support keyboard navigation</li>
+</ul>
+</li>
+<li>
+<p>:material-close-circle:{ .lg .middle } <strong>DON'T</strong></p>
+<hr />
+<ul>
+<li>Auto-play without consent</li>
+<li>Hide essential controls</li>
+<li>Use non-standard icons</li>
+<li>Forget mobile users</li>
+</ul>
+</li>
+</ul>
+</div>
 <h2 id="interactive-features">Interactive Features</h2>
 <p>Try out the controls to see how they work:</p>
 <ul>
@@ -3428,29 +3390,6 @@
 <li><strong>Click speed markers</strong> to change playback speed</li>
 <li><strong>Toggle Loop</strong> to enable continuous playback</li>
 <li><strong>Use keyboard shortcuts</strong>: Space (play/pause), Arrow keys (step), R (reset), L (loop)</li>
-</ul>
-<h2 id="key-best-practices">Key Best Practices</h2>
-<p>The guide highlights these essential principles:</p>
-<h3 id="design-conventions">Design Conventions</h3>
-<ul>
-<li><strong>Familiar iconography</strong> - Use standard media player symbols users already know</li>
-<li><strong>Prominent primary controls</strong> - Make play/pause the most visible element</li>
-<li><strong>Keyboard support</strong> - Provide shortcuts for common actions</li>
-<li><strong>Persistence</strong> - Remember user preferences between sessions</li>
-</ul>
-<h3 id="dos">Do's</h3>
-<ul>
-<li>Use familiar, standard icons that users recognize</li>
-<li>Make controls touch-friendly for mobile users</li>
-<li>Clearly show the current state (playing vs paused)</li>
-<li>Support keyboard navigation for accessibility</li>
-</ul>
-<h3 id="donts">Don'ts</h3>
-<ul>
-<li>Auto-play without user initiation</li>
-<li>Hide essential controls behind menus</li>
-<li>Use non-standard or ambiguous icons</li>
-<li>Forget about mobile and touch users</li>
 </ul>
 <h2 id="implementation-notes">Implementation Notes</h2>
 <p>This MicroSim demonstrates:</p>

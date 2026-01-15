@@ -198,6 +198,7 @@ function drawCard(index, x, y) {
 
   fill(isSelected ? 'white' : '#333');
   textSize(12);
+  noStroke();
   text(card.useWhen, x + 70, y + 52, cardWidth - 80, 35);
 
   // Example
