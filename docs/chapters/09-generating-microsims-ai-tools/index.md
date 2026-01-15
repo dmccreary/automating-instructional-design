@@ -1434,6 +1434,140 @@ Color scheme:
 Implementation: HTML/CSS/JavaScript dashboard with local storage for persistence
 </details>
 
+## Case Study: p5.js vs Mermaid for Interactive Workflows
+
+To illustrate the importance of library selection and the regeneration decision, let's examine a real case where the same MicroSim was implemented using two different approaches: p5.js and Mermaid.js.
+
+### The Challenge: Interactive Accessibility Audit Workflow
+
+The goal was to create an interactive workflow diagram that guides users through a systematic accessibility audit. The workflow has 8 steps including 5 test nodes, each requiring:
+
+- **Pass/Fail buttons** embedded within each test node
+- **Color changes** to reflect test results (green for pass, red for fail, orange for pending)
+- **Progress tracking** showing passed, failed, and pending counts
+- **Tooltips** displaying test questions on hover
+- **Reset functionality** to start a new audit
+
+### Implementation 1: p5.js (Canvas-Based)
+
+The p5.js version treats everything as a custom drawing problem. All elements—nodes, connectors, buttons, text—are rendered programmatically on an HTML canvas.
+
+<iframe src="../../sims/accessibility-audit-workflow/main.html" height="700px" width="100%" scrolling="no" style="overflow: hidden;"></iframe>
+
+[View p5.js Version Fullscreen](../../sims/accessibility-audit-workflow/main.html){ .md-button }
+
+**Architecture:**
+```
+JavaScript (p5.js)
+  └── Data: steps[] array (single source of truth)
+        └── Rendering: draw() loop
+              └── Interaction: mousePressed() with hit detection
+```
+
+### Implementation 2: Mermaid.js (Render + Overlay)
+
+The Mermaid version uses the library to render the flowchart SVG, then overlays interactive HTML buttons using JavaScript DOM manipulation.
+
+<iframe src="../../sims/accessibility-audit-mermaid/main.html" height="1000px" width="100%" scrolling="no" style="overflow: hidden;"></iframe>
+
+[View Mermaid Version Fullscreen](../../sims/accessibility-audit-mermaid/main.html){ .md-button }
+
+**Architecture:**
+```
+Mermaid.js (external library)
+  └── Mermaid Syntax (in HTML) → SVG Output (black box)
+        └── JavaScript (custom)
+              └── Data: testData{} object (duplicates node info)
+                    └── DOM Manipulation: overlays, color changes
+```
+
+### Quantitative Comparison
+
+| Metric | p5.js Version | Mermaid Version |
+|--------|---------------|-----------------|
+| Total Lines of Code | 644 | 522 (330 HTML + 192 CSS) |
+| Files | 1 (.js) | 2 (.html, .css) |
+| Data Locations | 1 (steps array) | 2 (Mermaid syntax + JS object) |
+| Debug Difficulty | Low | High |
+
+### Problems Encountered
+
+**p5.js Problems (Minor):**
+
+1. Button positioning within nodes—straightforward arithmetic adjustments
+2. Text centering in ellipses—conditional offset for node types
+3. Connector spacing—manual Y-position adjustments
+
+**Resolution:** All problems were simple coordinate calculations.
+
+**Mermaid Problems (Significant):**
+
+1. **Node ID discovery**—Mermaid v11 generates IDs like `flowchart-Test1-0`, but this varies by version
+2. **Button visibility**—Required z-index debugging and scroll offset handling
+3. **SVG manipulation**—Changing node colors requires DOM queries into generated SVG
+4. **Positioning overlays**—`getBoundingClientRect()` relative to container with scroll offsets
+5. **Data duplication**—Node info exists in both Mermaid syntax AND JavaScript object
+
+**Resolution:** Required workaround functions, debug logging, and multiple iteration cycles.
+
+### Maintainability Analysis
+
+**Adding a new test step:**
+
+| Task | p5.js | Mermaid |
+|------|-------|---------|
+| Places to update | 1 (steps array) | 3 (Mermaid syntax, testData{}, auditResults{}) |
+| Risk of inconsistency | Low | High |
+| Time required | ~2 minutes | ~5 minutes |
+
+**Changing node appearance:**
+
+- **p5.js:** Full control via `drawNode()` function—shapes, colors, effects, animations
+- **Mermaid:** Limited to `classDef` CSS-like syntax or post-render DOM manipulation
+
+### Decision Rules: When to Choose Each
+
+Based on this case study, here are decision rules for the **regeneration decision** when choosing between implementations:
+
+**Choose p5.js when:**
+
+| Condition | Weight |
+|-----------|--------|
+| Workflow nodes need embedded interactive controls (buttons, sliders) | Critical |
+| Node appearance changes based on state (color, size, shape) | High |
+| Custom animations or transitions are needed | High |
+| Pixel-precise positioning is required | Medium |
+| Diagram will be frequently modified | Medium |
+
+**Choose Mermaid when:**
+
+| Condition | Weight |
+|-----------|--------|
+| Workflow is static (view-only, no interaction) | Critical |
+| Standard flowchart shapes are sufficient | High |
+| Diagram is documentation (not a learning tool) | High |
+| Quick prototype needed | Medium |
+| Diagram content comes from text/markdown source | Medium |
+
+### The Key Insight
+
+> **If users need to click ON diagram elements (not just view them), use p5.js.**
+> **If the diagram is documentation or navigation, use Mermaid.**
+
+This case study demonstrates why the **regeneration decision** matters. When the original Mermaid implementation encountered significant interaction challenges, the appropriate response was to recognize that the library choice was fundamentally mismatched to the requirements—and either regenerate with a different approach or accept significant workaround complexity.
+
+For interactive educational workflows with embedded controls, the additional p5.js code complexity is more than offset by:
+
+1. Single source of truth for data
+2. Predictable, debuggable coordinate system
+3. No dependency on library internals
+4. Full control over all visual elements
+5. Straightforward maintenance path
+
+Mermaid excels at its intended purpose: generating attractive diagrams from text descriptions. When interactivity extends beyond basic tooltips, the abstraction becomes a liability rather than an asset.
+
+---
+
 ## Putting It All Together: The Complete AI Collaboration Workflow
 
 Let's synthesize everything into a practical workflow you can follow:
