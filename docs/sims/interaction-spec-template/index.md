@@ -1,5 +1,8 @@
 # Interaction Specification Template
 
+<iframe id="sim-iframe" src="./main.html" width="100%" height="302" scrolling="no">
+</iframe>
+[Fullscreen](./main.html)
 An interactive visualization showing the three-part structure of a well-specified interaction: Trigger, Response, and Feedback.
 
 ## About This MicroSim
@@ -16,15 +19,8 @@ Understanding this template helps instructional designers create complete, unamb
 
 - **Click** on any box to expand or collapse its sub-items
 - **Hover** over boxes to see detailed descriptions
+
 - Watch the animated arrows showing the flow from Trigger to Response to Feedback
-
-<div id="canvas-container" style="min-height: 452px; border: 1px solid #ccc;">
-    <iframe id="sim-iframe" src="./main.html"
-            style="width: 100%; height: 452px; border: none; display: block;">
-    </iframe>
-</div>
-
-<a href="./main.html" target="_blank" class="button">Open Full Screen</a>
 
 ## Interaction Structure Breakdown
 

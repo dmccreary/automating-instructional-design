@@ -15,7 +15,7 @@ Click **Next Step** to walk through the loading process:
 The context window starts with a **Skill Index** containing 30 skill summaries (~100 tokens each, ~3,000 tokens total). Each summary describes what the skill does and when to use it. This lightweight index allows Claude to quickly identify relevant skills without consuming much context space.
 
 ### Step 2: User Prompt Triggers Match
-When a user makes a request (e.g., "Create a pendulum physics simulation"), Claude scans the skill index for matches. The **microsim-generator** skill is identified as relevant and highlighted in orange.
+When a user makes a request (e.g., "Use the microsim-generator skill to create a pendulum physics simulation"), Claude scans the skill index for matches. The **microsim-generator** skill is identified as relevant and highlighted in orange.
 
 ### Step 3: SKILL.md Loaded
 The full skill file (`SKILL.md`, ~5,000 tokens) is loaded into the context window. This contains:
@@ -85,6 +85,9 @@ User Request
 
 ## References
 
-- [Claude Code Documentation](https://docs.anthropic.com/en/docs/claude-code)
-- [Context Window Management](https://docs.anthropic.com/en/docs/build-with-claude/context-windows)
-- [p5.js Reference](https://p5js.org/reference/)
+- [Agent Skills Documentation](https://code.claude.com/docs/en/skills) - Official Claude Code skills guide
+- [Anthropic Skills GitHub Repository](https://github.com/anthropics/skills) - Example skills and templates
+- [Introducing Agent Skills](https://www.anthropic.com/news/skills) - Anthropic announcement
+- [Equipping Agents with Skills](https://www.anthropic.com/engineering/equipping-agents-for-the-real-world-with-agent-skills) - Engineering blog post
+- [What are Skills?](https://support.claude.com/en/articles/12512176-what-are-skills) - Claude Help Center
+- [p5.js Reference](https://p5js.org/reference/) - Graphics library used in this MicroSim

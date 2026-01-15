@@ -4,7 +4,7 @@
 
 // Canvas dimensions
 let canvasWidth = 800;
-let drawHeight = 400;
+let drawHeight = 300;
 let controlHeight = 50;
 let canvasHeight = drawHeight + controlHeight;
 let margin = 20;
@@ -110,6 +110,7 @@ function draw() {
 
   // Title
   fill(colors.text);
+  noStroke();
   textSize(18);
   textAlign(CENTER, TOP);
   textStyle(BOLD);
@@ -118,6 +119,7 @@ function draw() {
 
   // Subtitle
   fill(colors.subtext);
+  noStroke();
   textSize(12);
   text("Click boxes to expand/collapse | Hover for descriptions", canvasWidth / 2, 34);
 
@@ -195,13 +197,14 @@ function drawBox(key, pos) {
 
   // Label
   fill('white');
+  noStroke();
   textSize(14);
   textAlign(LEFT, CENTER);
   textStyle(BOLD);
   text(box.label, pos.x + 45, pos.y + 25);
   textStyle(NORMAL);
 
-  // Expand/collapse indicator
+  noStroke();
   textSize(12);
   textAlign(RIGHT, CENTER);
   text(isExpanded ? '\u25BC' : '\u25B6', pos.x + pos.w - 15, pos.y + 25);
@@ -226,6 +229,7 @@ function drawBox(key, pos) {
 
       // Sub-item label
       fill(colors.text);
+      noStroke();
       textSize(11);
       textAlign(LEFT, TOP);
       textStyle(BOLD);
@@ -234,6 +238,7 @@ function drawBox(key, pos) {
 
       // Sub-item description
       fill(colors.subtext);
+      noStroke();
       textSize(9);
       text(item.desc, pos.x + 32, itemY + 20, pos.w - 50, subHeight - 25);
     }
@@ -247,7 +252,6 @@ function drawArrow(fromPos, toPos, label) {
   let endY = toPos.y + toPos.h / 2;
 
   let midX = (startX + endX) / 2;
-  let controlOffset = 20;
 
   // Draw curved arrow path
   stroke(colors.arrow);
@@ -285,6 +289,7 @@ function drawArrow(fromPos, toPos, label) {
 
   // Label
   fill(colors.subtext);
+  noStroke();
   textSize(11);
   textAlign(CENTER, CENTER);
   textStyle(ITALIC);
@@ -339,10 +344,10 @@ function drawIcon(type, x, y, col) {
   }
 }
 
-function drawTooltip(text) {
+function drawTooltip(message) {
   let padding = 10;
   textSize(11);
-  let textW = textWidth(text);
+  let textW = textWidth(message);
   let boxW = min(textW + padding * 2, 280);
   let boxH = 35;
 
@@ -364,14 +369,16 @@ function drawTooltip(text) {
 
   // Tooltip text
   fill(255);
+  noStroke();
   textAlign(LEFT, CENTER);
   textWrap(WORD);
-  text(text, tooltipX + padding, tooltipY + boxH/2, boxW - padding * 2);
+  text(message, tooltipX + padding, tooltipY + boxH/2, boxW - padding * 2);
 }
 
 function drawControlArea() {
   // Instructions
   fill(colors.subtext);
+  noStroke();
   textSize(12);
   textAlign(CENTER, CENTER);
   text("Three-Part Interaction Structure: Every user interaction follows Trigger \u2192 Response \u2192 Feedback", canvasWidth / 2, drawHeight + controlHeight / 2);
