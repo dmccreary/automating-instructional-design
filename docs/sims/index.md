@@ -59,10 +59,6 @@ This section contains interactive MicroSims covering topics in automating instru
 
     An interactive concept map showing the relationships between all 17 concepts covered in Chapter 1 - Foundations of Learning Objective Analysis.
 
-- **[Chart Selection Helper](./chart-selection/index.md)**
-
-    An interactive tool that helps learners choose the appropriate chart type based on their data type and the question they want to answer.
-
 - **[Chart Type Selection Guide](./chart-type-selection/index.md)**
 
     An interactive infographic that helps learners quickly identify the appropriate chart type based on their data characteristics and communication goals.

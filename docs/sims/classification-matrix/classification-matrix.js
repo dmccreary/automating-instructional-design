@@ -114,6 +114,7 @@ function draw() {
 
   // Instructions
   fill('#666');
+  noStroke();
   textSize(12);
   textAlign(CENTER, CENTER);
   text("Drag items from the right panel into the appropriate quadrant", canvasWidth / 2, drawHeight + controlHeight / 2);
@@ -166,6 +167,7 @@ function drawGrid() {
 
 function drawAxisLabels() {
   fill('#333');
+  noStroke();
   textSize(14);
   textStyle(BOLD);
 
@@ -201,6 +203,7 @@ function drawAxisLabels() {
 }
 
 function drawQuadrantInfo() {
+  noStroke();
   textSize(13);
   textStyle(BOLD);
 
@@ -240,6 +243,7 @@ function drawSidebar() {
 
   // Sidebar header
   fill('#333');
+  noStroke();
   textSize(14);
   textStyle(BOLD);
   textAlign(CENTER, TOP);

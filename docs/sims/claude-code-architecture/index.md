@@ -1,94 +1,86 @@
-# Claude Code Skills Architecture
+# Claude Code Skill Loading
 
-This interactive diagram visualizes how Claude Code Skills manage context efficiently through summary indexing and on-demand loading, enabling Claude to work with dozens of specialized capabilities while staying within context limits.
+<iframe src="main.html" width="100%" height="660px" scrolling="no" style="overflow: hidden; border: 1px solid #ccc; border-radius: 8px;"></iframe>
 
-## About This MicroSim
+[Fullscreen](main.html)
+[Edit](https://editor.p5js.org/dmccreary/sketches/T9VrF1S21)
 
-The diagram illustrates the key components of the Claude Code Skills architecture:
+This interactive diagram visualizes the step-by-step process of how Claude Code loads skills into the context window, from initial skill index matching to loading full skill content and templates.
 
-1. **Context Window** - The bounded space available for processing, divided into:
-   - Conversation history (variable size)
-   - Skill Index (~3000 tokens of summaries)
-   - Active skill content (loaded on demand)
-   - Working space (remaining capacity for generation)
+## How Skill Loading Works
 
-2. **Skill Registry** - A catalog of 30 available skills:
-   - Green cards indicate currently loaded skills
-   - Gray cards show available but unloaded skills
-   - Click any skill to simulate loading/unloading
+Click **Next Step** to walk through the loading process:
 
-3. **Loading Mechanism** - The flow between components:
-   - Relevance detection scans user input against skill summaries
-   - On-demand loading brings full skill content into context
+### Step 1: Skill Index in Context
+The context window starts with a **Skill Index** containing 30 skill summaries (~100 tokens each, ~3,000 tokens total). Each summary describes what the skill does and when to use it. This lightweight index allows Claude to quickly identify relevant skills without consuming much context space.
 
-4. **Example Scenario** - Demonstrates the loading process when a user requests a physics simulation
+### Step 2: User Prompt Triggers Match
+When a user makes a request (e.g., "Create a pendulum physics simulation"), Claude scans the skill index for matches. The **microsim-generator** skill is identified as relevant and highlighted in orange.
 
-<iframe src="main.html" width="100%" height="520px" scrolling="no" style="overflow: hidden; border: 1px solid #ccc; border-radius: 8px;"></iframe>
+### Step 3: SKILL.md Loaded
+The full skill file (`SKILL.md`, ~5,000 tokens) is loaded into the context window. This contains:
 
-<a href="main.html" target="_blank" title="Open in a new tab to expand">
-  <img src="/automating-instructional-design/img/icons/fullscreen.png" alt="Fullscreen" style="cursor: pointer; width: 24px; height: 24px;">
-</a>
+- Detailed instructions for the skill
+- Routing logic to select the right visualization library
+- Quality standards and best practices
+- File structure requirements
 
-## Key Concepts
+### Step 4: Template Loaded
+The skill references a template file (`p5js-template.md`, ~2,000 tokens) which is also loaded. This provides:
 
-### Summary Indexing
+- Standard MicroSim structure
+- Responsive canvas setup patterns
+- Draw loop conventions
 
-The skill index contains brief summaries (~100 tokens each) of all available skills. This allows Claude to quickly scan which skills might be relevant to a user's request without loading full skill content. The summaries describe:
-
-- What the skill does
-- When to use it
-- Key capabilities
-
-### On-Demand Loading
-
-When a skill is determined to be relevant:
-
-1. The skill name is detected in the index
-2. Full skill content is loaded into context
-3. Skill instructions guide Claude's behavior
-4. Only relevant skills consume context space
-
-### Context Efficiency
-
-This architecture enables Claude Code to support many specialized capabilities:
-
-- **30+ skills** available without overwhelming context
-- **~3000 tokens** for the complete skill index
-- **Variable allocation** for active skills based on need
-- **Maximum flexibility** for working space
+### Step 5: Ready to Generate
+With all resources loaded (~10,000 tokens total), Claude has everything needed to generate a complete MicroSim while still leaving ~118,000 tokens of working space.
 
 ## Interactive Elements
 
-- **Click skills** in the registry to load or unload them
-- **Hover over skills** to see their descriptions
-- **Run Scenario** button demonstrates the loading process
-- **Reset** button returns to initial state
+- **Hover over skills** in the index to see their descriptions
+- **Next Step** button advances through the loading process
+- **Reset** button returns to the initial state
 
-## How It Works
+## Key Concepts
+
+### Context Efficiency
+This architecture enables Claude Code to support many specialized capabilities:
+
+- **30+ skills** available without overwhelming context
+- **~3,000 tokens** for the complete skill index
+- **On-demand loading** of full skill content only when needed
+- **Template reuse** across multiple skills
+
+### The Loading Flow
 
 ```
 User Request
-     |
-     v
-+------------------+
-| Skill Index Scan | <-- Compare request to skill summaries
-+------------------+
-     |
-     v
-+------------------+
-| Relevance Match  | <-- Identify applicable skills
-+------------------+
-     |
-     v
-+------------------+
-| Load Full Skill  | <-- Bring skill content into context
-+------------------+
-     |
-     v
-+------------------+
-| Execute with     | <-- Use skill knowledge to respond
-| Skill Knowledge  |
-+------------------+
+     │
+     ▼
+┌──────────────────┐
+│  Skill Index     │ ◄── ~3,000 tokens always in context
+│  (30 summaries)  │
+└──────────────────┘
+     │
+     ▼
+┌──────────────────┐
+│  Match Detected  │ ◄── "microsim-generator" matches request
+└──────────────────┘
+     │
+     ▼
+┌──────────────────┐
+│  Load SKILL.md   │ ◄── +5,000 tokens
+└──────────────────┘
+     │
+     ▼
+┌──────────────────┐
+│  Load Template   │ ◄── +2,000 tokens (if skill needs it)
+└──────────────────┘
+     │
+     ▼
+┌──────────────────┐
+│  Generate Output │ ◄── ~118,000 tokens remaining
+└──────────────────┘
 ```
 
 ## References

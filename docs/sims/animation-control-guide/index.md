@@ -2,6 +2,10 @@
 
 This interactive infographic demonstrates best practices for animation controls in MicroSims, providing a template that designers can follow when building educational simulations.
 
+<iframe src="main.html" width="100%" height="500px" scrolling="no"></iframe>
+
+[Fullscreen](main.html)
+
 ## About This MicroSim
 
 The guide showcases the essential components of a well-designed animation control system:
@@ -30,11 +34,37 @@ The guide showcases the essential components of a well-designed animation contro
    - Fullscreen button
    - Quality/detail level selector
 
-<iframe src="main.html" width="100%" height="720px" scrolling="no" style="overflow: hidden; border: 1px solid #ccc; border-radius: 8px;"></iframe>
 
-<a href="main.html" target="_blank" title="Open in a new tab to expand">
-  <img src="/automating-instructional-design/img/icons/fullscreen.png" alt="Fullscreen" style="cursor: pointer; width: 24px; height: 24px;">
-</a>
+## Best Practices
+
+Controls should follow these guidelines:
+
+- :white_check_mark: **Follow media player conventions** - Users already know how video players work
+- :white_check_mark: **Make important controls prominent** - Play/pause should be the most visible element
+- :white_check_mark: **Provide keyboard shortcuts** - Space for play/pause, arrows for stepping
+- :white_check_mark: **Remember user preferences** - Store settings between sessions
+
+<div class="grid cards" markdown>
+
+-   :material-check-circle:{ .lg .middle } **DO**
+
+    ---
+
+    - Use familiar iconography
+    - Make controls touch-friendly
+    - Show current state clearly
+    - Support keyboard navigation
+
+-   :material-close-circle:{ .lg .middle } **DON'T**
+
+    ---
+
+    - Auto-play without consent
+    - Hide essential controls
+    - Use non-standard icons
+    - Forget mobile users
+
+</div>
 
 ## Interactive Features
 
@@ -45,31 +75,6 @@ Try out the controls to see how they work:
 - **Click speed markers** to change playback speed
 - **Toggle Loop** to enable continuous playback
 - **Use keyboard shortcuts**: Space (play/pause), Arrow keys (step), R (reset), L (loop)
-
-## Key Best Practices
-
-The guide highlights these essential principles:
-
-### Design Conventions
-
-- **Familiar iconography** - Use standard media player symbols users already know
-- **Prominent primary controls** - Make play/pause the most visible element
-- **Keyboard support** - Provide shortcuts for common actions
-- **Persistence** - Remember user preferences between sessions
-
-### Do's
-
-- Use familiar, standard icons that users recognize
-- Make controls touch-friendly for mobile users
-- Clearly show the current state (playing vs paused)
-- Support keyboard navigation for accessibility
-
-### Don'ts
-
-- Auto-play without user initiation
-- Hide essential controls behind menus
-- Use non-standard or ambiguous icons
-- Forget about mobile and touch users
 
 ## Implementation Notes
 
