@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Accessibility Audit Workflow</title>
+    <link rel="stylesheet" href="style.css">
     <script type="module">
         import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
         mermaid.initialize({
@@ -13,167 +14,11 @@
                 useMaxWidth: true,
                 htmlLabels: true,
                 curve: 'basis',
-                nodeSpacing: 60,
-                rankSpacing: 80
+                nodeSpacing: 25,
+                rankSpacing: 35
             }
         });
     </script>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        html, body {
-            width: 100%;
-            height: 100%;
-            font-family: Arial, Helvetica, sans-serif;
-        }
-        .container {
-            display: flex;
-            flex-direction: column;
-            height: 100%;
-            background-color: aliceblue;
-        }
-        header {
-            text-align: center;
-            padding: 10px;
-            background-color: aliceblue;
-        }
-        header h1 {
-            font-size: 18px;
-            color: #1E293B;
-            margin: 0;
-        }
-        .diagram-area {
-            flex: 1;
-            display: flex;
-            justify-content: center;
-            align-items: flex-start;
-            overflow: auto;
-            padding: 10px;
-            position: relative;
-        }
-        .mermaid {
-            width: 100%;
-            max-width: 600px;
-        }
-        .mermaid svg {
-            max-width: 100%;
-        }
-        .control-area {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 10px 20px;
-            background-color: white;
-            border-top: 1px solid #E2E8F0;
-            min-height: 50px;
-        }
-        .instructions {
-            color: #64748B;
-            font-size: 11px;
-        }
-        .progress {
-            color: #64748B;
-            font-size: 11px;
-        }
-        .reset-btn {
-            background-color: #EF4444;
-            color: white;
-            border: none;
-            padding: 8px 16px;
-            border-radius: 6px;
-            font-size: 12px;
-            font-weight: bold;
-            cursor: pointer;
-            transition: background-color 0.2s;
-        }
-        .reset-btn:hover {
-            background-color: #DC2626;
-        }
-
-        /* Button overlay container */
-        .button-overlays {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            pointer-events: none;
-        }
-        .node-buttons {
-            position: absolute;
-            display: flex;
-            gap: 6px;
-            pointer-events: auto;
-            transform: translate(-50%, 0);
-        }
-        .pass-btn, .fail-btn {
-            padding: 4px 12px;
-            border-radius: 4px;
-            font-size: 10px;
-            font-weight: bold;
-            cursor: pointer;
-            border: 2px solid;
-            transition: all 0.2s;
-        }
-        .pass-btn {
-            background-color: white;
-            color: #10B981;
-            border-color: #10B981;
-        }
-        .pass-btn:hover {
-            background-color: rgba(16, 185, 129, 0.1);
-        }
-        .pass-btn.selected {
-            background-color: #10B981;
-            color: white;
-        }
-        .fail-btn {
-            background-color: white;
-            color: #EF4444;
-            border-color: #EF4444;
-        }
-        .fail-btn:hover {
-            background-color: rgba(239, 68, 68, 0.1);
-        }
-        .fail-btn.selected {
-            background-color: #EF4444;
-            color: white;
-        }
-
-        /* Tooltip */
-        #tooltip {
-            position: absolute;
-            background-color: #333;
-            color: #fff;
-            padding: 10px 14px;
-            border-radius: 6px;
-            font-family: Arial, Helvetica, sans-serif;
-            font-size: 13px;
-            max-width: 280px;
-            pointer-events: none;
-            opacity: 0;
-            transition: opacity 0.2s;
-            z-index: 1000;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.3);
-            line-height: 1.4;
-        }
-        #tooltip.visible {
-            opacity: 1;
-        }
-        #tooltip ul {
-            margin: 8px 0 0 0;
-            padding-left: 18px;
-        }
-        #tooltip li {
-            margin: 4px 0;
-        }
-        .node {
-            cursor: pointer;
-        }
-    </style>
 </head>
 <body>
     <div class="container">
@@ -184,11 +29,11 @@
             <div class="mermaid">
 flowchart TD
     Start(["Begin<br/>Accessibility<br/>Audit"]):::startNode
-    Test1["1. Keyboard<br/>Navigation"]:::testNode
-    Test2["2. Screen Reader<br/>Compatibility"]:::testNode
-    Test3["3. Color and<br/>Contrast"]:::testNode
-    Test4["4. Motion and<br/>Animation"]:::testNode
-    Test5["5. Touch and<br/>Motor"]:::testNode
+    Test1["1. Keyboard<br/>Navigation<br/><br/>"]:::testNode
+    Test2["2. Screen Reader<br/>Compatibility<br/><br/>"]:::testNode
+    Test3["3. Color and<br/>Contrast<br/><br/>"]:::testNode
+    Test4["4. Motion and<br/>Animation<br/><br/>"]:::testNode
+    Test5["5. Touch and<br/>Motor<br/><br/>"]:::testNode
     Report["Generate<br/>Audit Report"]:::summaryNode
     End(["Audit<br/>Complete"]):::endNode
 
@@ -204,8 +49,6 @@ flowchart TD
     classDef testNode fill:#F59E0B,stroke:#D97706,stroke-width:2px,color:#fff,font-size:14px
     classDef summaryNode fill:#3B82F6,stroke:#2563EB,stroke-width:2px,color:#fff,font-size:14px
     classDef endNode fill:#6366F1,stroke:#4F46E5,stroke-width:2px,color:#fff,font-size:14px
-    classDef passNode fill:#10B981,stroke:#059669,stroke-width:2px,color:#fff,font-size:14px
-    classDef failNode fill:#EF4444,stroke:#DC2626,stroke-width:2px,color:#fff,font-size:14px
 
     linkStyle default stroke:#94A3B8,stroke-width:2px
             </div>
@@ -295,7 +138,7 @@ flowchart TD
         }
 
         function updateNodeColor(testId, result) {
-            const node = document.getElementById('flowchart-' + testId + '-0');
+            const node = findNodeElement(testId);
             if (!node) return;
 
             const rect = node.querySelector('rect') || node.querySelector('polygon');
@@ -338,39 +181,81 @@ flowchart TD
             updateProgress();
         }
 
+        function findNodeElement(testId) {
+            // Try different ID patterns used by Mermaid versions
+            let node = document.getElementById('flowchart-' + testId + '-0');
+            if (node) return node;
+
+            // Try without the -0 suffix
+            node = document.getElementById('flowchart-' + testId);
+            if (node) return node;
+
+            // Search by data-id attribute
+            node = document.querySelector(`[data-id="${testId}"]`);
+            if (node) return node;
+
+            // Search all nodes for matching ID pattern
+            const allNodes = document.querySelectorAll('.node');
+            for (const n of allNodes) {
+                if (n.id && n.id.includes(testId)) {
+                    return n;
+                }
+            }
+
+            return null;
+        }
+
         function createButtonOverlays() {
             const overlays = document.getElementById('buttonOverlays');
             const diagramArea = document.getElementById('diagramArea');
             overlays.innerHTML = '';
 
             for (const testId in testData) {
-                const nodeEl = document.getElementById('flowchart-' + testId + '-0');
-                if (!nodeEl) continue;
+                const nodeEl = findNodeElement(testId);
+                if (!nodeEl) {
+                    console.log('Node not found for:', testId);
+                    continue;
+                }
 
                 const nodeRect = nodeEl.getBoundingClientRect();
                 const areaRect = diagramArea.getBoundingClientRect();
 
                 const buttonContainer = document.createElement('div');
                 buttonContainer.className = 'node-buttons';
-                buttonContainer.style.left = (nodeRect.left - areaRect.left + nodeRect.width / 2) + 'px';
-                buttonContainer.style.top = (nodeRect.bottom - areaRect.top + 5) + 'px';
+
+                // Position buttons inside the node, near the bottom
+                const centerX = nodeRect.left - areaRect.left + nodeRect.width / 2;
+                const bottomY = nodeRect.bottom - areaRect.top - 32; // 32px from bottom to fit inside node
+
+                buttonContainer.style.left = centerX + 'px';
+                buttonContainer.style.top = bottomY + 'px';
+
+                console.log(`Positioning ${testId} at (${centerX}, ${bottomY})`);
 
                 const passBtn = document.createElement('button');
                 passBtn.className = 'pass-btn';
                 passBtn.textContent = 'Pass';
                 passBtn.dataset.test = testId;
-                passBtn.addEventListener('click', () => setResult(testId, true));
+                passBtn.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    setResult(testId, true);
+                });
 
                 const failBtn = document.createElement('button');
                 failBtn.className = 'fail-btn';
                 failBtn.textContent = 'Fail';
                 failBtn.dataset.test = testId;
-                failBtn.addEventListener('click', () => setResult(testId, false));
+                failBtn.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    setResult(testId, false);
+                });
 
                 buttonContainer.appendChild(passBtn);
                 buttonContainer.appendChild(failBtn);
                 overlays.appendChild(buttonContainer);
             }
+
+            console.log('Button overlays created:', overlays.children.length);
         }
 
         function setupTooltips() {
@@ -395,8 +280,8 @@ flowchart TD
                         tooltip.classList.add('visible');
                     });
                     node.addEventListener('mousemove', (e) => {
-                        const x = e.pageX + 15;
-                        const y = e.pageY + 15;
+                        const x = e.pageX + 65;
+                        const y = e.pageY - 35;
                         const tooltipRect = tooltip.getBoundingClientRect();
                         const maxX = window.innerWidth - tooltipRect.width - 20;
                         const maxY = window.innerHeight - tooltipRect.height - 20;
@@ -421,8 +306,12 @@ flowchart TD
             }
         }
 
-        // Handle window resize
+        // Handle window resize and scroll
         window.addEventListener('resize', () => {
+            createButtonOverlays();
+        });
+
+        document.getElementById('diagramArea').addEventListener('scroll', () => {
             createButtonOverlays();
         });
 

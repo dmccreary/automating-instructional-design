@@ -55,6 +55,7 @@ nav:
     - List of MicroSims: sims/index.md
     - Acceptance Test Matrix: sims/acceptance-test-matrix/index.md
     - Accessibility Audit Workflow: sims/accessibility-audit-workflow/index.md
+    - Accessibility Audit Workflow (Mermaid): sims/accessibility-audit-mermaid/index.md
     - Accessible Control Layout: sims/accessible-control-layout/index.md
     - AI Generation Workflow: sims/ai-generation-workflow/index.md
     - Animation Control Guide: sims/animation-control-guide/index.md

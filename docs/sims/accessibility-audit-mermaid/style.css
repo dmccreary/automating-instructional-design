@@ -1,0 +1,191 @@
+/* Accessibility Audit Workflow - Mermaid Version */
+/* Base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Layout */
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    background-color: aliceblue;
+}
+
+header {
+    text-align: center;
+    padding: 10px;
+    background-color: aliceblue;
+}
+
+header h1 {
+    font-size: 18px;
+    color: #1E293B;
+    margin: 0;
+}
+
+/* Diagram area */
+.diagram-area {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    overflow: visible;
+    padding: 10px;
+    position: relative;
+}
+
+.mermaid {
+    width: 100%;
+    max-width: 600px;
+}
+
+.mermaid svg {
+    max-width: 100%;
+}
+
+/* Control area at bottom */
+.control-area {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: white;
+    border-top: 1px solid #E2E8F0;
+    min-height: 50px;
+}
+
+.instructions {
+    color: #64748B;
+    font-size: 11px;
+}
+
+.progress {
+    color: #64748B;
+    font-size: 11px;
+}
+
+/* Reset button */
+.reset-btn {
+    background-color: #EF4444;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.reset-btn:hover {
+    background-color: #DC2626;
+}
+
+/* Button overlay container */
+.button-overlays {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 100;
+}
+
+/* Pass/Fail button container for each node */
+.node-buttons {
+    position: absolute;
+    display: flex;
+    gap: 4px;
+    pointer-events: auto;
+    transform: translateX(-50%);
+    z-index: 101;
+}
+
+/* Pass and Fail buttons */
+.pass-btn, .fail-btn {
+    padding: 3px 10px;
+    border-radius: 3px;
+    font-size: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    border: 2px solid;
+    transition: all 0.2s;
+    background-color: white;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+}
+
+.pass-btn {
+    background-color: white;
+    color: #10B981;
+    border-color: #10B981;
+}
+
+.pass-btn:hover {
+    background-color: rgba(16, 185, 129, 0.2);
+}
+
+.pass-btn.selected {
+    background-color: #10B981;
+    color: white;
+}
+
+.fail-btn {
+    background-color: white;
+    color: #EF4444;
+    border-color: #EF4444;
+}
+
+.fail-btn:hover {
+    background-color: rgba(239, 68, 68, 0.2);
+}
+
+.fail-btn.selected {
+    background-color: #EF4444;
+    color: white;
+}
+
+/* Tooltip */
+#tooltip {
+    position: absolute;
+    background-color: #333;
+    color: #fff;
+    padding: 10px 14px;
+    border-radius: 6px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    max-width: 280px;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.2s;
+    z-index: 1000;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+    line-height: 1.4;
+}
+
+#tooltip.visible {
+    opacity: 1;
+}
+
+#tooltip ul {
+    margin: 8px 0 0 0;
+    padding-left: 18px;
+}
+
+#tooltip li {
+    margin: 4px 0;
+}
+
+/* Make nodes interactive */
+.node {
+    cursor: pointer;
+}

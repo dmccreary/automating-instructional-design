@@ -7,7 +7,7 @@ quality_score: 85
 
 # Accessibility Audit Workflow (Mermaid Version)
 
-<iframe src="main.html" width="100%" height="700" style="border:1px solid silver;" scrolling="no"></iframe>
+<iframe src="main.html" width="100%" height="1000" style="border:1px solid silver;" scrolling="no"></iframe>
 
 [View Fullscreen](main.html){: target="_blank" }
 
