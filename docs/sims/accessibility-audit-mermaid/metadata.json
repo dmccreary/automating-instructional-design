@@ -1,0 +1,36 @@
+{
+  "title": "Accessibility Audit Workflow (Mermaid)",
+  "description": "Interactive Mermaid-based flowchart for conducting systematic accessibility audits on MicroSims with Pass/Fail tracking, progress monitoring, and hover tooltips showing test questions.",
+  "subject": "Accessibility, Web Development, Instructional Design",
+  "creator": "Claude AI with Mermaid Generator Skill",
+  "date": "2025-01-14",
+  "type": "Interactive Workflow Diagram",
+  "format": "text/html",
+  "language": "en-US",
+  "coverage": "Introductory to Intermediate",
+  "rights": "Educational Use",
+  "audience": "Instructional Designers, Web Developers, Educators",
+  "diagram_type": "flowchart",
+  "direction": "TD",
+  "node_count": 8,
+  "edge_count": 7,
+  "concepts": [
+    "Accessibility Auditing",
+    "Keyboard Navigation",
+    "Screen Reader Compatibility",
+    "Color Contrast",
+    "Motion Sensitivity",
+    "Touch Accessibility",
+    "WCAG Guidelines"
+  ],
+  "bloom_taxonomy": "Apply",
+  "version": "1.0",
+  "features": [
+    "Interactive Pass/Fail buttons",
+    "Progress tracking",
+    "Reset functionality",
+    "Hover tooltips with test questions",
+    "Dynamic node coloring based on results"
+  ],
+  "library": "Mermaid.js v11"
+}

@@ -89,3 +89,50 @@ buttonBorder: '#E2E8F0'
 3. **Immediate feedback**: Button states change on hover and selection
 4. **Consistency**: Standard button patterns that users already understand
 5. **Reduced cognitive load**: Users don't need to read instructions to understand the interface
+
+---
+
+# Mermaid Version Created
+
+**Date:** 2025-01-14
+**Location:** `docs/sims/accessibility-audit-mermaid/`
+
+## Overview
+
+Created a Mermaid.js version of the accessibility audit workflow with the same interactive features as the p5.js version.
+
+## Implementation Approach
+
+Since Mermaid.js renders static SVG diagrams, a hybrid approach was used:
+
+1. **Mermaid.js** - Renders the flowchart diagram (8 nodes, 7 edges)
+2. **JavaScript overlays** - Adds interactive Pass/Fail buttons positioned below each test node
+3. **Dynamic styling** - Changes node fill colors based on test results (amber → green/red)
+4. **Tooltips** - Shows test questions on node hover
+
+## Features Preserved
+
+All features from the p5.js version are preserved:
+
+- 8 workflow steps with same structure
+- Pass/Fail buttons for 5 test nodes
+- Progress tracking (X passed, Y failed, Z pending)
+- Reset All button
+- Hover tooltips with test questions
+- Visual feedback (node color changes based on results)
+
+## Files Created
+
+```
+docs/sims/accessibility-audit-mermaid/
+├── main.html       # Complete interactive diagram
+├── index.md        # MkDocs documentation page
+└── metadata.json   # Dublin Core metadata
+```
+
+## Technical Notes
+
+- Buttons are positioned using JavaScript after Mermaid renders the SVG
+- Window resize handler repositions buttons dynamically
+- Polling-based initialization ensures tooltips work in iframes
+- Node colors are updated by directly modifying SVG rect fill styles
