@@ -2,7 +2,11 @@
   "title": "Bloom's Taxonomy Pyramid",
   "description": "An interactive visualization of Bloom's Taxonomy showing the six cognitive levels (Remember, Understand, Apply, Analyze, Evaluate, Create) as a hierarchical pyramid with hover descriptions and click-through example learning objectives.",
   "creator": "Dan McCreary",
-  "subject": ["Education", "Instructional Design", "Learning Theory"],
+  "subject": [
+    "Education",
+    "Instructional Design",
+    "Learning Theory"
+  ],
   "date": "2025-01-13",
   "type": "Interactive Simulation",
   "format": "text/html",
@@ -17,13 +21,20 @@
     "Identify appropriate action verbs for each level",
     "Classify learning objectives by cognitive complexity"
   ],
-  "bloomsTaxonomyLevels": ["Remember", "Understand"],
+  "bloomsTaxonomyLevels": [
+    "Remember",
+    "Understand"
+  ],
   "duration": "5-10 minutes",
-  "prerequisites": ["None"],
+  "prerequisites": [
+    "None"
+  ],
   "framework": "p5.js",
   "canvasDimensions": "responsive x 552",
   "responsive": "Width-responsive",
-  "dependencies": ["p5.js 1.11.10"],
+  "dependencies": [
+    "p5.js 1.11.10"
+  ],
   "accessibility": {
     "screenReaderSupport": true,
     "keyboardNavigation": false,
@@ -40,6 +51,25 @@
     }
   ],
   "modelType": "Informational Visualization",
-  "assumptions": ["Six-level revised Bloom's Taxonomy (2001)"],
-  "limitations": ["Does not show Knowledge Dimension (factual, conceptual, procedural, metacognitive)"]
+  "assumptions": [
+    "Six-level revised Bloom's Taxonomy (2001)"
+  ],
+  "limitations": [
+    "Does not show Knowledge Dimension (factual, conceptual, procedural, metacognitive)"
+  ],
+  "visualizationType": [
+    "3d-model",
+    "animation",
+    "diagram",
+    "interactive-demo",
+    "network"
+  ],
+  "bloomsTaxonomy": [
+    "Remember",
+    "Understand",
+    "Apply",
+    "Analyze",
+    "Evaluate",
+    "Create"
+  ]
 }

@@ -4,7 +4,14 @@
   "creator": "Dan McCreary",
   "created": "2026-01-14",
   "modified": "2026-01-14",
-  "subject": ["learning analytics", "xAPI", "Google Analytics", "page tracking", "simulation tracking", "educational technology"],
+  "subject": [
+    "learning analytics",
+    "xAPI",
+    "Google Analytics",
+    "page tracking",
+    "simulation tracking",
+    "educational technology"
+  ],
   "type": "InteractiveResource",
   "format": "text/html",
   "language": "en",
@@ -46,5 +53,26 @@
     "MicroSim evaluation",
     "educational analytics",
     "fine-grained tracking"
+  ],
+  "visualizationType": [
+    "diagram",
+    "interactive-demo",
+    "map",
+    "network",
+    "simulation"
+  ],
+  "learningObjectives": [
+    "Understand the key concepts of page view tracking vs  tracking comparison",
+    "Explore page view tracking vs  tracking comparison through interactive visualization",
+    "Apply knowledge of page view tracking vs  tracking comparison to solve problems",
+    "Experiment with parameters to observe their effects on page view tracking vs  tracking comparison"
+  ],
+  "bloomsTaxonomy": [
+    "Remember",
+    "Understand",
+    "Apply",
+    "Analyze",
+    "Evaluate",
+    "Create"
   ]
 }

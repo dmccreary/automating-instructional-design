@@ -2,7 +2,12 @@
   "title": "Prerequisite vs Assumed Knowledge",
   "description": "An interactive visualization showing the three layers of knowledge foundations (Assumed Knowledge, Prerequisite Knowledge, New Content) as stacked building blocks, demonstrating how learning builds on prior knowledge.",
   "creator": "Dan McCreary",
-  "subject": ["Education", "Instructional Design", "Learning Theory", "Curriculum Design"],
+  "subject": [
+    "Education",
+    "Instructional Design",
+    "Learning Theory",
+    "Curriculum Design"
+  ],
   "date": "2025-01-13",
   "type": "Interactive Simulation",
   "format": "text/html",
@@ -17,13 +22,21 @@
     "Identify potential issues when assumed knowledge gaps exist",
     "Design appropriate prerequisite assessments for a course"
   ],
-  "bloomsTaxonomyLevels": ["Remember", "Understand", "Apply"],
+  "bloomsTaxonomyLevels": [
+    "Remember",
+    "Understand",
+    "Apply"
+  ],
   "duration": "5-10 minutes",
-  "prerequisites": ["Basic understanding of instructional design concepts"],
+  "prerequisites": [
+    "Basic understanding of instructional design concepts"
+  ],
   "framework": "p5.js",
   "canvasDimensions": "responsive x 452",
   "responsive": "Width-responsive",
-  "dependencies": ["p5.js 1.11.10"],
+  "dependencies": [
+    "p5.js 1.11.10"
+  ],
   "accessibility": {
     "screenReaderSupport": true,
     "keyboardNavigation": false,
@@ -36,6 +49,23 @@
     }
   ],
   "modelType": "Conceptual Visualization",
-  "assumptions": ["Three-layer model of knowledge prerequisites"],
-  "limitations": ["Does not show individual concept dependencies within layers"]
+  "assumptions": [
+    "Three-layer model of knowledge prerequisites"
+  ],
+  "limitations": [
+    "Does not show individual concept dependencies within layers"
+  ],
+  "visualizationType": [
+    "animation",
+    "diagram",
+    "interactive-demo"
+  ],
+  "bloomsTaxonomy": [
+    "Remember",
+    "Understand",
+    "Apply",
+    "Analyze",
+    "Evaluate",
+    "Create"
+  ]
 }

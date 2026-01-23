@@ -2,7 +2,11 @@
   "title": "MicroSim Readiness Assessment",
   "description": "An interactive decision tree flowchart to evaluate if a learning objective is suitable for MicroSim development, assessing interactivity, visualization, feedback, and scope criteria.",
   "creator": "Dan McCreary",
-  "subject": ["Education", "Instructional Design", "MicroSim Development"],
+  "subject": [
+    "Education",
+    "Instructional Design",
+    "MicroSim Development"
+  ],
   "date": "2026-01-13",
   "type": "Interactive Simulation",
   "format": "text/html",
@@ -17,13 +21,23 @@
     "Justify decisions about MicroSim suitability for specific objectives",
     "Identify alternative instructional formats for non-suitable objectives"
   ],
-  "bloomsTaxonomyLevels": ["Understand", "Apply", "Analyze", "Evaluate"],
+  "bloomsTaxonomyLevels": [
+    "Understand",
+    "Apply",
+    "Analyze",
+    "Evaluate"
+  ],
   "duration": "5-10 minutes",
-  "prerequisites": ["Basic understanding of learning objectives", "Familiarity with MicroSim concept"],
+  "prerequisites": [
+    "Basic understanding of learning objectives",
+    "Familiarity with MicroSim concept"
+  ],
   "framework": "p5.js",
   "canvasDimensions": "responsive x 502",
   "responsive": "Width-responsive",
-  "dependencies": ["p5.js 1.11.10"],
+  "dependencies": [
+    "p5.js 1.11.10"
+  ],
   "controls": [
     {
       "type": "hover",
@@ -52,5 +66,20 @@
       "name": "Scope",
       "question": "Is it focused on a single concept?"
     }
+  ],
+  "visualizationType": [
+    "animation",
+    "diagram",
+    "graph",
+    "interactive-demo",
+    "network",
+    "simulation"
+  ],
+  "bloomsTaxonomy": [
+    "Remember",
+    "Understand",
+    "Apply",
+    "Evaluate",
+    "Create"
   ]
 }

@@ -4,7 +4,13 @@
   "creator": "Dan McCreary",
   "created": "2026-01-14",
   "modified": "2026-01-14",
-  "subject": ["instructional design", "iterative development", "quality assurance", "MicroSim development", "learning analytics"],
+  "subject": [
+    "instructional design",
+    "iterative development",
+    "quality assurance",
+    "MicroSim development",
+    "learning analytics"
+  ],
   "type": "InteractiveResource",
   "format": "text/html",
   "language": "en",
@@ -43,5 +49,26 @@
     "analytics-driven design",
     "educational simulation",
     "deployment criteria"
+  ],
+  "visualizationType": [
+    "animation",
+    "diagram",
+    "graph",
+    "interactive-demo",
+    "simulation"
+  ],
+  "learningObjectives": [
+    "Understand the key concepts of design-test-refine cycle",
+    "Explore design-test-refine cycle through interactive visualization",
+    "Apply knowledge of design-test-refine cycle to solve problems",
+    "Test understanding of design-test-refine cycle through interactive exercises"
+  ],
+  "bloomsTaxonomy": [
+    "Remember",
+    "Understand",
+    "Apply",
+    "Analyze",
+    "Evaluate",
+    "Create"
   ]
 }

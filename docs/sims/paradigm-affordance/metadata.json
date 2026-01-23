@@ -2,7 +2,12 @@
   "title": "Paradigm Affordance Matrix",
   "description": "An interactive matrix visualization showing how different visualization paradigms (Timeline, Map, Network, Chart, Flowchart) afford different learning interactions across Bloom's Taxonomy cognitive levels.",
   "creator": "Dan McCreary",
-  "subject": ["Education", "Instructional Design", "Visualization", "Bloom's Taxonomy"],
+  "subject": [
+    "Education",
+    "Instructional Design",
+    "Visualization",
+    "Bloom's Taxonomy"
+  ],
   "date": "2025-01-13",
   "type": "Interactive Simulation",
   "format": "text/html",
@@ -16,13 +21,22 @@
     "Evaluate which visualization types best support specific learning objectives",
     "Select appropriate visualization paradigms for instructional design projects"
   ],
-  "bloomsTaxonomyLevels": ["Understand", "Analyze", "Evaluate"],
+  "bloomsTaxonomyLevels": [
+    "Understand",
+    "Analyze",
+    "Evaluate"
+  ],
   "duration": "5-10 minutes",
-  "prerequisites": ["Basic understanding of Bloom's Taxonomy", "Familiarity with common visualization types"],
+  "prerequisites": [
+    "Basic understanding of Bloom's Taxonomy",
+    "Familiarity with common visualization types"
+  ],
   "framework": "p5.js",
   "canvasDimensions": "responsive x 450",
   "responsive": "Width-responsive",
-  "dependencies": ["p5.js 1.11.10"],
+  "dependencies": [
+    "p5.js 1.11.10"
+  ],
   "controls": [
     {
       "type": "hover",
@@ -37,5 +51,20 @@
       "description": "Click row labels or cells to select and highlight a paradigm"
     }
   ],
-  "modelType": "Informational Matrix Visualization"
+  "modelType": "Informational Matrix Visualization",
+  "visualizationType": [
+    "diagram",
+    "interactive-demo",
+    "map",
+    "network",
+    "timeline"
+  ],
+  "bloomsTaxonomy": [
+    "Remember",
+    "Understand",
+    "Apply",
+    "Analyze",
+    "Evaluate",
+    "Create"
+  ]
 }

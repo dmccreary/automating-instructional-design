@@ -2,7 +2,11 @@
   "title": "Spatial Visualization Types",
   "description": "An interactive guide showing six types of spatial visualizations (Geographic Map, Schematic Diagram, Floor Plan, Anatomical View, Network Topology, 3D Model) with guidance on when to use each type for effective communication.",
   "creator": "Dan McCreary",
-  "subject": ["Data Visualization", "Instructional Design", "Information Design"],
+  "subject": [
+    "Data Visualization",
+    "Instructional Design",
+    "Information Design"
+  ],
   "date": "2026-01-13",
   "type": "Interactive Simulation",
   "format": "text/html",
@@ -17,13 +21,21 @@
     "Select the appropriate visualization type for a given scenario",
     "Compare the strengths and limitations of different visualization types"
   ],
-  "bloomsTaxonomyLevels": ["Remember", "Understand", "Apply"],
+  "bloomsTaxonomyLevels": [
+    "Remember",
+    "Understand",
+    "Apply"
+  ],
   "duration": "5-10 minutes",
-  "prerequisites": ["Basic understanding of visual communication"],
+  "prerequisites": [
+    "Basic understanding of visual communication"
+  ],
   "framework": "p5.js",
   "canvasDimensions": "responsive x 450",
   "responsive": "Width-responsive",
-  "dependencies": ["p5.js 1.11.10"],
+  "dependencies": [
+    "p5.js 1.11.10"
+  ],
   "accessibility": {
     "screenReaderSupport": true,
     "keyboardNavigation": false,
@@ -36,6 +48,27 @@
     }
   ],
   "modelType": "Informational Visualization",
-  "assumptions": ["Common classification of spatial visualization types used in education and technical communication"],
-  "limitations": ["Does not cover all possible visualization types", "Icons are simplified representations"]
+  "assumptions": [
+    "Common classification of spatial visualization types used in education and technical communication"
+  ],
+  "limitations": [
+    "Does not cover all possible visualization types",
+    "Icons are simplified representations"
+  ],
+  "visualizationType": [
+    "3d-model",
+    "diagram",
+    "graph",
+    "interactive-demo",
+    "map",
+    "network",
+    "simulation"
+  ],
+  "bloomsTaxonomy": [
+    "Remember",
+    "Understand",
+    "Apply",
+    "Evaluate",
+    "Create"
+  ]
 }

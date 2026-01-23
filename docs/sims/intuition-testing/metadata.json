@@ -4,7 +4,13 @@
   "creator": "Dan McCreary",
   "created": "2026-01-14",
   "modified": "2026-01-14",
-  "subject": ["intuition testing", "misconceptions", "cognitive science", "physics education", "biology education"],
+  "subject": [
+    "intuition testing",
+    "misconceptions",
+    "cognitive science",
+    "physics education",
+    "biology education"
+  ],
   "type": "InteractiveResource",
   "format": "text/html",
   "language": "en",
@@ -79,5 +85,29 @@
       "duration": 3,
       "unit": "seconds"
     }
-  }
+  },
+  "visualizationType": [
+    "animation",
+    "chart",
+    "graph",
+    "interactive-demo",
+    "map",
+    "network",
+    "simulation",
+    "timeline"
+  ],
+  "learningObjectives": [
+    "Understand the key concepts of intuition testing",
+    "Explore intuition testing through interactive visualization",
+    "Apply knowledge of intuition testing to solve problems",
+    "Experiment with parameters to observe their effects on intuition testing"
+  ],
+  "bloomsTaxonomy": [
+    "Remember",
+    "Understand",
+    "Apply",
+    "Analyze",
+    "Evaluate",
+    "Create"
+  ]
 }

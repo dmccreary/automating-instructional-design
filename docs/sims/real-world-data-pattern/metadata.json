@@ -44,5 +44,11 @@
     "interactive-demo",
     "network",
     "map"
+  ],
+  "learningObjectives": [
+    "Understand the mathematical concept of real-world data pattern",
+    "Apply real-world data pattern to solve problems",
+    "Visualize and interpret real-world data pattern relationships",
+    "Experiment with parameters to observe their effects on real-world data pattern"
   ]
 }

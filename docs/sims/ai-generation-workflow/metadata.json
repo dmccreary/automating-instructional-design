@@ -41,5 +41,11 @@
     "network",
     "timeline",
     "map"
+  ],
+  "learningObjectives": [
+    "Understand the mathematical concept of ai generation workflow",
+    "Apply ai generation workflow to solve problems",
+    "Visualize and interpret ai generation workflow relationships",
+    "Experiment with parameters to observe their effects on ai generation workflow"
   ]
 }

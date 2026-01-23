@@ -5,16 +5,47 @@
   "creator": "Dan McCreary",
   "created": "2026-01-13",
   "modified": "2026-01-13",
-  "subject": ["Computer Science", "Algorithms", "Data Structures"],
-  "educationLevel": ["High School", "Introductory College"],
-  "bloomTaxonomy": ["Analyze", "Evaluate"],
+  "subject": [
+    "Computer Science",
+    "Algorithms",
+    "Data Structures"
+  ],
+  "educationLevel": [
+    "High School",
+    "Introductory College"
+  ],
+  "bloomTaxonomy": [
+    "Analyze",
+    "Evaluate"
+  ],
   "learningObjective": "Students will be able to compare the efficiency of different sorting algorithms by observing their operation counts and completion times on identical datasets.",
-  "prerequisites": ["Arrays", "Basic programming concepts", "Concept of sorting"],
-  "concepts": ["Sorting Algorithms", "Big-O Notation", "Algorithm Efficiency", "Time Complexity", "Bubble Sort", "Selection Sort", "Insertion Sort", "Quick Sort"],
+  "prerequisites": [
+    "Arrays",
+    "Basic programming concepts",
+    "Concept of sorting"
+  ],
+  "concepts": [
+    "Sorting Algorithms",
+    "Big-O Notation",
+    "Algorithm Efficiency",
+    "Time Complexity",
+    "Bubble Sort",
+    "Selection Sort",
+    "Insertion Sort",
+    "Quick Sort"
+  ],
   "implementation": "p5.js",
   "interactivityLevel": "High",
   "estimatedTime": "15-30 minutes",
-  "keywords": ["sorting", "algorithms", "comparison", "race", "visualization", "big-o", "complexity"],
+  "keywords": [
+    "sorting",
+    "algorithms",
+    "comparison",
+    "race",
+    "visualization",
+    "big-o",
+    "complexity"
+  ],
   "license": "Creative Commons Attribution 4.0 International",
   "format": "text/html",
   "language": "en",
@@ -22,5 +53,25 @@
     "hasVisualContent": true,
     "hasAudioContent": false,
     "hasInteractiveElements": true
-  }
+  },
+  "visualizationType": [
+    "animation",
+    "interactive-demo",
+    "map",
+    "simulation"
+  ],
+  "learningObjectives": [
+    "Understand how sorting algorithm race algorithms work",
+    "Visualize sorting algorithm race data structures and operations",
+    "Analyze the efficiency and behavior of sorting algorithm race",
+    "Experiment with parameters to observe their effects on sorting algorithm race"
+  ],
+  "bloomsTaxonomy": [
+    "Remember",
+    "Understand",
+    "Apply",
+    "Analyze",
+    "Evaluate",
+    "Create"
+  ]
 }

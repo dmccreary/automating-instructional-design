@@ -2,7 +2,12 @@
   "title": "Edge Case Discovery Simulator",
   "description": "An interactive physics simulation where students experiment with parameter boundaries to identify edge cases including negative gravity, oversized objects, energy conservation violations, and tunneling effects.",
   "creator": "Dan McCreary",
-  "subject": ["Software Testing", "Edge Cases", "Quality Assurance", "Physics Simulation"],
+  "subject": [
+    "Software Testing",
+    "Edge Cases",
+    "Quality Assurance",
+    "Physics Simulation"
+  ],
   "date": "2025-01-13",
   "type": "Interactive Simulation",
   "format": "text/html",
@@ -17,13 +22,22 @@
     "Explain why edge case testing is important for software quality",
     "Predict potential edge cases given a system specification"
   ],
-  "bloomsTaxonomyLevels": ["Analyze", "Apply", "Evaluate"],
+  "bloomsTaxonomyLevels": [
+    "Analyze",
+    "Apply",
+    "Evaluate"
+  ],
   "duration": "15-20 minutes",
-  "prerequisites": ["Basic understanding of physics concepts", "Familiarity with software testing terminology"],
+  "prerequisites": [
+    "Basic understanding of physics concepts",
+    "Familiarity with software testing terminology"
+  ],
   "framework": "p5.js",
   "canvasDimensions": "responsive x 502",
   "responsive": "Width-responsive",
-  "dependencies": ["p5.js 1.11.10"],
+  "dependencies": [
+    "p5.js 1.11.10"
+  ],
   "accessibility": {
     "screenReaderSupport": true,
     "keyboardNavigation": false,
@@ -91,5 +105,18 @@
     "Does not simulate realistic multi-body physics",
     "Performance edge cases depend on hardware",
     "Tunneling detection is reactive rather than preventive"
+  ],
+  "visualizationType": [
+    "animation",
+    "interactive-demo",
+    "network",
+    "simulation"
+  ],
+  "bloomsTaxonomy": [
+    "Remember",
+    "Understand",
+    "Apply",
+    "Evaluate",
+    "Create"
   ]
 }

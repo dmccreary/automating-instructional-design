@@ -4,7 +4,13 @@
   "creator": "Dan McCreary",
   "created": "2026-01-14",
   "modified": "2026-01-14",
-  "subject": ["misconception correction", "conceptual change", "cognitive conflict", "instructional design", "learning psychology"],
+  "subject": [
+    "misconception correction",
+    "conceptual change",
+    "cognitive conflict",
+    "instructional design",
+    "learning psychology"
+  ],
   "type": "InteractiveResource",
   "format": "text/html",
   "language": "en",
@@ -44,5 +50,25 @@
     "belief revision",
     "instructional design framework",
     "learning psychology"
+  ],
+  "visualizationType": [
+    "diagram",
+    "graph",
+    "interactive-demo",
+    "network",
+    "simulation"
+  ],
+  "learningObjectives": [
+    "Understand the key concepts of misconception correction cycle",
+    "Explore misconception correction cycle through interactive visualization",
+    "Apply knowledge of misconception correction cycle to solve problems",
+    "Test understanding of misconception correction cycle through interactive exercises"
+  ],
+  "bloomsTaxonomy": [
+    "Remember",
+    "Understand",
+    "Apply",
+    "Evaluate",
+    "Create"
   ]
 }

@@ -61,5 +61,28 @@
       "workingMemoryLoad": "Low (3-4 chunks)",
       "learningOutcome": "89% retention"
     }
-  }
+  },
+  "visualizationType": [
+    "animation",
+    "diagram",
+    "graph",
+    "interactive-demo",
+    "map",
+    "network",
+    "simulation",
+    "timeline"
+  ],
+  "learningObjectives": [
+    "Understand the key concepts of split attention effect demonstration",
+    "Explore split attention effect demonstration through interactive visualization",
+    "Apply knowledge of split attention effect demonstration to solve problems",
+    "Test understanding of split attention effect demonstration through interactive exercises"
+  ],
+  "bloomsTaxonomy": [
+    "Remember",
+    "Understand",
+    "Apply",
+    "Analyze",
+    "Create"
+  ]
 }

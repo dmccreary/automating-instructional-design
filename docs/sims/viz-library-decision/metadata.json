@@ -2,7 +2,11 @@
   "title": "Visualization Library Decision Tree",
   "description": "An interactive decision tree that guides learners through selecting the appropriate JavaScript visualization library based on their content type and requirements, featuring seven library endpoints with descriptions.",
   "creator": "Dan McCreary",
-  "subject": ["Data Visualization", "Web Development", "Education Technology"],
+  "subject": [
+    "Data Visualization",
+    "Web Development",
+    "Education Technology"
+  ],
   "date": "2026-01-13",
   "type": "Interactive Simulation",
   "format": "text/html",
@@ -17,13 +21,21 @@
     "Navigate decision criteria for library selection",
     "Justify library selection decisions based on content requirements"
   ],
-  "bloomsTaxonomyLevels": ["Remember", "Understand", "Apply"],
+  "bloomsTaxonomyLevels": [
+    "Remember",
+    "Understand",
+    "Apply"
+  ],
   "duration": "5-15 minutes",
-  "prerequisites": ["Basic understanding of web development concepts"],
+  "prerequisites": [
+    "Basic understanding of web development concepts"
+  ],
   "framework": "p5.js",
   "canvasDimensions": "responsive x 450",
   "responsive": "Width-responsive",
-  "dependencies": ["p5.js 1.11.10"],
+  "dependencies": [
+    "p5.js 1.11.10"
+  ],
   "controls": [
     {
       "type": "click",
@@ -51,5 +63,24 @@
     "vis-timeline",
     "Leaflet",
     "Mermaid"
+  ],
+  "visualizationType": [
+    "3d-model",
+    "animation",
+    "chart",
+    "diagram",
+    "graph",
+    "interactive-demo",
+    "map",
+    "network",
+    "simulation",
+    "timeline"
+  ],
+  "bloomsTaxonomy": [
+    "Remember",
+    "Understand",
+    "Apply",
+    "Evaluate",
+    "Create"
   ]
 }

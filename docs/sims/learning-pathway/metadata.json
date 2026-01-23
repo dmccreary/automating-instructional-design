@@ -2,7 +2,12 @@
   "title": "Learning Pathway Explorer",
   "description": "An interactive visualization for exploring learning pathways through prerequisite dependencies. Mark concepts as known, see which concepts unlock, and trace valid paths to learning goals.",
   "creator": "Dan McCreary",
-  "subject": ["Education", "Instructional Design", "Learning Graphs", "Knowledge Prerequisites"],
+  "subject": [
+    "Education",
+    "Instructional Design",
+    "Learning Graphs",
+    "Knowledge Prerequisites"
+  ],
   "date": "2025-01-13",
   "type": "Interactive Simulation",
   "format": "text/html",
@@ -17,13 +22,21 @@
     "Trace valid learning pathways through a knowledge graph",
     "Analyze the structure of a directed acyclic graph (DAG) in educational context"
   ],
-  "bloomsTaxonomyLevels": ["Understand", "Apply", "Analyze"],
+  "bloomsTaxonomyLevels": [
+    "Understand",
+    "Apply",
+    "Analyze"
+  ],
   "duration": "10-15 minutes",
-  "prerequisites": ["Basic understanding of mathematical concepts"],
+  "prerequisites": [
+    "Basic understanding of mathematical concepts"
+  ],
   "framework": "p5.js",
   "canvasDimensions": "responsive x 500",
   "responsive": "Width-responsive",
-  "dependencies": ["p5.js 1.11.10"],
+  "dependencies": [
+    "p5.js 1.11.10"
+  ],
   "accessibility": {
     "screenReaderSupport": true,
     "keyboardNavigation": false,
@@ -53,5 +66,20 @@
     "Simplified representation of actual learning dependencies",
     "Does not account for partial knowledge or learning styles",
     "Fixed set of concepts (not customizable in this version)"
+  ],
+  "visualizationType": [
+    "diagram",
+    "graph",
+    "interactive-demo",
+    "map",
+    "network",
+    "simulation"
+  ],
+  "bloomsTaxonomy": [
+    "Remember",
+    "Understand",
+    "Apply",
+    "Evaluate",
+    "Create"
   ]
 }

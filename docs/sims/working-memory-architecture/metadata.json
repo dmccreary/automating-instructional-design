@@ -48,5 +48,26 @@
       "drawHeight": 450,
       "controlHeight": 50
     }
-  }
+  },
+  "visualizationType": [
+    "3d-model",
+    "diagram",
+    "graph",
+    "interactive-demo",
+    "map",
+    "simulation"
+  ],
+  "learningObjectives": [
+    "Understand the key concepts of working memory architecture",
+    "Explore working memory architecture through interactive visualization",
+    "Apply knowledge of working memory architecture to solve problems"
+  ],
+  "bloomsTaxonomy": [
+    "Remember",
+    "Understand",
+    "Apply",
+    "Analyze",
+    "Evaluate",
+    "Create"
+  ]
 }

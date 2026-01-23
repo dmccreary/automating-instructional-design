@@ -2,7 +2,12 @@
   "title": "Venn Diagram Builder",
   "description": "An interactive Venn diagram where learners drag and drop items into the correct regions to understand set relationships, classification, and logical reasoning through a Cars vs Boats example.",
   "creator": "Dan McCreary",
-  "subject": ["Mathematics", "Logic", "Set Theory", "Classification"],
+  "subject": [
+    "Mathematics",
+    "Logic",
+    "Set Theory",
+    "Classification"
+  ],
   "date": "2025-01-13",
   "type": "Interactive Simulation",
   "format": "text/html",
@@ -17,13 +22,22 @@
     "Distinguish between set intersection and union",
     "Apply logical reasoning to categorization problems"
   ],
-  "bloomsTaxonomyLevels": ["Understand", "Apply", "Analyze"],
+  "bloomsTaxonomyLevels": [
+    "Understand",
+    "Apply",
+    "Analyze"
+  ],
   "duration": "10-15 minutes",
-  "prerequisites": ["Basic understanding of sets", "Familiarity with drag-and-drop interfaces"],
+  "prerequisites": [
+    "Basic understanding of sets",
+    "Familiarity with drag-and-drop interfaces"
+  ],
   "framework": "p5.js",
   "canvasDimensions": "responsive x 500",
   "responsive": "Width-responsive",
-  "dependencies": ["p5.js 1.11.10"],
+  "dependencies": [
+    "p5.js 1.11.10"
+  ],
   "controls": [
     {
       "type": "drag",
@@ -44,5 +58,19 @@
     "hasKeyboardNavigation": false,
     "hasScreenReaderSupport": true,
     "colorContrastCompliant": true
-  }
+  },
+  "visualizationType": [
+    "animation",
+    "diagram",
+    "interactive-demo",
+    "timeline"
+  ],
+  "bloomsTaxonomy": [
+    "Remember",
+    "Understand",
+    "Apply",
+    "Analyze",
+    "Evaluate",
+    "Create"
+  ]
 }

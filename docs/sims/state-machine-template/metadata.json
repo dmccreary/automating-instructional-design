@@ -1,44 +1,64 @@
 {
-    "title": "State Machine Template",
-    "description": "An interactive p5.js template for creating state machine visualizations with transitions, history tracking, and dynamic controls. Demonstrates a 5-state machine with 8 transitions.",
-    "creator": "Dan McCreary",
-    "date": "2026-01-13",
-    "type": "InteractiveResource",
-    "format": "text/html",
-    "subject": [
-        "State Machine",
-        "Finite Automata",
-        "Interactive Visualization",
-        "Computer Science",
-        "Educational Technology"
-    ],
-    "language": "en",
-    "rights": "Creative Commons Attribution 4.0 International License",
-    "source": "Automating Instructional Design Project",
-    "relation": "https://dmccreary.github.io/automating-instructional-design/",
-    "coverage": "Foundational computer science concept applicable to software design, game development, and system modeling",
-    "audience": "Students, educators, and developers learning about state machines and finite automata",
-    "educationalLevel": "Intermediate",
-    "keywords": [
-        "state machine",
-        "finite state machine",
-        "FSM",
-        "automata",
-        "transitions",
-        "p5.js",
-        "MicroSim",
-        "interactive learning"
-    ],
-    "version": "1.0",
-    "library": "p5.js",
-    "libraryVersion": "1.9.4",
-    "features": [
-        "5 interconnected states",
-        "8 labeled transitions",
-        "Current state highlighting",
-        "Dynamic transition buttons",
-        "State history tracking",
-        "Reset functionality",
-        "Responsive canvas"
-    ]
+  "title": "State Machine Template",
+  "description": "An interactive p5.js template for creating state machine visualizations with transitions, history tracking, and dynamic controls. Demonstrates a 5-state machine with 8 transitions.",
+  "creator": "Dan McCreary",
+  "date": "2026-01-13",
+  "type": "InteractiveResource",
+  "format": "text/html",
+  "subject": [
+    "State Machine",
+    "Finite Automata",
+    "Interactive Visualization",
+    "Computer Science",
+    "Educational Technology"
+  ],
+  "language": "en",
+  "rights": "Creative Commons Attribution 4.0 International License",
+  "source": "Automating Instructional Design Project",
+  "relation": "https://dmccreary.github.io/automating-instructional-design/",
+  "coverage": "Foundational computer science concept applicable to software design, game development, and system modeling",
+  "audience": "Students, educators, and developers learning about state machines and finite automata",
+  "educationalLevel": "Intermediate",
+  "keywords": [
+    "state machine",
+    "finite state machine",
+    "FSM",
+    "automata",
+    "transitions",
+    "p5.js",
+    "MicroSim",
+    "interactive learning"
+  ],
+  "version": "1.0",
+  "library": "p5.js",
+  "libraryVersion": "1.9.4",
+  "features": [
+    "5 interconnected states",
+    "8 labeled transitions",
+    "Current state highlighting",
+    "Dynamic transition buttons",
+    "State history tracking",
+    "Reset functionality",
+    "Responsive canvas"
+  ],
+  "visualizationType": [
+    "animation",
+    "graph",
+    "interactive-demo",
+    "network",
+    "simulation",
+    "timeline"
+  ],
+  "learningObjectives": [
+    "Understand the key concepts of state machine template",
+    "Explore state machine template through interactive visualization",
+    "Apply knowledge of state machine template to solve problems",
+    "Experiment with parameters to observe their effects on state machine template"
+  ],
+  "bloomsTaxonomy": [
+    "Remember",
+    "Apply",
+    "Evaluate",
+    "Create"
+  ]
 }

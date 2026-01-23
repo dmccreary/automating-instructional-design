@@ -33,5 +33,10 @@
   "visualizationType": [
     "simulation",
     "network"
+  ],
+  "learningObjectives": [
+    "Understand the mathematical concept of traditional  vs  architecture",
+    "Apply traditional  vs  architecture to solve problems",
+    "Visualize and interpret traditional  vs  architecture relationships"
   ]
 }

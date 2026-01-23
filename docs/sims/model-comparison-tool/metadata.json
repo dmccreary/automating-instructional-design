@@ -5,16 +5,49 @@
   "creator": "Dan McCreary",
   "created": "2026-01-14",
   "modified": "2026-01-14",
-  "subject": ["Physics", "Scientific Modeling", "History of Science", "Critical Thinking"],
-  "educationLevel": ["Middle School", "High School"],
-  "bloomTaxonomy": ["Evaluate"],
+  "subject": [
+    "Physics",
+    "Scientific Modeling",
+    "History of Science",
+    "Critical Thinking"
+  ],
+  "educationLevel": [
+    "Middle School",
+    "High School"
+  ],
+  "bloomTaxonomy": [
+    "Evaluate"
+  ],
   "learningObjective": "Enable learners to actively compare multiple models against various test cases, building understanding of how scientific models are evaluated and selected.",
-  "prerequisites": ["Basic understanding of motion", "Familiarity with velocity and acceleration concepts"],
-  "concepts": ["Model Comparison", "Scientific Models", "Impetus Theory", "Newtonian Physics", "Naive Physics", "Model Selection", "Predictive Accuracy", "Test Cases"],
+  "prerequisites": [
+    "Basic understanding of motion",
+    "Familiarity with velocity and acceleration concepts"
+  ],
+  "concepts": [
+    "Model Comparison",
+    "Scientific Models",
+    "Impetus Theory",
+    "Newtonian Physics",
+    "Naive Physics",
+    "Model Selection",
+    "Predictive Accuracy",
+    "Test Cases"
+  ],
   "implementation": "p5.js",
   "interactivityLevel": "High",
   "estimatedTime": "30-45 minutes",
-  "keywords": ["models", "comparison", "physics", "impetus", "newton", "evaluation", "test cases", "predictions", "motion", "forces"],
+  "keywords": [
+    "models",
+    "comparison",
+    "physics",
+    "impetus",
+    "newton",
+    "evaluation",
+    "test cases",
+    "predictions",
+    "motion",
+    "forces"
+  ],
   "license": "Creative Commons Attribution 4.0 International",
   "format": "text/html",
   "language": "en",
@@ -46,5 +79,24 @@
     "hasVisualContent": true,
     "hasAudioContent": false,
     "hasInteractiveElements": true
-  }
+  },
+  "visualizationType": [
+    "animation",
+    "interactive-demo",
+    "simulation"
+  ],
+  "learningObjectives": [
+    "Observe and understand model comparison tool - physics models in action",
+    "Explore how changing parameters affects model comparison tool - physics models",
+    "Apply physics principles to predict model comparison tool - physics models behavior",
+    "Experiment with parameters to observe their effects on model comparison tool - physics models"
+  ],
+  "bloomsTaxonomy": [
+    "Remember",
+    "Understand",
+    "Apply",
+    "Analyze",
+    "Evaluate",
+    "Create"
+  ]
 }

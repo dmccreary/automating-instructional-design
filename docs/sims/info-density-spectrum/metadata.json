@@ -37,5 +37,11 @@
     "graph",
     "interactive-demo",
     "map"
+  ],
+  "learningObjectives": [
+    "Understand the mathematical concept of information density spectrum",
+    "Apply information density spectrum to solve problems",
+    "Visualize and interpret information density spectrum relationships",
+    "Experiment with parameters to observe their effects on information density spectrum"
   ]
 }

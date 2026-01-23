@@ -4,7 +4,13 @@
   "creator": "Dan McCreary",
   "created": "2026-01-13",
   "modified": "2026-01-13",
-  "subject": ["hypothesis testing", "scientific method", "pendulum physics", "educational design patterns", "interactive simulation"],
+  "subject": [
+    "hypothesis testing",
+    "scientific method",
+    "pendulum physics",
+    "educational design patterns",
+    "interactive simulation"
+  ],
   "type": "InteractiveResource",
   "format": "text/html",
   "language": "en",
@@ -62,5 +68,26 @@
       "default": 100,
       "unit": "grams"
     }
-  }
+  },
+  "visualizationType": [
+    "animation",
+    "interactive-demo",
+    "map",
+    "simulation",
+    "timeline"
+  ],
+  "learningObjectives": [
+    "Understand the key concepts of hypothesis testing interface",
+    "Explore hypothesis testing interface through interactive visualization",
+    "Apply knowledge of hypothesis testing interface to solve problems",
+    "Experiment with parameters to observe their effects on hypothesis testing interface"
+  ],
+  "bloomsTaxonomy": [
+    "Remember",
+    "Understand",
+    "Apply",
+    "Analyze",
+    "Evaluate",
+    "Create"
+  ]
 }

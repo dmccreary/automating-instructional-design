@@ -4,7 +4,13 @@
   "creator": "Dan McCreary",
   "created": "2026-01-14",
   "modified": "2026-01-14",
-  "subject": ["prediction prompts", "instructional design patterns", "educational UI design", "prediction-observation-reflection", "active learning"],
+  "subject": [
+    "prediction prompts",
+    "instructional design patterns",
+    "educational UI design",
+    "prediction-observation-reflection",
+    "active learning"
+  ],
   "type": "InteractiveResource",
   "format": "text/html",
   "language": "en",
@@ -58,5 +64,28 @@
     "yellow": "Learner input areas",
     "green": "Observation and results",
     "orange": "Reflection and warnings"
-  }
+  },
+  "visualizationType": [
+    "animation",
+    "graph",
+    "interactive-demo",
+    "map",
+    "network",
+    "simulation",
+    "timeline"
+  ],
+  "learningObjectives": [
+    "Understand the key concepts of prediction prompt interface",
+    "Explore prediction prompt interface through interactive visualization",
+    "Apply knowledge of prediction prompt interface to solve problems",
+    "Experiment with parameters to observe their effects on prediction prompt interface"
+  ],
+  "bloomsTaxonomy": [
+    "Remember",
+    "Understand",
+    "Apply",
+    "Analyze",
+    "Evaluate",
+    "Create"
+  ]
 }

@@ -2,7 +2,13 @@
   "title": "Visual Description Completeness Checklist",
   "description": "An interactive checklist for instructional designers to verify that their visual descriptions include all essential components for effective AI-assisted MicroSim generation.",
   "creator": "Dan McCreary",
-  "subject": ["Education", "Instructional Design", "Visual Description", "Quality Assurance", "Checklist"],
+  "subject": [
+    "Education",
+    "Instructional Design",
+    "Visual Description",
+    "Quality Assurance",
+    "Checklist"
+  ],
   "date": "2026-01-13",
   "type": "Interactive Simulation",
   "format": "text/html",
@@ -17,13 +23,21 @@
     "Understand the importance of detailed specifications for AI code generation",
     "Apply a systematic approach to creating visual specifications"
   ],
-  "bloomsTaxonomyLevels": ["Remember", "Understand"],
+  "bloomsTaxonomyLevels": [
+    "Remember",
+    "Understand"
+  ],
   "duration": "5-15 minutes",
-  "prerequisites": ["Basic understanding of visual design concepts", "Familiarity with MicroSim specifications"],
+  "prerequisites": [
+    "Basic understanding of visual design concepts",
+    "Familiarity with MicroSim specifications"
+  ],
   "framework": "p5.js",
   "canvasDimensions": "responsive x 550",
   "responsive": "Width-responsive",
-  "dependencies": ["p5.js 1.11.10"],
+  "dependencies": [
+    "p5.js 1.11.10"
+  ],
   "accessibility": {
     "screenReaderSupport": true,
     "keyboardNavigation": false,
@@ -61,5 +75,19 @@
     "Checklist covers common elements but may not include domain-specific requirements",
     "Does not validate the quality of specifications, only their presence",
     "Export function requires clipboard API support in browser"
+  ],
+  "visualizationType": [
+    "animation",
+    "diagram",
+    "interactive-demo",
+    "network",
+    "simulation"
+  ],
+  "bloomsTaxonomy": [
+    "Remember",
+    "Understand",
+    "Apply",
+    "Evaluate",
+    "Create"
   ]
 }

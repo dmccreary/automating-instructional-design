@@ -73,5 +73,26 @@
     "aria-live for dynamic status updates",
     "Visible focus indicators on all interactive elements",
     "Logical tab order: left-to-right, top-to-bottom"
+  ],
+  "visualizationType": [
+    "animation",
+    "diagram",
+    "interactive-demo",
+    "map",
+    "network",
+    "simulation"
+  ],
+  "learningObjectives": [
+    "Understand the key concepts of accessible control layout",
+    "Explore accessible control layout through interactive visualization",
+    "Apply knowledge of accessible control layout to solve problems",
+    "Experiment with parameters to observe their effects on accessible control layout"
+  ],
+  "bloomsTaxonomy": [
+    "Remember",
+    "Understand",
+    "Apply",
+    "Analyze",
+    "Create"
   ]
 }

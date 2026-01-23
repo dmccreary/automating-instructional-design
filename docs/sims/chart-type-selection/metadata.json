@@ -2,7 +2,11 @@
   "title": "Chart Type Selection Guide",
   "description": "An interactive infographic that helps learners quickly identify the appropriate chart type based on their data characteristics and communication goals, featuring six common chart types with icons, use cases, and examples.",
   "creator": "Dan McCreary",
-  "subject": ["Data Visualization", "Chart Selection", "Education"],
+  "subject": [
+    "Data Visualization",
+    "Chart Selection",
+    "Education"
+  ],
   "date": "2026-01-13",
   "type": "Interactive Simulation",
   "format": "text/html",
@@ -17,13 +21,21 @@
     "Select the appropriate chart type for a given scenario",
     "Compare different chart types and justify selection decisions"
   ],
-  "bloomsTaxonomyLevels": ["Remember", "Understand", "Apply"],
+  "bloomsTaxonomyLevels": [
+    "Remember",
+    "Understand",
+    "Apply"
+  ],
   "duration": "5-15 minutes",
-  "prerequisites": ["Basic understanding of data types"],
+  "prerequisites": [
+    "Basic understanding of data types"
+  ],
   "framework": "p5.js",
   "canvasDimensions": "responsive x 450",
   "responsive": "Width-responsive",
-  "dependencies": ["p5.js 1.11.10"],
+  "dependencies": [
+    "p5.js 1.11.10"
+  ],
   "controls": [
     {
       "type": "hover",
@@ -66,5 +78,22 @@
       "library": "Chart.js"
     }
   ],
-  "modelType": "Infographic Decision Guide"
+  "modelType": "Infographic Decision Guide",
+  "visualizationType": [
+    "chart",
+    "data-visualization",
+    "graph",
+    "interactive-demo",
+    "map",
+    "network",
+    "simulation"
+  ],
+  "bloomsTaxonomy": [
+    "Remember",
+    "Understand",
+    "Apply",
+    "Analyze",
+    "Evaluate",
+    "Create"
+  ]
 }

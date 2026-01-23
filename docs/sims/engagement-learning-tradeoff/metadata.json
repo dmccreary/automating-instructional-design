@@ -67,15 +67,77 @@
     }
   },
   "dataPoints": [
-    {"name": "Static Diagram", "engagement": 1, "learning": 3},
-    {"name": "Labeled Image", "engagement": 2, "learning": 4},
-    {"name": "Step-by-Step Guide", "engagement": 3, "learning": 6},
-    {"name": "Interactive Simulation", "engagement": 5, "learning": 8},
-    {"name": "Adaptive Quiz", "engagement": 4.5, "learning": 7.5},
-    {"name": "Guided Discovery", "engagement": 5.5, "learning": 8.5},
-    {"name": "Complex Game", "engagement": 7, "learning": 6.5},
-    {"name": "Game-Heavy Design", "engagement": 9, "learning": 5},
-    {"name": "Social Competition", "engagement": 8, "learning": 4.5},
-    {"name": "Exploratory Sandbox", "engagement": 6, "learning": 7}
+    {
+      "name": "Static Diagram",
+      "engagement": 1,
+      "learning": 3
+    },
+    {
+      "name": "Labeled Image",
+      "engagement": 2,
+      "learning": 4
+    },
+    {
+      "name": "Step-by-Step Guide",
+      "engagement": 3,
+      "learning": 6
+    },
+    {
+      "name": "Interactive Simulation",
+      "engagement": 5,
+      "learning": 8
+    },
+    {
+      "name": "Adaptive Quiz",
+      "engagement": 4.5,
+      "learning": 7.5
+    },
+    {
+      "name": "Guided Discovery",
+      "engagement": 5.5,
+      "learning": 8.5
+    },
+    {
+      "name": "Complex Game",
+      "engagement": 7,
+      "learning": 6.5
+    },
+    {
+      "name": "Game-Heavy Design",
+      "engagement": 9,
+      "learning": 5
+    },
+    {
+      "name": "Social Competition",
+      "engagement": 8,
+      "learning": 4.5
+    },
+    {
+      "name": "Exploratory Sandbox",
+      "engagement": 6,
+      "learning": 7
+    }
+  ],
+  "visualizationType": [
+    "diagram",
+    "graph",
+    "interactive-demo",
+    "map",
+    "network",
+    "simulation"
+  ],
+  "learningObjectives": [
+    "Understand the key concepts of engagement-learning tradeoff",
+    "Explore engagement-learning tradeoff through interactive visualization",
+    "Apply knowledge of engagement-learning tradeoff to solve problems",
+    "Experiment with parameters to observe their effects on engagement-learning tradeoff"
+  ],
+  "bloomsTaxonomy": [
+    "Remember",
+    "Understand",
+    "Apply",
+    "Analyze",
+    "Evaluate",
+    "Create"
   ]
 }
