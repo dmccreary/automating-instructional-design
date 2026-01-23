@@ -1,0 +1,46 @@
+{
+  "title": "Educational Technology Ecosystem",
+  "description": "An interactive network diagram showing the interconnected components of modern educational technology organized in concentric rings around the learner.",
+  "subject": "Mathematics",
+  "topic": "Educational Technology Ecosystem",
+  "gradeLevel": "6-12",
+  "bloomsTaxonomy": [
+    "Understand",
+    "Apply"
+  ],
+  "author": "Dan McCreary",
+  "dateCreated": "2026-01-23",
+  "dateModified": "2026-01-23",
+  "version": "1.0.0",
+  "license": "MIT",
+  "language": "en",
+  "format": "text/html",
+  "type": "Interactive Simulation",
+  "framework": "vis-network",
+  "url": "https://dmccreary.github.io/automating-instructional-design/sims/ed-tech-ecosystem/",
+  "identifier": "https://dmccreary.github.io/automating-instructional-design/sims/ed-tech-ecosystem/",
+  "_source": {
+    "repo": "automating-instructional-design",
+    "sim": "ed-tech-ecosystem",
+    "github_url": "https://github.com/dmccreary/automating-instructional-design/tree/main/docs/sims/ed-tech-ecosystem",
+    "auto_generated": true,
+    "generation_date": "2026-01-23"
+  },
+  "subjects": [
+    "Mathematics",
+    "Physics",
+    "Computer Science",
+    "Chemistry",
+    "Biology",
+    "Engineering"
+  ],
+  "visualizationType": [
+    "animation",
+    "simulation",
+    "graph",
+    "diagram",
+    "interactive-demo",
+    "network",
+    "map"
+  ]
+}

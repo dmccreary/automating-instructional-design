@@ -1,0 +1,45 @@
+{
+  "title": "AI Generation Workflow",
+  "description": "This interactive flowchart illustrates the complete end-to-end workflow for creating MicroSims, from defining a learning objective to deploying a working interactive simulation. The diagram highlights the collaborative interplay between human expertise and AI assistance throughout the process.",
+  "subject": "Mathematics",
+  "topic": "AI Generation Workflow",
+  "gradeLevel": "6-12",
+  "bloomsTaxonomy": [
+    "Understand",
+    "Apply"
+  ],
+  "author": "Dan McCreary",
+  "dateCreated": "2026-01-23",
+  "dateModified": "2026-01-23",
+  "version": "1.0.0",
+  "license": "MIT",
+  "language": "en",
+  "format": "text/html",
+  "type": "Interactive Simulation",
+  "framework": "p5.js",
+  "url": "https://dmccreary.github.io/automating-instructional-design/sims/ai-generation-workflow/",
+  "identifier": "https://dmccreary.github.io/automating-instructional-design/sims/ai-generation-workflow/",
+  "_source": {
+    "repo": "automating-instructional-design",
+    "sim": "ai-generation-workflow",
+    "github_url": "https://github.com/dmccreary/automating-instructional-design/tree/main/docs/sims/ai-generation-workflow",
+    "auto_generated": true,
+    "generation_date": "2026-01-23"
+  },
+  "subjects": [
+    "Mathematics",
+    "Computer Science",
+    "Engineering"
+  ],
+  "visualizationType": [
+    "animation",
+    "simulation",
+    "chart",
+    "graph",
+    "diagram",
+    "interactive-demo",
+    "network",
+    "timeline",
+    "map"
+  ]
+}

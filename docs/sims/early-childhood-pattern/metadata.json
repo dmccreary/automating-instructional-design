@@ -1,0 +1,43 @@
+{
+  "title": "Early Childhood MicroSim Pattern",
+  "description": "<iframe src=\"main.html\" width=\"820\" height=\"520\" style=\"border: none; max-width: 100%;\"></iframe>",
+  "subject": "Mathematics",
+  "topic": "Early Childhood MicroSim Pattern",
+  "gradeLevel": "6-12",
+  "bloomsTaxonomy": [
+    "Understand",
+    "Apply"
+  ],
+  "author": "Dan McCreary",
+  "dateCreated": "2026-01-23",
+  "dateModified": "2026-01-23",
+  "version": "1.0.0",
+  "license": "MIT",
+  "language": "en",
+  "format": "text/html",
+  "type": "Interactive Simulation",
+  "framework": "p5.js",
+  "url": "https://dmccreary.github.io/automating-instructional-design/sims/early-childhood-pattern/",
+  "identifier": "https://dmccreary.github.io/automating-instructional-design/sims/early-childhood-pattern/",
+  "_source": {
+    "repo": "automating-instructional-design",
+    "sim": "early-childhood-pattern",
+    "github_url": "https://github.com/dmccreary/automating-instructional-design/tree/main/docs/sims/early-childhood-pattern",
+    "auto_generated": true,
+    "generation_date": "2026-01-23"
+  },
+  "subjects": [
+    "Mathematics",
+    "Physics",
+    "Computer Science",
+    "Chemistry",
+    "Engineering"
+  ],
+  "visualizationType": [
+    "animation",
+    "simulation",
+    "chart",
+    "interactive-demo",
+    "map"
+  ]
+}

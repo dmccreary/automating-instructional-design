@@ -1,0 +1,46 @@
+{
+  "title": "Math Relationship Explorer - Logistic Function",
+  "description": "An interactive visualization for exploring the logistic function f(x) = L/(1 + e^(-k(x-x0))) with parameter manipulation, derivatives, integrals, and mathematical annotations.",
+  "subject": "Mathematics",
+  "topic": "Math Relationship Explorer - Logistic Function",
+  "gradeLevel": "6-12",
+  "bloomsTaxonomy": [
+    "Understand",
+    "Apply"
+  ],
+  "author": "Dan McCreary",
+  "dateCreated": "2026-01-23",
+  "dateModified": "2026-01-23",
+  "version": "1.0.0",
+  "license": "MIT",
+  "language": "en",
+  "format": "text/html",
+  "type": "Interactive Simulation",
+  "framework": "p5.js",
+  "url": "https://dmccreary.github.io/automating-instructional-design/sims/math-relationship-explorer/",
+  "identifier": "https://dmccreary.github.io/automating-instructional-design/sims/math-relationship-explorer/",
+  "_source": {
+    "repo": "automating-instructional-design",
+    "sim": "math-relationship-explorer",
+    "github_url": "https://github.com/dmccreary/automating-instructional-design/tree/main/docs/sims/math-relationship-explorer",
+    "auto_generated": true,
+    "generation_date": "2026-01-23"
+  },
+  "subjects": [
+    "Mathematics",
+    "Computer Science",
+    "Chemistry",
+    "Biology",
+    "Statistics",
+    "Engineering",
+    "Economics"
+  ],
+  "visualizationType": [
+    "animation",
+    "simulation",
+    "graph",
+    "interactive-demo",
+    "network",
+    "map"
+  ]
+}

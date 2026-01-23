@@ -1,0 +1,37 @@
+{
+  "title": "Traditional Simulation vs MicroSim Architecture",
+  "description": "Side-by-side comparison showing the differences between monolithic traditional simulations and modular MicroSim architecture.",
+  "subject": "Mathematics",
+  "topic": "Traditional Simulation vs MicroSim Architecture",
+  "gradeLevel": "6-12",
+  "bloomsTaxonomy": [
+    "Understand",
+    "Apply"
+  ],
+  "author": "Dan McCreary",
+  "dateCreated": "2026-01-23",
+  "dateModified": "2026-01-23",
+  "version": "1.0.0",
+  "license": "MIT",
+  "language": "en",
+  "format": "text/html",
+  "type": "Interactive Simulation",
+  "framework": "p5.js",
+  "url": "https://dmccreary.github.io/automating-instructional-design/sims/sim-vs-microsim/",
+  "identifier": "https://dmccreary.github.io/automating-instructional-design/sims/sim-vs-microsim/",
+  "_source": {
+    "repo": "automating-instructional-design",
+    "sim": "sim-vs-microsim",
+    "github_url": "https://github.com/dmccreary/automating-instructional-design/tree/main/docs/sims/sim-vs-microsim",
+    "auto_generated": true,
+    "generation_date": "2026-01-23"
+  },
+  "subjects": [
+    "Mathematics",
+    "Engineering"
+  ],
+  "visualizationType": [
+    "simulation",
+    "network"
+  ]
+}
