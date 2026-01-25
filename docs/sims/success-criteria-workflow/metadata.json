@@ -43,5 +43,28 @@
     "Apply success criteria validation workflow to solve problems",
     "Visualize and interpret success criteria validation workflow relationships",
     "Test understanding of success criteria validation workflow through interactive exercises"
-  ]
+  ],
+  "pedagogical": {
+    "pattern": "assessment",
+    "bloomAlignment": [
+      "understand",
+      "apply",
+      "evaluate"
+    ],
+    "bloomVerbs": [
+      "explain",
+      "calculate",
+      "demonstrate",
+      "illustrate",
+      "implement"
+    ],
+    "pacing": "continuous",
+    "supportsPrediction": false,
+    "dataVisibility": "medium",
+    "feedbackType": [
+      "corrective",
+      "explanatory"
+    ],
+    "interactionStyle": "respond"
+  }
 }

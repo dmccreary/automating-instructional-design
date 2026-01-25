@@ -60,5 +60,29 @@
     "Explore interpretation pitfalls in user testing through interactive visualization",
     "Apply knowledge of interpretation pitfalls in user testing to solve problems",
     "Test understanding of interpretation pitfalls in user testing through interactive exercises"
-  ]
+  ],
+  "pedagogical": {
+    "pattern": "assessment",
+    "bloomAlignment": [
+      "understand",
+      "analyze",
+      "evaluate"
+    ],
+    "bloomVerbs": [
+      "classify",
+      "compare",
+      "explain",
+      "interpret",
+      "analyze"
+    ],
+    "pacing": "self-paced",
+    "supportsPrediction": true,
+    "dataVisibility": "high",
+    "feedbackType": [
+      "delayed",
+      "corrective",
+      "explanatory"
+    ],
+    "interactionStyle": "construct"
+  }
 }
