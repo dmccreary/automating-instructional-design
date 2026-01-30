@@ -1,45 +1,90 @@
 {
-    "title": "Progressive Disclosure Demonstration",
-    "description": "An interactive MicroSim demonstrating progressive disclosure as an instructional design technique using supply and demand economics, with 5 stages that progressively reveal complexity.",
-    "creator": "Dan McCreary",
-    "created": "2026-01-13",
-    "modified": "2026-01-13",
-    "type": "InteractiveResource",
-    "format": "text/html",
-    "language": "en",
-    "subject": [
-        "Progressive Disclosure",
-        "Instructional Design",
-        "User Experience",
-        "Cognitive Load Theory",
-        "Supply and Demand",
-        "Economics Education"
+  "title": "Progressive Disclosure Demonstration",
+  "description": "An interactive MicroSim demonstrating progressive disclosure as an instructional design technique using supply and demand economics, with 5 stages that progressively reveal complexity.",
+  "creator": "Dan McCreary",
+  "created": "2026-01-13",
+  "modified": "2026-01-13",
+  "type": "InteractiveResource",
+  "format": "text/html",
+  "language": "en",
+  "subject": [
+    "Progressive Disclosure",
+    "Instructional Design",
+    "User Experience",
+    "Cognitive Load Theory",
+    "Supply and Demand",
+    "Economics Education"
+  ],
+  "educationalLevel": "Graduate",
+  "audience": "Instructional Designers, Educators, UX Designers, Education Students",
+  "rights": "MIT License",
+  "source": "Automating Instructional Design Textbook",
+  "relation": "https://dmccreary.github.io/automating-instructional-design/",
+  "coverage": "Progressive disclosure techniques in instructional design and user interface design",
+  "bloomTaxonomy": "Apply",
+  "learningObjective": "Experience progressive disclosure firsthand while learning about supply and demand, building intuition for how this technique supports learning",
+  "interactivityType": "active",
+  "interactivityLevel": "high",
+  "typicalLearningTime": "PT20M",
+  "technicalRequirements": "Modern web browser with JavaScript enabled",
+  "keywords": [
+    "progressive disclosure",
+    "instructional design",
+    "cognitive load",
+    "supply and demand",
+    "economics",
+    "scaffolding",
+    "user experience",
+    "learning design",
+    "staged learning",
+    "equilibrium",
+    "elasticity",
+    "consumer surplus",
+    "producer surplus"
+  ],
+  "visualizationType": [
+    "animation",
+    "graph",
+    "interactive-demo",
+    "network",
+    "simulation"
+  ],
+  "learningObjectives": [
+    "Understand the key concepts of progressive disclosure demonstration",
+    "Explore progressive disclosure demonstration through interactive visualization",
+    "Apply knowledge of progressive disclosure demonstration to solve problems",
+    "Experiment with parameters to observe their effects on progressive disclosure demonstration"
+  ],
+  "bloomsTaxonomy": [
+    "Remember",
+    "Understand",
+    "Apply",
+    "Analyze",
+    "Evaluate",
+    "Create"
+  ],
+  "pedagogical": {
+    "pattern": "demonstration",
+    "bloomAlignment": [
+      "understand",
+      "apply",
+      "analyze"
     ],
-    "educationalLevel": "Graduate",
-    "audience": "Instructional Designers, Educators, UX Designers, Education Students",
-    "rights": "MIT License",
-    "source": "Automating Instructional Design Textbook",
-    "relation": "https://dmccreary.github.io/automating-instructional-design/",
-    "coverage": "Progressive disclosure techniques in instructional design and user interface design",
-    "bloomTaxonomy": "Apply",
-    "learningObjective": "Experience progressive disclosure firsthand while learning about supply and demand, building intuition for how this technique supports learning",
-    "interactivityType": "active",
-    "interactivityLevel": "high",
-    "typicalLearningTime": "PT20M",
-    "technicalRequirements": "Modern web browser with JavaScript enabled",
-    "keywords": [
-        "progressive disclosure",
-        "instructional design",
-        "cognitive load",
-        "supply and demand",
-        "economics",
-        "scaffolding",
-        "user experience",
-        "learning design",
-        "staged learning",
-        "equilibrium",
-        "elasticity",
-        "consumer surplus",
-        "producer surplus"
-    ]
+    "bloomVerbs": [
+      "compare",
+      "describe",
+      "explain",
+      "calculate",
+      "demonstrate"
+    ],
+    "pacing": "self-paced",
+    "supportsPrediction": false,
+    "dataVisibility": "high",
+    "feedbackType": [
+      "immediate",
+      "corrective",
+      "explanatory"
+    ],
+    "interactionStyle": "construct"
+  }
 }

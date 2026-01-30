@@ -2,7 +2,12 @@
   "title": "Cause-Effect Display",
   "description": "An interactive demonstration of the standard MicroSim structure showing a control panel with input variables (causes) on the left and a visualization area displaying output effects (water state changes) on the right, with immediate visual feedback.",
   "creator": "Dan McCreary",
-  "subject": ["Education", "Instructional Design", "Simulation Design", "Physics"],
+  "subject": [
+    "Education",
+    "Instructional Design",
+    "Simulation Design",
+    "Physics"
+  ],
   "date": "2025-01-13",
   "type": "Interactive Simulation",
   "format": "text/html",
@@ -17,13 +22,21 @@
     "Describe the phase transitions of water based on temperature and pressure",
     "Apply the cause-effect pattern to design simulations"
   ],
-  "bloomsTaxonomyLevels": ["Understand", "Apply", "Analyze"],
+  "bloomsTaxonomyLevels": [
+    "Understand",
+    "Apply",
+    "Analyze"
+  ],
   "duration": "5-10 minutes",
-  "prerequisites": ["Basic understanding of states of matter"],
+  "prerequisites": [
+    "Basic understanding of states of matter"
+  ],
   "framework": "p5.js",
   "canvasDimensions": "responsive x 500",
   "responsive": "Width-responsive",
-  "dependencies": ["p5.js 1.11.10"],
+  "dependencies": [
+    "p5.js 1.11.10"
+  ],
   "accessibility": {
     "screenReaderSupport": true,
     "keyboardNavigation": true,
@@ -57,5 +70,43 @@
   "limitations": [
     "Does not show exact phase diagram",
     "Pressure effects are approximated"
-  ]
+  ],
+  "visualizationType": [
+    "animation",
+    "diagram",
+    "interactive-demo",
+    "map",
+    "network",
+    "simulation"
+  ],
+  "bloomsTaxonomy": [
+    "Remember",
+    "Understand",
+    "Apply",
+    "Create"
+  ],
+  "pedagogical": {
+    "pattern": "demonstration",
+    "bloomAlignment": [
+      "understand",
+      "apply",
+      "evaluate"
+    ],
+    "bloomVerbs": [
+      "describe",
+      "explain",
+      "apply",
+      "calculate",
+      "demonstrate"
+    ],
+    "pacing": "self-paced",
+    "supportsPrediction": false,
+    "dataVisibility": "high",
+    "feedbackType": [
+      "immediate",
+      "corrective",
+      "explanatory"
+    ],
+    "interactionStyle": "manipulate"
+  }
 }

@@ -2,7 +2,11 @@
   "title": "Rule Hierarchy Cascade",
   "description": "An interactive visualization showing how rules cascade through 5 organizational hierarchy levels (Enterprise, Business Unit, Department, Project, Personal) and how conflicts are resolved using specificity principles.",
   "creator": "Dan McCreary",
-  "subject": ["Instructional Design", "Configuration Management", "Systems Architecture"],
+  "subject": [
+    "Instructional Design",
+    "Configuration Management",
+    "Systems Architecture"
+  ],
   "date": "2025-01-14",
   "type": "Interactive Simulation",
   "format": "text/html",
@@ -17,13 +21,20 @@
     "Predict how conflicts between levels are resolved",
     "Apply the 'most specific wins' principle to configuration conflicts"
   ],
-  "bloomsTaxonomyLevels": ["Analyze", "Understand"],
+  "bloomsTaxonomyLevels": [
+    "Analyze",
+    "Understand"
+  ],
   "duration": "5-10 minutes",
-  "prerequisites": ["Basic understanding of hierarchical systems"],
+  "prerequisites": [
+    "Basic understanding of hierarchical systems"
+  ],
   "framework": "p5.js",
   "canvasDimensions": "responsive x 550",
   "responsive": "Width-responsive",
-  "dependencies": ["p5.js 1.11.10"],
+  "dependencies": [
+    "p5.js 1.11.10"
+  ],
   "accessibility": {
     "screenReaderSupport": true,
     "keyboardNavigation": false,
@@ -40,6 +51,46 @@
     }
   ],
   "modelType": "Informational Visualization",
-  "assumptions": ["5-level organizational hierarchy", "Most specific level wins conflict resolution"],
-  "limitations": ["Does not show complex multi-path inheritance", "Simplified conflict resolution model"]
+  "assumptions": [
+    "5-level organizational hierarchy",
+    "Most specific level wins conflict resolution"
+  ],
+  "limitations": [
+    "Does not show complex multi-path inheritance",
+    "Simplified conflict resolution model"
+  ],
+  "visualizationType": [
+    "animation",
+    "diagram",
+    "interactive-demo",
+    "simulation"
+  ],
+  "bloomsTaxonomy": [
+    "Remember",
+    "Understand",
+    "Apply",
+    "Create"
+  ],
+  "pedagogical": {
+    "pattern": "demonstration",
+    "bloomAlignment": [
+      "remember",
+      "understand",
+      "apply"
+    ],
+    "bloomVerbs": [
+      "identify",
+      "state",
+      "describe",
+      "explain",
+      "apply"
+    ],
+    "pacing": "self-paced",
+    "supportsPrediction": true,
+    "dataVisibility": "medium",
+    "feedbackType": [
+      "none"
+    ],
+    "interactionStyle": "construct"
+  }
 }

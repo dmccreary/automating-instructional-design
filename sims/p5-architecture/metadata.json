@@ -4,7 +4,13 @@
   "creator": "Dan McCreary",
   "created": "2026-01-13",
   "modified": "2026-01-13",
-  "subject": ["p5.js architecture", "MicroSim structure", "responsive design", "canvas layout", "educational simulation"],
+  "subject": [
+    "p5.js architecture",
+    "MicroSim structure",
+    "responsive design",
+    "canvas layout",
+    "educational simulation"
+  ],
   "type": "InteractiveResource",
   "format": "text/html",
   "language": "en",
@@ -43,5 +49,48 @@
     "control region",
     "educational simulation",
     "web visualization"
-  ]
+  ],
+  "visualizationType": [
+    "animation",
+    "diagram",
+    "interactive-demo",
+    "simulation"
+  ],
+  "learningObjectives": [
+    "Understand the key concepts of p5.js  architecture",
+    "Explore p5.js  architecture through interactive visualization",
+    "Apply knowledge of p5.js  architecture to solve problems",
+    "Experiment with parameters to observe their effects on p5.js  architecture"
+  ],
+  "bloomsTaxonomy": [
+    "Remember",
+    "Understand",
+    "Apply",
+    "Evaluate",
+    "Create"
+  ],
+  "pedagogical": {
+    "pattern": "demonstration",
+    "bloomAlignment": [
+      "understand",
+      "apply",
+      "evaluate"
+    ],
+    "bloomVerbs": [
+      "describe",
+      "explain",
+      "illustrate",
+      "implement",
+      "use"
+    ],
+    "pacing": "self-paced",
+    "supportsPrediction": false,
+    "dataVisibility": "medium",
+    "feedbackType": [
+      "immediate",
+      "corrective",
+      "explanatory"
+    ],
+    "interactionStyle": "manipulate"
+  }
 }

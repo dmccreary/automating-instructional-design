@@ -4,7 +4,13 @@
   "creator": "Dan McCreary",
   "created": "2026-01-13",
   "modified": "2026-01-13",
-  "subject": ["physics simulation", "computational architecture", "game physics", "numerical integration", "simulation loop"],
+  "subject": [
+    "physics simulation",
+    "computational architecture",
+    "game physics",
+    "numerical integration",
+    "simulation loop"
+  ],
   "type": "InteractiveResource",
   "format": "text/html",
   "language": "en",
@@ -40,5 +46,47 @@
     "update loop",
     "integration methods",
     "force-based simulation"
-  ]
+  ],
+  "visualizationType": [
+    "animation",
+    "diagram",
+    "interactive-demo",
+    "network",
+    "simulation"
+  ],
+  "learningObjectives": [
+    "Understand the key concepts of physics  architecture",
+    "Explore physics  architecture through interactive visualization",
+    "Apply knowledge of physics  architecture to solve problems",
+    "Experiment with parameters to observe their effects on physics  architecture"
+  ],
+  "bloomsTaxonomy": [
+    "Remember",
+    "Understand",
+    "Apply",
+    "Evaluate",
+    "Create"
+  ],
+  "pedagogical": {
+    "pattern": "demonstration",
+    "bloomAlignment": [
+      "understand",
+      "apply",
+      "evaluate"
+    ],
+    "bloomVerbs": [
+      "apply",
+      "calculate",
+      "illustrate",
+      "implement",
+      "experiment"
+    ],
+    "pacing": "continuous",
+    "supportsPrediction": false,
+    "dataVisibility": "medium",
+    "feedbackType": [
+      "none"
+    ],
+    "interactionStyle": "construct"
+  }
 }

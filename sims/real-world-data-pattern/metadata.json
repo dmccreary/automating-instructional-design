@@ -1,0 +1,78 @@
+{
+  "title": "Real-World Data Pattern MicroSim",
+  "description": "An interactive climate modeling MicroSim that compares simulation-generated data with real-world observations, teaching students to evaluate model accuracy and interpret authentic data patterns.",
+  "subject": "Mathematics",
+  "topic": "Real-World Data Pattern MicroSim",
+  "gradeLevel": "6-12",
+  "bloomsTaxonomy": [
+    "Understand",
+    "Apply"
+  ],
+  "author": "Dan McCreary",
+  "dateCreated": "2026-01-23",
+  "dateModified": "2026-01-23",
+  "version": "1.0.0",
+  "license": "MIT",
+  "language": "en",
+  "format": "text/html",
+  "type": "Interactive Simulation",
+  "framework": "chart.js",
+  "url": "https://dmccreary.github.io/automating-instructional-design/sims/real-world-data-pattern/",
+  "identifier": "https://dmccreary.github.io/automating-instructional-design/sims/real-world-data-pattern/",
+  "_source": {
+    "repo": "automating-instructional-design",
+    "sim": "real-world-data-pattern",
+    "github_url": "https://github.com/dmccreary/automating-instructional-design/tree/main/docs/sims/real-world-data-pattern",
+    "auto_generated": true,
+    "generation_date": "2026-01-23"
+  },
+  "subjects": [
+    "Mathematics",
+    "Physics",
+    "Computer Science",
+    "Chemistry",
+    "Biology",
+    "Statistics",
+    "Engineering",
+    "Economics"
+  ],
+  "visualizationType": [
+    "animation",
+    "simulation",
+    "chart",
+    "graph",
+    "interactive-demo",
+    "network",
+    "map"
+  ],
+  "learningObjectives": [
+    "Understand the mathematical concept of real-world data pattern",
+    "Apply real-world data pattern to solve problems",
+    "Visualize and interpret real-world data pattern relationships",
+    "Experiment with parameters to observe their effects on real-world data pattern"
+  ],
+  "pedagogical": {
+    "pattern": "guided-discovery",
+    "bloomAlignment": [
+      "understand",
+      "apply",
+      "analyze"
+    ],
+    "bloomVerbs": [
+      "classify",
+      "compare",
+      "describe",
+      "explain",
+      "interpret"
+    ],
+    "pacing": "self-paced",
+    "supportsPrediction": true,
+    "dataVisibility": "high",
+    "feedbackType": [
+      "immediate",
+      "corrective",
+      "explanatory"
+    ],
+    "interactionStyle": "manipulate"
+  }
+}

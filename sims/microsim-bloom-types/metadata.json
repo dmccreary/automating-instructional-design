@@ -45,5 +45,50 @@
     "analyze",
     "evaluate",
     "create"
-  ]
+  ],
+  "visualizationType": [
+    "animation",
+    "data-visualization",
+    "interactive-demo",
+    "map",
+    "network",
+    "simulation"
+  ],
+  "learningObjectives": [
+    "Understand the key concepts of types by bloom's taxonomy",
+    "Explore types by bloom's taxonomy through interactive visualization",
+    "Apply knowledge of types by bloom's taxonomy to solve problems",
+    "Test understanding of types by bloom's taxonomy through interactive exercises"
+  ],
+  "bloomsTaxonomy": [
+    "Remember",
+    "Understand",
+    "Apply",
+    "Analyze",
+    "Evaluate",
+    "Create"
+  ],
+  "pedagogical": {
+    "pattern": "assessment",
+    "bloomAlignment": [
+      "understand",
+      "apply",
+      "analyze"
+    ],
+    "bloomVerbs": [
+      "classify",
+      "compare",
+      "explain",
+      "apply",
+      "calculate"
+    ],
+    "pacing": "self-paced",
+    "supportsPrediction": false,
+    "dataVisibility": "medium",
+    "feedbackType": [
+      "immediate",
+      "corrective"
+    ],
+    "interactionStyle": "respond"
+  }
 }

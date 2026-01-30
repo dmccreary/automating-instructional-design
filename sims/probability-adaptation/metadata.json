@@ -2,7 +2,12 @@
   "title": "Probability Concept Adaptation",
   "description": "An interactive comparison demonstrating how a single probability concept is adapted for seven different audience levels, from early childhood games with colorful ducks to graduate-level MCMC samplers and corporate risk decision tools.",
   "creator": "Dan McCreary",
-  "subject": ["Education", "Instructional Design", "Probability", "Audience Analysis"],
+  "subject": [
+    "Education",
+    "Instructional Design",
+    "Probability",
+    "Audience Analysis"
+  ],
   "date": "2025-01-13",
   "type": "Interactive Simulation",
   "format": "text/html",
@@ -17,13 +22,22 @@
     "Compare instructional approaches across expertise levels",
     "Design audience-appropriate versions of educational concepts"
   ],
-  "bloomsTaxonomyLevels": ["Analyze", "Evaluate", "Create"],
+  "bloomsTaxonomyLevels": [
+    "Analyze",
+    "Evaluate",
+    "Create"
+  ],
   "duration": "10-15 minutes",
-  "prerequisites": ["Basic understanding of instructional design", "Familiarity with Bloom's Taxonomy"],
+  "prerequisites": [
+    "Basic understanding of instructional design",
+    "Familiarity with Bloom's Taxonomy"
+  ],
   "framework": "p5.js",
   "canvasDimensions": "responsive x 500",
   "responsive": "Width-responsive",
-  "dependencies": ["p5.js 1.11.10"],
+  "dependencies": [
+    "p5.js 1.11.10"
+  ],
   "accessibility": {
     "screenReaderSupport": true,
     "keyboardNavigation": false,
@@ -40,6 +54,53 @@
     }
   ],
   "modelType": "Comparative Visualization",
-  "assumptions": ["Seven distinct audience levels represent typical educational/professional contexts"],
-  "limitations": ["Sketch previews are simplified representations of full MicroSims", "Comparison limited to two views at a time"]
+  "assumptions": [
+    "Seven distinct audience levels represent typical educational/professional contexts"
+  ],
+  "limitations": [
+    "Sketch previews are simplified representations of full MicroSims",
+    "Comparison limited to two views at a time"
+  ],
+  "visualizationType": [
+    "animation",
+    "graph",
+    "interactive-demo",
+    "map",
+    "network",
+    "simulation",
+    "timeline"
+  ],
+  "bloomsTaxonomy": [
+    "Remember",
+    "Understand",
+    "Apply",
+    "Analyze",
+    "Evaluate",
+    "Create"
+  ],
+  "pedagogical": {
+    "pattern": "demonstration",
+    "bloomAlignment": [
+      "understand",
+      "apply",
+      "analyze"
+    ],
+    "bloomVerbs": [
+      "classify",
+      "compare",
+      "describe",
+      "explain",
+      "calculate"
+    ],
+    "pacing": "self-paced",
+    "supportsPrediction": true,
+    "dataVisibility": "high",
+    "feedbackType": [
+      "immediate",
+      "delayed",
+      "corrective",
+      "explanatory"
+    ],
+    "interactionStyle": "construct"
+  }
 }

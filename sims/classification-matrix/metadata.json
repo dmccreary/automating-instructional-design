@@ -20,7 +20,53 @@
   "interactivityType": "Active",
   "interactivityLevel": "High",
   "typicalLearningTime": "PT10M",
-  "accessibilityFeatures": ["Keyboard accessible drag and drop", "High contrast colors", "Screen reader description"],
+  "accessibilityFeatures": [
+    "Keyboard accessible drag and drop",
+    "High contrast colors",
+    "Screen reader description"
+  ],
   "technicalRequirements": "Modern web browser with JavaScript enabled",
-  "library": "p5.js v1.11.10"
+  "library": "p5.js v1.11.10",
+  "visualizationType": [
+    "graph",
+    "interactive-demo"
+  ],
+  "learningObjectives": [
+    "Understand the key concepts of classification matrix",
+    "Explore classification matrix through interactive visualization",
+    "Apply knowledge of classification matrix to solve problems",
+    "Test understanding of classification matrix through interactive exercises"
+  ],
+  "bloomsTaxonomy": [
+    "Remember",
+    "Understand",
+    "Apply",
+    "Analyze",
+    "Evaluate",
+    "Create"
+  ],
+  "pedagogical": {
+    "pattern": "assessment",
+    "bloomAlignment": [
+      "understand",
+      "apply",
+      "analyze"
+    ],
+    "bloomVerbs": [
+      "classify",
+      "compare",
+      "describe",
+      "apply",
+      "calculate"
+    ],
+    "pacing": "self-paced",
+    "supportsPrediction": false,
+    "dataVisibility": "medium",
+    "feedbackType": [
+      "immediate",
+      "corrective",
+      "explanatory"
+    ],
+    "interactionStyle": "construct"
+  }
 }

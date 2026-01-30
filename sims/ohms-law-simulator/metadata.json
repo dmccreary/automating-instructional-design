@@ -2,7 +2,11 @@
   "title": "Ohm's Law Circuit Simulator",
   "description": "An interactive circuit simulator demonstrating Ohm's Law (V = IR) with animated current flow, adjustable voltage and resistance sliders, real-time calculations, and overload warnings.",
   "creator": "Dan McCreary",
-  "subject": ["Physics", "Electronics", "Electrical Engineering"],
+  "subject": [
+    "Physics",
+    "Electronics",
+    "Electrical Engineering"
+  ],
   "date": "2025-01-13",
   "type": "Interactive Simulation",
   "format": "text/html",
@@ -18,7 +22,12 @@
     "Calculate current given voltage and resistance values",
     "Predict how changing circuit parameters affects current"
   ],
-  "bloomsTaxonomyLevels": ["Remember", "Understand", "Apply", "Analyze"],
+  "bloomsTaxonomyLevels": [
+    "Remember",
+    "Understand",
+    "Apply",
+    "Analyze"
+  ],
   "duration": "10-20 minutes",
   "prerequisites": [
     "Basic understanding of electrical circuits",
@@ -27,7 +36,9 @@
   "framework": "p5.js",
   "canvasDimensions": "responsive x 450",
   "responsive": "Width-responsive",
-  "dependencies": ["p5.js 1.11.10"],
+  "dependencies": [
+    "p5.js 1.11.10"
+  ],
   "controls": [
     {
       "type": "slider",
@@ -75,5 +86,46 @@
   ],
   "modelType": "Physics Simulation",
   "physicsModel": "Ohm's Law (V = IR)",
-  "safetyFeatures": ["Overload warning when current exceeds 20A"]
+  "safetyFeatures": [
+    "Overload warning when current exceeds 20A"
+  ],
+  "visualizationType": [
+    "animation",
+    "interactive-demo",
+    "map",
+    "network",
+    "simulation"
+  ],
+  "bloomsTaxonomy": [
+    "Remember",
+    "Understand",
+    "Apply",
+    "Analyze",
+    "Evaluate",
+    "Create"
+  ],
+  "pedagogical": {
+    "pattern": "demonstration",
+    "bloomAlignment": [
+      "understand",
+      "apply",
+      "analyze"
+    ],
+    "bloomVerbs": [
+      "describe",
+      "explain",
+      "apply",
+      "calculate",
+      "demonstrate"
+    ],
+    "pacing": "self-paced",
+    "supportsPrediction": true,
+    "dataVisibility": "high",
+    "feedbackType": [
+      "immediate",
+      "corrective",
+      "explanatory"
+    ],
+    "interactionStyle": "manipulate"
+  }
 }

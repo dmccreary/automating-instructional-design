@@ -1,0 +1,75 @@
+{
+  "title": "Design Tradeoff Decision Tree",
+  "description": "An interactive decision tree that provides a systematic framework for making design tradeoff decisions, helping designers think through common choice points in educational simulation design.",
+  "subject": "Mathematics",
+  "topic": "Design Tradeoff Decision Tree",
+  "gradeLevel": "6-12",
+  "bloomsTaxonomy": [
+    "Understand",
+    "Apply"
+  ],
+  "author": "Dan McCreary",
+  "dateCreated": "2026-01-23",
+  "dateModified": "2026-01-23",
+  "version": "1.0.0",
+  "license": "MIT",
+  "language": "en",
+  "format": "text/html",
+  "type": "Interactive Simulation",
+  "framework": "p5.js",
+  "url": "https://dmccreary.github.io/automating-instructional-design/sims/design-tradeoff-tree/",
+  "identifier": "https://dmccreary.github.io/automating-instructional-design/sims/design-tradeoff-tree/",
+  "_source": {
+    "repo": "automating-instructional-design",
+    "sim": "design-tradeoff-tree",
+    "github_url": "https://github.com/dmccreary/automating-instructional-design/tree/main/docs/sims/design-tradeoff-tree",
+    "auto_generated": true,
+    "generation_date": "2026-01-23"
+  },
+  "subjects": [
+    "Mathematics",
+    "Computer Science",
+    "Statistics",
+    "Engineering",
+    "Economics"
+  ],
+  "visualizationType": [
+    "animation",
+    "simulation",
+    "chart",
+    "graph",
+    "diagram",
+    "interactive-demo",
+    "network"
+  ],
+  "learningObjectives": [
+    "Understand the mathematical concept of design tradeoff decision tree",
+    "Apply design tradeoff decision tree to solve problems",
+    "Visualize and interpret design tradeoff decision tree relationships",
+    "Experiment with parameters to observe their effects on design tradeoff decision tree"
+  ],
+  "pedagogical": {
+    "pattern": "worked-example",
+    "bloomAlignment": [
+      "understand",
+      "apply",
+      "evaluate"
+    ],
+    "bloomVerbs": [
+      "classify",
+      "describe",
+      "explain",
+      "interpret",
+      "apply"
+    ],
+    "pacing": "self-paced",
+    "supportsPrediction": false,
+    "dataVisibility": "high",
+    "feedbackType": [
+      "delayed",
+      "corrective",
+      "explanatory"
+    ],
+    "interactionStyle": "respond"
+  }
+}

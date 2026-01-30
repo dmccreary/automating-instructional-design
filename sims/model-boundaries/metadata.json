@@ -5,16 +5,49 @@
   "creator": "Dan McCreary",
   "created": "2026-01-14",
   "modified": "2026-01-14",
-  "subject": ["Physics", "Scientific Modeling", "Critical Thinking"],
-  "educationLevel": ["High School", "Introductory College"],
-  "bloomTaxonomy": ["Analyze", "Evaluate"],
+  "subject": [
+    "Physics",
+    "Scientific Modeling",
+    "Critical Thinking"
+  ],
+  "educationLevel": [
+    "High School",
+    "Introductory College"
+  ],
+  "bloomTaxonomy": [
+    "Analyze",
+    "Evaluate"
+  ],
   "learningObjective": "Students will be able to analyze the boundaries of applicability for different physics models by testing projectile motion predictions under varying conditions and identifying where models succeed or fail.",
-  "prerequisites": ["Basic kinematics", "Projectile motion", "Concept of air resistance"],
-  "concepts": ["Model Boundaries", "Projectile Motion", "Air Resistance", "Drag Force", "Model Validity", "Physics Approximations", "Scientific Models", "Parameter Sensitivity"],
+  "prerequisites": [
+    "Basic kinematics",
+    "Projectile motion",
+    "Concept of air resistance"
+  ],
+  "concepts": [
+    "Model Boundaries",
+    "Projectile Motion",
+    "Air Resistance",
+    "Drag Force",
+    "Model Validity",
+    "Physics Approximations",
+    "Scientific Models",
+    "Parameter Sensitivity"
+  ],
   "implementation": "p5.js",
   "interactivityLevel": "High",
   "estimatedTime": "20-40 minutes",
-  "keywords": ["models", "boundaries", "projectile", "physics", "air resistance", "drag", "validity", "approximation", "simulation"],
+  "keywords": [
+    "models",
+    "boundaries",
+    "projectile",
+    "physics",
+    "air resistance",
+    "drag",
+    "validity",
+    "approximation",
+    "simulation"
+  ],
   "license": "Creative Commons Attribution 4.0 International",
   "format": "text/html",
   "language": "en",
@@ -22,5 +55,50 @@
     "hasVisualContent": true,
     "hasAudioContent": false,
     "hasInteractiveElements": true
+  },
+  "visualizationType": [
+    "animation",
+    "interactive-demo",
+    "map",
+    "network",
+    "simulation"
+  ],
+  "learningObjectives": [
+    "Observe and understand model boundaries - projectile motion in action",
+    "Explore how changing parameters affects model boundaries - projectile motion",
+    "Apply physics principles to predict model boundaries - projectile motion behavior",
+    "Experiment with parameters to observe their effects on model boundaries - projectile motion"
+  ],
+  "bloomsTaxonomy": [
+    "Remember",
+    "Understand",
+    "Apply",
+    "Analyze",
+    "Evaluate",
+    "Create"
+  ],
+  "pedagogical": {
+    "pattern": "assessment",
+    "bloomAlignment": [
+      "understand",
+      "apply",
+      "analyze"
+    ],
+    "bloomVerbs": [
+      "compare",
+      "describe",
+      "explain",
+      "apply",
+      "calculate"
+    ],
+    "pacing": "self-paced",
+    "supportsPrediction": true,
+    "dataVisibility": "high",
+    "feedbackType": [
+      "immediate",
+      "corrective",
+      "explanatory"
+    ],
+    "interactionStyle": "manipulate"
   }
 }

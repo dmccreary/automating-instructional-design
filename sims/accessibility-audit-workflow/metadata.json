@@ -2,7 +2,13 @@
   "title": "Accessibility Audit Workflow",
   "description": "An interactive flowchart for conducting systematic accessibility audits on MicroSims, evaluating keyboard navigation, screen reader compatibility, color contrast, motion, and touch accessibility dimensions.",
   "creator": "Dan McCreary",
-  "subject": ["Education", "Accessibility", "WCAG", "Instructional Design", "Quality Assurance"],
+  "subject": [
+    "Education",
+    "Accessibility",
+    "WCAG",
+    "Instructional Design",
+    "Quality Assurance"
+  ],
   "date": "2026-01-14",
   "type": "Interactive Simulation",
   "format": "text/html",
@@ -17,7 +23,9 @@
     "Conduct systematic accessibility audits using a structured workflow",
     "Prioritize accessibility fixes based on impact and severity"
   ],
-  "bloomsTaxonomyLevels": ["Evaluate"],
+  "bloomsTaxonomyLevels": [
+    "Evaluate"
+  ],
   "duration": "10-30 minutes",
   "prerequisites": [
     "Basic understanding of web accessibility concepts",
@@ -27,7 +35,9 @@
   "framework": "p5.js",
   "canvasDimensions": "responsive x 600",
   "responsive": "Width-responsive",
-  "dependencies": ["p5.js 1.11.10"],
+  "dependencies": [
+    "p5.js 1.11.10"
+  ],
   "accessibility": {
     "screenReaderSupport": true,
     "keyboardNavigation": true,
@@ -61,5 +71,43 @@
     "Audit checklist covers common issues but may not catch all edge cases",
     "Does not perform automated accessibility testing",
     "Requires manual testing of each criterion"
-  ]
+  ],
+  "visualizationType": [
+    "animation",
+    "diagram",
+    "interactive-demo",
+    "simulation"
+  ],
+  "bloomsTaxonomy": [
+    "Remember",
+    "Understand",
+    "Apply",
+    "Analyze",
+    "Evaluate",
+    "Create"
+  ],
+  "pedagogical": {
+    "pattern": "assessment",
+    "bloomAlignment": [
+      "understand",
+      "apply",
+      "analyze"
+    ],
+    "bloomVerbs": [
+      "compare",
+      "describe",
+      "apply",
+      "demonstrate",
+      "implement"
+    ],
+    "pacing": "self-paced",
+    "supportsPrediction": false,
+    "dataVisibility": "high",
+    "feedbackType": [
+      "immediate",
+      "corrective",
+      "explanatory"
+    ],
+    "interactionStyle": "respond"
+  }
 }

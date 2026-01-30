@@ -4,7 +4,13 @@
   "creator": "Dan McCreary",
   "created": "2026-01-13",
   "modified": "2026-01-13",
-  "subject": ["instructional design", "human-AI collaboration", "workflow", "iterative design", "MicroSim development"],
+  "subject": [
+    "instructional design",
+    "human-AI collaboration",
+    "workflow",
+    "iterative design",
+    "MicroSim development"
+  ],
   "type": "InteractiveResource",
   "format": "text/html",
   "language": "en",
@@ -38,5 +44,44 @@
     "iterative development",
     "quality assurance",
     "instructional design automation"
-  ]
+  ],
+  "visualizationType": [
+    "diagram",
+    "graph",
+    "interactive-demo"
+  ],
+  "learningObjectives": [
+    "Understand the key concepts of human-ai collaboration loop",
+    "Explore human-ai collaboration loop through interactive visualization",
+    "Apply knowledge of human-ai collaboration loop to solve problems",
+    "Test understanding of human-ai collaboration loop through interactive exercises"
+  ],
+  "bloomsTaxonomy": [
+    "Remember",
+    "Apply",
+    "Evaluate",
+    "Create"
+  ],
+  "pedagogical": {
+    "pattern": "assessment",
+    "bloomAlignment": [
+      "remember",
+      "apply",
+      "evaluate"
+    ],
+    "bloomVerbs": [
+      "define",
+      "calculate",
+      "illustrate",
+      "implement",
+      "assess"
+    ],
+    "pacing": "continuous",
+    "supportsPrediction": false,
+    "dataVisibility": "medium",
+    "feedbackType": [
+      "none"
+    ],
+    "interactionStyle": "construct"
+  }
 }

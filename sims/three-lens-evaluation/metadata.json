@@ -2,7 +2,12 @@
   "title": "Three-Lens Evaluation Model",
   "description": "An interactive Venn diagram showing how Technical, Pedagogical, and UX evaluation dimensions interact to form a complete MicroSim quality assessment framework.",
   "creator": "Dan McCreary",
-  "subject": ["Education", "Instructional Design", "Quality Assurance", "Evaluation"],
+  "subject": [
+    "Education",
+    "Instructional Design",
+    "Quality Assurance",
+    "Evaluation"
+  ],
   "date": "2026-01-14",
   "type": "Interactive Simulation",
   "format": "text/html",
@@ -17,13 +22,22 @@
     "Recognize how deficiencies in one area impact overall quality",
     "Apply the three-lens framework to evaluate MicroSim quality"
   ],
-  "bloomsTaxonomyLevels": ["Understand", "Apply", "Analyze"],
+  "bloomsTaxonomyLevels": [
+    "Understand",
+    "Apply",
+    "Analyze"
+  ],
   "duration": "10-15 minutes",
-  "prerequisites": ["Basic understanding of MicroSims", "Familiarity with evaluation criteria"],
+  "prerequisites": [
+    "Basic understanding of MicroSims",
+    "Familiarity with evaluation criteria"
+  ],
   "framework": "p5.js",
   "canvasDimensions": "responsive x 500",
   "responsive": "Width-responsive",
-  "dependencies": ["p5.js 1.11.10"],
+  "dependencies": [
+    "p5.js 1.11.10"
+  ],
   "controls": [
     {
       "type": "hover",
@@ -50,5 +64,44 @@
     "pedagogical": "#10B981",
     "ux": "#8B5CF6",
     "center": "#F59E0B"
+  },
+  "visualizationType": [
+    "3d-model",
+    "diagram",
+    "interactive-demo",
+    "map",
+    "simulation"
+  ],
+  "bloomsTaxonomy": [
+    "Remember",
+    "Understand",
+    "Apply",
+    "Analyze",
+    "Evaluate",
+    "Create"
+  ],
+  "pedagogical": {
+    "pattern": "assessment",
+    "bloomAlignment": [
+      "understand",
+      "apply",
+      "analyze"
+    ],
+    "bloomVerbs": [
+      "describe",
+      "interpret",
+      "apply",
+      "calculate",
+      "demonstrate"
+    ],
+    "pacing": "self-paced",
+    "supportsPrediction": false,
+    "dataVisibility": "high",
+    "feedbackType": [
+      "immediate",
+      "corrective",
+      "explanatory"
+    ],
+    "interactionStyle": "respond"
   }
 }

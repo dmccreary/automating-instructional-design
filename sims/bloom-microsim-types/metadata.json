@@ -2,7 +2,12 @@
   "title": "Bloom's Taxonomy MicroSim Types",
   "description": "An interactive pyramid infographic showing appropriate MicroSim types for each level of Bloom's Taxonomy, from Remember (flashcard games, matching exercises) to Create (model editors, hypothesis builders), with design considerations and case studies for each cognitive level.",
   "creator": "Dan McCreary",
-  "subject": ["Education", "Instructional Design", "Learning Theory", "MicroSim Design"],
+  "subject": [
+    "Education",
+    "Instructional Design",
+    "Learning Theory",
+    "MicroSim Design"
+  ],
   "date": "2025-01-14",
   "type": "Interactive Infographic",
   "format": "text/html",
@@ -17,14 +22,20 @@
     "Analyze the relationship between cognitive complexity and simulation design",
     "Evaluate which MicroSim type best fits a given learning objective"
   ],
-  "bloomsTaxonomyLevels": ["Analyze"],
+  "bloomsTaxonomyLevels": [
+    "Analyze"
+  ],
   "bloomsLevel": "L4",
   "duration": "5-15 minutes",
-  "prerequisites": ["Basic understanding of Bloom's Taxonomy"],
+  "prerequisites": [
+    "Basic understanding of Bloom's Taxonomy"
+  ],
   "framework": "p5.js",
   "canvasDimensions": "responsive x 550",
   "responsive": "Width-responsive",
-  "dependencies": ["p5.js 1.11.10"],
+  "dependencies": [
+    "p5.js 1.11.10"
+  ],
   "accessibility": {
     "screenReaderSupport": true,
     "keyboardNavigation": false,
@@ -51,16 +62,88 @@
       "L5-Evaluate": "#3B82F6 (Blue)",
       "L6-Create": "#8B5CF6 (Purple)"
     },
-    "annotations": ["Lower-Order Thinking Skills (LOTS) arrow", "Higher-Order Thinking Skills (HOTS) arrow"]
+    "annotations": [
+      "Lower-Order Thinking Skills (LOTS) arrow",
+      "Higher-Order Thinking Skills (HOTS) arrow"
+    ]
   },
   "microsimTypes": {
-    "Remember": ["Flashcard games", "Matching exercises", "Term sorters"],
-    "Understand": ["Animated explanations", "Cause-effect demos", "Concept maps"],
-    "Apply": ["Parameter sliders", "Scenario testers", "Problem solvers"],
-    "Analyze": ["Network graphs", "Data explorers", "Pattern identification tools"],
-    "Evaluate": ["Comparison simulators", "Trade-off analyzers", "Judgment exercises"],
-    "Create": ["Model editors", "Free-form design tools", "Hypothesis builders"]
+    "Remember": [
+      "Flashcard games",
+      "Matching exercises",
+      "Term sorters"
+    ],
+    "Understand": [
+      "Animated explanations",
+      "Cause-effect demos",
+      "Concept maps"
+    ],
+    "Apply": [
+      "Parameter sliders",
+      "Scenario testers",
+      "Problem solvers"
+    ],
+    "Analyze": [
+      "Network graphs",
+      "Data explorers",
+      "Pattern identification tools"
+    ],
+    "Evaluate": [
+      "Comparison simulators",
+      "Trade-off analyzers",
+      "Judgment exercises"
+    ],
+    "Create": [
+      "Model editors",
+      "Free-form design tools",
+      "Hypothesis builders"
+    ]
   },
-  "assumptions": ["Six-level revised Bloom's Taxonomy (2001)"],
-  "limitations": ["Shows representative MicroSim types, not exhaustive list", "Design considerations are guidelines, not strict rules"]
+  "assumptions": [
+    "Six-level revised Bloom's Taxonomy (2001)"
+  ],
+  "limitations": [
+    "Shows representative MicroSim types, not exhaustive list",
+    "Design considerations are guidelines, not strict rules"
+  ],
+  "visualizationType": [
+    "animation",
+    "data-visualization",
+    "interactive-demo",
+    "map",
+    "network",
+    "simulation"
+  ],
+  "bloomsTaxonomy": [
+    "Remember",
+    "Understand",
+    "Apply",
+    "Analyze",
+    "Evaluate",
+    "Create"
+  ],
+  "pedagogical": {
+    "pattern": "assessment",
+    "bloomAlignment": [
+      "understand",
+      "apply",
+      "analyze"
+    ],
+    "bloomVerbs": [
+      "classify",
+      "compare",
+      "describe",
+      "interpret",
+      "apply"
+    ],
+    "pacing": "self-paced",
+    "supportsPrediction": true,
+    "dataVisibility": "high",
+    "feedbackType": [
+      "immediate",
+      "corrective",
+      "explanatory"
+    ],
+    "interactionStyle": "respond"
+  }
 }

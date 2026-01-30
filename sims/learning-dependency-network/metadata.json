@@ -2,7 +2,13 @@
   "title": "Learning Dependency Network",
   "description": "An interactive vis-network visualization demonstrating how learning dependencies between concepts can be represented, showing prerequisites flowing to target learning objectives with different node shapes for concept types.",
   "creator": "Dan McCreary",
-  "subject": ["Education", "Instructional Design", "Learning Dependencies", "Concept Mapping", "Curriculum Design"],
+  "subject": [
+    "Education",
+    "Instructional Design",
+    "Learning Dependencies",
+    "Concept Mapping",
+    "Curriculum Design"
+  ],
   "date": "2025-01-13",
   "type": "Interactive Simulation",
   "format": "text/html",
@@ -17,13 +23,22 @@
     "Distinguish between different concept types (foundation, prerequisite, target, advanced)",
     "Apply dependency analysis to plan learning paths"
   ],
-  "bloomsTaxonomyLevels": ["Understand", "Analyze", "Apply"],
+  "bloomsTaxonomyLevels": [
+    "Understand",
+    "Analyze",
+    "Apply"
+  ],
   "duration": "5-15 minutes",
-  "prerequisites": ["Basic understanding of learning progressions", "Familiarity with graph structures"],
+  "prerequisites": [
+    "Basic understanding of learning progressions",
+    "Familiarity with graph structures"
+  ],
   "framework": "vis-network",
   "canvasDimensions": "responsive x 500",
   "responsive": "Width-responsive",
-  "dependencies": ["vis-network"],
+  "dependencies": [
+    "vis-network"
+  ],
   "controls": [
     {
       "type": "click",
@@ -81,5 +96,44 @@
       "style": "dashed",
       "description": "Points from concept to advanced application"
     }
-  ]
+  ],
+  "visualizationType": [
+    "animation",
+    "graph",
+    "interactive-demo",
+    "map",
+    "network",
+    "simulation"
+  ],
+  "bloomsTaxonomy": [
+    "Remember",
+    "Understand",
+    "Apply",
+    "Analyze",
+    "Evaluate",
+    "Create"
+  ],
+  "pedagogical": {
+    "pattern": "demonstration",
+    "bloomAlignment": [
+      "understand",
+      "apply",
+      "analyze"
+    ],
+    "bloomVerbs": [
+      "compare",
+      "interpret",
+      "apply",
+      "calculate",
+      "demonstrate"
+    ],
+    "pacing": "self-paced",
+    "supportsPrediction": false,
+    "dataVisibility": "medium",
+    "feedbackType": [
+      "corrective",
+      "explanatory"
+    ],
+    "interactionStyle": "respond"
+  }
 }

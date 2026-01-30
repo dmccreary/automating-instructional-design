@@ -2,7 +2,11 @@
   "title": "Chapter 1 Concept Map",
   "description": "An interactive concept map showing the relationships between all 17 concepts covered in Chapter 1 - Foundations of Learning Objective Analysis.",
   "creator": "Dan McCreary",
-  "subject": ["Education", "Instructional Design", "Concept Mapping"],
+  "subject": [
+    "Education",
+    "Instructional Design",
+    "Concept Mapping"
+  ],
   "date": "2025-01-13",
   "type": "Interactive Simulation",
   "format": "text/html",
@@ -16,13 +20,20 @@
     "Explain how learning objectives connect to Bloom's Taxonomy",
     "Identify the role of objective decomposition"
   ],
-  "bloomsTaxonomyLevels": ["Analyze", "Understand"],
+  "bloomsTaxonomyLevels": [
+    "Analyze",
+    "Understand"
+  ],
   "duration": "5-10 minutes",
-  "prerequisites": ["Reading Chapter 1"],
+  "prerequisites": [
+    "Reading Chapter 1"
+  ],
   "framework": "vis-network",
   "canvasDimensions": "responsive x 550",
   "responsive": "Width-responsive",
-  "dependencies": ["vis-network"],
+  "dependencies": [
+    "vis-network"
+  ],
   "controls": [
     {
       "type": "button",
@@ -39,5 +50,44 @@
       "description": "Click nodes to see definitions and highlight connections"
     }
   ],
-  "modelType": "Concept Map Graph"
+  "modelType": "Concept Map Graph",
+  "visualizationType": [
+    "animation",
+    "graph",
+    "interactive-demo",
+    "map",
+    "network",
+    "simulation"
+  ],
+  "bloomsTaxonomy": [
+    "Remember",
+    "Understand",
+    "Apply",
+    "Analyze",
+    "Evaluate",
+    "Create"
+  ],
+  "pedagogical": {
+    "pattern": "demonstration",
+    "bloomAlignment": [
+      "understand",
+      "apply",
+      "analyze"
+    ],
+    "bloomVerbs": [
+      "classify",
+      "describe",
+      "explain",
+      "interpret",
+      "apply"
+    ],
+    "pacing": "self-paced",
+    "supportsPrediction": false,
+    "dataVisibility": "medium",
+    "feedbackType": [
+      "immediate",
+      "corrective"
+    ],
+    "interactionStyle": "observe"
+  }
 }

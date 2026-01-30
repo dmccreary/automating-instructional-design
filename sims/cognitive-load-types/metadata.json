@@ -1,50 +1,86 @@
 {
-    "title": "Three Types of Cognitive Load",
-    "description": "An interactive visualization demonstrating how intrinsic, extraneous, and germane cognitive load compete for limited working memory capacity. Includes side-by-side comparison of poor vs. good instructional design.",
-    "creator": "Dan McCreary",
-    "date": "2026-01-13",
-    "subject": [
-        "Cognitive Load Theory",
-        "Instructional Design",
-        "Learning Science",
-        "Working Memory",
-        "Educational Psychology"
+  "title": "Three Types of Cognitive Load",
+  "description": "An interactive visualization demonstrating how intrinsic, extraneous, and germane cognitive load compete for limited working memory capacity. Includes side-by-side comparison of poor vs. good instructional design.",
+  "creator": "Dan McCreary",
+  "date": "2026-01-13",
+  "subject": [
+    "Cognitive Load Theory",
+    "Instructional Design",
+    "Learning Science",
+    "Working Memory",
+    "Educational Psychology"
+  ],
+  "type": "InteractiveResource",
+  "format": "text/html",
+  "language": "en",
+  "rights": "MIT License",
+  "source": "https://dmccreary.github.io/automating-instructional-design/",
+  "relation": "Part of the Automating Instructional Design intelligent textbook",
+  "coverage": "Introduction to Cognitive Load Theory concepts for instructional designers",
+  "audience": {
+    "educationLevel": "Undergraduate, Graduate, Professional Development",
+    "typicalAgeRange": "18+",
+    "role": [
+      "Instructional Designer",
+      "Educator",
+      "Learning Experience Designer",
+      "Educational Technology Specialist"
+    ]
+  },
+  "learningResourceType": "Simulation",
+  "interactivityType": "active",
+  "interactivityLevel": "medium",
+  "bloomsTaxonomy": "Understand",
+  "bloomsLevel": 2,
+  "learningObjective": "Help learners distinguish between intrinsic, extraneous, and germane cognitive load and understand their relationships",
+  "keywords": [
+    "cognitive load",
+    "intrinsic load",
+    "extraneous load",
+    "germane load",
+    "working memory",
+    "instructional design",
+    "multimedia learning",
+    "Sweller"
+  ],
+  "technicalRequirements": {
+    "browser": "Modern browser with JavaScript enabled",
+    "library": "p5.js 1.11.10"
+  },
+  "visualizationType": [
+    "animation",
+    "diagram",
+    "interactive-demo",
+    "network",
+    "simulation"
+  ],
+  "learningObjectives": [
+    "Understand the key concepts of three types of cognitive load",
+    "Explore three types of cognitive load through interactive visualization",
+    "Apply knowledge of three types of cognitive load to solve problems",
+    "Experiment with parameters to observe their effects on three types of cognitive load"
+  ],
+  "pedagogical": {
+    "pattern": "worked-example",
+    "bloomAlignment": [
+      "understand",
+      "apply",
+      "analyze"
     ],
-    "type": "InteractiveResource",
-    "format": "text/html",
-    "language": "en",
-    "rights": "MIT License",
-    "source": "https://dmccreary.github.io/automating-instructional-design/",
-    "relation": "Part of the Automating Instructional Design intelligent textbook",
-    "coverage": "Introduction to Cognitive Load Theory concepts for instructional designers",
-    "audience": {
-        "educationLevel": "Undergraduate, Graduate, Professional Development",
-        "typicalAgeRange": "18+",
-        "role": [
-            "Instructional Designer",
-            "Educator",
-            "Learning Experience Designer",
-            "Educational Technology Specialist"
-        ]
-    },
-    "learningResourceType": "Simulation",
-    "interactivityType": "active",
-    "interactivityLevel": "medium",
-    "bloomsTaxonomy": "Understand",
-    "bloomsLevel": 2,
-    "learningObjective": "Help learners distinguish between intrinsic, extraneous, and germane cognitive load and understand their relationships",
-    "keywords": [
-        "cognitive load",
-        "intrinsic load",
-        "extraneous load",
-        "germane load",
-        "working memory",
-        "instructional design",
-        "multimedia learning",
-        "Sweller"
+    "bloomVerbs": [
+      "compare",
+      "explain",
+      "interpret",
+      "apply",
+      "calculate"
     ],
-    "technicalRequirements": {
-        "browser": "Modern browser with JavaScript enabled",
-        "library": "p5.js 1.11.10"
-    }
+    "pacing": "self-paced",
+    "supportsPrediction": false,
+    "dataVisibility": "medium",
+    "feedbackType": [
+      "corrective",
+      "explanatory"
+    ],
+    "interactionStyle": "construct"
+  }
 }

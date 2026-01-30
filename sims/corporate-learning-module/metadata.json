@@ -1,0 +1,72 @@
+{
+  "title": "Corporate Learning Module Workflow",
+  "description": "This interactive flowchart demonstrates how to design time-efficient corporate training MicroSims. The workflow shows the complete learner journey through a typical 12-15 minute module, from launch to completion, with timing annotations at each step.",
+  "subject": "Mathematics",
+  "topic": "Corporate Learning Module Workflow",
+  "gradeLevel": "6-12",
+  "bloomsTaxonomy": [
+    "Understand",
+    "Apply"
+  ],
+  "author": "Dan McCreary",
+  "dateCreated": "2026-01-23",
+  "dateModified": "2026-01-23",
+  "version": "1.0.0",
+  "license": "MIT",
+  "language": "en",
+  "format": "text/html",
+  "type": "Interactive Simulation",
+  "framework": "p5.js",
+  "url": "https://dmccreary.github.io/automating-instructional-design/sims/corporate-learning-module/",
+  "identifier": "https://dmccreary.github.io/automating-instructional-design/sims/corporate-learning-module/",
+  "_source": {
+    "repo": "automating-instructional-design",
+    "sim": "corporate-learning-module",
+    "github_url": "https://github.com/dmccreary/automating-instructional-design/tree/main/docs/sims/corporate-learning-module",
+    "auto_generated": true,
+    "generation_date": "2026-01-23"
+  },
+  "subjects": [
+    "Mathematics",
+    "Engineering",
+    "Economics"
+  ],
+  "visualizationType": [
+    "animation",
+    "chart",
+    "graph",
+    "diagram",
+    "interactive-demo",
+    "network"
+  ],
+  "learningObjectives": [
+    "Understand the mathematical concept of corporate learning module workflow",
+    "Apply corporate learning module workflow to solve problems",
+    "Visualize and interpret corporate learning module workflow relationships",
+    "Test understanding of corporate learning module workflow through interactive exercises"
+  ],
+  "pedagogical": {
+    "pattern": "assessment",
+    "bloomAlignment": [
+      "understand",
+      "apply",
+      "evaluate"
+    ],
+    "bloomVerbs": [
+      "explain",
+      "apply",
+      "calculate",
+      "demonstrate",
+      "illustrate"
+    ],
+    "pacing": "self-paced",
+    "supportsPrediction": true,
+    "dataVisibility": "medium",
+    "feedbackType": [
+      "immediate",
+      "corrective",
+      "explanatory"
+    ],
+    "interactionStyle": "construct"
+  }
+}

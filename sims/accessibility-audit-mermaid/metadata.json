@@ -32,5 +32,47 @@
     "Hover tooltips with test questions",
     "Dynamic node coloring based on results"
   ],
-  "library": "Mermaid.js v11"
+  "library": "Mermaid.js v11",
+  "visualizationType": [
+    "animation",
+    "diagram",
+    "graph",
+    "interactive-demo"
+  ],
+  "learningObjectives": [
+    "Understand the key concepts of accessibility audit workflow (mermaid)",
+    "Explore accessibility audit workflow (mermaid) through interactive visualization",
+    "Apply knowledge of accessibility audit workflow (mermaid) to solve problems",
+    "Test understanding of accessibility audit workflow (mermaid) through interactive exercises"
+  ],
+  "bloomsTaxonomy": [
+    "Remember",
+    "Understand",
+    "Apply",
+    "Analyze",
+    "Evaluate",
+    "Create"
+  ],
+  "pedagogical": {
+    "pattern": "assessment",
+    "bloomAlignment": [
+      "understand",
+      "apply",
+      "analyze"
+    ],
+    "bloomVerbs": [
+      "describe",
+      "summarize",
+      "apply",
+      "demonstrate",
+      "illustrate"
+    ],
+    "pacing": "self-paced",
+    "supportsPrediction": false,
+    "dataVisibility": "medium",
+    "feedbackType": [
+      "immediate"
+    ],
+    "interactionStyle": "explore"
+  }
 }

@@ -2,7 +2,12 @@
   "title": "Concept Dependencies Graph",
   "description": "An interactive directed acyclic graph showing concept dependencies with REQUIRES (hard prerequisites) and SUPPORTS (soft prerequisites) edge types. Click nodes to highlight upstream and downstream dependencies.",
   "creator": "Dan McCreary",
-  "subject": ["Education", "Instructional Design", "Concept Mapping", "Learning Dependencies"],
+  "subject": [
+    "Education",
+    "Instructional Design",
+    "Concept Mapping",
+    "Learning Dependencies"
+  ],
   "date": "2025-01-13",
   "type": "Interactive Simulation",
   "format": "text/html",
@@ -17,13 +22,21 @@
     "Plan a learning path through interconnected topics",
     "Understand how concepts build upon each other"
   ],
-  "bloomsTaxonomyLevels": ["Understand", "Analyze", "Apply"],
+  "bloomsTaxonomyLevels": [
+    "Understand",
+    "Analyze",
+    "Apply"
+  ],
   "duration": "5-10 minutes",
-  "prerequisites": ["Basic understanding of learning progressions"],
+  "prerequisites": [
+    "Basic understanding of learning progressions"
+  ],
   "framework": "vis-network",
   "canvasDimensions": "responsive x 500",
   "responsive": "Width-responsive",
-  "dependencies": ["vis-network"],
+  "dependencies": [
+    "vis-network"
+  ],
   "controls": [
     {
       "type": "click",
@@ -55,5 +68,43 @@
       "style": "dashed",
       "description": "Soft prerequisite - helpful but not strictly required"
     }
-  ]
+  ],
+  "visualizationType": [
+    "animation",
+    "diagram",
+    "graph",
+    "interactive-demo",
+    "map",
+    "network",
+    "simulation"
+  ],
+  "bloomsTaxonomy": [
+    "Remember",
+    "Understand",
+    "Apply",
+    "Create"
+  ],
+  "pedagogical": {
+    "pattern": "demonstration",
+    "bloomAlignment": [
+      "remember",
+      "understand",
+      "apply"
+    ],
+    "bloomVerbs": [
+      "define",
+      "identify",
+      "interpret",
+      "demonstrate",
+      "illustrate"
+    ],
+    "pacing": "self-paced",
+    "supportsPrediction": false,
+    "dataVisibility": "medium",
+    "feedbackType": [
+      "corrective",
+      "explanatory"
+    ],
+    "interactionStyle": "respond"
+  }
 }

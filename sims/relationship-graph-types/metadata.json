@@ -2,7 +2,12 @@
   "title": "Relationship Graph Types",
   "description": "An interactive visualization demonstrating different types of relationships (prerequisite, related to, contrasts with, exemplifies, influences) that can be represented in educational knowledge graphs.",
   "creator": "Dan McCreary",
-  "subject": ["Education", "Knowledge Graphs", "Concept Mapping", "Data Visualization"],
+  "subject": [
+    "Education",
+    "Knowledge Graphs",
+    "Concept Mapping",
+    "Data Visualization"
+  ],
   "date": "2026-01-13",
   "type": "Interactive Simulation",
   "format": "text/html",
@@ -17,13 +22,20 @@
     "Apply appropriate relationship types when creating concept maps",
     "Analyze existing diagrams to identify relationship patterns"
   ],
-  "bloomsTaxonomyLevels": ["Remember", "Understand", "Apply", "Analyze"],
+  "bloomsTaxonomyLevels": [
+    "Remember",
+    "Understand",
+    "Apply",
+    "Analyze"
+  ],
   "duration": "5-10 minutes",
   "prerequisites": [],
   "framework": "vis-network",
   "canvasDimensions": "responsive x 500",
   "responsive": "Width-responsive",
-  "dependencies": ["vis-network"],
+  "dependencies": [
+    "vis-network"
+  ],
   "controls": [
     {
       "type": "click",
@@ -73,5 +85,45 @@
       "description": "Concept A affects or shapes Concept B"
     }
   ],
-  "modelType": "Relationship Type Demonstration"
+  "modelType": "Relationship Type Demonstration",
+  "visualizationType": [
+    "animation",
+    "diagram",
+    "graph",
+    "interactive-demo",
+    "map",
+    "network",
+    "simulation"
+  ],
+  "bloomsTaxonomy": [
+    "Remember",
+    "Understand",
+    "Apply",
+    "Analyze",
+    "Evaluate",
+    "Create"
+  ],
+  "pedagogical": {
+    "pattern": "demonstration",
+    "bloomAlignment": [
+      "understand",
+      "apply",
+      "analyze"
+    ],
+    "bloomVerbs": [
+      "compare",
+      "apply",
+      "demonstrate",
+      "illustrate",
+      "use"
+    ],
+    "pacing": "self-paced",
+    "supportsPrediction": false,
+    "dataVisibility": "medium",
+    "feedbackType": [
+      "corrective",
+      "explanatory"
+    ],
+    "interactionStyle": "respond"
+  }
 }
