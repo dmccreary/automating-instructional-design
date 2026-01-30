@@ -65,12 +65,12 @@ const scenarios = [
 
 // State management
 let currentScenario = 0;
-let state = "intro"; // intro, scenario, answered, animation, feedback, complete
+let state = "intro"; // intro, scenario, answered, animation, animationPause, feedback, complete
 let selectedOption = -1;
 let startTime = 0;
 let responseTime = 0;
 let timerRunning = false;
-let maxTime = 10; // seconds for intuitive response
+let maxTime = 20; // seconds for intuitive response
 
 // Results tracking
 let results = [];
@@ -148,6 +148,9 @@ function draw() {
     case "animation":
       drawAnimation();
       break;
+    case "animationPause":
+      drawAnimationPause();
+      break;
     case "feedback":
       drawFeedback();
       break;
@@ -203,7 +206,7 @@ function drawScenario() {
   textSize(13);
   textStyle(NORMAL);
   textAlign(CENTER, TOP);
-  text(scenario.question, canvasWidth / 2, 45, canvasWidth - 60);
+  text(scenario.question, 30, 45, canvasWidth - 60);
 
   // Timer bar
   drawTimer();
@@ -295,19 +298,19 @@ function drawCircularMotionPreview(cx, cy) {
   noStroke();
   ellipse(ballX, ballY, 20, 20);
 
-  // Exit indicator
+  // Exit indicator - tangent line pointing left (correct tangent direction)
   stroke(accentColor);
   strokeWeight(2);
-  line(cx, cy + 50, cx + 40, cy + 50);
-  line(cx + 35, cy + 45, cx + 40, cy + 50);
-  line(cx + 35, cy + 55, cx + 40, cy + 50);
+  line(cx, cy + 50, cx - 40, cy + 50);
+  line(cx - 35, cy + 45, cx - 40, cy + 50);
+  line(cx - 35, cy + 55, cx - 40, cy + 50);
 
   // Label
   fill(lightTextColor);
   noStroke();
   textSize(10);
   textAlign(CENTER, TOP);
-  text("Ball exits here", cx + 20, cy + 60);
+  text("Ball exits here", cx - 20, cy + 60);
 }
 
 function drawFallingObjectsPreview(cx, cy) {
@@ -488,7 +491,7 @@ function drawOptions(scenario, startY) {
     textSize(11);
     textStyle(NORMAL);
     textAlign(CENTER, TOP);
-    text(opt.description, x + optionWidth / 2, y + 50, optionWidth - 16);
+    text(opt.description, x + 8, y + 50, optionWidth - 16);
   }
 }
 
@@ -521,9 +524,41 @@ function drawAnimation() {
   }
 
   if (animTime >= animDuration) {
-    state = "feedback";
+    state = "animationPause";
     animTime = 0;
   }
+}
+
+function drawAnimationPause() {
+  let scenario = scenarios[currentScenario];
+
+  fill(primaryColor);
+  noStroke();
+  textSize(16);
+  textStyle(BOLD);
+  textAlign(CENTER, TOP);
+  text("Watch what actually happens...", canvasWidth / 2, 20);
+
+  // Draw final frame of animation (progress = 1)
+  switch (scenario.animationType) {
+    case "circularMotion":
+      animateCircularMotion(1);
+      break;
+    case "fallingObjects":
+      animateFallingObjects(1);
+      break;
+    case "circuit":
+      animateCircuit(1);
+      break;
+    case "evolution":
+      animateEvolution(1);
+      break;
+  }
+
+  // OK button to proceed
+  drawButton("OK", canvasWidth / 2 - 40, drawHeight + 8, 80, 34, primaryColor, () => {
+    state = "feedback";
+  });
 }
 
 function animateCircularMotion(progress) {
@@ -551,8 +586,9 @@ function animateCircularMotion(progress) {
     let exitX = cx - 50 + cos(PI / 2) * 70;
     let exitY = cy + sin(PI / 2) * 70;
     let t = (progress - 0.4) / 0.6;
-    ballX = exitX + t * 180;
-    ballY = exitY + t * 40;
+    // Ball exits tangentially to the LEFT (correct physics)
+    ballX = exitX - t * 180;
+    ballY = exitY;
   }
 
   fill(primaryColor);
@@ -575,7 +611,7 @@ function animateCircularMotion(progress) {
     noStroke();
     textSize(12);
     textAlign(CENTER, TOP);
-    text("Straight tangent path!", cx + 80, cy + 100);
+    text("Straight tangent path!", cx - 100, cy + 100);
   }
 }
 
