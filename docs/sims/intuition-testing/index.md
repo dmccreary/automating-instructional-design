@@ -23,7 +23,7 @@ The simulation includes four scenarios:
 - **Non-judgmental feedback** - Uses "interesting" rather than "wrong" language
 - **Population comparisons** - See how your responses compare to others
 
-<iframe src="main.html" width="100%" height="570px" scrolling="no" style="overflow: hidden; border: 1px solid #ccc; border-radius: 8px;"></iframe>
+<iframe src="main.html" width="100%" height="532px" scrolling="no" style="overflow: hidden; border: 1px solid #ccc; border-radius: 8px;"></iframe>
 
 <a href="main.html" target="_blank" title="Open in a new tab to expand">
   <img src="/automating-instructional-design/img/icons/fullscreen.png" alt="Fullscreen" style="cursor: pointer; width: 24px; height: 24px;">
