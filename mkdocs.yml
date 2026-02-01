@@ -231,6 +231,9 @@ copyright: Copyright &copy; 2025 Dan McCreary. Licensed under <a href="license/"
 extra:
   generator: false
 extra:
+  schema: https://dmccreary.github.io/intelligent-textbooks/ns/textbook/v1
+  textbook_name: Automating Instructional Design
+  textbook_version: "1.0"
   analytics:
     provider: google
     property: G-S4GYB1W20G
