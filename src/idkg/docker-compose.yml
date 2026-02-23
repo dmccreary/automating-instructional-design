@@ -1,0 +1,24 @@
+services:
+  neo4j:
+    image: microsim-neo4j-sidkg:1.0
+    container_name: microsim-neo4j
+    ports:
+      - "7474:7474"
+      - "7687:7687"
+    environment:
+      # Change password before running
+      - NEO4J_AUTH=neo4j/strongpassword
+      # Optional memory tuning (uncomment and adjust):
+      # - NEO4J_dbms_memory_heap_initial__size=1G
+      # - NEO4J_dbms_memory_heap_max__size=2G
+      # - NEO4J_dbms_memory_pagecache_size=1G
+    volumes:
+      - microsim_neo4j_data:/data
+      - microsim_neo4j_logs:/logs
+      - microsim_neo4j_import:/import
+    restart: unless-stopped
+
+volumes:
+  microsim_neo4j_data:
+  microsim_neo4j_logs:
+  microsim_neo4j_import:
