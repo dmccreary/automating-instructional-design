@@ -51,6 +51,10 @@ nav:
       - Quiz: chapters/12-accessibility-deployment-completion/quiz.md
     - 13. Capstone Projects: chapters/13-capstone-projects/index.md
   
+  - Appendices:
+    - List of Appendices: appendices/index.md
+    - MicroSim Quality Metrics: appendices/microsim-quality-metrics/index.md
+
   - MicroSims:
     - List of MicroSims: sims/index.md
     - Acceptance Test Matrix: sims/acceptance-test-matrix/index.md
