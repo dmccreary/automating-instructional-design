@@ -1,0 +1,9 @@
+# Abstract
+
+Title: Intelligent Textbook Agents: Graph guided AI agents to automate intelligent textbook design
+
+Large Language Models (LLMs) promise to accelerate innovation in education by reasoning across expanding bodies of pedagogical research, curriculum standards, learner analytics, and digital content. However, the core challenge is no longer access to information, but connecting it across domains in pedagogically meaningful ways. In instructional design—particularly in the development of intelligent textbooks—effective solutions must integrate cognitive science, visualization strategies, assessment design, accessibility principles, and audience adaptation. Neither individual designers nor single-agent LLMs can reliably manage this complexity, with single-agent systems often producing shallow reasoning or hallucinated pedagogical claims.
+
+We introduce a multi-agent framework guided by large-scale instructional knowledge graphs to generate and refine intelligent textbook components and MicroSimulations. Specialized agents perform learning objective decomposition, evidence retrieval, standards alignment, design pattern extraction, and structured graph traversal across prerequisite concept networks. This distributed architecture enables relational reasoning across pedagogical constraints and interface affordances, supporting structured hypothesis generation for improved learning experiences. Ablation studies show that the multi-agent pipeline outperforms single-shot prompting.
+
+By alternating between exploitative searches targeting domain-critical outcomes (e.g., misconception correction, Bloom-level alignment) and exploratory searches uncovering cross-domain connections, the system expands the instructional design space. Demonstrated through adaptive MicroSim generation, the framework balances cognitive load, interactivity, and standards alignment, establishing a scalable architecture for AI-assisted instructional design.
