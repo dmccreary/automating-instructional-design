@@ -37,6 +37,10 @@ This chapter builds on concepts from:
 
 ## Introduction: Your New AI Collaborator
 
+!!! mascot-welcome "Time to Team Up with AI"
+    ![Sim waving welcome](../../img/mascot/welcome.png){ class="mascot-admonition-img" }
+    Welcome back, builder! In this chapter we hand our specifications to an AI collaborator and watch it start assembling code. We'll walk through the five-phase generation workflow together, from crafting a sharp prompt all the way to shipping a polished MicroSim. Let's build it!
+
 Welcome to the chapter that will fundamentally change how you create educational content. You're about to learn how to collaborate with one of the most powerful tools ever created for instructional design: AI-powered code generation. And yes, "collaborate" is the right word—this isn't about giving orders to a machine, it's about a creative partnership that combines human pedagogical expertise with AI's ability to generate code at superhuman speed.
 
 Think of AI as that incredibly talented colleague who can code circles around most humans, works 24/7 without coffee breaks, and never complains about last-minute changes. The catch? This colleague speaks a slightly different language and needs clear, specific instructions to do their best work. Learning to communicate effectively with AI tools is the new superpower of instructional design.
@@ -373,6 +377,10 @@ Skills solve this problem through intelligent context management:
 4. **Context Efficiency**: Only relevant knowledge occupies context space
 
 Think of it like a library. Claude doesn't carry every book at all times—that would be impossible. Instead, Claude has a card catalog (the skill summaries) always available and retrieves full books (skill content) only when needed.
+
+!!! mascot-thinking "The Card-Catalog Trick"
+    ![Sim thinking](../../img/mascot/thinking.png){ class="mascot-admonition-img" }
+    Here's the insight worth sitting with: Claude never holds all 30 skills in its head at once. It just needs the ~100-token summary index to know which full skill to pull off the shelf. That's how you get expert-level knowledge without blowing the context window budget.
 
 ### The 30-Skill Limit: Strategic Choices
 
@@ -1185,6 +1193,10 @@ Developers new to AI often fall into a familiar trap:
 
 This is the sunk cost fallacy applied to code. The time you already spent is gone—it shouldn't influence whether regeneration is the right choice *now*.
 
+!!! mascot-warning "Don't Fall Into the Patch Trap"
+    ![Sim warning](../../img/mascot/warning.png){ class="mascot-admonition-img" }
+    Watch for this common mistake: patching AI-generated code over and over just because "I already fixed so many things." That sunk-cost thinking is exactly how builders end up with a fragile mess nobody understands. If the specification has changed a lot, regenerating is usually faster and cleaner.
+
 ### The Specification-First Mindset
 
 The solution is a fundamental shift in thinking: **invest in specifications, not code**.
@@ -1233,6 +1245,10 @@ There's a certain courage required to delete working code and regenerate. It fee
 
 The developers who thrive with AI tools are those who learn to hold code loosely. They see code as a **renewable resource**—cheap to generate, easy to replace. Their investment goes into specifications, rules, and skills—the durable assets that make regeneration powerful.
 
+!!! mascot-encourage "Deleting Code Feels Scary - That's Normal"
+    ![Sim encouraging](../../img/mascot/encouraging.png){ class="mascot-admonition-img" }
+    I know tossing out code you spent hours on feels wrong, maybe even reckless. But remember your safety net: version control means you can always roll back, so regenerating from a good specification is far less risky than it feels in the moment.
+
 !!! note "Patience with the Transition"
     Adjusting to generative AI tools takes time. Developers who've spent years honing their craft may feel that AI threatens their expertise. Help them see that their expertise is more valuable than ever—it just applies to specifications and evaluation rather than line-by-line coding. Be patient. The mindset shift is real, but so are the productivity gains on the other side.
 
@@ -1280,6 +1296,10 @@ Structure your commits to track the development process:
 | `fix:` | Manual bug fix | `fix: corrected price calculation formula` |
 | `regen:` | Full regeneration | `regen: new visualization approach` |
 | `style:` | Formatting/style changes | `style: applied project conventions` |
+
+!!! mascot-tip "Label Your Commits Like a Pro"
+    ![Sim giving a tip](../../img/mascot/tip.png){ class="mascot-admonition-img" }
+    Try prefixing your commit messages with `gen:`, `ref:`, `fix:`, `regen:`, or `style:` as shown in the table above. Six months from now you'll be able to scan your git log and instantly see which commits came from AI generation versus your own manual fixes.
 
 ### Branching for Experimentation
 
@@ -1643,6 +1663,10 @@ You've now mastered the skills for effective AI collaboration in MicroSim develo
 When you combine these skills with your pedagogical expertise and domain knowledge, you become something new: not just an instructional designer, not just a developer, but a **conductor** orchestrating AI capabilities toward educational goals. That's a powerful role, and the world needs more people who can fill it.
 
 The MicroSims you create with these skills will help learners around the globe understand complex concepts through interactive exploration. Every simulation you generate is a small step toward a world where education is more engaging, more effective, and more accessible to everyone.
+
+!!! mascot-celebration "Nice Fit!"
+    ![Sim celebrating](../../img/mascot/celebration.png){ class="mascot-admonition-img" }
+    You just learned how to turn a specification into working code through prompt engineering, refinement prompts, and smart iteration management. Next up in Chapter 10, we'll build the quality evaluation frameworks that tell you whether a MicroSim is truly ready to ship. Let's build it!
 
 Now go forth and generate. Your AI collaborator is ready when you are.
 

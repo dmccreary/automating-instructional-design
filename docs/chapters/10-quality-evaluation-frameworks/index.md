@@ -50,6 +50,10 @@ This chapter builds on concepts from:
 
 ## Introduction: Why Quality Matters (And Why You Should Care)
 
+!!! mascot-welcome "Time to Inspect Our Work!"
+    ![Sim waving welcome](../../img/mascot/welcome.png){ class="mascot-admonition-img" }
+    Welcome back, builders! In Chapter 9 we generated MicroSims with AI tools—now it's time to grab the inspection clipboard and make sure what we built actually holds up. We'll check it with the Three-Lens Evaluation Model: Technical, Pedagogical, and UX. Let's build it!
+
 Here's a joke for you: How many instructional designers does it take to evaluate a MicroSim? Just one—but they'll need three different rubrics, a metadata schema, and a strong cup of coffee.
 
 All joking aside, creating a MicroSim is only half the battle. Without rigorous quality evaluation, you might deploy a simulation that looks pretty but teaches poorly, works on your laptop but crashes on a student's tablet, or disappears into the digital void because nobody can find it when they need it.
@@ -203,6 +207,10 @@ Technical perfection means nothing if a MicroSim doesn't effectively teach its i
 
 Objective alignment verifies that every element of a MicroSim serves its stated learning objective. This sounds obvious, but scope creep is a constant temptation. A simulation designed to teach supply and demand might gradually accumulate features for market equilibrium, price elasticity, government intervention, and international trade—until it teaches nothing well.
 
+!!! mascot-warning "Watch for Scope Creep"
+    ![Sim warning](../../img/mascot/warning.png){ class="mascot-admonition-img" }
+    That supply-and-demand example is a classic trap: extra features keep bolting on until the MicroSim stops teaching any one thing well. When you review objective alignment, be ready to cut anything that doesn't directly serve the stated learning objective.
+
 Questions to ask during objective alignment review:
 
 - Does the simulation directly address the stated learning objective?
@@ -231,6 +239,10 @@ Not all learning objectives are created equal. Bloom's Taxonomy (2001 revision) 
 - **Create (L6)**: Does it support generating original work? (model builders, design tools)
 
 A common mismatch occurs when a learning objective targets "Analyze" but the MicroSim only supports "Understand"—the simulation explains concepts beautifully but never challenges learners to discover relationships themselves.
+
+!!! mascot-thinking "The Sneaky Mismatch"
+    ![Sim thinking](../../img/mascot/thinking.png){ class="mascot-admonition-img" }
+    Here's the aha moment: a MicroSim can be flawless technically and still fail its objective if it targets the wrong cognitive level. A gorgeous animated demo that only helps learners *understand* a concept can't fulfill an objective that asks them to *analyze* it.
 
 <iframe src="../../sims/bloom-microsim-types/main.html" height="502px" width="100%" scrolling="no" style="overflow: hidden;"></iframe>
 
@@ -419,6 +431,10 @@ quality_score: 86
 
 If the score is 85 or above, the MicroSim meets standards. Consider whether your time is better spent creating new simulations rather than perfecting existing ones.
 
+!!! mascot-tip "Don't Re-Polish What's Already Solid"
+    ![Sim giving a tip](../../img/mascot/tip.png){ class="mascot-admonition-img" }
+    Spot a `quality_score` of 85 or higher in the frontmatter? Skip straight past that MicroSim—your evaluation time is better spent on simulations that still need the work.
+
 ### Step 3: Verify Core Files Exist
 
 At minimum, a MicroSim directory must contain:
@@ -580,6 +596,10 @@ The MicroSim ecosystem uses a comprehensive JSON Schema based on Dublin Core met
 - Search tools like [https://dmccreary.github.io/search-microsims/](https://dmccreary.github.io/search-microsims/) can quickly narrow down databases by subject, grade level, JavaScript library, or complexity
 - AI agents can find similar MicroSims to use as templates for new designs
 - Educators can filter simulations by Bloom's Taxonomy level, prerequisite concepts, or curriculum standards
+
+!!! mascot-encourage "JSON Looks Scarier Than It Is"
+    ![Sim encouraging](../../img/mascot/encouraging.png){ class="mascot-admonition-img" }
+    Those curly braces in the `metadata.json` examples below might look intimidating if you've never written code, but you don't need to memorize the schema. Treat it like a form with labeled sections—dublinCore, search, educational, technical—and let your AI assistant fill in the boxes for you.
 
 ### The MicroSim JSON Schema
 
@@ -982,6 +1002,10 @@ The frameworks in this chapter give you:
 Armed with these tools, you're ready not just to create MicroSims, but to create *good* MicroSims—simulations that work reliably, teach effectively, engage appropriately, and remain useful long after their first deployment.
 
 And that's the whole point, isn't it? We're not just making interactive widgets. We're building tools that help people understand the world better. That's worth doing well.
+
+!!! mascot-celebration "Inspection Complete!"
+    ![Sim celebrating](../../img/mascot/celebration.png){ class="mascot-admonition-img" }
+    Nice fit! You now have the Three-Lens Model, the Completeness Rubric, and a metadata schema in your toolbox—everything you need to judge whether a MicroSim is truly ready. Next up in Chapter 11: putting your MicroSims in front of real learners and iterating on what you find.
 
 ---
 

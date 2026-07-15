@@ -54,6 +54,10 @@ This chapter builds on concepts from:
 
 ## One Size Does Not Fit All (And That's a Good Thing!)
 
+!!! mascot-welcome "Time to Build for Every Builder"
+    ![Sim waving welcome](../../img/mascot/welcome.png){ class="mascot-admonition-img" }
+    Welcome back, builder! This chapter is about fitting the same blueprint — say, a fractions MicroSim — to a five-year-old and a graduate student alike. We'll use Piaget's stages and Vygotsky's ZPD as our measuring tape. Let's build it!
+
 Here's a wild thought: the same concept—whether it's fractions, gravity, or data structures—can be taught to a five-year-old *and* a PhD candidate. The magic isn't in dumbing down or smartening up; it's in *adapting* the experience to meet learners where they are. And when you master this skill, you become an instructional design superhero capable of making knowledge accessible to everyone on the planet.
 
 No pressure, right? 🦸‍♀️
@@ -133,6 +137,10 @@ Piaget identified four main **developmental stages**, each characterized by dist
 While Piaget focused on what learners can do alone at each stage, Lev Vygotsky asked a more interesting question: *What can learners do with help?*
 
 **Vygotsky's theory** centers on the Zone of Proximal Development (ZPD)—the sweet spot between what a learner can do independently and what they can't do even with assistance. This is where the magic happens.
+
+!!! mascot-thinking "Where the Learning Happens"
+    ![Sim thinking](../../img/mascot/thinking.png){ class="mascot-admonition-img" }
+    The ZPD is the real design target — not what a learner can already do, and not what's out of reach even with help, but that sweet spot in between. A well-scaffolded MicroSim doesn't just support that zone, it practically *is* that zone, built in pixels.
 
 For MicroSim designers, Vygotsky's insights translate directly into scaffolding strategies:
 
@@ -309,6 +317,10 @@ Elementary students have wildly varying reading abilities. A third-grader might 
 - Optional text-to-speech for any on-screen text
 
 Never let reading ability become a barrier to learning content! If a student understands fractions but struggles with reading, the fraction MicroSim shouldn't punish them.
+
+!!! mascot-warning "Don't Let Reading Gate the Real Lesson"
+    ![Sim warning](../../img/mascot/warning.png){ class="mascot-admonition-img" }
+    Watch out for this common slip: burying a math or science concept under grade-level reading text. A student who understands fractions but reads below grade level shouldn't be blocked by dense instructions. Add audio narration and icons instead of assuming everyone reads at the same pace.
 
 <iframe src="../../sims/elementary-scaffolding/main.html" height="502px" width="100%" scrolling="no" style="overflow: hidden;"></iframe>
 
@@ -673,6 +685,10 @@ The line between learning and discovery blurs at this level. A well-designed Mic
 
 MicroSims that map parameter spaces—showing stability regions, chaotic zones, and interesting boundaries—are incredibly valuable for developing expert intuition.
 
+!!! mascot-encourage "Chaos Sounds Scarier Than It Is"
+    ![Sim encouraging](../../img/mascot/encouraging.png){ class="mascot-admonition-img" }
+    Terms like "bifurcation" and "Lyapunov exponent" can look intimidating on the page, but you don't need a physics PhD to design a parameter-space explorer. You just need to let graduate learners click around and see where the system's behavior shifts. You've got this, builder!
+
 <iframe src="../../sims/parameter-space-explorer/main.html" height="502px" width="100%" scrolling="no" style="overflow: hidden;"></iframe>
 
 [Run MicroSim Fullscreen](../../sims/parameter-space-explorer/main.html){ .md-button .md-button--primary }
@@ -861,6 +877,10 @@ When adapting a MicroSim concept for a specific audience, work through these que
 | Time per session | 2-5 min | 5-15 min | 10-20 min | 15-30 min | 30-60 min | Variable | 5-15 min |
 
 ### The Same Concept at Seven Levels
+
+!!! mascot-thinking "One Concept, Seven Blueprints"
+    ![Sim thinking](../../img/mascot/thinking.png){ class="mascot-admonition-img" }
+    Look at probability wearing seven different outfits below — a lucky duck pond for a toddler, an MCMC sampler for a graduate student. Same underlying idea, completely different construction materials. That's audience adaptation in a nutshell.
 
 Let's see how a single concept—probability—might be designed differently for each audience:
 
@@ -1067,6 +1087,10 @@ Let's recap what we've learned about adapting MicroSims for different audiences:
    - Same pedagogical DNA, different implementations
 
 5. **The global opportunity**: Thoughtful audience adaptation democratizes education
+
+!!! mascot-celebration "You Just Built for Everyone"
+    ![Sim celebrating](../../img/mascot/celebration.png){ class="mascot-admonition-img" }
+    Nice fit! You now know how to adapt one MicroSim idea across seven audiences, from touch targets for toddlers to parameter spaces for researchers. Next up in Chapter 7: Cognitive Load and Visual Design, where we'll make sure none of those designs overwhelm the learner's brain.
 
 Now go forth and adapt! The learners of the world—from toddlers to PhDs—are waiting for MicroSims designed just for them. And remember: making learning accessible to everyone isn't just good teaching. It's making the world a better place, one simulation at a time.
 

@@ -57,6 +57,10 @@ This chapter builds on concepts from:
 
 ## Introduction: The Testing Mindset
 
+!!! mascot-welcome "Let's Go Testing!"
+    ![Sim waving welcome](../../img/mascot/welcome.png){ class="mascot-admonition-img" }
+    Welcome back, builder! We've designed and evaluated our MicroSims — now it's time to put them in front of real learners and see what actually happens. This chapter covers think-aloud protocols, A/B testing, and xAPI tracking so you can build with evidence, not just hope. Let's build it!
+
 Here's a truth that separates good instructional designers from great ones: **the MicroSim you ship is never the MicroSim you first built.**
 
 No matter how brilliant your initial design, real learners will interact with it in ways you never anticipated. They'll miss the obvious button, ignore your carefully crafted instructions, and somehow discover that dragging the slider to -47 causes the entire simulation to explode (metaphorically, we hope). This isn't a failure—it's valuable data.
@@ -284,6 +288,10 @@ Instead of: "Did you understand the learning objective?"
 
 Try: "What do you think this was trying to teach you?"
 
+!!! mascot-tip "Swap the Script"
+    ![Sim giving a tip](../../img/mascot/tip.png){ class="mascot-admonition-img" }
+    When a learner clams up at a formal question, trade it for a conversational one — "Did you understand the objective?" becomes "What do you think this was trying to teach you?" Same information, friendlier delivery.
+
 ---
 
 ## A/B Testing: The Scientific Approach to Design Decisions
@@ -320,6 +328,10 @@ And what it *cannot* tell you:
 - Did they test the hypothesis the simulation was designed to demonstrate?
 
 This is the fundamental difference between **page-view tracking** and **simulation tracking**. Page-view tracking knows you were in the room; simulation tracking knows what you did while you were there.
+
+!!! mascot-thinking "The Real Insight"
+    ![Sim thinking](../../img/mascot/thinking.png){ class="mascot-admonition-img" }
+    That distinction is the whole reason xAPI exists. "Knowing you were in the room" tells you about traffic; "knowing what you did while you were there" tells you about learning. An A/B test built on page views alone can't tell those two stories apart.
 
 <iframe src="../../sims/page-view-tracking-comparison/main.html" height="502px" width="100%" scrolling="no" style="overflow: hidden;"></iframe>
 
@@ -394,6 +406,10 @@ For example:
 
 These statements are machine-readable, standardized, and can be aggregated across millions of learners to reveal patterns no individual observation could uncover.
 
+!!! mascot-thinking "Aha — It's Just Sentences!"
+    ![Sim thinking](../../img/mascot/thinking.png){ class="mascot-admonition-img" }
+    Actor → Verb → Object is basically a sentence: "Sarah adjusted the mass slider." Once you see xAPI as sentence-writing instead of database design, the whole standard stops looking intimidating.
+
 ### xAPI Statement Structure
 
 A complete xAPI statement includes:
@@ -423,6 +439,10 @@ A complete xAPI statement includes:
   "timestamp": "2024-03-15T14:34:22.345Z"
 }
 ```
+
+!!! mascot-encourage "Don't Panic at the Curly Braces"
+    ![Sim encouraging](../../img/mascot/encouraging.png){ class="mascot-admonition-img" }
+    That JSON block looks like something only a developer could love, but you don't need to hand-write these statements. Most MicroSim tracking libraries and LRS platforms generate them for you — your job is deciding *what* to track, not memorizing the syntax.
 
 ### Why This Matters for A/B Testing
 
@@ -972,6 +992,10 @@ User testing and iteration transform MicroSims from theoretical designs into pro
 - Interpret results humbly, watching for common pitfalls
 
 The ultimate goal: MicroSims that genuinely help people learn. That's worth the effort of rigorous testing and continuous improvement.
+
+!!! mascot-celebration "Nice Fit!"
+    ![Sim celebrating](../../img/mascot/celebration.png){ class="mascot-admonition-img" }
+    You've closed the loop — test, track with xAPI, and refine until a MicroSim genuinely works for real learners. Next up: making sure it works for *every* learner, and getting your finished build out into the world. Let's build it!
 
 Now go test something. Your learners are waiting.
 

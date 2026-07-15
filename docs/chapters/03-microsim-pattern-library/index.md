@@ -52,6 +52,10 @@ This chapter builds on concepts from:
 
 ## Welcome to the Visualization Buffet
 
+!!! mascot-welcome "Welcome, Builder!"
+    ![Sim waving welcome](../../img/mascot/welcome.png){ class="mascot-admonition-img" }
+    Welcome back! This chapter is your parts bin — over two dozen visualization paradigms, from bouncing pendulums to branching flowcharts, ready to grab the moment a learning objective needs a shape. Let's build it!
+
 If instructional design were a restaurant, this chapter would be the menu. And what a menu it is! We're about to explore over two dozen ways to visualize learning—from bouncing balls to branching flowcharts, from nested circles to networked nodes. By the end, you'll have a mental cookbook of visualization patterns ready to deploy whenever a learning objective crosses your desk.
 
 Here's the beautiful truth about MicroSim development: **you don't need to reinvent the wheel every time you build something**. Most educational concepts fit into a handful of visualization patterns, and once you recognize which pattern matches your content, the design process becomes dramatically simpler. It's like having a key that unlocks the right template.
@@ -75,6 +79,10 @@ Choosing the right paradigm is like choosing the right vehicle for a journey. A 
 | Set/Classification | Categorization, overlapping groups, membership | Venn diagrams, classification matrices |
 
 The magic happens when you match the paradigm to your content's inherent structure. Force a concept into the wrong paradigm, and learners struggle. Find the right fit, and understanding clicks into place like a puzzle piece finding its home.
+
+!!! mascot-thinking "Match the Shape, Not Just the Topic"
+    ![Sim thinking](../../img/mascot/thinking.png){ class="mascot-admonition-img" }
+    Here's the key move: don't ask "what topic is this?" — ask "what shape does this concept have?" A sedan-shaped concept (linear, sequential) will always fight you if you force it into a boat-shaped paradigm (networked, exploratory), no matter how good the topic is.
 
 #### Diagram: Visualization Paradigm Selection Guide
 
@@ -302,6 +310,10 @@ Design Principles:
 Implementation: p5.js with responsive canvas
 </details>
 
+!!! mascot-warning "Don't Overload the Control Panel"
+    ![Sim warning](../../img/mascot/warning.png){ class="mascot-admonition-img" }
+    More sliders doesn't mean more learning. Notice the design principle above caps cause-effect displays at four input variables — past that, learners spend their mental energy tracking knobs instead of the relationship you're trying to show. Split a six-variable idea into two simpler simulations instead.
+
 <iframe src="../../sims/cause-effect-display/main.html" height="502px" width="100%" scrolling="no"></iframe>
 [Run Fullscreen](../../sims/cause-effect-display/main.html){ .md-button .md-button--primary }
 
@@ -444,6 +456,10 @@ The visual convention for hierarchies places parent nodes above children, with c
 This paradigm is crucial for instructional design because learning itself is a dependency problem. You can't teach calculus to someone who doesn't understand algebra. You can't explain recursion to someone who doesn't grasp function calls. Dependency maps make these invisible constraints visible.
 
 The **Learning Graph Viewer** MicroSim is a prime example of dependency mapping in action—showing exactly which concepts must come before others in a course structure.
+
+!!! mascot-thinking "Learning Is a Dependency Problem"
+    ![Sim thinking](../../img/mascot/thinking.png){ class="mascot-admonition-img" }
+    Here's the deep insight hiding in this section: instructional design and dependency mapping are the same problem wearing different clothes. Every prerequisite chain you sequence for a course — like the one the Learning Graph Viewer displays — is a dependency map you've built without necessarily calling it one.
 
 ### Influence Diagrams: Causal Networks
 
@@ -1164,6 +1180,10 @@ When faced with a new learning objective, run through this quick analysis:
    - Evaluate → Comparison tools, rubric applications
    - Create → Builders, editors, constructors
 
+!!! mascot-tip "Keep This Checklist Handy"
+    ![Sim giving a tip](../../img/mascot/tip.png){ class="mascot-admonition-img" }
+    Bookmark the Five-Minute Paradigm Selection Process above. Next time a learning objective has you stumped, run through "what's changing, what's related, what should learners do, what Bloom's level" in order — the right paradigm usually falls out before you finish the list.
+
 ### Common Paradigm Pairings
 
 Many MicroSims combine paradigms for richer learning experiences:
@@ -1227,6 +1247,10 @@ Let's recap the visualization paradigms you've mastered:
 - Visual Affordances: Understanding what visualizations suggest
 
 With these patterns in your toolkit, you're ready to tackle any learning objective and quickly identify the visualization approach that will make it shine. In the next chapter, we'll dive into actually writing MicroSim specifications—turning your paradigm selection into detailed blueprints that AI tools can build.
+
+!!! mascot-celebration "Pattern Library: Complete!"
+    ![Sim celebrating](../../img/mascot/celebration.png){ class="mascot-admonition-img" }
+    You just catalogued two dozen visualization paradigms, builder — motion, networks, sets, timelines, charts, spatial, and flow/state. Next up, we bolt these patterns onto the actual libraries and tools that bring them to life.
 
 Welcome to the pattern library. Now go make some learning magic happen!
 

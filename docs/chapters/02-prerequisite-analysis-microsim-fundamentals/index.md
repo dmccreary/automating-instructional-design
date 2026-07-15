@@ -33,6 +33,10 @@ This chapter builds on concepts from:
 
 ---
 
+!!! mascot-welcome "Welcome Back, Builder!"
+    ![Sim waving welcome](../../img/mascot/welcome.png){ class="mascot-admonition-img" }
+    Let's build it! In Chapter 1 you learned to write sharp learning objectives — now we get to build the things those objectives point to: MicroSims. We'll trace where MicroSims came from, then bolt on the prerequisite-analysis skills you need to know when a concept is ready for simulation.
+
 ## The Birth of MicroSims: A Brief History
 
 In 2023, educational technologist **Valarie Lockhart** coined the term "MicroSim" to describe a new paradigm in educational simulation design. The name captures the essence of the approach: *micro* for small, focused, single-concept learning experiences, and *sim* for simulation—interactive digital environments where learners can experiment, explore, and discover.
@@ -88,6 +92,10 @@ Here's what distinguishes MicroSims from traditional educational simulations:
 | One-size-fits-all | Adaptable to audience level |
 
 The power of MicroSims comes from their composability. Instead of building one massive simulation that tries to teach everything about a topic, you build a *library* of focused MicroSims that can be assembled into learning pathways. It's like the difference between a single encyclopedic textbook and a modular curriculum where each piece can be updated, replaced, or recombined independently.
+
+!!! mascot-thinking "Aha - It's About Composability"
+    ![Sim thinking](../../img/mascot/thinking.png){ class="mascot-admonition-img" }
+    Here's the key shift: instead of bolting together one giant simulation, you assemble a toolbox of small, single-purpose MicroSims that snap into different learning pathways. Update one piece and you never have to rebuild the whole structure.
 
 #### Diagram: Traditional Simulation vs MicroSim Architecture
 
@@ -457,6 +465,10 @@ This MicroSim does NOT assume:
 
 This documentation helps everyone—including the AI tools generating content—understand the boundaries.
 
+!!! mascot-tip "Write It Down, Builder"
+    ![Sim giving a tip](../../img/mascot/tip.png){ class="mascot-admonition-img" }
+    Whenever you draft a MicroSim spec, jot down an explicit "Assumed Knowledge" list like the one above. Learners and the AI tools generating your content will both know exactly where the foundation ends and the new material begins.
+
 ## Concept Dependencies: Mapping the Learning Landscape
 
 **Concept dependencies** describe the relationships between concepts—specifically, which concepts must be understood before others can be learned. These dependencies form a graph structure where concepts are nodes and dependencies are directed edges.
@@ -581,6 +593,10 @@ To reach F, a learner must complete A or B (or both), then C, then both D and E.
 - B → A → C → E → D → F
 - A → C → D → B → C → E → F (with C reviewed)
 
+!!! mascot-encourage "Don't Let the Arrows Intimidate You"
+    ![Sim encouraging](../../img/mascot/encouraging.png){ class="mascot-admonition-img" }
+    That string of arrows can look like a homework problem from a discrete math class, but it's really just a map of "what comes before what." Trace one path at a time — A leads to C, C leads to D and E — and it's simpler than it looks.
+
 ### Personalized Pathways
 
 One of the exciting possibilities with AI-assisted education is **personalized pathways**. Instead of all learners following the same fixed sequence, each learner's path can be:
@@ -675,6 +691,10 @@ Other concepts are *less* simulation-ready:
 - Historical events (timelines or narratives might be better)
 - Definitions and terminology (glossaries or matching games)
 - Emotional or ethical reasoning (discussions or case studies)
+
+!!! mascot-warning "Don't Force a MicroSim"
+    ![Sim warning](../../img/mascot/warning.png){ class="mascot-admonition-img" }
+    Not every learning objective wants a simulation. Pure memorization, historical narratives, and vocabulary drills usually work better as flashcards, timelines, or glossaries — building a MicroSim for the wrong concept just wastes your tool belt on the wrong job.
 
 ### The Simulation Readiness Checklist
 
@@ -833,6 +853,10 @@ You've now learned the foundational concepts that bridge learning objectives and
 - **Simulation readiness** assesses whether a concept is a good MicroSim candidate
 
 With these tools, you're ready to start analyzing any learning domain for MicroSim potential. In the next chapter, we'll explore the pattern library of visualization types and match them to different kinds of learning objectives.
+
+!!! mascot-celebration "You Nailed the Foundations!"
+    ![Sim celebrating](../../img/mascot/celebration.png){ class="mascot-admonition-img" }
+    Nice fit! You now know how to spot prerequisites, document assumed knowledge, map concept dependencies, and judge simulation readiness. Chapter 3 hands you a whole pattern library of MicroSim types to match against those objectives.
 
 Remember: The world needs better education, and now we have tools to create it at scale. That's not just professionally exciting—it's genuinely optimistic. Every well-designed MicroSim has the potential to help someone learn something they couldn't learn before. And that makes the world a little bit better, one simulation at a time.
 

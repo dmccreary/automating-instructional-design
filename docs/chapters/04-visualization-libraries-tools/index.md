@@ -42,6 +42,10 @@ This chapter builds on concepts from:
 
 ## Welcome to the Visualization Toolbox
 
+!!! mascot-welcome "Welcome to the Parts Bin!"
+    ![Sim waving welcome](../../img/mascot/welcome.png){ class="mascot-admonition-img" }
+    Hey builders, Sim here! This chapter is your toolbox tour — p5.js, vis-network, Chart.js, Plotly, Leaflet, and Mermaid are all lined up, waiting for you to pick the right one for the job. Let's build it!
+
 Congratulations! You've made it to what we affectionately call the "candy store" chapter of this course. Here, we'll explore the delightful array of JavaScript libraries that transform abstract learning objectives into interactive, engaging visual experiences. Think of these libraries as your artistic palette, each color uniquely suited for painting different educational masterpieces.
 
 The beauty of modern web development is that you don't need to reinvent the wheel (or the slider, or the graph, or the map). Brilliant developers have created open-source libraries that handle the heavy lifting, allowing you to focus on what matters most: designing experiences that help people learn. As the saying goes, "Why write a thousand lines of code when you can import one library and write ten?"
@@ -371,6 +375,10 @@ A network visualization consists of two fundamental elements:
 
 vis-network brings these elements to life with physics-based layouts, smooth animations, and rich interactivity. Nodes can be dragged, clusters can be expanded, and hovering reveals details. It transforms static relationship data into an explorable landscape.
 
+!!! mascot-thinking "Fixed Positions, on Purpose"
+    ![Sim thinking](../../img/mascot/thinking.png){ class="mascot-admonition-img" }
+    Notice that the example below turns physics off and pins each node to an exact x/y position. That's not a limitation, it's a deliberate choice: when you're teaching prerequisite relationships, a wandering, physics-driven layout would fight the very structure you're trying to reveal.
+
 ### The vis-network Architecture Pattern
 
 When creating a vis-network MicroSim, we follow a standardized layout called "vis-network-tutorial":
@@ -620,6 +628,10 @@ flowchart TD
 
 From this simple text, Mermaid generates a professional flowchart. No drag-and-drop required. No pixel-pushing. Just describe the structure, and Mermaid renders it.
 
+!!! mascot-thinking "Diagrams You Can Diff"
+    ![Sim thinking](../../img/mascot/thinking.png){ class="mascot-admonition-img" }
+    Here's the click moment: because a Mermaid diagram is just text, it lives in version control exactly like the rest of your code. Change one line in the flowchart definition, and you can see precisely what changed, try doing that with a drag-and-drop diagramming tool.
+
 ### Mermaid Diagram Types
 
 Mermaid supports multiple diagram types:
@@ -748,6 +760,10 @@ When you invoke the MicroSim generator, it analyzes your request for trigger wor
 - "map of university locations" → map-generator (coordinates)
 - "flowchart of the process" → mermaid-generator (workflow)
 
+!!! mascot-thinking "One Request, Many Specialists"
+    ![Sim thinking](../../img/mascot/thinking.png){ class="mascot-admonition-img" }
+    The microsim-generator skill isn't one generator pretending to do everything, it's a router. It reads your request, scores how well it matches each sub-skill like microsim-p5 or vis-network, and hands the job to the specialist best equipped to build it.
+
 !!! note "Routing Criteria"
     The MicroSim generator uses a scoring system (0-100) to match requests to skills. A score of 90-100 means perfect match; 70-89 is strong match; 50-69 is moderate. The generator selects the highest-scoring skill for your request.
 
@@ -776,6 +792,10 @@ This separation provides several benefits:
 - **Documentation co-location**: Explanation lives with the code
 - **Metadata for search**: Faceted search engines can find MicroSims
 - **Version control friendly**: Each file has a clear purpose
+
+!!! mascot-encourage "It Looks Like a Lot of Files..."
+    ![Sim encouraging](../../img/mascot/encouraging.png){ class="mascot-admonition-img" }
+    Six files in one folder can feel intimidating if you've never written code before, but take a breath: you'll rarely create any of them by hand. Describe what you want in a specification, and a Claude Code skill assembles index.md, main.html, script.js, and the rest for you.
 
 ### Template Components
 
@@ -948,6 +968,10 @@ As we close this chapter, let's crystallize the essential knowledge:
 9. **Modularity matters**: Separate files for HTML, JavaScript, CSS, and data make MicroSims maintainable, modifiable, and shareable.
 
 10. **Iteration is expected**: Code generation is the beginning, not the end. Test, refine, and iterate to perfection.
+
+!!! mascot-celebration "Toolbox: Assembled!"
+    ![Sim celebrating](../../img/mascot/celebration.png){ class="mascot-admonition-img" }
+    Look at that, you now know exactly which library to reach for, whether it's p5.js for motion, vis-network for relationships, or Mermaid for a quick flowchart. Next up in Chapter 5, we'll turn that toolbox knowledge into crystal-clear MicroSim specifications the generator skills can build from. Let's build it!
 
 The world becomes a better place when educators can focus on pedagogy while AI handles the implementation details. With these tools in your belt, you're equipped to transform any learning objective into an interactive, engaging MicroSim. Now go forth and visualize!
 

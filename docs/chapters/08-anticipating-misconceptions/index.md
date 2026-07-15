@@ -38,6 +38,10 @@ This chapter builds on concepts from:
 
 ## Introduction: The Beautiful Mess Inside Every Learner's Head
 
+!!! mascot-welcome "Time to Go Misconception Hunting"
+    ![Sim waving welcome](../../img/mascot/welcome.png){ class="mascot-admonition-img" }
+    Welcome back, builder! This chapter is about the wrong-but-confident ideas hiding in your learners' heads — like believing heavier objects fall faster, or that sunk costs should guide a decision. We're going to design MicroSims that expose those misconceptions instead of accidentally reinforcing them. Let's build it!
+
 Here's a humbling truth that every educator eventually discovers: your learners are not blank slates. They walk into your classroom, open your textbook, or launch your MicroSim carrying a lifetime of ideas, experiences, and—let's be honest—some truly creative misunderstandings about how the world works.
 
 A child believes that heavy objects fall faster than light ones (they watched a feather and a bowling ball, after all). A business student thinks that "sunk costs" should factor into future decisions (they paid for that gym membership, darn it). A physics undergraduate imagines that moving objects have an internal "impetus" that gradually runs out (thanks, medieval philosophy).
@@ -151,6 +155,10 @@ Every misconception has a structure:
 
 Understanding this structure helps you design interventions. You can't just attack the flawed belief directly—you need to undermine the supporting evidence, expose the boundary conditions, and provide a better alternative that explains everything the misconception explained plus more.
 
+!!! mascot-thinking "Feels Right Isn't the Same as Being Right"
+    ![Sim thinking](../../img/mascot/thinking.png){ class="mascot-admonition-img" }
+    Notice you can't just declare a misconception wrong — you have to undermine its supporting evidence and expose its boundary conditions. That's exactly why "seasons are caused by distance from the sun" collapses the moment you point out that Australia is warm while North America is cold at the same time.
+
 ## Common Misconceptions: A Field Guide to Faulty Thinking
 
 **Common misconceptions** are incorrect beliefs that appear repeatedly across learners, often due to shared experiences, intuitive reasoning patterns, or widespread misinformation. Knowing the common misconceptions in your subject area is like having a map of the minefield—you can navigate more safely.
@@ -252,6 +260,10 @@ Here's a sobering thought: it's possible to design a MicroSim that actually *str
 
 This happens more often than you'd think:
 
+!!! mascot-warning "The Trap Even Careful Designers Fall Into"
+    ![Sim warning](../../img/mascot/warning.png){ class="mascot-admonition-img" }
+    Watch out for this one — a "helpful" analogy like "electricity is like water flowing through pipes" can quietly reinforce the very misconception you meant to fix, such as the belief that current gets "used up" as it flows through a circuit.
+
 ### Ways MicroSims Can Reinforce Misconceptions
 
 1. **Using flawed analogies without limits**: "Electricity is like water flowing through pipes" reinforces the idea that current gets "used up" as it flows.
@@ -299,6 +311,10 @@ Research consistently shows that simply telling learners the correct information
 - Verbal knowledge and intuitive mental models can coexist independently
 
 A learner might correctly answer "Do heavier objects fall faster?" with "No" on a test while still intuitively expecting a bowling ball to beat a marble to the ground. The verbal knowledge and the mental model haven't integrated.
+
+!!! mascot-thinking "Two Kinds of Knowing"
+    ![Sim thinking](../../img/mascot/thinking.png){ class="mascot-admonition-img" }
+    Here's the aha moment: a learner can correctly answer "no, heavier objects don't fall faster" on a quiz while their gut still expects the bowling ball to win the race. Verbal knowledge and the underlying mental model are stored separately, so your MicroSim has to fix both, not just the quiz score.
 
 <iframe src="../../sims/misconception-correction-cycle/main.html" height="502px" width="100%" scrolling="no" style="overflow: hidden;"></iframe>
 
@@ -867,6 +883,10 @@ Let's synthesize everything we've learned into a practical framework for designi
 
 When designing misconception-targeting MicroSims, follow the **PREDICT** framework:
 
+!!! mascot-tip "Let the Acronym Do the Planning"
+    ![Sim giving a tip](../../img/mascot/tip.png){ class="mascot-admonition-img" }
+    Here's a shortcut: the letters P-R-E-D-I-C-T spell out the exact build order. Next time you're stuck mid-design, just walk down the acronym one letter at a time and you'll always know what step comes next.
+
 **P - Probe existing beliefs**
 Before designing, research what misconceptions learners typically hold about your topic. Use the literature, intuition tests, or preliminary interviews.
 
@@ -932,6 +952,10 @@ Here's what you've learned:
 When you design MicroSims with these principles in mind, you're not just teaching content—you're changing minds. You're helping learners replace flawed understanding with accurate models that will serve them for life.
 
 The world is full of misconceptions about climate change, economics, health, and countless other topics that matter. Every MicroSim you design that successfully corrects a misconception is a small step toward a more informed society.
+
+!!! mascot-celebration "Nice Fit!"
+    ![Sim celebrating](../../img/mascot/celebration.png){ class="mascot-admonition-img" }
+    Nice work, builder! You now know how to spot a misconception, engineer the cognitive conflict that breaks it, and deliver a better model in its place using the PREDICT framework. Next up in Chapter 9, we'll start actually generating MicroSims with AI tools — time to put all this design thinking into working code.
 
 Now go forth and challenge some cherished but incorrect beliefs. Just remember to do it gently—changing minds is delicate work.
 

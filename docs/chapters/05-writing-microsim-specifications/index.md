@@ -37,6 +37,10 @@ This chapter builds on concepts from:
 
 ## The Power of Specification-Driven Design
 
+!!! mascot-welcome "Time to Get Precise"
+    ![Sim waving welcome](../../img/mascot/welcome.png){ class="mascot-admonition-img" }
+    Welcome back, builder! This chapter is all about Specification-Driven Design—writing blueprints so clear that AI can't misread your intent. Let's build it, starting with the biggest mindset shift: you're the architect, not the construction crew.
+
 **Specification-Driven Design (SDD) is the single most important skill you'll develop as an instructional designer working with AI tools.** It's the difference between getting a MicroSim that makes you say "Yes! That's exactly what I imagined!" versus one that makes you wonder if the AI was having an off day.
 
 Here's the revolutionary insight: you don't need to write code. You don't need to understand JavaScript, p5.js, or CSS. What you *do* need is the ability to describe *precisely* what you want—the WHAT, not the HOW. Think of yourself as the architect, not the construction crew. Your blueprints need to be so clear that any builder (or AI) could construct your vision without asking a single clarifying question.
@@ -98,6 +102,10 @@ Now compare it to this **vivid** specification:
 > "The canvas displays a 600-pixel wide by 400-pixel tall physics playground with a light gray background (#f0f0f0). Five circles of varying sizes (diameters: 20, 30, 40, 50, and 60 pixels) start at random horizontal positions along the top of the canvas. Each ball has a distinct color from a warm palette: red (#e74c3c), orange (#e67e22), yellow (#f1c40f), pink (#fd79a8), and coral (#ff7675). The balls fall under simulated gravity (acceleration of 0.5 pixels per frame squared), bounce off the bottom edge with 80% energy retention, and bounce off the left and right walls with 95% energy retention. A horizontal line marks the 'ground' at y=380, drawn as a 2-pixel thick dark gray line."
 
 The second version leaves nothing to imagination or interpretation. An AI—or a human developer—could implement this without asking any questions.
+
+!!! mascot-thinking "The Aha Moment"
+    ![Sim thinking](../../img/mascot/thinking.png){ class="mascot-admonition-img" }
+    Look closely: "show some balls bouncing around with gravity" and that 600x400 canvas with five precisely colored circles describe the exact same idea. Only one of them can't be misread. That contrast is Specification-Driven Design in a nutshell.
 
 <iframe src="../../sims/visual-description-checklist/main.html" height="502px" width="100%" scrolling="no" style="overflow: hidden;"></iframe>
 
@@ -514,6 +522,10 @@ Ambiguity is sneaky. What seems perfectly clear to you might be genuinely ambigu
 
 ### The Seven Deadly Sins of Specification Ambiguity
 
+!!! mascot-warning "Watch for These Sneaky Culprits"
+    ![Sim warning](../../img/mascot/warning.png){ class="mascot-admonition-img" }
+    Vague adjectives like "large" or "fast" are the number-one way specs go wrong—they feel perfectly obvious to you but leave the AI guessing. Before you hand off a spec, hunt down every adjective and ask whether it's hiding a missing number.
+
 1. **Vague Adjectives**: "large," "small," "fast," "slow," "nice colors"
    - Fix: Use specific values: "40 pixels," "500ms animation duration," "#3498db blue"
 
@@ -678,6 +690,10 @@ Optimize your specifications for AI interpretation by:
 4. **Be redundant strategically**: State important constraints in multiple ways
 5. **Use structured formats**: Lists and tables are parsed more reliably than flowing prose
 6. **Reference known patterns**: "Like a standard p5.js setup with setup() and draw()" activates reliable patterns
+
+!!! mascot-tip "Borrow the AI's Own Vocabulary"
+    ![Sim giving a tip](../../img/mascot/tip.png){ class="mascot-admonition-img" }
+    Here's a shortcut: when you write "like a standard p5.js setup with setup() and draw()" instead of describing that structure from scratch, you're speaking the AI's native dialect. Reference the pattern, and the reliable parts come along for free.
 
 ### Example: Specification Optimized for AI
 
@@ -994,6 +1010,10 @@ This pipeline transforms educational design from an artisanal craft (beautiful b
 ## Putting It All Together: Complete Specification Examples
 
 Now let's see how all these concepts combine into complete, production-ready specifications. Each example demonstrates how to avoid ambiguity, preserve intent, and write for AI comprehension.
+
+!!! mascot-encourage "Don't Let the Length Fool You"
+    ![Sim encouraging](../../img/mascot/encouraging.png){ class="mascot-admonition-img" }
+    The three full specifications coming up—Ohm's Law, the probability tree, the sorting race—look intimidatingly long, but they're just the same seven components you already know written out in complete detail. You've got this, builder.
 
 ### Example 1: Ohm's Law Interactive Demonstration
 
@@ -1511,6 +1531,10 @@ You now have the tools to spec-ify your vision with crystal clarity. Go forth an
 ## What's Next?
 
 In the next chapter, we'll explore how to adapt MicroSim complexity for different audience levels—from kindergarteners to PhD students. You'll learn how the same core concept can be presented at wildly different complexity levels, and how your specifications need to change accordingly.
+
+!!! mascot-celebration "Spec Complete!"
+    ![Sim celebrating](../../img/mascot/celebration.png){ class="mascot-admonition-img" }
+    Nice fit! You now know how to turn a fuzzy idea into a blueprint an AI can build faithfully. Next up in Chapter 6, we'll stretch these same specification skills across audience levels—from kindergarteners to PhD students.
 
 Until then, practice writing specifications for simple MicroSims. Start with something you know well, like a basic physics concept or a math visualization. Write the specification first, without thinking about code. Then imagine handing that specification to someone who has never seen what you're picturing. Could they build it?
 

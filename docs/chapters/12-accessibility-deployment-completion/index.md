@@ -56,6 +56,10 @@ This chapter builds on concepts from:
 
 ## Introduction: The Final Mile (And What a Journey It's Been!)
 
+!!! mascot-welcome "Almost There, Builder!"
+    ![Sim waving welcome](../../img/mascot/welcome.png){ class="mascot-admonition-img" }
+    You've reached the last full chapter before the capstone! This time we're making sure every learner — screen reader users, keyboard-only users, colorblind users — can actually open the door on the MicroSims you've built. Let's build it accessible from the start!
+
 Congratulations! You've made it to the final chapter. If this were a marathon, you'd be rounding the corner into the stadium with the crowd on their feet. If it were a cooking show, you'd be plating the dish with thirty seconds on the clock. If it were a space mission... well, you get the idea.
 
 You've learned to analyze learning objectives, select visualization paradigms, write specifications, generate MicroSims with AI, evaluate quality, conduct user testing, and iterate toward excellence. Now comes the part that determines whether all that work actually reaches learners: **making your MicroSims accessible to everyone** and **deploying them where educators can find and use them**.
@@ -92,6 +96,10 @@ There's a crucial difference between designing for accessibility from the start 
 - **Accessibility Retrofitting**: "How can I make this work for people I forgot?" (Deadline question)
 
 Retrofitting is expensive, often incomplete, and sometimes impossible. A MicroSim designed entirely around precise mouse dragging cannot be easily adapted for keyboard users—you'd need to fundamentally rethink the interaction model.
+
+!!! mascot-thinking "Retrofitting vs. Building Right"
+    ![Sim thinking](../../img/mascot/thinking.png){ class="mascot-admonition-img" }
+    Here's the click moment: a MicroSim built entirely around mouse-dragging can't just get a keyboard bolted on later — you'd have to redesign the whole interaction model. Building for everyone on day one is almost always cheaper than retrofitting on the deadline.
 
 !!! tip "Start with Constraints"
     Design your MicroSim as if you couldn't use a mouse. What interactions would still work? That's your accessibility foundation.
@@ -223,6 +231,10 @@ Our recommended MicroSim architecture places controls **below the drawing area**
 | Controls below canvas | ✓ Clear control area | ✓ Tab through controls | ✓ Controls are focusable |
 | Hybrid (canvas + separate controls) | ✓ Both options | ✓ Controls accessible | ✓ Partial access |
 
+!!! mascot-thinking "One Decision, Three Audiences"
+    ![Sim thinking](../../img/mascot/thinking.png){ class="mascot-admonition-img" }
+    Look at that table again — putting controls below the canvas instead of on top of it isn't three separate fixes. It's one layout decision that simultaneously helps mouse users, keyboard users, and screen reader users. That's universal design paying off.
+
 ### Standard Control Elements for Accessibility
 
 Replace mouse-dependent interactions with accessible HTML controls:
@@ -346,6 +358,10 @@ if (isCorrect) {
   text('✗', x, y);  // X mark reinforces meaning
 }
 ```
+
+!!! mascot-warning "The Classic Color Mistake"
+    ![Sim warning](../../img/mascot/warning.png){ class="mascot-admonition-img" }
+    If I had a bolt for every MicroSim that used `fill(isCorrect ? 'green' : 'red')` and nothing else, I'd have a full tool belt. Color alone leaves out roughly 8% of your male learners — always back it up with a shape, a checkmark, or a label.
 
 ### Contrast Requirements
 
@@ -955,6 +971,10 @@ Your final portfolio should include:
 - Integration method
 - Maintenance plan
 
+!!! mascot-encourage "Eight Pieces, One Project"
+    ![Sim encouraging](../../img/mascot/encouraging.png){ class="mascot-admonition-img" }
+    Eight portfolio components looks like a lot stacked in one list, but you've already built most of these pieces in earlier chapters — the specification, the working MicroSim, the accessibility audit. This is assembly, not a brand-new build.
+
 <iframe src="../../sims/portfolio-components/main.html" height="502px" width="100%" scrolling="no" style="overflow: hidden;"></iframe>
 
 [Run MicroSim Fullscreen](../../sims/portfolio-components/main.html){ .md-button .md-button--primary }
@@ -1158,6 +1178,10 @@ Every accessible, well-designed MicroSim you create has the potential to:
 That's not just professional skill—that's making the world a better place, one simulation at a time.
 
 Now go forth and build something wonderful. Your learners are waiting.
+
+!!! mascot-celebration "One Chapter Left"
+    ![Sim celebrating](../../img/mascot/celebration.png){ class="mascot-admonition-img" }
+    You just wired together accessibility, deployment, and portfolio-building — the last big systems before the finish line. One chapter to go: the Capstone Project, where everything you've assembled comes together. Let's build it!
 
 ---
 

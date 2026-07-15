@@ -44,6 +44,10 @@ This chapter builds on concepts from:
 
 ## Introduction: Why Your Brain Is Like a Juggler at a Circus
 
+!!! mascot-welcome "Let's Tune Up Your Brain's Toolbox"
+    ![Sim waving welcome](../../img/mascot/welcome.png){ class="mascot-admonition-img" }
+    Welcome back, builder! This chapter is all about respecting the limits of working memory—that tiny four-to-seven-item desk your brain uses to get anything done. Once you see cognitive load the way I do, you'll design MicroSims that work *with* the brain instead of against it. Let's build it!
+
 Imagine you're a juggler at a circus. You can keep three or four balls in the air with grace and style. But hand you seventeen flaming torches, a chainsaw, and a live chicken, and suddenly you're not a juggler anymore—you're a safety hazard. Your brain works much the same way when learning. It has remarkable capabilities, but those capabilities have limits.
 
 This chapter is your backstage pass to understanding how the human mind processes information. When you understand the juggler's constraints, you can design MicroSims that help learners master new skills without setting anything on fire (metaphorically speaking). By the end, you'll know how to create simulations that work *with* the brain rather than against it—and that's when the real magic happens.
@@ -199,6 +203,10 @@ The core insight is simple but profound: **learning is constrained by working me
 
 But here's where it gets interesting. Not all cognitive load is created equal. Sweller and his colleagues identified three types of load, each with different implications for design. Understanding these distinctions is like getting the cheat codes for instructional design.
 
+!!! mascot-thinking "The Whole Chapter in One Sentence"
+    ![Sim thinking](../../img/mascot/thinking.png){ class="mascot-admonition-img" }
+    Learning is constrained by working memory capacity—full stop. No amount of motivation or repetition fixes an overloaded desk, which is exactly why Sweller split cognitive load into intrinsic, extraneous, and germane types you're about to meet.
+
 ### Mental Effort: The Currency of Cognition
 
 Before diving into the three types of load, let's define **mental effort**—the total cognitive resources a learner is expending at any given moment. Mental effort is like a budget. You have a fixed amount available (determined by working memory capacity), and you have to spend it wisely.
@@ -296,6 +304,10 @@ Common sources of extraneous load include:
 The beautiful thing about extraneous load? **It's entirely under your control as a designer.** Every bit of extraneous load you eliminate is like giving learners a cognitive raise—more mental budget for actual learning.
 
 Consider this example: A MicroSim about supply and demand could show the graph on one screen while explaining the concepts in a separate pop-up window. That separation creates extraneous load because learners must mentally integrate spatially separated information. A better design presents the explanation alongside the relevant part of the graph—reducing extraneous load and freeing mental resources for understanding the actual economics.
+
+!!! mascot-warning "Don't Split What Belongs Together"
+    ![Sim warning](../../img/mascot/warning.png){ class="mascot-admonition-img" }
+    Putting a supply-and-demand graph on one screen and its explanation in a separate pop-up feels harmless, but it forces learners to hold pieces in working memory while hunting for the rest. That's extraneous load sneaking in through the back door.
 
 ### Germane Load: The Productive Struggle
 
@@ -433,6 +445,10 @@ Best practices for avoiding split attention:
 - Use callout lines connecting text to visual elements
 - Present related information simultaneously, not sequentially
 - When audio is used, synchronize it with visual changes
+
+!!! mascot-tip "The Integration Habit"
+    ![Sim giving a tip](../../img/mascot/tip.png){ class="mascot-admonition-img" }
+    See a legend, a caption below a diagram, or a pop-up explanation? That's your cue to move the text right onto the diagram it describes. Nice fit—you just erased some extraneous load.
 
 <iframe src="../../sims/split-attention-effect/main.html" height="502px" width="100%" scrolling="no" style="overflow: hidden;"></iframe>
 
@@ -960,6 +976,10 @@ Here are some of the most common tradeoffs you'll encounter:
 
 The goal isn't to eliminate tradeoffs—that's impossible. The goal is to make **conscious, informed choices** about which tradeoffs to accept based on your learning objectives, target audience, and context of use.
 
+!!! mascot-encourage "You Don't Have to Use Every Tool"
+    ![Sim encouraging](../../img/mascot/encouraging.png){ class="mascot-admonition-img" }
+    Feeling like you need to cram every principle from this chapter into one MicroSim? Take a breath—good design is about conscious tradeoffs, not perfection. Pick the minimal effective design for your audience and objective, and you're already ahead.
+
 ### A Framework for Tradeoff Decisions
 
 When facing a design tradeoff, ask yourself:
@@ -1142,6 +1162,10 @@ Here's what you now know:
 When you apply these principles, something magical happens: learners stop struggling with your interface and start focusing on actual learning. The technology becomes invisible, and understanding emerges naturally.
 
 The world needs more brain-friendly educational experiences. Armed with this knowledge, you're ready to create them. Every MicroSim you design with these principles in mind is a small contribution to a future where learning is efficient, effective, and even enjoyable.
+
+!!! mascot-celebration "Toolkit Complete"
+    ![Sim celebrating](../../img/mascot/celebration.png){ class="mascot-admonition-img" }
+    You've just learned to see the invisible mental effort behind every MicroSim—working memory, the three load types, split attention, and more. Next up in Chapter 8, we'll tackle a different brain quirk: the misconceptions learners bring with them before they even open your simulation.
 
 Now go forth and reduce some extraneous load. Your learners' working memories will thank you.
 
