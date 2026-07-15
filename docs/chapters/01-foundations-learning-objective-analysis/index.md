@@ -42,6 +42,19 @@ This chapter assumes only the prerequisites listed in the [course description](.
 
 ## Welcome to the AI-Powered Future of Education
 
+!!! mascot-welcome "Hi! I'm Sim."
+    ![Sim waving welcome](../../img/mascot/welcome.png){ class="mascot-admonition-img" }
+    Welcome to Automating Instructional Design! I'm **Sim**, a small builder-bot who's a little obsessed with assembling great learning experiences. I'll be popping into the margins all the way through this book, but I don't show up randomly — I have exactly **six jobs**, and you'll learn to recognize me by which one I'm doing:
+
+    1. **Welcome you** at the start of every chapter — that's what I'm doing right now.
+    2. **Help you think things through** when a concept clicks better once you see how the pieces fit together.
+    3. **Give you tips** — the shortcuts working instructional designers use but rarely write down.
+    4. **Warn you gently** about the places where smart designers and smart AI prompts get into trouble.
+    5. **Encourage you** when a concept looks harder than it actually is.
+    6. **Celebrate with you** at the end of each chapter when you've earned it.
+
+    That's it. If I'm not doing one of those six things, I'm not in the chapter. Let's build it!
+
 Here's a mind-bending statistic to kick things off: according to research from METR.org, AI capabilities are *doubling every seven months* when we measure the probability that large language models and AI agents will correctly complete tasks of a given complexity. Let that sink in. By the time you finish this course, the AI tools available to you will be roughly twice as capable as they were when you started reading this sentence. (Okay, maybe not *that* fast, but you get the point.)
 
 This exponential growth means we're living through the most exciting time in the history of educational technology. AI can now assist with tasks that would have seemed like science fiction just a few years ago—generating interactive simulations, adapting content to individual learners, and creating personalized feedback at scale. As instructional designers, we have access to superpowers our predecessors couldn't have dreamed of.
@@ -151,7 +164,8 @@ Here's the difference:
 
 The left column describes feelings or mental states that can't be directly observed. How do you know if someone "appreciates" something? The right column describes specific actions that can be demonstrated and measured.
 
-!!! tip "The Magic Question"
+!!! mascot-tip "The Magic Question"
+    ![Sim giving a tip](../../img/mascot/tip.png){ class="mascot-admonition-img" }
     When writing a learning objective, ask yourself: "How would I know if a student achieved this?" If you can't describe a concrete way to assess it, the objective needs work.
 
 Well-crafted learning objectives serve multiple masters:
@@ -175,6 +189,10 @@ The revised taxonomy identifies six levels of **cognitive complexity**, arranged
 6. **Create** – Putting elements together to form a novel, coherent whole
 
 Think of these levels as a cognitive staircase. Each level builds on the ones below it. You can't truly analyze something you don't understand, and you can't understand something you don't remember. This hierarchical structure has profound implications for instructional design—we need to ensure learners have climbed the lower stairs before asking them to tackle the higher ones.
+
+!!! mascot-thinking "Key Insight"
+    ![Sim thinking](../../img/mascot/thinking.png){ class="mascot-admonition-img" }
+    Notice how each level builds on the one below it — you can't analyze what you don't understand, and you can't understand what you can't remember. That hierarchy is the backbone of good instructional design.
 
 #### Diagram: Bloom's Taxonomy Pyramid
 
@@ -262,7 +280,8 @@ Remember-level activities include:
 
 Remember-level knowledge is necessary but not sufficient. A student who can recite the quadratic formula but can't use it to solve problems hasn't really learned algebra. That's why Remember is just the first step on the cognitive staircase.
 
-!!! note "The Role of Memory in Learning"
+!!! mascot-thinking "The Role of Memory in Learning"
+    ![Sim thinking](../../img/mascot/thinking.png){ class="mascot-admonition-img" }
     Some educators dismiss memorization as "rote learning" and argue we should focus only on higher-order thinking. But research consistently shows that having information readily accessible in memory *enables* higher-order thinking. It's hard to analyze something you can't remember.
 
 ### Level 2: Understand
@@ -447,7 +466,8 @@ Here's a handy reference of action verbs organized by Bloom's level:
 | Evaluate | judge, evaluate, critique, assess, justify, recommend, defend, prioritize, rate |
 | Create | design, create, develop, construct, produce, formulate, compose, devise, generate |
 
-!!! warning "Verbs to Avoid"
+!!! mascot-warning "Verbs to Avoid"
+    ![Sim warning](../../img/mascot/warning.png){ class="mascot-admonition-img" }
     Some verbs are too vague to be useful in learning objectives. Avoid:
 
     - **Know** – Too vague. Know *what*? Know *how*?
@@ -778,7 +798,8 @@ Congratulations! You've climbed the first major hill in your journey toward auto
 
 With this foundation in place, you're ready to explore how different types of learning objectives map to different visualization approaches. In the next chapter, we'll introduce MicroSims and start matching objectives to the perfect interactive experience.
 
-!!! success "Key Takeaway"
+!!! mascot-celebration "Key Takeaway"
+    ![Sim celebrating](../../img/mascot/celebration.png){ class="mascot-admonition-img" }
     AI can be an incredibly powerful tool for instructional design—but only if we give it clear, well-crafted instructions. Understanding learning objectives and cognitive complexity isn't just academic theory; it's practical knowledge that makes AI-assisted education possible.
 
 Now go forth and write some beautiful learning objectives. Your future AI assistants will thank you.

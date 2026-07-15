@@ -7,6 +7,10 @@ site_url: 'https://dmccreary.github.io/automating-instructional-design/'
 repo_url: 'https://github.com/dmccreary/automating-instructional-design'
 edit_uri: 'blob/master/docs'
 
+exclude_docs: |
+  img/mascot/character-sheet.md
+  img/mascot/image-prompts.md
+
 nav:
   - Home: index.md
   - About This Course: about.md
@@ -169,6 +173,7 @@ nav:
     - FAQ Quality Report: learning-graph/faq-quality-report.md
     - Glossary Quality Report: learning-graph/glossary-quality-report.md
     - Quiz Generation Report: learning-graph/quiz-generation-report.md
+    - Mascot Style Guide: learning-graph/mascot-test.md
 
 
   - FAQ: faq.md
@@ -227,6 +232,7 @@ markdown_extensions:
       generic: true
 extra_css:
    - css/extra.css
+   - css/mascot.css
 extra_javascript:
    - js/extra.js
    # needed for mathjax to work

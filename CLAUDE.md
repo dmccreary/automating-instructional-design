@@ -8,6 +8,16 @@ This is an MkDocs Material-based intelligent textbook about automating instructi
 
 **Live site:** https://dmccreary.github.io/automating-instructional-design/
 
+## Content Generation Guidelines (Required Reading)
+
+Before generating any user-facing content — chapters, lesson plans,
+quizzes, FAQ, glossary, references, stories, or mascot admonitions — read
+[`CONTENT-GENERATION-GUIDELINES.md`](CONTENT-GENERATION-GUIDELINES.md).
+It covers target reading level, chapter/diagram content structure,
+admonition rules, and the Sim the Builder-Bot mascot. Instructor-facing
+content (teacher's guide, instructor's guide) is exempt from the mascot
+rules in that file.
+
 ## Build and Development Commands
 
 ```bash
@@ -72,25 +82,6 @@ docs/
 └── js/extra.js         # Copy-to-clipboard for prompts
 ```
 
-### Chapter Content Structure
-
-Each chapter uses this structure:
-```markdown
----
-title: Chapter Title
-description: Brief description
-generated_by: claude skill chapter-content-generator
-date: YYYY-MM-DD HH:MM:SS
-version: 0.03
----
-
-# Chapter Title
-## Summary
-## Concepts Covered
-## Prerequisites
-[Main content with diagrams, MicroSims, tables]
-```
-
 ### MicroSim Structure
 
 Each MicroSim in `docs/sims/` contains:
@@ -99,26 +90,6 @@ Each MicroSim in `docs/sims/` contains:
 - `*.js` - JavaScript (p5.js or vis-network)
 - `local.css` - Scoped styles
 
-### Content Generation
-
-Chapter content is generated using Claude skills. Diagram specifications use `<details markdown="1">` blocks:
-```markdown
-#### Diagram: Diagram Name
-
-<details markdown="1">
-<summary>Diagram Name</summary>
-Type: [microsim|diagram|infographic|workflow|chart|timeline]
-
-Bloom Taxonomy: [Remember|Understand|Apply|Analyze|Evaluate|Create] (L1-L6)
-
-Learning Objective: What the student should learn
-
-[Detailed specification for implementation]
-
-Implementation: [p5.js|vis-network|HTML/CSS/JavaScript|Mermaid]
-</details>
-```
-
 ## Key Conventions
 
 - **Navigation tabs disabled**: Never add `navigation.tabs` to mkdocs.yml features
@@ -126,5 +97,3 @@ Implementation: [p5.js|vis-network|HTML/CSS/JavaScript|Mermaid]
 - **p5.js setup**: Always call `updateCanvasSize()` as first step in `setup()` for responsive width
 - **Image optimization**: Compress large images (1-2MB) to 200-300KB using TinyPNG
 - **vis-network labels**: Add slight y-offset (480→490) for horizontal edge labels to render correctly
-- **Admonitions**: Use sparingly (max 1 per page). Requires `pymdownx.details` extension
-- **Details blocks**: No leading spaces or indentation inside `<details markdown="1">` content
