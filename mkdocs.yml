@@ -5,7 +5,7 @@ site_author: 'Dan McCreary'
 repo_name: 'GitHub Repo'
 site_url: 'https://dmccreary.github.io/automating-instructional-design/'
 repo_url: 'https://github.com/dmccreary/automating-instructional-design'
-edit_uri: 'blob/master/docs'
+edit_uri: 'blob/main/docs'
 
 exclude_docs: |
   img/mascot/character-sheet.md
