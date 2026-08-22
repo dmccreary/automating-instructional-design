@@ -40,7 +40,7 @@ Do not put leading spaces in the <details> text.
 
 Use the microsim generator skill located here for references of working microsim-generation skills 
 
-/Users/dan/Documents/ws/claude-skills/skills/microsim-generator  
+/Users/dan/Documents/ws/ibook-skills/skills/microsim-generator  
 
 Note that the resources directory has the detailed rules for each MicroSim type:
 
@@ -125,7 +125,7 @@ Put a focus on creating a completeness quality score rubric so that LLMs can che
 all the required components for a MicroSim are in place.  Note that a completeness
 quality score does not cover the usability of the MicroSim.
 
-Go through the standardization process step-by-step: /Users/danmccreary/Documents/ws/claude-skills/skills/microsim-utils/references/standarization.md and not how the completeness score is calculated.  Not that some MicroSims such as those written in p5.js have an additional metric such as is the link for "Edit in the p5.js Editor" present in the index.md file.  Other MicroSim types do
+Go through the standardization process step-by-step: /Users/danmccreary/Documents/ws/ibook-skills/skills/microsim-utils/references/standarization.md and not how the completeness score is calculated.  Not that some MicroSims such as those written in p5.js have an additional metric such as is the link for "Edit in the p5.js Editor" present in the index.md file.  Other MicroSim types do
 not have this metric.
 
 For the section on the metadata, use the MicroSim JSON Schema here: 

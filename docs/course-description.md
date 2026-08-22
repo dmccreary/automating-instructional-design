@@ -308,7 +308,7 @@ The following MicroSims are developed specifically to teach the concepts in this
 ### Software (Skill Libraries Provided Free)
 
 - Claude Code with MicroSim generation skills ($20/month Claude Pro required)
-- Access to the Claude Code Skill library on [GitHub](https://github.com/dmccreary/claude-skills/tree/main/skills)
+- Access to the Claude Code Skill library on [GitHub](https://github.com/dmccreary/ibook-skills/tree/main/skills)
 - Web browser with developer tools
 
 ### Recommended Background Reading
