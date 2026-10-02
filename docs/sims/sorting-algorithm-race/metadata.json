@@ -95,5 +95,8 @@
       "explanatory"
     ],
     "interactionStyle": "manipulate"
+  },
+  "search": {
+    "showcase": true
   }
 }
