@@ -1,0 +1,137 @@
+{
+  "title": "Chart Selection Matrix",
+  "creator": "Dan McCreary",
+  "subject": [
+    "Data Visualization",
+    "Instructional Design",
+    "Chart Selection"
+  ],
+  "description": "An interactive decision matrix that crosses five data types (categorical, time series, distribution, relationship, part-to-whole) with five question types (compare, change, composition, distribution, relationship) to recommend a chart type. Learners click a chart to see when to use it and a sample chart, toggle advanced chart types, and practice choosing the right cell for nine data scenarios.",
+  "date": "2026-10-01",
+  "type": "Interactive Simulation",
+  "format": "text/html",
+  "language": "en",
+  "rights": "CC BY 4.0",
+  "educational": {
+    "gradeLevel": [
+      "Undergraduate",
+      "Graduate",
+      "Adult"
+    ],
+    "subjectArea": "Instructional Design, Data Visualization",
+    "topic": "Choosing a chart type from the data type and the question",
+    "learningObjectives": [
+      "Select the most appropriate chart type based on the nature of the data and the question to be answered",
+      "Identify the data type and the question type in a short data scenario",
+      "Recognize chart types that are commonly misused and name a safer choice"
+    ],
+    "bloomsTaxonomy": "Apply",
+    "bloomsVerb": "select",
+    "duration": "15-20 minutes",
+    "prerequisites": [
+      "Familiarity with bar, line and pie charts",
+      "Distinguishing categories from numeric values"
+    ],
+    "standards": []
+  },
+  "technical": {
+    "framework": "Custom HTML, CSS and JavaScript",
+    "version": "1.0",
+    "canvasDimensions": {
+      "width": "responsive",
+      "height": 702
+    },
+    "responsive": true,
+    "dependencies": [],
+    "files": [
+      "main.html",
+      "style.css",
+      "chart-selection.js",
+      "data.json"
+    ],
+    "accessibility": {
+      "hasAltText": true,
+      "keyboardNavigable": true
+    }
+  },
+  "userInterface": {
+    "controls": [
+      {
+        "type": "click",
+        "description": "Click a chart in the matrix to select it and show its guidance and sample chart"
+      },
+      {
+        "type": "hover",
+        "description": "Hover over or tab to a chart to preview when to use it"
+      },
+      {
+        "type": "checkbox",
+        "label": "Show advanced charts",
+        "description": "Adds Box Plot, Violin, Heatmap, Bubble and Treemap to the matrix"
+      },
+      {
+        "type": "button",
+        "label": "Practice Scenario / Next Scenario",
+        "description": "Presents a data scenario; the learner clicks the matching cell and gets feedback with graduated hints"
+      },
+      {
+        "type": "button",
+        "label": "Show Me",
+        "description": "Redraws the sample chart with new sample data"
+      }
+    ]
+  },
+  "simulation": {
+    "modelType": "Decision Matrix",
+    "dataTypes": [
+      "Categorical",
+      "Time series",
+      "Distribution",
+      "Relationship",
+      "Part-to-whole"
+    ],
+    "questionTypes": [
+      "Compare values",
+      "Show change",
+      "Show composition",
+      "Show distribution",
+      "Show relationship"
+    ],
+    "chartTypes": [
+      "Bar",
+      "Grouped Bar",
+      "Stacked Bar",
+      "Line",
+      "Area",
+      "Stacked Area",
+      "Dual Axis",
+      "Histogram",
+      "Scatter",
+      "Pie / Donut",
+      "Box Plot",
+      "Violin",
+      "Heatmap",
+      "Bubble",
+      "Treemap"
+    ]
+  },
+  "pedagogical": {
+    "pattern": "Decision matrix lookup with scenario practice",
+    "teachingStrategy": "Explore the matrix, then apply it to short scenarios with immediate feedback and graduated hints",
+    "keyQuestions": [
+      "What kind of data do you have?",
+      "What do you want the reader to see?",
+      "Which charts are often misused, and why?"
+    ],
+    "commonMisconceptions": [
+      "A pie chart is a good way to compare values",
+      "Any data set can go in any chart type",
+      "A dual axis chart shows that two measures are related"
+    ],
+    "assessmentOpportunities": [
+      "Nine practice scenarios with feedback inside the MicroSim",
+      "Learners justify a chart choice for their own content in one sentence"
+    ]
+  },
+  "chapter": "03-microsim-pattern-library"
+}

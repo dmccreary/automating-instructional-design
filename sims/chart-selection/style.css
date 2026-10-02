@@ -1,0 +1,543 @@
+/* Chart Selection Matrix MicroSim
+   Every section has a fixed height so the page fits a non-scrolling iframe. */
+
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: aliceblue;
+    color: #222;
+    overflow: hidden;
+}
+
+main {
+    padding: 8px 10px;
+}
+
+h1 {
+    margin: 0;
+    height: 28px;
+    line-height: 28px;
+    font-size: 20px;
+    font-weight: normal;
+    text-align: center;
+}
+
+/* ---------- toolbar ---------- */
+.toolbar {
+    height: 34px;
+    margin-top: 4px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.toggle {
+    font-size: 15px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.toggle input {
+    width: 17px;
+    height: 17px;
+    margin: 0;
+}
+
+.btn {
+    font-family: inherit;
+    font-size: 14px;
+    padding: 5px 12px;
+    border: 1px solid #1d4f86;
+    border-radius: 5px;
+    background: #2563a8;
+    color: #fff;
+    cursor: pointer;
+}
+
+.btn:hover,
+.btn:focus-visible {
+    background: #1d4f86;
+}
+
+/* ---------- coach bar: instructions, scenarios and feedback ---------- */
+.coach {
+    height: 56px;
+    margin-top: 4px;
+    padding: 5px 10px;
+    font-size: 14px;
+    line-height: 15px;
+    background: lightyellow;
+    border: 1px solid goldenrod;
+    border-radius: 8px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+}
+
+.coach.correct {
+    background: #e3f6e8;
+    border-color: #2e8b57;
+}
+
+.coach.wrong {
+    background: #fdecec;
+    border-color: #c0392b;
+}
+
+/* ---------- matrix ---------- */
+.matrix {
+    width: 100%;
+    margin-top: 6px;
+    border-collapse: separate;
+    border-spacing: 3px;
+    table-layout: fixed;
+    background: #fff;
+    border: 1px solid silver;
+    border-radius: 8px;
+}
+
+.matrix th {
+    height: 38px;
+    padding: 2px 3px;
+    font-size: 13px;
+    line-height: 15px;
+    white-space: nowrap;
+    background: #e8eef5;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.matrix th .sub {
+    display: block;
+    font-size: 12px;
+    font-weight: normal;
+    color: #444;
+}
+
+.matrix th.corner {
+    width: 17%;
+    font-size: 11px;
+    font-weight: normal;
+    color: #444;
+    background: transparent;
+}
+
+.matrix tbody th {
+    height: 52px;
+    text-align: left;
+    padding-left: 7px;
+}
+
+.matrix td {
+    height: 52px;
+    padding: 0;
+    background: #f4f6f8;
+    border-radius: 5px;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+.matrix td.target {
+    box-shadow: inset 0 0 0 3px #2e8b57;
+}
+
+.matrix td.miss {
+    box-shadow: inset 0 0 0 3px #c0392b;
+}
+
+.cell-inner {
+    height: 52px;
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    gap: 3px;
+    padding: 3px;
+}
+
+.dash {
+    align-self: center;
+    color: #6b7280;
+    font-size: 16px;
+}
+
+/* chart chips */
+.chip {
+    position: relative;
+    flex: 1 1 0;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1px;
+    padding: 1px;
+    font-family: inherit;
+    font-size: 12px;
+    line-height: 12px;
+    font-weight: bold;
+    color: #222;
+    border: 1px solid;
+    border-radius: 5px;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.chip canvas {
+    width: 44px;
+    height: 26px;
+    flex: none;
+}
+
+.chip .chip-name {
+    max-width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.chip:hover,
+.chip:focus-visible {
+    filter: brightness(0.94);
+    outline: none;
+}
+
+.chip.selected {
+    box-shadow: 0 0 0 2px #111;
+}
+
+.chip.best {
+    border-color: #2e8b57 !important;
+    border-width: 2px;
+}
+
+.chip.advanced,
+.chip.misused {
+    display: none;
+}
+
+body.show-advanced .chip.advanced {
+    display: flex;
+}
+
+.chip.misused {
+    display: flex;
+    background: #fff8e1;
+    border-color: #b7791f;
+    border-style: dashed;
+}
+
+/* with advanced charts on, a cell holding two charts stacks them as two rows */
+body.show-advanced td.multi .cell-inner {
+    flex-direction: column;
+    gap: 2px;
+    padding: 2px;
+}
+
+body.show-advanced td.multi .chip {
+    flex-direction: row;
+    gap: 4px;
+    font-size: 10.5px;
+}
+
+body.show-advanced td.multi .chip canvas {
+    width: 22px;
+    height: 14px;
+}
+
+/* the badge sits after the name instead of on top of it */
+body.show-advanced td.multi .badge {
+    position: static;
+    flex: none;
+    width: 12px;
+    height: 12px;
+}
+
+/* a dash is shown while a cell has no visible chip */
+td.only-advanced .dash {
+    display: block;
+}
+
+body.show-advanced td.only-advanced .dash {
+    display: none;
+}
+
+.badge {
+    position: absolute;
+    top: 1px;
+    right: 1px;
+    width: 14px;
+    height: 14px;
+}
+
+/* ---------- legend ---------- */
+.legend {
+    height: 24px;
+    margin-top: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: nowrap;
+    gap: 12px;
+    font-size: 12px;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.swatch {
+    width: 12px;
+    height: 12px;
+    border-radius: 3px;
+    border: 1px solid;
+}
+
+.legend svg {
+    width: 14px;
+    height: 14px;
+}
+
+/* ---------- detail panel ---------- */
+.detail {
+    height: 200px;
+    margin-top: 4px;
+    padding: 8px 10px;
+    background: #fff;
+    border: 1px solid silver;
+    border-radius: 8px;
+    display: flex;
+    gap: 12px;
+    overflow: hidden;
+}
+
+.detail-text {
+    flex: 1 1 0;
+    min-width: 0;
+    font-size: 13px;
+    line-height: 16px;
+    overflow: hidden;
+}
+
+.detail-text p {
+    margin: 4px 0 0 0;
+}
+
+.detail-heading {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+}
+
+.family-dot {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    flex: none;
+}
+
+.detail-name {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.pill {
+    font-size: 12px;
+    font-weight: bold;
+    padding: 2px 8px;
+    border-radius: 10px;
+    color: #fff;
+    white-space: nowrap;
+}
+
+.pill:empty {
+    display: none;
+}
+
+.pill.best {
+    background: #2e8b57;
+}
+
+.pill.warn {
+    background: #9a5b00;
+}
+
+.pill.advanced {
+    background: #555f6b;
+}
+
+.detail-context {
+    font-size: 12px;
+    color: #444;
+    margin-top: 1px;
+}
+
+.detail-tip {
+    color: #1d4f86;
+}
+
+.detail-tip.warn {
+    color: #8a4b00;
+    font-weight: bold;
+}
+
+.detail-chart {
+    flex: none;
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.detail-chart canvas {
+    width: 250px;
+    height: 132px;
+    border: 1px solid #d5dbe1;
+    border-radius: 5px;
+    background: #fff;
+}
+
+.sample-title {
+    height: 16px;
+    margin-top: 2px;
+    font-size: 12px;
+    line-height: 16px;
+    color: #444;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100%;
+}
+
+.detail-chart .btn {
+    margin-top: 2px;
+    padding: 3px 14px;
+}
+
+/* ---------- narrow iframes ---------- */
+@media (max-width: 560px) {
+    h1 {
+        font-size: 17px;
+    }
+
+    .toolbar {
+        gap: 8px;
+    }
+
+    .toggle,
+    .btn {
+        font-size: 13px;
+    }
+
+    .coach {
+        font-size: 12px;
+        line-height: 14px;
+        padding: 3px 7px;
+    }
+
+    .matrix {
+        border-spacing: 2px;
+    }
+
+    .matrix th {
+        font-size: 9px;
+        line-height: 11px;
+        padding: 1px;
+    }
+
+    .matrix tbody th {
+        font-size: 10px;
+    }
+
+    .matrix th .sub {
+        display: none;
+    }
+
+    .matrix th.corner {
+        width: 19%;
+        font-size: 9px;
+    }
+
+    .matrix tbody th {
+        padding-left: 3px;
+    }
+
+    .chip {
+        font-size: 9px;
+        line-height: 9px;
+    }
+
+    .chip canvas {
+        width: 30px;
+        height: 18px;
+    }
+
+    /* long chart names wrap onto a second line */
+    .chip .chip-name {
+        white-space: normal;
+    }
+
+    /* two charts in one cell: names only, no icons */
+    body.show-advanced td.multi .chip {
+        font-size: 9px;
+        gap: 2px;
+    }
+
+    body.show-advanced td.multi .chip canvas {
+        display: none;
+    }
+
+    body.show-advanced td.multi .chip .chip-name {
+        white-space: nowrap;
+    }
+
+    /* the legend wraps onto two lines; the detail panel gives up the space */
+    .legend {
+        height: 34px;
+        flex-wrap: wrap;
+        gap: 2px 8px;
+        font-size: 10px;
+    }
+
+    .detail {
+        height: 190px;
+        gap: 6px;
+        padding: 6px;
+    }
+
+    .detail-text {
+        font-size: 11px;
+        line-height: 13px;
+    }
+
+    .detail-text p {
+        margin-top: 2px;
+    }
+
+    .detail-name {
+        font-size: 14px;
+    }
+
+    .detail-chart {
+        width: 150px;
+    }
+
+    .detail-chart canvas {
+        width: 150px;
+        height: 110px;
+    }
+}
