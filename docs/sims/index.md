@@ -88,6 +88,12 @@ This section contains interactive MicroSims covering topics in automating instru
 
     An interactive concept map showing the relationships between all 17 concepts covered in Chapter 1 - Foundations of Learning Objective Analysis.
 
+-   **[Chart Selection Matrix](./chart-selection/index.md)**
+
+    ![Chart Selection Matrix](./chart-selection/chart-selection.png)
+
+    An interactive decision matrix that crosses data types with question types to recommend a chart, with sample charts and practice scenarios.
+
 -   **[Chart Type Selection Guide](./chart-type-selection/index.md)**
 
     ![Chart Type Selection Guide](./chart-type-selection/chart-type-selection.png)

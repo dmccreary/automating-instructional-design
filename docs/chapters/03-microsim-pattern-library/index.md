@@ -839,7 +839,7 @@ Visual Styling:
 Implementation: Interactive HTML/CSS grid with JavaScript popups
 </details>
 
-<iframe src="../../sims/chart-selection/main.html" height="502px" width="100%" scrolling="no"></iframe>
+<iframe src="../../sims/chart-selection/main.html" height="704px" width="100%" scrolling="no"></iframe>
 [Run Fullscreen](../../sims/chart-selection/main.html){ .md-button .md-button--primary }
 
 ## Spatial Visualizations

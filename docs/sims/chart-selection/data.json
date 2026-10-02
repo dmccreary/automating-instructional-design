@@ -1,0 +1,280 @@
+{
+  "title": "Chart Selection Matrix",
+  "columns": [
+    { "key": "compare", "short": "Compare", "name": "Compare values", "question": "Which is bigger?" },
+    { "key": "change", "short": "Change", "name": "Show change", "question": "How did it change?" },
+    { "key": "composition", "short": "Composition", "name": "Show composition", "question": "What is it made of?" },
+    { "key": "distribution", "short": "Distribution", "name": "Show distribution", "question": "How is it spread?" },
+    { "key": "relationship", "short": "Relationship", "name": "Show relationship", "question": "Are they linked?" }
+  ],
+  "rows": [
+    { "key": "categorical", "name": "Categorical", "subtitle": "names, groups" },
+    { "key": "time", "name": "Time series", "subtitle": "values over time" },
+    { "key": "distribution", "name": "Distribution", "subtitle": "spread of values" },
+    { "key": "relationship", "name": "Relationship", "subtitle": "two variables" },
+    { "key": "part", "name": "Part-to-whole", "subtitle": "percentages" }
+  ],
+  "families": {
+    "bar": { "name": "Bar family", "color": "#2563a8", "background": "#e4eefb" },
+    "line": { "name": "Line and area family", "color": "#0f7f73", "background": "#dff4f0" },
+    "dist": { "name": "Distribution family", "color": "#6f42b8", "background": "#efe8fa" },
+    "rel": { "name": "Relationship family", "color": "#b85c00", "background": "#fdeedd" },
+    "part": { "name": "Part-to-whole family", "color": "#b3336b", "background": "#fbe7ef" }
+  },
+  "charts": {
+    "bar": {
+      "name": "Bar",
+      "fullName": "Bar chart",
+      "family": "bar",
+      "badge": "best",
+      "useWhen": "You are comparing values across separate categories.",
+      "description": "Every bar starts from the same baseline, so the eye compares lengths accurately.",
+      "example": "Average quiz score for each of five class sections.",
+      "tip": "Start the value axis at zero, and sort the bars when the order of the categories does not matter.",
+      "sampleTitle": "Average quiz score by section"
+    },
+    "groupedBar": {
+      "name": "Grouped Bar",
+      "legend": ["Last year", "This year"],
+      "fullName": "Grouped bar chart",
+      "family": "bar",
+      "useWhen": "You are showing how each category changed between two or three periods or groups.",
+      "description": "Side-by-side bars put the before and after values for each category next to each other.",
+      "example": "Enrollment in four courses, last year compared with this year.",
+      "tip": "Keep to two or three bars per group. More than that turns into a picket fence.",
+      "sampleTitle": "Enrollment by course: last year vs. this year"
+    },
+    "stackedBar": {
+      "name": "Stacked Bar",
+      "legend": ["Agree", "Neutral", "Disagree"],
+      "fullName": "Stacked bar chart",
+      "family": "bar",
+      "useWhen": "You are showing what the total for each category is made of.",
+      "description": "Each bar is a total, and its colored segments show the parts that add up to it.",
+      "example": "Survey answers (agree, neutral, disagree) for each grade level.",
+      "tip": "Only the bottom segment sits on a flat baseline, so put the most important part there.",
+      "sampleTitle": "Survey answers by grade level"
+    },
+    "line": {
+      "name": "Line",
+      "legend": ["School 1", "School 2"],
+      "fullName": "Line chart",
+      "family": "line",
+      "badge": "best",
+      "useWhen": "You are comparing values at different points in time, or comparing several series over time.",
+      "description": "Connecting the points lets the slope of the line show how fast the value is rising or falling.",
+      "example": "Monthly test averages for two schools.",
+      "tip": "Time always runs left to right on the horizontal axis.",
+      "sampleTitle": "Monthly test average for two schools"
+    },
+    "area": {
+      "name": "Area",
+      "fullName": "Area chart",
+      "family": "line",
+      "useWhen": "You want to stress how much a single quantity rose or fell over time.",
+      "description": "An area chart is a line chart with the space under the line filled in, which draws attention to volume.",
+      "example": "Daily website visits over a year.",
+      "tip": "Use it for one series. Several overlapping areas hide each other.",
+      "sampleTitle": "Website visits over twelve months"
+    },
+    "stackedArea": {
+      "name": "Stacked Area",
+      "legend": ["Line A", "Line B", "Line C"],
+      "fullName": "Stacked area chart",
+      "family": "line",
+      "useWhen": "You are showing how the parts of a total change over time.",
+      "description": "The top edge shows the total, and each colored band shows one part's contribution.",
+      "example": "Monthly sales for three product lines.",
+      "tip": "Only the bottom band and the total are easy to read precisely.",
+      "sampleTitle": "Monthly sales for three product lines"
+    },
+    "dualAxis": {
+      "name": "Dual Axis",
+      "legend": ["Temperature", "Sales"],
+      "fullName": "Dual axis chart",
+      "family": "line",
+      "badge": "warn",
+      "useWhen": "You are showing two measures with different units over the same time span.",
+      "description": "Bars use the left axis and the line uses the right axis, so two different units share one chart.",
+      "example": "Daily temperature and ice cream sales over one summer.",
+      "tip": "Use with care: the two scales are arbitrary, so the places where the bars and the line cross mean nothing. A scatter plot is often clearer.",
+      "sampleTitle": "Temperature (bars) and ice cream sales (line)"
+    },
+    "histogram": {
+      "name": "Histogram",
+      "fullName": "Histogram",
+      "family": "dist",
+      "badge": "best",
+      "useWhen": "You are showing how the values of one variable are spread out.",
+      "description": "Values are sorted into bins, and the height of each bar shows how many values fell into that bin.",
+      "example": "Quiz scores for 200 students grouped into ten-point bins.",
+      "tip": "Try a few bin widths. Too few bins hide the shape, and too many add noise.",
+      "sampleTitle": "Quiz scores for 200 students"
+    },
+    "scatter": {
+      "name": "Scatter",
+      "fullName": "Scatter plot",
+      "family": "rel",
+      "badge": "best",
+      "useWhen": "You are checking whether two numeric variables are related.",
+      "description": "Each dot is one observation, placed by its value on each of the two variables.",
+      "example": "Hours studied compared with exam score for each student.",
+      "tip": "Add a trend line to show the pattern, and remember that correlation is not causation.",
+      "sampleTitle": "Hours studied vs. exam score"
+    },
+    "pie": {
+      "name": "Pie / Donut",
+      "fullName": "Pie or donut chart",
+      "family": "part",
+      "badge": "warn",
+      "useWhen": "You are showing a few parts of one whole.",
+      "description": "The full circle is 100 percent, and each slice shows one part's share.",
+      "example": "A school budget split among four departments.",
+      "tip": "Often misused: keep to five slices or fewer, and never use a pie to compare values that are close together.",
+      "sampleTitle": "Budget share by department"
+    },
+    "boxPlot": {
+      "name": "Box Plot",
+      "fullName": "Box plot",
+      "family": "dist",
+      "advanced": true,
+      "useWhen": "You are comparing the spread of several groups.",
+      "description": "Each box shows the middle half of the values, the line inside it is the median, and the whiskers show the range.",
+      "example": "Reaction times for three age groups.",
+      "tip": "A box plot packs a whole distribution into five numbers, which makes groups easy to compare.",
+      "sampleTitle": "Reaction time for three age groups"
+    },
+    "violin": {
+      "name": "Violin",
+      "fullName": "Violin plot",
+      "family": "dist",
+      "advanced": true,
+      "useWhen": "You want to show the full shape of the distribution for each group.",
+      "description": "The width of each violin shows how common the values are at that height.",
+      "example": "Score distributions for three teaching methods.",
+      "tip": "A violin plot reveals two-peaked data that a box plot hides.",
+      "sampleTitle": "Scores for three teaching methods"
+    },
+    "treemap": {
+      "name": "Treemap",
+      "fullName": "Treemap",
+      "family": "part",
+      "advanced": true,
+      "useWhen": "You are showing many parts of one whole, or parts inside parts.",
+      "description": "The whole rectangle is 100 percent, and the area of each tile shows one part's share.",
+      "example": "Storage space used by each folder on a drive.",
+      "tip": "A treemap stays readable when a pie chart would have too many slices.",
+      "sampleTitle": "Storage used by folder"
+    },
+    "bubble": {
+      "name": "Bubble",
+      "fullName": "Bubble chart",
+      "family": "rel",
+      "advanced": true,
+      "useWhen": "You are relating two variables while a third variable sets the size of each point.",
+      "description": "A bubble chart is a scatter plot where the size of each dot carries an extra measure.",
+      "example": "Study hours compared with score, with each bubble sized by class size.",
+      "tip": "Size the bubbles by area, not by radius, or large values will look far too big.",
+      "sampleTitle": "Hours vs. score, sized by class size"
+    },
+    "heatmap": {
+      "name": "Heatmap",
+      "fullName": "Heatmap",
+      "family": "rel",
+      "advanced": true,
+      "useWhen": "You are showing how often pairs of values occur across two dimensions.",
+      "description": "Each cell is colored by its value, so clusters and gaps show up as dark and light patches.",
+      "example": "Learner activity by day of the week and hour of the day.",
+      "tip": "Use one color that runs from light to dark so that darker always means more.",
+      "sampleTitle": "Activity by weekday and time of day"
+    },
+    "pieBad": {
+      "name": "Pie for comparing",
+      "fullName": "Commonly misused",
+      "family": "part",
+      "badge": "warn",
+      "hidden": true,
+      "useWhen": "A pie chart is a poor tool for comparing values that are close together.",
+      "description": "People judge angles and areas far less accurately than lengths, so similar slices look the same.",
+      "example": "Which of these five slices is the largest? It is hard to tell.",
+      "tip": "Treat the parts as categories and use a Bar chart instead (Categorical row, Compare values column).",
+      "sampleTitle": "Which slice is the largest?"
+    }
+  },
+  "cells": {
+    "categorical": {
+      "compare": ["bar"],
+      "change": ["groupedBar"],
+      "composition": ["stackedBar"]
+    },
+    "time": {
+      "compare": ["line"],
+      "change": ["area"],
+      "composition": ["stackedArea"],
+      "relationship": ["dualAxis"]
+    },
+    "distribution": {
+      "compare": ["boxPlot"],
+      "distribution": ["histogram", "violin"]
+    },
+    "relationship": {
+      "distribution": ["heatmap"],
+      "relationship": ["scatter", "bubble"]
+    },
+    "part": {
+      "composition": ["pie", "treemap"]
+    }
+  },
+  "misused": {
+    "part": {
+      "compare": "pieBad"
+    }
+  },
+  "scenarios": [
+    {
+      "text": "Five class sections took the same quiz. You want to show which section had the highest average.",
+      "row": "categorical",
+      "answers": ["compare"]
+    },
+    {
+      "text": "You recorded website visits every day for a year and want to show how the number of visits rose and fell.",
+      "row": "time",
+      "answers": ["change", "compare"]
+    },
+    {
+      "text": "You have quiz scores for 200 students and want to see whether most scores cluster near the middle.",
+      "row": "distribution",
+      "answers": ["distribution"]
+    },
+    {
+      "text": "For each student you know the hours studied and the exam score. Do students who study more score higher?",
+      "row": "relationship",
+      "answers": ["relationship"]
+    },
+    {
+      "text": "A school budget is split among four departments. You want to show each department's share of the total.",
+      "row": "part",
+      "answers": ["composition"]
+    },
+    {
+      "text": "Survey results are split by grade level, and each grade's answers are divided into agree, neutral and disagree. Show the makeup of each grade's answers.",
+      "row": "categorical",
+      "answers": ["composition"]
+    },
+    {
+      "text": "You have monthly sales for three product lines and want to show how each line added to the total over two years.",
+      "row": "time",
+      "answers": ["composition"]
+    },
+    {
+      "text": "You want to show enrollment in four courses last year next to enrollment this year, so readers can see how each course changed.",
+      "row": "categorical",
+      "answers": ["change"]
+    },
+    {
+      "text": "You have daily temperature and daily ice cream sales for one summer and want both measures on one chart over time.",
+      "row": "time",
+      "answers": ["relationship"]
+    }
+  ]
+}

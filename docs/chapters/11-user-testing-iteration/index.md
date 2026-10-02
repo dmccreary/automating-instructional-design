@@ -886,6 +886,10 @@ You understand this concept deeply. You can't easily see what's confusing to som
 
 **Antidote**: Watch novice users. Really watch them. Their struggles reveal what you can no longer see.
 
+<iframe src="../../sims/interpretation-pitfalls/main.html" height="522px" width="100%" scrolling="no" style="overflow: hidden;"></iframe>
+
+[Run MicroSim Fullscreen](../../sims/interpretation-pitfalls/main.html){ .md-button .md-button--primary }
+
 #### Diagram: Common Interpretation Pitfalls
 
 <details markdown="1">

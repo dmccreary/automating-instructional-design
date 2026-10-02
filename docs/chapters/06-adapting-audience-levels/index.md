@@ -780,6 +780,10 @@ Abstract concepts need concrete workplace translations. A simulation about decis
 
 The best corporate MicroSim is one that teaches a valuable skill during a coffee break.
 
+<iframe src="../../sims/corporate-learning-module/main.html" height="602px" width="100%" scrolling="no" style="overflow: hidden;"></iframe>
+
+[Run MicroSim Fullscreen](../../sims/corporate-learning-module/main.html){ .md-button .md-button--primary }
+
 #### Diagram: Corporate Learning Module Pattern
 
 <details markdown="1">
